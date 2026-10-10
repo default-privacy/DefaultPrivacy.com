@@ -38,7 +38,7 @@ Every conversation with an AI chatbot is a data exchange. You provide personal c
 | Google (Gemini) | Yes for free tier | 18 months | Can pause activity |
 | Meta (Meta AI) | Yes | Per Meta privacy policy | Limited controls |
 | Anthropic (Claude) | No (by default) | 30 days (safety) | Can request deletion |
-| Venice.ai | No logs, no training | Not retained | Privacy by default |
+| Venice.ai | Says it does not train on chats | Says prompts are not stored; logs IP and device data | Several privacy modes, see [Venice](/directory/venice) |
 
 *Policies change frequently — verify current terms before trusting any provider.*
 
@@ -55,7 +55,7 @@ Every conversation with an AI chatbot is a data exchange. You provide personal c
 
 1. **Don't share real names, addresses, or identifying info** — Use pseudonyms when asking personal questions
 2. **Opt out of training** — Check settings on every platform
-3. **Use privacy-focused providers** — Venice.ai doesn't log conversations
+3. **Use privacy-focused providers** — and check what each one can still see; see [Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust)
 4. **Run local models** — Ollama + open-source models keep everything on your device
 5. **Sanitize before pasting** — Remove personal info from documents before uploading
 6. **Use incognito/temporary chats** — Most providers offer modes that aren't saved

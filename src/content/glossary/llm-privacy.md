@@ -20,10 +20,7 @@ LLMs like GPT-4, Claude, and Llama can memorize and reproduce personal informati
 ## Protection
 
 1. Don't share sensitive personal information with AI chatbots
-2. Use privacy-focused AI providers (Venice.ai routes through privacy infrastructure)
+2. Use privacy-focused AI providers, and check what each one can still see ([Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust))
 3. Check if the service uses your conversations for training (opt out if possible)
 4. Be aware that anything you type could be stored and analyzed
 
-## The Venice.ai Approach
-
-Default Privacy uses Venice.ai specifically because it's built with a privacy-first architecture. Your conversations aren't used for training, and the infrastructure is designed to minimize data retention.

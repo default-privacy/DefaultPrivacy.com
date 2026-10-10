@@ -53,7 +53,7 @@ Private AI comes in four tiers, and they differ in what you have to trust. On yo
 
 Pick the tier that matches what you are typing. For the basics on the big chatbots, start with [How to Use AI Chatbots Privately](/guides/how-to-use-ai-chatbots-privately).
 
-**A disclosure.** Default Privacy uses Venice's API for the AI grading step of its email security check, as our [privacy page](/privacy) lists. We have no affiliate relationship with any service in this guide, and no links here earn us anything.
+**A disclosure.** We have no affiliate relationship with any service in this guide, and no links here earn us anything.
 
 ---
 

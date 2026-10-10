@@ -35,6 +35,6 @@ Private AI inference means your questions, documents, and model outputs stay und
 - Compliance requirements (HIPAA, GDPR) that restrict where data can be sent
 - Censorship-resistant or surveillance-conscious environments
 
-## Venice.ai and Similar Services
+## Services That Offer It
 
-Services like Venice.ai offer private or local inference options — running models in ways that minimize what the provider or any intermediary can see. The exact architecture varies; the principle is the same: your data, your control.
+Hosted services such as Venice, Maple, Tinfoil and NEAR AI Cloud each describe a different way of limiting what the provider can see, from contracts to hardware enclaves. They differ in what you have to trust; see [Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust).

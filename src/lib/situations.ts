@@ -106,12 +106,13 @@ export const SITUATIONS: Situation[] = [
     id: "ai",
     name: "I want to use AI more privately",
     blurb: "From settings on the big chatbots to running a model yourself.",
-    terms: ["ai", "chatbot", "chatbots", "chatgpt", "llm", "claude", "gemini", "copilot", "model", "models", "local", "assistant", "agent", "agents", "mcp", "prompt", "prompts", "ollama", "jan", "connect", "connector", "connectors"],
+    terms: ["ai", "chatbot", "chatbots", "chatgpt", "llm", "claude", "gemini", "copilot", "model", "models", "local", "assistant", "agent", "agents", "mcp", "prompt", "prompts", "ollama", "jan", "connect", "connector", "connectors", "recording", "recorded", "notetaker", "notetakers", "otter", "scribe", "glasses", "meeting"],
     items: [
       { kind: "guide", slug: "how-to-use-ai-chatbots-privately" },
       { kind: "guide", slug: "private-ai-what-you-have-to-trust" },
       { kind: "guide", slug: "run-an-ai-model-on-your-own-computer" },
       { kind: "guide", slug: "before-you-connect-an-ai-agent-or-mcp-server" },
+      { kind: "guide", slug: "someones-ai-is-recording-you" },
     ],
   },
   {

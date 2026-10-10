@@ -6,9 +6,6 @@ const envSchema = z.object({
   NEXT_PUBLIC_URL: z.string().default("http://localhost:3000"),
   NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
 
-  // AI (Venice.ai) — email-security grading
-  VENICE_API_KEY: z.string().optional(),
-  VENICE_MODEL: z.string().default("venice-uncensored"),
 
   // Site privacy scanner — mock mode when true (no Playwright browsers, e.g. Vercel)
   DISABLE_PLAYWRIGHT_SCANNER: z
@@ -71,7 +68,6 @@ function validateEnv(): Env {
 function logServiceStatus(env: Env) {
   const services = [
     { name: "Database", enabled: !!env.DATABASE_URL },
-    { name: "Venice AI", enabled: !!env.VENICE_API_KEY },
     { name: "Playwright Scanner", enabled: !env.DISABLE_PLAYWRIGHT_SCANNER },
     { name: "DNS Leak Server", enabled: !!env.DNS_LEAK_SERVER_URL },
     { name: "Scan Worker", enabled: !!env.SCAN_WORKER_URL && !!env.SCAN_WORKER_SECRET },
@@ -91,7 +87,6 @@ export const env = validateEnv()
 
 export const isServiceEnabled = {
   database: !!env.DATABASE_URL,
-  venice: !!env.VENICE_API_KEY,
   playwright: !env.DISABLE_PLAYWRIGHT_SCANNER,
   remoteBrowser: !!env.CLOUDFLARE_ACCOUNT_ID && !!env.CLOUDFLARE_BROWSER_TOKEN,
   dnsLeak: !!env.DNS_LEAK_SERVER_URL,

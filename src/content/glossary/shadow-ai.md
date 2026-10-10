@@ -59,5 +59,5 @@ Every one of these actions sends company data to a third-party AI provider's ser
 1. Anything you type into a free AI chatbot may be stored, reviewed, and used for training
 2. Enterprise plans (ChatGPT Team/Enterprise, Claude for Work) offer better data protections
 3. Self-hosted models (running locally via Ollama) keep all data on your machine
-4. Privacy-focused AI providers like Venice.ai don't log conversations
+4. Privacy-focused AI providers keep less, but check what each one can still see ([Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust))
 5. If you wouldn't post it publicly, don't paste it into an AI chatbot

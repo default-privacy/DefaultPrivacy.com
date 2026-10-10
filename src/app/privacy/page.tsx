@@ -165,7 +165,6 @@ export default function PrivacyPolicyPage() {
                       <tr><td className="px-4 py-2.5">Vercel</td><td className="px-4 py-2.5">Hosting</td><td className="px-4 py-2.5">Server logs (IP, user agent)</td></tr>
                       <tr><td className="px-4 py-2.5">Neon</td><td className="px-4 py-2.5">Database (directory data)</td><td className="px-4 py-2.5">No personal data</td></tr>
                       <tr><td className="px-4 py-2.5">Have I Been Pwned</td><td className="px-4 py-2.5">Password/breach checks</td><td className="px-4 py-2.5">Partial password hash (k-anonymity)</td></tr>
-                      <tr><td className="px-4 py-2.5">Venice.ai</td><td className="px-4 py-2.5">AI grading (email security)</td><td className="px-4 py-2.5">The domain&apos;s public DNS records</td></tr>
                     </tbody>
                   </table>
                 </div>
