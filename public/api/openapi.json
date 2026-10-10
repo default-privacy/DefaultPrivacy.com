@@ -1,0 +1,770 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Default Privacy API",
+    "description": "Read-only, public Privacy Protocol API for searching the Default Privacy directory of privacy tools and browsing categories. Designed for AI agents and developers building privacy-focused applications. No authentication; rate limited. Changes in 1.1 (2026-10-09): `ado` is removed and replaced by `pick` (the reason DP recommends a tool as a starting point, or null); the minimum-score filter is no longer accepted (400); `sort=ado_score` is kept as an alias of `sort=picks`. Removed 2026-10-09: payment.accepts_crypto, payment.no_kyc_purchase, trust.is_security_audited and trust.security_audit, and the matching filters. Old clients that still send the accepts_crypto or no_kyc query parameter are not rejected: the parameter is ignored (REST and MCP).",
+    "version": "1.1.0",
+    "contact": {
+      "name": "Default Privacy",
+      "url": "https://defaultprivacy.com"
+    },
+    "license": {
+      "name": "Proprietary",
+      "url": "https://defaultprivacy.com/terms"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://defaultprivacy.com",
+      "description": "Production"
+    }
+  ],
+  "x-mcp": {
+    "url": "https://defaultprivacy.com/api/mcp",
+    "transport": "streamable-http",
+    "descriptor": "https://defaultprivacy.com/.well-known/mcp-server.json",
+    "description": "A Model Context Protocol server exposing this directory and the free diagnostics as agent-callable tools, resources, and prompts."
+  },
+  "tags": [
+    {
+      "name": "Privacy Tools",
+      "description": "Search and retrieve privacy tool data from the Default Privacy directory"
+    },
+    {
+      "name": "Categories",
+      "description": "Browse privacy tool categories"
+    },
+    {
+      "name": "Search",
+      "description": "Lightweight typeahead search across the directory"
+    }
+  ],
+  "paths": {
+    "/api/v1/tools": {
+      "get": {
+        "operationId": "searchTools",
+        "summary": "Search privacy tools",
+        "description": "Search the Default Privacy directory of privacy tools. Returns Privacy Protocol formatted data. Public and rate limited.",
+        "tags": [
+          "Privacy Tools"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Search query (matches name and tagline)",
+            "schema": {
+              "type": "string",
+              "maxLength": 200
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "description": "Filter by category slug (e.g., 'vpn', 'password-manager', 'encrypted-messaging')",
+            "schema": {
+              "type": "string",
+              "maxLength": 100
+            }
+          },
+          {
+            "name": "is_open_source",
+            "in": "query",
+            "description": "Filter for open source tools",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "has_free_tier",
+            "in": "query",
+            "description": "Filter for tools with a free tier",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "e2ee",
+            "in": "query",
+            "description": "Filter for tools with end-to-end encryption",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "jurisdiction_risk",
+            "in": "query",
+            "description": "Filter by jurisdiction risk level. Repeat the parameter to pass multiple values.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "low",
+                  "medium",
+                  "high",
+                  "five_eyes",
+                  "fourteen_eyes"
+                ]
+              }
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort order. Default 'picks': DP picks first (in DP's order within the category if one is given), then A to Z. 'ado_score' is a deprecated alias of 'picks'.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "picks",
+                "ado_score",
+                "name",
+                "recently_verified",
+                "recently_added"
+              ],
+              "default": "picks"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Results per page",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50,
+              "default": 10
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Pagination offset",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ToolListResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Database not configured",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tools/{id}": {
+      "get": {
+        "operationId": "getTool",
+        "summary": "Get tool details",
+        "description": "Get the full Privacy Protocol record for a single tool by slug.",
+        "tags": [
+          "Privacy Tools"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Tool slug (e.g., 'mullvad', 'protonmail', 'signal')",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ToolResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Tool not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Database not configured",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/categories": {
+      "get": {
+        "operationId": "getCategories",
+        "summary": "List all categories",
+        "description": "Returns all public privacy tool categories with published tool counts. Public and rate limited.",
+        "tags": [
+          "Categories"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriesResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Database not configured",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/directory/quick-search": {
+      "get": {
+        "operationId": "quickSearch",
+        "summary": "Quick typeahead search",
+        "description": "Lightweight directory search for typeahead UIs. Returns up to 8 matches. Requires a query of at least 2 characters; otherwise returns an empty result set.",
+        "tags": [
+          "Search"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Search query (minimum 2 characters)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuickSearchResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ToolListResponse": {
+        "type": "object",
+        "properties": {
+          "pp_version": {
+            "type": "string",
+            "example": "1.1"
+          },
+          "query": {
+            "type": "object",
+            "properties": {
+              "q": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "filters": {
+                "type": "object"
+              },
+              "sort": {
+                "type": "string"
+              },
+              "limit": {
+                "type": "integer"
+              },
+              "offset": {
+                "type": "integer"
+              }
+            }
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PrivacyTool"
+            }
+          },
+          "pagination": {
+            "type": "object",
+            "properties": {
+              "total": {
+                "type": "integer"
+              },
+              "page": {
+                "type": "integer"
+              },
+              "per_page": {
+                "type": "integer"
+              },
+              "has_more": {
+                "type": "boolean"
+              }
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "retrieved_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "citation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "ToolResponse": {
+        "type": "object",
+        "properties": {
+          "pp_version": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/PrivacyTool"
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "retrieved_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "cache_ttl": {
+                "type": "integer"
+              },
+              "citation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "PrivacyTool": {
+        "type": "object",
+        "description": "Privacy Protocol tool record. A null value means Default Privacy has not checked it; never read null as no. Single-tool responses also carry `sources` and `caveats`.",
+        "properties": {
+          "pp_version": {
+            "type": "string",
+            "example": "1.1"
+          },
+          "id": {
+            "type": "string",
+            "description": "Tool slug"
+          },
+          "name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "tagline": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "website_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "favicon_url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "screenshot_url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true,
+            "description": "Primary category slug"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "All category slugs"
+          },
+          "privacy": {
+            "type": "object",
+            "properties": {
+              "jurisdiction": {
+                "type": "string",
+                "nullable": true,
+                "description": "ISO 3166-1 alpha-2"
+              },
+              "jurisdiction_risk": {
+                "type": "string",
+                "nullable": true,
+                "enum": [
+                  "low",
+                  "medium",
+                  "high",
+                  "five_eyes",
+                  "fourteen_eyes"
+                ]
+              },
+              "data_retention": {
+                "type": "object",
+                "properties": {
+                  "logs_ip": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "logs_metadata": {
+                    "type": "boolean",
+                    "nullable": true
+                  }
+                }
+              },
+              "encryption": {
+                "type": "object",
+                "properties": {
+                  "e2ee": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "zero_knowledge": {
+                    "type": "boolean",
+                    "nullable": true
+                  }
+                }
+              },
+              "requires_pii": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "phone": {
+                    "type": "boolean",
+                    "nullable": true
+                  },
+                  "real_name": {
+                    "type": "boolean",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          },
+          "trust": {
+            "type": "object",
+            "properties": {
+              "is_open_source": {
+                "type": "boolean",
+                "nullable": true,
+                "description": "null = not checked."
+              },
+              "source_code_url": {
+                "type": "string",
+                "format": "uri",
+                "nullable": true
+              }
+            }
+          },
+          "payment": {
+            "type": "object",
+            "properties": {
+              "has_free_tier": {
+                "type": "boolean",
+                "nullable": true
+              }
+            }
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "web",
+                "ios",
+                "android",
+                "macos",
+                "windows",
+                "linux",
+                "browser_extension",
+                "cli",
+                "self_hostable"
+              ]
+            }
+          },
+          "pick": {
+            "type": "object",
+            "nullable": true,
+            "description": "Set when Default Privacy recommends this tool as a starting point in a category (a DP pick). Editorial judgment, not a security guarantee. null otherwise. See https://defaultprivacy.com/how-we-pick",
+            "properties": {
+              "reason": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string",
+                "description": "Category slug the pick applies to."
+              }
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "last_verified": {
+                "type": "string",
+                "format": "date-time",
+                "nullable": true,
+                "description": "When the record's data was last updated; nearly every date so far was set by a bulk data pass. Not a review of the tool's safety or upkeep. Null means never."
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updated_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          },
+          "deprecated": {
+            "type": "object",
+            "description": "Set when the listing is retired (dead, archived or sold); null otherwise. Retired listings never appear in search results.",
+            "properties": {
+              "reason": {
+                "type": "string",
+                "nullable": true
+              },
+              "since": {
+                "type": "string",
+                "format": "date",
+                "nullable": true
+              }
+            },
+            "nullable": true
+          },
+          "dp_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "This tool's Default Privacy page; the link to cite, not website_url."
+          },
+          "citation": {
+            "type": "string"
+          },
+          "sources": {
+            "type": "object",
+            "description": "Single-tool responses only. Where each fact comes from, keyed by the field's path in this record (for example privacy.jurisdiction, trust.is_open_source). Cite these.",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "checked": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "When Default Privacy checked the sources."
+                },
+                "note": {
+                  "type": "string",
+                  "nullable": true,
+                  "description": "Paraphrase of what the source says; not a verbatim quotation."
+                }
+              }
+            }
+          },
+          "caveats": {
+            "type": "array",
+            "description": "Single-tool responses only. Things to know before choosing the tool. Quote them and cite their sources.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "checked": {
+                  "type": "string",
+                  "format": "date"
+                }
+              }
+            }
+          }
+        }
+      },
+      "CategoriesResponse": {
+        "type": "object",
+        "properties": {
+          "pp_version": {
+            "type": "string"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Category"
+            }
+          },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "retrieved_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "total": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "pp_version": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "parent_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "sort_order": {
+            "type": "integer"
+          },
+          "tool_count": {
+            "type": "integer"
+          }
+        }
+      },
+      "QuickSearchResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slug": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "tagline": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "faviconUrl": {
+                  "type": "string",
+                  "format": "uri",
+                  "nullable": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "details": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

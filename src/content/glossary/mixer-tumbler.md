@@ -1,0 +1,34 @@
+---
+term: "Mixer / Tumbler"
+slug: "mixer-tumbler"
+definition: "A service that pools cryptocurrency from multiple users and redistributes it, breaking the link between the original sender and the final recipient."
+category: "Blockchain"
+relatedTerms:
+  - "coinjoin"
+  - "ring-signatures"
+---
+
+Mixers and tumblers attempt to break the transaction trail on public blockchains like Bitcoin.
+
+## How It Works
+
+- Users send crypto to the mixer
+- The mixer pools funds from many users
+- After a delay, funds are sent to the users' destination addresses
+- The amounts and timing are randomized to prevent tracing
+
+## Centralized vs Decentralized
+
+- **Centralized mixers**: Operated by a company. They see all inputs and outputs. Requires trust.
+- **Decentralized mixers**: Use cryptographic protocols (like CoinJoin) so no single party sees the full picture.
+
+## Legal Status
+
+- Tornado Cash (Ethereum mixer) was sanctioned by the US Treasury in 2022
+- Bestmixer.io was shut down by Europol in 2019
+- Samourai Wallet developers were arrested in 2024
+- Using mixers for legitimate privacy is legal in most jurisdictions, but services that facilitate money laundering face enforcement
+
+## The Better Alternative
+
+Instead of adding privacy after the fact, use a cryptocurrency with built-in privacy, such as Monero. The privacy is indistinguishable from normal use.

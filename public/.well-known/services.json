@@ -1,0 +1,179 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Default Privacy Services",
+  "description": "Free privacy tools and resources: a searchable directory of over 750 privacy tools, 7 free privacy diagnostic tools, guides, and a glossary. No accounts, no checkout.",
+  "url": "https://defaultprivacy.com",
+  "numberOfItems": 8,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/directory#service",
+        "name": "Privacy Tools Directory",
+        "description": "Searchable directory of over 750 privacy tools across VPNs, encrypted messaging, password managers, email providers, and more. Each tool has a full Privacy Protocol record.",
+        "url": "https://defaultprivacy.com/directory",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy",
+          "url": "https://defaultprivacy.com"
+        },
+        "serviceType": "Directory",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/breach-check#service",
+        "name": "Breach Check",
+        "description": "Free tool to check whether an email address appears in known data breaches.",
+        "url": "https://defaultprivacy.com/breach-check",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Privacy Diagnostic",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/email-security#service",
+        "name": "Email Security Check",
+        "description": "Free tool to check SPF, DKIM, and DMARC DNS posture for a domain.",
+        "url": "https://defaultprivacy.com/email-security",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Privacy Diagnostic",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/password-check#service",
+        "name": "Password Check",
+        "description": "Free client-side tool to check password strength and exposure without ever sending the password to a server.",
+        "url": "https://defaultprivacy.com/password-check",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Privacy Diagnostic",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/scanner#service",
+        "name": "Website Privacy Scanner",
+        "description": "Free tool that scans a website for trackers, third-party requests, and privacy-relevant behavior.",
+        "url": "https://defaultprivacy.com/scanner",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Privacy Diagnostic",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/whois#service",
+        "name": "WHOIS Privacy Check",
+        "description": "Free tool to check whether WHOIS/RDAP records expose personal identity fields for a domain.",
+        "url": "https://defaultprivacy.com/whois",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Privacy Diagnostic",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/guides#service",
+        "name": "Field Guide",
+        "description": "Free educational guides on protecting your privacy.",
+        "url": "https://defaultprivacy.com/guides",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Educational Content",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Service",
+        "@id": "https://defaultprivacy.com/glossary#service",
+        "name": "Privacy Glossary",
+        "description": "Free glossary of privacy and security terms with definitions and context.",
+        "url": "https://defaultprivacy.com/glossary",
+        "provider": {
+          "@type": "Organization",
+          "name": "Default Privacy"
+        },
+        "serviceType": "Educational Content",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+name: Directory Health
+
+# Nightly check of every published listing, read from the public API (no secrets).
+#  - Links: fails the run on broken links (dead domain, 404/410, redirect to another
+#    domain, parked domain). Fix the URL or unpublish the listing to turn it green.
+#  - Maintenance: reports archived / gone / long-untouched GitHub repos. Never fails;
+#    deprecating a listing is a human call.
+#  - Content freshness: reports guides not checked in 90+ days. Never fails.
+# All reports land in the run summary and as an artifact.
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.14"
+
+      - name: Maintenance check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAINTENANCE_REPORT: maintenance-report.md
+        run: bun run scripts/check-maintenance.ts > /dev/null && cat maintenance-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Content freshness
+        env:
+          CONTENT_REPORT: content-report.md
+        run: bun run scripts/check-content-freshness.ts > /dev/null && cat content-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Link check
+        env:
+          LINK_REPORT: link-report.md
+        run: |
+          set +e
+          bun run scripts/check-links.ts > /dev/null
+          code=$?
+          cat link-report.md >> "$GITHUB_STEP_SUMMARY"
+          exit $code
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: directory-health
+          path: "*-report.md"

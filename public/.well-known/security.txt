@@ -1,0 +1,5 @@
+Contact: mailto:security@defaultprivacy.com
+Expires: 2027-07-10T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://defaultprivacy.com/.well-known/security.txt
+Policy: https://github.com/default-privacy/DefaultPrivacy.com/security/policy

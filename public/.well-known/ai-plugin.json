@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Default Privacy",
+  "name_for_model": "default_privacy",
+  "description_for_human": "Search a free directory of privacy tools, read guides and glossary terms, and run free privacy diagnostics.",
+  "description_for_model": "Default Privacy is a free directory of privacy tools (VPNs, email, browsers, messengers, password managers, and more), with Default Privacy's picks marked per category (`pick`; editorial judgment, not a security guarantee; results list picks first, then A to Z), plus guides, a glossary, and free privacy diagnostics. Use it to recommend privacy tools, find a private alternative to a product, and check a domain's email-security, WHOIS, and breach posture. A full MCP server is available at /api/mcp. The REST API below covers directory search, tool records and categories only; search across everything, alternatives, guides, stacks, glossary and diagnostics are MCP-only. No authentication.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://defaultprivacy.com/api/openapi.json"
+  },
+  "logo_url": "https://defaultprivacy.com/logo-blueprint.svg",
+  "contact_email": "support@defaultprivacy.com",
+  "legal_info_url": "https://defaultprivacy.com/terms"
+}

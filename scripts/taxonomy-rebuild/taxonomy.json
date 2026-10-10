@@ -1,0 +1,873 @@
+{
+ "groups": [
+  {
+   "slug": "browser-privacy",
+   "name": "Browser Privacy",
+   "sort": 10
+  },
+  {
+   "slug": "network-privacy",
+   "name": "Network Privacy",
+   "sort": 20
+  },
+  {
+   "slug": "data-privacy",
+   "name": "Data Privacy",
+   "sort": 30
+  },
+  {
+   "slug": "email",
+   "name": "Email",
+   "sort": 40
+  },
+  {
+   "slug": "identity-and-anonymity",
+   "name": "Identity & Anonymity",
+   "sort": 50
+  },
+  {
+   "slug": "hardware",
+   "name": "Hardware",
+   "sort": 60
+  },
+  {
+   "slug": "mobile",
+   "name": "Mobile",
+   "sort": 70
+  },
+  {
+   "slug": "protection",
+   "name": "Protection",
+   "sort": 80
+  },
+  {
+   "slug": "secure-payments",
+   "name": "Secure Payments",
+   "sort": 90
+  },
+  {
+   "slug": "communication",
+   "name": "Communication",
+   "sort": 100
+  },
+  {
+   "slug": "storage-hosting",
+   "name": "Storage & Hosting",
+   "sort": 110
+  },
+  {
+   "slug": "media-creative",
+   "name": "Media & Creative",
+   "sort": 120
+  },
+  {
+   "slug": "productivity-and-work",
+   "name": "Productivity & Work",
+   "sort": 130
+  },
+  {
+   "slug": "osint",
+   "name": "OSINT",
+   "sort": 140
+  },
+  {
+   "slug": "policy-and-advocacy",
+   "name": "Policy & Advocacy",
+   "sort": 150
+  },
+  {
+   "slug": "resources",
+   "name": "Resources",
+   "sort": 160
+  },
+  {
+   "slug": "legal-asset-protection",
+   "name": "Legal & Asset Protection",
+   "sort": 170
+  }
+ ],
+ "subcategories": [
+  {
+   "slug": "ad-blockers",
+   "name": "Ad Blockers",
+   "group": "browser-privacy"
+  },
+  {
+   "slug": "browser-sync",
+   "name": "Browser Sync",
+   "group": "browser-privacy"
+  },
+  {
+   "slug": "browsers",
+   "name": "Browsers",
+   "group": "browser-privacy"
+  },
+  {
+   "slug": "fingerprint-protection",
+   "name": "Fingerprint Protection",
+   "group": "browser-privacy"
+  },
+  {
+   "slug": "private-search",
+   "name": "Private Search",
+   "group": "browser-privacy"
+  },
+  {
+   "slug": "encrypted-messaging",
+   "name": "Encrypted Messaging",
+   "group": "communication"
+  },
+  {
+   "slug": "social-networks",
+   "name": "Social Networks",
+   "group": "communication"
+  },
+  {
+   "slug": "voip-calls",
+   "name": "VoIP & Calls",
+   "group": "communication"
+  },
+  {
+   "slug": "data-anonymization",
+   "name": "Data Anonymization",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "data-broker-redaction",
+   "name": "Data Broker Redaction",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "data-erasers",
+   "name": "Data Erasers",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "data-loss-prevention",
+   "name": "Data Loss Prevention",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "disk-cleaners",
+   "name": "Disk Cleaners",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "metadata-removal",
+   "name": "Metadata Removal",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "opt-out-tools",
+   "name": "Opt-Out Tools",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "tracker-removal",
+   "name": "Tracker Removal",
+   "group": "data-privacy"
+  },
+  {
+   "slug": "aliases-forwarding",
+   "name": "Aliases & Forwarding",
+   "group": "email"
+  },
+  {
+   "slug": "email-clients",
+   "name": "Email Clients",
+   "group": "email"
+  },
+  {
+   "slug": "email-security",
+   "name": "Email Security",
+   "group": "email"
+  },
+  {
+   "slug": "encrypted-email",
+   "name": "Encrypted Email",
+   "group": "email"
+  },
+  {
+   "slug": "mail-servers",
+   "name": "Mail Servers",
+   "group": "email"
+  },
+  {
+   "slug": "desktop-os",
+   "name": "Desktop OS",
+   "group": "hardware"
+  },
+  {
+   "slug": "faraday-bags",
+   "name": "Faraday Bags",
+   "group": "hardware"
+  },
+  {
+   "slug": "gps-anti-tracking",
+   "name": "GPS Anti-Tracking",
+   "group": "hardware"
+  },
+  {
+   "slug": "hardware-devices",
+   "name": "Hardware Devices",
+   "group": "hardware"
+  },
+  {
+   "slug": "laptops-desktops",
+   "name": "Laptops & Desktops",
+   "group": "hardware"
+  },
+  {
+   "slug": "linux",
+   "name": "Linux",
+   "group": "hardware"
+  },
+  {
+   "slug": "privacy-phones",
+   "name": "Privacy Phones",
+   "group": "hardware"
+  },
+  {
+   "slug": "routers-firmware",
+   "name": "Routers & Firmware",
+   "group": "hardware"
+  },
+  {
+   "slug": "security-cameras",
+   "name": "Security Cameras",
+   "group": "hardware"
+  },
+  {
+   "slug": "smart-home",
+   "name": "Smart Home",
+   "group": "hardware"
+  },
+  {
+   "slug": "voice-assistants",
+   "name": "Voice Assistants",
+   "group": "hardware"
+  },
+  {
+   "slug": "wifi-hotspots",
+   "name": "WiFi Hotspots",
+   "group": "hardware"
+  },
+  {
+   "slug": "burner-phone",
+   "name": "Burner Phone",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "decentralized-networks",
+   "name": "Decentralized Networks",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "disposable-id",
+   "name": "Disposable ID",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "identity-protection",
+   "name": "Identity Protection",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "sim-cards",
+   "name": "SIM Cards",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "virtual-mailbox",
+   "name": "Virtual Mailbox",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "virtual-phone-numbers",
+   "name": "Virtual Phone Numbers",
+   "group": "identity-and-anonymity"
+  },
+  {
+   "slug": "anonymous-llcs",
+   "name": "Anonymous LLCs",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "asset-protection",
+   "name": "Asset Protection",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "compliance",
+   "name": "Compliance",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "estate-planning",
+   "name": "Estate Planning",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "legal-shield",
+   "name": "Legal Shield",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "privacy-consultation",
+   "name": "Privacy Consultation",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "tax-solutions",
+   "name": "Tax Solutions",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "trusts",
+   "name": "Trusts",
+   "group": "legal-asset-protection"
+  },
+  {
+   "slug": "3d-graphics",
+   "name": "3D Graphics",
+   "group": "media-creative"
+  },
+  {
+   "slug": "animation",
+   "name": "Animation",
+   "group": "media-creative"
+  },
+  {
+   "slug": "audio-editors",
+   "name": "Audio Editors",
+   "group": "media-creative"
+  },
+  {
+   "slug": "blogging-platforms",
+   "name": "Blogging Platforms",
+   "group": "media-creative"
+  },
+  {
+   "slug": "casting-and-streaming",
+   "name": "Casting & Streaming",
+   "group": "media-creative"
+  },
+  {
+   "slug": "image-editors",
+   "name": "Image Editors",
+   "group": "media-creative"
+  },
+  {
+   "slug": "video-editors",
+   "name": "Video Editors",
+   "group": "media-creative"
+  },
+  {
+   "slug": "video-platforms",
+   "name": "Video Platforms",
+   "group": "media-creative"
+  },
+  {
+   "slug": "android-keyboards",
+   "name": "Android Keyboards",
+   "group": "mobile"
+  },
+  {
+   "slug": "app-stores",
+   "name": "App Stores",
+   "group": "mobile"
+  },
+  {
+   "slug": "mobile-apps",
+   "name": "Mobile Apps",
+   "group": "mobile"
+  },
+  {
+   "slug": "mobile-device-privacy",
+   "name": "Mobile Device Privacy",
+   "group": "mobile"
+  },
+  {
+   "slug": "mobile-os",
+   "name": "Mobile OS",
+   "group": "mobile"
+  },
+  {
+   "slug": "dns",
+   "name": "DNS",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "firewalls",
+   "name": "Firewalls",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "host-block-lists",
+   "name": "Host Block Lists",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "intrusion-detection",
+   "name": "Intrusion Detection",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "mix-networks",
+   "name": "Mix Networks",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "network-analysis",
+   "name": "Network Analysis",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "proxies",
+   "name": "Proxies",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "self-hosted-network-security",
+   "name": "Self-Hosted Network Security",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "virtual-private-networks",
+   "name": "Virtual Private Networks",
+   "group": "network-privacy"
+  },
+  {
+   "slug": "osint-domain-intel",
+   "name": "Domain & Website Intel",
+   "group": "osint"
+  },
+  {
+   "slug": "dorking",
+   "name": "Dorking",
+   "group": "osint"
+  },
+  {
+   "slug": "osint-frameworks",
+   "name": "Frameworks & Collections",
+   "group": "osint"
+  },
+  {
+   "slug": "maps-and-geolocation",
+   "name": "Maps & Geolocation",
+   "group": "osint"
+  },
+  {
+   "slug": "osint-host-scanning",
+   "name": "Network & Host Scanning",
+   "group": "osint"
+  },
+  {
+   "slug": "people-investigation",
+   "name": "People Investigation",
+   "group": "osint"
+  },
+  {
+   "slug": "specialized-search",
+   "name": "Specialized Search",
+   "group": "osint"
+  },
+  {
+   "slug": "osint-surveillance",
+   "name": "Surveillance & Transparency",
+   "group": "osint"
+  },
+  {
+   "slug": "osint-tech-fingerprint",
+   "name": "Tech Fingerprinting",
+   "group": "osint"
+  },
+  {
+   "slug": "osint-username-search",
+   "name": "Username & Social Search",
+   "group": "osint"
+  },
+  {
+   "slug": "advocacy-groups",
+   "name": "Advocacy Groups",
+   "group": "policy-and-advocacy"
+  },
+  {
+   "slug": "freedom-and-safety",
+   "name": "Freedom & Safety",
+   "group": "policy-and-advocacy"
+  },
+  {
+   "slug": "policy-and-research",
+   "name": "Policy & Research",
+   "group": "policy-and-advocacy"
+  },
+  {
+   "slug": "digital-notes",
+   "name": "Digital Notes",
+   "group": "productivity-and-work"
+  },
+  {
+   "slug": "documents",
+   "name": "Documents",
+   "group": "productivity-and-work"
+  },
+  {
+   "slug": "office-suites",
+   "name": "Office Suites",
+   "group": "productivity-and-work"
+  },
+  {
+   "slug": "private-ai",
+   "name": "Private AI",
+   "group": "productivity-and-work"
+  },
+  {
+   "slug": "team-collaboration",
+   "name": "Team Collaboration",
+   "group": "productivity-and-work"
+  },
+  {
+   "slug": "anti-malware",
+   "name": "Anti-Malware",
+   "group": "protection"
+  },
+  {
+   "slug": "auth-2fa",
+   "name": "Authentication & 2FA",
+   "group": "protection"
+  },
+  {
+   "slug": "data-breach-lookup",
+   "name": "Data Breach Lookup",
+   "group": "protection"
+  },
+  {
+   "slug": "file-encryption",
+   "name": "File Encryption",
+   "group": "protection"
+  },
+  {
+   "slug": "linux-defenses",
+   "name": "Linux Defenses",
+   "group": "protection"
+  },
+  {
+   "slug": "macos-defenses",
+   "name": "macOS Defenses",
+   "group": "protection"
+  },
+  {
+   "slug": "password-managers",
+   "name": "Password Managers",
+   "group": "protection"
+  },
+  {
+   "slug": "pgp-managers",
+   "name": "PGP Managers",
+   "group": "protection"
+  },
+  {
+   "slug": "virtual-machines",
+   "name": "Virtual Machines",
+   "group": "protection"
+  },
+  {
+   "slug": "vulnerability-scanners",
+   "name": "Vulnerability Scanners",
+   "group": "protection"
+  },
+  {
+   "slug": "windows-privacy",
+   "name": "Windows Privacy",
+   "group": "protection"
+  },
+  {
+   "slug": "books",
+   "name": "Books",
+   "group": "resources"
+  },
+  {
+   "slug": "channels",
+   "name": "Channels",
+   "group": "resources"
+  },
+  {
+   "slug": "courses",
+   "name": "Courses",
+   "group": "resources"
+  },
+  {
+   "slug": "ebook-readers",
+   "name": "eBook Readers",
+   "group": "resources"
+  },
+  {
+   "slug": "podcasts",
+   "name": "Podcasts",
+   "group": "resources"
+  },
+  {
+   "slug": "rss-news-readers",
+   "name": "RSS & News Readers",
+   "group": "resources"
+  },
+  {
+   "slug": "bank-accounts",
+   "name": "Bank Accounts",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "crypto-exchanges",
+   "name": "Crypto Exchanges",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "crypto-wallets",
+   "name": "Crypto Wallets",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "cryptocurrencies",
+   "name": "Cryptocurrencies",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "donations",
+   "name": "Donations",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "prepaid-virtual-cards",
+   "name": "Prepaid & Virtual Cards",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "secure-budgeting",
+   "name": "Secure Budgeting",
+   "group": "secure-payments"
+  },
+  {
+   "slug": "code-hosting",
+   "name": "Code Hosting",
+   "group": "storage-hosting"
+  },
+  {
+   "slug": "domain-registrars",
+   "name": "Domain Registrars",
+   "group": "storage-hosting"
+  },
+  {
+   "slug": "encrypted-cloud-storage",
+   "name": "Encrypted Cloud Storage",
+   "group": "storage-hosting"
+  },
+  {
+   "slug": "file-sharing-sync",
+   "name": "File Sharing & Sync",
+   "group": "storage-hosting"
+  },
+  {
+   "slug": "self-hosting-servers",
+   "name": "Self-Hosting & Servers",
+   "group": "storage-hosting"
+  },
+  {
+   "slug": "service-providers",
+   "name": "Service Providers",
+   "group": "storage-hosting"
+  },
+  {
+   "slug": "web-cloud-hosting",
+   "name": "Web & Cloud Hosting",
+   "group": "storage-hosting"
+  }
+ ],
+ "categoryActions": {
+  "Browsers": "browser-privacy",
+  "Ad Blockers": "browser-privacy",
+  "Browser Sync": "browser-privacy",
+  "Fingerprint Protection": "browser-privacy",
+  "Private Search Engine": "browser-privacy",
+  "Search Engine": "merge:private-search",
+  "Meta Search Engine": "merge:private-search",
+  "Browser Extensions": "tag:browser-extension",
+  "Virtual Private Networks": "network-privacy",
+  "DNS Providers": "network-privacy",
+  "DNS Clients": "merge:dns",
+  "DNS Hosting": "merge:dns",
+  "Firewalls": "network-privacy",
+  "Host Block Lists": "network-privacy",
+  "Intrusion Detection": "network-privacy",
+  "Self-Hosted Network Security": "network-privacy",
+  "Proxies": "network-privacy",
+  "Proxy Sites": "merge:proxies",
+  "Mix Networks": "network-privacy",
+  "Network Analysis": "network-privacy",
+  "Data Broker Redaction": "data-privacy",
+  "Opt-Out Tools": "data-privacy",
+  "Metadata Removal": "data-privacy",
+  "Data Erasers": "data-privacy",
+  "Data Anonymization": "data-privacy",
+  "Data Loss Prevention": "data-privacy",
+  "Disk Cleaners": "data-privacy",
+  "Google Analytics": "data-privacy",
+  "Encrypted Email": "email",
+  "Email Clients": "email",
+  "Mail Forwarding": "email",
+  "Email Aliases": "merge:aliases-forwarding",
+  "Mail Servers": "email",
+  "Email Checker": "email",
+  "Email Security Tools": "merge:email-security",
+  "Identity Protection": "identity-and-anonymity",
+  "Disposable ID": "identity-and-anonymity",
+  "Burner Phone": "identity-and-anonymity",
+  "Virtual Phone Numbers": "identity-and-anonymity",
+  "SIM Cards": "identity-and-anonymity",
+  "Decentralized Networks": "identity-and-anonymity",
+  "Virtual Mailbox": "identity-and-anonymity",
+  "Laptop": "hardware",
+  "Desktop": "merge:laptops-desktops",
+  "Desktop Operating Systems": "hardware",
+  "Linux": "hardware",
+  "Hardware Devices": "hardware",
+  "Privacy Phones": "hardware",
+  "Linux Phones": "merge:privacy-phones",
+  "Routers": "hardware",
+  "Router Firmware": "merge:routers-firmware",
+  "Smart Home": "hardware",
+  "Security Cameras": "hardware",
+  "Faraday Bags": "hardware",
+  "WiFi Hotspots": "hardware",
+  "Voice Assistants": "hardware",
+  "GPS Tracking": "hardware",
+  "Mobile OS": "mobile",
+  "Mobile Operating Systems": "merge:mobile-os",
+  "Mobile Apps": "mobile",
+  "Android Keyboards": "mobile",
+  "App Store": "mobile",
+  "Mobile Device Privacy": "mobile",
+  "2-Factor Authentication": "protection",
+  "Authentication": "merge:auth-2fa",
+  "Password Managers": "protection",
+  "PGP Managers": "protection",
+  "File Encryption": "protection",
+  "Anti-Malware": "protection",
+  "Windows Defences": "protection",
+  "Windows Privacy": "merge:windows-privacy",
+  "Linux Defenses": "protection",
+  "Mac OS Defences": "protection",
+  "Data Breaches": "protection",
+  "Scanners": "protection",
+  "Virtual Machines": "protection",
+  "Crypto Wallets": "secure-payments",
+  "Cold Storage": "merge:crypto-wallets",
+  "Crypto Exchanges": "secure-payments",
+  "Cryptocurrencies": "secure-payments",
+  "Bank Accounts": "secure-payments",
+  "Pre Paid Cards": "secure-payments",
+  "Virtual Credit Cards": "merge:prepaid-virtual-cards",
+  "Secure Budgeting": "secure-payments",
+  "Donations": "secure-payments",
+  "P2P Messaging": "communication",
+  "Messaging": "merge:encrypted-messaging",
+  "VoIP": "communication",
+  "Secure Conference Calls": "merge:voip-calls",
+  "Video and Voice": "merge:voip-calls",
+  "Social Media": "communication",
+  "Social Networks": "merge:social-networks",
+  "Encrypted Cloud Storage": "storage-hosting",
+  "Secure Cloud Storage": "merge:encrypted-cloud-storage",
+  "File Sharing and Sync": "storage-hosting",
+  "File Drop": "merge:file-sharing-sync",
+  "Backup and Sync": "merge:file-sharing-sync",
+  "Web Hosting": "storage-hosting",
+  "Cloud Hosting": "merge:web-cloud-hosting",
+  "Domain Registrars": "storage-hosting",
+  "Self Hosting": "storage-hosting",
+  "Servers": "merge:self-hosting-servers",
+  "Code Hosting": "storage-hosting",
+  "Service Providers": "storage-hosting",
+  "Image Editors": "media-creative",
+  "Video Editors": "media-creative",
+  "Audio Editors & Recorders": "media-creative",
+  "3D Graphics": "media-creative",
+  "Animation": "media-creative",
+  "Casting & Streaming": "media-creative",
+  "Video Platforms": "media-creative",
+  "Blogging Platforms": "media-creative",
+  "Design Tools": "drop",
+  "Digital Notes": "productivity-and-work",
+  "Documents": "productivity-and-work",
+  "Cloud Productivity Suites": "productivity-and-work",
+  "Team Collaboration": "productivity-and-work",
+  "Large Language Models": "productivity-and-work",
+  "Productivity": "dissolve",
+  "Open Source Intelligence": "split",
+  "Website Info": "merge:osint-domain-intel",
+  "WHOIS Lookup": "merge:osint-domain-intel",
+  "Username Checker": "merge:osint-username-search",
+  "Specialized Search Engine": "osint",
+  "Dorking": "osint",
+  "Maps": "osint",
+  "Private Investigators": "osint",
+  "Advocacy Groups": "policy-and-advocacy",
+  "Policy and Research": "policy-and-advocacy",
+  "Freedom and Safety": "policy-and-advocacy",
+  "Books": "resources",
+  "Podcasts": "resources",
+  "Channels": "resources",
+  "Online Courses": "resources",
+  "Learning": "drop",
+  "eBook Reader": "resources",
+  "RSS Readers": "resources",
+  "News Readers": "merge:rss-news-readers",
+  "Online Resources": "dissolve",
+  "Online Tools": "dissolve",
+  "LLCs": "legal-asset-protection",
+  "Trusts": "legal-asset-protection",
+  "Asset Protection": "legal-asset-protection",
+  "Legal Shield": "legal-asset-protection",
+  "Tax Solutions": "legal-asset-protection",
+  "Digital Estate Planning": "legal-asset-protection",
+  "Compliance": "legal-asset-protection",
+  "Privacy Consultation": "legal-asset-protection",
+  "Backend": "drop",
+  "Frontend": "drop",
+  "Testing": "drop",
+  "AI Tools": "drop",
+  "DevOps": "drop"
+ },
+ "osintSubcats": [
+  {
+   "slug": "osint-frameworks",
+   "name": "Frameworks & Collections"
+  },
+  {
+   "slug": "osint-username-search",
+   "name": "Username & Social Search"
+  },
+  {
+   "slug": "osint-domain-intel",
+   "name": "Domain & Website Intel"
+  },
+  {
+   "slug": "osint-host-scanning",
+   "name": "Network & Host Scanning"
+  },
+  {
+   "slug": "osint-tech-fingerprint",
+   "name": "Tech Fingerprinting"
+  },
+  {
+   "slug": "osint-surveillance",
+   "name": "Surveillance & Transparency"
+  }
+ ],
+ "aiRefile": [
+  "Open Source Intelligence",
+  "Productivity",
+  "Online Tools",
+  "Online Resources"
+ ]
+}

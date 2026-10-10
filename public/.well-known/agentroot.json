@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "domain": "defaultprivacy.com",
+  "name": "Default Privacy",
+  "description": "Agent-readable discovery root for the Default Privacy hub: a free, searchable directory of privacy tools plus guides, curated tool stacks, a glossary, and free privacy diagnostics. Exposed to agents as an MCP server and a read-only REST API.",
+  "discovery": {
+    "mcp": {
+      "transport": "streamable-http",
+      "url": "https://defaultprivacy.com/api/mcp",
+      "descriptor": "https://defaultprivacy.com/.well-known/mcp-server.json"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "https://defaultprivacy.com/api/openapi.json",
+      "base_url": "https://defaultprivacy.com/api/v1",
+      "authentication": "none"
+    },
+    "schema": {
+      "name": "Privacy Protocol",
+      "version": "1.0"
+    },
+    "resources": [
+      "defaultprivacy://categories",
+      "defaultprivacy://guides",
+      "defaultprivacy://stacks",
+      "defaultprivacy://glossary",
+      "defaultprivacy://stats"
+    ]
+  },
+  "capabilities": [
+    {
+      "name": "dp_search",
+      "type": "read",
+      "description": "One keyword search across directory tools, guides, stacks and the glossary; the starting point for a general privacy question."
+    },
+    {
+      "name": "dp_search_tools",
+      "type": "read",
+      "description": "Search the privacy tool directory with structured filters. Picks first, then A to Z."
+    },
+    {
+      "name": "dp_get_tool",
+      "type": "read",
+      "description": "Retrieve one tool's full Privacy Protocol record by slug."
+    },
+    {
+      "name": "dp_list_categories",
+      "type": "read",
+      "description": "List directory category groups and subcategories with tool counts."
+    },
+    {
+      "name": "dp_find_alternatives",
+      "type": "read",
+      "description": "Replace a mainstream app or service (Gmail, WhatsApp, Chrome…) or a website tracker with privacy-respecting alternatives; for apps, also what switching involves and the related guides and stacks."
+    },
+    {
+      "name": "dp_get_related_tools",
+      "type": "read",
+      "description": "List other tools in the same category as a given tool slug, DP picks first, then A to Z."
+    },
+    {
+      "name": "dp_compare_tools",
+      "type": "read",
+      "description": "Compare 2–5 tools side by side by their full Privacy Protocol records."
+    },
+    {
+      "name": "dp_search_guides",
+      "type": "read",
+      "description": "Search long-form privacy how-tos: switching to GrapheneOS, home address, data-broker removal, your own VPN, and more."
+    },
+    {
+      "name": "dp_get_guide",
+      "type": "read",
+      "description": "Fetch one guide's full content by slug."
+    },
+    {
+      "name": "dp_list_stacks",
+      "type": "read",
+      "description": "List curated privacy stacks: sets of directory tools for one goal or threat."
+    },
+    {
+      "name": "dp_get_stack",
+      "type": "read",
+      "description": "Fetch one privacy stack's full content by slug."
+    },
+    {
+      "name": "dp_route",
+      "type": "read",
+      "description": "Describe a situation in plain words and get the best-matching guides and stacks to read."
+    },
+    {
+      "name": "dp_check_mcp_server",
+      "type": "read",
+      "description": "Check an MCP server against Default Privacy's vetted list: what it can touch, or a checklist if unlisted."
+    },
+    {
+      "name": "dp_search_glossary",
+      "type": "read",
+      "description": "Search the privacy and security glossary."
+    },
+    {
+      "name": "dp_get_glossary_term",
+      "type": "read",
+      "description": "Fetch one glossary term's full definition by slug."
+    },
+    {
+      "name": "dp_check_email_security",
+      "type": "read",
+      "description": "Check SPF, DKIM, and DMARC posture for a domain."
+    },
+    {
+      "name": "dp_check_whois_privacy",
+      "type": "read",
+      "description": "Check WHOIS/RDAP records for exposed personal identity fields."
+    },
+    {
+      "name": "dp_check_domain_breaches",
+      "type": "read",
+      "description": "Check whether a domain appears in known public data breaches."
+    }
+  ],
+  "trust": {
+    "citation": "Default Privacy (https://defaultprivacy.com)"
+  },
+  "contact": {
+    "email": "support@defaultprivacy.com"
+  },
+  "updated_at": "2026-10-09T00:00:00Z"
+}

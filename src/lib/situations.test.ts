@@ -1,0 +1,48 @@
+import { existsSync } from "node:fs"
+import { join } from "node:path"
+import { describe, expect, it } from "vitest"
+import { BASELINE, matchSituations, SITUATIONS } from "./situations"
+
+const file = (kind: "guide" | "stack", slug: string) =>
+  join(process.cwd(), "src/content", kind === "guide" ? "guides" : "stacks", `${slug}.md`)
+
+describe("situations", () => {
+  it("every item points at an existing guide or stack", () => {
+    const missing = [...BASELINE, ...SITUATIONS.flatMap((s) => s.items)].filter((i) => !existsSync(file(i.kind, i.slug)))
+    expect(missing).toEqual([])
+  })
+
+  it("has unique ids and at least one item and term per situation", () => {
+    expect(new Set(SITUATIONS.map((s) => s.id)).size).toBe(SITUATIONS.length)
+    for (const s of SITUATIONS) {
+      expect(s.items.length, s.id).toBeGreaterThan(0)
+      expect(s.terms.length, s.id).toBeGreaterThan(0)
+    }
+  })
+
+  const cases: Array<[string, string]> = [
+    ["I am a journalist and I need to protect my sources", "journalist-or-activist"],
+    ["I just bought a Pixel and want GrapheneOS", "phone"],
+    ["which password manager should I use", "accounts"],
+    ["I want to stop using Google", "leave-google"],
+    ["my ex is tracking my phone", "harassment"],
+    ["how do I run an AI model on my laptop", "ai"],
+    ["is it safe to connect Claude to my email", "ai"],
+    ["my VPN keeps showing captchas", "network"],
+    ["remove my address from people search sites", "clear-online"],
+    ["what browser should I use", "browser"],
+  ]
+  it.each(cases)("%s -> %s first", (text, id) => {
+    expect(matchSituations(text)[0]?.id).toBe(id)
+  })
+
+  it("returns nothing for text with no recognised words", () => {
+    expect(matchSituations("zzzz qqqq")).toEqual([])
+    expect(matchSituations("help")).toEqual([])
+    expect(matchSituations("")).toEqual([])
+  })
+
+  it("returns at most three matches", () => {
+    expect(matchSituations("phone vpn password ai browser google address work").length).toBeLessThanOrEqual(3)
+  })
+})

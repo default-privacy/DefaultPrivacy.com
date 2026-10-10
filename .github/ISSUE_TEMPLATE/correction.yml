@@ -1,0 +1,24 @@
+name: Report a correction
+description: Something on a page is wrong or out of date.
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The URL of the page with the mistake.
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: A link that shows the correct information.
+    validations:
+      required: true

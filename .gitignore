@@ -1,0 +1,103 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+/playwright-report/
+/test-results/
+/reports/lighthouse-*.json
+!/reports/lighthouse-gate-summary.json
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# Cursor IDE (local only — do not commit)
+.cursor/
+
+# Claude Code (local only — do not commit, same as .cursor/)
+.claude/
+CLAUDE.md
+
+# misc
+.DS_Store
+*.pem
+*.code-workspace
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# local docs (not committed)
+/docs/
+
+# local drafts (not committed — promote files out to their real home when ready)
+/drafts/
+
+# data backups and exports
+/data/
+/backups/
+
+# one-off scripts if recreated locally (kept in repo: seed-tools, scan-tools,
+# audit-red-flags, audit-glossary-links, enrich-tool-badges, cleanup-mentor-sessions,
+# dns-leak-server, run-migrations, baseline-drizzle-migrations, db-migrate-url, wake-database)
+/scripts/apply-*.ts
+/scripts/fetch-*.ts
+/scripts/check-*.ts
+!/scripts/check-tracker-alternatives.ts
+!/scripts/check-white-label.ts
+!/scripts/check-brand-voice.ts
+!/scripts/check-mcp-descriptions.ts
+!/scripts/check-links.ts
+!/scripts/check-maintenance.ts
+!/scripts/check-content-freshness.ts
+!/scripts/check-citations.ts
+!/scripts/check-audiences.ts
+!/scripts/check-pricing.ts
+!/scripts/check-mcp-card.ts
+!/scripts/check-ucp.ts
+!/scripts/check-dns.ts
+!/scripts/check-web-bot-auth.ts
+!/scripts/check-prm.ts
+!/scripts/check-agent-policy.ts
+!/scripts/check-safe-fetch.ts
+/scripts/compare-*.ts
+/scripts/backup-database.ts
+/scripts/migrate-*.ts
+/scripts/migrate-*.sql
+/scripts/verify-migration.ts
+/scripts/run-content-drafts-migration.ts
+/scripts/show-examples.ts
+/scripts/enrich-tool-content.ts
+/scripts/final-stats.ts
+
+# generated reports
+/scripts/reports/
+
+# One-off production data scripts stay outside the repository.
+/scripts/*-20[0-9][0-9]-[0-9][0-9]-[0-9][0-9].ts

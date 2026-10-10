@@ -1,0 +1,36 @@
+name: Suggest a tool
+description: Suggest a privacy tool for the directory.
+labels: ["tool suggestion"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+      description: The tool's own site. No affiliate or referral links.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it does for privacy
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links to the tool's own documentation for each claim (open source, encryption, what it collects).
+    validations:
+      required: true
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Affiliation
+      options:
+        - label: I work for or am paid by this tool's maker.
