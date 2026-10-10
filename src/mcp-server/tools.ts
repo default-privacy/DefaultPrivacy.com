@@ -51,9 +51,13 @@ function errorContent(message: string) {
 }
 
 export function registerTools(server: McpServer): void {
+  // The Claude directory reads a tool's display name from annotations.title, not only title.
+  const registerTool: McpServer["registerTool"] = (name, config, cb) =>
+    server.registerTool(name, { ...config, annotations: { title: config.title, ...config.annotations } }, cb)
+
   // ── One search across the hub ──────────────────────────────────────────────
 
-  server.registerTool(
+  registerTool(
     "dp_search",
     {
       title: "Search everything",
@@ -129,7 +133,7 @@ export function registerTools(server: McpServer): void {
 
   // ── Directory ──────────────────────────────────────────────────────────────
 
-  server.registerTool(
+  registerTool(
     "dp_search_tools",
     {
       title: "Search privacy tools",
@@ -183,7 +187,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_get_tool",
     {
       title: "Get one privacy tool",
@@ -208,7 +212,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_list_categories",
     {
       title: "List directory categories",
@@ -232,7 +236,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_find_alternatives",
     {
       title: "Find privacy alternatives to a product",
@@ -308,7 +312,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_get_related_tools",
     {
       title: "Get related tools (same category)",
@@ -346,7 +350,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_compare_tools",
     {
       title: "Compare privacy tools",
@@ -382,7 +386,7 @@ export function registerTools(server: McpServer): void {
 
   // ── Guides & glossary ────────────────────────────────────────────────────────
 
-  server.registerTool(
+  registerTool(
     "dp_search_guides",
     {
       title: "Search guides",
@@ -417,7 +421,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_get_guide",
     {
       title: "Get one guide",
@@ -453,7 +457,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_list_stacks",
     {
       title: "List privacy stacks",
@@ -475,7 +479,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_get_stack",
     {
       title: "Get one privacy stack",
@@ -507,7 +511,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_route",
     {
       title: "Route a situation to the right guides and stacks",
@@ -551,7 +555,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_check_mcp_server",
     {
       title: "Check an MCP server against Default Privacy's vetted list",
@@ -590,7 +594,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_search_glossary",
     {
       title: "Search glossary",
@@ -616,7 +620,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_get_glossary_term",
     {
       title: "Get one glossary term",
@@ -648,7 +652,7 @@ export function registerTools(server: McpServer): void {
 
   // ── Diagnostics (outbound network — rate-limited) ────────────────────────────
 
-  server.registerTool(
+  registerTool(
     "dp_check_email_security",
     {
       title: "Check email security (SPF/DKIM/DMARC)",
@@ -668,7 +672,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_check_whois_privacy",
     {
       title: "Check WHOIS / domain privacy",
@@ -688,7 +692,7 @@ export function registerTools(server: McpServer): void {
     },
   )
 
-  server.registerTool(
+  registerTool(
     "dp_check_domain_breaches",
     {
       title: "Check domain data breaches",
