@@ -261,6 +261,10 @@ export async function checkEmailSecurity(input: string): Promise<EmailSecurityRe
       "k1",
       "mail",
       "dkim",
+      "s1", // Tuta, SendGrid
+      "s2",
+      "protonmail",
+      "fm1", // Fastmail
     ]
     const [txtRecords, dmarcRecords, ...dkimResults] = await Promise.all([
       lookupTxt(domain),
