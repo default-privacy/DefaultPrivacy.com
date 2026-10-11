@@ -31,6 +31,9 @@ describe("situations", () => {
     ["my VPN keeps showing captchas", "network"],
     ["remove my address from people search sites", "clear-online"],
     ["what browser should I use", "browser"],
+    ["someone is recording our zoom call with an ai notetaker", "being-recorded"],
+    ["my doctor wants to use an AI scribe", "being-recorded"],
+    ["can someone record me with smart glasses", "being-recorded"],
   ]
   it.each(cases)("%s -> %s first", (text, id) => {
     expect(matchSituations(text)[0]?.id).toBe(id)
