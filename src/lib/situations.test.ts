@@ -34,6 +34,9 @@ describe("situations", () => {
     ["someone is recording our zoom call with an ai notetaker", "being-recorded"],
     ["my doctor wants to use an AI scribe", "being-recorded"],
     ["can someone record me with smart glasses", "being-recorded"],
+    ["are flock cameras tracking my car", "street-cameras"],
+    ["how do I make my ring doorbell more private", "street-cameras"],
+    ["my neighbor's camera points into my yard", "street-cameras"],
   ]
   it.each(cases)("%s -> %s first", (text, id) => {
     expect(matchSituations(text)[0]?.id).toBe(id)

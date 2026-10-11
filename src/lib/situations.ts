@@ -110,6 +110,16 @@ export const SITUATIONS: Situation[] = [
     items: [{ kind: "guide", slug: "someones-ai-is-recording-you" }],
   },
   {
+    id: "street-cameras",
+    name: "Cameras are watching my street",
+    blurb: "License plate readers like Flock, Ring doorbells, and a neighbor's camera.",
+    terms: ["flock", "alpr", "lpr", "plate", "plates", "license", "reader", "readers", "ring", "doorbell", "doorbells", "camera", "cameras", "cctv", "surveillance", "neighbor", "neighbors", "neighbour", "sidewalk", "police", "car", "street", "yard"],
+    items: [
+      { kind: "guide", slug: "flock-license-plate-cameras" },
+      { kind: "guide", slug: "ring-doorbell-privacy-settings" },
+    ],
+  },
+  {
     id: "ai",
     name: "I want to use AI more privately",
     blurb: "From settings on the big chatbots to running a model yourself.",
