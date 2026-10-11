@@ -48,22 +48,22 @@ Almost everything below lives in the Ring app under the menu (☰) > **Control C
 Encryption scrambles your video so only someone with the right key can watch it. Ring now offers three levels, all under menu (☰) > Control Center > **Video Encryption** ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)):
 
 - **Standard encryption.** Ring says videos are encrypted in transit and when stored in its cloud ([Ring](https://ring.com/support/articles/rj2pk/Ring-Control-Center-Information)). Ring holds the keys and can decrypt them ([EFF](https://www.eff.org/deeplinks/2026/09/cold-take-amazons-new-encryption-method-still-doesnt-deliver-real-privacy)).
-- **TAKE ("Throw Away the Key Encryption").** Announced August 26, 2026. Ring says it runs its cloud features, such as Smart Alerts, "and then throws away and deletes the encryption key" ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page says "Only you and your trusted Shared Users can access your TAKE videos" ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). TAKE applies to your whole account. You can't set it per camera. Video Search, Familiar Faces, Alexa and Fire TV viewing, ring.com viewing and third-party integrations need a temporary pause of TAKE, and video recorded during a pause uses Standard encryption ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)).
+- **TAKE ("Throw Away the Key Encryption").** Announced August 26, 2026. Ring says it runs its cloud features, such as Smart Alerts, "and then throws away and deletes the encryption key" ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page answers "Can Ring employees view my encrypted video?" with "No. You always control your videos and who can view them." Shared Users can still watch on their own enrolled phones ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). TAKE applies to your whole account. You can't set it per camera. Some features need you to pause TAKE first, including Video Search, Video Descriptions, Familiar Faces, Virtual Security Guard, Alexa and Fire TV, ring.com viewing and third-party integrations. Video recorded during a pause uses Standard encryption ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)).
 - **End-to-end encryption (E2EE).** The video is locked with keys only you control. Ring says "no one else, including Ring services, can access your encrypted content" and that Ring cannot help you recover videos if you lose access ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)).
 
-**Is TAKE on for you yet?** We can't say. TechCrunch reported that TAKE becomes the standard for Ring's cloud features worldwide, with a gradual rollout starting September 2026 ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page says it "will gradually become available" and describes turning it on yourself: Video Encryption > "Let's turn on TAKE (Throw Away the Key Encryption)" > Turn On TAKE ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). Open the menu and check.
+**Is TAKE on for you yet?** We can't say. TechCrunch reported that TAKE becomes the standard for Ring's cloud features worldwide, with a gradual rollout starting September 2026 ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page says it "will gradually become available" and describes turning it on yourself: Video Encryption > "Let's turn on TAKE (Throw Away the Key Encryption)" > Turn On TAKE ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). Ring says it will notify you in the app when your account is eligible, and that it will move cameras still on Standard encryption to TAKE automatically once TAKE is available for them ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). Until then, the option may not show up. Open the menu and check.
 
 **What E2EE turns off.** Ring lists Active Warnings, Alexa and Fire TV viewing, Alexa+ Greetings, Bird's Eye View, Familiar Faces, Motion Tracking, Single Event Alert, Unusual Event Alert, Video Descriptions, viewing on ring.com, Shared Users, Smart Alerts, third-party integrations, video links, Video Search and Virtual Security Guard ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)). It needs iOS 17+ or Android 9+, and some older models, such as the first two Video Doorbells, can't use it ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)).
 
 To turn it on: Control Center > Video Encryption > "Let's turn on End-to-End Encryption" > Continue.
 
-**The critique of TAKE.** The Electronic Frontier Foundation (EFF), a digital rights group, says "it's technically still possible for Ring to alter its current practice if compelled to do so by law enforcement." EFF asked Ring whether it could be ordered to keep keys or unencrypted video, and says "the company did not address it." EFF also points out that account recovery keys are stored in the camera itself by default. Ring told EFF that under TAKE it "will not be able to provide encryption keys or decrypted content" ([EFF](https://www.eff.org/deeplinks/2026/09/cold-take-amazons-new-encryption-method-still-doesnt-deliver-real-privacy)).
+**The critique of TAKE.** The Electronic Frontier Foundation (EFF), a digital rights group, says "it's technically still possible for Ring to alter its current practice if compelled to do so by law enforcement." EFF asked Ring whether it could be ordered to turn over or keep unencrypted video, and says "the company did not address it." EFF also points out that account recovery keys are stored in the camera itself by default. Ring told EFF that under TAKE it "will not be able to provide encryption keys or decrypted content" ([EFF](https://www.eff.org/deeplinks/2026/09/cold-take-amazons-new-encryption-method-still-doesnt-deliver-real-privacy)).
 
 In short: with E2EE, Ring never receives a key to your video. With TAKE, Ring holds a key for up to 24 hours whenever a cloud feature needs it, then deletes it ([Ring](https://ring.com/privacy)). TAKE keeps more features.
 
 ### 2. Turn off Search Party
 
-Search Party uses nearby outdoor Ring cameras to look for a lost dog when a neighbor reports one. A second toggle, Fire Watch, looks for flames or smoke. Ring says you see any match and choose whether to share ([Ring](https://ring.com/support/articles/pkhj7/search-party)).
+Search Party uses nearby outdoor Ring cameras to look for a lost dog when a neighbor reports one. A second toggle, Fire Watch, looks for flames or smoke. Ring says you see any match and choose whether to share ([Ring](https://ring.com/support/articles/pkhj7/search-party)). Fire Watch shares go to Watch Duty, a wildfire nonprofit, along with your camera location, and Watch Duty may add them to its public map ([Ring](https://ring.com/support/articles/pkhj7/search-party)).
 
 Ring's help page doesn't say whether it starts on. Rep. Raja Krishnamoorthi wrote to Ring in February 2026 that Search Party "is automatically enabled for Ring devices that save video recordings to the cloud" ([Krishnamoorthi letter](https://krishnamoorthi.house.gov/sites/evo-subsites/krishnamoorthi.house.gov/files/evo-media-document/2026-02-26.krishnamoorthi-to-ring-re-surveillance_0.pdf)). Engadget also reported it is enabled by default ([Engadget](https://www.engadget.com/big-tech/heres-how-to-disable-rings-creepy-search-party-feature-185420455.html)).
 
@@ -73,7 +73,7 @@ To turn it off: menu (☰) > Control Center > **Search Party** > turn off "Searc
 
 Police and fire departments can post "Community Requests" asking nearby owners for video. Ring says participation "is always voluntary" ([Ring](https://ring.com/support/articles/uds27/Community-request)).
 
-- **Stop the emails:** menu (☰) > Control Center > **Public Safety** > opt out of Community Requests email notifications ([Ring](https://ring.com/support/articles/uds27/Community-request)). Requests also come as push notifications, and the email opt-out doesn't stop those ([Ring](https://ring.com/support/articles/uds27/Community-request)).
+- **Stop the emails:** menu (☰) > Control Center > **Public Safety** > opt out of Community Requests email notifications ([Ring](https://ring.com/support/articles/uds27/Community-request)). Requests also come as push notifications, and Ring's opt-out only mentions emails ([Ring](https://ring.com/support/articles/uds27/Community-request)).
 - **Stop seeing them:** the requests also appear in the Neighbors feed. Turn the feed off at Control Center > **Neighbors** ([Ring](https://ring.com/support/articles/rj2pk/Ring-Control-Center-Information)).
 
 For Community Requests, nothing is sent unless you tap share. If you do, Ring says your home address and account email go to the investigator with the video, and you can't take it back ([Ring](https://ring.com/support/articles/uds27/Community-request)). Warrants and emergency requests work differently (see below).
@@ -92,7 +92,7 @@ To turn it off: menu (☰) > Devices > [your device] > Device Settings > Privacy
 
 ### 6. Draw Privacy Zones
 
-A Privacy Zone blacks out part of the picture in live and recorded video. You get up to two per device, under Device Settings > Privacy Settings > **Add Privacy Zones** ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
+A Privacy Zone blacks out part of the picture in live and recorded video. You get up to two per device, under Device Settings > Privacy Settings > **Add Privacy Zones**. Some older and pan-tilt models, such as the first Video Doorbell, can't use them ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
 
 Two caveats from Ring: "If your camera position moves, the Privacy Zone will change," and motion behind a zone can still trigger a recording ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
 
@@ -100,7 +100,7 @@ Motion Zones are different. They only change where motion sets off an alert. The
 
 ### 7. Shorten how long videos are kept
 
-The US default is "30 days for 4K devices and 60 days for 1080p and 2K devices." You can pick anything from 1 day to 180 days at Control Center > **Video and Snapshot Storage** > Video and Snapshot Storage Time > Edit ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).
+The US default is "30 days for 4K devices and 60 days for 1080p and 2K devices." You can choose from preset lengths between 1 day and 180 days, set separately for each device, at Control Center > **Video and Snapshot Storage** > Video and Snapshot Storage Time > Edit ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).
 
 Changing it needs an active subscription. A shorter setting only applies to videos recorded after you change it ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)). So delete older ones by hand: tap the History tile, then the pencil icon ([Ring](https://ring.com/support/articles/6shp7/managing-your-ring-videos)). Ring says a video you already shared by link can outlive the original ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).
 
@@ -118,7 +118,7 @@ Check: Control Center > **Shared Users**. While you're there, look at **Authoriz
 
 ### 10. Protect the login
 
-Ring made two-step verification (a code on top of your password) mandatory for every account in February 2020 ([The Register](https://www.theregister.com/2020/02/19/ring_twofactor_auth/)). That followed incidents where strangers got into cameras, including one in a child's bedroom. Ring said its systems weren't breached ([NBC News](https://www.nbcnews.com/news/us-news/man-hacks-ring-camera-8-year-old-girl-s-bedroom-n1100586)), and The Register reported the break-ins typically used passwords reused from other sites ([The Register](https://www.theregister.com/2020/02/19/ring_twofactor_auth/)). Use a password you don't use anywhere else.
+Ring made two-step verification (a code on top of your password) mandatory for every account in February 2020 ([The Register](https://www.theregister.com/2020/02/19/ring_twofactor_auth/)). That followed incidents where strangers got into cameras, including one in a child's bedroom. Ring said its systems weren't breached ([NBC News](https://www.nbcnews.com/news/us-news/man-hacks-ring-camera-8-year-old-girl-s-bedroom-n1100586)), and The Register reported the break-ins typically used passwords reused from other sites, or guessed ones ([The Register](https://www.theregister.com/2020/02/19/ring_twofactor_auth/)). Use a password you don't use anywhere else.
 
 ---
 
@@ -129,7 +129,7 @@ Ring made two-step verification (a code on top of your password) mandatory for e
 - **2022.** Ring reported to Sen. Ed Markey that it had given police video in an emergency, without the owner's consent, 11 times in 2022 so far. At that point 2,161 agencies were on Ring's police service ([Markey](https://www.markey.senate.gov/news/press-releases/senator-markeys-probe-into-amazon-ring-reveals-new-privacy-problems)).
 - **January 2024.** Ring ended "Request for Assistance," the in-app tool police used to ask for video ([Ring](https://blog.ring.com/about-ring/ring-announces-new-neighbors-app-features-sunsets-request-for-assistance-post/)).
 - **April 2025.** Ring announced it would work with Axon, a police technology company, on "Community Requests" ([Ring](https://blog.ring.com/about-ring/ring-announces-plans-to-work-with-axon-to-bring-community-request-service-to-the-neighbors-app)).
-- **September 2025.** Community Requests launched in the US. Video you choose to share goes to "Axon Evidence," Axon's evidence system. Agencies can't see who got a request or who ignored it ([Ring](https://blog.ring.com/about-ring/ring-launches-community-requests-a-new-way-to-help-your-community/)).
+- **September 2025.** Community Requests began rolling out in the US. Video you choose to share goes to "Axon Evidence," Axon's evidence system. Agencies can't see who got a request or who ignored it ([Ring](https://blog.ring.com/about-ring/ring-launches-community-requests-a-new-way-to-help-your-community/)).
 - **December 2025.** Markey reported agencies on Neighbors had grown to 2,723 ([Markey](https://www.markey.senate.gov/news/press-releases/just-in-time-for-holiday-deliveries-sen-markeys-probe-exposes-amazons-alarming-privacy-violations-with-facial-recognition-technology-in-ring-doorbell)).
 - **February 2026.** Ring and Flock Safety, a license-plate camera company, cancelled a planned integration. Ring's only stated reason: it "would require significantly more time and resources than anticipated." Ring says "no Ring customer videos were ever sent to Flock Safety" ([Ring](https://blog.ring.com/about-ring/ring-and-flock-cancel-partnership/)).
 
@@ -165,7 +165,7 @@ Ring says: "Where TAKE or E2EE is enabled, Ring can only provide non-video infor
 
 ## What Amazon does with it
 
-**Sharing.** Ring's privacy notice says it may share your personal information with "our affiliates and subsidiaries" and its service providers ([Ring](https://ring.com/privacy-notice)). Ring's generative AI disclosure names Amazon.com as one of its affiliates ([Ring](https://ring.com/gen-ai-disclosure)).
+**Sharing.** Ring's privacy notice says it may share your personal information with "our affiliates and subsidiaries", its service providers, and some business partners, such as companies you connect through Works With Ring ([Ring](https://ring.com/privacy-notice)). Ring's generative AI disclosure names Amazon.com as one of its affiliates ([Ring](https://ring.com/gen-ai-disclosure)).
 
 **Advertising.** The same notice says Ring takes part in advertising networks ([Ring](https://ring.com/privacy-notice)).
 
@@ -178,11 +178,11 @@ Ring says: "Where TAKE or E2EE is enabled, Ring can only provide non-video infor
 
 If you post a video on Neighbors, assume Ring staff can view it.
 
-**The 2023 FTC case.** In May 2023 the Federal Trade Commission alleged that Ring let employees and contractors watch customers' private videos. It alleged one employee "over several months viewed thousands of video recordings belonging to female users," that Ring used customer videos "to train algorithms... without consent," and that weak security let hackers into about 55,000 US customers' accounts. The proposed settlement required Ring to pay $5.8 million for customer refunds. The order required Ring to delete certain videos and face data, and anything built from them ([FTC](https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-says-ring-employees-illegally-surveilled-customers-failed-stop-hackers-taking-control-users)).
+**The 2023 FTC case.** In May 2023 the Federal Trade Commission alleged that Ring let employees and contractors watch customers' private videos. It alleged one employee "over several months viewed thousands of video recordings belonging to female users," that Ring used customer videos "to train algorithms... without consent," and that weak security let hackers into about 55,000 US customers' accounts. The proposed order required Ring to pay $5.8 million for customer refunds and to delete customer videos and face data it obtained before 2018, plus anything built from them ([FTC](https://www.ftc.gov/news-events/news/press-releases/2023/05/ftc-says-ring-employees-illegally-surveilled-customers-failed-stop-hackers-taking-control-users)).
 
 **Refunds.** In April 2024 the FTC sent 117,044 PayPal payments, more than $5.6 million in total, to owners of certain devices such as indoor cameras ([FTC](https://www.ftc.gov/news-events/news/press-releases/2024/04/ftc-sends-refunds-ring-customers-stemming-2023-settlement-over-charges-company-failed-block)).
 
-**The Familiar Faces lawsuit.** In June 2026 a Virginia man filed a class action, The Register reported. He alleges Familiar Faces collects faceprints of visitors, postal workers and passersby without consent. These are allegations, with no ruling. Ring has said publicly that it doesn't use the data to train AI models ([The Register](https://www.theregister.com/personal-tech/2026/06/03/ring-faces-class-action-over-facial-recognition-feature/5250661)).
+**The Familiar Faces lawsuit.** In June 2026 The Register reported that a Virginia man had filed a class action. He alleges Familiar Faces collects faceprints of visitors, postal workers and passersby without consent. These are allegations, with no ruling. Ring has said publicly that it doesn't use the data to train AI models ([The Register](https://www.theregister.com/personal-tech/2026/06/03/ring-faces-class-action-over-facial-recognition-feature/5250661)).
 
 ---
 
@@ -201,11 +201,11 @@ In October 2021 a county court in Oxford ruled on a neighbor's Ring cameras ([ju
 - **The doorbell's video was lawful.** The judge found the neighbor was likely caught "only incidentally as she walks past" (para 134).
 - **The doorbell's audio was unlawful.** Its range was "well beyond the range of video," and crime prevention "could surely be achieved by something less" (para 137).
 - **A camera aimed at her property was unlawful for video too** (para 135).
-- **Her harassment claim succeeded,** based on his conduct toward her, including telling her he had sent her image to the police (para 126). The judge also found he had actively misled her about what the cameras captured (para 133).
+- **Her harassment claim succeeded,** based on his conduct toward her, including falsely telling her he had sent her image to the police (paras 126 to 127). The judge also found he had actively misled her about what the cameras captured (para 133).
 
 It is a county court decision, so other courts can consider it but don't have to follow it ([Inforrm](https://inforrm.org/2021/10/20/case-law-fairhurst-v-woodard-neighbour-cctv-harassment-and-data-protection-claim-succeeds-percy-preston/)).
 
-**Your rights in the UK.** The Information Commissioner's Office (ICO), the UK privacy regulator, says data protection law applies once a home camera or smart doorbell captures beyond the owner's property. You can ask for a copy of footage you're in, ask for it to be deleted, and object to being recorded. The owner should reply within one calendar month. If the owner has a strong reason for the camera, the ICO says it is "unlikely to find it fair or balanced to force a CCTV owner to move their camera" ([ICO](https://ico.org.uk/for-the-public/domestic-cctv-systems/)).
+**Your rights in the UK.** The Information Commissioner's Office (ICO), the UK privacy regulator, says data protection law applies once a home camera or smart doorbell captures beyond the owner's property. You can ask for a copy of footage you're in, ask for it to be deleted, and object to being recorded. The owner should usually reply within one calendar month. If the owner keeps recording after you object, they should give a very strong reason, such as crime prevention. If they can't, they must stop recording or move the camera. Even so, the ICO says it is "unlikely to find it fair or balanced to force a CCTV owner to move their camera" ([ICO](https://ico.org.uk/for-the-public/domestic-cctv-systems/)).
 
 ### In the US
 
@@ -222,7 +222,7 @@ In these two cases, the problem was aiming into private space. Neither court rul
 
 Keep it short and specific:
 
-- "Could you add a Privacy Zone over my window and yard?" Ring allows two per camera ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
+- "Could you add a Privacy Zone over my window and yard?" Ring allows two per camera, though some older and pan-tilt models can't use them ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
 - "Could you turn off audio recording? It picks up our conversations."
 - "Could you leave Familiar Faces off?"
 
@@ -233,10 +233,10 @@ Keep it short and specific:
 These products store video locally or encrypt it end to end. Each has a caveat. Listed in no order.
 
 - **Eufy (Anker).** Says its products "operate locally" where possible and offers end-to-end encryption as an option ([Eufy](https://www.eufy.com/privacy-commitment)). Caveat: in 2022 researchers showed streams could be watched unencrypted, and Anker later admitted it ([9to5Mac](https://9to5mac.com/2023/02/01/eufy-security-camera-encryption/)). In January 2025 three Eufy distributors paid New York $450,000 after the attorney general's investigation found that in certain situations video was not end-to-end encrypted and some live streams could be opened by anyone with the URL ([NY AG](https://ag.ny.gov/press-release/2025/attorney-general-james-secures-450000-companies-selling-home-security-cameras)).
-- **Reolink.** Records to microSD, a Home Hub or a recorder without cloud fees ([Reolink](https://reolink.com/product/reolink-home-hub/)). Caveat: the only encryption-at-rest claim we found is for the Home Hub, which Reolink says encrypts footage so it stays protected "even if your devices or SD cards are stolen" ([Reolink](https://reolink.com/product/reolink-home-hub/)).
+- **Reolink.** The Reolink Home Hub stores footage on microSD cards in the hub, with no monthly fees ([Reolink](https://reolink.com/product/reolink-home-hub/)). Caveat: the only encryption-at-rest claim we found is for the Home Hub, which Reolink says encrypts footage so it stays protected "even if your devices or SD cards are stolen" ([Reolink](https://reolink.com/product/reolink-home-hub/)).
 - **Apple HomeKit Secure Video.** Apple says the video is "end-to-end encrypted." Caveat: it is stored in iCloud and needs an iCloud+ plan and an Apple home hub ([Apple](https://support.apple.com/guide/icloud/icloud-homekit-secure-video-mme054c72692/icloud)).
 - **Ubiquiti UniFi Protect.** Says footage "remains local to your UniFi Console" ([Ubiquiti](https://ui.com/physical-security)). Caveat: in December 2023 a cloud glitch let some users see other customers' camera notifications and consoles for about nine hours ([TechCrunch](https://techcrunch.com/2023/12/15/ubiquiti-glitch-exposed-private-video-streams-other-customers)). It also needs a UniFi console ([Ubiquiti](https://ui.com/physical-security)).
-- **Frigate (self-hosted).** Free, open-source software that runs object detection on your own computer ([Frigate](https://docs.frigate.video/)). Caveat: you supply the server and IP cameras, and setup is technical.
+- **Frigate (self-hosted).** An open-source (MIT license), local video recorder with AI object detection for IP cameras ([Frigate on GitHub](https://github.com/blakeblackshear/frigate)). Caveat: you supply the server and IP cameras, and setup is technical.
 
 ---
 
@@ -260,8 +260,8 @@ It can pick up speech from roughly 20 feet in Consumer Reports' test, and furthe
 
 **Does Ring use facial recognition?**
 
-Yes, through Familiar Faces, which Ring says is off by default and unavailable in Illinois, Texas, Portland (Oregon) and Quebec ([Ring](https://ring.com/support/articles/z3yhg/familiar-faces)). A June 2026 class action alleges it collects passersby's faceprints without consent ([The Register](https://www.theregister.com/personal-tech/2026/06/03/ring-faces-class-action-over-facial-recognition-feature/5250661)).
+Yes, through Familiar Faces, which Ring says is off by default and unavailable in Illinois, Texas, Portland (Oregon) and Quebec ([Ring](https://ring.com/support/articles/z3yhg/familiar-faces)). A class action reported in June 2026 alleges it collects passersby's faceprints without consent ([The Register](https://www.theregister.com/personal-tech/2026/06/03/ring-faces-class-action-over-facial-recognition-feature/5250661)).
 
 **How long does Ring keep my videos?**
 
-In the US, 30 days for 4K devices and 60 days for 1080p and 2K devices by default. You can change it to anything from 1 to 180 days in Control Center ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).
+In the US, 30 days for 4K devices and 60 days for 1080p and 2K devices by default. You can pick a preset length between 1 and 180 days for each device in Control Center ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).

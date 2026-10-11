@@ -19,7 +19,7 @@ keywords:
   - "TV tracking what I watch"
 ---
 
-Your TV is watching you watch it. Texas's 2025 lawsuits claim nearly three in four US homes have a smart TV that uses ACR.
+Your TV is watching you watch it. Texas's 2025 lawsuits say about 68% of US households now own a smart TV.
 
 ## How Smart TVs Track You
 
@@ -37,7 +37,7 @@ ACR identifies what you're watching and reports it back to the TV manufacturer a
 - **Microphones**: Voice features send your commands when you use them.
 - **Cameras**: Some models include cameras for video calling and gesture control
 - **App usage**: Which apps you use, when, and for how long
-- **Network data**: What other devices are on your WiFi network
+- **Network data**: Nearby Wi-Fi access points. Vizio collects their hardware addresses, and LG says that with ACR on it may use them to estimate the TV's approximate location
 - **Advertising ID**: Unique device identifier for targeted advertising
 
 ## Who's Doing It
@@ -45,9 +45,9 @@ ACR identifies what you're watching and reports it back to the TV manufacturer a
 | Manufacturer | Tracking System | Data Use |
 |-------------|----------------|----------|
 | Samsung | Smart Hub, ACR | Advertising, content recommendations |
-| LG | ACR, webOS analytics | Targeted ads on home screen |
-| Vizio | Viewing Data (ACR, formerly Inscape) | Licenses viewing data to advertisers and data partners (FTC and New Jersey, $2.2M settlement, 2017) |
-| Roku | ACR, channel tracking | Core advertising business model |
+| LG | ACR, webOS analytics | Audience segments, and targeted ads if you opt in (via LG Ad Solutions) |
+| Vizio | Viewing Data (ACR) | Licenses viewing data to advertisers and data partners (FTC and New Jersey, $2.2M settlement, 2017) |
+| Roku | ACR (off by default) | Core advertising business model |
 | Amazon (Fire TV) | Viewing data, Alexa | Amazon advertising ecosystem |
 | Google (Google TV) | Advertising ID, Google account activity; ACR only if the TV maker adds it | Google advertising ecosystem |
 

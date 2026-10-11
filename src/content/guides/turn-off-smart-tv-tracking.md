@@ -1,7 +1,7 @@
 ---
 title: "Smart TV Tracking: How to Turn Off ACR on Roku, Fire TV, Google TV, LG, Vizio, Samsung, TCL and Hisense"
 slug: turn-off-smart-tv-tracking
-description: "Most smart TVs can recognize what's on the screen, including your game console or laptop over HDMI, and report it for advertising. Here is what automatic content recognition (ACR) is, how to turn it off brand by brand, what a streaming box changes, and where the lawsuits and new laws stand."
+description: "Many smart TVs can recognize what's on the screen, including your game console or laptop over HDMI, and report it for advertising. Here is what automatic content recognition (ACR) is, how to turn it off brand by brand, what a streaming box changes, and where the lawsuits and new laws stand."
 category: Privacy
 difficulty: beginner
 timeToComplete: "15 minutes"
@@ -34,7 +34,7 @@ One question runs through this guide:
 
 **What does my TV know about what I watch, and who gets told?**
 
-On most brands there is a switch. On the two brands researchers tested, turning it off stopped the ACR traffic.
+On most brands there is a switch. On the two brands researchers tested, opting out of the ad and tracking settings stopped the ACR traffic.
 
 ---
 
@@ -64,9 +64,9 @@ Brands are roughly ordered by how sure we are of the path. Most of the first com
 
 ### Roku TVs and Roku players
 
-**Feature name:** Automatic Content Recognition (ACR), under Smart TV Experience. Older software calls it "Use info from TV inputs" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
+**Feature name:** Automatic Content Recognition (ACR), under Smart TV Experience. Consumer Reports' 2025 test set labeled it "Use Info from TV Inputs" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
 
-**Path:** Home > Settings > Privacy > Smart TV Experience. Highlight "Automatic Content Recognition (ACR)" and press OK so the box is unchecked. You can also do it online at my.roku.com > Privacy Settings > Smart TV Experience, and set it to No ([Roku](https://support.roku.com/article/using-more-ways-to-watch-on-your-roku-tv)).
+**Path:** Home > Settings > Privacy > Smart TV Experience. Highlight "Automatic Content Recognition (ACR)" and press OK so the box is unchecked. You can also do it online at my.roku.com > Privacy Settings > Smart TV Experience, and set it to No ([Roku](https://support.roku.com/article/using-more-ways-to-watch-on-your-roku-tv)). If you see the Smart TV Experience screen, Roku offers "Agree" or "Manage preferences." Pick Manage preferences, then Decline ([Roku](https://support.roku.com/article/using-more-ways-to-watch-on-your-roku-tv)).
 
 Roku says "ACR is not enabled out of the box" ([Roku](https://support.roku.com/article/using-more-ways-to-watch-on-your-roku-tv)). Check anyway, in case you agreed during setup.
 
@@ -82,9 +82,9 @@ Roku says "ACR is not enabled out of the box" ([Roku](https://support.roku.com/a
 
 **Path:** Settings > Preferences > Privacy Settings. Turn off Device Usage Data (used for marketing and product improvement), Collect App Usage Data (which apps you open, and for how long) and Interest-based Ads (which tells apps not to use your advertising ID to profile you) ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)).
 
-On smart TVs with Fire TV built in, Amazon says you can also opt out of sharing your antenna viewing in the same menu ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)). Consumer Reports calls the toggle "Collect App and Over-the-Air Usage" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
+On smart TVs with Fire TV built in, Amazon says you can also opt out of sharing your antenna viewing in the same menu ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)). Consumer Reports calls the toggle "Collect App and Over-the-Air Usage" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)). Consumer Reports also found a newer option, Manage Sharing From Apps, which stops third-party apps sending viewing information to Amazon ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
 
-**What it doesn't stop:** Amazon still collects what it needs for Parental Controls and the "Recents" row. Prime Video and other Amazon services have their own settings ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)). Amazon's help page doesn't address HDMI. Consumer Reports says Amazon told it Fire TV doesn't collect data from a cable box or other non-Amazon devices ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)). A 2026 class action alleges ACR on Fire TVs ([Manypenny v. Amazon](https://www.courtlistener.com/docket/73305241/manypenny-v-amazoncom-inc/)).
+**What it doesn't stop:** Amazon still collects what it needs for Parental Controls and the "Recents" row. Prime Video and other Amazon services have their own settings ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)). Amazon's help page doesn't address HDMI. Consumer Reports says Amazon told it Fire TV doesn't collect data from a cable box or other non-Amazon devices ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)). A 2026 class action alleges ACR on Fire TVs, and Amazon has moved to dismiss it ([Manypenny v. Amazon](https://www.courtlistener.com/docket/73305241/manypenny-v-amazoncom-inc/)).
 
 **How it's verified:** Amazon's help page, read live and in an [archived copy](http://web.archive.org/web/20261006120735/https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN) (archived copy, October 6, 2026).
 
@@ -104,7 +104,7 @@ On smart TVs with Fire TV built in, Amazon says you can also opt out of sharing 
 
 **Path on older Android TV models:** Sony's support page says to go to System Preferences > Samba Interactive TV and disable it. "By disabling it, Samba Interactive TV stops collecting your TV's content viewing history." To reset the ad ID: System Preferences > Samba Interactive TV > Privacy > "Reset device advertising ID" ([Sony](http://web.archive.org/web/20260423201309/https://www.sony.com/electronics/support/articles/00182856) (archived copy, April 23, 2026)).
 
-**Path on newer Google TV models:** Consumer Reports says the path is Settings > All Settings > Samba Interactive TV. It also says to decline Sony's own "Provide Sony Smart TV Features," "Provide Program Recommendations," "Perform Product Improvements" and "Share TV Data," and to use the Google TV ad ID controls above ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
+**Path on newer Google TV models:** Consumer Reports says the path is Settings > All Settings > Samba Interactive TV. It also says to decline Sony's own "Provide Sony Smart TV Features," "Provide Program Recommendations," "Perform Product Improvements" and "Share TV Data" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)). Newer Sony sets run Google TV, so the Google TV ad ID steps above apply too.
 
 **What it doesn't stop:** Turning it off does not delete history already collected. Sony says to contact Samba TV at privacy@samba.tv for that. Sony also says Samba "does not recognize content played by installed apps like Netflix, Hulu, or YouTube" ([Sony](http://web.archive.org/web/20260423201309/https://www.sony.com/electronics/support/articles/00182856) (archived copy, April 23, 2026)).
 
@@ -116,11 +116,11 @@ On smart TVs with Fire TV built in, Amazon says you can also opt out of sharing 
 
 **Path:** LG's help page says: press Settings on the remote and select All Settings. Select Support, then Privacy & Terms, then User Agreements. LG notes the path "may vary slightly depending on the TV's release year" ([LG](https://www.lg.com/us/support/help-library/lg-tv-how-to-agree-to-the-user-agreements--20155154186594)). That page is about agreeing. Consumer Reports says the same User Agreements screen holds the controls for Viewing Information, Voice Information and Interest-Based Cross-Device Advertising ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
 
-**Also switch off:** Live Plus. Pocket-lint says the path is Settings > All Settings > General > System > Additional Settings > Live Plus ([Pocket-lint](https://www.pocket-lint.com/how-to-turn-off-acr-on-an-lg-tv/)). ZDNet gives the same route and adds Additional Settings > Advertisement > "Limit AD Tracking" on ([ZDNet](https://www.zdnet.com/home-and-office/home-entertainment/how-to-disable-acr-tv/)). Pocket-lint also says you can ask LG to delete past data under Support > Privacy & Terms > "Delete My Viewing Information" ([Pocket-lint](https://www.pocket-lint.com/how-to-turn-off-acr-on-an-lg-tv/)).
+**Also switch off:** Live Plus. Pocket-lint gives the path as Settings > Settings > General > System > Additional Settings > Live Plus ([Pocket-lint](https://www.pocket-lint.com/how-to-turn-off-acr-on-an-lg-tv/)). Malwarebytes calls the second step All Settings ([Malwarebytes](https://www.malwarebytes.com/blog/news/2026/03/samsung-tvs-stop-spying-on-viewers-in-texas-heres-how-to-disable-acr-anywhere)). ZDNet gives the same route and adds Additional Settings > Advertisement > "Limit AD Tracking" on ([ZDNet](https://www.zdnet.com/home-and-office/home-entertainment/how-to-disable-acr-tv/)). Pocket-lint also says you can ask LG to delete past data under Support > Privacy & Terms > "Delete My Viewing Information" ([Pocket-lint](https://www.pocket-lint.com/how-to-turn-off-acr-on-an-lg-tv/)).
 
 **What it doesn't stop:** LG says ACR doesn't run inside apps like Netflix or YouTube, so turning it off changes nothing about what those apps collect. LG says "ACR data collection stops" when you disable it, and that declining "does not prevent users from using core smart TV functionality." It also says ACR, voice and interest-based ads are "not enabled by default" ([LG](https://www.lg.com/us/newsroom/corporate/statement-understanding-privacy-on-lg-smart-tvs)).
 
-In September 2026, researchers including Gamers Nexus claimed an LG TV on an HDMI source sent location data to ad partner Alphonso "as frequently as 20 times per minute," eCoustics reported ([eCoustics](https://www.ecoustics.com/news/lg-smart-tv-privacy-acr/)). LG's only statement on location is that it uses nearby Wi-Fi information to estimate a TV's approximate location for ACR ([LG](https://www.lg.com/us/newsroom/corporate/statement-understanding-privacy-on-lg-smart-tvs)). eCoustics found no LG response to the specific data fields or frequency in the test ([eCoustics](https://www.ecoustics.com/news/lg-smart-tv-privacy-acr/)).
+In September 2026, researchers including Gamers Nexus claimed an LG TV on an HDMI source sent location data to Alphonso, the ad company that became LG Ad Solutions, "as frequently as 20 times per minute," eCoustics reported ([eCoustics](https://www.ecoustics.com/news/lg-smart-tv-privacy-acr/)). LG's September statement says only that it uses nearby Wi-Fi information to estimate a TV's approximate location for ACR ([LG](https://www.lg.com/us/newsroom/corporate/statement-understanding-privacy-on-lg-smart-tvs)). LG calls LG Ad Solutions "a majority-owned affiliate" ([LG](https://www.lg.com/us/newsroom/corporate/statement-understanding-privacy-on-lg-smart-tvs)). eCoustics found no LG response to the specific data fields or frequency in the test ([eCoustics](https://www.ecoustics.com/news/lg-smart-tv-privacy-acr/)).
 
 **How it's verified:** LG's help page (dated July 28, 2026) and statement. The Live Plus path comes from outlets.
 
@@ -130,7 +130,9 @@ In September 2026, researchers including Gamers Nexus claimed an LG TV on an HDM
 
 **Path on 2020 to 2024 sets:** Vizio's 2024 manual says: "Press the MENU button on your remote go to All Settings > Admin & Privacy, then select Viewing Data to turn the feature on or off" ([Vizio manual](https://www.vizio.com/content/dam/asset-portal/us/en/2024/tv/documentation/hd-fhd/2024_VIZIO_HD_FHD_UM_v2.pdf)).
 
-**Newer and older sets:** Vizio doesn't publish a Viewing Data path for sets made after 2024. Its FAQ only says to turn it off "in the Settings menu," so search Settings for "Viewing Data" ([Vizio](https://www.vizio.com/en/terms/privacy-policy/ads-and-privacy-faq)). Malwarebytes gives Menu > System > Reset & Admin > Viewing Data ([Malwarebytes](https://www.malwarebytes.com/blog/news/2026/03/samsung-tvs-stop-spying-on-viewers-in-texas-heres-how-to-disable-acr-anywhere)). That matches the menu Vizio's FAQ lists for sets made before 2020.
+**Newer sets:** Vizio's Viewing Data policy gives the path All Settings > Privacy & Legal > Viewing Data, and All Settings > Admin & Privacy > Viewing Data on older TVs ([Vizio](https://www.vizio.com/en/terms/privacy-policy/viewing-data-privacy-policy)).
+
+**Sets made before 2020:** Malwarebytes gives Menu > System > Reset & Admin > Viewing Data ([Malwarebytes](https://www.malwarebytes.com/blog/news/2026/03/samsung-tvs-stop-spying-on-viewers-in-texas-heres-how-to-disable-acr-anywhere)). That matches the menu Vizio's FAQ lists for sets made before 2020 ([Vizio](https://www.vizio.com/en/terms/privacy-policy/ads-and-privacy-faq)).
 
 **Also switch off:** Limited Ad Tracking, and reset the TV Advertiser ID. Vizio's paths by era ([Vizio](https://www.vizio.com/en/terms/privacy-policy/ads-and-privacy-faq)):
 
@@ -140,7 +142,7 @@ In September 2026, researchers including Gamers Nexus claimed an LG TV on an HDM
 
 **What it does and doesn't do:** Vizio says turning Viewing Data off "will trigger the deletion of historical logs of Viewing Data" and won't affect how the TV works. But it "will not, however, affect or limit Activity Data collection." Opting out of sale through your Walmart account doesn't stop collection either: "Your Viewing Data will still be collected unless you toggle off Viewing Data collection on your VIZIO OS products." The setting is per TV ([Vizio](https://www.vizio.com/en/terms/privacy-policy/viewing-data-privacy-policy)).
 
-**How it's verified:** Vizio's manual and policy pages for 2020 to 2024 sets. Newer sets: no published path.
+**How it's verified:** Vizio's policy page, 2024 manual and FAQ. The pre-2020 path comes from an outlet.
 
 ### Samsung (Tizen)
 
@@ -162,9 +164,11 @@ TCL sells Google TV, Roku TV and Fire TV models in the US. On a TCL Roku TV, use
 
 **What an outlet found on one model:** Pocket-lint tested a TCL 75QM7L Google TV ([Pocket-lint](https://www.pocket-lint.com/your-tcl-tv-is-spying-on-you-so-heres-how-you-disable-the-settings-responsible-for-that/)). It says to:
 
-1. Go to All Settings > Display and Sound > Picture and deselect the "automated content recognition" option at the bottom.
+1. Pocket-lint first turns off an automatic picture setting: go to All Settings > Display and Sound > Picture and deselect the "automated content recognition" option at the bottom.
 2. Go to Settings > Privacy > "Terms & Privacy" or "User Agreement," deselect the optional items, then press "Agree" to save. There is no Save button.
 3. Turn off Usage & Diagnostics under Privacy, then under Ads choose "Reset advertising ID" or "Limit ad tracking".
+
+Consumer Reports says you can withdraw consent later under Settings > Privacy > User Agreements ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
 
 **How it's verified:** one hands-on review of one model, plus Consumer Reports. Low confidence on other models.
 
@@ -184,7 +188,7 @@ For other Hisense sets, ZDNet says to look under Settings > System > Privacy for
 
 **The box tracks you too.** In June 2025, Amazon Ads and Roku announced "a shared ad identifier delivering logged-in reach to an estimated 80M U.S. CTV households." It lets Amazon's ad platform "recognize logged-in viewers across the Roku OS and devices" ([Amazon Ads](https://advertising.amazon.com/library/news/roku-amazon-ads-partnership)). Neither company says Roku's ACR data goes to Amazon. What they share is a logged-in ad identity and data about the ads Roku serves you.
 
-**Apple TV describes no ACR.** Apple's pages describe no ACR feature. Apple does collect "the content you watch, and where you watch it in the Apple TV app and in connected apps" ([Apple](https://www.apple.com/legal/privacy/data/en/apple-tv-app/)). Apple says its ad platform does not link your data with data from third parties and "does not share user or device data with data brokers" ([Apple](https://www.apple.com/legal/privacy/data/en/apple-advertising/)).
+**Apple TV describes no ACR.** Apple's pages describe no ACR feature. Apple does collect "the content you watch, and where you watch it in the Apple TV app and in connected apps" ([Apple](https://www.apple.com/legal/privacy/data/en/apple-tv-app/)). Apple says its ad platform does not link your data with data from third parties for targeted advertising or ad measurement, and "does not share user or device data with data brokers" ([Apple](https://www.apple.com/legal/privacy/data/en/apple-advertising/)).
 
 On an Apple TV, switch off:
 
@@ -208,13 +212,13 @@ There's a catch with TVs. A 2020 study of 220 US homes summarized that "72% of s
 
 ## The legal picture
 
-**Texas sued five makers.** On December 15, 2025, Texas Attorney General Ken Paxton sued Sony, Samsung, LG, Hisense and TCL, calling their disclosures "hidden, vague, and misleading" ([The Record](https://therecord.media/texas-sues-5-smart-tv-makers-over-acr-tech)). Samsung settled in February 2026 and must get Texas consumers' "express consent" before collecting ACR data ([Texas AG](https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs)). LG settled in May 2026 on similar terms, for Texas residents only, with no money and no admission of wrongdoing ([judgment](https://www.texasattorneygeneral.gov/sites/default/files/images/press/LG.pdf)). The cases against Sony, Hisense and TCL were still ongoing as of LG's settlement ([Texas AG](https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-major-agreement-lg-protect-texans-privacy-and-stop-data-being)).
+**Texas sued five makers.** On December 15, 2025, Texas Attorney General Ken Paxton sued Sony, Samsung, LG, Hisense and TCL, calling their disclosures "hidden, vague, and misleading" ([The Record](https://therecord.media/texas-sues-5-smart-tv-makers-over-acr-tech)). Samsung settled in February 2026 and must get Texas consumers' "express consent" before collecting ACR data ([Texas AG](https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-major-agreement-samsung-ensure-texans-are-protected-smart-tvs)). LG settled in May 2026 on similar terms, for Texas residents only, with no money and no admission of wrongdoing. LG's consent requirement starts 180 days after the judgment takes effect ([judgment](https://www.texasattorneygeneral.gov/sites/default/files/images/press/LG.pdf)). The cases against Sony, Hisense and TCL were still ongoing as of LG's settlement ([Texas AG](https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-secures-major-agreement-lg-protect-texans-privacy-and-stop-data-being)).
 
-**Kentucky passed a law.** From July 1, 2027, companies covered by Kentucky's privacy law must "Not collect automatic content recognition data without a consumer's consent," including from HDMI inputs ([Act text](https://apps.legislature.ky.gov/law/acts/26RS/documents/0118.pdf)).
+**Kentucky passed a law.** From July 1, 2027, companies covered by Kentucky's privacy law must "Not collect automatic content recognition data without a consumer's consent." That covers content from "external inputs," such as a console or cable box. It doesn't cover data about what you watch on the company's own services ([Act text](https://apps.legislature.ky.gov/law/acts/26RS/documents/0118.pdf)).
 
-Private class actions over ACR are also pending against several makers, with no rulings on the merits ([example: Samsung](https://www.courtlistener.com/docket/72125777/digiacinto-v-samsung-electronics-america-inc/)).
+Private class actions over ACR are also pending, including one against Hisense ([Severino v. Hisense](https://www.courtlistener.com/docket/73331232/severino-v-hisense-usa-corporation/)) and one against Amazon ([Manypenny v. Amazon](https://www.courtlistener.com/docket/73305241/manypenny-v-amazoncom-inc/)).
 
-Unless you're a Texan with a Samsung or LG set, or in Kentucky from mid-2027, the switches above are your main protection.
+Unless you're a Texan with a Samsung set (or an LG set, once its consent rule starts), or in Kentucky from mid-2027, the switches above are your main protection.
 
 ---
 
@@ -222,7 +226,7 @@ Unless you're a Texan with a Samsung or LG set, or in Kentucky from mid-2027, th
 
 **Is my smart TV watching me?**
 
-It watches the screen. Most smart TVs can use ACR to identify what's playing by sending fingerprints of the picture or sound ([IMC 2024 paper](https://arxiv.org/html/2409.06203)). LG says its ACR uses "the TV's internal audio processor (not a speaker)" ([LG](https://www.lg.com/us/newsroom/corporate/statement-understanding-privacy-on-lg-smart-tvs)). Turn it off with the steps above.
+It watches the screen. Many smart TVs can use ACR to identify what's playing by sending fingerprints of the picture or sound ([IMC 2024 paper](https://arxiv.org/html/2409.06203)). LG says its ACR uses "the TV's internal audio processor (not a speaker)" ([LG](https://www.lg.com/us/newsroom/corporate/statement-understanding-privacy-on-lg-smart-tvs)). Turn it off with the steps above.
 
 **How do I turn off ACR on a Samsung TV?**
 
