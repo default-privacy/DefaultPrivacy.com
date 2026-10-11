@@ -200,7 +200,7 @@ The FTC says the order lasts 20 years ([FTC](https://www.ftc.gov/news-events/new
 
 ### California's $12.75 million GM settlement
 
-California Attorney General Rob Bonta and the district attorneys of San Francisco, Los Angeles, Napa and Sonoma counties announced a $12.75 million settlement with GM in May 2026, with support from CalPrivacy. The complaint alleges GM sold Californians' driving and location data to Verisk and LexisNexis from 2020 to 2024. The settlement "is subject to court approval" ([CalPrivacy](https://privacy.ca.gov/2026/05/when-it-comes-to-data-privacy-consumers-must-be-in-the-drivers-seat-attorney-general-bonta-partners-secure-12-75-million-general-motors-privacy-settlement/)). We did not find a court approval as of this writing.
+California Attorney General Rob Bonta and the district attorneys of San Francisco, Los Angeles, Napa and Sonoma counties announced a $12.75 million settlement with GM in May 2026, with support from CalPrivacy. The complaint alleges GM sold Californians' driving and location data to Verisk and LexisNexis from 2020 to 2024 ([CalPrivacy](https://privacy.ca.gov/2026/05/when-it-comes-to-data-privacy-consumers-must-be-in-the-drivers-seat-attorney-general-bonta-partners-secure-12-75-million-general-motors-privacy-settlement/)). A Napa County Superior Court judge signed the final judgment on May 12, 2026, and GM did not admit liability ([California Attorney General](https://oag.ca.gov/system/files/attachments/press-docs/June%2030%202026%20Court%20Approved%20Amended%20Judgment%20People%20v.%20GM.pdf)).
 
 ### Honda's $632,500 fine
 

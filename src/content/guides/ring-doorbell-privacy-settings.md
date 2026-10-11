@@ -205,7 +205,7 @@ In October 2021 a county court in Oxford ruled on a neighbor's Ring cameras ([ju
 
 It is a county court decision, so other courts can consider it but don't have to follow it ([Inforrm](https://inforrm.org/2021/10/20/case-law-fairhurst-v-woodard-neighbour-cctv-harassment-and-data-protection-claim-succeeds-percy-preston/)).
 
-**Your rights in the UK.** The Information Commissioner's Office (ICO), the UK privacy regulator, says data protection law applies once a home camera or smart doorbell captures beyond the owner's property. You can ask for a copy of footage you're in, ask for it to be deleted, and object to being recorded. The owner should usually reply within one calendar month. If the owner keeps recording after you object, they should give a very strong reason, such as crime prevention. If they can't, they must stop recording or move the camera. Even so, the ICO says it is "unlikely to find it fair or balanced to force a CCTV owner to move their camera" ([ICO](https://ico.org.uk/for-the-public/domestic-cctv-systems/)).
+**Your rights in the UK.** The Information Commissioner's Office (ICO), the UK privacy regulator, says data protection law applies once a home camera or smart doorbell captures beyond the owner's property. You can ask for a copy of footage you're in, ask for it to be deleted, and object to being recorded. The owner should usually reply within one calendar month. If the owner keeps recording after you object, they should give a very strong reason, such as crime prevention. If they can't, they must stop recording or move the camera. Even so, the ICO says it is "unlikely to find it fair or balanced to force a CCTV owner to move their camera" ([ICO](https://ico.org.uk/for-the-public/home-cctv-systems/)).
 
 ### In the US
 
