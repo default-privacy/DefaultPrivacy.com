@@ -54,6 +54,13 @@ export const SITUATIONS: Situation[] = [
     ],
   },
   {
+    id: "car-data",
+    name: "My car is sharing how I drive",
+    blurb: "Connected cars, driving scores, data brokers and your insurance rates.",
+    terms: ["car", "cars", "vehicle", "vehicles", "driving", "driver", "drive", "insurance", "insurer", "premium", "telematics", "onstar", "gm", "toyota", "ford", "honda", "hyundai", "kia", "nissan", "tesla", "lexisnexis", "verisk", "arity", "snapshot", "drivewise"],
+    items: [{ kind: "guide", slug: "car-driving-data-and-insurance" }],
+  },
+  {
     id: "family-location",
     name: "I want to share location with my family",
     blurb: "Life360, Find My, Google and social maps: who can see where your family is.",
@@ -123,7 +130,7 @@ export const SITUATIONS: Situation[] = [
     id: "street-cameras",
     name: "Cameras are watching my street",
     blurb: "License plate readers like Flock, Ring doorbells, and a neighbor's camera.",
-    terms: ["flock", "alpr", "lpr", "plate", "plates", "license", "reader", "readers", "ring", "doorbell", "doorbells", "camera", "cameras", "cctv", "surveillance", "neighbor", "neighbors", "neighbour", "sidewalk", "police", "car", "street", "yard"],
+    terms: ["flock", "alpr", "lpr", "plate", "plates", "license", "reader", "readers", "ring", "doorbell", "doorbells", "camera", "cameras", "cctv", "surveillance", "neighbor", "neighbors", "neighbour", "sidewalk", "police", "street", "yard"],
     items: [
       { kind: "guide", slug: "flock-license-plate-cameras" },
       { kind: "guide", slug: "ring-doorbell-privacy-settings" },

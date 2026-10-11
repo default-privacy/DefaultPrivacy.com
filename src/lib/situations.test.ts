@@ -41,6 +41,8 @@ describe("situations", () => {
     ["I want to share my location with my family", "family-location"],
     ["I think someone put an airtag on my car", "harassment"],
     ["how do I stop my smart TV tracking what I watch", "smart-tv"],
+    ["is my car sharing my driving data with my insurance", "car-data"],
+    ["how do I get my LexisNexis driving report", "car-data"],
     ["turn off apple intelligence and siri", "ai"],
     ["how do I turn off copilot and recall in windows", "ai"],
   ]
