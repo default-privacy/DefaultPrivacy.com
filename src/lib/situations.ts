@@ -47,8 +47,18 @@ export const SITUATIONS: Situation[] = [
     id: "harassment",
     name: "Someone is watching or harassing me",
     blurb: "Start with safety. Take it at your own pace.",
-    terms: ["stalker", "stalking", "harass", "harassed", "harassment", "abuse", "abuser", "abusive", "ex", "partner", "followed", "spyware", "stalkerware", "domestic", "watching", "tracking"],
-    items: [{ kind: "stack", slug: "stalking-abuse-survivor-safety-kit" }],
+    terms: ["stalker", "stalking", "harass", "harassed", "harassment", "abuse", "abuser", "abusive", "ex", "partner", "followed", "spyware", "stalkerware", "domestic", "watching", "tracking", "airtag", "airtags", "tile", "tracker", "trackers"],
+    items: [
+      { kind: "stack", slug: "stalking-abuse-survivor-safety-kit" },
+      { kind: "guide", slug: "family-location-apps-and-airtags" },
+    ],
+  },
+  {
+    id: "family-location",
+    name: "I want to share location with my family",
+    blurb: "Life360, Find My, Google and social maps: who can see where your family is.",
+    terms: ["family", "kid", "kids", "child", "children", "teen", "teens", "son", "daughter", "parent", "parents", "life360", "location", "sharing", "share", "circle", "snapchat", "instagram"],
+    items: [{ kind: "guide", slug: "family-location-apps-and-airtags" }],
   },
   {
     id: "leave-google",

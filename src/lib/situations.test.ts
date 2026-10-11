@@ -37,6 +37,9 @@ describe("situations", () => {
     ["are flock cameras tracking my car", "street-cameras"],
     ["how do I make my ring doorbell more private", "street-cameras"],
     ["my neighbor's camera points into my yard", "street-cameras"],
+    ["is life360 safe for my kids", "family-location"],
+    ["I want to share my location with my family", "family-location"],
+    ["I think someone put an airtag on my car", "harassment"],
   ]
   it.each(cases)("%s -> %s first", (text, id) => {
     expect(matchSituations(text)[0]?.id).toBe(id)
