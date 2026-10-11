@@ -48,12 +48,12 @@ Almost everything below lives in the Ring app under the menu (☰) > **Control C
 Encryption scrambles your video so only someone with the right key can watch it. Ring now offers three levels, all under menu (☰) > Control Center > **Video Encryption** ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)):
 
 - **Standard encryption.** Ring says videos are encrypted in transit and when stored in its cloud ([Ring](https://ring.com/support/articles/rj2pk/Ring-Control-Center-Information)). Ring holds the keys and can decrypt them ([EFF](https://www.eff.org/deeplinks/2026/09/cold-take-amazons-new-encryption-method-still-doesnt-deliver-real-privacy)).
-- **TAKE ("Throw Away the Key Encryption").** Announced August 26, 2026. Ring says it runs its cloud features, such as Smart Alerts, "and then throws away and deletes the encryption key" ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page says "Only you and your trusted Shared Users can access your TAKE videos" ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). TAKE applies to your whole account. You can't set it per camera. Video Search, Familiar Faces, Alexa and Fire TV viewing, ring.com viewing and third-party integrations need a temporary pause of TAKE, and video recorded during a pause uses Standard encryption (same page).
+- **TAKE ("Throw Away the Key Encryption").** Announced August 26, 2026. Ring says it runs its cloud features, such as Smart Alerts, "and then throws away and deletes the encryption key" ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page says "Only you and your trusted Shared Users can access your TAKE videos" ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). TAKE applies to your whole account. You can't set it per camera. Video Search, Familiar Faces, Alexa and Fire TV viewing, ring.com viewing and third-party integrations need a temporary pause of TAKE, and video recorded during a pause uses Standard encryption ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)).
 - **End-to-end encryption (E2EE).** The video is locked with keys only you control. Ring says "no one else, including Ring services, can access your encrypted content" and that Ring cannot help you recover videos if you lose access ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)).
 
 **Is TAKE on for you yet?** We can't say. TechCrunch reported that TAKE becomes the standard for Ring's cloud features worldwide, with a gradual rollout starting September 2026 ([TechCrunch](https://techcrunch.com/2026/08/26/ring-introduces-a-new-encryption-standard-makes-it-the-default-for-cloud-features/)). Ring's help page says it "will gradually become available" and describes turning it on yourself: Video Encryption > "Let's turn on TAKE (Throw Away the Key Encryption)" > Turn On TAKE ([Ring](https://ring.com/support/articles/m508l/Using-TAKE-Throw-Away-the-Key-Encryption)). Open the menu and check.
 
-**What E2EE turns off.** Ring lists Active Warnings, Alexa and Fire TV viewing, Alexa+ Greetings, Bird's Eye View, Familiar Faces, Motion Tracking, Single Event Alert, Unusual Event Alert, Video Descriptions, viewing on ring.com, Shared Users, Smart Alerts, third-party integrations, video links, Video Search and Virtual Security Guard ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)). It needs iOS 17+ or Android 9+, and some older models, such as the first two Video Doorbells, can't use it (same page).
+**What E2EE turns off.** Ring lists Active Warnings, Alexa and Fire TV viewing, Alexa+ Greetings, Bird's Eye View, Familiar Faces, Motion Tracking, Single Event Alert, Unusual Event Alert, Video Descriptions, viewing on ring.com, Shared Users, Smart Alerts, third-party integrations, video links, Video Search and Virtual Security Guard ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)). It needs iOS 17+ or Android 9+, and some older models, such as the first two Video Doorbells, can't use it ([Ring](https://ring.com/support/articles/myr75/using-video-end-to-end-encryption)).
 
 To turn it on: Control Center > Video Encryption > "Let's turn on End-to-End Encryption" > Continue.
 
@@ -73,7 +73,7 @@ To turn it off: menu (☰) > Control Center > **Search Party** > turn off "Searc
 
 Police and fire departments can post "Community Requests" asking nearby owners for video. Ring says participation "is always voluntary" ([Ring](https://ring.com/support/articles/uds27/Community-request)).
 
-- **Stop the emails:** menu (☰) > Control Center > **Public Safety** > opt out of Community Requests email notifications (same page). Requests also come as push notifications, and the email opt-out doesn't stop those (same page).
+- **Stop the emails:** menu (☰) > Control Center > **Public Safety** > opt out of Community Requests email notifications ([Ring](https://ring.com/support/articles/uds27/Community-request)). Requests also come as push notifications, and the email opt-out doesn't stop those ([Ring](https://ring.com/support/articles/uds27/Community-request)).
 - **Stop seeing them:** the requests also appear in the Neighbors feed. Turn the feed off at Control Center > **Neighbors** ([Ring](https://ring.com/support/articles/rj2pk/Ring-Control-Center-Information)).
 
 For Community Requests, nothing is sent unless you tap share. If you do, Ring says your home address and account email go to the investigator with the video, and you can't take it back ([Ring](https://ring.com/support/articles/uds27/Community-request)). Warrants and emergency requests work differently (see below).
@@ -94,7 +94,7 @@ To turn it off: menu (☰) > Devices > [your device] > Device Settings > Privacy
 
 A Privacy Zone blacks out part of the picture in live and recorded video. You get up to two per device, under Device Settings > Privacy Settings > **Add Privacy Zones** ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
 
-Two caveats from Ring: "If your camera position moves, the Privacy Zone will change," and motion behind a zone can still trigger a recording (same page).
+Two caveats from Ring: "If your camera position moves, the Privacy Zone will change," and motion behind a zone can still trigger a recording ([Ring](https://ring.com/support/articles/g4e2w/using-privacy-features-in-the-ring-app)).
 
 Motion Zones are different. They only change where motion sets off an alert. They hide nothing.
 
@@ -102,7 +102,7 @@ Motion Zones are different. They only change where motion sets off an alert. The
 
 The US default is "30 days for 4K devices and 60 days for 1080p and 2K devices." You can pick anything from 1 day to 180 days at Control Center > **Video and Snapshot Storage** > Video and Snapshot Storage Time > Edit ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).
 
-Changing it needs an active subscription. A shorter setting only applies to videos recorded after you change it (same page). So delete older ones by hand: tap the History tile, then the pencil icon ([Ring](https://ring.com/support/articles/6shp7/managing-your-ring-videos)). Ring says a video you already shared by link can outlive the original (same page).
+Changing it needs an active subscription. A shorter setting only applies to videos recorded after you change it ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)). So delete older ones by hand: tap the History tile, then the pencil icon ([Ring](https://ring.com/support/articles/6shp7/managing-your-ring-videos)). Ring says a video you already shared by link can outlive the original ([Ring](https://ring.com/support/articles/1nce1/Understanding-and-Adjusting-Your-Video-Storage-Time)).
 
 ### 8. Leave Familiar Faces off
 
@@ -167,7 +167,7 @@ Ring says: "Where TAKE or E2EE is enabled, Ring can only provide non-video infor
 
 **Sharing.** Ring's privacy notice says it may share your personal information with "our affiliates and subsidiaries" and its service providers ([Ring](https://ring.com/privacy-notice)). Ring's generative AI disclosure names Amazon.com as one of its affiliates ([Ring](https://ring.com/gen-ai-disclosure)).
 
-**Advertising.** The same notice says Ring takes part in advertising networks (same page).
+**Advertising.** The same notice says Ring takes part in advertising networks ([Ring](https://ring.com/privacy-notice)).
 
 **AI training.** Here is exactly what Ring says, and doesn't:
 
@@ -233,7 +233,7 @@ Keep it short and specific:
 These products store video locally or encrypt it end to end. Each has a caveat. Listed in no order.
 
 - **Eufy (Anker).** Says its products "operate locally" where possible and offers end-to-end encryption as an option ([Eufy](https://www.eufy.com/privacy-commitment)). Caveat: in 2022 researchers showed streams could be watched unencrypted, and Anker later admitted it ([9to5Mac](https://9to5mac.com/2023/02/01/eufy-security-camera-encryption/)). In January 2025 three Eufy distributors paid New York $450,000 after the attorney general's investigation found that in certain situations video was not end-to-end encrypted and some live streams could be opened by anyone with the URL ([NY AG](https://ag.ny.gov/press-release/2025/attorney-general-james-secures-450000-companies-selling-home-security-cameras)).
-- **Reolink.** Records to microSD, a Home Hub or a recorder without cloud fees ([Reolink](https://reolink.com/product/reolink-home-hub/)). Caveat: the only encryption-at-rest claim we found is for the Home Hub, which Reolink says encrypts footage so it stays protected "even if your devices or SD cards are stolen" (same page).
+- **Reolink.** Records to microSD, a Home Hub or a recorder without cloud fees ([Reolink](https://reolink.com/product/reolink-home-hub/)). Caveat: the only encryption-at-rest claim we found is for the Home Hub, which Reolink says encrypts footage so it stays protected "even if your devices or SD cards are stolen" ([Reolink](https://reolink.com/product/reolink-home-hub/)).
 - **Apple HomeKit Secure Video.** Apple says the video is "end-to-end encrypted." Caveat: it is stored in iCloud and needs an iCloud+ plan and an Apple home hub ([Apple](https://support.apple.com/guide/icloud/icloud-homekit-secure-video-mme054c72692/icloud)).
 - **Ubiquiti UniFi Protect.** Says footage "remains local to your UniFi Console" ([Ubiquiti](https://ui.com/physical-security)). Caveat: in December 2023 a cloud glitch let some users see other customers' camera notifications and consoles for about nine hours ([TechCrunch](https://techcrunch.com/2023/12/15/ubiquiti-glitch-exposed-private-video-streams-other-customers)). It also needs a UniFi console ([Ubiquiti](https://ui.com/physical-security)).
 - **Frigate (self-hosted).** Free, open-source software that runs object detection on your own computer ([Frigate](https://docs.frigate.video/)). Caveat: you supply the server and IP cameras, and setup is technical.

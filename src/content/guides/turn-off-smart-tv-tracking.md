@@ -68,7 +68,7 @@ Brands are roughly ordered by how sure we are of the path. Most of the first com
 
 **Path:** Home > Settings > Privacy > Smart TV Experience. Highlight "Automatic Content Recognition (ACR)" and press OK so the box is unchecked. You can also do it online at my.roku.com > Privacy Settings > Smart TV Experience, and set it to No ([Roku](https://support.roku.com/article/using-more-ways-to-watch-on-your-roku-tv)).
 
-Roku says "ACR is not enabled out of the box" (same page). Check anyway, in case you agreed during setup.
+Roku says "ACR is not enabled out of the box" ([Roku](https://support.roku.com/article/using-more-ways-to-watch-on-your-roku-tv)). Check anyway, in case you agreed during setup.
 
 **Also switch off:** Personalize Ads under Settings > Privacy > Advertising, and reset the advertising ID there ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)). Roku's own page confirms the Advertising menu ([Roku](https://support.roku.com/article/manage-ad-preferences)).
 
@@ -82,7 +82,7 @@ Roku says "ACR is not enabled out of the box" (same page). Check anyway, in case
 
 **Path:** Settings > Preferences > Privacy Settings. Turn off Device Usage Data (used for marketing and product improvement), Collect App Usage Data (which apps you open, and for how long) and Interest-based Ads (which tells apps not to use your advertising ID to profile you) ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)).
 
-On smart TVs with Fire TV built in, Amazon says you can also opt out of sharing your antenna viewing in the same menu (same page). Consumer Reports calls the toggle "Collect App and Over-the-Air Usage" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
+On smart TVs with Fire TV built in, Amazon says you can also opt out of sharing your antenna viewing in the same menu ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)). Consumer Reports calls the toggle "Collect App and Over-the-Air Usage" ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)).
 
 **What it doesn't stop:** Amazon still collects what it needs for Parental Controls and the "Recents" row. Prime Video and other Amazon services have their own settings ([Amazon](https://www.amazon.com/gp/help/customer/display.html?nodeId=GQFYXZHZB2H629WN)). Amazon's help page doesn't address HDMI. Consumer Reports says Amazon told it Fire TV doesn't collect data from a cable box or other non-Amazon devices ([Consumer Reports](https://www.consumerreports.org/electronics/privacy/how-to-turn-off-smart-tv-snooping-features-a4840102036/)). A 2026 class action alleges ACR on Fire TVs ([Manypenny v. Amazon](https://www.courtlistener.com/docket/73305241/manypenny-v-amazoncom-inc/)).
 

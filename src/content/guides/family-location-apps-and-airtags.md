@@ -65,7 +65,7 @@ A few lines later:
 
 > "As described above, we license certain information, including precise geolocation data (which is "sensitive" personal data under certain State Privacy Laws) to select business partners for their own advertising and monetization purposes."
 
-The policy says it does not hand over your name, email or phone number for this, "but may share hashed versions of them with our partners" (same page). Hashing turns an email into a code. Two companies holding the same email get the same code, so it can still match you across databases.
+The policy says it does not hand over your name, email or phone number for this, "but may share hashed versions of them with our partners" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16038777217175-Life360-Privacy-Policy)). Hashing turns an email into a code. Two companies holding the same email get the same code, so it can still match you across databases.
 
 Life360's Q2 2026 results say its "other revenue," which includes data revenue, rose 25% to $11.6 million. Life360 credits higher data revenue, "primarily attributable to increased data volumes resulting from user growth," and higher partnership revenue ([Life360 Q2 2026](https://www.sec.gov/Archives/edgar/data/1581760/000158176026000142/life360incq226mediarelea.htm)).
 
@@ -77,7 +77,7 @@ Life360's law enforcement guidelines, updated Oct 2, 2026, describe a longer rec
 
 > "Life360 generally retains location data in the form of dwell data for up to 18 months. Raw location data is retained for approximately 30 days, with the exception of the last place a Tile was recorded."
 
-Dwell data is "locations where a member did not move for at least 15-20 minutes and the approximate length of time in such locations" (same page). In plain terms, that can include places like home, school, work, a clinic or a friend's house.
+Dwell data is "locations where a member did not move for at least 15-20 minutes and the approximate length of time in such locations" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16369337969431-Life360-Law-Enforcement-Guidelines)). In plain terms, that can include places like home, school, work, a clinic or a friend's house.
 
 - History follows the person. "Location history belongs to your account, not a specific Circle." If you join a new Circle, its members "may be able to see your location history" ([Life360](https://support.life360.com/hc/en-us/articles/23053602225559-Location-Drive-History)). This matters for separated parents.
 - Turning off sharing with a Circle does not stop collection. Life360 says it "will continue to collect your location information," including "to provide location-based advertising" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16044136535703-Limit-Location-Sharing-with-Your-Circle-s)).
@@ -86,7 +86,7 @@ Dwell data is "locations where a member did not move for at least 15-20 minutes 
 
 Arity is a driving-data company owned by Allstate. It powers Life360's driving features. Life360 shares driving event data with it and says it "may share geolocation and movement data," device identifiers and registration details ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16044058241559-Driving-Analytics-Services)).
 
-Life360's page says Arity builds "a driving risk score," and: "For US members only, Arity may use this information to provide personalized content including targeted advertising, offer discounts, rewards or pricing offers by third parties such as insurance companies, and for other commercial purposes" (same page).
+Life360's page says Arity builds "a driving risk score," and: "For US members only, Arity may use this information to provide personalized content including targeted advertising, offer discounts, rewards or pricing offers by third parties such as insurance companies, and for other commercial purposes" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16044058241559-Driving-Analytics-Services)).
 
 Disconnecting Arity has a cost. Life360 says: "Drive Detection, including Crash Alerts, Driving reports, and Drive history, is powered by Arity. These features will be disabled if data sharing with Arity is turned off" ([Life360](https://support.life360.com/hc/en-us/articles/23053499870487-Drive-Detection-Analysis)).
 
@@ -104,7 +104,7 @@ The policy says, word for word ([Life360](https://legal.corp.life360.com/hc/en-u
 
 The sentence just before it says: "Life360 may disclose the personal information of Children and Teens to our service providers and our business partners that offer integrated services."
 
-The state-law section adds: "We do not engage in sales, sharing, or targeted advertising using personal information about anyone we know to be under the age of 18" (same page).
+The state-law section adds: "We do not engage in sales, sharing, or targeted advertising using personal information about anyone we know to be under the age of 18" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16038777217175-Life360-Privacy-Policy)).
 
 Arity provides an integrated service (driving and crash detection). So here is a question we could not get answered from Life360's documents: **can Arity use a known teen's driving data for its own commercial purposes?** The policy doesn't say. We are not saying Life360 sells kids' data. We are saying the wording leaves this open.
 
@@ -115,9 +115,9 @@ Arity provides an integrated service (driving and crash detection). So here is a
 Life360 says Your Privacy Choices "is limited to the data for the account logged in at the time of the request (i.e., it's not relevant to other circle members)" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16043995801623-Limit-Information-Sharing-with-Third-party-Partners-Through-In-App-Privacy-Settings)). Every adult in the Circle has to do this.
 
 1. Open Life360. Tap **Settings** in the upper left, then **Privacy Center** ([Life360](https://support.life360.com/hc/en-us/articles/23053465742743-Privacy-Center)).
-2. Tap **Your Privacy Choices**. Turn off the **Include my data** toggle. Life360 says this "also includes Traffic and retail insights" (same page).
-3. Check it anyway: tap **Traffic and retail insights** and make sure **Include my data** is off there too (same page).
-4. In Your Privacy Choices, set **Personalized Ads** the way you want ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16043995801623-Limit-Information-Sharing-with-Third-party-Partners-Through-In-App-Privacy-Settings)). On iPhone, choosing "Ask App Not to Track" also opts out (same page).
+2. Tap **Your Privacy Choices**. Turn off the **Include my data** toggle. Life360 says this "also includes Traffic and retail insights" ([Life360](https://support.life360.com/hc/en-us/articles/23053465742743-Privacy-Center)).
+3. Check it anyway: tap **Traffic and retail insights** and make sure **Include my data** is off there too ([Life360](https://support.life360.com/hc/en-us/articles/23053465742743-Privacy-Center)).
+4. In Your Privacy Choices, set **Personalized Ads** the way you want ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16043995801623-Limit-Information-Sharing-with-Third-party-Partners-Through-In-App-Privacy-Settings)). On iPhone, choosing "Ask App Not to Track" also opts out ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16043995801623-Limit-Information-Sharing-with-Third-party-Partners-Through-In-App-Privacy-Settings)).
 5. Optional, with a cost: under **Trusted Partners**, tap **Arity**, turn off **Connect to Arity**, then tap **Disconnect Arity** ([Life360](https://support.life360.com/hc/en-us/articles/23053465742743-Privacy-Center)). This turns off crash detection. Make it a deliberate choice.
 
 What the opt-out leaves running: Life360 says it "will continue to collect your device location and movement data and to share such information with your Circles and with third parties as needed to support and provide the Life360 Services," but "will no longer share your personal information with those third party partners for their own commercial purposes" ([Life360](https://legal.corp.life360.com/hc/en-us/articles/16043995801623-Limit-Information-Sharing-with-Third-party-Partners-Through-In-App-Privacy-Settings)).
@@ -128,7 +128,7 @@ What the opt-out leaves running: Life360 says it "will continue to collect your 
 
 You can't delete history on its own. Life360 says: "At this time, there is no way to delete your history or driving events. If you choose to delete your entire account, your history and driving events will be deleted" ([Life360](https://support.life360.com/hc/en-us/articles/23053602225559-Location-Drive-History)).
 
-To delete the account: **Settings** > **Account** > **Delete Account**, confirm, then follow the emailed link ([Life360](https://support.life360.com/hc/en-us/articles/23053748967319-Delete-My-Account)). Deleting the account does not cancel a paid membership (same page). Cancel that separately.
+To delete the account: **Settings** > **Account** > **Delete Account**, confirm, then follow the emailed link ([Life360](https://support.life360.com/hc/en-us/articles/23053748967319-Delete-My-Account)). Deleting the account does not cancel a paid membership ([Life360](https://support.life360.com/hc/en-us/articles/23053748967319-Delete-My-Account)). Cancel that separately.
 
 #### The lawsuits
 
@@ -212,9 +212,9 @@ An item tracker is a small Bluetooth tag, like an AirTag, that reports its locat
 - **Settings** > **Notifications** > **Tracking Notifications** > **Allow Notifications** on.
 - Airplane Mode off. "If your device is in Airplane Mode, you won't receive tracking notifications."
 
-Past alerts are listed at the bottom of Find My > **Items**. An alert fires when a tag "is separated from its owner and seen moving with you over time" (same page).
+Past alerts are listed at the bottom of Find My > **Items**. An alert fires when a tag "is separated from its owner and seen moving with you over time" ([Apple](https://support.apple.com/en-us/119874)).
 
-**Android.** Needs Android 6 or later. You can scan on demand: **Settings** > **Safety & Emergency** > **Unknown tracker alerts** > **Scan now** ([Google](https://support.google.com/android/answer/13658562)). Google says it works with "Find Hub network compatible tags, headphones, and Apple AirTags," and that you get "one alert per tracker each day" (same page).
+**Android.** Needs Android 6 or later. You can scan on demand: **Settings** > **Safety & Emergency** > **Unknown tracker alerts** > **Scan now** ([Google](https://support.google.com/android/answer/13658562)). Google says it works with "Find Hub network compatible tags, headphones, and Apple AirTags," and that you get "one alert per tracker each day" ([Google](https://support.google.com/android/answer/13658562)).
 
 ### What the alerts miss
 
@@ -222,7 +222,7 @@ Past alerts are listed at the bottom of Find My > **Items**. An alert fires when
 - **Tile's Anti-Theft Mode** hides an owner's Tiles from Scan and Secure. It requires ID and a selfie scan ([Tile](https://support.life360.com/hc/en-us/articles/30582923425815-Tile-Anti-Theft-Mode)). The often-quoted $1 million is in Life360's terms: misuse makes you "liable to Life360/Tile for liquidated damages in the amount of $1 million" ([Life360 terms](https://legal.corp.life360.com/hc/en-us/articles/17865862545815-Life360-Product-and-Services-Terms)). Liquidated damages are a sum set in a contract, owed to Tile. The same terms say an owner's information "may be shared with law enforcement" if their Tiles are suspected of criminal use. If you think a Tile in Anti-Theft Mode is tracking you, Tile says its Customer Care team can help, and police can get the owner's details with a court order ([Tile](https://support.life360.com/hc/en-us/articles/30582987898135-How-to-Handle-Unwanted-Tracking)).
 - **Samsung Galaxy SmartTags.** Unconfirmed. Samsung's own detection is in the SmartThings app and "can only detect smart tags that are compatible with SmartThings Find" ([Samsung](https://www.samsung.com/ae/support/mobile-devices/how-to-disable-smarttag-2-location-tracking/)). We found no Samsung statement on whether its tags trigger the iPhone or Android alerts.
 - **Silenced AirTags still show up on your phone.** iFixit found the AirTag 2's speaker can be disabled and the tag keeps working ([9to5Mac](https://9to5mac.com/2026/02/05/ifixit-tears-down-new-airtag-finds-50-louder-speaker-still-100-easy-to-disable/)). That removes the beep. Apple says the phone alert is a separate warning from the sound ([Apple](https://support.apple.com/en-us/119874)).
-- **Shared AirTags.** When an AirTag is shared with you in Find My, "unwanted tracking notifications for that AirTag are suppressed for all sharing group members" ([Apple](https://support.apple.com/guide/personal-safety/stop-sharing-an-airtag-ips0c073d231/web)). If you're in a sharing group you didn't choose, remove yourself. Apple suggests checking whether the AirTag is near you first, because once you leave you can no longer see where it is (same page).
+- **Shared AirTags.** When an AirTag is shared with you in Find My, "unwanted tracking notifications for that AirTag are suppressed for all sharing group members" ([Apple](https://support.apple.com/guide/personal-safety/stop-sharing-an-airtag-ips0c073d231/web)). If you're in a sharing group you didn't choose, remove yourself. Apple suggests checking whether the AirTag is near you first, because once you leave you can no longer see where it is ([Apple](https://support.apple.com/guide/personal-safety/stop-sharing-an-airtag-ips0c073d231/web)).
 
 ### If you find one
 
@@ -231,7 +231,7 @@ Think about safety before you disable it. The owner may notice it has gone quiet
 - **Find it.** On iPhone, tap the alert, then **Continue** and **Play Sound**, or **Find Nearby** on newer models ([Apple](https://support.apple.com/en-us/119874)).
 - **Photograph where you found it.** Tile says that if it's safe to move the device, you may need to "document (with a photo or video) where you found the device" ([Tile](https://support.life360.com/hc/en-us/articles/30582950641559-Tile-Scan-and-Secure-FAQ)).
 - **Get the serial number.** Hold the top of an iPhone near the tag, then tap the notification. It can show the serial number and part of the registered owner's phone number or email ([Apple](https://support.apple.com/guide/personal-safety/detect-unwanted-trackers-ips139b15fd9/web)). On Android, hold it to the back of the phone ([Google](https://support.google.com/android/answer/13658562)).
-- **Know what disabling does.** Apple: "After the item is disabled, the owner can no longer get updates on its current location" ([Apple](https://support.apple.com/guide/personal-safety/detect-unwanted-trackers-ips139b15fd9/web)). Google adds the owner "may still be able to check the last location" ([Google](https://support.google.com/android/answer/13658562)). Google also warns some trackers reset when turned off, so police "can't get additional information about these trackers, like who its owner is" (same page). Get the serial number first.
+- **Know what disabling does.** Apple: "After the item is disabled, the owner can no longer get updates on its current location" ([Apple](https://support.apple.com/guide/personal-safety/detect-unwanted-trackers-ips139b15fd9/web)). Google adds the owner "may still be able to check the last location" ([Google](https://support.google.com/android/answer/13658562)). Google also warns some trackers reset when turned off, so police "can't get additional information about these trackers, like who its owner is" ([Google](https://support.google.com/android/answer/13658562)). Get the serial number first.
 - **Police.** Apple says police "can work with Apple to request information related to the item," and you may need the tag and its serial number ([Apple](https://support.apple.com/en-us/119874)).
 
 The National Network to End Domestic Violence (NNEDV) warns that "Making changes will often alert the other person, and they might become more abusive," and that changes "might also erase evidence" ([NNEDV](https://www.techsafety.org/location-tracking)). It recommends keeping a log of every incident ([NNEDV](https://www.techsafety.org/documentationtips)).
