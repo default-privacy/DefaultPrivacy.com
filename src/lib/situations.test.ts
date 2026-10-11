@@ -40,6 +40,9 @@ describe("situations", () => {
     ["is life360 safe for my kids", "family-location"],
     ["I want to share my location with my family", "family-location"],
     ["I think someone put an airtag on my car", "harassment"],
+    ["how do I stop my smart TV tracking what I watch", "smart-tv"],
+    ["turn off apple intelligence and siri", "ai"],
+    ["how do I turn off copilot and recall in windows", "ai"],
   ]
   it.each(cases)("%s -> %s first", (text, id) => {
     expect(matchSituations(text)[0]?.id).toBe(id)

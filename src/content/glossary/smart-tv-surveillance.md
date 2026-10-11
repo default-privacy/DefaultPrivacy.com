@@ -1,7 +1,7 @@
 ---
 term: "Smart TV Surveillance"
 slug: "smart-tv-surveillance"
-definition: "The data collection practices of internet-connected televisions that track what you watch, when you watch, how long you watch, and increasingly capture audio and visual data from your living room."
+definition: "The data collection practices of internet-connected televisions that track what you watch, when and for how long, by fingerprinting whatever is playing, including devices plugged in over HDMI."
 category: "Emerging Threats"
 relatedTerms:
   - "smart-home-surveillance"
@@ -19,13 +19,13 @@ keywords:
   - "TV tracking what I watch"
 ---
 
-Your TV is watching you watch it. Smart TVs are one of the most aggressive data collectors in the average home — and they're in 80%+ of US households.
+Your TV is watching you watch it. Texas's 2025 lawsuits claim nearly three in four US homes have a smart TV that uses ACR.
 
 ## How Smart TVs Track You
 
 ### Automatic Content Recognition (ACR)
-The primary tracking technology. ACR takes periodic screenshots or audio fingerprints of whatever is displayed on your screen — including:
-- Streaming content (Netflix, YouTube, etc.)
+The primary tracking technology. ACR samples the picture or sound several times a second or more, turns it into a short digital fingerprint, and sends that fingerprint to be matched against a library of shows and ads. (Texas's attorney general calls these "screenshots"; the makers and researchers describe fingerprints.) It can fingerprint:
+- The maker's own free streaming channels (and on some brands, like Vizio, what you watch in apps)
 - Cable/satellite TV
 - Blu-ray playback
 - Video game content
@@ -34,7 +34,7 @@ The primary tracking technology. ACR takes periodic screenshots or audio fingerp
 ACR identifies what you're watching and reports it back to the TV manufacturer and their partners.
 
 ### Additional Data Collection
-- **Microphones**: Voice-enabled remotes and built-in microphones capture voice commands — and sometimes more
+- **Microphones**: Voice features send your commands when you use them.
 - **Cameras**: Some models include cameras for video calling and gesture control
 - **App usage**: Which apps you use, when, and for how long
 - **Network data**: What other devices are on your WiFi network
@@ -46,27 +46,23 @@ ACR identifies what you're watching and reports it back to the TV manufacturer a
 |-------------|----------------|----------|
 | Samsung | Smart Hub, ACR | Advertising, content recommendations |
 | LG | ACR, webOS analytics | Targeted ads on home screen |
-| Vizio | Inscape (ACR) | Sold viewing data to advertisers ($17M FTC fine in 2017) |
+| Vizio | Viewing Data (ACR, formerly Inscape) | Licenses viewing data to advertisers and data partners (FTC and New Jersey, $2.2M settlement, 2017) |
 | Roku | ACR, channel tracking | Core advertising business model |
 | Amazon (Fire TV) | Viewing data, Alexa | Amazon advertising ecosystem |
-| Google (Android TV) | Viewing data, Google account | Google advertising ecosystem |
+| Google (Google TV) | Advertising ID, Google account activity; ACR only if the TV maker adds it | Google advertising ecosystem |
 
 ## Why It Matters
 
 - Your viewing habits reveal **political beliefs** (news channels), **health concerns** (medical shows), **interests**, and **daily routine**
-- Viewing data is combined with other data sources to build comprehensive profiles
+- Viewing data is combined with other data sources to build detailed profiles
 - TV advertising is now targeted using the same surveillance infrastructure as online ads
-- Smart TV data is sold to data brokers, advertisers, and analytics companies
+- Some makers license viewing data to advertisers and analytics companies, and combine it with information from data brokers (Vizio says so in its policy)
 
 ## How to Protect Yourself
 
-1. **Disable ACR** during setup — Most TVs ask during initial setup (buried in "improve experience" language)
-   - Samsung: Settings → General → Privacy → Viewing Information Services → Off
-   - LG: Settings → Additional Settings → LivePlus → Off
-   - Vizio: Settings → System → Reset & Admin → Viewing Data → Off
-   - Roku: Settings → Privacy → Smart TV Experience → Off
-2. **Don't connect your TV to WiFi** — Use a separate streaming device (Apple TV, Roku with settings locked down) instead
-3. **Disable microphone and camera** — Physical covers for cameras; disable voice features
-4. **Block TV tracking at the network level** — Pi-hole or NextDNS can block TV telemetry domains
+1. **Disable ACR** during setup. Most TVs ask during initial setup (buried in "improve experience" language). Each brand names the switch differently and the menus move between model years, so see [how to turn off smart TV tracking](/guides/turn-off-smart-tv-tracking) for current steps by brand
+2. **Don't connect your TV to WiFi**. Use a separate streaming device (Apple TV, Roku with settings locked down) instead
+3. **Disable microphone and camera**. Physical covers for cameras; disable voice features
+4. **Block TV tracking at the network level**. Pi-hole or NextDNS can block TV tracking domains, but many TVs use their own hard-coded DNS, so your router must force all DNS through the blocker, and encrypted DNS can still slip past ([how to set that up](/guides/private-dns-and-ad-blocking))
 5. **Use a "dumb" monitor** with a separate streaming device you control
 6. **Decline all "personalization" and "improvement" options** during setup

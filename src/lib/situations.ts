@@ -133,13 +133,25 @@ export const SITUATIONS: Situation[] = [
     id: "ai",
     name: "I want to use AI more privately",
     blurb: "From settings on the big chatbots to running a model yourself.",
-    terms: ["ai", "chatbot", "chatbots", "chatgpt", "llm", "claude", "gemini", "copilot", "model", "models", "local", "assistant", "agent", "agents", "mcp", "prompt", "prompts", "ollama", "jan", "connect", "connector", "connectors", "muse", "dots", "openclaw", "comet"],
+    terms: ["ai", "chatbot", "chatbots", "chatgpt", "llm", "claude", "gemini", "copilot", "model", "models", "local", "assistant", "agent", "agents", "mcp", "prompt", "prompts", "ollama", "jan", "connect", "connector", "connectors", "muse", "dots", "openclaw", "comet", "siri", "intelligence", "recall"],
     items: [
       { kind: "guide", slug: "how-to-use-ai-chatbots-privately" },
       { kind: "guide", slug: "private-ai-what-you-have-to-trust" },
       { kind: "guide", slug: "run-an-ai-model-on-your-own-computer" },
       { kind: "guide", slug: "before-you-install-an-ai-agent-app" },
       { kind: "guide", slug: "before-you-connect-an-ai-agent-or-mcp-server" },
+      { kind: "guide", slug: "turn-off-ai-on-your-phone" },
+      { kind: "guide", slug: "turn-off-ai-on-your-computer" },
+    ],
+  },
+  {
+    id: "smart-tv",
+    name: "My TV is tracking what I watch",
+    blurb: "Smart TVs and streaming sticks that report what's on screen, and how to turn it off.",
+    terms: ["tv", "tvs", "television", "smart-tv", "roku", "firestick", "vizio", "hisense", "tcl", "acr", "streaming", "watch"],
+    items: [
+      { kind: "guide", slug: "turn-off-smart-tv-tracking" },
+      { kind: "guide", slug: "private-dns-and-ad-blocking" },
     ],
   },
   {
