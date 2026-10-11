@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
                   We practice what we preach. This policy explains exactly what data we touch, why, and how
                   little of it we keep.
                 </p>
-                <p className="text-sm text-foreground/45">Last updated: July 8, 2026</p>
+                <p className="text-sm text-foreground/45">Last updated: October 11, 2026</p>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">AI assistant connector</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
-                    <li>• We keep daily counts of each tool and request type an assistant uses, and of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;). Lookups aren&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
+                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), and of which MCP protocol version each request uses. Lookups aren&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">

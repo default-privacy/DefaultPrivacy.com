@@ -45,6 +45,7 @@ describe("situations", () => {
     ["how do I get my LexisNexis driving report", "car-data"],
     ["turn off apple intelligence and siri", "ai"],
     ["how do I turn off copilot and recall in windows", "ai"],
+    ["is it safe to open a cloned repo in cursor", "ai"],
   ]
   it.each(cases)("%s -> %s first", (text, id) => {
     expect(matchSituations(text)[0]?.id).toBe(id)

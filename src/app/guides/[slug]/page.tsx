@@ -4,6 +4,7 @@
 // that looks alive while measuring nothing real. Per-slug demand is counted on the
 // dynamic MCP path instead (src/mcp-server/tools.ts, kind "guide_read"), which sees
 // agent reads only. Human page views are deliberately not counted anywhere.
+import { ConnectAiCard } from "@/components/ai/connect-ai-card"
 import { BreadcrumbSchema } from "@/components/common/breadcrumb-schema"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
@@ -289,6 +290,7 @@ export default async function GuideDetailPage({ params }: Props) {
                 </div>
               </div>
             </div>
+          <ConnectAiCard size="slim" className="mt-10" />
         </article>
       </main>
 

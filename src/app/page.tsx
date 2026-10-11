@@ -1,3 +1,4 @@
+import { ConnectAiCard } from "@/components/ai/connect-ai-card"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/common/header"
@@ -133,6 +134,7 @@ export default async function Home({
       ═══════════════════════════════════════════════════════════════════════ */}
       <main id="directory" className="container flex-1 scroll-mt-24 pb-16 pt-8">
         <DirectoryBrowser searchParams={params} basePath="/" showSearch={false} />
+        <ConnectAiCard size="slim" className="mt-10" />
         <PartnerRevenueDisclosure variant="directory-note" className="mt-10" />
       </main>
 

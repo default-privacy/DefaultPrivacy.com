@@ -1,3 +1,4 @@
+import { ConnectAiCard } from "@/components/ai/connect-ai-card"
 import { BreadcrumbSchema } from "@/components/common/breadcrumb-schema"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
@@ -226,6 +227,7 @@ export default async function StackDetailPage({ params }: Props) {
             </div>
           )}
 
+          <ConnectAiCard size="slim" className="mt-10" />
         </article>
       </main>
 

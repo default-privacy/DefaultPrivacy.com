@@ -69,6 +69,18 @@ An agent that can read your inbox (private data), read mail from strangers (untr
 
 ---
 
+## Opening someone else's project
+
+A project can carry its own list of MCP servers, and a local MCP server can run code on your computer ([Claude Code](https://code.claude.com/docs/en/mcp), [VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers)). The file is `.mcp.json` in Claude Code, `.mcp.json` or the older `.vscode/mcp.json` in VS Code, and `.cursor/mcp.json` in Cursor ([Claude Code](https://code.claude.com/docs/en/mcp), [VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers), [Cursor](https://cursor.com/docs/context/mcp)).
+
+Each tool handles that file differently. Claude Code asks before using a project's servers in a normal interactive session, but loads them without asking in `claude -p`, SDK and cloud sessions, and in bypass-permissions sessions set to skip the prompt ([Claude Code](https://code.claude.com/docs/en/mcp)). VS Code ties these servers to Workspace Trust: in Restricted Mode they are blocked, and once you trust the folder they can start without a separate prompt, by default when you send a chat message ([VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers)). Cursor says all MCP connections need your approval, and since version 1.3 it asks again when an entry changes ([Cursor](https://cursor.com/docs/agent/security), [advisory](https://github.com/cursor/cursor/security/advisories/GHSA-24mc-g4xr-4395)). Before that fix, a server someone had approved could be swapped for a different command with no new prompt ([CVE-2025-54136](https://nvd.nist.gov/vuln/detail/CVE-2025-54136)).
+
+Attackers already plant setup files that run when a repo is opened. On June 5, 2026 the Miasma worm used a hijacked contributor account to commit hook, task and agent-rule files that ran a credential stealer when the repo was opened in Claude Code, Gemini CLI, Cursor or VS Code. None of them was an MCP file, so check a project's other setup files too ([StepSecurity](https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents)).
+
+Before you approve or trust a cloned project, open its MCP file and read the command it runs ([VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers)). To keep a server off, use `disabledMcpjsonServers` in Claude Code, **MCP: List Servers** then **Disable** in VS Code chat, or the toggle under **Customize** in Cursor ([Claude Code](https://code.claude.com/docs/en/settings-reference), [VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers), [Cursor](https://cursor.com/docs/context/mcp)).
+
+---
+
 ## A checklist before you connect
 
 1. **Who runs it?** Connect only to servers built and hosted by organizations you trust ([Anthropic](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp)). A random server from a list or a chat message is a stranger with access to your account.

@@ -2,15 +2,15 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
+import { ConnectAiCard } from "@/components/ai/connect-ai-card"
+import { AI_APPS, MCP_URL } from "@/lib/mcp-connect"
 
 export const metadata: Metadata = {
   title: "Use Default Privacy in your AI | Default Privacy",
   description:
-    "Connect Claude or any MCP-capable assistant to the Default Privacy directory: tool picks in order and links back to each listing. Free, no account.",
+    "Connect Claude, ChatGPT, Gemini, Grok, Perplexity, Mistral, Cursor or VS Code to the Default Privacy directory: tool picks in order and links back to each listing. Free, no account.",
 }
 
-// Short address; defaultprivacy.com/api/mcp serves the same server.
-const MCP_URL = "https://mcp.defaultprivacy.com"
 
 const ASK = [
   "I'm new to privacy. Where do I start?",
@@ -46,22 +46,33 @@ export default function UseInYourAiPage() {
           .
         </p>
 
-        <section className="mt-12 space-y-4">
-          <h2 className={label}>THE ADDRESS</h2>
-          <code className="block select-all break-all rounded border border-foreground/10 bg-muted/30 px-4 py-3 font-mono text-sm text-foreground">
-            {MCP_URL}
-          </code>
-        </section>
+        <ConnectAiCard className="mt-12" />
 
         <section className="mt-12 space-y-4">
-          <h2 className={label}>ADD IT TO CLAUDE</h2>
+          <h2 className={label}>ADD IT TO YOUR APP</h2>
+          <ul className="space-y-5">
+            {AI_APPS.filter((a) => a.steps).map((a) => (
+              <li key={a.id} id={`app-${a.id}`} className={`scroll-mt-24 ${body}`}>
+                <p className="font-medium text-foreground">{a.name}</p>
+                <p>
+                  {a.steps}
+                  {a.note && <> {a.note}</>}{" "}
+                  {a.sources.map((u, i) => (
+                    <a key={u} href={u} className="mr-2 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                      {a.sources.length > 1 ? `Source ${i + 1}` : "Source"}
+                    </a>
+                  ))}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <p className={body}>
+            Microsoft&apos;s Copilot app connects only to the services Microsoft lists (OneDrive, Outlook.com, Google
+            Drive and Gmail), and its help page shows no way to add your own server, so it can&apos;t connect to us yet{" "}
+            (<a href="https://support.microsoft.com/en-us/microsoft-copilot/connecting-microsoft-copilot-to-other-services" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">Microsoft</a>).
+          </p>
           <div className={body}>
-            <p>
-              Open <strong className="font-medium text-foreground">Settings → Connectors</strong>,
-              choose <strong className="font-medium text-foreground">Add custom connector</strong>,
-              and paste the address above. Then ask away.
-            </p>
-            <p>Any other assistant or editor that accepts a remote MCP server URL works the same way:</p>
+            <p>Editors and other tools that accept a remote MCP server URL work the same way:</p>
           </div>
           <div className="space-y-3">
             {CLIENTS.map((c) => (
@@ -88,14 +99,14 @@ export default function UseInYourAiPage() {
           </ul>
         </section>
 
-        <section className="mt-12 space-y-4">
+        <section id="what-we-see" className="mt-12 scroll-mt-24 space-y-4">
           <h2 className={label}>WHAT WE SEE</h2>
           <div className={body}>
             <p>
               Your assistant sends us only the lookup it needs, like a product name, never your
               conversation, and we don&apos;t store it. We keep daily counts of each tool and request
-              type, and of which kind of app connects (Claude, Cursor and the like; any other name
-              counts as &quot;other&quot;). Each request also leaves a log line with its
+              type, of which kind of app connects (Claude, Cursor and the like; any other name
+              counts as &quot;other&quot;), and of which version of the MCP protocol each request uses. Each request also leaves a log line with its
               time, status and speed, but no lookup and no IP. Your IP is held in memory for up to a day
               to enforce rate limits, and our host, Vercel, keeps its own request logs. The domain
               tools look the domain up in public DNS, its registry&apos;s records, and Have I Been

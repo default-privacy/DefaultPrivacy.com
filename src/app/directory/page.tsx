@@ -1,3 +1,4 @@
+import { ConnectAiCard } from "@/components/ai/connect-ai-card"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
 import { PageViewTracker } from "@/components/common/page-view-tracker"
@@ -51,6 +52,7 @@ export default async function ToolsPage({
         {/* Content Area */}
         <div className="container pb-12">
           <DirectoryBrowser searchParams={params} basePath="/directory" />
+          <ConnectAiCard size="slim" className="mt-10" />
         </div>
       </main>
 
