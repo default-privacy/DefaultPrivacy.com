@@ -11,7 +11,8 @@ import { createMcpHandler } from "mcp-handler"
 
 import { countUsage } from "@/lib/analytics/usage"
 import { withRateLimit } from "@/lib/api-rate-limit"
-import { mcpRequestCounts } from "@/mcp-server/request-counts"
+import { oversizedBatch } from "@/mcp-server/batch-limit"
+import { mcpRequestCounts, protocolBucket } from "@/mcp-server/request-counts"
 import { configureServer, SERVER_INFO, SERVER_INSTRUCTIONS } from "@/mcp-server/server"
 
 export const dynamic = "force-dynamic"
@@ -31,13 +32,20 @@ const handler = createMcpHandler(
   },
 )
 
-/** Count each JSON-RPC method and, on connect, the app's name. Never blocks or fails the request. */
+/**
+ * Refuse oversized batches, then count each JSON-RPC method, the protocol revision and,
+ * on connect, the app's name. Counting never blocks or fails the request.
+ */
 async function counted(request: Request): Promise<Response> {
   if (request.method === "POST") {
     try {
-      const { methods, client } = mcpRequestCounts(await request.clone().json())
+      const body = await request.clone().json()
+      const refused = oversizedBatch(body)
+      if (refused) return refused
+      const { methods, client } = mcpRequestCounts(body)
       for (const method of methods) countUsage("mcp_method", method)
       if (client) countUsage("mcp_client", client)
+      countUsage("mcp_protocol", protocolBucket(request.headers.get("mcp-protocol-version"), body))
     } catch {
       // Unparseable body: the transport answers it with a JSON-RPC parse error.
     }

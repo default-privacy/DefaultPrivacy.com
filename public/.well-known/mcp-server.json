@@ -7,7 +7,7 @@
   "documentation_url": "https://defaultprivacy.com/ai",
   "transports": {
     "streamable_http": {
-      "url": "https://defaultprivacy.com/api/mcp"
+      "url": "https://mcp.defaultprivacy.com"
     }
   },
   "capabilities": {

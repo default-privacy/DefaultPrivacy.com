@@ -32,6 +32,7 @@ const KIND_LABEL: Record<string, string> = {
   glossary_read: "→ glossary, per slug (agents)",
   mcp_method: "MCP messages (protocol)",
   mcp_client: "MCP connections (apps)",
+  mcp_protocol: "MCP requests by protocol version",
 }
 
 const isContentKind = (kind: string) => kind === "guide_read" || kind === "glossary_read"
@@ -99,6 +100,11 @@ async function main() {
   if (methods.length > 0) {
     console.log("  messages by type:")
     for (const k of methods) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
+  }
+  const protocols = usage.topKeys.filter((k) => k.kind === "mcp_protocol")
+  if (protocols.length > 0) {
+    console.log("  requests by protocol version (2026-07-28 = apps with no handshake, so no app name):")
+    for (const k of protocols) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
   }
 
   section("Daily total (demand, excludes MCP protocol traffic)")

@@ -6,7 +6,7 @@
   "discovery": {
     "mcp": {
       "transport": "streamable-http",
-      "url": "https://defaultprivacy.com/api/mcp",
+      "url": "https://mcp.defaultprivacy.com",
       "descriptor": "https://defaultprivacy.com/.well-known/mcp-server.json"
     },
     "api": {

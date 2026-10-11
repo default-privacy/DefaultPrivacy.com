@@ -92,7 +92,6 @@ describe("picks replaced the ADO score", () => {
     "public/llms-full.txt",
     "public/agents.md",
     "public/api/openapi.json",
-    "public/.well-known/ai-plugin.json",
     "public/.well-known/agentroot.json",
     "public/.well-known/mcp-server.json",
     "server.json",
@@ -134,5 +133,28 @@ describe("retired directory flags are gone", () => {
   it("other discovery files do not offer them", () => {
     for (const f of ["public/.well-known/mcp-server.json", "public/.well-known/agentroot.json", "public/agents.md", "public/llms-full.txt", "server.json"])
       expect(read(f)).not.toMatch(RETIRED)
+  })
+})
+
+describe("one MCP address, no hard-coded directory size", () => {
+  const files = [
+    "public/llms.txt",
+    "public/llms-full.txt",
+    "public/agents.md",
+    "public/api/openapi.json",
+    "public/.well-known/agentroot.json",
+    "public/.well-known/mcp-server.json",
+    "public/.well-known/services.json",
+    "server.json",
+  ]
+  it.each(files)("%s points at mcp.defaultprivacy.com, never the old path", (f) => {
+    expect(read(f)).not.toMatch(/\/api\/(privacy\/)?mcp\b/)
+  })
+  it("the agent-facing descriptors carry the canonical address", () => {
+    for (const f of ["server.json", "public/.well-known/mcp-server.json", "public/.well-known/agentroot.json", "public/llms.txt", "public/agents.md"])
+      expect(read(f)).toContain("https://mcp.defaultprivacy.com")
+  })
+  it.each(files)("%s gives no hard-coded tool count (it drifts)", (f) => {
+    expect(read(f)).not.toMatch(/\b\d{3,}\+? (privacy )?tools\b/i)
   })
 })

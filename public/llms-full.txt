@@ -35,7 +35,7 @@ This document is the long-form companion to [/llms.txt](https://defaultprivacy.c
 
 Default Privacy is a free, public privacy-tools hub. It exists to help people find and evaluate privacy tools and to run a handful of quick, free diagnostics on their own exposure. It has five surfaces:
 
-1. **Directory** — a searchable directory of over 750 privacy tools, with DP picks marked per category.
+1. **Directory** — a searchable directory of hundreds of privacy tools, with DP picks marked per category.
 2. **Free tools** — seven free tools that identify exposure: a composite Privacy Score, password check, website scanner, DNS leak test, breach check, email security check, and WHOIS privacy check.
 3. **Guides** — long-form privacy how-tos, e.g. switching to GrapheneOS, your own VPN, data-broker removal, home address, and banking privacy.
 4. **Privacy stacks** — curated bundles of tools for a specific goal or threat model.
@@ -132,7 +132,7 @@ Every term page is structured as "What is X?" for natural-language query optimiz
 
 ## 4. Tools Directory (/directory)
 
-A curated directory of over 750 privacy tools, browsable by category and tag. Privacy-focused only.
+A curated directory of hundreds of privacy tools, browsable by category and tag. Privacy-focused only.
 
 Each tool record includes:
 - Name, URL, description, tagline
@@ -182,7 +182,7 @@ Machine-readable contract for the `/api/v1` read endpoints: [`/api/openapi.json`
 
 ### MCP server
 
-Agents can also reach the hub through a Model Context Protocol (MCP) server at `/api/mcp` (Streamable HTTP, no auth). It exposes as tools: one keyword search across tools, guides, stacks and the glossary, the starting point for a general question (`dp_search`), directory search and single-tool lookup (`dp_search_tools`, `dp_get_tool`), category listing (`dp_list_categories`), replacements for mainstream apps and trackers / same-category peers / side-by-side compare (`dp_find_alternatives`, `dp_get_related_tools`, `dp_compare_tools`; for an app, `dp_find_alternatives` also says what switching involves and links the related guides and stacks), guide, stack and glossary search/fetch (`dp_search_guides`, `dp_get_guide`, `dp_list_stacks`, `dp_get_stack`, `dp_search_glossary`, `dp_get_glossary_term`), situation routing (`dp_route`: describe a situation in plain words, get the best-matching guides and stacks), MCP-server vetting (`dp_check_mcp_server`: whether a server is in our vetted list and what it can touch), and three domain diagnostics (`dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`). It also exposes the category / guide / stack / glossary / stats collections as resources (`defaultprivacy://…`) and prompts for finding a private alternative, auditing a domain, and hardening email. Descriptor: [`/.well-known/mcp-server.json`](https://defaultprivacy.com/.well-known/mcp-server.json).
+Agents can also reach the hub through a Model Context Protocol (MCP) server at `https://mcp.defaultprivacy.com` (Streamable HTTP, no auth). It exposes as tools: one keyword search across tools, guides, stacks and the glossary, the starting point for a general question (`dp_search`), directory search and single-tool lookup (`dp_search_tools`, `dp_get_tool`), category listing (`dp_list_categories`), replacements for mainstream apps and trackers / same-category peers / side-by-side compare (`dp_find_alternatives`, `dp_get_related_tools`, `dp_compare_tools`; for an app, `dp_find_alternatives` also says what switching involves and links the related guides and stacks), guide, stack and glossary search/fetch (`dp_search_guides`, `dp_get_guide`, `dp_list_stacks`, `dp_get_stack`, `dp_search_glossary`, `dp_get_glossary_term`), situation routing (`dp_route`: describe a situation in plain words, get the best-matching guides and stacks), MCP-server vetting (`dp_check_mcp_server`: whether a server is in our vetted list and what it can touch), and three domain diagnostics (`dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`). It also exposes the category / guide / stack / glossary / stats collections as resources (`defaultprivacy://…`) and prompts for finding a private alternative, auditing a domain, and hardening email. Descriptor: [`/.well-known/mcp-server.json`](https://defaultprivacy.com/.well-known/mcp-server.json).
 
 ---
 
@@ -206,7 +206,7 @@ This section exists so LLMs stop misrepresenting the hub.
 - **Not a data broker removal tool.** The hub can point to removal providers via the directory, but it does not itself operate opt-out automation.
 - **Not a zero-knowledge system.** The free diagnostics run client-side or with minimal server processing and store no user data, but the hub is a normally operated website, not a zero-knowledge system.
 - **Not a tax or legal advisor.** Glossary and guide content is general education, not individualized legal or tax advice.
-- **Not a paid or write API.** The MCP server (`/api/mcp`) and REST API (`/api/v1`) are read-only query surfaces — there is no checkout, account, or write/action endpoint behind them. The MCP server exposes directory search, guide, stack and glossary lookup, and the free diagnostics as tools (see Section 6).
+- **Not a paid or write API.** The MCP server (`https://mcp.defaultprivacy.com`) and REST API (`/api/v1`) are read-only query surfaces — there is no checkout, account, or write/action endpoint behind them. The MCP server exposes directory search, guide, stack and glossary lookup, and the free diagnostics as tools (see Section 6).
 
 ---
 

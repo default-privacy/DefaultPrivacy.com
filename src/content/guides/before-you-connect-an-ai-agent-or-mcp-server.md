@@ -6,7 +6,7 @@ category: Privacy
 difficulty: intermediate
 timeToComplete: "15 minutes"
 publishedAt: "2026-10-10"
-updatedAt: "2026-10-10"
+updatedAt: "2026-10-11"
 author: Default Privacy
 tags:
   - ai agents
@@ -91,7 +91,7 @@ An agent that can read your inbox (private data), read mail from strangers (untr
 | A local server limited to one folder, read-only, with approvals on | Moderate. Depends on what is in the folder. |
 | An agent with your email, the open web and the ability to send | High. It has all three parts of the trifecta. |
 
-We keep a short list of [MCP servers](/directory?category=mcp-servers) that meet a published bar: open source, maintained in the last six months, clear about what they can read or change, and unable to move money by default. Each listing says what the server can touch. A listing is not a security audit, and a server missing from it has simply not been reviewed.
+We keep a short list of [MCP servers](/directory?category=mcp-servers) that meet a published bar: open source, maintained in the last six months, clear about what they can read or change, and unable to move money by default. Servers that can send messages, run code or act on devices are listed only if they are official and narrowly scoped. Each listing says what the server can touch. A listing is not a security audit, and a server missing from it has simply not been reviewed.
 
 **A disclosure.** Default Privacy runs an MCP server, described on our [AI page](/ai). It is built to be the low-risk kind: it answers questions from public directory data and has no access to your accounts. Some of its tools look up public information about a domain you give it. We count request types and the app that made them, not IP addresses or text you send. We say this so you can judge it, not because our description makes it safe. Apply the same checklist to ours as to any other.
 

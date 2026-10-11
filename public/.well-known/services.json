@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Default Privacy Services",
-  "description": "Free privacy tools and resources: a searchable directory of over 750 privacy tools, 7 free privacy diagnostic tools, guides, and a glossary. No accounts, no checkout.",
+  "description": "Free privacy tools and resources: a searchable directory of hundreds of privacy tools, 7 free privacy diagnostic tools, guides, and a glossary. No accounts, no checkout.",
   "url": "https://defaultprivacy.com",
   "numberOfItems": 8,
   "itemListElement": [
@@ -13,7 +13,7 @@
         "@type": "Service",
         "@id": "https://defaultprivacy.com/directory#service",
         "name": "Privacy Tools Directory",
-        "description": "Searchable directory of over 750 privacy tools across VPNs, encrypted messaging, password managers, email providers, and more. Each tool has a full Privacy Protocol record.",
+        "description": "Searchable directory of hundreds of privacy tools across VPNs, encrypted messaging, password managers, email providers, and more.",
         "url": "https://defaultprivacy.com/directory",
         "provider": {
           "@type": "Organization",

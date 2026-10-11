@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { clientBucket, mcpRequestCounts } from "./request-counts"
+import { clientBucket, mcpRequestCounts, protocolBucket } from "./request-counts"
 
 describe("mcpRequestCounts", () => {
   it("counts an initialize and buckets the app name", () => {
@@ -57,5 +57,28 @@ describe("clientBucket", () => {
 
   it("says 'unknown' for missing or empty names", () => {
     for (const name of [undefined, null, 7, "", "!!!"]) expect(clientBucket(name)).toBe("unknown")
+  })
+})
+
+describe("protocolBucket", () => {
+  it("reads the header when present", () => {
+    expect(protocolBucket("2026-07-28", { jsonrpc: "2.0", method: "tools/call" })).toBe("2026-07-28")
+    expect(protocolBucket("2025-06-18", null)).toBe("2025-06-18")
+  })
+
+  it("falls back to the version an initialize asks for", () => {
+    const init = { jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-11-25" } }
+    expect(protocolBucket(null, init)).toBe("2025-11-25")
+    expect(protocolBucket(null, [init])).toBe("2025-11-25")
+  })
+
+  it("says none when nothing names a version", () => {
+    expect(protocolBucket(null, { jsonrpc: "2.0", method: "tools/list" })).toBe("none")
+    expect(protocolBucket(null, null)).toBe("none")
+  })
+
+  it("folds unknown or junk values into 'other' so callers can't mint keys", () => {
+    expect(protocolBucket("me@example.com", null)).toBe("other")
+    expect(protocolBucket(null, { method: "initialize", params: { protocolVersion: "x".repeat(500) } })).toBe("other")
   })
 })

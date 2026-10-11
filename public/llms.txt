@@ -1,8 +1,8 @@
 # Default Privacy
 
-> Default Privacy is a free, formation-free privacy-tools hub: a searchable directory of over 750 privacy tools, 7 free privacy tools, long-form guides, curated privacy stacks, and a glossary. No paid product, no accounts, no checkout — everything here is public and free to use.
+> Default Privacy is a free, formation-free privacy-tools hub: a searchable directory of hundreds of privacy tools, 7 free privacy tools, long-form guides, curated privacy stacks, and a glossary. No paid product, no accounts, no checkout — everything here is public and free to use.
 
-This file is the routing map for AI agents and crawlers. Every link below points at a real route on the site. There is no LLC formation service and no pricing — this is a free directory of privacy tools plus a handful of free diagnostics and educational content. Agents can use it two ways: a Model Context Protocol (MCP) server at `/api/mcp` (tools, resources, and prompts) or a read-only REST API under `/api/v1`.
+This file is the routing map for AI agents and crawlers. Every link below points at a real route on the site. There is no LLC formation service and no pricing — this is a free directory of privacy tools plus a handful of free diagnostics and educational content. Agents can use it two ways: a Model Context Protocol (MCP) server at `https://mcp.defaultprivacy.com` (tools, resources, and prompts) or a read-only REST API under `/api/v1`.
 
 
 **API change (2026-10-09):** records now carry `pick` instead of `ado`; the minimum-score filter is removed; `sort=ado_score` is an alias of `sort=picks` (picks first, then A to Z).
@@ -20,7 +20,7 @@ This file is the routing map for AI agents and crawlers. Every link below points
 
 Default Privacy runs a Model Context Protocol (MCP) server so agents can call the directory, guides, stacks, glossary and diagnostics as native tools — no custom integration needed.
 
-- Endpoint (Streamable HTTP, no auth): `https://defaultprivacy.com/api/mcp`
+- Endpoint (Streamable HTTP, no auth): `https://mcp.defaultprivacy.com`
 - Descriptor: [/.well-known/mcp-server.json](https://defaultprivacy.com/.well-known/mcp-server.json)
 - Tools: `dp_search` (start here: one search across tools, guides, stacks and glossary), `dp_search_tools`, `dp_get_tool`, `dp_list_categories`, `dp_find_alternatives`, `dp_get_related_tools`, `dp_compare_tools`, `dp_search_guides`, `dp_get_guide`, `dp_list_stacks`, `dp_get_stack`, `dp_route` (describe a situation, get the guides and stacks to read), `dp_check_mcp_server` (is an MCP server in our vetted list, and what can it touch), `dp_search_glossary`, `dp_get_glossary_term`, `dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`
 - Resources: `defaultprivacy://categories`, `defaultprivacy://guides`, `defaultprivacy://stacks`, `defaultprivacy://glossary`, `defaultprivacy://stats`
@@ -28,7 +28,7 @@ Default Privacy runs a Model Context Protocol (MCP) server so agents can call th
 
 ## Tools Directory
 
-The core of the hub. A curated directory of over 750 privacy tools and services, with DP picks marked per category. Browsable by category and tag.
+The core of the hub. A curated directory of hundreds of privacy tools and services, with DP picks marked per category. Browsable by category and tag.
 
 - [Directory](https://defaultprivacy.com/directory): Search and browse all privacy tools by category and tag.
 - [Tool detail page](https://defaultprivacy.com/directory/{slug}): A single tool's record — description, DP pick (if any), attributes, category, tags, and related tools.

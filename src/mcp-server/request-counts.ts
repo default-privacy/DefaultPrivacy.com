@@ -68,6 +68,26 @@ export function clientBucket(name: unknown): string {
   return CLIENT_FAMILIES.find(([needle]) => key.includes(needle))?.[1] ?? "other"
 }
 
+// Protocol revisions, newest last. 2026-07-28 drops the initialize handshake, so a
+// rise in its bucket means apps that connect without ever being counted in mcp_client.
+const PROTOCOL_VERSIONS = new Set(["2024-11-05", "2025-03-26", "2025-06-18", "2025-11-25", "2026-07-28"])
+
+/**
+ * Which protocol revision one HTTP request speaks: the MCP-Protocol-Version header
+ * (sent on every request after the handshake, and on every request from 2026-07-28),
+ * else the version an initialize asks for, else "none". Unknown values fold to "other".
+ */
+export function protocolBucket(header: string | null, body: unknown): string {
+  const first = Array.isArray(body) ? body[0] : body
+  const requested =
+    first && typeof first === "object" && (first as { method?: unknown }).method === "initialize"
+      ? (first as { params?: { protocolVersion?: unknown } }).params?.protocolVersion
+      : undefined
+  const version = header ?? (typeof requested === "string" ? requested : null)
+  if (version === null) return "none"
+  return PROTOCOL_VERSIONS.has(version) ? version : "other"
+}
+
 export function mcpRequestCounts(body: unknown): { methods: string[]; client: string | null } {
   const messages = Array.isArray(body) ? body : [body]
   const methods = new Set<string>()

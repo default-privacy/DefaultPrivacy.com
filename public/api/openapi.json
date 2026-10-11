@@ -20,7 +20,7 @@
     }
   ],
   "x-mcp": {
-    "url": "https://defaultprivacy.com/api/mcp",
+    "url": "https://mcp.defaultprivacy.com",
     "transport": "streamable-http",
     "descriptor": "https://defaultprivacy.com/.well-known/mcp-server.json",
     "description": "A Model Context Protocol server exposing this directory and the free diagnostics as agent-callable tools, resources, and prompts."

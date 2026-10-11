@@ -1,6 +1,9 @@
 /**
  * Maintenance check: for every published listing with a GitHub source repo, is the
- * project archived, gone, or untouched for years? Reads the public directory API and
+ * project archived, gone, or untouched for years? MCP server listings are held to the
+ * vetted-list bar instead: touched within six months, and a server that lives in a folder
+ * of a bigger repo (github.com/owner/repo/tree/branch/path) is dated by that folder's
+ * last commit. Reads the public directory API and
  * the GitHub REST API. Report only, never fails: "archived" can mean finished, and
  * the call to deprecate a listing is a human one (tools.is_deprecated + deprecated_reason).
  *
@@ -15,26 +18,29 @@ import { writeFileSync } from "node:fs"
 const API = process.env.DP_API_URL ?? "https://defaultprivacy.com/api/v1/tools"
 const TOKEN = process.env.GITHUB_TOKEN
 const STALE_YEARS = 2
+const MCP_STALE_YEARS = 0.5 // the mcp-servers bar: maintained in the last six months
 const CONCURRENCY = 8
 
 type Row = { slug: string; repo: string; status: "archived" | "gone" | "stale" | "ok" | "error"; detail: string }
+type Listing = { slug: string; repo: string; branch?: string; path?: string; mcp: boolean }
 
-async function listRepos(): Promise<{ slug: string; repo: string }[]> {
-  const out: { slug: string; repo: string }[] = []
+// owner/repo, optionally /tree/<branch>/<folder>
+const GITHUB = /^(?:https?:\/\/github\.com\/)?([\w.-]+)\/([\w.-]+?)(?:\.git)?(?:\/tree\/([\w.-]+)\/([\w./-]+?))?\/?$/i
+
+async function listRepos(): Promise<Listing[]> {
+  const out: Listing[] = []
   for (let offset = 0; ; offset += 50) {
     const res = await fetch(`${API}?sort=name&limit=50&offset=${offset}`)
     if (!res.ok) throw new Error(`${API} → HTTP ${res.status}`)
     const body = (await res.json()) as {
-      data: { slug: string; website_url: string; trust: { source_code_url: string | null } }[]
+      data: { slug: string; website_url: string; categories: string[]; trust: { source_code_url: string | null } }[]
       pagination: { has_more: boolean }
     }
     for (const t of body.data) {
       // source_code_url is a GitHub URL (or, before 2026-10-09, a bare "owner/repo");
       // a listing whose website IS a GitHub repo counts too.
-      const m =
-        t.trust.source_code_url?.match(/^(?:https?:\/\/github\.com\/)?([\w.-]+)\/([\w.-]+)\/?$/i) ??
-        t.website_url.match(/^https?:\/\/github\.com\/([\w.-]+)\/([\w.-]+)\/?$/i)
-      if (m) out.push({ slug: t.slug, repo: `${m[1]}/${m[2].replace(/\.git$/, "")}` })
+      const m = t.trust.source_code_url?.match(GITHUB) ?? (/^https?:\/\/github\.com\//i.test(t.website_url) ? t.website_url.match(GITHUB) : null)
+      if (m) out.push({ slug: t.slug, repo: `${m[1]}/${m[2]}`, branch: m[3], path: m[4], mcp: t.categories.includes("mcp-servers") })
     }
     if (!body.pagination.has_more) return out
   }
@@ -52,14 +58,24 @@ async function gh(path: string): Promise<Response> {
 
 const years = (iso: string) => (Date.now() - new Date(iso).getTime()) / (365.25 * 24 * 3600 * 1000)
 
-async function check(slug: string, repo: string): Promise<Row> {
+async function check({ slug, repo, branch, path, mcp }: Listing): Promise<Row> {
+  const limit = mcp ? MCP_STALE_YEARS : STALE_YEARS
+  const where = path ? `${repo}/${path}` : repo
   const res = await gh(`/repos/${repo}`)
   if (res.status === 404) return { slug, repo, status: "gone", detail: "repo not found (deleted, renamed or private)" }
   if (!res.ok) return { slug, repo, status: "error", detail: `GitHub HTTP ${res.status}` }
   const r = (await res.json()) as { archived: boolean; pushed_at: string; full_name: string }
   const moved = r.full_name.toLowerCase() !== repo.toLowerCase() ? ` (now ${r.full_name})` : ""
-  if (r.archived) return { slug, repo, status: "archived", detail: `archived; last push ${r.pushed_at.slice(0, 10)}${moved}` }
-  if (years(r.pushed_at) >= STALE_YEARS) {
+  if (r.archived) return { slug, repo: where, status: "archived", detail: `archived; last push ${r.pushed_at.slice(0, 10)}${moved}` }
+  if (path) {
+    const c = await gh(`/repos/${repo}/commits?sha=${encodeURIComponent(branch!)}&path=${encodeURIComponent(path)}&per_page=1`)
+    if (!c.ok) return { slug, repo: where, status: "error", detail: `GitHub HTTP ${c.status} reading the folder's commits` }
+    const last = ((await c.json()) as { commit: { committer: { date: string } } }[])[0]?.commit.committer.date
+    if (!last) return { slug, repo: where, status: "gone", detail: `no commits on ${branch} under ${path} (folder moved or deleted)` }
+    if (years(last) >= limit) return { slug, repo: where, status: "stale", detail: `no commit to the folder since ${last.slice(0, 10)}${moved}` }
+    return { slug, repo: where, status: "ok", detail: moved }
+  }
+  if (years(r.pushed_at) >= limit) {
     const rel = await gh(`/repos/${repo}/releases/latest`)
     const latest = rel.ok ? ((await rel.json()) as { published_at: string }).published_at.slice(0, 10) : "none"
     return { slug, repo, status: "stale", detail: `no push since ${r.pushed_at.slice(0, 10)}; latest release ${latest}${moved}` }
@@ -75,7 +91,7 @@ async function main() {
     Array.from({ length: CONCURRENCY }, async () => {
       while (next < repos.length) {
         const r = repos[next++]
-        rows.push(await check(r.slug, r.repo))
+        rows.push(await check(r))
       }
     }),
   )
@@ -86,7 +102,7 @@ async function main() {
   const report = [
     `# Directory maintenance check`,
     ``,
-    `${rows.length} listings with a GitHub repo: ${pick("archived").length} archived, ${pick("gone").length} gone, ${pick("stale").length} untouched for ${STALE_YEARS}+ years, ${pick("error").length} errors.`,
+    `${rows.length} listings with a GitHub repo: ${pick("archived").length} archived, ${pick("gone").length} gone, ${pick("stale").length} stale (untouched ${STALE_YEARS}+ years, or 6+ months for MCP servers), ${pick("error").length} errors.`,
     ``,
     `Archived or gone usually means the listing should be marked deprecated; stale needs a look (some tools are simply finished).`,
     ``,
@@ -96,7 +112,7 @@ async function main() {
     `## Gone`,
     table(pick("gone")),
     ``,
-    `## Untouched for ${STALE_YEARS}+ years`,
+    `## Stale (${STALE_YEARS}+ years; MCP servers 6+ months)`,
     table(pick("stale")),
     ``,
     ...(pick("error").length ? [`## Errors`, table(pick("error")), ``] : []),

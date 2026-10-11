@@ -8,12 +8,13 @@ import { keywords } from "@/lib/site-search"
 export const MCP_CATEGORY = "mcp-servers"
 
 export const MCP_BAR =
-  "Open source, maintained in the last six months, clear about what it can read or change, and unable to move money by default. A listing is not a security audit."
+  "Open source, maintained in the last six months, clear about what it can read or change, and unable to move money by default. A server that can send messages, run code or act on devices is listed only if it is official and narrowly scoped, and its listing says what it can do. A listing is not a security audit."
 
 export const MCP_CHECKLIST = [
   "Who runs it? Connect only servers built and hosted by organisations you trust.",
   "What permissions does it ask for? Limit scopes and deny ones it does not need.",
   "Can it only read, or can it also change data and send things out? Prefer read-only.",
+  "Where does what it reads go? A server that calls an outside service hands that service whatever it reads.",
   "Can strangers put content in front of it (email, web pages, shared files)? That is how prompt injection gets in.",
   "Is it connected to something you cannot afford to lose? Keep main email, banking and password managers out.",
 ]
