@@ -17,7 +17,7 @@ import { getPublicDirectoryStats } from "@/lib/directory-stats"
 export const metadata: Metadata = {
   title: "Free Privacy Tools | Default Privacy",
   description:
-    "Free privacy tools to check your exposure — test password strength, scan websites for trackers, check for DNS leaks, check breach history, grade a domain's email security, and see what WHOIS reveals. No signup, nothing stored.",
+    "Free privacy tools to check your exposure — test password strength, scan websites for trackers, check for DNS leaks, check breach history, grade a domain's email security, and see what WHOIS reveals. No signup, no account.",
   alternates: {
     canonical: "https://defaultprivacy.com/tools",
   },
@@ -122,7 +122,7 @@ export default async function ToolsPage() {
             Free Privacy Tools
           </h1>
           <p className="mx-auto max-w-lg text-[15px] text-foreground/55">
-            Pick a concern. Check it yourself. No signup, no account, nothing stored.
+            Pick a concern. Check it yourself. No signup, no account, nothing tied to you.
           </p>
         </div>
 

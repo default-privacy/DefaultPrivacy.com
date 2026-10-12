@@ -1,5 +1,5 @@
-// ⚠️ This route is PRERENDERED (generateStaticParams below, no `dynamic` or
-// `revalidate` export). A countUsage() call in this component body would fire at
+// ⚠️ This route is PRERENDERED (generateStaticParams below, no `dynamic`
+// export). A countUsage() call in this component body would fire at
 // BUILD time and on ISR regeneration — NOT once per visitor — producing a counter
 // that looks alive while measuring nothing real. Per-slug demand is counted on the
 // dynamic MCP path instead (src/mcp-server/tools.ts, kind "guide_read"), which sees
@@ -95,6 +95,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Content changes only with a deploy: regenerate at most weekly (keeps ISR writes and CPU down).
 export const revalidate = 604800
+
+// Only prerendered slugs exist. Without this, every unknown URL renders a 404 that the
+// host caches as its own page, which counts against the ISR write limit.
+export const dynamicParams = false
 
 export async function generateStaticParams() {
   const guides = await getAllGuides()

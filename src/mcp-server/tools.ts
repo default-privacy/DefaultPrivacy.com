@@ -668,6 +668,8 @@ export function registerTools(server: McpServer): void {
       const limit = await limitExceeded("email-security")
       if (limit) return errorContent(limit)
       const result = await checkEmailSecurity(domain)
+      // A failed lookup is an error, never a grade or an empty breach list.
+      if (!result.success) return errorContent(result.error ?? "The lookup failed, so the result is unknown.")
       return jsonContent({ ...result, citation: citation("email-security") })
     },
   )
@@ -688,6 +690,7 @@ export function registerTools(server: McpServer): void {
       const limit = await limitExceeded("whois")
       if (limit) return errorContent(limit)
       const result = await checkWhoisPrivacy(domain)
+      if (!result.success) return errorContent(result.error ?? "The lookup failed, so the result is unknown.")
       return jsonContent({ ...result, citation: citation("whois") })
     },
   )
@@ -708,6 +711,8 @@ export function registerTools(server: McpServer): void {
       const limit = await limitExceeded("domain-breaches")
       if (limit) return errorContent(limit)
       const result = await checkBreaches(domain)
+      // A failed lookup is an error, never a grade or an empty breach list.
+      if (!result.success) return errorContent(result.error ?? "The lookup failed, so the result is unknown.")
       return jsonContent({ ...result, citation: citation() })
     },
   )

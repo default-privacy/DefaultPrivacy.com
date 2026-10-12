@@ -84,8 +84,8 @@ Plan for the day a laptop or phone is taken at a border or served with a warrant
 ### [Cryptomator](/directory/cryptomator) — encrypt files before the cloud
 **Badges: public GitHub.** Client-side, zero-knowledge encryption for anything you sync to Dropbox, Drive, or similar. The cloud provider — and anyone who subpoenas it — sees only encrypted blobs.
 
-### [Picocrypt](/directory/picocrypt) — strong encryption for a single sensitive file
-**Badges: public GitHub.** Small, focused, strong file encryption for a one-off — an interview recording or a document dump you want locked before transfer. [7-Zip](/directory/7-zip) is a widely available fallback with strong AES archive encryption.
+### [7-Zip](/directory/7-zip) — strong encryption for a single sensitive file
+AES-256 archive encryption for a one-off — an interview recording or a document dump you want locked before transfer. It's widely available, so the recipient only needs the password. Use a long passphrase and send it over a different channel from the file.
 
 > **On anonymous file drops:** a full SecureDrop-style intake system is its own infrastructure and isn't part of this directory's stack. Until you run one, treat inbound documents as untrusted: receive them over Briar or an encrypted container, scrub with Mat2, and store inside Cryptomator.
 
@@ -112,7 +112,7 @@ Where tools overlap, here's the call and the cost.
 | Network is hostile | Briar | Tor Browser | Least convenient |
 | Hide who you are online | Tor Browser | Mullvad | Slower browsing |
 | Hide traffic, keep speed | Mullvad | ProtonVPN | Not full anonymity |
-| Encrypt at rest | Cryptomator | Picocrypt | Setup per vault |
+| Encrypt at rest | Cryptomator | 7-Zip | Setup per vault |
 
 The honest friction: this is four or five tools, not one. The payoff is that no single seizure, subpoena, or leaked metadata field unmasks a source on its own.
 

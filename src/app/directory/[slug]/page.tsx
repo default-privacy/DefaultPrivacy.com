@@ -38,6 +38,10 @@ import {
 // the host's ISR write limit.
 export const revalidate = 604800
 
+// Only prerendered slugs exist. Without this, every unknown URL renders a 404 that the
+// host caches as its own page, which counts against the ISR write limit.
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const toolSlugs = await getToolSlugs()
   return toolSlugs.map(({ slug }) => ({ slug }))

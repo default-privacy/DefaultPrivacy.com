@@ -20,8 +20,6 @@ relatedTools:
     href: /directory/exiferaser
   - name: Cryptomator
     href: /directory/cryptomator
-  - name: Picocrypt
-    href: /directory/picocrypt
   - name: 7-Zip
     href: /directory/7-zip
   - name: BleachBit
@@ -63,9 +61,6 @@ Metadata is one leak; the file contents are another. Lock the sensitive ones.
 ### [Cryptomator](/directory/cryptomator)
 Client-side, zero-knowledge encryption for files you put in someone else's cloud — the provider stores only ciphertext, never your readable data. **Open-source (GitHub).**
 
-### [Picocrypt](/directory/picocrypt)
-A tiny, strong file-encryption tool for locking a single file or folder before you send or archive it — minimal surface, nothing to misconfigure. **Open-source (GitHub).**
-
 ### [7-Zip](/directory/7-zip)
 The archiver most people already have, with AES-256 encryption built in — a practical way to encrypt a bundle for someone who only has a password and no special software.
 
@@ -83,9 +78,8 @@ Choice          Pick for…                Alternative     Cost / caveat
 ─────────────   ──────────────────────   ─────────────   ─────────────────
 Mat2            desktop, all file types  ExifEraser      command-line comfort
 ExifEraser      photos from your phone   Mat2            Android only
-Cryptomator     ongoing cloud sync       Picocrypt       setup overhead
-Picocrypt       one-off strong lock      7-Zip           recipient needs it
-7-Zip           universal compatibility  Picocrypt       older cipher options
+Cryptomator     ongoing cloud sync       7-Zip           setup overhead
+7-Zip           one-off strong lock      Cryptomator     share the password safely
 BleachBit       wiping HDD free space    full-disk crypto unreliable on SSD
 ```
 

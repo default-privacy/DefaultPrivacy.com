@@ -25,6 +25,8 @@ export type Stack = {
   content: string
   relatedStacks?: string[]
   relatedTools?: Array<{ name: string; href: string }>
+  /** Safety pages: show a "Leave this site quickly" button. */
+  quickExit?: boolean
 }
 
 type StackFrontmatter = Omit<Stack, "content">

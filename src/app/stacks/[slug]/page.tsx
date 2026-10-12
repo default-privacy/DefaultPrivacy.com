@@ -2,6 +2,7 @@ import { ConnectAiCard } from "@/components/ai/connect-ai-card"
 import { BreadcrumbSchema } from "@/components/common/breadcrumb-schema"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
+import { QuickExit } from "@/components/common/quick-exit"
 import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
 import { marked } from "marked"
 import type { Metadata } from "next"
@@ -73,6 +74,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Content changes only with a deploy: regenerate at most weekly (keeps ISR writes and CPU down).
 export const revalidate = 604800
 
+// Only prerendered slugs exist. Without this, every unknown URL renders a 404 that the
+// host caches as its own page, which counts against the ISR write limit.
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const stacks = await getAllStacks()
   return stacks.map((s) => ({ slug: s.slug }))
@@ -107,6 +112,7 @@ export default async function StackDetailPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {stack.quickExit && <QuickExit />}
       <Header />
       <script
         type="application/ld+json"

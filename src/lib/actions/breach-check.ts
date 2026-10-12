@@ -20,7 +20,13 @@ export async function checkBreaches(domain: string): Promise<BreachCheckResult> 
   countUsage("free_tool", "breach-check")
   const rl = await checkToolActionRateLimit("breach-check")
   if (!rl.allowed) {
-    return { success: false, domain, breaches: [], totalExposed: 0 }
+    return {
+      success: false,
+      domain,
+      breaches: [],
+      totalExposed: 0,
+      error: "Too many checks from this connection. Try again later.",
+    }
   }
   return checkBreachesImpl(domain)
 }

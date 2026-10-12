@@ -6,7 +6,7 @@ import { ExposureReadout } from "@/components/exposure/exposure-readout"
 export const metadata: Metadata = {
   title: "What Are You Leaking? — Browser & Connection Exposure | Default Privacy",
   description:
-    "See what your browser and connection reveal to every website you visit — your IP address, location, and more. Read live off your own connection. No signup, nothing stored.",
+    "See what your browser and connection reveal to every website you visit — your IP address, location, and more. Read live off your own connection. No signup, and nothing tied to you is stored.",
 }
 
 export default function ExposedPage() {
@@ -24,8 +24,9 @@ export default function ExposedPage() {
             </h1>
             <p className="mx-auto max-w-xl text-[15px] text-foreground/55">
               Your IP, location, browser fingerprint, and device — read live in your own browser. No
-              signup, no permission asked, nothing stored. This is simply what every website already
-              sees.
+              signup and no permission asked. This is simply what every website already sees. We keep
+              only anonymous counts of a few browser settings, never your IP or anything that links back
+              to you. Details in our <a href="/privacy" className="underline hover:text-foreground">privacy policy</a>.
             </p>
           </div>
         </section>

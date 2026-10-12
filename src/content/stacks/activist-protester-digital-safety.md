@@ -75,7 +75,7 @@ What you say, and the pattern of who you say it to, both matter. Pick based on w
 ### [Signal](/directory/signal)
 `open-source (GitHub)`
 
-End-to-end encrypted messaging that keeps minimal metadata. **Why it's here:** it's the baseline for private group coordination. Turn on **disappearing messages** and a **registration lock** so a seized phone doesn't spill your history. It still needs a working network — which is its limit during a shutdown.
+End-to-end encrypted messaging that keeps minimal metadata. **Why it's here:** it's the baseline for private group coordination. Turn on **disappearing messages** so a seized phone holds less history, and Signal's **screen lock** so it can't be opened on its own. A **registration lock** stops someone taking over your number on another phone, but it does nothing for messages already on a seized one. It still needs a working network — which is its limit during a shutdown.
 
 ### [Briar](/directory/briar)
 `open-source`
@@ -139,7 +139,7 @@ Power it fully off before any situation where it could be taken — a powered-of
 Yes — image files carry metadata like GPS location and timestamps that can place people even before faces are recognized. Strip it with [ExifEraser](/directory/exiferaser) on Android or [Mat2](/directory/mat2) for other file types before you post, and blur identifying faces separately.
 
 ### Do I need a burner phone or just a burner number?
-A separate number from [MoneroSMS](/directory/monerosms) or [Hushed](/directory/hushed) keeps your real identity off organizing accounts and is enough for most people. A fully separate device is a bigger commitment for higher-risk roles — start with the number and a hardened OS.
+A separate number from [MoneroSMS](/directory/monerosms) or [Hushed](/directory/hushed) keeps your real identity off organizing accounts and is enough for most people. It doesn't hide where you are: the phone it runs on still connects to cell towers as you. A fully separate device is a bigger commitment for higher-risk roles — start with the number and a hardened OS.
 
 ### Does a VPN keep me anonymous at a protest?
 No. A VPN like [Mullvad](/directory/mullvad) hides your traffic and IP from the local network and the sites you visit, but it does not stop cell-site location tracking or a device search. It's one layer — pair it with a hardened phone and disciplined comms.

@@ -6,6 +6,7 @@ category: Threat-Model Stacks
 difficulty: beginner
 timeToComplete: "25 minutes"
 publishedAt: "2026-07-07"
+quickExit: true
 author: Default Privacy
 tags:
   - safety
@@ -37,6 +38,12 @@ This kit is for domestic-abuse and stalking survivors, and for the advocates and
 - **Changing settings can tip off the adversary.** If they're monitoring an account and it suddenly locks, that escalation can be dangerous. Where possible, make changes from a device they've never touched, and pace them.
 - **If you are in immediate danger, a checklist is not the priority.** Contact a domestic-violence hotline or advocate who can help you build a personal safety plan first. This kit supports that plan; it does not replace it.
 
+> **Get help first.** In the US, the National Domestic Violence Hotline is free, confidential and open 24/7: call **800-799-7233**, text **START** to **88788**, or chat on [thehotline.org](https://www.thehotline.org/). Outside the US, the Coalition Against Stalkerware lists support organizations by country ([stopstalkerware.org](https://stopstalkerware.org/resources/)). Safety Net's [technology safety plan](https://www.techsafety.org/resources-survivors/technology-safety-plan) is written for exactly this situation.
+>
+> **This visit can be seen.** If someone may be monitoring your phone or computer, they may be able to see that you opened this page. Read it from a device they have never had access to, such as a library computer or a trusted friend's phone.
+>
+> **Save evidence before you change or remove anything.** Removing monitoring software or resetting a phone also deletes the evidence of it. Take screenshots and keep a dated log first. Safety Net has [documentation tips](https://www.techsafety.org/documentationtips). For the full plan, read our guide [How to build your threat model](/guides/how-to-build-your-threat-model).
+
 What this covers: **account control, data removal, and device hardening.** What it does **not** cover: physical safety, legal protective orders, or a forensic sweep for a hidden tracker — those need a trained advocate.
 
 ---
@@ -51,7 +58,7 @@ Shared or known passwords are the most common way an abuser keeps a grip. Close 
 ### [Ente Auth](/directory/ente-auth) — two-factor codes they can't intercept
 **Badges: open-source, public GitHub.** Turning on two-factor authentication means a stolen password alone no longer opens an account. Use an authenticator app rather than SMS, because a phone plan the abuser controls can intercept text codes. [Aegis Authenticator](/directory/aegis-authenticator) is a strong open-source option on Android.
 
-> **Order matters:** secure your email account first, then reset the accounts that recover through it. And check each account's "active sessions" or "logged-in devices" list — signing out an unknown device quietly closes an ongoing snoop.
+> **Order matters:** secure your email account first, then reset the accounts that recover through it. Then check each account's "active sessions" or "logged-in devices" list. Signing out a device they use will cut off their access, **and they will likely notice.** Screenshot the list first, and plan the timing with an advocate.
 
 ---
 
@@ -78,7 +85,7 @@ Generates masked emails, phone numbers, and logins so accounts you open *now* ar
 If the adversary had physical access to your phone, assume monitoring software could be present.
 
 ### The stalkerware reality
-Hidden monitoring apps can read messages and track location while staying invisible. There is **no single app in this directory that reliably detects all stalkerware** — so don't trust a false all-clear. The most dependable reset is a **factory reset followed by rebuilding from scratch** (not restoring an old backup, which can reinstall the spyware). Do this only after you've secured your accounts and, ideally, with an advocate, because it's a visible change.
+Hidden monitoring apps can read messages and track location while staying invisible. There is **no single app in this directory that reliably detects all stalkerware** — so don't trust a false all-clear. The most dependable reset is a **factory reset followed by rebuilding from scratch** (not restoring an old backup, which can reinstall the spyware). **A reset deletes the evidence**, so document what you've seen first (screenshots, a dated log), and talk to an advocate about whether you need it for a protective order. Do the reset only after you've secured your accounts and, ideally, with an advocate, because it's a visible change.
 
 ### [GrapheneOS](/directory/grapheneos) — a hardened phone for a clean start
 **Badges: public GitHub.** If you're able to move to a new device, GrapheneOS is a security-hardened Android build (for Pixel phones) that gives you a clean, controlled slate with tight permission control over what any app can see. [CalyxOS](/directory/calyxos) is a similar privacy-focused option with broader everyday app compatibility.
@@ -104,10 +111,10 @@ The honest tradeoff: managed services cost money but save scarce energy; the fre
 ## FAQ
 
 ### How do I check my phone for stalkerware?
-There's no perfectly reliable detector, so don't trust a clean scan. Warning signs include fast battery drain, unfamiliar apps, and the abuser knowing things they shouldn't. The dependable fix is a factory reset and rebuilding fresh rather than restoring an old backup — ideally with an advocate, since it's a visible change that could provoke escalation.
+There's no perfectly reliable detector, so don't trust a clean scan. Warning signs include fast battery drain, unfamiliar apps, and the abuser knowing things they shouldn't. The dependable fix is a factory reset and rebuilding fresh rather than restoring an old backup. Save evidence first, because a reset deletes it, and do it with an advocate, since it's a visible change that could provoke escalation.
 
 ### What's the first thing a stalking survivor should do digitally?
-Secure your email account from a device the adversary has never used: set a brand-new password they've never seen and turn on app-based two-factor authentication with a tool like Ente Auth. Email recovers every other account, so it comes first — then check the account's active-session list and sign out any unknown device.
+Secure your email account from a device the adversary has never used: set a brand-new password they've never seen and turn on app-based two-factor authentication with a tool like Ente Auth. Email recovers every other account, so it comes first — then check the account's active-session list. Signing out a device they use will likely be noticed, so screenshot the list and plan that step with an advocate.
 
 ### How do I get my home address off the internet?
 Your address is republished by data brokers. Use a managed service like DeleteMe or Easy Opt Outs to file removals across them, or work the free Big Ass Data Broker Opt Out List yourself. Brokers re-list over time, so removal has to be repeated, not one-and-done.

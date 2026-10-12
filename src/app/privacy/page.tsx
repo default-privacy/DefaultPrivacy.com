@@ -65,8 +65,8 @@ export default function PrivacyPolicyPage() {
                 <h2 className="mb-3 text-lg font-medium tracking-tight text-foreground/88">TL;DR — The Short Version</h2>
                 <ul className="space-y-2.5 text-sm leading-relaxed text-foreground/56">
                   <li>• <strong className="text-foreground/78">No accounts.</strong> You never sign up, log in, or give us your email to use anything here.</li>
-                  <li>• The <strong className="text-foreground/78">free tools run in your browser</strong> or check something you type in — we don&apos;t store the results.</li>
-                  <li>• Browsing the <strong className="text-foreground/78">directory is anonymous.</strong> Search isn&apos;t logged.</li>
+                  <li>• The <strong className="text-foreground/78">free tools run in your browser</strong> or check something you type in — nothing tied to you is stored. Website scan results are stored by domain, not linked to you, and expire after 48 hours.</li>
+                  <li>• Browsing the <strong className="text-foreground/78">directory is anonymous.</strong> We don&apos;t log your searches.</li>
                   <li>• <strong className="text-foreground/78">No tracking pixels</strong>, no Google Analytics, no ad networks, no data sales — ever.</li>
                   <li>• Outbound links to tools carry <strong className="text-foreground/78">no affiliate or referral codes</strong>. No vendor pays us when you choose their tool.</li>
                 </ul>
@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
                 <h2 className="text-xl font-medium tracking-tight text-foreground/88">1. What We Collect</h2>
               </div>
               <p className="mb-4 text-foreground/58">
-                Default Privacy has no accounts and no paid services. Here is everything the site touches:
+                Default Privacy has no accounts and no paid services. Here is what each part of the site does with data, and which outside services see what:
               </p>
 
               <h3 className="mb-3 mt-6 text-base font-medium text-foreground/75">Free tools</h3>
@@ -95,17 +95,20 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <ul className="space-y-1 text-sm text-foreground/55">
                     <li>• <strong className="text-foreground/70">Password Strength</strong> runs entirely in your browser (zxcvbn). Breach-checking uses the Have I Been Pwned k-anonymity API — only the first 5 characters of a SHA-1 hash are sent, never your password.</li>
-                    <li>• <strong className="text-foreground/70">Website Privacy Scanner</strong> fetches a URL you provide and reports its trackers; scan results may be cached briefly to improve performance.</li>
+                    <li>• <strong className="text-foreground/70">Website Privacy Scanner</strong> loads a URL you provide in a headless browser run by Cloudflare and reports its trackers. The result is stored by domain, not linked to you, for 48 hours so repeat checks are fast. Expired results are deleted the next time anyone runs a scan. The Privacy Score uses the same scanner.</li>
                     <li>• <strong className="text-foreground/70">Breach Check</strong> guides you to check your own email on Have I Been Pwned — we never see or receive your email address.</li>
                     <li>• <strong className="text-foreground/70">Email Security</strong> looks up a domain&apos;s public DNS records (SPF/DKIM/DMARC). The domain isn&apos;t stored.</li>
                     <li>• <strong className="text-foreground/70">WHOIS Privacy</strong> runs a public WHOIS/RDAP query for a domain you provide. The domain isn&apos;t stored.</li>
+                    <li>• <strong className="text-foreground/70">Exposure Check</strong> (/exposed) shows your IP address and approximate location, read from our host&apos;s request headers and not stored. In your browser it tests for WebRTC leaks by contacting Google&apos;s public STUN server, which sees your IP, and shows your approximate location on a map loaded from OpenStreetMap, which sees your IP and that location. It adds a few coarse browser settings (screen size, timezone, graphics card name, language and similar) to anonymous counts, with no IP and no ID.</li>
+                    <li>• The <strong className="text-foreground/70">banner at the top of every page</strong> shows your IP address and city, read from our host&apos;s request headers. It isn&apos;t stored.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">Privacy Tools Directory</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
                     <li>• <strong className="text-foreground/70">No personal data collected</strong> — browsing and searching the directory is anonymous.</li>
-                    <li>• Search queries are not logged or stored.</li>
+                    <li>• We don&apos;t log or store your searches. Search words are part of the page address, so our host&apos;s request logs can briefly contain them.</li>
+                    <li>• Tool logos load from our storage on Amazon S3 or, for some tools, from the tool&apos;s own website or an image host. Like any image on the web, those servers see your IP address when the logo loads.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
@@ -117,7 +120,7 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">Server logs</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
-                    <li>• Like any website, our host records basic request logs (IP address, user agent) for security and reliability. We don&apos;t use them to profile you.</li>
+                    <li>• Like any website, our host records basic request logs (IP address, user agent, and the page address requested) for security and reliability. We don&apos;t use them to profile you.</li>
                   </ul>
                 </div>
               </div>
@@ -162,9 +165,14 @@ export default function PrivacyPolicyPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-foreground/10 text-foreground/55">
-                      <tr><td className="px-4 py-2.5">Vercel</td><td className="px-4 py-2.5">Hosting</td><td className="px-4 py-2.5">Server logs (IP, user agent)</td></tr>
-                      <tr><td className="px-4 py-2.5">Neon</td><td className="px-4 py-2.5">Database (directory data)</td><td className="px-4 py-2.5">No personal data</td></tr>
-                      <tr><td className="px-4 py-2.5">Have I Been Pwned</td><td className="px-4 py-2.5">Password/breach checks</td><td className="px-4 py-2.5">Partial password hash (k-anonymity)</td></tr>
+                      <tr><td className="px-4 py-2.5">Vercel</td><td className="px-4 py-2.5">Hosting</td><td className="px-4 py-2.5">Server logs (IP, user agent, page address)</td></tr>
+                      <tr><td className="px-4 py-2.5">Neon</td><td className="px-4 py-2.5">Database (directory data, 48-hour scan results by domain, anonymous counts)</td><td className="px-4 py-2.5">No personal data</td></tr>
+                      <tr><td className="px-4 py-2.5">Have I Been Pwned</td><td className="px-4 py-2.5">Password/breach checks</td><td className="px-4 py-2.5">First 5 characters of a password hash, and your IP (the password check runs from your browser)</td></tr>
+                      <tr><td className="px-4 py-2.5">Cloudflare</td><td className="px-4 py-2.5">Website scanner (headless browser)</td><td className="px-4 py-2.5">The URL you ask us to scan</td></tr>
+                      <tr><td className="px-4 py-2.5">Domain registries (RDAP)</td><td className="px-4 py-2.5">WHOIS Privacy check</td><td className="px-4 py-2.5">The domain you look up</td></tr>
+                      <tr><td className="px-4 py-2.5">Google (STUN server)</td><td className="px-4 py-2.5">Exposure Check WebRTC test</td><td className="px-4 py-2.5">Your IP address</td></tr>
+                      <tr><td className="px-4 py-2.5">OpenStreetMap</td><td className="px-4 py-2.5">Exposure Check map</td><td className="px-4 py-2.5">Your IP address and the approximate location shown</td></tr>
+                      <tr><td className="px-4 py-2.5">Amazon S3, tool websites, image hosts</td><td className="px-4 py-2.5">Tool logos</td><td className="px-4 py-2.5">Your IP address when a logo loads</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -181,7 +189,7 @@ export default function PrivacyPolicyPage() {
               </div>
               <ul className="space-y-1 text-foreground/58">
                 <li>• <strong className="text-foreground/75">Encryption in transit</strong> — all connections use HTTPS/TLS</li>
-                <li>• <strong className="text-foreground/75">Minimal retention</strong> — scanner results may be cached briefly; nothing else from the tools is stored</li>
+                <li>• <strong className="text-foreground/75">Minimal retention</strong> — website scan results expire after 48 hours and are deleted at the next scan; Exposure Check keeps anonymous counts of browser settings; nothing else from the tools is stored</li>
                 <li>• <strong className="text-foreground/75">No profiles</strong> — because there are no accounts, there is no profile of you to protect or leak</li>
               </ul>
             </div>

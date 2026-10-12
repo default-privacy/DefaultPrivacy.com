@@ -9,7 +9,7 @@
  * FAILS rather than inventing a grade.
  */
 
-import { and, eq, gt, sql } from "drizzle-orm"
+import { and, eq, gt, lt, sql } from "drizzle-orm"
 import { db, isDatabaseConfigured } from "@/lib/db"
 import { publicScans, toolPrivacyAudits, tools } from "@/lib/db/schema"
 import { calculateFullPrivacyScore } from "@/lib/scanner/scoring"
@@ -366,6 +366,10 @@ async function cacheScanResult({ domain, scanResult, score, scannedAt }: CachePa
         updatedAt: new Date(),
       },
     })
+
+  // Results are only served for 48 hours, so delete expired rows instead of keeping
+  // them forever. Done on write, so it needs no cron.
+  await db.delete(publicScans).where(lt(publicScans.expiresAt, new Date()))
 }
 
 

@@ -45,7 +45,7 @@ export default async function AboutPage() {
       icon: Wrench,
       n: "02",
       h: "Free Tools",
-      p: "Check your own exposure — password strength, website trackers, breach history, email security, and WHOIS. No account, nothing stored.",
+      p: "Check your own exposure — password strength, website trackers, breach history, email security, and WHOIS. No account, nothing tied to you.",
       note: "See where you stand before you change a thing.",
     },
     {

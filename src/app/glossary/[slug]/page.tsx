@@ -58,6 +58,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Content changes only with a deploy: regenerate at most weekly (keeps ISR writes and CPU down).
 export const revalidate = 604800
 
+// Only prerendered slugs exist. Without this, every unknown URL renders a 404 that the
+// host caches as its own page, which counts against the ISR write limit.
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const terms = await getAllGlossaryTerms()
   return terms.map((term) => ({ slug: term.slug }))

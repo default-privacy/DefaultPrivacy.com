@@ -9,7 +9,7 @@ import { PrivacyScoreReport } from "@/components/privacy-score/privacy-score-rep
 export const metadata: Metadata = {
   title: "Privacy Score — One Domain, Three Checks | Default Privacy",
   description:
-    "Get a single 0–100 privacy score for any domain. We combine email-spoofing (SPF/DKIM/DMARC), website-tracker, and WHOIS-exposure checks into one exposure band. No login, nothing stored.",
+    "Get a single 0–100 privacy score for any domain. We combine email-spoofing (SPF/DKIM/DMARC), website-tracker, and WHOIS-exposure checks into one exposure band. No login, no account.",
   alternates: {
     canonical: "https://defaultprivacy.com/privacy-score",
   },
@@ -42,7 +42,7 @@ export default function PrivacyScorePage() {
           </p>
           <div className="inline-flex items-center gap-2 mt-4 rounded-full bg-success/10 border border-success/20 px-4 py-1.5 text-sm text-success">
             <div className="h-2 w-2 rounded-full bg-success" aria-hidden="true" />
-            Public lookups only — no login, nothing stored
+            Public lookups only — no login, no account
           </div>
         </div>
 

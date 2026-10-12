@@ -24,13 +24,17 @@ Online stalking uses the same data exposure that enables doxxing but with persis
 
 ## Protection Steps
 
-1. **Audit shared accounts**: Remove stalker from any shared services (iCloud, Google, Spotify, Netflix)
-2. **Check for spyware**: Scan devices with anti-malware tools
-3. **Lock down social media**: Make profiles private, disable location tagging
-4. **Remove from data brokers**: Opt out of people search sites
-5. **Use a VPN**: Prevent IP-based location tracking
-6. **Change phone number**: Get a new number from a privacy-focused provider
-7. **Document everything**: Screenshots with timestamps for law enforcement
+If someone you know is stalking you, **changes can tip them off.** Signing them out of accounts or removing monitoring software can alert them, and some abusers escalate when they lose access. Plan the order with an advocate, and use a device they have never had access to.
+
+1. **Get support and document first**: Save screenshots with dates and keep a log before you change anything. Removing spyware or resetting a phone deletes the evidence.
+2. **Talk to an advocate**: In the US, call the National Domestic Violence Hotline (1-800-799-7233) or text START to 88788. They can help you plan which steps are safe and when.
+3. **Audit shared accounts**: Review shared services (iCloud, Google, Find My, streaming accounts) and remove access when it is safe to.
+4. **Don't trust a clean scan**: No app reliably detects all stalkerware. If you suspect monitoring, a factory reset and a fresh setup (not restoring an old backup) is more dependable, after you've saved evidence.
+5. **Lock down social media**: Make profiles private and turn off location tagging.
+6. **Remove from data brokers**: Opt out of people-search sites, and repeat, because they re-list.
+7. **Consider a new number**: A new phone number the stalker doesn't know, once your safety plan allows it.
+
+See the [Digital Safety Kit for Stalking and Abuse Survivors](/stacks/stalking-abuse-survivor-safety-kit) for the full order of steps.
 
 ## Resources
 

@@ -3,6 +3,8 @@
  * Shared by audit pipeline and MCP — no "use server".
  */
 
+import { extractDomain } from "@/lib/whois/rdap"
+
 export type BreachInfo = {
   Name: string
   Title: string
@@ -20,6 +22,8 @@ export type BreachCheckResult = {
   domain: string
   breaches: BreachInfo[]
   totalExposed: number
+  /** Set when success is false. The breach list is then unknown, not empty. */
+  error?: string
 }
 
 const HIBP_BREACHES_URL = "https://haveibeenpwned.com/api/v3/breaches"
@@ -49,7 +53,17 @@ async function getAllBreaches(): Promise<BreachInfo[]> {
 
 export async function checkBreaches(domain: string): Promise<BreachCheckResult> {
   try {
-    const normalizedDomain = domain.toLowerCase().replace(/^www\./, "")
+    const normalizedDomain = extractDomain(domain)
+    // Needs a name and a suffix: a bare "com" would match every .com breach.
+    if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(normalizedDomain)) {
+      return {
+        success: false,
+        domain,
+        breaches: [],
+        totalExposed: 0,
+        error: "Please enter a valid domain name, like example.com.",
+      }
+    }
     const allBreaches = await getAllBreaches()
 
     const matches = allBreaches.filter((b) => {
@@ -72,6 +86,12 @@ export async function checkBreaches(domain: string): Promise<BreachCheckResult> 
   } catch (error) {
     // Signal the failure instead of reporting a false all-clear (0 breaches).
     console.error("[breach-check] Error:", error)
-    return { success: false, domain, breaches: [], totalExposed: 0 }
+    return {
+      success: false,
+      domain,
+      breaches: [],
+      totalExposed: 0,
+      error: "The breach catalog could not be reached, so the result is unknown. Try again later.",
+    }
   }
 }
