@@ -29,8 +29,8 @@ Privacy tools directories help people navigate the overwhelming number of privac
 - Operating systems
 - Hardware security keys
 - Data broker removal services
-- Anonymous business formation
+- Legal and asset protection
 
 ## Default Privacy's Directory
 
-Default Privacy maintains a curated directory of privacy tools with detailed metadata including open source status, cryptocurrency acceptance, KYC requirements, security audit status, ToS;DR grades, and privacy scores from automated scanning.
+Default Privacy maintains a curated [directory](/directory) of privacy tools. Listings can record whether a tool is open source and has a free tier, some carry the sources and caveats behind their claims, and each category marks up to three picks as a starting point ([how we pick](/how-we-pick)).

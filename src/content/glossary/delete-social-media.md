@@ -86,7 +86,7 @@ Before deleting any account:
 
 ## After Deletion
 
-- **Data brokers** already have your social media data — use data removal services (see the [tools directory](/directory), filter Identity & Data Removal)
+- **Data brokers** already have your social media data. Use data removal services (see the [tools directory](/directory?category=data-broker-redaction), category Data Broker Redaction)
 - **Cached copies** may exist in search engines — request removal from Google
 - **Screenshots** and archived pages may persist — you can't control what others saved
 - **Shadow profiles** continue to exist based on others' contact uploads

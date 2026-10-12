@@ -31,7 +31,7 @@ People search sites are the retail arm of the data broker industry. They make yo
 
 **Manual opt-out**: Each site has a different removal process. It's tedious — there are 200+ sites.
 
-**Automated removal services** (compare vetted options in the [tools directory](/directory) under **Identity & Data Removal**):
+**Automated removal services** (compare options in the [tools directory](/directory?category=data-broker-redaction) under **Data Broker Redaction**):
 - Examples include Optery, DeleteMe, Kanary, and others — coverage, price, and monitoring differ by provider
 
 **Important**: Data reappears over time. One-time removal isn't enough — you need ongoing monitoring.

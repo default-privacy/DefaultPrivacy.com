@@ -54,7 +54,7 @@ Data brokers have your name, address, phone number, email, relatives, and more â
 
 ## Automated Removal Services
 
-Services that handle the opt-out process on your behalf. **Default Privacy** lists vetted tools in the **[tools directory](/directory)** (filter **Identity & Data Removal**) â€” compare coverage and pricing before you choose; the table below is illustrative, not exhaustive.
+Services that handle the opt-out process on your behalf. **Default Privacy** lists data broker removal services in the **[tools directory](/directory?category=data-broker-redaction)** (category **Data Broker Redaction**). Compare coverage and pricing before you choose; the table below is illustrative, not exhaustive.
 
 | Service | Sites Covered | Price Range | Notes |
 |---------|--------------|-------------|-------|

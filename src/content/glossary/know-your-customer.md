@@ -36,4 +36,4 @@ KYC regulations are the primary barrier to financial privacy, requiring identity
 
 ## KYCnot.me
 
-A directory of services that don't require KYC. Default Privacy tracks the KYC status of tools in its privacy tools directory.
+A directory of services that don't require KYC.

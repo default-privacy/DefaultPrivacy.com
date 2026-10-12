@@ -22,7 +22,7 @@ Terms of Service agreements are the contracts you accept (usually without readin
 
 ## ToS;DR
 
-ToS;DR (Terms of Service; Didn't Read) is a project that grades and summarizes terms of service. Default Privacy integrates ToS;DR data into its tools directory, grading the privacy practices of 232+ tools.
+ToS;DR (Terms of Service; Didn't Read) is a project that grades and summarizes terms of service.
 
 ## Red Flags
 

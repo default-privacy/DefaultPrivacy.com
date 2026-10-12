@@ -54,33 +54,28 @@ Brokers pull from many sources. Changing how a business is filed does not take y
 
 ## The Major Data Broker Sites
 
-There are hundreds of data brokers, but most consumers encounter these first:
+There are hundreds of data brokers. Over 600 are on California's 2026 registry, and the state publishes the list, including each broker's websites ([California Data Broker Registry](https://cppa.ca.gov/data_broker_registry/)). Many people-search sites belong to the same few companies, so one opt-out can matter for several sites.
 
-**Tier 1 — High traffic, highest priority:**
-- Spokeo
+**People-search sites most people run into first:**
+- Spokeo, which also runs AnyWho and ThatsThem
 - Whitepages
-- BeenVerified
-- Intelius
-- PeopleFinder
+- BeenVerified, which also runs PeopleLooker and PeopleSmart
+- Intelius, which also runs US Search, PeopleFinder.com, PeopleLookup and ZabaSearch
 - TruthFinder
-- Pipl
-
-**Tier 2 — Significant but lower traffic:**
-- MyLife
-- Radaris
-- PeopleLookup
 - Instant Checkmate
+- MyLife, run by Insightbridge LLC
+- PeopleFinders.com, a separate company from PeopleFinder.com
 - CheckPeople
-- USSearch
 
-**Data aggregators that feed Tier 1 sites:**
+All of the above are on California's registry ([registry](https://cppa.ca.gov/data_broker_registry/)). Radaris, another people-search site, does not appear on the 2026 registry, so a DROP request won't reach Radaris and you need to opt out there directly.
+
+**Marketing and risk-data companies:**
 - LexisNexis
 - Acxiom
-- Experian (consumer data division)
+- Experian
 - Epsilon
-- Oracle Data Cloud
 
-Removing from the Tier 1 sites is the highest-impact action. The aggregators are harder to remove from but also less directly consumer-facing.
+You rarely deal with these companies directly. They are on California's registry too ([registry](https://cppa.ca.gov/data_broker_registry/)), so a DROP request reaches them if you live in California.
 
 ---
 
