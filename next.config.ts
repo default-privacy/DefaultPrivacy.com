@@ -28,6 +28,19 @@ const nextConfig: NextConfig = {
           { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
         ],
       },
+      // The homepage and /directory render per URL (filters and page number are in the query),
+      // which Next marks "never cache". Let the CDN keep each URL's copy for a minute so repeat
+      // visits and bots stop re-running the page. The page holds nothing personal: the IP
+      // banner loads separately from /api/whoami. Not for the MCP host, which also serves "/".
+      {
+        source: "/",
+        missing: [{ type: "host", value: "mcp.defaultprivacy.com" }],
+        headers: [{ key: "Cache-Control", value: "public, s-maxage=60, stale-while-revalidate=300" }],
+      },
+      {
+        source: "/directory",
+        headers: [{ key: "Cache-Control", value: "public, s-maxage=60, stale-while-revalidate=300" }],
+      },
     ]
   },
   // /:path*.md → /llm-mirror/:path*  (Stripe / Vercel pattern)
