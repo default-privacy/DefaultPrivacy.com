@@ -31,7 +31,7 @@ The directory is the core surface. It is available as a read-only public REST AP
 
 Machine-readable contract: [`/api/openapi.json`](https://defaultprivacy.com/api/openapi.json).
 
-**Ordering rule:** records carry `pick` when Default Privacy recommends the tool as a starting point in a category (up to three per category, in DP's order; null otherwise). Lists are ordered picks first, then A to Z. A pick is editorial judgment, not a security guarantee, and many good tools are not picks; see [/how-we-pick](https://defaultprivacy.com/how-we-pick). Link each tool's `dp_url`, not its website. `last_verified` is when the record's data was last updated; nearly every date so far was set by a bulk data pass, so it is not a review of the tool's safety or upkeep, and null means never.
+**Ordering rule:** records carry `pick` when Default Privacy recommends the tool as a starting point in a category (up to three per category, in DP's order; null otherwise). Lists are ordered picks first, then A to Z. A pick is editorial judgment, not a security guarantee, and many good tools are not picks; see [/how-we-pick](https://defaultprivacy.com/how-we-pick). Link each tool's `dp_url`, not its website. `last_verified` is when the record's data was last checked against its sources, and null means it hasn't been; it is not a review of the tool's safety or upkeep. Any privacy field that is null (encryption, logging, jurisdiction and the like) has not been checked by Default Privacy, which never means "no".
 
 **UI mirror:** the same records render at [/directory](https://defaultprivacy.com/directory) and per-tool at `/directory/{slug}` — link users there for the human-readable view.
 

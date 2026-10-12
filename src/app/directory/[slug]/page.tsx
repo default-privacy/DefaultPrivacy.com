@@ -249,8 +249,14 @@ export default async function ToolDetailPage({ params }: Props) {
 
             {/* Privacy badges from normalized tags */}
             {(() => {
-              // accepts-crypto, no-kyc, security-audited tags are retired from display
-              const knownSlugs = new Set(["open-source", "accepts-crypto", "no-kyc", "security-audited", "android-app", "ios-app"])
+              // Tags that assert a privacy property (encryption, no logs, audits…) came from a bulk
+              // import with no source, so they are not shown; topic tags (vpn, password-manager) are.
+              const knownSlugs = new Set([
+                "open-source", "android-app", "ios-app",
+                "accepts-crypto", "no-kyc", "security-audited",
+                "foss", "encryption", "end-to-end-encryption", "no-logs", "no-tracking",
+                "audit", "anonymous", "zero-knowledge", "gdpr",
+              ])
               const extraTags = toolTags.filter(t => !knownSlugs.has(t.slug))
 
               return (
@@ -461,6 +467,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
             {/* Sources */}
             {refs.urls.length > 0 && (
+              <>
               <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-4">
                 <h3 className="mb-3 text-[13px] font-medium text-foreground/90">Sources</h3>
                 <ol className="space-y-1.5 text-[11px] text-foreground/60">
@@ -475,8 +482,9 @@ export default async function ToolDetailPage({ params }: Props) {
                   ))}
                 </ol>
               </div>
+              <p className="px-1 text-[11px] text-foreground/40">Each sourced fact links to the page we checked it against.</p>
+              </>
             )}
-            <p className="px-1 text-[11px] text-foreground/40">We only show what we have checked against a source.</p>
 
             {/* Scan this tool */}
             <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-4">

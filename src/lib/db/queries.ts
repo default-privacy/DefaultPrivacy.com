@@ -124,10 +124,6 @@ export type ToolFilters = {
   offset?: number
   // ── Typed trust-column facets (directory quality filters) ──
   openSource?: boolean
-  e2ee?: boolean
-  noLogs?: boolean
-  /** Exclude tools whose jurisdictionRisk is explicitly `five_eyes` (null/other kept). */
-  excludeFiveEyes?: boolean
 }
 
 /**
@@ -137,10 +133,6 @@ export type ToolFilters = {
 function buildColumnFacetConditions(filters: ToolFilters) {
   const c = []
   if (filters.openSource) c.push(eq(tools.isOpenSource, true))
-  if (filters.e2ee) c.push(eq(tools.e2ee, true))
-  if (filters.noLogs) c.push(eq(tools.logsIp, false))
-  // IS DISTINCT FROM keeps NULL (unknown) jurisdictions in the results.
-  if (filters.excludeFiveEyes) c.push(sql`${tools.jurisdictionRisk} is distinct from 'five_eyes'`)
   return c
 }
 

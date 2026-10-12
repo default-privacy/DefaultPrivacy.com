@@ -48,7 +48,6 @@ Google is the largest data collection operation in history. Replacing Google ser
 |--------|-------------------|-------|
 | Gmail | **ProtonMail** | End-to-end encrypted, Swiss |
 | Gmail | **Tuta (Tutanota)** | E2EE, German, open source |
-| Gmail | **Skiff Mail** | E2EE, web3 integration |
 
 ### Browser
 | Google | Private Alternative | Notes |

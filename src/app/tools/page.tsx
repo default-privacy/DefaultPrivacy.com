@@ -147,7 +147,7 @@ export default async function ToolsPage() {
             </div>
             <div className="space-y-1">
               <div className="text-2xl font-medium tabular-nums tracking-tight text-foreground">{directoryStats.toolsLabel}</div>
-              <div className="text-[11px] text-foreground/45">Tools Reviewed</div>
+              <div className="text-[11px] text-foreground/45">Tools Listed</div>
             </div>
             <div className="space-y-1">
               <div className="text-2xl font-medium tabular-nums tracking-tight text-foreground">500+</div>

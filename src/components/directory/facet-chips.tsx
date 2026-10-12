@@ -5,15 +5,11 @@ import { useTransition } from "react"
 import { cn } from "@/lib/utils"
 
 /**
- * Quick quality facets — each backed by a populated typed trust column
- * (see buildColumnFacetConditions in queries.ts). One shared `f` (CSV) URL key.
+ * Quick quality facets — each backed by a typed trust column (see
+ * buildColumnFacetConditions in queries.ts). One shared `f` (CSV) URL key. Encryption, logging
+ * and jurisdiction facets were removed 2026-10-12: those columns were mostly unsourced.
  */
-const FACETS = [
-  { key: "open-source", label: "Open source" },
-  { key: "e2ee", label: "E2E encrypted" },
-  { key: "no-logs", label: "No logs" },
-  { key: "no-five-eyes", label: "Outside Five-Eyes" },
-] as const
+const FACETS = [{ key: "open-source", label: "Open source" }] as const
 
 const facetParsers = {
   f: parseAsString.withDefault(""),

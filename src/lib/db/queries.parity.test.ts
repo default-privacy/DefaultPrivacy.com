@@ -55,7 +55,7 @@ describe.skipIf(!reachable)("directory list ↔ count parity", () => {
   it("search filter (match)", async () => { await parity({ search: "vpn" }) })
   it("publicOnly filter", async () => { await parity({ publicOnly: true }) })
   it("trust-column facet (openSource)", async () => { await parity({ openSource: true }) })
-  it("combined facets", async () => { await parity({ publicOnly: true, openSource: true, e2ee: true }) })
+  it("combined facets", async () => { await parity({ publicOnly: true, openSource: true, search: "a" }) })
 
   it("category filter (real slug)", async () => {
     if (!sampleCategory) return

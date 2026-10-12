@@ -21,7 +21,7 @@ export type DirectorySearchParams = {
   category?: string
   subCategory?: string
   tags?: string
-  /** CSV of typed-column facet keys (open-source, e2ee, no-logs, no-five-eyes) */
+  /** CSV of typed-column facet keys (open-source) */
   f?: string
   /** picks (default) | name | newest */
   sort?: string
@@ -53,9 +53,6 @@ function parseFacetFilters(sp: DirectorySearchParams) {
     : ("picks" as const) // default: DP picks first, then A to Z
   return {
     openSource: has("open-source"),
-    e2ee: has("e2ee"),
-    noLogs: has("no-logs"),
-    excludeFiveEyes: has("no-five-eyes"),
     sortBy,
     sortOrder: sp.sort === "newest" ? ("desc" as const) : ("asc" as const),
   }

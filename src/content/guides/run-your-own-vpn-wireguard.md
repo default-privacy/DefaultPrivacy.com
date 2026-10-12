@@ -1,11 +1,12 @@
 ---
 title: "How to Run Your Own VPN with WireGuard"
 slug: run-your-own-vpn-wireguard
-description: "Stop trusting VPN companies with your traffic. Set up your own WireGuard VPN server on a $5/month VPS in under 30 minutes — full control, no logs, no trust required."
+description: "Stop trusting VPN companies with your traffic. Set up your own WireGuard VPN server on a $5/month VPS in under 30 minutes — full control over the server, with honest limits on what it hides."
 category: Self-Hosting
 difficulty: intermediate
 timeToComplete: "30 minutes"
 publishedAt: "2026-03-07"
+updatedAt: "2026-10-11"
 author: Default Privacy
 tags:
   - vpn
@@ -20,12 +21,12 @@ relatedTools:
 
 ## Why Run Your Own VPN?
 
-Commercial VPN providers ask you to trust them with **all of your internet traffic**. They promise "no logs," but you have no way to verify that. Several major VPN providers have been caught logging user data, sharing it with law enforcement, or being acquired by data-harvesting companies.
+Commercial VPN providers ask you to trust them with **all of your internet traffic**. They promise "no logs," but you can't verify that yourself.
 
-When you run your own VPN, you eliminate the middleman:
+Running your own VPN **moves that trust, it doesn't remove it**. The VPS company owns the machine your traffic leaves from, can see where it goes, and knows who pays for the server. Here is what you do get:
 
-- **You control the server** — no third party sees your traffic
-- **You control the logs** — because there are none (unless you create them)
+- **You control the software** — no VPN company's app or logging policy sits in the middle
+- **You control the logs** — WireGuard keeps none of your browsing (your VPS host's own network logs are outside your control)
 - **You control the jurisdiction** — pick a VPS in any country you want
 - **You control the cost** — $4–6/month for a VPS vs $10–13/month for a commercial VPN
 - **You learn how it works** — understanding your tools is the foundation of real privacy
@@ -39,7 +40,9 @@ Self-hosting isn't always the right call. A commercial VPN is better when you ne
 - **One-click mobile apps** — if you want zero configuration on every device.
 - **Multi-hop / obfuscation** — for censorship circumvention in restrictive countries.
 
-If your goal is **general privacy, preventing ISP snooping, and securing public Wi-Fi** — self-hosting is the superior choice.
+**One more trade-off:** every site you visit sees a single IP address that only you use, and it's tied to the account that pays for the VPS. A commercial VPN shares one IP among many users, which makes you harder to single out.
+
+So self-hosting is a good fit for **keeping your traffic from your ISP and from public Wi-Fi**. It is a poor fit for hiding who you are from the sites you visit.
 
 ---
 
@@ -429,7 +432,7 @@ Your self-hosted VPN is one layer of a complete privacy strategy. Build a threat
 | **Time** | ~30 minutes |
 | **Cost** | $4–6/month (VPS) |
 | **Difficulty** | Intermediate (basic terminal skills required) |
-| **Privacy gain** | Eliminates ISP snooping, secures public Wi-Fi, removes trust in commercial VPN providers |
+| **Privacy gain** | Hides your traffic from your ISP and public Wi-Fi; moves trust from a VPN company to your VPS host |
 | **Maintenance** | Minimal — automatic updates handle most of it |
 
-You now have a VPN that **you own, you control, and nobody else can access**. No trust required.
+You now have a VPN that **you own and control**. Your VPS host can still see the traffic that leaves it, so pick that host as carefully as you would a VPN.

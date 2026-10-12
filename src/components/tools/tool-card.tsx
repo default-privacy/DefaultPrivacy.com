@@ -7,8 +7,6 @@ import { OutboundLink } from "@/components/common/outbound-link"
 import {
   ExternalLink as ExternalLinkIcon,
   Github,
-  Globe,
-  Lock,
   Shield,
   Smartphone,
   Star,
@@ -28,13 +26,6 @@ type ToolCardProps = {
   variant?: "default" | "teaser"
   /** With variant teaser: classes on outer Link (e.g. width for horizontal scroll) */
   className?: string
-}
-
-/** Palette-safe jurisdiction tint — only privacy-friendly (low-risk) reads as positive. */
-function jurisdictionTint(risk: string | null) {
-  return risk === "low"
-    ? "border-success/20 bg-success/8 text-success"
-    : "border-foreground/8 bg-foreground/[0.03] text-foreground/50"
 }
 
 function TagPill({ icon: Icon, label, tooltip }: { icon: React.ElementType; label: string; tooltip?: string }) {
@@ -59,7 +50,6 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
   // Quality signals now come from the typed trust columns (consistent with the filters);
   // mobile stays tag-derived (no dedicated column).
   const showOpenSource = tool.isOpenSource === true
-  const showE2ee = tool.e2ee === true
   const pick = tool.isDeprecated ? null : pickInfo(tool.slug)
   const showAndroid = slugs.has("android-app")
   const showIos = slugs.has("ios-app")
@@ -108,18 +98,6 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
               {displayCategory}
             </p>
           )}
-          {tool.jurisdiction && (
-            <span
-              className={cn(
-                "mt-1 inline-flex items-center gap-1 rounded border px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wide",
-                jurisdictionTint(tool.jurisdictionRisk),
-              )}
-              title={`Jurisdiction: ${tool.jurisdiction}${tool.jurisdictionRisk ? ` (${tool.jurisdictionRisk.replace("_", "-")})` : ""}`}
-            >
-              <Globe className="h-2.5 w-2.5" />
-              {tool.jurisdiction}
-            </span>
-          )}
         </div>
       </div>
 
@@ -132,10 +110,9 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
       {variant === "default" && (
         <div className="mt-3 space-y-2.5 border-t border-foreground/6 pt-3">
           {/* Attribute pills — their own wrapping row so they never crowd the action */}
-          {(showOpenSource || showE2ee || showMobile) && (
+          {(showOpenSource || showMobile) && (
             <div className="flex flex-wrap items-center gap-1.5">
               {showOpenSource && <TagPill icon={Github} label="OSS" tooltip="Open source: the software's code is public. For services, the app may be open while the servers are not." />}
-              {showE2ee && <TagPill icon={Lock} label="E2EE" tooltip="End-to-End Encrypted" />}
               {showMobile && <TagPill icon={Smartphone} label="Mobile" tooltip={`Mobile App (${mobileLabel})`} />}
             </div>
           )}

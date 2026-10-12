@@ -6,6 +6,7 @@ category: Financial Privacy
 difficulty: intermediate
 timeToComplete: "12 minutes"
 publishedAt: "2026-03-18"
+updatedAt: "2026-10-11"
 author: Default Privacy
 tags:
   - banking
@@ -47,7 +48,7 @@ The YouTube and forum advice on this topic tends to cluster around a few ideas t
 There are still non-CRS countries. Most of them are also risky places to bank — weak rule of law, capital controls, and limited access to international payments. More importantly, a non-CRS account is one treaty negotiation away from becoming reportable, and the trend is clearly toward more countries joining, not fewer leaving.
 
 **"Use a nominee director and it doesn't count."**
-Beneficial ownership rules pierce nominees. If you control the entity, you are the beneficial owner, regardless of whose name is on the incorporation documents. Using nominees in a post-BOI world does not make you anonymous — it creates a paper trail of attempted obfuscation, which is often worse than just being listed.
+Beneficial ownership rules pierce nominees. If you control the entity, you are the beneficial owner, regardless of whose name is on the incorporation documents. US companies no longer file beneficial ownership reports with FinCEN since its March 2025 interim final rule ([FinCEN](https://www.fincen.gov/news/news-releases/fincen-removes-beneficial-ownership-reporting-requirements-us-companies-and-us)), but your bank still must identify the beneficial owners of a company that opens an account ([31 CFR 1010.230](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-B/section-1010.230)). So a nominee does not make you anonymous to the bank — it creates a paper trail of attempted obfuscation, which is often worse than just being listed.
 
 **"Crypto fixes this."**
 Crypto fixes the custody problem. It does not fix the off-ramp problem. The moment you convert crypto to fiat through a regulated exchange, KYC happens and CARF or DAC8 reporting kicks in. Privacy coins and self-custody genuinely complicate surveillance, but they do not solve the banking problem — they defer it.
@@ -77,7 +78,7 @@ A lot of "privacy banking" advice conflates the two. Tax optimization is a legit
 
 **4. Use jurisdiction for legal, not for hiding.**
 
-Wyoming and New Mexico offer genuine privacy advantages — your name off the public state filing, a strong charging order protection, and no state income tax. These are real legal benefits you can use openly and explain to a banker. That is very different from "I incorporated here because it does not have a CRS agreement with my country."
+Wyoming and New Mexico offer genuine privacy advantages — your name off the public state filing and strong charging order protection. Wyoming also has no state income tax; New Mexico does have one ([New Mexico Taxation and Revenue](https://www.tax.newmexico.gov/individuals/personal-income-tax-information-overview/)). These are real legal benefits you can use openly and explain to a banker. That is very different from "I incorporated here because it does not have a CRS agreement with my country."
 
 **5. Self-custody for value storage, regulated rails for value movement.**
 
