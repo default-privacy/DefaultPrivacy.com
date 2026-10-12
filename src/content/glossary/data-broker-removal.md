@@ -56,13 +56,15 @@ Data brokers have your name, address, phone number, email, relatives, and more â
 
 Services that handle the opt-out process on your behalf. **Default Privacy** lists data broker removal services in the **[tools directory](/directory?category=data-broker-redaction)** (category **Data Broker Redaction**). Compare coverage and pricing before you choose; the table below is illustrative, not exhaustive.
 
-| Service | Sites Covered | Price Range | Notes |
-|---------|--------------|-------------|-------|
-| **Optery** | 635+ | Freeâ€“$20.70/mo | Most comprehensive coverage, free tier available |
-| **DeleteMe** | 750+ | $10.75/mo | Quarterly scans and removal |
-| **Kanary** | 400+ | $8/mo | Continuous monitoring |
-| **Privacy Duck** | 500+ | $500+/year | White-glove service |
-| **EasyOptOuts** | 190+ | $19.99/year | Budget option, DIY-assisted |
+| Service | Coverage, by the company's own count | Price |
+|---------|--------------|-------|
+| **Optery** | 380+ to 630+ sites with its Expanded Reach option on, depending on plan ([Optery](https://www.optery.com/pricing/)) | Free self-service plan; paid plans $39 to $249 a year when billed yearly ([Optery](https://www.optery.com/pricing/)) |
+| **DeleteMe** | No site count on its pricing page | See [DeleteMe pricing](https://joindeleteme.com/pricing/) |
+| **Kanary** | No site count on its pricing page | $250 a year for Core, $500 for Advanced, per account ([Kanary](https://www.kanary.com/pricing)) |
+| **PrivacyDuck** | 400+ sites ([PrivacyDuck](https://privacyduck.com/)) | $299 a year for Pro ([PrivacyDuck](https://privacyduck.com/)) |
+| **EasyOptOuts** | 200+ data brokers ([EasyOptOuts](https://easyoptouts.com/)) | $19.99 a year ([EasyOptOuts](https://easyoptouts.com/)) |
+
+Prices and counts as listed on each company's site in October 2026. Each company counts sites its own way, so the numbers don't compare directly.
 
 ## What to Expect
 
