@@ -106,7 +106,7 @@ export default function UseInYourAiPage() {
               Your assistant sends us only the lookup it needs, like a product name, never your
               conversation, and we don&apos;t store it. We keep daily counts of each tool and request
               type, of which kind of app connects (Claude, Cursor and the like; any other name
-              counts as &quot;other&quot;), and of which version of the MCP protocol each request uses. Each request also leaves a log line with its
+              counts as &quot;other&quot;), of which version of the MCP protocol each request uses, and of which response formats a request says it accepts. Each request also leaves a log line with its
               time, status and speed, but no lookup and no IP. Your IP is held in memory for up to a day
               to enforce rate limits, and our host, Vercel, keeps its own request logs. The domain
               tools look the domain up in public DNS, its registry&apos;s records, and Have I Been

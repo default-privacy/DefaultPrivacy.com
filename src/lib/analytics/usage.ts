@@ -24,10 +24,10 @@ import { and, desc, gte, notInArray, sql } from "drizzle-orm"
 
 /**
  * Protocol traffic, not demand: one per MCP JSON-RPC message (mcp_method), one per
- * connecting app (mcp_client) and one per request's protocol revision (mcp_protocol). Kept out of dailyTotal so a demand trend isn't drowned
+ * connecting app (mcp_client) and one per request's protocol revision (mcp_protocol) and one per POST's Accept-header shape (mcp_accept). Kept out of dailyTotal so a demand trend isn't drowned
  * by handshakes and tool listings.
  */
-export const TRAFFIC_KINDS = ["mcp_method", "mcp_client", "mcp_protocol"]
+export const TRAFFIC_KINDS = ["mcp_method", "mcp_client", "mcp_protocol", "mcp_accept"]
 
 /**
  * Increment the usage counter for (today, kind, key) by 1.

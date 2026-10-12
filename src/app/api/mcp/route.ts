@@ -9,10 +9,8 @@
 
 import { createMcpHandler } from "mcp-handler"
 
-import { countUsage } from "@/lib/analytics/usage"
 import { withRateLimit } from "@/lib/api-rate-limit"
-import { oversizedBatch } from "@/mcp-server/batch-limit"
-import { mcpRequestCounts, protocolBucket } from "@/mcp-server/request-counts"
+import { withMcpGate } from "@/mcp-server/gate"
 import { configureServer, SERVER_INFO, SERVER_INSTRUCTIONS } from "@/mcp-server/server"
 
 export const dynamic = "force-dynamic"
@@ -32,24 +30,7 @@ const handler = createMcpHandler(
   },
 )
 
-/**
- * Refuse oversized batches, then count each JSON-RPC method, the protocol revision and,
- * on connect, the app's name. Counting never blocks or fails the request.
- */
-async function counted(request: Request): Promise<Response> {
-  if (request.method === "POST") {
-    try {
-      const body = await request.clone().json()
-      const refused = oversizedBatch(body)
-      if (refused) return refused
-      const { methods, client } = mcpRequestCounts(body)
-      for (const method of methods) countUsage("mcp_method", method)
-      if (client) countUsage("mcp_client", client)
-      countUsage("mcp_protocol", protocolBucket(request.headers.get("mcp-protocol-version"), body))
-    } catch {
-      // Unparseable body: the transport answers it with a JSON-RPC parse error.
-    }
-  }
+async function routed(request: Request): Promise<Response> {
   // On mcp.defaultprivacy.com the root is rewritten to this route, but the library matches
   // the ORIGINAL request path. Hand it the path it expects.
   const url = new URL(request.url)
@@ -60,6 +41,6 @@ async function counted(request: Request): Promise<Response> {
   return handler(request)
 }
 
-const rateLimited = withRateLimit(counted, { resource: "/api/mcp", tier: "developer" })
+const rateLimited = withRateLimit(withMcpGate(routed), { resource: "/api/mcp", tier: "developer" })
 
 export { rateLimited as GET, rateLimited as POST, rateLimited as DELETE }

@@ -7,7 +7,8 @@
  * call. Counts say which apps connect, not what a given app then asked. (A rare
  * name's updated_at still dates its connect, so at very low traffic timing alone can
  * line it up with other rows. Accepted: no lookup content is stored anywhere.)
- * Nothing else from the request is read.
+ * Besides the body, only two headers are read, each folded to a fixed set: the protocol
+ * version and the Accept header's shape.
  *
  * Each distinct method counts once per HTTP request, so a batched body costs at most
  * one upsert per method bucket (≤ 15 with the client name), not one per element.
@@ -86,6 +87,23 @@ export function protocolBucket(header: string | null, body: unknown): string {
   const version = header ?? (typeof requested === "string" ? requested : null)
   if (version === null) return "none"
   return PROTOCOL_VERSIONS.has(version) ? version : "other"
+}
+
+/**
+ * What a POST's Accept header allows, folded to a fixed set. The transport answers 406
+ * unless both application/json and text/event-stream are listed, so this shows whether
+ * the 406s come from clients that send "*\/*", JSON only, or nothing at all.
+ */
+export function acceptBucket(header: string | null): string {
+  if (!header || !header.trim()) return "none"
+  const types = header.toLowerCase().split(",").map((part) => part.split(";")[0].trim())
+  const json = types.includes("application/json")
+  const sse = types.includes("text/event-stream")
+  if (json && sse) return "json+sse"
+  if (json) return "json"
+  if (sse) return "sse"
+  if (types.includes("*/*")) return "any"
+  return "other"
 }
 
 export function mcpRequestCounts(body: unknown): { methods: string[]; client: string | null } {

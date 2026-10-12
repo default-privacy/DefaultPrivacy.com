@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { clientBucket, mcpRequestCounts, protocolBucket } from "./request-counts"
+import { acceptBucket, clientBucket, mcpRequestCounts, protocolBucket } from "./request-counts"
 
 describe("mcpRequestCounts", () => {
   it("counts an initialize and buckets the app name", () => {
@@ -80,5 +80,25 @@ describe("protocolBucket", () => {
   it("folds unknown or junk values into 'other' so callers can't mint keys", () => {
     expect(protocolBucket("me@example.com", null)).toBe("other")
     expect(protocolBucket(null, { method: "initialize", params: { protocolVersion: "x".repeat(500) } })).toBe("other")
+  })
+})
+
+describe("acceptBucket", () => {
+  it("names what spec-following clients send", () => {
+    expect(acceptBucket("application/json, text/event-stream")).toBe("json+sse")
+    expect(acceptBucket("text/event-stream;q=0.9, application/json")).toBe("json+sse")
+  })
+
+  it("separates the shapes the transport refuses", () => {
+    expect(acceptBucket("application/json")).toBe("json")
+    expect(acceptBucket("text/event-stream")).toBe("sse")
+    expect(acceptBucket("*/*")).toBe("any")
+    expect(acceptBucket(null)).toBe("none")
+    expect(acceptBucket("  ")).toBe("none")
+  })
+
+  it("folds anything else into 'other' so callers can't mint keys", () => {
+    expect(acceptBucket("text/html")).toBe("other")
+    expect(acceptBucket("me@example.com")).toBe("other")
   })
 })

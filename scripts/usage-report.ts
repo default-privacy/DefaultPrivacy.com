@@ -33,6 +33,7 @@ const KIND_LABEL: Record<string, string> = {
   mcp_method: "MCP messages (protocol)",
   mcp_client: "MCP connections (apps)",
   mcp_protocol: "MCP requests by protocol version",
+  mcp_accept: "MCP POSTs by Accept header",
 }
 
 const isContentKind = (kind: string) => kind === "guide_read" || kind === "glossary_read"
@@ -105,6 +106,11 @@ async function main() {
   if (protocols.length > 0) {
     console.log("  requests by protocol version (2026-07-28 = apps with no handshake, so no app name):")
     for (const k of protocols) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
+  }
+  const accepts = usage.topKeys.filter((k) => k.kind === "mcp_accept")
+  if (accepts.length > 0) {
+    console.log("  POSTs by Accept header (anything but json+sse gets a 406):")
+    for (const k of accepts) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
   }
 
   section("Daily total (demand, excludes MCP protocol traffic)")

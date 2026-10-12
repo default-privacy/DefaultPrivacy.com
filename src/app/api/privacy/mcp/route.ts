@@ -7,7 +7,7 @@
 import { createMcpHandler } from "mcp-handler"
 
 import { withRateLimit } from "@/lib/api-rate-limit"
-import { withBatchLimit } from "@/mcp-server/batch-limit"
+import { withMcpGate } from "@/mcp-server/gate"
 import { configureServer, SERVER_INFO, SERVER_INSTRUCTIONS } from "@/mcp-server/server"
 
 export const dynamic = "force-dynamic"
@@ -27,6 +27,6 @@ const handler = createMcpHandler(
   },
 )
 
-const rateLimited = withRateLimit(withBatchLimit(handler), { resource: "/api/privacy/mcp", tier: "developer" })
+const rateLimited = withRateLimit(withMcpGate(handler), { resource: "/api/privacy/mcp", tier: "developer" })
 
 export { rateLimited as GET, rateLimited as POST, rateLimited as DELETE }

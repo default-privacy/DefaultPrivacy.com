@@ -16,17 +16,3 @@ export function oversizedBatch(body: unknown): Response | null {
   )
 }
 
-/** Wrap a route handler so POSTs with an oversized batch are refused. */
-export function withBatchLimit(handler: (request: Request) => Promise<Response>) {
-  return async (request: Request): Promise<Response> => {
-    if (request.method === "POST") {
-      try {
-        const refused = oversizedBatch(await request.clone().json())
-        if (refused) return refused
-      } catch {
-        // Unparseable body: the transport answers it with a JSON-RPC parse error.
-      }
-    }
-    return handler(request)
-  }
-}

@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">AI assistant connector</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
-                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), and of which MCP protocol version each request uses. Lookups aren&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
+                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), of which MCP protocol version each request uses, and of which response formats a request says it accepts. Lookups aren&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
