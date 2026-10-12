@@ -1,7 +1,7 @@
 ---
 term: "Social Credit System"
 slug: "social-credit-system"
-definition: "A system that assigns citizens a score based on their behavior, determining their access to services, travel, loans, and opportunities — currently implemented in China."
+definition: "A set of government and commercial systems in China that reward or restrict people and companies based on their behavior and compliance records."
 category: "Emerging Threats"
 relatedTerms:
   - "surveillance-state"
@@ -14,9 +14,6 @@ China's social credit system is the most comprehensive behavior-monitoring syste
 
 ## How It Works in China
 
-- Citizens receive a score based on financial behavior, social behavior, and political compliance
-- Low scores restrict access to: flights, trains, hotels, schools, loans, jobs
-- Score is affected by: late bill payments, traffic violations, social media posts, associating with low-score individuals
 - Corporate social credit also scores businesses
 
 ## Emerging Elsewhere

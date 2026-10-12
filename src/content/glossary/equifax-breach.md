@@ -57,6 +57,7 @@ Unlike a retailer breach where you can change a password, you **cannot change yo
 
 1. **Freeze your credit** at all three bureaus (Equifax, Experian, TransUnion) — it's free
 2. **Monitor your credit reports** at AnnualCreditReport.com
-3. **Use identity theft protection** if you were affected
-4. **Assume your SSN is compromised** and act accordingly
-5. **Remove your data from brokers** — services like those in the [tools directory](/directory) can help
+3. **Assume your SSN is compromised** and act accordingly
+4. **Remove your data from brokers** that sell it
+
+For how to freeze, see [How to freeze your credit](/guides/how-to-freeze-your-credit).

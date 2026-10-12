@@ -54,10 +54,3 @@ Your phone carrier knows your **real identity** (verified by SSN and ID), your *
 
 ### SIM Swap Exposure
 Breached T-Mobile data has been used to facilitate **SIM swap attacks**, where criminals port your phone number to steal two-factor authentication codes.
-
-## Regulatory Response
-
-- **$500 million FCC settlement (2024)** — $150 million fine + $350 million for security improvements
-- Required to implement zero trust architecture
-- Required CISO with direct board reporting
-- This was the **largest data security penalty in FCC history**

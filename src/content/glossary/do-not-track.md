@@ -29,9 +29,6 @@ Do Not Track was a well-intentioned privacy signal that became a failure in prac
 ## What Replaced It
 
 - **Global Privacy Control (GPC)**: A newer signal with legal backing under CCPA/GDPR
-- **Browser-level blocking**: Brave, Firefox, and Safari block trackers directly
 - **Regulations**: GDPR and CCPA provide legal enforcement that DNT never had
 
-## Recommendation
-
-Leave DNT off (it only helps fingerprinters). Use a browser that blocks trackers directly instead.
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

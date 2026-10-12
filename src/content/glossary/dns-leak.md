@@ -54,11 +54,6 @@ A DNS leak is like using a VPN for your packages but writing the destination add
 
 ## Testing for DNS Leaks
 
-### Online Tools
-- dnsleaktest.com
-- browserleaks.com/dns
-- ipleak.net
-
 ### What to Look For
 - DNS servers should be your VPN provider's
 - No ISP DNS servers visible
@@ -67,7 +62,6 @@ A DNS leak is like using a VPN for your packages but writing the destination add
 ## Preventing DNS Leaks
 
 ### VPN-Level
-- Use VPN with built-in leak protection
 - Enable "DNS leak protection" setting
 - Use VPN's DNS servers
 
@@ -79,7 +73,6 @@ A DNS leak is like using a VPN for your packages but writing the destination add
 ### Alternative DNS
 - Use encrypted DNS (DoH, DoT)
 - Configure to route through VPN
-- NextDNS, Cloudflare, Quad9
 
 ## Why DNS Leaks Matter
 
@@ -92,4 +85,6 @@ A DNS leak is like using a VPN for your packages but writing the destination add
 - Defeats purpose of VPN/Tor
 - Links activity to your connection
 - Correlation attacks possible
+
+For what to use, see [Private DNS and Ad Blocking](/guides/private-dns-and-ad-blocking).
 

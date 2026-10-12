@@ -62,14 +62,9 @@ PGP has critics who argue:
 
 ## Practical Usage
 
-### Easy Path
-- Use email providers with built-in PGP (ProtonMail, Tutanota)
-- Keys managed automatically
-- No manual setup required
-
 ### Advanced Path
 - Install GPG (GnuPG)
 - Generate key pair
 - Exchange public keys with contacts
-- Use with email client (Thunderbird + Enigmail)
 
+For what to use, see [Escape Gmail: encrypted email and aliases](/stacks/escape-gmail-encrypted-email-aliases).

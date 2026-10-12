@@ -35,7 +35,6 @@ The question isn't whether facial recognition technology works — it's whether 
 | **Portland, OR** | 2020 | Both government and private use banned |
 | **King County, WA** | 2021 | Government agencies banned |
 | **New York City** | 2021 | Banned in residential buildings |
-| **Virginia** | 2021 | Police banned without legislative approval |
 | **Vermont** | 2020 | Law enforcement banned |
 | **Massachusetts** | 2020 | Moratorium on government use |
 

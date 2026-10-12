@@ -23,7 +23,6 @@ The Kids Online Safety Act (KOSA) is driven by legitimate concern for children's
 ## What It Proposes
 
 - **Duty of care**: Platforms must prevent and mitigate harms to minors
-- **Age verification**: Platforms must verify user ages (requiring ID or biometric checks)
 - **Default privacy for minors**: Strongest privacy settings by default for users under 17
 - **Parental tools**: Parents can supervise children's online activity
 - **FTC enforcement**: Government agency determines what content is "harmful"

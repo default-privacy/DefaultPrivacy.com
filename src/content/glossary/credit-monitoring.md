@@ -22,8 +22,7 @@ Credit monitoring won't prevent identity theft, but it helps you catch it earlyâ
 ## Free vs. Paid
 
 ### Free Options
-- **AnnualCreditReport.com**: One free report from each bureau per year
-- **Bureau monitoring**: Equifax, Experian, TransUnion offer free tiers
+- **Bureau monitoring**: The credit bureaus offer free tiers
 - **Post-breach offers**: Companies often provide free monitoring after breaches
 
 ### Paid Services
@@ -37,3 +36,5 @@ Credit monitoring won't prevent identity theft, but it helps you catch it earlyâ
 - **Credit freeze**: Locks your reportâ€”no one can open new credit without your PIN. Free, more effective prevention.
 - **Credit monitoring**: Alerts you after something happens. Doesn't prevent, just detects.
 - **Best practice**: Freeze by default, thaw when you need to apply for credit.
+
+For how to freeze, see [How to freeze your credit](/guides/how-to-freeze-your-credit).

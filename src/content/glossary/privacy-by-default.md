@@ -36,7 +36,6 @@ Real privacy by default means the **moment you start using something, you're alr
 Research consistently shows that **95%+ of users** keep default settings. Companies know this — which is why:
 - **Facebook** defaults to public profiles and broad data sharing
 - **Google** defaults to tracking location history, web activity, and ad personalization
-- **Windows** defaults to telemetry, advertising IDs, and Cortana data collection
 - **Smart TVs** default to content recognition and viewing data collection
 
 When the default is surveillance, 95% of people are surveilled. When the default is privacy, 95% of people are protected.
@@ -47,19 +46,9 @@ Every default represents a choice by the company about **whose interests come fi
 ## What Privacy by Default Looks Like
 
 ### In Software
-| Product | Default Privacy? | Why |
-|---------|-----------------|-----|
-| **Signal** | Yes | E2EE on, no data collection, disappearing messages available |
-| **ProtonMail** | Yes | E2EE on, no tracking, Swiss jurisdiction |
-| **Brave Browser** | Yes | Ad/tracker blocking on, fingerprint protection on |
-| **DuckDuckGo** | Yes | No search history, no tracking, no profiling |
-| **Firefox** (Strict mode) | Mostly | Enhanced Tracking Protection on, but not maximal by default |
-| Gmail | No | Scans emails, tracks activity, serves targeted ads |
-| Chrome | No | Sends data to Google, allows third-party tracking |
-| Instagram | No | Public by default, broad data sharing, cross-app tracking |
+Products that default to privacy turn on end-to-end encryption, tracker blocking, and minimal data collection from the first launch. Products that default to surveillance scan content, track activity, and share data broadly unless you opt out.
 
 ### In Hardware
-- **GrapheneOS** — De-Googled Android with privacy as the default state
 - **Purism Librem** — Hardware kill switches for camera, microphone, and WiFi
 - **Apple** (partial) — Better than most, but still collects significant telemetry
 
@@ -96,9 +85,11 @@ The internet was built on openness. It needs to be **rebuilt on privacy by defau
 
 ## How to Make Privacy Your Default
 
-1. **Switch to privacy-default tools** — Signal, ProtonMail, Brave, DuckDuckGo
-2. **Remove existing exposure** — Use data broker removal services (see the [tools directory](/directory))
+1. **Switch to privacy-default tools** — ones that protect you out of the box
+2. **Remove existing exposure** — Opt out of data brokers that list you
 3. **Check your current exposure** — Run the free [website privacy scanner](/scanner)
 4. **Audit your passwords** — Use our [password strength analyzer](/password-check)
-5. **Configure your devices** — Review phone privacy settings, disable tracking, use a VPN
+5. **Configure your devices** — Review phone privacy settings, disable tracking
 6. **Support privacy by default** — Choose products and services that respect your privacy out of the box
+
+For where to start, see [Privacy: where to start](/guides/privacy-where-to-start).

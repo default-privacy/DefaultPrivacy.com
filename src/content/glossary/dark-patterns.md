@@ -64,9 +64,9 @@ Cookie consent banners are the most visible dark pattern on the web:
 
 ## How to Protect Yourself
 
-1. **Use browser extensions** that auto-reject cookies (Consent-O-Matic, uBlock Origin)
-2. **Read the opt-out text** — not just the opt-in button
-3. **Search "[company] delete account"** rather than navigating their settings
-4. **Use virtual cards** — Cancel payments to force subscription cancellation
-5. **Screenshot everything** — Dark patterns in consent flows may be legally challengeable
-6. **Report deceptive patterns** to your data protection authority (EU) or FTC (US)
+1. **Read the opt-out text** — not just the opt-in button
+2. **Search "[company] delete account"** rather than navigating their settings
+3. **Screenshot everything** — Dark patterns in consent flows may be legally challengeable
+4. **Report deceptive patterns** to your data protection authority (EU) or FTC (US)
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

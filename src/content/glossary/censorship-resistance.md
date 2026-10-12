@@ -30,7 +30,6 @@ Censorship resistance is the idea that **no single authority should be able to s
 - **Tor** — Routes traffic through volunteer relays, making it impossible to determine what you're accessing
 - **Tor Bridges** — Hidden entry points to the Tor network for users in countries that block Tor
 - **VPNs** — Tunnel traffic past ISP-level blocks
-- **Domain Fronting** — Hides the true destination of traffic behind a large CDN (like Google or Amazon)
 - **Mesh Networks** — Peer-to-peer communication that doesn't require internet infrastructure
 
 ### Data Storage
@@ -40,17 +39,15 @@ Censorship resistance is the idea that **no single authority should be able to s
 - **FreeSpeech-oriented platforms** — Nostr (decentralized social media), Mastodon (federated)
 
 ### Communication
-- **Signal** — End-to-end encrypted messaging that can't be read even if intercepted
-- **Briar** — Peer-to-peer messaging that works without internet (via Bluetooth, WiFi)
 - **SecureDrop** — Anonymous document submission for whistleblowers (used by major news organizations)
 
 ## How Governments Attempt Censorship
 
 | Method | How It Works | Circumvention |
 |--------|-------------|---------------|
-| **DNS blocking** | ISP prevents resolving domain names | Use alternative DNS (1.1.1.1, 9.9.9.9) |
-| **IP blocking** | Block traffic to specific IP addresses | VPN, Tor, domain fronting |
-| **Deep packet inspection** | Analyze traffic to identify and block protocols | Obfsproxy, Pluggable Transports, Shadowsocks |
+| **DNS blocking** | ISP prevents resolving domain names | Use an alternative DNS resolver |
+| **IP blocking** | Block traffic to specific IP addresses | VPN, Tor |
+| **Deep packet inspection** | Analyze traffic to identify and block protocols | Traffic obfuscation and pluggable transports |
 | **App store removal** | Remove VPN and privacy apps from stores | Sideloading, direct APK download |
 | **Internet shutdown** | Cut off all connectivity | Mesh networking, satellite internet |
 | **Legal threats** | Criminalize circumvention tools | Plausible deniability tools, underground networks |
@@ -63,4 +60,6 @@ Censorship resistance isn't just for dissidents in authoritarian countries. In d
 - **Financial censorship** (de-banking, payment processor blocks) prevents certain speech
 - **Government overreach** during emergencies sets precedents that persist
 
-The right tool in place **before** you need it is the only tool that works.
+Censorship-resistance tools only work if they are in place **before** you need them.
+
+For what to use, see [Activist & Protester Digital Safety](/stacks/activist-protester-digital-safety).

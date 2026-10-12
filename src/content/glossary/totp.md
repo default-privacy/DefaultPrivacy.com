@@ -24,13 +24,8 @@ TOTP generates a new 6-digit code every 30 seconds using a shared secret and the
 - Not vulnerable to SS7 network attacks
 - Faster than waiting for a text message
 
-## Recommended Apps
-
-- **Aegis** (Android, open source)
-- **Raivo** (iOS, open source)
-- **KeePassXC** (desktop, integrated with password manager)
-- Avoid Google Authenticator — no encrypted backup until recently
-
 ## Backup
 
 Always save the setup QR code or secret key during enrollment. If you lose your phone without a backup, you'll be locked out of your accounts.
+
+For what to use, see [Move 2FA codes to a new app or phone](/guides/move-2fa-codes-to-a-new-app-or-phone).

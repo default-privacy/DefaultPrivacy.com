@@ -19,7 +19,6 @@ CoinJoin improves Bitcoin privacy by breaking the transaction graph that links s
 
 ## Implementations
 
-- **Wasabi Wallet**: Automated CoinJoin with coordinator
 - **JoinMarket**: Decentralized CoinJoin marketplace
 - **Whirlpool (Samourai)**: Structured CoinJoin protocol (service seized in 2024)
 

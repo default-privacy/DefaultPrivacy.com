@@ -24,12 +24,8 @@ Sideloading lets you install apps without going through Google Play or the Apple
 - Auto-updates may not be available
 - Sideloaded apps might not receive security patches promptly
 
-## Recommended Sources
-
-- **F-Droid**: Open-source app store for Android (all apps are FOSS)
-- **GitHub Releases**: Direct downloads from project repositories
-- **Developer websites**: For apps like Signal, Brave, etc.
-
 ## On iOS
 
 Apple heavily restricts sideloading. The EU Digital Markets Act now requires Apple to allow alternative app stores in the EU.
+
+For what to use, see [Apps without the Google Play Store](/guides/apps-without-the-google-play-store).

@@ -48,13 +48,13 @@ Privacy regulations (GDPR, CCPA) were meant to give people control over their da
 ## Breaking Through Consent Fatigue
 
 ### Technology Solutions
-1. **Use a consent auto-manager** — Browser extensions like Consent-O-Matic automatically reject cookies
-2. **Use Brave Browser** — Blocks consent banners entirely by blocking the underlying trackers
-3. **Install uBlock Origin** — Filter lists can block cookie consent scripts
-4. **Use Global Privacy Control (GPC)** — A browser signal that legally communicates your preference to opt out
-5. **Use DNS-level blocking** — NextDNS or Pi-hole block consent management platforms at the network level
+1. **Use a consent auto-manager** — Browser extensions exist that automatically reject cookies
+2. **Use Global Privacy Control (GPC)** — A browser signal that legally communicates your preference to opt out
+3. **Use content blocking** — Filter lists and network-level blocking can stop consent scripts from loading
 
 ### Behavioral Solutions
 1. **Adopt a default posture** — Always reject, never accept (if you're going to be mindless about it, be mindlessly private)
 2. **Reduce the number of sites you visit** — Fewer sites = fewer consent decisions
 3. **Use privacy-first services** — Services that don't require data collection don't need consent banners
+
+For what to use, see [private DNS and ad blocking](/guides/private-dns-and-ad-blocking).

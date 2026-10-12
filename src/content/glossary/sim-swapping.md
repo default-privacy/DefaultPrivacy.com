@@ -33,4 +33,6 @@ SIM swapping is one of the most effective attacks against SMS-based two-factor a
 2. **Add a PIN/passphrase** to your carrier account
 3. **Port freeze**: Ask your carrier to prevent number transfers
 4. **Don't share your phone number** publicly when possible
-5. **Use a separate number** for sensitive accounts (VoIP or MySudo)
+5. **Use a separate number** for sensitive accounts
+
+For how to set one up, see [Get a Second Phone Number](/guides/get-a-second-phone-number).

@@ -27,13 +27,4 @@ KYC regulations are the primary barrier to financial privacy, requiring identity
 - Data shared with government agencies on request
 - KYC data from exchanges has been leaked in breaches (Ledger, Gemini)
 
-## Avoiding KYC
-
-- **Privacy coins** (e.g. Monero): Private by default
-- **DEXs**: Trade without accounts or identity
-- **Peer-to-peer**: Bisq, LocalMonero (now closed), HodlHodl
-- **ATMs**: Some Bitcoin ATMs have low or no KYC for small amounts
-
-## KYCnot.me
-
-A directory of services that don't require KYC.
+For what to use, see [No-KYC Crypto Opsec Stack](/stacks/no-kyc-crypto-opsec-stack).

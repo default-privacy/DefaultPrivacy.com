@@ -58,9 +58,10 @@ Any communication captured today that used RSA or ECC for key exchange could pot
 
 ## What You Can Do
 
-1. **Use post-quantum messaging** — Signal and iMessage already have PQ key exchange
-2. **Use AES-256** for local file encryption — symmetric encryption is quantum-resistant
-3. **Migrate to post-quantum TLS** as it becomes available
-4. **Assume intercepted communications will be readable** in 10-20 years — act accordingly for long-lived secrets
-5. **Use forward secrecy** — Protocols that generate new keys per session limit what one compromised key reveals
-6. **Support rapid PQ migration** in the tools and services you use
+1. **Use AES-256** for local file encryption — symmetric encryption is quantum-resistant
+2. **Migrate to post-quantum TLS** as it becomes available
+3. **Assume intercepted communications will be readable** in 10-20 years — act accordingly for long-lived secrets
+4. **Use forward secrecy** — Protocols that generate new keys per session limit what one compromised key reveals
+5. **Support rapid PQ migration** in the tools and services you use
+
+For what to use, see [Secure messaging stack](/stacks/secure-messaging-stack).

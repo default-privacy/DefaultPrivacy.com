@@ -62,10 +62,10 @@ A government or corporation with access to your financial data knows you better 
 ## Building Financial Privacy
 
 1. **Use cash** for everyday purchases — it's still the simplest privacy tool
-2. **Hold privacy cryptocurrencies** — Monero (XMR) for digital transactions
-3. **Minimize financial apps** — Each one is another surveillance point
-4. **Separate everyday spending from your name where you can** — virtual cards and cash leave a shorter trail than a card in your own name on every purchase
-5. **Diversify banking** — Multiple institutions reduce the completeness of any single profile
-6. **Use prepaid cards** purchased with cash for online purchases
-7. **Avoid loyalty programs** — They exist to track your purchases
-8. **Read the fine print** — Understand what financial data is shared and with whom
+2. **Minimize financial apps** — Each one is another surveillance point
+3. **Separate everyday spending from your name where you can** — virtual cards and cash leave a shorter trail than a card in your own name on every purchase
+4. **Diversify banking** — Multiple institutions reduce the completeness of any single profile
+5. **Avoid loyalty programs** — They exist to track your purchases
+6. **Read the fine print** — Understand what financial data is shared and with whom
+
+For more, see [Private banking is mostly dead](/guides/private-banking-is-mostly-dead).

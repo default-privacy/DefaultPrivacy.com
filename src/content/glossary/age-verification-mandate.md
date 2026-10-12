@@ -26,7 +26,6 @@ Age verification mandates are one of the most significant threats to anonymous i
 - **UK Online Safety Act**: Requires age verification for sites with content "harmful to children"
 - **EU Digital Services Act**: Age-appropriate design requirements
 - **France**: Mandatory age verification for adult content sites (2024)
-- **Australia**: Announced plans to ban social media for under-16s (2024)
 - **US States**: Louisiana, Texas, Utah, Virginia, and others requiring ID for adult content; broader social media age bills advancing
 - **India**: Proposed age-gating for social media
 

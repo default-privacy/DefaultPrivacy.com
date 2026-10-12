@@ -41,7 +41,8 @@ Nation-state attackers are the most capable adversaries. They have budgets, tale
 ## Defense for Individuals
 
 - Assume sophisticated surveillance if you're a target
-- Use strongest encryption (Signal, Tor)
 - Compartmentalize identities and devices
 - Physical security—devices can be seized or tampered with
 - Operational security: assume metadata is compromised
+
+For what to use, see [the journalist privacy stack](/stacks/journalist-privacy-stack).

@@ -56,7 +56,6 @@ Every user has two mathematically linked keys:
 ## The Math Behind It
 
 Public key crypto relies on "trapdoor functions"—easy to compute one way, nearly impossible to reverse:
-- **RSA**: Factoring large prime numbers
 - **ECC**: Elliptic curve discrete logarithm
 - **Diffie-Hellman**: Discrete logarithm problem
 

@@ -28,12 +28,8 @@ A Faraday cage blocks all radio frequency signals — cellular, WiFi, Bluetooth,
 - Transporting devices you don't want tracked
 - Storing devices you want truly offline
 
-## Products
-
-- **Silent Pocket**: Phone sleeves and bags
-- **Mission Darkness**: Law enforcement grade bags
-- DIY: Multiple layers of aluminum foil (less reliable)
-
 ## Important
 
 Your phone will appear to be "off" to the carrier when in a Faraday bag. Sudden disappearance and reappearance patterns could themselves be a signal. For best results, power off the device before placing it in the bag.
+
+For what to use, see [the Faraday location privacy kit](/stacks/faraday-location-privacy-kit).

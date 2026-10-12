@@ -29,8 +29,9 @@ Even without reading message content, metadata shows:
 
 ## Protection
 
-1. Use Signal with sealed sender (hides sender metadata from the server)
-2. Use Tor (hides connection metadata from your ISP)
-3. Use a VPN (hides DNS and traffic metadata from your ISP)
-4. Minimize phone calls and SMS (metadata is always logged by carriers)
-5. Be aware that even encrypted messaging reveals timing and frequency patterns
+1. Use messaging with sealed sender, which hides sender metadata from the server
+2. Use tools that hide connection metadata from your ISP
+3. Minimize phone calls and SMS (metadata is always logged by carriers)
+4. Be aware that even encrypted messaging reveals timing and frequency patterns
+
+For what to use, see [the secure messaging stack](/stacks/secure-messaging-stack).

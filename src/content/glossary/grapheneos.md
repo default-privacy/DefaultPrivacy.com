@@ -8,7 +8,7 @@ relatedTerms:
   - "mobile-ad-id"
 ---
 
-GrapheneOS is the gold standard for privacy-focused mobile operating systems.
+GrapheneOS is a privacy-focused mobile operating system based on Android.
 
 ## Key Features
 
@@ -29,8 +29,4 @@ Only Google Pixel phones (they have the best hardware security features: Titan M
 - Banking apps may detect the modified OS
 - Requires a Pixel phone (limited hardware choice)
 
-## Compared to Other Privacy ROMs
-
-- **CalyxOS**: Easier to use, includes microG (Google compatibility layer)
-- **LineageOS**: Wider device support, fewer privacy features
-- **/e/OS**: Focus on de-Googling, less security-focused than GrapheneOS
+For how it compares, see [GrapheneOS vs CalyxOS](/guides/grapheneos-vs-calyxos).

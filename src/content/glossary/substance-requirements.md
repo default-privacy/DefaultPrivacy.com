@@ -27,7 +27,6 @@ Most countries require **183 days** of physical presence per year to claim tax r
 |---------|--------------|----------------------|
 | UAE | 90-183 days | Emirates ID, bank account, lease |
 | Panama | 0 formal days | But immigration expects genuine ties |
-| Portugal | 183 days (NHR program) | Registration, NIF number, housing |
 | Georgia | 183 days | Simple registration process |
 | Paraguay | 0 formal, but 183 for tax cert | Cedula, local address |
 

@@ -47,7 +47,7 @@ The Tornado Cash sanctions represent the most aggressive government action again
 ### Legal Challenge
 - **Coin Center** and six individuals challenged the sanctions in court
 - In November 2024, a federal appeals court ruled that **immutable smart contracts are not "property"** that can be sanctioned under IEEPA
-- The legal battle continues but the ruling was a significant win for code-as-speech arguments
+- The ruling was a significant win for code-as-speech arguments
 
 ## Why It Matters
 

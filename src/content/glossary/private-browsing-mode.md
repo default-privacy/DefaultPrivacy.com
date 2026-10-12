@@ -30,11 +30,10 @@ Private/incognito mode is widely misunderstood. It protects you from other users
 
 ## Common Misconception
 
-Google settled a $5 billion lawsuit in 2024 over tracking users in Chrome's incognito mode. The name itself misleads users into thinking they're invisible.
+The name itself misleads users into thinking they're invisible.
 
 ## For Real Privacy
 
-- Use Tor Browser for anonymity
-- Use a VPN to hide traffic from your ISP
-- Use Brave or Firefox for daily browsing with tracking protection
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).
+
 - Private mode is useful for signing into a second account or browsing on a shared computer — nothing more

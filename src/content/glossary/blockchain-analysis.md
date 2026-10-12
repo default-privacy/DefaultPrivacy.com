@@ -21,11 +21,8 @@ Blockchain analysis de-anonymizes users of transparent blockchains like Bitcoin 
 - **Dust attacks**: Sending tiny amounts to addresses to link them
 - **Timing analysis**: Correlating transactions with real-world events
 
-## Companies
-
-- Chainalysis, Elliptic, CipherTrace — used by law enforcement worldwide
-- These firms have de-anonymized billions of dollars in Bitcoin transactions
-
 ## Defense
 
-Use privacy coins such as Monero, where transactions are private by default. On transparent chains, CoinJoin and mixers provide limited protection but are increasingly scrutinized.
+On transparent chains, CoinJoin and mixers provide limited protection but are increasingly scrutinized.
+
+For what to use, see [No-KYC Crypto Opsec Stack](/stacks/no-kyc-crypto-opsec-stack).

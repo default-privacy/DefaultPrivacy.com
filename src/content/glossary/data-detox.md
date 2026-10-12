@@ -34,7 +34,7 @@ A data detox is a structured cleanup of your digital life — reducing the amoun
 - [ ] Search your email in Have I Been Pwned
 
 ### Week 2: Delete and Remove
-- [ ] Delete unused accounts (use JustDeleteMe for instructions per service)
+- [ ] Delete unused accounts
 - [ ] Opt out of major data brokers (or use a removal service)
 - [ ] Delete old social media posts, photos, and comments
 - [ ] Remove personal info from LinkedIn, Facebook, and other profiles
@@ -47,12 +47,8 @@ A data detox is a structured cleanup of your digital life — reducing the amoun
 - [ ] Review app permissions on your phone
 - [ ] Unsubscribe from mailing lists
 - [ ] Review and revoke third-party app connections (Google, Facebook, etc.)
-- [ ] Switch to privacy-respecting alternatives for key services
 
 ### Week 4: Build New Habits
-- [ ] Use a VPN for daily browsing
-- [ ] Use a privacy-focused browser (Brave, Firefox with uBlock)
-- [ ] Use a private search engine (Brave Search, DuckDuckGo)
 - [ ] Limit what you share on social media going forward
 - [ ] Use cash or privacy-respecting payment methods when possible
 - [ ] Set calendar reminders for quarterly privacy check-ups
@@ -71,10 +67,10 @@ Your digital footprint compounds over time. Every old account, every data broker
 
 - **Have I Been Pwned**: Check for breach exposure
 - **JustDeleteMe**: Instructions for deleting accounts on hundreds of services
-- **Data broker removal services**: compare vetted tools in the [tools directory](/directory) (e.g. Optery, DeleteMe, others) or run manual opt-outs
 - **Browser exposure check**: See what your browser reveals about you
-- **Password manager**: Generate and store unique passwords (Bitwarden, KeePassXC)
 
 ## Make It a Habit
 
 A data detox isn't one-and-done. New data accumulates constantly. Schedule quarterly reviews to repeat the discovery phase and clean up anything new.
+
+For what to use, see [Privacy: Where to Start](/guides/privacy-where-to-start).

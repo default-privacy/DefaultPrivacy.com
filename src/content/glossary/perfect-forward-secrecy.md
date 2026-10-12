@@ -35,7 +35,6 @@ An attacker could:
 ### With PFS
 - Each session's keys are unique and ephemeral
 - No single key compromise unlocks historical data
-- "Harvest now, decrypt later" attacks become ineffective
 
 ## Where to Look for PFS
 

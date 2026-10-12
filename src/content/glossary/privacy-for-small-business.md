@@ -40,7 +40,7 @@ This information is then scraped by data brokers, people-search sites, and anyon
 3. **Domain privacy** — the registration should not print your name and home address
 
 ### Contact Information
-1. **Business phone** — Google Voice, MySudo, or VoIP number (not your personal cell)
+1. **Business phone** — a separate number (not your personal cell)
 2. **Business email** — Custom domain email, not personal Gmail
 3. **Business address** — a mail receiving address, not the house
 4. **Business website** — Private domain registration (WHOIS privacy)
@@ -67,5 +67,7 @@ As a business, you're also responsible for your customers' privacy:
 2. **Get a virtual business address** — Stop using your home address
 3. **Set up a business phone number** — Stop giving out your personal cell
 4. **Register domains privately** — WHOIS privacy on all business domains
-5. **Use encrypted communication** — Signal for sensitive business discussions
+5. **Use encrypted communication** for sensitive business discussions
 6. **Review public records** — Search your state business registry and data broker sites for your information
+
+For what to use, see [Small business owner privacy stack](/stacks/small-business-owner-privacy-stack).

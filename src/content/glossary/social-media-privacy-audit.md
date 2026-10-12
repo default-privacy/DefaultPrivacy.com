@@ -36,7 +36,6 @@ A social media privacy audit reveals what the world can see about you — and it
 - Who can see your posts? (Friends, not Public)
 - Who can see your friends list? (Only Me)
 - Who can look you up by email/phone? (Friends or Only Me)
-- Face recognition: Off
 - Search engine indexing: Off
 
 **Instagram:**

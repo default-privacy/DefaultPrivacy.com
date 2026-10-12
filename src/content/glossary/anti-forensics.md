@@ -26,8 +26,4 @@ Anti-forensics aims to make digital evidence unrecoverable or unreliable.
 - Ensuring personal data is truly deleted
 - Journalists protecting source identities
 
-## Tools
-
-- **BleachBit**: Secure file deletion and system cleaning
-- **Tails**: Leaves no trace on the host computer
-- **VeraCrypt**: Encrypted containers with plausible deniability
+For what to use, see [metadata and digital footprint cleanup](/stacks/metadata-digital-footprint-cleanup).

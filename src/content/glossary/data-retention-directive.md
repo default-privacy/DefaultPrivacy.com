@@ -28,6 +28,7 @@ Data retention laws force companies to keep records of all communications metada
 
 ## Protection
 
-- Use encrypted messaging (Signal) — metadata is minimized
-- Use a VPN — ISP only sees VPN connection, not actual destinations
+- Encrypted messaging minimizes the metadata a provider can see
 - Sealed sender features protect against even the messaging provider seeing metadata
+
+For what to use, see [the secure messaging stack](/stacks/secure-messaging-stack).

@@ -36,4 +36,4 @@ Privacy advocates argue that any mandatory scanning creates a surveillance capab
 
 ## Apple's 2021 Proposal
 
-Apple proposed scanning iCloud Photos for CSAM hashes on-device before upload. After backlash from security researchers and civil liberties groups, the company paused the plan. The episode illustrated the tension: even "privacy-preserving" scanning (hashing on-device, only reporting matches) was seen as a dangerous precedent that could be expanded or exploited.
+Apple proposed scanning iCloud Photos for CSAM hashes on-device before upload. The proposal illustrated the tension: even "privacy-preserving" scanning (hashing on-device, only reporting matches) was seen as a dangerous precedent that could be expanded or exploited.

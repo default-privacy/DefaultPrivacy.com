@@ -52,7 +52,6 @@ Eve sees A and B but can't compute 's' without 'a' or 'b'.
 ### Kyber (Post-Quantum)
 - Lattice-based key exchange
 - Resistant to quantum computers
-- Being standardized by NIST
 
 ## Key Exchange in Practice
 
@@ -72,5 +71,4 @@ Eve sees A and B but can't compute 's' without 'a' or 'b'.
 Ephemeral key exchange (new keys each session) means:
 - Past communications stay secure even if long-term keys leak
 - No single point of compromise
-- "Harvest now, decrypt later" attacks fail
 

@@ -65,7 +65,7 @@ Children are the **most vulnerable** population online — they generate data th
 
 ### Technical Controls
 1. **Set up parental controls** — Screen time limits, content filtering, app restrictions
-2. **Use privacy-focused services** — DuckDuckGo for search, Signal for messaging
+2. **Use privacy-focused services** — private search and encrypted messaging
 3. **Review app permissions** — Remove unnecessary camera, microphone, and location access
 4. **Create child accounts** with limited privileges rather than using adult accounts
 5. **Disable ad tracking** on all devices
@@ -79,6 +79,7 @@ Children are the **most vulnerable** population online — they generate data th
 
 ### Legal Protections
 - **COPPA**: Requires parental consent for data collection from children under 13
-- **Kids Online Safety Act**: Requires platforms to provide safety settings for minors
 - **GDPR**: Requires parental consent for processing children's data (age varies by country, 13-16)
 - **Report exploitation** to NCMEC CyberTipline (missingkids.org) and FBI
+
+For what to use, see [Privacy: Where to Start](/guides/privacy-where-to-start).

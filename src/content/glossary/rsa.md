@@ -1,7 +1,7 @@
 ---
 term: "RSA"
 slug: "rsa"
-definition: "One of the first public-key cryptosystems, RSA is based on the mathematical difficulty of factoring large prime numbers. Named after its inventors Rivest, Shamir, and Adleman, it's still widely used for key exchange and digital signatures."
+definition: "One of the first public-key cryptosystems, RSA is based on a hard mathematical problem. Named after its inventors Rivest, Shamir, and Adleman, it's still widely used for key exchange and digital signatures."
 category: "Encryption"
 relatedTerms:
   - "asymmetric-encryption"

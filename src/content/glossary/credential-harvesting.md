@@ -33,4 +33,5 @@ Credential harvesting is the first step in most account takeover attacks. Attack
 2. Use a password manager to generate and store passwords
 3. Enable FIDO2/WebAuthn (phishing-proof)
 4. Enable TOTP 2FA where FIDO2 isn't available
-5. Monitor Have I Been Pwned for your email addresses
+
+For what to use, see [Choosing a Password Manager](/guides/how-to-choose-a-password-manager).

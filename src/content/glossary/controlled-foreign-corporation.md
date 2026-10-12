@@ -35,15 +35,12 @@ Even if you don't take any money out of the company, the following income is tax
 - **Passive income**: Interest, dividends, rents, royalties
 - **Foreign base company sales income**: Buy from related party, sell to third party (or vice versa), where the goods don't touch the CFC's country
 - **Foreign base company services income**: Services performed outside the CFC's country for a related party
-- **GILTI** (Global Intangible Low-Taxed Income): Essentially all active business income above a 10% return on tangible assets
 
 ## GILTI: The Big One for Nomads
 
 Since the 2017 Tax Cuts and Jobs Act, **GILTI** captures most CFC income that Subpart F didn't already catch. For individual US shareholders:
 
 - GILTI is taxed at **ordinary income rates** (up to 37%)
-- The Section 250 deduction (50% of GILTI) is only available to **C corporations**, not individuals
-- This means a nomad with a foreign company pays full US tax rates on GILTI — often making the foreign company tax-neutral or even tax-negative compared to just operating as a sole proprietor
 
 ## The Nomad's Dilemma
 

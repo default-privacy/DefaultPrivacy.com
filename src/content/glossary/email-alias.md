@@ -17,17 +17,11 @@ Email aliases let you give every service a unique address, so you can identify w
 - If one alias gets spam, you know who shared it
 - Disable the alias without affecting your real address
 
-## Services
-
-- **SimpleLogin** (Proton): Open source, custom domains, PGP encryption
-- **addy.io**: Open source, generous free tier
-- **Firefox Relay**: Mozilla's aliasing service
-- **Apple Hide My Email**: Built into iCloud+
-- **Proton Pass**: Includes email aliases with password manager
-
 ## Best Practices
 
 - Use a unique alias for every online account
 - Use a descriptive format: servicename@yourdomain.com
 - Disable aliases that start receiving spam
 - Keep a few "permanent" aliases for important contacts
+
+For what to use, see [Email aliases: SimpleLogin vs addy.io](/guides/email-aliases-simplelogin-vs-addy).

@@ -35,7 +35,6 @@ Whether you're escaping a stalker, protecting yourself from doxxing, transitioni
 
 ### Inventory Your Accounts
 - Check your email for account confirmation messages
-- Use sites like **JustDeleteMe** to find deletion links
 - Check password managers for saved logins
 - Search for accounts linked to your email and phone number
 
@@ -48,8 +47,7 @@ Whether you're escaping a stalker, protecting yourself from doxxing, transitioni
 
 ### Data Broker Removal
 - **Option A (DIY)**: Visit each broker's opt-out page individually (time-intensive, ongoing)
-- **Option B (Service)**: Use automated removal services that handle 635+ sites — see the [tools directory](/directory)
-- **Option C (Premium)**: Full digital erasure for high-risk situations — specialized erasure services go further than broker opt-outs.
+- **Option B (Premium)**: Full digital erasure for high-risk situations — specialized erasure services go further than broker opt-outs.
 
 ### Delete Old Accounts
 - Social media: Facebook, Instagram, Twitter/X, LinkedIn, TikTok, Reddit
@@ -66,14 +64,7 @@ Whether you're escaping a stalker, protecting yourself from doxxing, transitioni
 ## Phase 3: Establish Private Alternatives (Weeks 4-8)
 
 ### Communication
-- **Email**: ProtonMail or Tuta (no phone number required, encrypted)
-- **Messaging**: Signal (register with a secondary number)
 - **Phone**: Virtual phone number or prepaid SIM
-
-### Online Presence
-- **Browser**: Firefox with strict privacy settings, or Brave
-- **Search**: Brave Search, DuckDuckGo, or Startpage
-- **VPN**: Always-on for masking IP address and location
 
 ### Financial
 - Virtual payment cards for online purchases
@@ -86,3 +77,5 @@ Whether you're escaping a stalker, protecting yourself from doxxing, transitioni
 - **Minimal information sharing** — Give only what's legally required
 - **Regular security audits** — Check for new exposures quarterly
 - **Separate identities** — Different email/phone for different life contexts
+
+For what to use, see [Delete Yourself from the Internet](/stacks/delete-yourself-from-the-internet).

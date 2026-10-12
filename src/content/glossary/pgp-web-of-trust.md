@@ -26,12 +26,8 @@ The Web of Trust is PGP's alternative to the Certificate Authority model used by
 - Email addresses in public keys are harvestable
 - The web of trust graph itself reveals social connections (metadata)
 
-## Modern Alternatives
-
-- **Keybase**: Linked social media proofs for key verification (acquired by Zoom)
-- **keys.openpgp.org**: Privacy-respecting key server (email verification)
-- **Signal**: Automatic key management — users never interact with keys directly
-
 ## Current Status
 
 The PGP Web of Trust is largely abandoned. Modern encrypted messaging (Signal) has shown that usable encryption doesn't require users to manage keys manually.
+
+For what to use, see [the secure messaging stack](/stacks/secure-messaging-stack).

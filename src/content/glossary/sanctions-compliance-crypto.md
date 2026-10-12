@@ -29,7 +29,6 @@ Sanctions compliance is the mechanism through which governments are extending fi
 ### OFAC's Role
 - The **Office of Foreign Assets Control** (US Treasury) maintains the **SDN List** (Specially Designated Nationals)
 - US persons are prohibited from transacting with anyone/anything on the list
-- OFAC has added **cryptocurrency addresses** and protocols (Tornado Cash) to the SDN list
 - Exchanges must screen transactions against the SDN list
 
 ### Exchange Compliance Requirements

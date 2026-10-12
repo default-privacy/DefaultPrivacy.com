@@ -1,7 +1,7 @@
 ---
 term: "Blockchain Surveillance"
 slug: "blockchain-surveillance"
-definition: "The practice of analyzing public blockchain transactions to identify, track, and de-anonymize cryptocurrency users — conducted by companies like Chainalysis, Elliptic, and CipherTrace that sell surveillance tools to governments, law enforcement, and financial institutions."
+definition: "The practice of analyzing public blockchain transactions to identify, track, and de-anonymize cryptocurrency users — conducted by companies that sell surveillance tools to governments, law enforcement, and financial institutions."
 category: "Blockchain"
 relatedTerms:
   - "blockchain-analysis"
@@ -46,7 +46,6 @@ Bitcoin isn't anonymous — it's a **permanent public record** of every transact
 |---------|---------|---------------------|-------|
 | **Chainalysis** | 2014 | IRS, FBI, DEA, EUROPOL | Largest — covers 15+ blockchains |
 | **Elliptic** | 2013 | UK NCA, US government | Risk assessment, compliance |
-| **CipherTrace** (now Mastercard) | 2015 | DHS, various agencies | Acquired by Mastercard in 2021 |
 | **Coinbase Analytics** | Acquired | IRS, DEA, Secret Service | Built from Neutrino acquisition |
 
 ## What They Can Determine
@@ -60,13 +59,7 @@ Bitcoin isn't anonymous — it's a **permanent public record** of every transact
 
 ## Privacy Countermeasures
 
-| Tool | Effectiveness Against Surveillance |
-|------|-----------------------------------|
-| **Privacy coins (e.g. Monero)** | High — obscure sender, receiver, and amount by default |
-| **CoinJoin** | Medium — combines transactions but can be partially analyzed |
-| **Lightning Network** | Medium — off-chain transactions aren't on the public ledger |
-| **Decentralized exchanges** | Medium — no KYC but on-chain transactions still visible |
-| **Non-custodial wallets** | Low alone — reduces exchange data but doesn't hide blockchain |
+For what to use, see [the no-KYC crypto opsec stack](/stacks/no-kyc-crypto-opsec-stack).
 
 ## The Surveillance Business Model
 

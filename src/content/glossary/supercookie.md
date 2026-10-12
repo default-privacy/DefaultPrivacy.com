@@ -62,8 +62,8 @@ Supercookies are tracking technologies designed to be nearly impossible to delet
 ## Protection
 
 1. **Use HTTPS everywhere** — Prevents ISP header injection
-2. **Use Brave or Firefox** with enhanced tracking protection — Both mitigate HSTS and ETag tracking
+2. **Use a browser with strong tracking protection** — It can mitigate HSTS and ETag tracking
 3. **Clear cache, not just cookies** — ETags live in the browser cache
-4. **Use a VPN** — Prevents ISP-level tracking injection
-5. **Use Tor Browser** — Isolates all state per-site, preventing supercookie techniques
-6. **Disable HSTS in privacy-sensitive scenarios** (advanced, breaks security for some sites)
+4. **Disable HSTS in privacy-sensitive scenarios** (advanced, breaks security for some sites)
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

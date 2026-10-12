@@ -25,7 +25,7 @@ Digital erasure goes beyond data broker opt-outs — it's a systematic effort to
 ## Levels of Service
 
 - **Self-service**: Manually opt out of data brokers, delete accounts, request search engine removal. Free but extremely time-consuming.
-- **Automated removal**: Vetted broker-removal tools (see the [tools directory](/directory); e.g. Optery, DeleteMe) handle many data-broker opt-outs. Affordable for brokers but limited versus full erasure.
+- **Automated removal**: Broker-removal services handle many data-broker opt-outs, but are limited versus full erasure.
 - **White-glove erasure**: Premium services that comprehensively address all vectors — data brokers, search results, social media, public records. Expensive but thorough.
 
 ## Ongoing Maintenance
@@ -35,3 +35,5 @@ Digital erasure is not a one-time event. Data reappears as brokers re-collect fr
 ## Prevention
 
 The best erasure strategy is prevention: privacy-protected domains, separate emails, a mail address that is not the house, and less data shared from the start.
+
+For what to use, see [Delete yourself from the internet](/stacks/delete-yourself-from-the-internet).

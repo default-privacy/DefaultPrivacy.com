@@ -70,7 +70,6 @@ Data brokers know more about you than you might think. They compile information 
 - **Acxiom**: 2.5 billion consumer records
 - **Experian**: Credit bureau + data broker
 - **LexisNexis**: Legal and public records
-- **Oracle**: Massive data marketplace
 - **Spokeo, BeenVerified**: People search sites
 
 ## Who Buys This Data
@@ -90,15 +89,15 @@ Data brokers know more about you than you might think. They compile information 
 - Often requires repeated requests
 - Data reappears from other sources
 
-### Services That Help
-- DeleteMe
-- Privacy Duck
-- Kanary
-- Manual opt-out guides
+### Ways to Remove It
+- Manual opt-outs, broker by broker
+- Paid removal services that automate repeat requests
 
 ### Key Brokers to Prioritize
 - Major people search sites
 - Credit bureaus (freeze)
 - Marketing data companies
 - Your state's specific requirements
+
+For how to do it, see [Remove your name from data brokers](/guides/remove-name-from-data-brokers).
 

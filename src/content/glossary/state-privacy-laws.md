@@ -38,7 +38,6 @@ The United States has no comprehensive federal privacy law. Instead, individual 
 - **Effective**: 2023
 - **Rights**: Access, delete, correct, opt-out of targeted advertising, profiling
 - **Enforcement**: Attorney General only (no private right of action)
-- **Notable**: First state to ban geofence warrants
 
 ### Colorado (CPA)
 - **Effective**: 2023

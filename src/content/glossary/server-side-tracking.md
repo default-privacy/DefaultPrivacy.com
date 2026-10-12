@@ -27,7 +27,6 @@ In conventional analytics and advertising setups, the website loads tracking scr
 This model has become increasingly unreliable for advertisers because:
 - Ad blockers block the scripts outright
 - Safari's Intelligent Tracking Prevention (ITP) limits third-party cookies to 7 days, then 24 hours
-- Chrome's Privacy Sandbox is deprecating third-party cookies
 - Firefox blocks most third-party tracking by default
 
 ## How Server-Side Tracking Works
@@ -75,6 +74,6 @@ Protections that still work:
 
 ## For Privacy-Conscious Website Operators
 
-If you run a website and want to respect user privacy while still understanding your traffic, the genuinely privacy-friendly path is not server-side tracking — it is a privacy-respecting analytics tool like **Plausible**, **Fathom**, or **Umami** that collects aggregated, non-personal data by design. These tools do not track individual users, do not use cookies, and do not forward data to advertising networks. They are also simpler to run than a server-side tagging infrastructure.
+If you run a website and want to respect user privacy while still understanding your traffic, the genuinely privacy-friendly path is not server-side tracking. It is a privacy-respecting analytics approach that collects aggregated, non-personal data by design, does not track individual users, does not use cookies, and does not forward data to advertising networks. This is also simpler to run than a server-side tagging infrastructure.
 
 Server-side tracking is a tool for organizations that want to improve advertising measurement and attribution. It is not a privacy solution.

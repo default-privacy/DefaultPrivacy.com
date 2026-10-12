@@ -29,24 +29,24 @@ Two-Factor Authentication (2FA) adds a second layer of security beyond your pass
 
 True 2FA requires two *different* types—two passwords isn't 2FA.
 
-## Types of 2FA (Best to Worst)
+## Types of 2FA
 
-### Hardware Security Keys (Best)
+### Hardware Security Keys
 - Physical devices like YubiKey
 - Immune to phishing
 - No batteries or connectivity needed
 
-### Authenticator Apps (Good)
-- TOTP apps like Aegis, Authy, Google Authenticator
+### Authenticator Apps
+- Time-based one-time password (TOTP) apps
 - Works offline
 - Resistant to SIM swapping
 
-### Push Notifications (Acceptable)
+### Push Notifications
 - Approve login via app notification
 - Convenient but requires internet
 - Can be susceptible to fatigue attacks
 
-### SMS Codes (Avoid if Possible)
+### SMS Codes
 - Vulnerable to SIM swapping
 - Can be intercepted
 - Better than nothing, but barely
@@ -68,4 +68,6 @@ This "SIM swapping" attack has cost victims millions.
 3. Save backup codes securely (password manager)
 4. Avoid SMS when other options exist
 5. Enable 2FA on your email first—it's the key to everything
+
+For moving codes between apps, see [Move 2FA Codes to a New App or Phone](/guides/move-2fa-codes-to-a-new-app-or-phone).
 

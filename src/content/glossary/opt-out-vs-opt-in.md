@@ -82,10 +82,12 @@ Under opt-out regimes, companies exploit the system:
 Since most of the internet uses the opt-out model, here's what you need to do:
 
 1. **Browser**: Use [Global Privacy Control (GPC)](/glossary/global-privacy-control) — a signal that automatically communicates your opt-out preference
-2. **Data brokers**: Use removal services (see the [tools directory](/directory)) to opt out of data brokers
+2. **Data brokers**: Opt out of data brokers individually, or through removal requests
 3. **Google**: Visit myactivity.google.com and disable everything (or better — [de-Google entirely](/glossary/google-alternatives))
 4. **Advertising**: Visit optout.aboutads.info and optout.networkadvertising.org
 5. **Credit bureaus**: Opt out of pre-screened offers at optoutprescreen.com
 6. **Phone**: Register at donotcall.gov, enable spam filtering
 7. **Mail**: Register at dmachoice.org to reduce junk mail
-8. **Or**: Switch to opt-in tools that don't require opting out of anything — Signal, ProtonMail, Brave, DuckDuckGo
+8. **Or**: Switch to opt-in tools that don't require opting out of anything
+
+For what to use, see [Privacy: Where to Start](/guides/privacy-where-to-start).

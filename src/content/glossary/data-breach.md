@@ -83,7 +83,6 @@ A data breach is every company's nightmare and every user's risk. When attackers
 - Be alert for phishing
 
 ### Check If You're Affected
-- haveibeenpwned.com
 - Company notifications
 - Credit monitoring alerts
 
@@ -104,3 +103,4 @@ A data breach is every company's nightmare and every user's risk. When attackers
 - Detailed requirements
 - Significant penalties
 
+For what to use, see [Was My Phone Number in a Data Breach?](/guides/was-my-phone-number-in-a-data-breach).

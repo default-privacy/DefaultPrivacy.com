@@ -26,7 +26,6 @@ Cookies were invented for legitimate purposes—remembering you between visits. 
 - Set by domains other than the site you're visiting
 - Ad networks, analytics, social widgets
 - Track you across thousands of sites
-- Being phased out by browsers (Chrome 2024+)
 
 ### Session vs. Persistent
 - **Session**: Deleted when you close the browser
@@ -42,6 +41,7 @@ Cookies were invented for legitimate purposes—remembering you between visits. 
 ## Protecting Yourself
 
 - Browser cookie settings (block third-party)
-- Privacy extensions (uBlock Origin, Privacy Badger)
 - Private/incognito mode (cookies cleared when closed)
 - Cookie consent tools often still allow tracking—read carefully
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

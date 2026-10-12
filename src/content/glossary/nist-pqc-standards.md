@@ -43,7 +43,7 @@ Most selected algorithms use lattice mathematics — a class of problems believe
 
 | System | Expected PQ Migration |
 |--------|----------------------|
-| Web browsers (TLS) | 2024-2026 (Chrome, Firefox already experimenting) |
+| Web browsers (TLS) | 2024-2026 |
 | Messaging apps | 2023-2025 (Signal, iMessage already done) |
 | VPNs | 2025-2027 |
 | Email (S/MIME, PGP) | 2026-2028 |

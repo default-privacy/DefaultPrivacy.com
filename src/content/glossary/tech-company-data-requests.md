@@ -76,8 +76,8 @@ Depending on the legal process, companies may provide:
 
 ## How to Protect Yourself
 
-1. **Use end-to-end encryption** — companies can't hand over data they can't read (Signal, ProtonMail)
+1. **Use end-to-end encryption** — companies can't hand over data they can't read
 2. **Minimize cloud storage** — data stored locally can't be subpoenaed from a tech company
-3. **Use services in privacy-friendly jurisdictions** — Swiss companies (Proton) have stronger protections
-4. **Enable Advanced Data Protection** (Apple) or similar encryption features
-5. **Assume anything in the cloud is accessible** to governments with the right paperwork
+3. **Assume anything in the cloud is accessible** to governments with the right paperwork
+
+For what to use, see [the secure messaging stack](/stacks/secure-messaging-stack).

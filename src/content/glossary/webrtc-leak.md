@@ -45,7 +45,7 @@ WebRTC needs to discover your network interfaces to establish peer connections:
 
 ### Quick Test
 1. Connect to your VPN
-2. Visit browserleaks.com/webrtc
+2. Visit a WebRTC leak test page
 3. Check if real IP appears
 
 ### What You Should See
@@ -69,9 +69,7 @@ about:config → media.peerconnection.enabled → false
 - Generally safe (limited WebRTC support)
 
 ### Browser Extensions
-- uBlock Origin (has WebRTC control)
-- WebRTC Leak Prevent
-- Disable WebRTC
+- Content blockers and dedicated extensions can control or disable WebRTC
 
 ### VPN Features
 - Many VPNs include WebRTC protection
@@ -96,3 +94,4 @@ about:config → media.peerconnection.enabled → false
 - Use separate browser for calls
 - Accept some risk vs functionality
 
+For what to use, see [private browsers compared](/guides/private-browsers-compared).

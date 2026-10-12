@@ -60,8 +60,7 @@ The law targets foreigners, but Americans are constantly swept up:
 ## What You Can Do
 
 1. **Use end-to-end encrypted communications** — Even if collected, content is unreadable without the encryption keys
-2. **Use Signal** for messaging — E2EE prevents content access even under PRISM
-3. **Use ProtonMail** for email — Swiss jurisdiction, end-to-end encrypted
-4. **Use a VPN** — Complicates Upstream collection from fiber backbone taps
-5. **Support reform organizations** — EFF, ACLU, and others challenge Section 702 in courts
-6. **Contact your representatives** — Section 702 requires periodic reauthorization; public pressure matters
+2. **Support reform organizations** — EFF, ACLU, and others challenge Section 702 in courts
+3. **Contact your representatives** — Section 702 requires periodic reauthorization; public pressure matters
+
+For what to use, see [Secure Messaging Stack](/stacks/secure-messaging-stack).

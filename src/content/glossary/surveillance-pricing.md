@@ -47,11 +47,11 @@ Surveillance pricing only works because of data collection. The solution to unfa
 
 ## How to Get Fair Prices
 
-1. **Use a VPN** — Masks your location and prevents geographic price discrimination
+1. **Mask your location** — Prevents geographic price discrimination
 2. **Use private browsing** — Clear cookies or use incognito mode when shopping
-3. **Use a non-Apple device** (or spoof user agent) — Avoids "Apple tax" markups
-4. **Compare prices logged out** — Your account history can inflate prices
-5. **Use a privacy browser** — Brave or Firefox with tracking protection
-6. **Check prices on multiple devices** — Compare what different profiles are shown
-7. **Use price tracking tools** — CamelCamelCamel, Honey (with privacy caveats)
-8. **Clear cookies between searches** — Especially for flights and hotels
+3. **Compare prices logged out** — Your account history can inflate prices
+4. **Use a privacy browser** — Browsers with tracking protection limit profiling
+5. **Check prices on multiple devices** — Compare what different profiles are shown
+6. **Clear cookies between searches** — Especially for flights and hotels
+
+For what to use, see [private browsers compared](/guides/private-browsers-compared).

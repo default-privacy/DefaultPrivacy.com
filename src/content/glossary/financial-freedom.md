@@ -21,14 +21,8 @@ Financial freedom in the privacy context isn't about wealth — it's about the a
 - **CBDCs**: Programmable money that can restrict what you buy
 - **KYC everywhere**: Identity verification required for increasingly small transactions
 
-## Tools for Financial Privacy
-
-- **Cash**: The original private payment method
-- **Monero (XMR)**: Untraceable cryptocurrency
-- **Bitcoin via CoinJoin**: Some privacy, but not default
-- **Privacy.com**: Virtual debit cards for online purchases
-- **Prepaid cards**: Purchased with cash for anonymous online payments
-
 ## The Principle
 
 Financial privacy is not about hiding illegal activity. It's about maintaining the ability to donate to causes, buy products, and support businesses without every transaction being profiled, judged, and potentially used against you.
+
+For what to use, see [the anonymous payments and financial privacy stack](/stacks/anonymous-payments-financial-privacy).

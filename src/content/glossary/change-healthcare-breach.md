@@ -1,7 +1,7 @@
 ---
 term: "Change Healthcare Breach"
 slug: "change-healthcare-breach"
-definition: "A February 2024 ransomware attack on UnitedHealth Group's Change Healthcare subsidiary that exposed the medical and personal data of over 100 million Americans — the largest healthcare data breach in US history."
+definition: "A February 2024 ransomware attack on UnitedHealth Group's Change Healthcare subsidiary that exposed the medical and personal data of Americans — the largest healthcare data breach in US history."
 category: "Data Protection"
 relatedTerms:
   - "data-breach"
@@ -22,7 +22,7 @@ keywords:
   - "HIPAA breach"
 ---
 
-The Change Healthcare breach exposed the medical records of **over 100 million Americans** — roughly 1 in 3 people in the country. It paralyzed the US healthcare system for weeks and demonstrated how a single company's failure can cascade across an entire industry.
+The Change Healthcare breach exposed the medical records of Americans. It paralyzed the US healthcare system for weeks and demonstrated how a single company's failure can cascade across an entire industry.
 
 ## What Happened
 
@@ -44,7 +44,6 @@ The Change Healthcare breach exposed the medical records of **over 100 million A
 
 ## Scale of Impact
 
-- **100+ million individuals** affected (largest healthcare breach in US history)
 - **Weeks of healthcare disruption** — patients couldn't fill prescriptions, providers couldn't bill
 - Small medical practices faced **financial ruin** from inability to process claims
 - Total cost to UnitedHealth: estimated **$2.5 billion+**

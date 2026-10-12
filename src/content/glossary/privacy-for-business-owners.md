@@ -20,13 +20,10 @@ Running a business inherently creates public records. Smart structuring minimize
 
 ## Privacy-First Business Structure
 
-1. **Wyoming Anonymous LLC**: No public ownership disclosure, low fees
-2. **Registered agent**: Professional address on all filings
-3. **Privacy domain registration**: Registrar's info instead of yours
-4. **Business mailing address**: a virtual mailbox, not the house
-5. **Separate phone number**: VoIP or MySudo business line
-6. **Privacy email**: Proton Business on your domain
-7. **EIN**: Use instead of SSN on all business documents
+1. **Registered agent**: Professional address on all filings
+2. **Privacy domain registration**: Registrar's info instead of yours
+3. **Business mailing address**: a virtual mailbox, not the house
+4. **EIN**: Use instead of SSN on all business documents
 
 ## Common Mistakes
 
@@ -34,3 +31,5 @@ Running a business inherently creates public records. Smart structuring minimize
 - Registering domain with personal WHOIS info before adding privacy
 - Using personal email for business registrations
 - Signing up for services with personal phone number
+
+For what to use, see [Small Business Owner Privacy Stack](/stacks/small-business-owner-privacy-stack).

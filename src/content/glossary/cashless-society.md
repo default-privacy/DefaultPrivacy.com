@@ -13,7 +13,6 @@ A cashless society means every transaction is tracked, recorded, and potentially
 
 ## The Trend
 
-- Sweden: Cash is less than 1% of transactions
 - Many businesses already refuse cash
 - COVID accelerated contactless/digital payments
 - Some countries are actively planning cash elimination

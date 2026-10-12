@@ -33,7 +33,3 @@ For password hashing in 2024+:
 - Memory: 64 MB minimum (more is better)
 - Iterations: 3+
 - Parallelism: Match available CPU cores
-
-## Where It's Used
-
-Bitwarden, 1Password, KeePassXC, and many modern applications use Argon2id for password hashing.

@@ -65,6 +65,7 @@ Geofence warrants flip the traditional investigation model: instead of identifyi
 1. **Disable Google Location History** — Settings → Location → Location History → Off
 2. **Disable WiFi and Bluetooth scanning** — Your phone uses these for location even with GPS off
 3. **Use airplane mode** in sensitive locations
-4. **Use a de-Googled phone** (GrapheneOS) — No Google location services
-5. **Leave your phone at home** when attending events where location data could be compromised
-6. **Support legislation** banning geofence warrants in your state
+4. **Leave your phone at home** when attending events where location data could be compromised
+5. **Support legislation** banning geofence warrants in your state
+
+For what to use, see [De-Googled Android phone](/stacks/degoogle-android-phone).

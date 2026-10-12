@@ -25,6 +25,6 @@ The CLOUD Act (Clarifying Lawful Overseas Use of Data Act, 2018) extended US gov
 
 ## Protection
 
-- Use services from non-US companies (Proton in Switzerland, Tutanota in Germany)
 - Use end-to-end encryption — even if the company must comply, they can't decrypt your data
-- Self-host sensitive services on infrastructure outside US jurisdiction
+
+For what to use, see [Proton Mail vs Tuta](/guides/proton-mail-vs-tuta).

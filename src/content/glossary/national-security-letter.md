@@ -69,7 +69,6 @@ National Security Letters are controversial because they operate in secret. Comp
 
 ### Key Cases
 - Doe v. Ashcroft (2004): First constitutional challenge
-- Mozilla's challenge: Gag order lifted after 10 years
 - Ongoing reform efforts
 
 ### Constitutional Concerns

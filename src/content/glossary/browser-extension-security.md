@@ -28,7 +28,9 @@ Browser extensions are one of the most overlooked privacy risks — they can see
 ## Safe Extension Practices
 
 1. Install only essential extensions
-2. Prefer open-source extensions (uBlock Origin, Privacy Badger)
+2. Prefer open-source extensions you can inspect
 3. Review permissions before installing
 4. Audit installed extensions periodically
-5. Use Firefox (stricter extension sandboxing than Chrome)
+5. Choose a browser with strict extension review and sandboxing
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

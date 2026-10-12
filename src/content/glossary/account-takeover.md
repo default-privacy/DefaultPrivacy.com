@@ -71,9 +71,11 @@ Account takeover is what happens when someone else gains control of your online 
 
 ## How to Protect Yourself
 
-1. **Use unique passwords for every account** — a password manager makes this manageable
+1. **Use unique passwords for every account** — reuse is what makes credential stuffing work
 2. **Enable hardware security keys** (FIDO2/WebAuthn) — the strongest form of 2FA
 3. **Avoid SMS-based 2FA** — use authenticator apps or hardware keys instead
-4. **Check if your credentials are leaked** — use our [Password Check tool](/password-check) or HaveIBeenPwned.com
+4. **Check if your credentials are leaked** — breach-checking services show whether your email appears in known breaches
 5. **Monitor your accounts** — set up login notifications and review activity regularly
 6. **Freeze your credit** — prevents new accounts from being opened in your name
+
+For what to use, see [how to choose a password manager](/guides/how-to-choose-a-password-manager).

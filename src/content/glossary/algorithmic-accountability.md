@@ -22,12 +22,11 @@ Automated systems can scale bias. A discriminatory hiring algorithm may reject q
 - **Explainability** — Understanding why a system made a particular decision. "Right to explanation" exists under GDPR for certain automated decisions.
 - **Auditability** — Independent review of systems for bias, accuracy, and fairness. Requires documentation, logging, and access for auditors.
 - **Redress** — The ability to challenge or appeal automated decisions. GDPR grants the right to human review of significant automated decisions.
-- **Oversight** — Regulatory and legal frameworks that impose obligations and penalties. The EU AI Act, Colorado's Algorithmic Accountability Act, and similar laws are creating these.
+- **Oversight** — Regulatory and legal frameworks that impose obligations and penalties. The EU AI Act and similar laws are creating these.
 
 ## Legislation
 
 - **EU AI Act** — Risk-based regulation; high-risk AI systems must meet transparency, accuracy, and human oversight requirements.
-- **Colorado Algorithmic Accountability Act** — Effective February 2026; requires impact assessments for AI used in consequential decisions.
 - **New York City AI Hiring Law** — Requires bias audits of automated employment decision tools.
 - **GDPR Article 22** — Right to not be subject to solely automated decisions with legal or similarly significant effect; right to human review.
 

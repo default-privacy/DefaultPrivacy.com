@@ -28,7 +28,8 @@ Cookie consent is the most visible (and most annoying) privacy regulation impact
 
 ## Better Solutions
 
-- Browsers that block third-party cookies by default (Brave, Firefox)
-- Extensions like "I don't care about cookies" that auto-reject
+- Browsers that block third-party cookies by default
 - Services that simply don't use tracking cookies
-- Privacy-respecting analytics (Plausible, Fathom) that don't require cookies
+- Privacy-respecting analytics that don't require cookies
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

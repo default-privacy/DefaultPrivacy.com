@@ -22,7 +22,6 @@ Digital IDs are being deployed worldwide as replacements for physical identity d
 - **India Aadhaar**: 1.3 billion enrolled, required for bank accounts, phone SIMs, and government benefits
 - **US Mobile Driver's License**: Live in 30+ states, expanding to federal acceptance
 - **UK GOV.UK One Login**: Centralized government identity system
-- **Australia myGovID**: Government digital identity
 
 ## What They Enable
 

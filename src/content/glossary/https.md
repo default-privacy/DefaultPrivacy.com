@@ -56,7 +56,7 @@ A padlock only means the connection is encrypted—not that the site is trustwor
 ## Best Practices
 
 1. **Look for HTTPS**: Don't enter sensitive data on HTTP sites
-2. **Use browser extensions**: HTTPS Everywhere forces HTTPS when available
-3. **Check certificate warnings**: Don't bypass them carelessly
-4. **Verify domains**: "bankofamerica.com" vs "bank0famerica.com"
+2. **Check certificate warnings**: Don't bypass them carelessly
+3. **Verify domains**: "bankofamerica.com" vs "bank0famerica.com"
 
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

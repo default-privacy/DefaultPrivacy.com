@@ -18,12 +18,6 @@ The ePrivacy Directive (2002, updated 2009) is the reason websites ask for cooki
 - **Location data**: Can only be processed with consent
 - **Spam**: Opt-in consent required for marketing emails
 
-## ePrivacy Regulation (Upcoming)
-
-- A regulation (directly applicable law, stronger than a directive) has been proposed since 2017
-- Would replace the directive with stricter, harmonized rules
-- Negotiations have been ongoing for years due to industry lobbying
-
 ## Cookie Fatigue
 
 The cookie consent banners that plague the web are a side effect of the ePrivacy Directive. Most implementations are designed to trick users into accepting all cookies rather than providing genuine choice.

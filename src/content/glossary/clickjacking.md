@@ -23,7 +23,6 @@ Clickjacking uses invisible iframes or overlays to hijack your clicks, making yo
 
 - Use a browser with good clickjacking protection
 - Be cautious of pages that seem to require unusual clicking
-- NoScript extension can block framing
 
 ## Protection (Developers)
 

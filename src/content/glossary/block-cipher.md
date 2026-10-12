@@ -8,7 +8,7 @@ relatedTerms:
   - "symmetric-encryption"
 ---
 
-Block ciphers encrypt data in chunks (blocks) of a fixed size, typically 128 or 256 bits.
+Block ciphers encrypt data in chunks (blocks) of a fixed size.
 
 ## Common Block Ciphers
 

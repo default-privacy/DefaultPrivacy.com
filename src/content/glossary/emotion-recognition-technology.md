@@ -62,7 +62,6 @@ The core science is disputed. A landmark 2019 review of over 1,000 studies by th
 
 ## Legal Pushback
 
-- **EU AI Act**: Bans emotion recognition in law enforcement and education
 - **Illinois BIPA**: Biometric data consent requirements
 - **NYC**: Bias audit requirements for AI hiring tools
 - **Several US states**: Considering bans on emotion recognition in public spaces

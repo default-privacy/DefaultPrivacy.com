@@ -55,7 +55,6 @@ For two decades, behavioral targeting dominated digital advertising because it p
 
 Several forces are pushing the industry back toward contextual:
 
-- **Third-party cookie deprecation** — Google Chrome is removing third-party cookies, eliminating the core data signal for behavioral advertising
 - **Privacy legislation** — GDPR, CCPA, and similar laws require meaningful consent for behavioral profiling, which users frequently decline
 - **Ad blocker adoption** — An estimated 40% of internet users in some markets block ads and tracking scripts
 - **Increasing regulatory scrutiny of real-time bidding** — EU data protection authorities have found RTB structurally incompatible with GDPR

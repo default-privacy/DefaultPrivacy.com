@@ -34,7 +34,7 @@ Even without logins, companies can link devices by analyzing:
 - **Ultrasonic beacons**: Inaudible sound signals emitted by ads on one device, picked up by microphone on another
 
 ### Identity Graphs
-Companies like LiveRamp, The Trade Desk, and Oracle maintain massive identity graphs that map:
+Identity-resolution companies maintain massive identity graphs that map:
 - Email → phone number → devices → IP addresses → physical addresses → household members
 - A single data point can link your entire digital identity across devices
 
@@ -54,9 +54,9 @@ Companies like LiveRamp, The Trade Desk, and Oracle maintain massive identity gr
 ## How to Break the Link
 
 1. **Don't log into the same accounts** across all devices — Use different browsers and accounts for different purposes
-2. **Use a VPN** — Prevents IP-based device linking
-3. **Use different browsers** — Brave on desktop, Firefox Focus on mobile
-4. **Disable cross-device features** — Google's "Web & App Activity" includes cross-device tracking
-5. **Block ultrasonic beacons** — Keep microphone permissions restricted
-6. **Use separate networks** — A VPN on each device with different exit nodes
-7. **Resist the convenience trap** — "Continue on phone" and "sync across devices" features are tracking enablers
+2. **Disable cross-device features** — Google's "Web & App Activity" includes cross-device tracking
+3. **Block ultrasonic beacons** — Keep microphone permissions restricted
+4. **Use separate networks** — A VPN on each device with different exit nodes
+5. **Resist the convenience trap** — "Continue on phone" and "sync across devices" features are tracking enablers
+
+For what to use, see [Private Browsers Compared](/guides/private-browsers-compared).

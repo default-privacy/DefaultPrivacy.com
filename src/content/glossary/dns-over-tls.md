@@ -17,15 +17,10 @@ DNS over TLS (DoT) wraps DNS queries in a TLS connection, encrypting them in tra
 - **DoH** uses port 443 (same as HTTPS) — encrypted DNS looks like normal web traffic
 - DoT is easier to block; DoH is harder to distinguish from regular browsing
 
-## Providers
-
-- Cloudflare (1.1.1.1)
-- Quad9 (9.9.9.9)
-- Google (8.8.8.8)
-- NextDNS (custom filtering)
-
 ## Setup
 
 - **Android 9+**: Settings > Network > Private DNS
 - **Linux**: systemd-resolved supports DoT natively
 - **Router-level**: Some routers support DoT configuration
+
+For what to use, see [private DNS and ad blocking](/guides/private-dns-and-ad-blocking).

@@ -49,9 +49,6 @@ Settings → Privacy & Security → Lockdown Mode. Significantly restricts devic
 6. **Settings → Connected devices → Connection preferences → Bluetooth**: Turn off when not in use (Bluetooth beaconing tracks location)
 7. **Settings → Apps → Special app access**: Review which apps have special permissions
 
-### De-Googled Android
-For maximum privacy, replace stock Android with GrapheneOS (Pixel phones) or CalyxOS. These remove Google's data collection entirely while keeping Android functionality.
-
 ## Both Platforms
 
 ### App Permissions Audit
@@ -66,7 +63,6 @@ Go through every installed app and ask:
 - **Update regularly** — Security patches close known vulnerabilities
 - **Use app alternatives** — Replace data-hungry apps with privacy-respecting ones
 - **Turn off Wi-Fi and Bluetooth** when not actively using them — both broadcast device identifiers
-- **Use a VPN** — Encrypts all traffic from your device
 
 ### Notifications
 - **Disable lock screen previews** — Messages and emails visible on a locked screen are readable by anyone who glances at your phone
@@ -74,4 +70,6 @@ Go through every installed app and ask:
 
 ## The Reality Check
 
-These settings reduce tracking significantly, but don't eliminate it. Your phone still communicates with cell towers (revealing location), your carrier logs all metadata, and apps find creative ways to track you. For maximum mobile privacy, consider a de-Googled phone with GrapheneOS.
+These settings reduce tracking significantly, but don't eliminate it. Your phone still communicates with cell towers (revealing location), your carrier logs all metadata, and apps find creative ways to track you.
+
+For what to use, see [GrapheneOS vs CalyxOS](/guides/grapheneos-vs-calyxos).

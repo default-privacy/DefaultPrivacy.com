@@ -36,7 +36,7 @@ Each time, systems that were locked to a single algorithm faced expensive, slow 
 ### Agile Systems
 - TLS protocol: Negotiates cipher suites — when one is deprecated, servers and clients can switch
 - Signal protocol: Added post-quantum key exchange (PQXDH) alongside existing X3DH
-- SSH: Supports multiple key types (RSA, Ed25519, now exploring PQ)
+- SSH: Supports multiple key types (RSA, Ed25519)
 
 ### Non-Agile Systems
 - Bitcoin: Hardcoded to ECDSA (secp256k1) — migrating requires a network-wide consensus change

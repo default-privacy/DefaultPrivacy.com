@@ -27,7 +27,6 @@ Canvas fingerprinting generates a unique identifier by asking your browser to dr
 
 ## Detection and Blocking
 
-- CanvasBlocker extension for Firefox
-- Brave Browser adds randomness to Canvas output
-- Tor Browser returns a blank/uniform Canvas result
 - Privacy-focused browsers can notify you when Canvas fingerprinting is attempted
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

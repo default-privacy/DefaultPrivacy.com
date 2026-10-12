@@ -42,7 +42,6 @@ The Signal Protocol is widely considered the gold standard for secure messaging.
 3. **Together**: Provides both forward and future secrecy
 
 ### Key Exchange
-- Uses X3DH (Extended Triple Diffie-Hellman)
 - Works even if recipient is offline
 - Prekeys allow asynchronous initial contact
 

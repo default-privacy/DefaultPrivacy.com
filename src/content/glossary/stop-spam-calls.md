@@ -37,26 +37,11 @@ Your phone number is likely in **hundreds of databases** because of:
 
 ## Immediate Solutions
 
-### 1. Carrier-Level Blocking
-| Carrier | Free Tool | How to Enable |
-|---------|-----------|---------------|
-| **T-Mobile** | Scam Shield | Dial #662# or download app |
-| **AT&T** | ActiveArmor | Download AT&T Call Protect app |
-| **Verizon** | Call Filter | Download Call Filter app |
-
-### 2. Phone Settings
+### 1. Phone Settings
 - **iPhone**: Settings → Phone → Silence Unknown Callers (sends unknown numbers directly to voicemail)
 - **Android**: Phone app → Settings → Caller ID & Spam → Filter spam calls
 
-### 3. Third-Party Apps
-| App | Platform | Free Tier | Features |
-|-----|----------|-----------|----------|
-| **Nomorobo** | iOS/Android/Landline | Yes | Robocall blocking |
-| **Hiya** | iOS/Android | Yes | Caller ID + spam detection |
-| **RoboKiller** | iOS/Android | No ($4.99/mo) | Aggressive blocking + answer bots |
-| **Truecaller** | iOS/Android | Yes | Caller ID (note: uploads your contacts) |
-
-### 4. Do Not Call Registry
+### 2. Do Not Call Registry
 - Register at **donotcall.gov** or call 1-888-382-1222
 - Reduces **legitimate telemarketing** but has no effect on illegal robocalls and scams
 - Takes up to 31 days to take effect
@@ -66,9 +51,8 @@ Your phone number is likely in **hundreds of databases** because of:
 The only way to **significantly reduce** spam calls long-term is to remove your phone number from data broker databases:
 
 1. **Opt out of major data brokers** — Spokeo, WhitePages, BeenVerified, Radaris, and 600+ others
-2. **Use automated removal services** — See the [tools directory](/directory) for services that handle ongoing removal from data-broker sites
-3. **Use a virtual number** for online signups going forward — keep your real number private
-4. **Remove your number from social media** and public profiles
+2. **Use a virtual number** for online signups going forward — keep your real number private
+3. **Remove your number from social media** and public profiles
 
 ## Prevention Going Forward
 
@@ -77,3 +61,5 @@ The only way to **significantly reduce** spam calls long-term is to remove your 
 - **Don't answer unknown calls** — let them go to voicemail
 - **Never press "1 to be removed"** — this confirms your number is active
 - **Report spam** — Forward spam texts to **7726** (SPAM); report calls to the FTC
+
+For what to use, see [Remove Your Name from Data Brokers](/guides/remove-name-from-data-brokers).

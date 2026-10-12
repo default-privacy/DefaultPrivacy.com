@@ -57,8 +57,10 @@ Tracking is the engine of surveillance capitalism. Your every click, scroll, and
 
 ## Defending Against Tracking
 
-- **Browser**: Block third-party cookies, use privacy-focused browser (Firefox, Brave)
-- **Extensions**: uBlock Origin, Privacy Badger, multi-account containers
-- **DNS**: Use privacy DNS (Cloudflare 1.1.1.1, etc.)
+- **Browser**: Block third-party cookies, use a privacy-focused browser
+- **Extensions**: Tracker blockers and multi-account containers
+- **DNS**: Use a privacy-respecting DNS resolver
 - **VPN**: Hides IP from trackers (doesn't stop cookies/fingerprinting)
 - **Tor**: Strong anonymity, breaks most tracking
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

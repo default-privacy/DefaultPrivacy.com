@@ -67,7 +67,6 @@ When your phone shows a call from your bank, the IRS, or even your own number �
 
 1. **Never trust caller ID alone** — if your "bank" calls, hang up and call the number on your card
 2. **Don't share sensitive information** on incoming calls — legitimate organizations won't ask for passwords or PINs by phone
-3. **Use call-blocking apps** — Nomorobo, Hiya, or your carrier's spam filter
-4. **Register on the Do Not Call list** (donotcall.gov) — reduces legitimate telemarketing but not scam calls
-5. **Let unknown calls go to voicemail** — scammers rarely leave messages
-6. **Report spoofed calls** to the FCC at fcc.gov/consumers/guides/spoofing-and-caller-id
+3. **Register on the Do Not Call list** (donotcall.gov) — reduces legitimate telemarketing but not scam calls
+4. **Let unknown calls go to voicemail** — scammers rarely leave messages
+5. **Report spoofed calls** to the FCC at fcc.gov/consumers/guides/spoofing-and-caller-id

@@ -29,7 +29,6 @@ Your phone—and increasingly your car, watch, and other devices—constantly br
 - Review system services that use location (Find My, etc.)
 
 ### App Choices
-- Use privacy-respecting maps (Organic Maps, OsmAnd)
 - Avoid apps that require location for no clear reason
 - Check app permissions before installing
 
@@ -37,7 +36,6 @@ Your phone—and increasingly your car, watch, and other devices—constantly br
 - Don't check in or tag locations on social media
 - Strip EXIF from photos before sharing
 - Be aware of WiFi networks—they can track you
-- Consider a faraday bag for phones when location must be hidden
 
 ## Connected Cars and Wearables
 
@@ -45,3 +43,5 @@ Your phone—and increasingly your car, watch, and other devices—constantly br
 - Fitness trackers and smartwatches log routes
 - Rental cars may track you
 - Review privacy policies and opt out where possible
+
+For what to use, see [the faraday and location privacy kit](/stacks/faraday-location-privacy-kit).

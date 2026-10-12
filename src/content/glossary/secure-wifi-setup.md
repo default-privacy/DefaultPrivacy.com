@@ -55,14 +55,7 @@ Your home WiFi router is the **front door** to your digital life. An insecure ro
 - You can disable SSID broadcast, but this provides minimal real security
 
 ### 5. Configure Private DNS
-Replace your ISP's DNS (which logs all your browsing) with a privacy-focused alternative:
-
-| DNS Provider | IP Address | Privacy Policy |
-|-------------|------------|----------------|
-| **Quad9** | 9.9.9.9 | No logging, blocks malware |
-| **Cloudflare** | 1.1.1.1 | Logs deleted within 24hrs |
-| **Mullvad DNS** | 194.242.2.2 | No logging |
-| **NextDNS** | Custom | Configurable, ad blocking |
+Replace your ISP's DNS (which logs all your browsing) with a privacy-focused alternative. See [Private DNS and ad blocking](/guides/private-dns-and-ad-blocking).
 
 Set this at the router level so **all devices** benefit.
 

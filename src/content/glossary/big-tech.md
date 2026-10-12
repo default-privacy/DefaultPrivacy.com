@@ -27,17 +27,4 @@ Big Tech companies have become the largest collectors of personal data in human 
 
 Except for Apple (which sells hardware), Big Tech's primary business is converting your data into advertising revenue or behavioral predictions.
 
-## Alternatives
-
-| Big Tech | Privacy Alternative |
-|---|---|
-| Google Search | DuckDuckGo, Brave Search, Kagi |
-| Gmail | Proton Mail, Tuta |
-| Chrome | Brave, Firefox, Tor Browser |
-| Google Drive | Proton Drive, Tresorit |
-| Google Maps | Organic Maps, OsmAnd |
-| WhatsApp | Signal |
-| Windows | Linux (Fedora, Ubuntu) |
-| iCloud | Self-hosted Nextcloud |
-
-Default Privacy's tools directory catalogs hundreds of alternatives to Big Tech services.
+For what to use instead, see [De-Google Your Life](/stacks/de-google-your-life).

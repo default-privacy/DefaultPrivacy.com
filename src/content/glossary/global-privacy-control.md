@@ -22,7 +22,6 @@ GPC is the successor to Do Not Track, designed with legal enforcement from the s
 ## Browser Support
 
 - **Brave**: Enabled by default
-- **Firefox**: Enabled by default
 - **DuckDuckGo**: Enabled by default
 - **Chrome**: Not supported natively (requires extension)
 

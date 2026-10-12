@@ -54,7 +54,7 @@ AI has eliminated the telltale signs of phishing — broken English, generic gre
 
 1. **Verify through a different channel** — If an email asks for action, confirm by calling or messaging the sender separately
 2. **Be suspicious of urgency** — AI phishing almost always creates time pressure
-3. **Use hardware security keys** (YubiKey) — Phishing-resistant authentication
+3. **Use hardware security keys** — Phishing-resistant authentication
 4. **Enable phishing-resistant MFA** — FIDO2/WebAuthn, not SMS codes
 5. **Check sender addresses carefully** — AI makes perfect content but can't control the sending domain
 6. **Assume AI quality** — Stop relying on "it looks professional so it's real"

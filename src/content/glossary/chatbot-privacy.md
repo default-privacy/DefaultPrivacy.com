@@ -30,18 +30,6 @@ Every conversation with an AI chatbot is a data exchange. You provide personal c
 - **Uploaded files** — Documents, images, code files you share
 - **Conversation metadata** — Timestamps, session length, interaction patterns
 
-## How Your Data Is Used
-
-| Provider | Training on data? | Data retention | Privacy controls |
-|----------|-------------------|----------------|-----------------|
-| OpenAI (ChatGPT) | Free: Yes by default. Paid: No (unless opted in) | 30 days (abuse review) | Can disable training in settings |
-| Google (Gemini) | Yes for free tier | 18 months | Can pause activity |
-| Meta (Meta AI) | Yes | Per Meta privacy policy | Limited controls |
-| Anthropic (Claude) | No (by default) | 30 days (safety) | Can request deletion |
-| Venice.ai | Says it does not train on chats | Says prompts are not stored; logs IP and device data | Several privacy modes, see [Venice](/directory/venice) |
-
-*Policies change frequently — verify current terms before trusting any provider.*
-
 ## What People Accidentally Share
 
 - Medical symptoms and health concerns (seeking advice)
@@ -55,9 +43,9 @@ Every conversation with an AI chatbot is a data exchange. You provide personal c
 
 1. **Don't share real names, addresses, or identifying info** — Use pseudonyms when asking personal questions
 2. **Opt out of training** — Check settings on every platform
-3. **Use privacy-focused providers** — and check what each one can still see; see [Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust)
-4. **Run local models** — Ollama + open-source models keep everything on your device
-5. **Sanitize before pasting** — Remove personal info from documents before uploading
-6. **Use incognito/temporary chats** — Most providers offer modes that aren't saved
-7. **Review and delete conversation history** regularly
-8. **Never paste passwords, API keys, or credentials** into any AI chat
+3. **Sanitize before pasting** — Remove personal info from documents before uploading
+4. **Use incognito/temporary chats** — Most providers offer modes that aren't saved
+5. **Review and delete conversation history** regularly
+6. **Never paste passwords, API keys, or credentials** into any AI chat
+
+For what to use, see [Using AI Chatbots Privately](/guides/how-to-use-ai-chatbots-privately).

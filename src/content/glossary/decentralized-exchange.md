@@ -25,16 +25,10 @@ DEXs enable cryptocurrency trading without trusting a central company with your 
 - No account linking your identity to your trades
 - No centralized database of trading activity to be hacked or subpoenaed
 
-## Popular DEXs
-
-- **Uniswap**: Largest Ethereum DEX
-- **dYdX**: Derivatives trading
-- **THORChain**: Cross-chain swaps
-- **Bisq**: Bitcoin/fiat trading without intermediaries
-
 ## Limitations
 
 - Trading on public blockchains (Ethereum) means trades are publicly visible
-- Privacy coins on DEXs provide the best privacy combination
 - Front-running (MEV) is a risk on transparent blockchains
 - Liquidity can be lower than centralized exchanges
+
+For what to use, see [the no-KYC crypto opsec stack](/stacks/no-kyc-crypto-opsec-stack).

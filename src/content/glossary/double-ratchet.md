@@ -34,6 +34,5 @@ Two "ratchets" (one-way key derivation chains) work together:
 - **WhatsApp**: Full E2EE using Signal Protocol
 - **Facebook Messenger**: Opt-in "Secret Conversations"
 - **Google Messages**: RCS with E2EE (Signal Protocol)
-- **Skype**: Private conversations
 
 The Double Ratchet made strong encryption practical for billions of users.

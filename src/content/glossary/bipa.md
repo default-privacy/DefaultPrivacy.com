@@ -36,10 +36,7 @@ BIPA is the **most powerful privacy law in the United States** — not because o
 ## What Makes BIPA Unique
 
 ### Private Right of Action
-Unlike most US privacy laws, BIPA allows **individual lawsuits** — you don't need the attorney general to sue on your behalf. Damages:
-- **$1,000 per negligent violation**
-- **$5,000 per intentional or reckless violation**
-- When multiplied by millions of users, this creates massive liability
+Unlike most US privacy laws, BIPA allows **individual lawsuits** — you don't need the attorney general to sue on your behalf.
 
 ### Landmark Settlements
 
@@ -49,7 +46,6 @@ Unlike most US privacy laws, BIPA allows **individual lawsuits** — you don't n
 | **Google** | $100 million | 2023 | Google Photos face grouping |
 | **TikTok/ByteDance** | $92 million | 2022 | Facial feature collection |
 | **Clearview AI** | $50 million (injunction) | 2024 | Scraping facial images |
-| **BNSF Railway** | $228 million | 2023 | Fingerprint scans of truck drivers |
 
 ## Why Biometric Data Is Different
 

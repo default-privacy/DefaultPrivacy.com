@@ -61,8 +61,9 @@ ACR identifies what you're watching and reports it back to the TV manufacturer a
 ## How to Protect Yourself
 
 1. **Disable ACR** during setup. Most TVs ask during initial setup (buried in "improve experience" language). Each brand names the switch differently and the menus move between model years, so see [how to turn off smart TV tracking](/guides/turn-off-smart-tv-tracking) for current steps by brand
-2. **Don't connect your TV to WiFi**. Use a separate streaming device (Apple TV, Roku with settings locked down) instead
-3. **Disable microphone and camera**. Physical covers for cameras; disable voice features
-4. **Block TV tracking at the network level**. Pi-hole or NextDNS can block TV tracking domains, but many TVs use their own hard-coded DNS, so your router must force all DNS through the blocker, and encrypted DNS can still slip past ([how to set that up](/guides/private-dns-and-ad-blocking))
-5. **Use a "dumb" monitor** with a separate streaming device you control
-6. **Decline all "personalization" and "improvement" options** during setup
+2. **Disable microphone and camera**. Physical covers for cameras; disable voice features
+3. **Block TV tracking at the network level**. A DNS blocker can block TV tracking domains, but many TVs use their own hard-coded DNS, so your router must force all DNS through the blocker, and encrypted DNS can still slip past ([how to set that up](/guides/private-dns-and-ad-blocking))
+4. **Use a "dumb" monitor** with a separate streaming device you control
+5. **Decline all "personalization" and "improvement" options** during setup
+
+For what to use, see [How to turn off smart TV tracking](/guides/turn-off-smart-tv-tracking).

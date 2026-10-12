@@ -27,7 +27,7 @@ The baseband processor is the most privileged and least understood component in 
 
 ## Mitigation
 
-- **Librem 5 (Purism)**: Hardware kill switches physically disconnect the baseband
-- **PinePhone**: Baseband is on a removable M.2 card
 - **WiFi-only devices**: No baseband processor at all
 - Mainstream phones offer no way to isolate or audit the baseband
+
+For what to use, see [the de-Googled Android phone stack](/stacks/degoogle-android-phone).

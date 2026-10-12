@@ -51,10 +51,4 @@ Many "private" services encrypt your content but not your metadata. Your ISP, em
 - That you called a suicide hotline
 - That you messaged a journalist
 
-## Protecting Your Metadata
-
-- **Tor**: Obscures who is communicating with whom
-- **Signal**: Minimizes metadata collection
-- **Encrypted email**: Use providers that minimize metadata logging
-- **VPN**: Hides browsing metadata from your ISP
-
+For what to use, see [Metadata and digital footprint cleanup](/stacks/metadata-digital-footprint-cleanup).

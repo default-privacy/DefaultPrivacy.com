@@ -69,8 +69,6 @@ With third-party cookies, any company can track users across the web. With Priva
 
 ## What to Actually Do
 
-If you want real browser privacy, don't wait for Google to protect you:
-1. **Use Firefox, Brave, or LibreWolf** instead of Chrome
-2. **Install uBlock Origin** to block trackers regardless of cookie status
-3. **Enable Firefox's Enhanced Tracking Protection** (set to Strict)
-4. **Use a privacy-focused search engine** — Brave Search, DuckDuckGo, or Kagi
+If you want real browser privacy, don't wait for Google to protect you. Use a browser that blocks trackers by default and a tracker blocker that works regardless of cookie status.
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

@@ -68,14 +68,10 @@ Pattern builds across thousands of sites
 - Clear cookies on close
 - Use private/incognito mode
 
-### Browser Extensions
-- uBlock Origin blocks trackers
-- Cookie AutoDelete clears after leaving site
-
-### Privacy Browsers
-- Firefox with Enhanced Tracking Protection
-- Brave with aggressive blocking
-- Tor Browser
+### Browser Extensions and Privacy Browsers
+- Tracker blockers stop many third-party cookies from loading
+- Cookie cleaners clear cookies after you leave a site
+- Privacy-focused browsers block third-party tracking by default
 
 ## The Cookie Banner Problem
 
@@ -88,3 +84,4 @@ As cookies get blocked, trackers move to:
 - Local storage
 - First-party tracking (harder to block)
 
+For what to use, see [private browsers compared](/guides/private-browsers-compared).

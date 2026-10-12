@@ -54,8 +54,8 @@ keywords:
 
 ## How to Bypass Cookie Walls
 
-1. **Use browser extensions** — uBlock Origin, I Don't Care About Cookies, Consent-O-Matic
-2. **Reader mode** — Browser reading modes sometimes bypass overlays
-3. **Disable JavaScript** temporarily — many cookie walls are JavaScript overlays
-4. **Use privacy-focused browsers** — Brave blocks many consent overlays by default
-5. **Use Global Privacy Control (GPC)** — An opt-out signal recognized by CCPA/CPRA
+1. **Reader mode** — Browser reading modes sometimes bypass overlays
+2. **Disable JavaScript** temporarily — many cookie walls are JavaScript overlays
+3. **Use Global Privacy Control (GPC)** — An opt-out signal recognized by CCPA/CPRA
+
+For what to use, see [Private Browsers Compared](/guides/private-browsers-compared).

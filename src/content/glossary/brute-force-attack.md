@@ -16,7 +16,6 @@ Brute force is the most straightforward attack against passwords and encryption 
 - A modern GPU can try ~10 billion MD5 hashes per second
 - An 8-character lowercase password: cracked in ~5 seconds
 - An 8-character mixed-case + numbers + symbols: cracked in ~8 hours
-- A 12-character mixed password: cracked in ~200 years
 - AES-256 key: heat death of the universe × trillions
 
 ## Password Defense

@@ -35,15 +35,11 @@ A VPN (Virtual Private Network) creates an encrypted tunnel between your device 
 - **Open source**: Can the client be audited? (WireGuard-based clients are preferred)
 - **Payment**: Accepts cash or cryptocurrency? (for anonymous signup)
 
-## Recommended VPNs
-
-- **Mullvad**: No email required, accepts cash, independently audited
-- **IVPN**: Transparent, open source, accepts crypto
-- **Proton VPN**: Swiss jurisdiction, free tier available, part of Proton ecosystem
-
 ## When to Use a VPN
 
 - Always on public WiFi
 - When you don't want your ISP logging your browsing
 - When accessing services that block your country
 - When torrenting
+
+For what to use, see [Mullvad vs Proton VPN](/guides/mullvad-vs-proton-vpn).

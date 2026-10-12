@@ -33,6 +33,7 @@ Named after predators that wait at watering holes for prey, this attack targets 
 ## Protection
 
 1. Keep browsers and plugins updated
-2. Use a browser with good sandboxing (Chrome, Brave)
+2. Use a browser with good sandboxing
 3. Consider using a different browser for high-risk browsing
-4. Use a VPN to avoid being profiled by IP range
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

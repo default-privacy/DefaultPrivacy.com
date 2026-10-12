@@ -76,11 +76,10 @@ Wearable devices collect the most intimate data possible — your body's continu
 
 ## How to Protect Yourself
 
-1. **Choose Apple Watch** if privacy is a priority — Apple's health data architecture is the most privacy-preserving
-2. **Disable continuous GPS** — Only enable during workouts if needed
-3. **Don't share health data** with employer wellness programs
-4. **Review third-party access** — Check which apps have access to your health data
-5. **Use offline-first devices** — Some fitness trackers work without cloud accounts
-6. **Read the privacy policy** before buying — What data goes to the cloud? Can you opt out?
-7. **Be cautious with period tracking** — Use privacy-focused alternatives (Drip, Euki) that store data locally
-8. **Disable social features** — Sharing workouts publicly reveals location patterns
+1. **Disable continuous GPS** — Only enable during workouts if needed
+2. **Don't share health data** with employer wellness programs
+3. **Review third-party access** — Check which apps have access to your health data
+4. **Use offline-first devices** — Some fitness trackers work without cloud accounts
+5. **Read the privacy policy** before buying — What data goes to the cloud? Can you opt out?
+6. **Be cautious with period tracking** — Prefer apps that store data locally
+7. **Disable social features** — Sharing workouts publicly reveals location patterns

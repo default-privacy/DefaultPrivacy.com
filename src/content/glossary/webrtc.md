@@ -25,10 +25,9 @@ WebRTC (Web Real-Time Communication) enables peer-to-peer communication directly
 ## How to Fix
 
 - **Firefox**: Set `media.peerconnection.enabled` to false in about:config
-- **Brave**: Disables WebRTC leaks by default
-- **Chrome**: Requires an extension (WebRTC Leak Prevent)
-- **uBlock Origin**: Has a WebRTC leak prevention option
 
 ## Trade-offs
 
 Disabling WebRTC breaks video calling in the browser (Google Meet, Jitsi). If you need browser-based video calls, use a browser profile with WebRTC enabled and your VPN carefully configured.
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

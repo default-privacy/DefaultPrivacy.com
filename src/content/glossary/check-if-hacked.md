@@ -13,9 +13,7 @@ If you suspect you've been hacked, here's how to check and what to do.
 
 ## Check for Data Breaches
 
-- **Have I Been Pwned** (haveibeenpwned.com): Enter your email to see if it appeared in known breaches
-- **Firefox Monitor**: Mozilla's breach checking service
-- **Default Privacy's Password Check** (/password-check): Checks if passwords have appeared in breaches
+Breach-notification services can tell you whether your email address or password appeared in a known breach. For how to check, see [Was my phone number in a data breach?](/guides/was-my-phone-number-in-a-data-breach).
 
 ## Signs Your Account Was Compromised
 
@@ -35,7 +33,7 @@ If you suspect you've been hacked, here's how to check and what to do.
 
 ## Immediate Steps
 
-1. **Change passwords** on affected accounts (use a password manager)
+1. **Change passwords** on affected accounts
 2. **Enable MFA** everywhere (hardware key > TOTP > SMS)
 3. **Check email forwarding rules** — attackers often set up auto-forwarding
 4. **Review connected apps** and revoke unauthorized access

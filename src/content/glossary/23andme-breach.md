@@ -62,7 +62,6 @@ Your genetic data doesn't just expose you — it exposes **every biological rela
 - Multiple class action lawsuits filed
 - Company laid off 40% of staff
 - 23andMe **filed for bankruptcy** in 2025
-- Questions about **who will own the genetic data** of 15 million users in bankruptcy proceedings
 
 ## Lessons
 

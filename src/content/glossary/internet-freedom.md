@@ -61,11 +61,4 @@ Freedom House's annual report consistently shows **internet freedom declining gl
 - Algorithmic content curation determines what people see
 - App store monopolies control what software people can run
 
-## Tools for Internet Freedom
-
-- **VPNs** — Bypass censorship and surveillance
-- **Tor** — Anonymous browsing
-- **Signal** — Encrypted messaging
-- **Censorship-resistant DNS** — Cloudflare (1.1.1.1), Quad9 (9.9.9.9)
-- **Mesh networking** — Communication without internet infrastructure
-- **Satellite internet** (Starlink) — Bypass national internet controls
+For what to use, see [Activist & Protester Digital Safety](/stacks/activist-protester-digital-safety).

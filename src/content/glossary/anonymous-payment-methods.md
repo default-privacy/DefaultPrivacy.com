@@ -22,10 +22,10 @@ keywords:
 
 In an increasingly surveilled financial world, anonymous payment methods are one of the last tools for maintaining transaction privacy.
 
-## Payment Methods Ranked by Privacy
+## Payment Methods by Privacy Level
 
 ### Tier 1: Truly Anonymous
-- **Cash**: No identity, no record, no permission needed. The gold standard.
+- **Cash**: No identity, no record, no permission needed.
 - **Monero (XMR)**: Ring signatures hide sender, stealth addresses hide receiver, RingCT hides amount. The digital equivalent of cash.
 
 ### Tier 2: Practically Anonymous
@@ -36,8 +36,8 @@ In an increasingly surveilled financial world, anonymous payment methods are one
 
 ### Tier 3: Pseudonymous
 - **Bitcoin (on-chain)**: Public ledger — pseudonymous but traceable with blockchain analysis
-- **Virtual card numbers** (Privacy.com): Hides your real card number but requires a bank account
-- **Masked cards** (MySudo): Pseudonymous cards linked to a privacy identity
+- **Virtual card numbers**: Hide your real card number but require a bank account
+- **Masked cards**: Pseudonymous cards linked to a privacy identity
 
 ### Tier 4: Not Private at All
 - **Credit/debit cards**: Fully identified, every transaction recorded
@@ -53,16 +53,10 @@ Paying anonymously online is harder than in person because you usually need a de
 2. **Prepaid cards + VPN** — Card purchased with cash, used over Tor or VPN
 3. **Cryptocurrency** — Privacy coins sent directly to vendors who accept them
 4. **Gift cards** — Buy physical gift cards with cash, redeem online
-5. **Anonymous LLC** — Business address and business name on orders
 
 ## Vendors That Accept Privacy Payments
 
-A growing number of privacy-focused companies accept Monero and Bitcoin:
-- Domain registrars (Njalla)
-- VPN providers (Mullvad, IVPN, ProtonVPN)
-- Hosting providers (1984 Hosting, FlokiNET, Bahnhof)
-- Email providers (ProtonMail accepts Bitcoin)
-- Various goods and services via crypto payment processors
+A growing number of privacy-focused companies accept Monero and Bitcoin, including some domain registrars, VPN providers, hosting providers and email providers, plus various goods and services via crypto payment processors.
 
 ## Legal Note
 
@@ -71,3 +65,5 @@ Using anonymous payment methods is legal in most jurisdictions. However:
 - Tax obligations exist regardless of payment method
 - Some jurisdictions are restricting anonymous prepaid card purchases
 - Know your local laws regarding cryptocurrency and cash usage
+
+For what to use, see [Anonymous Payments & Financial Privacy](/stacks/anonymous-payments-financial-privacy).

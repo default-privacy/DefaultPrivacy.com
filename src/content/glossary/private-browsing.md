@@ -88,10 +88,4 @@ Private browsing is widely misunderstood. It's useful for local privacy—keepin
 - Avoiding surveillance
 - Protecting sensitive activities
 
-## Better Alternatives for Real Privacy
-
-- **Tor Browser**: Actual anonymity
-- **VPN**: Hide from ISP
-- **Separate browser profiles**: Compartmentalization
-- **Firefox containers**: Session isolation without private mode
-
+For what to use, see [Private Browsers Compared](/guides/private-browsers-compared).

@@ -21,8 +21,6 @@ keywords:
   - "data broker opt out"
   - "how to remove information from data brokers"
   - "data removal service"
-  - "Optery"
-  - "DeleteMe"
   - "opt out people search"
 ---
 
@@ -54,17 +52,9 @@ Data brokers have your name, address, phone number, email, relatives, and more �
 
 ## Automated Removal Services
 
-Services that handle the opt-out process on your behalf. **Default Privacy** lists data broker removal services in the **[tools directory](/directory?category=data-broker-redaction)** (category **Data Broker Redaction**). Compare coverage and pricing before you choose; the table below is illustrative, not exhaustive.
+Services that handle the opt-out process on your behalf. **Default Privacy** lists data broker removal services in the **[tools directory](/directory?category=data-broker-redaction)** (category **Data Broker Redaction**).
 
-| Service | Coverage, by the company's own count | Price |
-|---------|--------------|-------|
-| **Optery** | 380+ to 630+ sites with its Expanded Reach option on, depending on plan ([Optery](https://www.optery.com/pricing/)) | Free self-service plan; paid plans $39 to $249 a year when billed yearly ([Optery](https://www.optery.com/pricing/)) |
-| **DeleteMe** | No site count on its pricing page | See [DeleteMe pricing](https://joindeleteme.com/pricing/) |
-| **Kanary** | No site count on its pricing page | $250 a year for Core, $500 for Advanced, per account ([Kanary](https://www.kanary.com/pricing)) |
-| **PrivacyDuck** | 400+ sites ([PrivacyDuck](https://privacyduck.com/)) | $299 a year for Pro ([PrivacyDuck](https://privacyduck.com/)) |
-| **EasyOptOuts** | 200+ data brokers ([EasyOptOuts](https://easyoptouts.com/)) | $19.99 a year ([EasyOptOuts](https://easyoptouts.com/)) |
-
-Prices and counts as listed on each company's site in October 2026. Each company counts sites its own way, so the numbers don't compare directly.
+For what to use, see [Remove your name from data brokers](/guides/remove-name-from-data-brokers).
 
 ## What to Expect
 
@@ -94,6 +84,4 @@ Prices and counts as listed on each company's site in October 2026. Each company
 
 1. **Check your exposure** — Search for yourself on major people search sites
 2. **Choose your approach** — DIY (free but time-intensive) or automated service
-3. **Start with the biggest brokers** — Spokeo, BeenVerified, WhitePages, Radaris
-4. **Set up ongoing monitoring** — Removal is not a one-time event
-5. **Browse the [tools directory](/directory)** for automated data broker removal tools
+3. **Set up ongoing monitoring** — Removal is not a one-time event

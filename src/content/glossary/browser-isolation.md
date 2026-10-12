@@ -16,13 +16,6 @@ Browser isolation prevents web-based threats from reaching your actual device.
 - **Local isolation**: Browser runs in a sandbox/container on your device
 - **Disposable browsers**: Temporary browser instances that are destroyed after use
 
-## Tools
-
-- **Qubes OS**: Each browser window runs in a separate virtual machine
-- **Whonix**: Isolates Tor browsing in a separate VM
-- **Docker-based browsers**: Run browsers in disposable containers
-- **Brave**: Strong per-site isolation with partitioned storage
-
 ## When to Use
 
 - Visiting untrusted websites

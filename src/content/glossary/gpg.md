@@ -49,9 +49,10 @@ GPG is PGP for everyone. Where PGP was originally proprietary, GPG is free softw
 ### With Email
 - Thunderbird + OpenPGP extension
 - Enigmail (legacy)
-- Or use ProtonMail/Tutanota for built-in PGP without GPG setup
 
 ### Key Servers
 - Public keys published to keys.openpgp.org or keyservers
 - Others can find your key to encrypt to you
 - Consider key expiration and revocation certificates
+
+For encrypted email options, see [Proton Mail vs Tuta](/guides/proton-mail-vs-tuta).

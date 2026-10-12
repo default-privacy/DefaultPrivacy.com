@@ -14,7 +14,7 @@ Compartmentalization is the foundation of good operational security. By isolatin
 ## Digital Compartmentalization
 
 - **Separate email addresses**: One for banking, one for shopping, one for social media
-- **Multiple browsers**: Firefox for personal, Brave for work, Tor for sensitive browsing
+- **Multiple browsers or profiles**: separate ones for personal, work, and sensitive browsing
 - **Virtual machines**: Isolate different activities in separate VMs
 - **Separate devices**: Dedicated phone for sensitive communications
 
@@ -34,3 +34,5 @@ Compartmentalization is the foundation of good operational security. By isolatin
 ## The Cost
 
 Compartmentalization adds friction and complexity. The right level depends on your threat model. Most people need some compartmentalization; few need total separation.
+
+For what to use, see [Private browsers compared](/guides/private-browsers-compared).

@@ -25,7 +25,6 @@ CBDCs represent the most significant potential change to financial privacy in ce
 
 - **China**: Digital Yuan (e-CNY) in widespread testing, millions of users
 - **EU**: Digital Euro in preparation phase
-- **US**: Federal Reserve studying options, no decision yet
 - **India**: Digital Rupee pilot program
 - **Nigeria**: eNaira launched 2021
 - **Bahamas**: Sand Dollar live since 2020
@@ -46,6 +45,7 @@ CBDCs only become a privacy threat if cash is eliminated. While cash exists, you
 ## Defense
 
 1. Use cash for everyday purchases while it's still accepted
-2. Hold and use privacy cryptocurrencies such as Monero
-3. Support legislation preserving the right to cash
-4. Build financial redundancy outside the banking system
+2. Support legislation preserving the right to cash
+3. Build financial redundancy outside the banking system
+
+For what to use, see [Anonymous payments and financial privacy](/stacks/anonymous-payments-financial-privacy).

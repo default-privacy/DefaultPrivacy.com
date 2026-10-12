@@ -44,7 +44,6 @@ The ad tech ecosystem is a $600+ billion global surveillance system disguised as
 ### Identity Resolution
 - **The Trade Desk UID2**: Post-cookie universal ID based on email
 - **LiveRamp RampID**: Cross-device identity matching
-- **Google Topics API**: Replacing cookies with interest-based categories
 
 ## How You're Tracked
 
@@ -73,10 +72,7 @@ The advertising industry generates the data. But the data flows far beyond adver
 
 ## How to Fight It
 
-1. **Ad blocker** (uBlock Origin) — Blocks trackers and ad scripts
-2. **Privacy browser** (Brave, Firefox with strict protection)
-3. **VPN** — Masks your IP from trackers
-4. **DNS-level blocking** (Pi-hole, NextDNS) — Blocks tracking domains for all devices
-5. **Email aliases** — Prevent email-based cross-site tracking
-6. **Disable third-party cookies** — Major browsers now support this
-7. **Use Global Privacy Control (GPC)** — Legal opt-out signal recognized in California and other states
+1. **Disable third-party cookies** — Major browsers now support this
+2. **Use Global Privacy Control (GPC)** — Legal opt-out signal recognized in California and other states
+
+For what to use, see [Private DNS and ad blocking](/guides/private-dns-and-ad-blocking).

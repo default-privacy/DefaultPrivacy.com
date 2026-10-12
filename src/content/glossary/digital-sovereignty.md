@@ -22,7 +22,7 @@ Digital sovereignty applies at every level — from nations controlling their in
 
 - Control over personal data (encryption, self-hosting)
 - Independence from Big Tech platforms (using alternatives)
-- Ability to communicate without corporate intermediaries (Signal, Matrix)
+- Ability to communicate without corporate intermediaries
 - Financial independence (cryptocurrency, cash)
 - Identity independence (separate emails, privacy-protected domains)
 
@@ -32,5 +32,5 @@ Digital sovereignty applies at every level — from nations controlling their in
 2. **Use E2EE** so providers can't read your data even if compelled
 3. **Diversify** across providers and jurisdictions
 4. **Own your domain** — don't depend on someone else's platform for your online presence
-5. **Control your identity** — use an LLC, not your personal name, for public-facing activities
-6. **Use privacy cryptocurrency** for financial independence
+
+For what to use, see [Anonymous payments and financial privacy](/stacks/anonymous-payments-financial-privacy).

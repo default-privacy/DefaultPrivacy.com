@@ -12,14 +12,6 @@ relatedTerms:
 
 End-to-end encrypted messaging means not even the company running the service can read your messages.
 
-## Recommended Messengers (Ranked)
-
-1. **Signal**: Gold standard. Open source, minimal metadata, sealed sender, disappearing messages.
-2. **Briar**: Peer-to-peer, works over Tor/WiFi/Bluetooth. No central server.
-3. **Wire**: Good for teams. Swiss jurisdiction. Open source.
-4. **Threema**: Swiss, no phone number required, paid app.
-5. **Element (Matrix)**: Self-hostable, federated, open standard.
-
 ## Partially Encrypted
 
 - **WhatsApp**: Signal Protocol, but owned by Meta. Collects extensive metadata.
@@ -37,3 +29,5 @@ End-to-end encrypted messaging means not even the company running the service ca
 ## The Metadata Problem
 
 Encrypting message content is solved. The remaining challenge is metadata — who talks to whom, when, how often. Signal's sealed sender and Briar's peer-to-peer design address this.
+
+For what to use, see [the secure messaging stack](/stacks/secure-messaging-stack).

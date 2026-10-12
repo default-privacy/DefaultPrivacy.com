@@ -24,14 +24,15 @@ Smart home devices create an intimate surveillance network inside your home.
 
 - Amazon shares Ring doorbell footage with law enforcement (sometimes without warrants)
 - Smart TV manufacturers sell viewing data to advertisers
-- Roomba maker iRobot was acquired by Amazon (floor plan data)
 - Many devices send data to third-party analytics services
 
 ## Protection
 
 1. Minimize smart devices — ask if you really need it
-2. Use local-only alternatives when possible (Home Assistant)
+2. Use local-only alternatives when possible
 3. Put IoT devices on a separate network
 4. Disable microphones and cameras when not needed
 5. Read privacy policies before purchasing
 6. Avoid devices that require cloud connectivity to function
+
+For what to use, see [the self-hosted privacy homelab](/stacks/self-hosted-privacy-homelab).

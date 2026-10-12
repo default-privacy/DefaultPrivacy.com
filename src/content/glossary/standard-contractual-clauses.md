@@ -39,7 +39,7 @@ SCCs bind the data importer (the non-EU recipient) to a specific set of data pro
 
 The clauses cannot be modified — they are used as-is or not at all. Organizations can add supplemental obligations but cannot weaken the pre-approved terms.
 
-## The Three SCC Modules
+## The SCC Modules
 
 The European Commission updated the standard clauses in 2021 to cover more transfer scenarios. There are now four module types:
 

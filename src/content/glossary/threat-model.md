@@ -54,19 +54,16 @@ keywords:
 ### Average Person
 **Protect**: Personal data, browsing habits
 **From**: Advertisers, data brokers, hackers
-**Tools**: Password manager, VPN, ad blocker
 **Effort**: Low-medium
 
 ### Journalist
 **Protect**: Sources, communications, research
 **From**: Government, corporations, criminals
-**Tools**: Signal, Tor, encrypted storage, OPSEC
 **Effort**: High
 
 ### Activist in Authoritarian Country
 **Protect**: Identity, activities, associates
 **From**: Government surveillance, informants
-**Tools**: Tor, Tails, air-gapped devices, strict OPSEC
 **Effort**: Very high, life-or-death
 
 ## Common Mistakes
@@ -96,3 +93,4 @@ keywords:
 6. **Select countermeasures** (proportional to threat)
 7. **Review regularly** (threats change)
 
+For what to use, see [How to build your threat model](/guides/how-to-build-your-threat-model).

@@ -61,7 +61,6 @@ If attackers get into your **email** with a reused password, they can:
 - **Generates unique, random passwords** for every account
 - **Stores them securely** — you only remember one master password
 - **Auto-fills** on websites and apps
-- Recommended: Bitwarden (open source), 1Password, KeePass (offline)
 
 ### Check for Exposed Passwords
 - Use our [Password Strength Analyzer](/password-check) — includes HIBP breach lookup
@@ -79,3 +78,5 @@ If you've been reusing passwords, change them in this order:
 
 ### Enable Two-Factor Authentication
 Even with unique passwords, enable 2FA on every account that supports it — preferably **hardware keys** or **authenticator apps** (not SMS).
+
+For what to use, see [Choosing a Password Manager](/guides/how-to-choose-a-password-manager).

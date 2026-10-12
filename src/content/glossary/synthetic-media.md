@@ -54,14 +54,12 @@ Detection is an arms race — generators and detectors improve together.
 - **Visual artifacts**: Inconsistent lighting, earring mismatches, hand anomalies (increasingly rare)
 - **Audio analysis**: Unnatural prosody, breathing patterns, spectral artifacts
 - **Metadata**: Missing or inconsistent image/video metadata
-- **AI detectors**: Tools like Hive, Sensity, and Microsoft Video Authenticator
 - **Cryptographic provenance**: C2PA standard embeds creation history in media files
 
 ## How to Protect Yourself
 
 1. **Minimize high-quality public media** of yourself (video, audio, photos)
-2. **Use watermarking tools** like Glaze for images you do publish
-3. **Verify suspicious media** through reverse image search and detection tools
-4. **Establish verification protocols** for high-stakes communications
-5. **Support provenance standards** (C2PA) that track media authenticity
-6. **Know your legal options** — Deepfake laws are being enacted in many jurisdictions
+2. **Verify suspicious media** through reverse image search and detection tools
+3. **Establish verification protocols** for high-stakes communications
+4. **Support provenance standards** (C2PA) that track media authenticity
+5. **Know your legal options** — Deepfake laws are being enacted in many jurisdictions

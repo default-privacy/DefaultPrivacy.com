@@ -22,11 +22,11 @@ Removing your information from the internet is a multi-step process that require
 ## Step 2: Remove from Data Brokers
 
 - **Manual**: Visit each site's opt-out page. Tedious (200+ sites) but free.
-- **Automated**: Compare vetted tools in the [tools directory](/directory) (e.g. Optery, DeleteMe). They handle opt-outs and many offer monitoring for reappearance.
+- **Automated**: Paid removal services handle opt-outs for you, and many monitor for reappearance.
 
 ## Step 3: Delete Old Accounts
 
-- Use JustDeleteMe.xyz to find deletion links for services
+- Look up each service's account deletion page
 - Don't just deactivate — fully delete accounts
 - Remember old forums, shopping sites, and social networks
 
@@ -41,11 +41,12 @@ Removing your information from the internet is a multi-step process that require
 - Use aliases and separate emails for different services
 - Use a mail receiving address on public forms instead of the house
 - Use privacy-protected domain registration
-- Use a VPN and privacy-focused browser
 - Strip metadata from photos before sharing
 
 ## Step 6: Monitor Ongoing
 
 - Set up Google Alerts for your name
 - Periodically re-check data broker sites
-- Use ongoing monitoring services
+- Use ongoing monitoring for reappearance
+
+For how to do it, see [Remove your name from data brokers](/guides/remove-name-from-data-brokers).

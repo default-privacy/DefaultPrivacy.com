@@ -13,22 +13,22 @@ A prioritized privacy checklist, from essential basics to advanced protection.
 
 ## Essential (Do These First)
 
-- [ ] Use a password manager (Bitwarden, 1Password, KeePassXC)
+- [ ] Use a password manager
 - [ ] Enable 2FA on email, banking, and social media (TOTP app or hardware key)
-- [ ] Switch to a privacy browser (Brave or Firefox + uBlock Origin)
-- [ ] Use a privacy-focused search engine (DuckDuckGo, Brave Search, Kagi)
-- [ ] Switch to encrypted messaging (Signal)
+- [ ] Switch to a privacy-focused browser
+- [ ] Use a privacy-focused search engine
+- [ ] Switch to encrypted messaging
 - [ ] Review and tighten social media privacy settings
 - [ ] Check if your email has been in breaches (Have I Been Pwned)
 
 ## Important (Do These Next)
 
-- [ ] Use a trustworthy VPN (Mullvad, IVPN, Proton VPN)
-- [ ] Switch to encrypted email (Proton Mail, Tuta)
-- [ ] Use email aliases for different services (SimpleLogin, addy.io)
+- [ ] Use a trustworthy VPN
+- [ ] Switch to encrypted email
+- [ ] Use email aliases for different services
 - [ ] Opt out of data broker sites (or use a removal service)
 - [ ] Disable advertising ID on your phone
-- [ ] Switch DNS to a privacy-respecting provider (Quad9, NextDNS)
+- [ ] Switch DNS to a privacy-respecting provider
 - [ ] Enable full-disk encryption on all devices
 
 ## Advanced
@@ -36,7 +36,7 @@ A prioritized privacy checklist, from essential basics to advanced protection.
 - [ ] Use Tor Browser for sensitive browsing
 - [ ] Set up compartmentalized identities
 - [ ] Use a mail receiving address on public forms instead of the house
-- [ ] Use a privacy-focused mobile OS (GrapheneOS, CalyxOS)
+- [ ] Use a privacy-focused mobile OS
 - [ ] Use hardware security keys for critical accounts
 - [ ] Self-host services where practical
 - [ ] Conduct a full privacy audit
@@ -48,3 +48,5 @@ A prioritized privacy checklist, from essential basics to advanced protection.
 - [ ] Review app permissions regularly
 - [ ] Update software promptly
 - [ ] Strip metadata from files before sharing
+
+For what to use, see [Privacy: Where to Start](/guides/privacy-where-to-start).

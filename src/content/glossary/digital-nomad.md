@@ -27,13 +27,11 @@ Digital nomads face unique privacy challenges because they operate across multip
 
 ## Privacy Toolkit for Nomads
 
-1. **VPN (always on)**: Mullvad or IVPN. Non-negotiable on public WiFi.
+1. **VPN (always on)**: Non-negotiable on public WiFi.
 2. **Encrypted devices**: Full-disk encryption on laptop and phone
-3. **Privacy screen protector**: Prevent shoulder surfing in public spaces
-4. **Faraday bag**: For border crossings
-5. **Travel phone**: Separate device for travel, minimal data
-6. **Proton Mail**: Swiss email that works anywhere
-7. **Signal**: Encrypted messaging across all countries
+3. **Travel phone**: Separate device for travel, minimal data
+
+For what to use, see [the remote worker privacy stack](/stacks/remote-worker-privacy-stack).
 
 ## Tax & Legal
 

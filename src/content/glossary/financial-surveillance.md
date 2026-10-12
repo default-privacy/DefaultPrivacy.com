@@ -58,14 +58,12 @@ Your transaction history reveals:
 - **Bank Secrecy Act (1970)**: Requires banks to report large and suspicious transactions
 - **Patriot Act (2001)**: Expanded financial surveillance powers post-9/11
 - **FATCA (2010)**: Forces foreign banks to report US account holders
-- **Corporate Transparency Act (2024)**: Requires beneficial ownership reporting
 
 ## How to Reduce Financial Surveillance
 
 1. **Use cash** for purchases you want to keep private
-2. **Use privacy cryptocurrencies** such as Monero for digital transactions
-3. **Minimize fintech connections** — Every app connected to your bank sees your data
-4. **Use prepaid cards** purchased with cash for online purchases
-5. **Separate personal and business finances** — LLC bank accounts don't carry your name
-6. **Understand reporting thresholds** — Don't "structure" transactions (illegal), but know what triggers reports
-7. **Use multiple banks** rather than concentrating all activity in one institution
+2. **Minimize fintech connections** — Every app connected to your bank sees your data
+3. **Understand reporting thresholds** — Don't "structure" transactions (illegal), but know what triggers reports
+4. **Use multiple banks** rather than concentrating all activity in one institution
+
+For more, see [Private Banking Is Mostly Dead](/guides/private-banking-is-mostly-dead).

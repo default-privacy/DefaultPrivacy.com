@@ -53,12 +53,10 @@ A security key is the gold standard for authentication. Unlike SMS codes or auth
 ## Types of Security Keys
 
 ### USB-A Keys
-- YubiKey 5 NFC
 - Traditional USB port
 - Most compatible
 
 ### USB-C Keys
-- YubiKey 5C
 - Modern laptops/phones
 - Growing standard
 
@@ -72,16 +70,9 @@ A security key is the gold standard for authentication. Unlike SMS codes or auth
 - Windows Hello
 - Platform authenticators
 
-## Popular Security Keys
-
-- **YubiKey**: Industry standard, multiple models
-- **Google Titan**: Google's offering
-- **Thetis**: Budget option
-- **SoloKeys**: Open source
-
 ## Getting Started
 
-1. **Buy 2+ keys** (always have backup)
+1. **Get at least two keys** (always have a backup)
 2. **Register with important accounts** (Google, GitHub, etc.)
 3. **Store backup securely** (different location)
 4. **Consider passkeys** (security key as password replacement)
@@ -92,4 +83,6 @@ A security key is the gold standard for authentication. Unlike SMS codes or auth
 - Not supported everywhere (improving)
 - Initial cost ($25-70 per key)
 - Physical presence required
+
+For where to start, see [Privacy: where to start](/guides/privacy-where-to-start).
 

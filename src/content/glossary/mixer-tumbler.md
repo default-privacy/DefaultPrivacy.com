@@ -24,11 +24,8 @@ Mixers and tumblers attempt to break the transaction trail on public blockchains
 
 ## Legal Status
 
-- Tornado Cash (Ethereum mixer) was sanctioned by the US Treasury in 2022
 - Bestmixer.io was shut down by Europol in 2019
 - Samourai Wallet developers were arrested in 2024
 - Using mixers for legitimate privacy is legal in most jurisdictions, but services that facilitate money laundering face enforcement
 
-## The Better Alternative
-
-Instead of adding privacy after the fact, use a cryptocurrency with built-in privacy, such as Monero. The privacy is indistinguishable from normal use.
+For what to use, see [Anonymous Payments and Financial Privacy](/stacks/anonymous-payments-financial-privacy).

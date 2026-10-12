@@ -23,14 +23,10 @@ Atomic swaps enable trustless cryptocurrency exchange directly between two parti
 - Transaction history isn't linked through an exchange account
 - No third party holds your funds at any point
 
-## Tools
-
-- **Farcaster**: BTC-XMR atomic swap protocol
-- **THORChain**: Decentralized cross-chain liquidity
-- **COMIT network**: Multi-chain atomic swap protocol
-
 ## Limitations
 
 - Fewer trading pairs than centralized exchanges
 - Liquidity can be limited
 - Bitcoin side of swaps is still visible on Bitcoin's public blockchain
+
+For what to use, see [No-KYC Crypto Opsec Stack](/stacks/no-kyc-crypto-opsec-stack).

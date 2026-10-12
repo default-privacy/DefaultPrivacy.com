@@ -26,4 +26,4 @@ Gag orders prevent companies from telling their users that the government has re
 
 ## Warrant Canaries
 
-Because companies can't say they HAVE received a gag order, some maintain statements saying they HAVEN'T. If the statement disappears, users can infer that a gag order was received. Default Privacy maintains a warrant canary on its transparency page.
+Because companies can't say they HAVE received a gag order, some maintain statements saying they HAVEN'T. If the statement disappears, users can infer that a gag order was received.

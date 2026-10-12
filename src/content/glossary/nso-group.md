@@ -63,7 +63,6 @@ NSO claims it only sells to "vetted government agencies" for "lawful" purposes (
 ## Consequences
 
 - **US government blacklisted NSO Group** in November 2021 (Commerce Department Entity List)
-- **Apple sued NSO Group** in November 2021
 - **WhatsApp/Meta sued NSO Group** — won in 2024
 - NSO Group reportedly faces financial difficulties and has explored selling to US defense contractors
 - Multiple countries have launched investigations

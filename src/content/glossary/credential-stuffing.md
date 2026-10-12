@@ -29,5 +29,6 @@ Credential stuffing is one of the most common attacks on the internet. It works 
 1. **Never reuse passwords** — use a password manager
 2. **Enable 2FA** on every account that supports it
 3. **Use passkeys** where available
-4. **Check HaveIBeenPwned** to see if your credentials were in a breach
-5. **Monitor for unusual login activity** on important accounts
+4. **Monitor for unusual login activity** on important accounts
+
+For what to use, see [How to choose a password manager](/guides/how-to-choose-a-password-manager).

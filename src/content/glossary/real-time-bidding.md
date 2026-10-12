@@ -58,15 +58,12 @@ Every time you visit a webpage with ads, your personal data is broadcast to hund
 ## What's Being Done
 
 - **IAB Europe TCF** deemed GDPR-non-compliant by Belgian DPA (2022)
-- **Google** is slowly deprecating third-party cookies (but replacing them with Topics API)
 - **ICCL** has filed complaints in multiple EU countries
 - **US Senator Ron Wyden** called RTB "the biggest data breach nobody talks about"
 
 ## How to Protect Yourself
 
-1. **Use an ad blocker** — uBlock Origin blocks ad auction scripts entirely
-2. **Use Brave Browser** — Blocks ads and trackers by default
-3. **Use a VPN** — Masks your real IP address in bid requests
-4. **Disable third-party cookies** — Reduces tracking data available
-5. **Use DNS-level blocking** — Pi-hole or NextDNS block ad domains network-wide
-6. **Opt out of ad personalization** — On Google, Facebook, and other platforms (limited effectiveness)
+1. **Disable third-party cookies** — Reduces tracking data available
+2. **Opt out of ad personalization** — On Google, Facebook, and other platforms (limited effectiveness)
+
+For what to use, see [Private DNS and Ad Blocking](/guides/private-dns-and-ad-blocking).

@@ -31,7 +31,6 @@ When a company exposes your data or violates your privacy, the individual harm m
 | **Facebook (BIPA)** | $650 million | 2021 | Facial recognition without consent |
 | **Equifax** | $700 million | 2019 | 147 million records breached |
 | **Capital One** | $190 million | 2022 | 100 million credit applications breached |
-| **Google (Incognito)** | $5 billion (settled) | 2024 | Tracking users in "private" browsing mode |
 | **TikTok (BIPA)** | $92 million | 2022 | Biometric data collection |
 | **Yahoo** | $117 million | 2020 | 3 billion accounts breached |
 | **T-Mobile** | $350 million | 2023 | 76 million records breached |

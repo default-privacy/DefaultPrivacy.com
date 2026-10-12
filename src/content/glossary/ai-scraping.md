@@ -54,6 +54,5 @@ Every major AI model was trained on data scraped from the open internet — incl
 2. **Use "noai" meta tags** where supported
 3. **Opt out directly** — OpenAI, Google, and others offer opt-out forms (limited effectiveness)
 4. **Minimize public content** that contains personal information
-5. **Use watermarking tools** like Glaze (for images) to poison AI training
-6. **Review privacy settings** on every platform — some now have "don't use my data for AI" toggles
-7. **Support legal action** — Class action lawsuits are establishing precedent
+5. **Review privacy settings** on every platform — some now have "don't use my data for AI" toggles
+6. **Support legal action** — Class action lawsuits are establishing precedent

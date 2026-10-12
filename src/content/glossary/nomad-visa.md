@@ -23,7 +23,6 @@ Digital nomad visas exploded after 2020, with 50+ countries now offering some fo
 
 | Country | Income Requirement | Duration | Tax Treatment |
 |---------|-------------------|----------|---------------|
-| **Portugal** | ~$3,500/mo | 1 year (renewable) | Taxed after 183 days (NHR may help) |
 | **Spain** | ~$2,500/mo | 1 year (renewable to 3) | Beckham Law: 24% flat rate |
 | **Estonia** | ~$4,500/mo | 1 year | Not taxed if <183 days |
 | **Croatia** | ~$2,500/mo | 1 year | Exempt from Croatian income tax |
@@ -55,18 +54,11 @@ Digital nomad visas exploded after 2020, with 50+ countries now offering some fo
 4. **Social security**: Some countries require social security contributions from residents, even remote workers
 5. **Double taxation**: Without a tax treaty, you could be taxed by both countries
 
-## Best Nomad Visas by Use Case
-
-- **Cheapest to obtain**: Georgia (Remotely from Georgia — free, no income requirement)
-- **Best for US citizens**: Bermuda or Barbados (zero local income tax, FEIE-eligible)
-- **Best for EU access**: Portugal or Spain (access to Schengen zone)
-- **Best tax deal**: Croatia or Georgia (explicit income tax exemption)
-- **Best infrastructure**: Dubai (modern, fast internet, massive nomad community)
-- **Best long-term**: Thailand LTR (5-10 year visa, rare for nomad programs)
-
 ## Privacy Considerations
 
 - Nomad visas require sharing personal data with foreign governments (passport, proof of income, bank statements)
 - Some countries share this data with your home country under CRS/FATCA
 - Consider whether the country has data protection laws (GDPR in EU countries)
 - Your digital footprint (IP address, location services) may conflict with where you claim to be for tax purposes
+
+For what to use, see [Remote worker privacy stack](/stacks/remote-worker-privacy-stack).

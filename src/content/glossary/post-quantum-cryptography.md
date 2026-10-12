@@ -48,22 +48,20 @@ NIST finalized its first post-quantum standards in 2024:
 
 - **Signal**: Added PQXDH (post-quantum key exchange) in 2023
 - **Apple iMessage**: PQ3 protocol using ML-KEM since 2024
-- **Chrome/Firefox**: Experimenting with hybrid TLS using ML-KEM
-- **Cloudflare**: Post-quantum TLS support in beta
 - **AWS**: Post-quantum TLS available for some services
 
 ## What It Means for You
 
 1. **Your messaging may already be quantum-safe** — Signal and iMessage have migrated
-2. **Web browsing** is transitioning — hybrid PQ TLS is being tested in major browsers
+2. **Web browsing** is transitioning
 3. **VPNs** will need to upgrade — WireGuard and OpenVPN are working on PQ support
 4. **Cryptocurrency** faces challenges — Bitcoin and Ethereum use ECDSA (vulnerable)
 5. **Your current encrypted data** — Files encrypted with AES-256 are already quantum-safe (symmetric encryption is resistant)
 
 ## Action Items
 
-1. **Use Signal or iMessage** for messaging (already post-quantum)
-2. **Use AES-256** for file encryption (quantum-resistant)
-3. **Update software regularly** — PQ upgrades arrive through updates
-4. **Watch for VPN PQ support** — Choose providers actively implementing it
-5. **Think about long-term secrets** — If data needs to be protected for 10+ years, consider the quantum timeline now
+1. **Use AES-256** for file encryption (quantum-resistant)
+2. **Update software regularly** — PQ upgrades arrive through updates
+3. **Think about long-term secrets** — If data needs to be protected for 10+ years, consider the quantum timeline now
+
+For what to use, see [Signal vs SimpleX](/guides/signal-vs-simplex).

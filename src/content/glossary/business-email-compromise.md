@@ -1,7 +1,7 @@
 ---
 term: "Business Email Compromise"
 slug: "business-email-compromise"
-definition: "A sophisticated scam where criminals impersonate executives, vendors, or business partners via email to trick employees into wiring money or sharing sensitive data — the FBI's most costly cybercrime category at $2.9 billion in annual losses."
+definition: "A sophisticated scam where criminals impersonate executives, vendors, or business partners via email to trick employees into wiring money or sharing sensitive data."
 category: "Attacks"
 relatedTerms:
   - "phishing"
@@ -23,7 +23,7 @@ keywords:
   - "email impersonation scam"
 ---
 
-Business Email Compromise is the **most financially devastating cybercrime** in the world — not ransomware, not data breaches, but carefully crafted emails that trick people into sending money.
+Business Email Compromise is a costly form of fraud built on carefully crafted emails that trick people into sending money.
 
 ## How It Works
 
@@ -55,8 +55,6 @@ Business Email Compromise is the **most financially devastating cybercrime** in 
 | 2021 | $2.39 billion |
 | 2022 | $2.74 billion |
 | 2023 | $2.95 billion |
-
-BEC is the **#1 cybercrime by financial loss** — exceeding ransomware, data breaches, and all other categories combined.
 
 ## Why It's So Effective
 

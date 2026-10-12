@@ -38,7 +38,7 @@ Edward Snowden's disclosures proved that mass surveillance was not conspiracy th
 ## Fighting Back
 
 - End-to-end encryption for all communications
-- VPNs and Tor for browsing
-- Privacy-focused services (Proton, Signal, Mullvad)
 - Supporting organizations like EFF, Privacy International, ACLU
 - Voting for representatives who oppose mass surveillance
+
+For what to use, see [Privacy starter kit](/stacks/privacy-starter-kit).

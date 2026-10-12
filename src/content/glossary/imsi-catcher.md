@@ -27,8 +27,9 @@ IMSI catchers (also known by the brand name Stingray) are surveillance tools use
 
 ## Protection
 
-- Use end-to-end encrypted messaging (Signal, not SMS)
+- Use end-to-end encrypted messaging instead of SMS
 - Use a VPN for data connections
 - Enable "5G/LTE Only" mode to prevent 2G downgrades
-- Apps like SnoopSnitch can detect some IMSI catchers on Android
 - Ultimately, a Faraday bag is the only way to guarantee no cellular tracking
+
+For what to use, see [Secure messaging stack](/stacks/secure-messaging-stack).

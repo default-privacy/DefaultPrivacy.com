@@ -78,5 +78,6 @@ While there's no federal right to be forgotten in the US, you can still:
 - Exercise deletion rights under California, Virginia, Colorado, Connecticut, and other state laws
 - Request removal from data broker sites (opt-out processes)
 - Use Google's personal information removal tool
-- Engage a vetted data removal service — compare options in the [tools directory](/directory); examples include Optery, DeleteMe, and others
 - Send cease and desist letters for unauthorized use of personal information
+
+For what to use, see [Remove Your Name from Data Brokers](/guides/remove-name-from-data-brokers).

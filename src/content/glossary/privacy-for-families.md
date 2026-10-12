@@ -37,9 +37,8 @@ Your family's digital privacy is only as strong as its weakest link. Children, t
 2. **Limit sharenting** — Every photo of your child online is permanent
 3. **Vet apps and games** before allowing installation — check privacy policies
 4. **Disable ad tracking** on children's devices
-5. **Use privacy-respecting alternatives** — Open-source educational apps, F-Droid store
-6. **Freeze their credit** — Children's Social Security numbers are frequently stolen for identity fraud
-7. **Use family accounts** you control rather than individual accounts for children
+5. **Freeze their credit** — Children's Social Security numbers are frequently stolen for identity fraud
+6. **Use family accounts** you control rather than individual accounts for children
 
 ## Teenagers
 
@@ -55,8 +54,7 @@ Your family's digital privacy is only as strong as its weakest link. Children, t
 2. **Help set up private accounts** with strong settings from the start
 3. **Discuss the permanence of online content** — today's post is tomorrow's search result
 4. **Monitor data broker sites** for your teen's information
-5. **Provide privacy tools** — VPN, encrypted messaging, password manager
-6. **Model good privacy behavior** — they learn from what you do, not what you say
+5. **Model good privacy behavior** — they learn from what you do, not what you say
 
 ## Elderly Family Members
 
@@ -77,8 +75,8 @@ Your family's digital privacy is only as strong as its weakest link. Children, t
 
 ## Whole-Family Privacy
 
-- **Family password manager** — Shared vault for family accounts (Bitwarden family plan)
-- **Home network security** — DNS-level ad blocking (Pi-hole), VPN on the router
 - **Shared family code word** — For verifying identity in emergency calls (defense against AI voice cloning)
 - **Regular family privacy reviews** — Quarterly check-ups as a household
 - **Privacy-respecting defaults** — Configure new devices before anyone starts using them
+
+For what to use, see [Privacy: where to start](/guides/privacy-where-to-start).

@@ -36,13 +36,7 @@ When you self-host, you're the landlord. Your data lives on your terms—or on a
 
 ## What You Can Self-Host
 
-- **Email**: Mailcow, Mail-in-a-Box, iRedMail
-- **Cloud storage**: Nextcloud, OwnCloud
-- **Password manager**: Vaultwarden (Bitwarden-compatible)
-- **VPN**: WireGuard, OpenVPN
-- **Analytics**: Umami, Plausible, Matomo
-- **Search**: SearXNG
-- **Communication**: Matrix, Mattermost, Rocket.Chat
+Email, cloud storage, password managers, VPNs, web analytics, search engines and team chat all have self-hostable open-source options.
 
 ## Tradeoffs
 
@@ -55,3 +49,5 @@ When you self-host, you're the landlord. Your data lives on your terms—or on a
 ## Managed Alternatives
 
 Privacy-focused managed hosting providers run the same self-hosted software on your behalf — you get the control without the ops burden.
+
+For what to use, see [Self-Hosted Privacy Homelab](/stacks/self-hosted-privacy-homelab).

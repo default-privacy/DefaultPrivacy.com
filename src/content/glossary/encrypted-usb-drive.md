@@ -15,12 +15,6 @@ Hardware-encrypted USB drives protect data with on-device encryption that can't 
 - **Hardware**: Encryption chip on the drive itself. No software needed on the host computer. Faster, harder to attack.
 - **Software**: Uses VeraCrypt or BitLocker. Requires software installation. More flexible but potentially vulnerable to keyloggers.
 
-## Recommended Drives
-
-- **Apricorn Aegis**: Hardware encrypted, PIN-authenticated
-- **Kingston IronKey**: FIPS 140-2 certified, tamper-evident
-- **iStorage datAshur**: PIN-authenticated, auto-wipe after failed attempts
-
 ## Features to Look For
 
 - AES-256 hardware encryption

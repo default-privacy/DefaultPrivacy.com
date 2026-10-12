@@ -26,58 +26,22 @@ keywords:
 
 Your email is the **master key** to your digital identity — password resets, account verification, and communications all flow through it. Using anonymous or privacy-focused email is one of the most impactful privacy upgrades you can make.
 
-## Tiers of Email Privacy
+## Levels of Email Privacy
 
-### Tier 1: Privacy-Focused Providers
-Full-featured email with strong privacy protections:
-
-| Service | E2EE | No Phone Required | Tor Access | Free Tier |
-|---------|------|-------------------|------------|-----------|
-| **ProtonMail** | Yes | Yes* | Yes (.onion) | 1 GB |
-| **Tuta (Tutanota)** | Yes | Yes | Yes | 1 GB |
-| **Disroot** | No (IMAP) | Yes | No | 1 GB |
-
-*ProtonMail may ask for verification during sign-up (can use email instead of phone)
-
-### Tier 2: Email Aliases & Forwarding
-Hide your real email address behind aliases:
-
-| Service | How It Works | Free Tier |
-|---------|-------------|-----------|
-| **SimpleLogin** (Proton) | Unlimited aliases, forwarding | 10 aliases |
-| **AnonAddy (addy.io)** | Unlimited aliases | Unlimited standard |
-| **Firefox Relay** | Random aliases, forwarding | 5 aliases |
-| **Apple Hide My Email** | Per-service unique addresses | iCloud+ required |
-
-### Tier 3: Temporary/Disposable
-One-time use addresses for signups that require email:
-
-| Service | Duration | Notes |
-|---------|----------|-------|
-| **Guerrilla Mail** | 1 hour | No signup, instant |
-| **Temp Mail** | Session-based | Auto-generated |
-| **10MinuteMail** | 10 minutes | Extended on request |
-
-### Tier 4: Maximum Anonymity
-For high-threat situations:
-- **Create ProtonMail via Tor** — sign up over Tor for no IP logging
-- **OnionMail** — Email service accessible only via Tor
-- **Use a public WiFi network** with a VPN for initial account creation
-- **Pay for premium with cryptocurrency** for no financial link
+- **Privacy-focused providers**: full-featured mailboxes with strong protections, ideally end-to-end encrypted, with minimal sign-up requirements.
+- **Aliases and forwarding**: a masking address that forwards to your real inbox, so each service sees a unique address.
+- **Temporary or disposable addresses**: one-time inboxes for signups that only need a working email for a moment.
+- **Maximum anonymity**: for high-threat situations, creating and using accounts over Tor and paying in ways that do not link to your identity.
 
 ## What Makes Email "Anonymous"
 
 1. **No personal info required to sign up** (no phone number, no real name)
 2. **No IP logging** (or accessible via Tor)
 3. **End-to-end encryption** (provider can't read your mail)
-4. **Jurisdiction** — provider is in a country with strong privacy laws (Switzerland, Germany)
+4. **Jurisdiction**: provider is in a country with strong privacy laws
 5. **No data sharing** with governments without proper legal process
-6. **Open source** — code can be audited for backdoors
+6. **Open source**: code can be audited for backdoors
 
-## Practical Setup Guide
+In practice, people separate email by purpose: a primary private mailbox for daily use, aliases for signups, and disposable addresses for one-time verifications. Free mainstream mail services are built on scanning and profiling, so they are a poor fit for anything you want to keep private.
 
-1. **Daily use**: ProtonMail or Tuta as your primary private email
-2. **Signups and services**: Use SimpleLogin or addy.io aliases (one per service)
-3. **Throwaway needs**: Guerrilla Mail or Temp Mail for one-time verifications
-4. **Sensitive communications**: ProtonMail accessed via Tor, or end-to-end encrypted email
-5. **Never use Gmail, Yahoo, or Outlook** for anything you want to keep private
+For what to use, see [Escape Gmail with encrypted email and aliases](/stacks/escape-gmail-encrypted-email-aliases).

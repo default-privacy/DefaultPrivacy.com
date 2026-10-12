@@ -38,7 +38,7 @@ Between March and September 2017, WikiLeaks published **8,761 documents and file
 - **"Weeping Angel"**: Developed with MI5, this tool put Samsung smart TVs into a "fake off" mode while recording conversations through the TV's microphone
 
 ### Computer Hacking
-- **Windows**: Multiple exploits including those later used in WannaCry-like attacks
+- **Windows**: Multiple exploits
 - **macOS**: EFI/firmware-level implants that survive OS reinstallation
 - **Linux**: Tools for targeting Linux servers and desktops
 

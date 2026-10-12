@@ -18,13 +18,8 @@ Your recursive DNS resolver is one of the most privacy-sensitive services you us
 - This creates a complete browsing profile even with HTTPS
 - ISPs may sell this data or share it with government
 
-## Privacy-Focused Alternatives
-
-- **Quad9** (9.9.9.9): Non-profit, blocks malware domains, no logging
-- **NextDNS**: Customizable filtering, minimal logging, Swiss-based
-- **Cloudflare** (1.1.1.1): Fast, logs purged after 24 hours
-- **Mullvad DNS**: No logging, available over DoH and DoT
-
 ## Best Practice
 
 Use DNS-over-HTTPS or DNS-over-TLS to encrypt your DNS queries. Without encryption, even a privacy-focused DNS provider can have your queries intercepted in transit.
+
+For what to use, see [Private DNS and ad blocking](/guides/private-dns-and-ad-blocking).

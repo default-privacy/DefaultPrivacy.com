@@ -25,12 +25,6 @@ While encryption makes data unreadable, steganography makes it invisible.
 - **Text**: Use whitespace variations, Unicode homoglyphs, or zero-width characters
 - **Network**: Hide data in protocol headers or timing patterns
 
-## Tools
-
-- **OpenStego**: Open-source image steganography
-- **Steghide**: CLI tool for JPEG, BMP, WAV, AU
-- **Snow**: Hide data in whitespace at the end of text lines
-
 ## Detection
 
 Steganalysis can sometimes detect hidden data through statistical analysis of pixel distributions. Always encrypt data before hiding it — steganography provides concealment, not security.

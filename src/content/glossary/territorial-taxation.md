@@ -21,29 +21,6 @@ Under a territorial tax system:
 
 This is the opposite of the **worldwide taxation** system used by the US, which taxes citizens on all income regardless of where it's earned.
 
-## Popular Territorial Tax Countries for Nomads
-
-| Country | Income Tax on Foreign Income | Notes |
-|---------|----------------------------|-------|
-| **Panama** | 0% | One of the strongest territorial systems. Friendly Nations Visa available. |
-| **Paraguay** | 0% | Easy residency, low cost of living, path to citizenship in 3 years |
-| **Costa Rica** | 0% | Popular with Americans, but higher cost of living |
-| **Georgia** | 0% (first year) / 1% (small business) | The Virtual Zone program offers 0% corporate tax on IT services |
-| **Malaysia** | 0% (on most foreign income) | MM2H program, but recently changed some rules |
-| **Guatemala** | 0% | Territorial system, low cost |
-| **Nicaragua** | 0% | Territorial, but political instability concerns |
-| **Thailand** | Complex | Foreign income not taxed if not remitted in the same year (changing in 2024+) |
-
-## Zero-Tax Jurisdictions (No Income Tax at All)
-
-| Country | Residency Available? | Notes |
-|---------|---------------------|-------|
-| **UAE (Dubai)** | Yes (freelancer/investor visa) | Growing nomad hub, modern infrastructure |
-| **Bahamas** | Yes (annual residency permit) | Close to US, English-speaking |
-| **Cayman Islands** | Yes (but expensive) | $120,000+ income requirement |
-| **Bermuda** | Yes (digital nomad visa) | Work Remotely in Bermuda program |
-| **Monaco** | Yes (but need $500k+ deposit) | European lifestyle, zero income tax |
-
 ## Critical Distinctions
 
 ### Source Rules Matter
@@ -60,15 +37,4 @@ Increasingly, countries require you to demonstrate genuine economic substance:
 
 ## The US Citizen Problem
 
-Territorial taxation is **irrelevant** for US citizens unless they renounce. The US taxes worldwide income regardless of where you live or where the income is sourced. This is why many American nomads pursue:
-
-1. **FEIE** ($126,500 exclusion) as a first step
-2. **Expatriation** as the ultimate step to access territorial tax benefits
-
-## Combining with Flag Theory
-
-The most powerful setup combines:
-- **Tax residency** in a territorial or zero-tax country
-- **A company** in the place you actually operate it
-- **Banking** in a stable, accessible jurisdiction
-- **Citizenship** that provides travel freedom and a safety net
+Territorial taxation is **irrelevant** for US citizens unless they renounce. The US taxes worldwide income regardless of where you live or where the income is sourced. This is why many American nomads pursue expatriation to access territorial tax benefits.

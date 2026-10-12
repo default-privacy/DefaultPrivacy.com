@@ -20,23 +20,13 @@ Whistleblowers are essential for accountability but face severe consequences. Pr
 - **Reality Winner**: Leaked NSA document about Russian election interference
 - **Frances Haugen**: Exposed Facebook's internal research on harm
 
-## Secure Disclosure Tools
-
-- **SecureDrop**: Used by 70+ news organizations for anonymous tips (Tor-based)
-- **Signal**: Encrypted messaging for source communication
-- **Tails**: Leave no trace on the computer used
-- **Tor**: Anonymous browsing and communication
-- **OnionShare**: Anonymous file sharing
-
 ## OPSEC for Whistleblowers
 
 1. Never use work devices or networks
-2. Use Tails on a dedicated device
-3. Access SecureDrop only over Tor
-4. Don't tell anyone what you're doing
-5. Don't search for related topics on personal devices
-6. Assume all digital activity is monitored
-7. Be aware of printer tracking dots (yellow dots that identify the printer)
+2. Don't tell anyone what you're doing
+3. Don't search for related topics on personal devices
+4. Assume all digital activity is monitored
+5. Be aware of printer tracking dots (yellow dots that identify the printer)
 
 ## Legal Protections
 
@@ -44,3 +34,5 @@ Whistleblowers are essential for accountability but face severe consequences. Pr
 - EU Whistleblower Directive (2019)
 - Protections vary enormously by jurisdiction
 - Legal protection doesn't guarantee safety — operational security is essential
+
+For what to use, see [Journalist Privacy Stack](/stacks/journalist-privacy-stack).

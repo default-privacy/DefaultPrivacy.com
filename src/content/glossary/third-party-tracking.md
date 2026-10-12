@@ -33,7 +33,9 @@ Third-party tracking is the backbone of surveillance advertising. It follows you
 
 ## Protection
 
-1. **Browser**: Use Brave or Firefox with strict tracking protection
-2. **Extensions**: uBlock Origin, Privacy Badger
-3. **DNS**: NextDNS or AdGuard DNS to block trackers at the network level
+1. **Browser**: Use a browser with strict tracking protection
+2. **Extensions**: Tracker and ad blockers stop many third-party requests
+3. **DNS**: DNS-level blocking stops trackers at the network level
 4. **VPN**: Hides your IP from trackers
+
+For what to use, see [private browsers compared](/guides/private-browsers-compared).

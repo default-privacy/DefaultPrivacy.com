@@ -58,8 +58,8 @@ Programmable money only becomes inescapable when cash is eliminated. As long as 
 ## How to Prepare
 
 1. **Use cash** for everyday purchases while it still exists
-2. **Hold privacy cryptocurrencies** like Monero as alternative money outside the programmable system
-3. **Build financial redundancy** — Don't keep all value in a single system
-4. **Support right-to-cash legislation** — Several countries and US states are considering laws protecting cash acceptance
-5. **Understand your jurisdiction's CBDC timeline** and participate in public comment periods
-6. **Diversify into real assets** — Physical goods, precious metals, and skills can't be programmed
+2. **Build financial redundancy** — Don't keep all value in a single system
+3. **Support right-to-cash legislation** — Several countries and US states are considering laws protecting cash acceptance
+4. **Understand your jurisdiction's CBDC timeline** and participate in public comment periods
+
+For what to use, see [Anonymous payments and financial privacy](/stacks/anonymous-payments-financial-privacy).

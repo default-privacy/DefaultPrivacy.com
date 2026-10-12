@@ -1,7 +1,7 @@
 ---
 term: "AES-GCM"
 slug: "aes-gcm"
-definition: "A mode of AES encryption that provides both confidentiality and authentication in a single operation, widely used in TLS and disk encryption."
+definition: "A mode of AES encryption that provides both confidentiality and authentication in a single operation, widely used in TLS."
 category: "Encryption"
 relatedTerms:
   - "aes"
@@ -22,7 +22,6 @@ AES-GCM (Galois/Counter Mode) is an authenticated encryption mode that combines 
 
 - TLS 1.2 and 1.3
 - IPsec VPNs
-- Full-disk encryption (LUKS, BitLocker)
 - Cloud storage encryption
 - SSH
 

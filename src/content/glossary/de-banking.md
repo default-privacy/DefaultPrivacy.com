@@ -56,10 +56,9 @@ Your transaction history reveals your life (see: Financial Surveillance). De-ban
 ## How to Protect Yourself
 
 1. **Maintain accounts at multiple banks** — Don't put all eggs in one basket
-2. **Use credit unions** — Less subject to large-bank political pressures
-3. **Hold emergency cash** — 1-3 months of expenses in physical currency
-4. **Build cryptocurrency reserves** — Monero doesn't require permission from anyone
-5. **Use an LLC for business banking** — Business accounts have different risk profiles
-6. **Know your rights** — Some states are passing anti-de-banking legislation
-7. **Keep records** — If de-banked unfairly, you may have legal recourse
-8. **Diversify payment methods** — Don't rely solely on one payment processor
+2. **Hold emergency cash** — 1-3 months of expenses in physical currency
+3. **Know your rights** — Some states are passing anti-de-banking legislation
+4. **Keep records** — If de-banked unfairly, you may have legal recourse
+5. **Diversify payment methods** — Don't rely solely on one payment processor
+
+For what to use, see [Private Banking Is Mostly Dead](/guides/private-banking-is-mostly-dead).

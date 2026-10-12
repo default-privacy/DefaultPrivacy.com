@@ -24,7 +24,6 @@ Even sophisticated security can be undone by a single OPSEC mistake. Most anonym
 
 - **Silk Road**: Ross Ulbricht posted his real email on a forum promoting Silk Road years earlier
 - **Hector Monsegur (Sabu)**: Connected to an IRC channel without Tor once
-- **Ross Ulbricht again**: Used a public WiFi network at a cafe where he was arrested with his laptop open
 
 ## Prevention
 

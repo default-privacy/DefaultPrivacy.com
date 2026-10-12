@@ -51,21 +51,20 @@ That free coffee shop WiFi is convenient — but it's also a hunting ground for 
 ## How to Stay Safe
 
 ### Essential (Do These Every Time)
-1. **Use a VPN** — Encrypts all traffic between your device and the VPN server. This is the single most important step.
-2. **Verify HTTPS** — Only enter sensitive information on HTTPS sites (padlock icon). Use the **HTTPS Everywhere** extension.
-3. **Forget the network after use** — Prevent your device from auto-connecting next time
+1. **Verify HTTPS** — Only enter sensitive information on HTTPS sites (padlock icon).
+2. **Forget the network after use** — Prevent your device from auto-connecting next time
 
 ### Recommended
-4. **Disable auto-connect** — Turn off automatic WiFi connection in your device settings
-5. **Use DNS over HTTPS** — Prevents DNS queries from being intercepted (Firefox: enabled by default; other browsers: manual setting)
-6. **Turn off file sharing and AirDrop** — Close any sharing services on your device
-7. **Enable your firewall** — Block incoming connections
+3. **Disable auto-connect** — Turn off automatic WiFi connection in your device settings
+4. **Use DNS over HTTPS** — Prevents DNS queries from being intercepted (Firefox: enabled by default; other browsers: manual setting)
+5. **Turn off file sharing and AirDrop** — Close any sharing services on your device
+6. **Enable your firewall** — Block incoming connections
 
 ### Advanced
-8. **Use your phone's hotspot instead** — Cellular data is much harder to intercept than WiFi
-9. **Check the network name with staff** — Verify the exact SSID before connecting
-10. **Use a travel router** — A portable VPN router creates your own encrypted network
-11. **Run a DNS leak test** to verify your VPN is working properly on public WiFi
+7. **Use your phone's hotspot instead** — Cellular data is much harder to intercept than WiFi
+8. **Check the network name with staff** — Verify the exact SSID before connecting
+9. **Use a travel router** — A portable VPN router creates your own encrypted network
+10. **Run a DNS leak test** to verify your VPN is working properly on public WiFi
 
 ## The VPN Solution
 
@@ -73,4 +72,5 @@ A VPN is effectively a **private tunnel** through the public network:
 - All data between your device and the VPN server is encrypted
 - Even if someone intercepts your traffic, they see encrypted gibberish
 - Your browsing, logins, and activity are hidden from the local network
-- Use a reputable VPN provider (look for no-logs policies, independent audits)
+
+For what to use, see [Remote worker privacy stack](/stacks/remote-worker-privacy-stack).

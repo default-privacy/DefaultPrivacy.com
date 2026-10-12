@@ -32,7 +32,6 @@ Privacy washing is when companies wrap data exploitation in privacy-friendly mar
 - **"Privacy is our priority"** — while the business model is advertising based on personal data
 
 ### Misleading Product Names
-- **Google "Privacy Sandbox"** — Replaces third-party cookies with Google's own tracking system (Topics API)
 - **Apple "Privacy Nutrition Labels"** — While Apple's own apps collect significant data
 - **"Private browsing" / "Incognito mode"** — Doesn't prevent ISP, employer, or website tracking
 
@@ -50,8 +49,6 @@ Privacy washing is when companies wrap data exploitation in privacy-friendly mar
 
 ### Google
 - Markets Chrome's "Enhanced Safe Browsing" as a privacy feature — but it sends your browsing URLs to Google for analysis
-- "Privacy Sandbox" doesn't eliminate tracking; it consolidates it under Google's control
-- Paid $5 billion to settle a lawsuit over tracking users in Chrome's "Incognito" mode
 
 ### Meta/Facebook
 - Claimed encryption was about "user privacy" while lobbying governments to weaken encryption for content monitoring

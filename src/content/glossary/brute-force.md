@@ -51,10 +51,6 @@ Try every possible combination:
 - 95^12 = 540 sextillion combinations
 - At 10 billion/sec: 1.7 million years
 
-### Passphrase (5 random words)
-- 7776^5 = 28 trillion trillion combinations
-- Effectively uncrackable
-
 ## Defense Strategies
 
 ### For Passwords

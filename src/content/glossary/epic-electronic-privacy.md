@@ -47,7 +47,6 @@ EPIC is the privacy world's watchdog in Washington D.C. — using FOIA requests,
 
 ## Key Victories
 
-- Played a role in establishing the **Privacy Act of 1974**
 - Contributed to **COPPA** (Children's Online Privacy Protection Act) development
 - Challenged the TSA's body scanner program
 - FOIA'd documents revealing FBI's use of facial recognition

@@ -1,7 +1,7 @@
 ---
 term: "Colorado Algorithmic Accountability Act"
 slug: "colorado-algorithmic-accountability-act"
-definition: "The Colorado Algorithmic Accountability Act is a state law, effective February 2026, that requires businesses to assess high-risk automated decision systems for algorithmic discrimination before deployment and on an ongoing basis."
+definition: "Colorado's algorithmic discrimination law requires businesses to assess high-risk automated decision systems for algorithmic discrimination before deployment and on an ongoing basis."
 category: "Legal"
 relatedTerms:
   - "algorithmic-accountability"
@@ -20,7 +20,7 @@ keywords:
   - "automated decision systems compliance"
 ---
 
-The Colorado Algorithmic Accountability Act (Senate Bill 205) is the first US state law specifically governing the use of high-risk artificial intelligence systems in consequential decision-making. Effective February 1, 2026, it requires developers and deployers of high-risk AI to conduct impact assessments, disclose algorithmic decision-making to affected individuals, and take corrective action when discrimination is discovered.
+The Colorado Algorithmic Accountability Act (Senate Bill 205) is the first US state law specifically governing the use of high-risk artificial intelligence systems in consequential decision-making. It requires developers and deployers of high-risk AI to conduct impact assessments, disclose algorithmic decision-making to affected individuals, and take corrective action when discrimination is discovered.
 
 ## Why It Matters
 
@@ -85,7 +85,6 @@ The Colorado Attorney General enforces the law. There is no private right of act
 | **Conformity assessment** | Impact assessments by deployers | Third-party audits required for highest-risk systems |
 | **Enforcement** | State AG only | National regulators + EU AI Office |
 | **Extraterritoriality** | Colorado residents | EU market |
-| **Effective date** | February 2026 | Phased 2024–2027 |
 
 ## What Organizations Should Do Now
 

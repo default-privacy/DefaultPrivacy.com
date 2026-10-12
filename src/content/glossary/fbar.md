@@ -23,7 +23,6 @@ Any "US person" (citizen, green card holder, or tax resident) who has a financia
 - Mutual funds
 - Trusts
 - Insurance policies with cash value
-- Cryptocurrency on foreign exchanges (per recent FinCEN guidance)
 - Pension accounts in foreign countries
 
 ## The $10,000 Threshold
@@ -44,13 +43,11 @@ Any "US person" (citizen, green card holder, or tax resident) who has a financia
 
 | Violation | Penalty |
 |-----------|---------|
-| Non-willful | Up to **$10,000 per account per year** |
 | Willful | Greater of $100,000 or **50% of the account balance** per year |
 | Criminal | Up to 5 years in prison and $250,000 fine |
 
 ## Common Mistakes
 
-- **Crypto on foreign exchanges**: Many nomads don't realize Binance, Kraken (for non-US), or other foreign-based exchanges may trigger FBAR
 - **Wise/Revolut**: Multi-currency accounts held at foreign institutions count
 - **Joint accounts**: If your spouse is on a foreign account, both must file
 - **Closed accounts**: If an account was open at any point during the year and exceeded the threshold, it must be reported even if closed

@@ -22,7 +22,6 @@ ChaCha20-Poly1305 combines the ChaCha20 stream cipher with the Poly1305 message 
 
 - TLS 1.3 (preferred cipher suite on many servers)
 - WireGuard VPN protocol
-- Signal Protocol (messaging)
 - SSH (OpenSSH)
 - Google Chrome (for connections to Google servers)
 

@@ -52,7 +52,6 @@ AES encrypts fixed-size blocks. Modes handle larger data:
 ## Where You Encounter AES
 
 - **HTTPS/TLS**: Web traffic encryption
-- **VPNs**: WireGuard, OpenVPN
 - **Disk encryption**: BitLocker, FileVault, VeraCrypt
 - **File encryption**: 7-Zip, most archive tools
 - **Messaging**: Signal, WhatsApp (part of the protocol)

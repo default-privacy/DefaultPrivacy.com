@@ -45,12 +45,11 @@ Studies show that 99%+ of browsers have unique fingerprints. Even small changes 
 
 ## Protection Strategies
 
-1. **Tor Browser**: Designed to make all users look identical
-2. **Firefox with resistFingerprinting**: `privacy.resistFingerprinting = true`
-3. **Brave Browser**: Built-in fingerprinting protection
-4. **Browser extensions**: Canvas Blocker, uBlock Origin
+Protection works in two ways: making all users look identical, or randomizing or blocking the data sites can read. Both trade off against usability.
 
 ## The Irony of Protection
 
 Adding anti-fingerprinting extensions can make you *more* unique. The best approach is using a browser designed from the ground up for fingerprint resistance.
+
+For what to use, see [Private Browsers Compared](/guides/private-browsers-compared).
 

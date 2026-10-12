@@ -28,4 +28,3 @@ DDoS attacks use distributed resources to flood a target with more traffic than 
 - DDoS attacks are used to silence privacy advocates and independent media
 - Tor entry nodes face constant DDoS attempts
 - Privacy-focused services need robust DDoS protection
-- Cloudflare and Bunny CDN provide DDoS protection for privacy-respecting sites

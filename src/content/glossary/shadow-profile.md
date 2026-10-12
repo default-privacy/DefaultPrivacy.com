@@ -67,7 +67,6 @@ When Mark Zuckerberg was asked about shadow profiles during his 2018 congression
 ## What You Can Do
 
 1. **Ask friends and family not to upload their contacts** to social media (unlikely to work at scale)
-2. **Use browser privacy tools** — block Facebook tracking pixels with uBlock Origin, Firefox's Enhanced Tracking Protection, or Brave
-3. **Use a VPN** to prevent IP-based tracking
-4. **Minimize your digital footprint** — the less data that exists about you, the thinner the shadow profile
-5. **Support data removal** — services in the [tools directory](/directory) help reduce the broker data that feeds shadow profiles
+2. **Minimize your digital footprint** — the less data that exists about you, the thinner the shadow profile
+
+For what to use, see [Private Browsers Compared](/guides/private-browsers-compared).

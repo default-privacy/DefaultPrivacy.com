@@ -28,19 +28,19 @@ De-Googling is one of the most impactful privacy improvements you can make, beca
 ## Step-by-Step De-Googling
 
 ### Phase 1: Quick Wins
-- Switch search engine to DuckDuckGo or Brave Search
-- Switch browser to Brave or Firefox
-- Switch messaging from Google Messages to Signal
+- Switch to a search engine that does not profile you
+- Switch to a privacy-respecting browser
+- Move messaging off Google Messages to an end-to-end encrypted app
 
 ### Phase 2: Email & Cloud
-- Migrate email to Proton Mail or Tuta
-- Move files from Drive to Proton Drive or Tresorit
-- Switch calendar to Proton Calendar
+- Migrate email to a privacy-focused provider
+- Move files out of Drive to an encrypted storage service
+- Move your calendar and contacts with them
 
 ### Phase 3: Mobile
-- Install GrapheneOS or CalyxOS (de-Googled Android)
-- Use F-Droid for apps instead of Google Play
-- Use Organic Maps instead of Google Maps
+- Move to a de-Googled Android build
+- Use an alternative app store instead of Google Play
+- Use an alternative to Google Maps
 
 ### Phase 4: Account
 - Download your data via Google Takeout
@@ -49,3 +49,5 @@ De-Googling is one of the most impactful privacy improvements you can make, beca
 ## The Challenge
 
 Some services are hard to replace (YouTube has no real alternative for content). De-Googling is a spectrum — every step reduces your data exposure, even if you can't eliminate Google entirely.
+
+For what to use, see [De-Google your life](/stacks/de-google-your-life).

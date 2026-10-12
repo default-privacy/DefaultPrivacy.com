@@ -85,15 +85,9 @@ A burner phone provides communication capability without linking to your real id
 - SIM registration increasing globally
 - eSIM harder to anonymize
 
-## Better Alternatives
-
-### For Most Privacy Needs
-- Encrypted messaging (Signal)
-- VoIP services
-- Email aliases
-
-### For High Security
+## Alternatives for High Security
 - Air-gapped communication
 - One-time meeting arrangements
 - Dead drops
 
+For what to use, see [Get a second phone number](/guides/get-a-second-phone-number).

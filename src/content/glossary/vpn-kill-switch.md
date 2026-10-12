@@ -24,13 +24,10 @@ Without a kill switch, a momentary VPN disconnection exposes your real IP and tr
 - **System-level**: Blocks ALL internet traffic when VPN drops (more secure)
 - **Firewall-based**: Uses OS firewall rules (most robust)
 
-## VPNs with Kill Switches
-
-- Mullvad (always-on, firewall-based)
-- IVPN (firewall-based)
-- Proton VPN (always-on option)
-- WireGuard can be configured with firewall rules for kill switch behavior
+WireGuard can be configured with firewall rules for kill switch behavior.
 
 ## Should You Use It?
 
 Yes, always. There's no downside to a kill switch beyond a brief internet interruption when the VPN reconnects.
+
+For what to use, see [Mullvad vs Proton VPN](/guides/mullvad-vs-proton-vpn).

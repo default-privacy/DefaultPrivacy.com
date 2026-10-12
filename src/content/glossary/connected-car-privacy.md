@@ -55,11 +55,10 @@ A 2023 Mozilla Foundation study found that **every major car brand** (25 tested)
 
 ## How to Protect Your Car Privacy
 
-1. **Read the privacy policy** before buying — Mozilla's "Privacy Not Included" rates car brands
-2. **Don't connect your phone** via Bluetooth if possible — Use a separate aux cable for audio
-3. **Opt out of telematics** — Contact your manufacturer to disable data transmission (not always possible)
-4. **Decline insurance telematics** programs — The discount isn't worth the surveillance
-5. **Factory reset rental cars** — Delete your phone data from rental vehicle infotainment systems
-6. **Buy older vehicles** — Pre-2015 cars have significantly less connected technology
-7. **Disable OnStar/connected services** — If you don't use them, turn them off
-8. **Support right-to-repair** legislation that gives consumers control over vehicle data
+1. **Don't connect your phone** via Bluetooth if possible — Use a separate aux cable for audio
+2. **Opt out of telematics** — Contact your manufacturer to disable data transmission (not always possible)
+3. **Factory reset rental cars** — Delete your phone data from rental vehicle infotainment systems
+4. **Disable OnStar/connected services** — If you don't use them, turn them off
+5. **Support right-to-repair** legislation that gives consumers control over vehicle data
+
+For more on this, see [Car Driving Data and Insurance](/guides/car-driving-data-and-insurance).

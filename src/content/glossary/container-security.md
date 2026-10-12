@@ -19,13 +19,13 @@ Containers (Docker, Podman) provide isolation but aren't inherently secure — t
 
 ## Best Practices
 
-1. Use minimal base images (Alpine, distroless)
-2. Don't run as root inside containers
-3. Scan images for vulnerabilities (Trivy, Grype)
-4. Use read-only file systems where possible
-5. Limit container capabilities (drop all, add only what's needed)
-6. Keep secrets out of images — use secret management tools
+1. Don't run as root inside containers
+2. Use read-only file systems where possible
+3. Limit container capabilities (drop all, add only what's needed)
+4. Keep secrets out of images — use secret management tools
 
 ## Privacy Connection
 
 Containers are excellent for running self-hosted privacy services (VPN, email, DNS) because they're easy to deploy, update, and destroy without leaving residual data.
+
+For what to use, see [Self-hosted privacy homelab](/stacks/self-hosted-privacy-homelab).

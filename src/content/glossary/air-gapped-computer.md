@@ -22,9 +22,8 @@ An air-gapped computer has no physical connection to any network — no WiFi, no
 
 1. Use a dedicated device (never connected to internet)
 2. Disable or physically remove wireless hardware
-3. Boot from a live USB (Tails) for additional security
-4. Transfer data only via physically verified USB drives or QR codes
-5. Consider removing the hard drive entirely (run from RAM only)
+3. Transfer data only via physically verified USB drives or QR codes
+4. Consider removing the hard drive entirely (run from RAM only)
 
 ## Limitations
 

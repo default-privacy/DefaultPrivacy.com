@@ -23,7 +23,7 @@ Coined by Shoshana Zuboff, surveillance capitalism describes the business model 
 - Google (search, Android, Maps, Gmail, YouTube)
 - Meta (Facebook, Instagram, WhatsApp)
 - Amazon (purchases, Alexa, Ring)
-- Data brokers (Acxiom, Oracle Data Cloud)
+- Data brokers (Acxiom and others)
 
 ## The Product
 

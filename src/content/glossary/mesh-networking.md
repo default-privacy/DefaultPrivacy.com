@@ -22,14 +22,10 @@ Mesh networks allow devices to communicate by relaying data through each other, 
 - **Disaster recovery**: Communication when infrastructure is destroyed
 - **Rural connectivity**: Extending internet access to remote areas
 
-## Tools
-
-- **Briar**: Encrypted messenger that works over WiFi, Bluetooth, and Tor
-- **Meshtastic**: Long-range mesh networking using LoRa radios
-- **Yggdrasil**: Encrypted mesh networking protocol
-
 ## Limitations
 
 - Limited range between nodes
 - Performance degrades with distance
 - Requires critical mass of users to be useful
+
+For what to use, see [Activist & Protester Digital Safety](/stacks/activist-protester-digital-safety).

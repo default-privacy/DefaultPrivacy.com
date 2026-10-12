@@ -33,7 +33,6 @@ A passphrase trades complexity for length. Instead of `P@ssw0rd!23` (which is ac
 - Similar strength, much easier to remember
 
 **6-word passphrase:**
-- 7776^6 = 221 trillion trillion combinations
 - Effectively uncrackable
 
 ## Generating Good Passphrases
@@ -82,4 +81,3 @@ A passphrase trades complexity for length. Instead of `P@ssw0rd!23` (which is ac
 3. **Don't reuse** across accounts
 4. **Consider adding random element** (`mercury7envelope#pizza`)
 5. **Store backup** in password manager
-

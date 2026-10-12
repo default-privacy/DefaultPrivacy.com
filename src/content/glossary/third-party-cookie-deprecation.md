@@ -32,9 +32,6 @@ Third-party cookies — the technology that lets advertisers stalk you across th
 | **Safari** | Blocked since 2020 (ITP) | ~19% |
 | **Firefox** | Blocked since 2022 (ETP) | ~3% |
 | **Brave** | Blocked since launch | ~1% |
-| **Chrome** | Offering user choice + Privacy Sandbox | ~65% |
-
-Chrome's dominant market share means that until Google acts, third-party cookies remain functional for most web users.
 
 ## Why Cookies Are Being Deprecated
 
@@ -44,10 +41,6 @@ Chrome's dominant market share means that until Google acts, third-party cookies
 - **Reputational risk** — Companies don't want to be associated with surveillance advertising
 
 ## What's Replacing Cookies
-
-### Google Privacy Sandbox (Topics API)
-- Chrome categorizes your interests based on browsing — advertisers target interest categories instead of individual users
-- **Still tracking** — just controlled by Google instead of the open ecosystem
 
 ### Browser Fingerprinting
 - Identifies users by unique device characteristics (screen resolution, fonts, plugins, GPU)

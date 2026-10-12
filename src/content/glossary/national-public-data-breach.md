@@ -57,7 +57,8 @@ With 2.9 billion records covering US, Canadian, and British citizens, this breac
 
 1. **Freeze your credit** at Equifax, Experian, and TransUnion immediately (free)
 2. **Monitor your credit** for unauthorized accounts
-3. **Use identity theft monitoring** — watch for new accounts opened in your name
-4. **Assume your SSN is compromised** and act accordingly
-5. **Remove your data from brokers** — use services like those in the [tools directory](/directory) to opt out of people search sites
-6. **Set up IRS Identity Protection PIN** to prevent tax fraud
+3. **Assume your SSN is compromised** and act accordingly
+4. **Opt out of people search sites** that list your data
+5. **Set up IRS Identity Protection PIN** to prevent tax fraud
+
+For how to freeze, see [How to freeze your credit](/guides/how-to-freeze-your-credit).

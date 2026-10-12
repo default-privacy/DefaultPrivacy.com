@@ -22,7 +22,7 @@ keywords:
   - "comprehensive privacy legislation"
 ---
 
-The United States is the **only major democracy without a comprehensive federal privacy law**. The ADPPA would change that — if Congress could agree on it.
+The United States is the **only major democracy without a comprehensive federal privacy law**.
 
 ## Why the US Needs Federal Privacy Legislation
 

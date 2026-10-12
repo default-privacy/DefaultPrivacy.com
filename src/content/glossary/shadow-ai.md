@@ -49,15 +49,14 @@ Every one of these actions sends company data to a third-party AI provider's ser
 ## What Organizations Should Do
 
 1. **Establish an AI acceptable use policy** — What tools are approved, what data can be shared
-2. **Deploy enterprise AI** — Self-hosted models (Ollama, vLLM) or enterprise plans with data isolation
-3. **Train employees** on what constitutes sensitive data
-4. **Monitor AI tool usage** — DLP (Data Loss Prevention) tools that detect AI service access
-5. **Provide approved alternatives** — If you don't give people a sanctioned AI tool, they'll use unsanctioned ones
+2. **Train employees** on what constitutes sensitive data
+3. **Monitor AI tool usage** — DLP (Data Loss Prevention) tools that detect AI service access
+4. **Provide approved alternatives** — If you don't give people a sanctioned AI tool, they'll use unsanctioned ones
 
 ## What Individuals Should Know
 
 1. Anything you type into a free AI chatbot may be stored, reviewed, and used for training
-2. Enterprise plans (ChatGPT Team/Enterprise, Claude for Work) offer better data protections
-3. Self-hosted models (running locally via Ollama) keep all data on your machine
-4. Privacy-focused AI providers keep less, but check what each one can still see ([Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust))
-5. If you wouldn't post it publicly, don't paste it into an AI chatbot
+2. Privacy-focused AI providers keep less, but check what each one can still see ([Private AI: What You Have to Trust](/guides/private-ai-what-you-have-to-trust))
+3. If you wouldn't post it publicly, don't paste it into an AI chatbot
+
+For what to use, see [How to use AI chatbots privately](/guides/how-to-use-ai-chatbots-privately).
