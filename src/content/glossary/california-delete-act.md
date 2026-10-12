@@ -26,30 +26,27 @@ The California Delete Act tackles one of privacy's biggest problems: even if you
 
 ## What It Does
 
-### One-Click Deletion
-- California will create a **free, state-run online portal** (the "deletion mechanism")
-- Consumers submit a single request through the portal
-- The portal forwards the request to **every registered data broker** in California
-- Data brokers must **delete your personal information within 45 days**
-- Consumers can also request ongoing opt-out (deletion every 45 days)
+### One Request to Every Registered Broker
+- The law required a **free, state-run platform**. That platform is DROP, the Delete Request and Opt-out Platform ([CalPrivacy](https://privacy.ca.gov/drop/about-drop-and-the-delete-act/))
+- California residents submit one request, which reaches **over 600 registered data brokers** ([CalPrivacy](https://privacy.ca.gov/drop/))
+- You need only your name, date of birth and ZIP code; more identifiers improve matching ([CalPrivacy](https://privacy.ca.gov/drop/how-drop-works/))
+- Brokers have up to 90 days to report how they handled a request, then must **re-check and delete new matching data at least every 45 days** ([CalPrivacy](https://privacy.ca.gov/drop/how-drop-works/))
 
 ### Data Broker Registration
-- All data brokers must **register with the California Privacy Protection Agency** (CPPA)
-- Registration fee: $1,800/year
-- Must disclose what categories of data they collect and sell
-- Failure to register: **$200/day penalty**
+- Data brokers must **register with CalPrivacy every year**, report the types of information they collect and share, and undergo compliance audits
+- Brokers who fail to comply may face penalties and administrative fines ([CalPrivacy](https://privacy.ca.gov/drop/about-drop-and-the-delete-act/))
 
 ## Timeline
 
-- **January 2024**: Data broker registration requirements took effect
-- **August 2026**: Deletion mechanism portal must be operational
-- **January 2028**: Full implementation of ongoing deletion features
+- **2023**: The Delete Act (SB 362) signed into law
+- **2024**: CalPrivacy starts administering the data broker registry
+- **January 2026**: DROP opens to consumers
+- **August 1, 2026**: Data brokers must begin processing DROP requests ([CalPrivacy](https://privacy.ca.gov/drop/))
 
 ## Why This Matters
 
 ### The Current Problem
-- There are **4,000+** data brokers operating in the US
-- Each has different opt-out processes (some require mail, fax, or notarized requests)
+- Over 600 data brokers are registered in California alone ([CalPrivacy](https://privacy.ca.gov/drop/)), and without DROP each needs its own request
 - Even after deletion, **data reappears** because brokers share and re-sell data
 - Manual opt-out is a **full-time job** — which is why data removal services exist
 
@@ -64,8 +61,8 @@ The California Delete Act tackles one of privacy's biggest problems: even if you
 - Only applies to **California residents** (though other states are considering similar laws)
 - Data brokers who don't register can still operate (enforcement is key)
 - Doesn't cover companies that collect data directly (only third-party data brokers)
-- Portal launch in 2026 — until then, services like those in the [tools directory](/directory) fill the gap
+- Unregistered brokers and people outside California still need site-by-site opt-outs; see [How to remove your name from data broker sites](/guides/remove-name-from-data-brokers)
 
 ## Impact on the Industry
 
-The Delete Act could make data broking **significantly less profitable** if widely adopted. If consumers can delete their data with one click every 45 days, the value of broker databases drops dramatically. Expect the industry to lobby aggressively against similar laws in other states.
+One request keeps working: brokers must keep deleting new matching data at least every 45 days ([CalPrivacy](https://privacy.ca.gov/drop/how-drop-works/)). California calls DROP the first platform of its kind in the world ([CalPrivacy](https://privacy.ca.gov/drop/about-drop-and-the-delete-act/)).

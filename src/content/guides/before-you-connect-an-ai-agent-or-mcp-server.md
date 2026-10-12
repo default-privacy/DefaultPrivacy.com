@@ -105,6 +105,8 @@ Before you approve or trust a cloned project, open its MCP file and read the com
 
 We keep a short list of [MCP servers](/directory?category=mcp-servers) that meet a published bar: open source, maintained in the last six months, clear about what they can read or change, and unable to move money by default. Servers that can send messages, run code or act on devices are listed only if they are official and narrowly scoped. Each listing says what the server can touch. A listing is not a security audit, and a server missing from it has simply not been reviewed.
 
+One popular server is left out on purpose. Desktop Commander lets an AI run terminal commands and edit files on your computer, and its own guardrails are, in its words, "not a sandbox" ([Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)). A general shell runner can do anything you can do at your keyboard, so no caveat would describe what it can touch. If you use it anyway, its Docker install keeps it in a container ([Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)).
+
 **A disclosure.** Default Privacy runs an MCP server, described on our [AI page](/ai). It is built to be the low-risk kind: it answers questions from public directory data and has no access to your accounts. Some of its tools look up public information about a domain you give it. We count request types and the app that made them, not IP addresses or text you send. We say this so you can judge it, not because our description makes it safe. Apply the same checklist to ours as to any other.
 
 ---

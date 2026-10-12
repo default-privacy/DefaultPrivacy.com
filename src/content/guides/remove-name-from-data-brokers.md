@@ -6,7 +6,7 @@ category: Privacy
 difficulty: beginner
 timeToComplete: "15 minutes"
 publishedAt: "2026-05-01"
-updatedAt: "2026-05-01"
+updatedAt: "2026-10-11"
 author: Default Privacy
 tags:
   - data brokers
@@ -86,51 +86,45 @@ Removing from the Tier 1 sites is the highest-impact action. The aggregators are
 
 ## How Opt-Out Works
 
-Most data brokers are required to honor opt-out requests under state privacy laws (California's CCPA, Virginia's CDPA, and others) or under their own terms of service. The process typically involves:
+People-search sites take opt-out requests, but often not because a law makes them. Spokeo, for one, says the public data it compiles is exempt from state privacy laws and offers an opt-out anyway ([Spokeo](https://www.spokeo.com/optout)). The process on each site typically involves:
 
 1. **Find your listing:** Search for your name on the site
 2. **Locate the opt-out page:** Usually buried in the privacy policy or footer
 3. **Submit the request:** Often requires an email address and sometimes a phone number for verification
-4. **Wait for removal:** Can take 24 hours to 6 weeks depending on the site
+4. **Wait for removal:** Times vary by site
 5. **Verify removal:** Search again after the stated removal period
+
+### If you live in California: DROP
+
+California's Delete Request and Opt-out Platform (DROP) lets residents send one free deletion request to over 600 registered data brokers ([CalPrivacy](https://privacy.ca.gov/drop/)). You need only your name, date of birth and ZIP code, and you can add email addresses, phone numbers and other identifiers to improve matching. Brokers had to start processing requests on August 1, 2026 ([CalPrivacy](https://privacy.ca.gov/drop/)), have up to 90 days to report what they did, and must then re-check and delete new matching data at least every 45 days ([CalPrivacy](https://privacy.ca.gov/drop/how-drop-works/)).
+
+DROP only reaches brokers registered in California, so the site-by-site opt-outs below still matter, and people outside California need them in full.
 
 ---
 
 ## The Manual Opt-Out Process for Key Sites
 
+These steps change. If a page looks different from what's described here, follow the site's own instructions.
+
 ### Spokeo
-1. Find your listing at spokeo.com
-2. Copy the URL of your listing
-3. Go to spokeo.com/optout
-4. Paste the URL, enter an email, submit
-5. Removal typically within 24-48 hours
+1. Find your listing at spokeo.com and copy its URL
+2. Go to [spokeo.com/optout](https://www.spokeo.com/optout), paste the URL and enter an email address
+3. Click the link in the confirmation email Spokeo sends
+
+Spokeo says requests should be processed in 24 to 48 hours. If you have more than one listing, each has its own URL and needs its own opt-out, and a listing can come back as Spokeo receives new public records ([Spokeo](https://www.spokeo.com/optout)).
 
 ### Whitepages
-1. Find your listing at whitepages.com
-2. Click "View Details" on your listing
-3. Scroll to the bottom, click "Remove my listing"
-4. Complete identity verification
-5. Removal typically within 1-2 weeks
+1. Find your listing at whitepages.com and copy its URL
+2. Go to [whitepages.com/suppression-requests](https://www.whitepages.com/suppression-requests), paste the URL and follow the form's five steps ([Whitepages](https://www.whitepages.com/suppression-requests))
 
 ### BeenVerified
-1. Go to beenverified.com/opt-out/search
-2. Enter your name and search
-3. Find and select your listing
-4. Submit email for opt-out confirmation
-5. Removal typically within 24-72 hours
+Start at [BeenVerified's opt-out search](https://www.beenverified.com/svc/optout/search/), search for your name and follow the steps for your listing.
 
-### Intelius
-1. Search for yourself on intelius.com
-2. Go to intelius.com/optout
-3. Enter your name and submit
-4. Confirm via email
-5. Removal typically within 24-48 hours
+### Intelius, TruthFinder, Instant Checkmate and US Search
+Intelius's opt-out page now sends you to the PeopleConnect Suppression Center at [suppression.peopleconnect.us](https://suppression.peopleconnect.us/). PeopleConnect also runs TruthFinder, Instant Checkmate, US Search and Classmates ([PeopleConnect](https://www.peopleconnect.us/)), so check each of those sites for your name too.
 
 ### MyLife
-MyLife is aggressive about keeping listings. They require:
-1. Email to privacy@mylife.com with your full name, listing URL, and a request for removal
-2. May require proof of identity
-3. Removal is slower — 1-4 weeks
+MyLife's privacy policy says to ask for a profile's removal through its Help section or by emailing Customer Care at membersupport@mylife.com. It will check that you are the person in the profile, and some of the information may stay in its backups ([MyLife privacy policy](https://www.mylife.com/privacy-policy), updated August 20, 2026).
 
 ---
 
@@ -150,15 +144,15 @@ The practical implication: **data broker removal is ongoing maintenance, not a o
 
 ## What Professional Removal Services Do
 
-Professional data removal services (like Default Privacy's removal service) handle:
+Paid data removal services handle:
 
-- Initial removal requests across 200+ data broker sites
+- Initial removal requests across many data broker sites
 - Automated monitoring for re-appearance of your data
 - Re-submission of opt-outs when data reappears
 - Human review for sites that require manual handling
 - Ongoing coverage rather than one-time removal
 
-The value isn't the initial removal — you can do that yourself. The value is ongoing monitoring and re-removal as data reappears, without you having to track and repeat the process yourself.
+The value isn't the initial removal, which you can do yourself, and Californians should try DROP first since it's free. The value is ongoing monitoring and re-removal as data reappears, without you having to track and repeat the process yourself.
 
 ---
 
@@ -182,13 +176,14 @@ The focus of data broker removal is the aggregated people-search profiles — th
 
 For DIY removal:
 
+- [ ] If you live in California, submit a DROP request at [privacy.ca.gov/drop](https://privacy.ca.gov/drop/)
 - [ ] Search all Tier 1 sites for your name and variations
 - [ ] Submit opt-out requests for every listing found
 - [ ] Create a spreadsheet tracking: site, listing URL, opt-out date, expected removal date, verified removal date
 - [ ] Set calendar reminders to re-check every 90 days
 - [ ] Repeat for each family member in your household if they're connected to your address
 
-For realistic results: expect 70-80% removal within 30 days, with residual listings on stubborn sites and periodic re-appearance.
+Expect some listings to stay up on stubborn sites, and others to come back over time.
 
 ---
 
