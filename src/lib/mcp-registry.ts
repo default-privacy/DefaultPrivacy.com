@@ -52,19 +52,32 @@ type RegistryEntry = {
   _meta?: Record<string, { status?: string; publishedAt?: string } | undefined>
 }
 
+// Every string here is publisher-written and goes straight to an AI client, so each is
+// cut to one short line and the lists to a few entries. Enough to identify a server,
+// too little to carry instructions.
+const MAX_CHARS = 200
+const MAX_ITEMS = 5
+const clip = (v: unknown): string | null => (typeof v === "string" ? v.slice(0, MAX_CHARS) : null)
+
 export function factsFrom(entry: RegistryEntry): RegistryFacts | null {
   const s = entry.server
   if (!s || typeof s.name !== "string") return null
   const meta = entry._meta?.["io.modelcontextprotocol.registry/official"]
   return {
-    name: s.name,
-    status: meta?.status ?? null,
-    published_at: meta?.publishedAt ?? null,
-    source_repository: s.repository?.url ?? null,
-    remotes: (s.remotes ?? []).flatMap((r) => (typeof r.url === "string" ? [{ url: r.url, https: r.url.startsWith("https://") }] : [])),
-    packages: (s.packages ?? []).flatMap((p) =>
-      typeof p.identifier === "string" ? [{ registry: p.registryType ?? "unknown", identifier: p.identifier }] : [],
-    ),
+    name: s.name.slice(0, MAX_CHARS),
+    status: clip(meta?.status),
+    published_at: clip(meta?.publishedAt),
+    source_repository: clip(s.repository?.url),
+    remotes: (s.remotes ?? [])
+      .flatMap((r) => (typeof r.url === "string" ? [{ url: r.url.slice(0, MAX_CHARS), https: r.url.startsWith("https://") }] : []))
+      .slice(0, MAX_ITEMS),
+    packages: (s.packages ?? [])
+      .flatMap((p) =>
+        typeof p.identifier === "string"
+          ? [{ registry: clip(p.registryType) ?? "unknown", identifier: p.identifier.slice(0, MAX_CHARS) }]
+          : [],
+      )
+      .slice(0, MAX_ITEMS),
   }
 }
 

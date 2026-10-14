@@ -111,7 +111,9 @@ export default function UseInYourAiPage() {
               to enforce rate limits, and our host, Vercel, keeps its own request logs. The domain
               tools look the domain up in public DNS, its registry&apos;s records, and Have I Been
               Pwned&apos;s public breach list (we download the whole list, so the domain isn&apos;t
-              sent to them).
+              sent to them). If you ask us to check an MCP server we don&apos;t list, we look its
+              name up in the official MCP registry, which sees that name and our server&apos;s
+              address, not yours.
             </p>
             <p>
               You don&apos;t have to take our word for it: the server&apos;s code is open source on{" "}

@@ -60,3 +60,24 @@ describe("lookupRegistry", () => {
     expect(calls).toBe(0)
   })
 })
+
+describe("factsFrom caps publisher text", () => {
+  it("cuts every string to one short line and every list to a few entries", () => {
+    const long = "x".repeat(5000)
+    const entry = {
+      server: {
+        name: long,
+        repository: { url: long },
+        remotes: Array.from({ length: 50 }, () => ({ url: "https://" + long })),
+        packages: Array.from({ length: 50 }, () => ({ registryType: long, identifier: long })),
+      },
+      _meta: { "io.modelcontextprotocol.registry/official": { status: long, publishedAt: long } },
+    }
+    const f = factsFrom(entry)!
+    for (const v of [f.name, f.status, f.published_at, f.source_repository]) expect(v!.length).toBeLessThanOrEqual(200)
+    expect(f.remotes.length).toBeLessThanOrEqual(5)
+    expect(f.packages.length).toBeLessThanOrEqual(5)
+    for (const r of f.remotes) expect(r.url.length).toBeLessThanOrEqual(200)
+    for (const p of f.packages) expect(p.identifier.length + p.registry.length).toBeLessThanOrEqual(400)
+  })
+})
