@@ -113,6 +113,29 @@ async function main() {
     for (const k of accepts) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
   }
 
+  // Derived only from the counters above; nothing new is collected. The method and
+  // client counters can be younger than mcp_tool (the baseline showed 30d = 2d), so
+  // compare ratios, not raw totals across kinds.
+  section("Signal vs noise (derived)")
+  const inits = clients.reduce((n, k) => n + k.total, 0)
+  const known = clients.filter((k) => !["other", "unknown"].includes(k.key)).reduce((n, k) => n + k.total, 0)
+  const methodTotal = (name: string) => methods.find((k) => k.key === name)?.total ?? 0
+  const calls = methodTotal("tools/call")
+  const lists = methodTotal("tools/list")
+  if (inits === 0) {
+    console.log("  (no connections recorded)")
+  } else {
+    console.log(`  connections from a recognised app   ${known} of ${inits}  (${Math.round((known / inits) * 100)}%)`)
+    console.log(`  tools/call per connection            ${(calls / inits).toFixed(2)}`)
+    console.log(`  tools/list per tools/call            ${calls ? (lists / calls).toFixed(1) : "n/a"}`)
+  }
+  const topTools = toolKeys.filter((k) => k.kind === "mcp_tool").slice(0, 6)
+  if (topTools.length === 6) {
+    const spread = topTools[5].total / topTools[0].total
+    console.log(`  top-6 tools, lowest vs highest       ${Math.round(spread * 100)}%`)
+    if (spread >= 0.75) console.log("  ⚠ near-equal counts across unrelated tools look like a scripted prober, not people.")
+  }
+
   section("Daily total (demand, excludes MCP protocol traffic)")
   if (usage.dailyTotal.length === 0) {
     console.log("  (no days recorded yet)")
