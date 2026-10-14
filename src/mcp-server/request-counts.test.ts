@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { acceptBucket, clientBucket, mcpRequestCounts, protocolBucket } from "./request-counts"
+import { acceptBucket, clientBucket, mcpRequestCounts, protocolBucket, userAgentBucket } from "./request-counts"
 
 describe("mcpRequestCounts", () => {
   it("counts an initialize and buckets the app name", () => {
@@ -100,5 +100,30 @@ describe("acceptBucket", () => {
   it("folds anything else into 'other' so callers can't mint keys", () => {
     expect(acceptBucket("text/html")).toBe("other")
     expect(acceptBucket("me@example.com")).toBe("other")
+  })
+})
+
+describe("userAgentBucket", () => {
+  it("separates a self-declared prober from people's software", () => {
+    expect(userAgentBucket("SentinelOracle/0.1 (+https://glimind.com/opt-out; liveness-only, never invokes tools)")).toBe("bot-declared")
+    expect(userAgentBucket("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")).toBe("bot-declared")
+    expect(userAgentBucket("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/150.0.0.0 Safari/537.36")).toBe("browser-like")
+  })
+
+  it("recognises common scripting clients by their start", () => {
+    for (const ua of ["curl/8.5.0", "python-httpx/0.27", "node", "undici", "Go-http-client/2.0", "axios/1.7.2"]) {
+      expect(userAgentBucket(ua)).toBe("script")
+    }
+  })
+
+  it("folds everything else to a fixed name, never the raw text", () => {
+    expect(userAgentBucket(null)).toBe("none")
+    expect(userAgentBucket("   ")).toBe("none")
+    expect(userAgentBucket("me@example.com")).toBe("other")
+    expect(userAgentBucket("claude-code/2.1")).toBe("other")
+    const allowed = new Set(["none", "bot-declared", "browser-like", "script", "other"])
+    for (const ua of ["x".repeat(5000), "a@b.c", "Mozilla/5.0 " + "z".repeat(900), "\u0000\u0001"]) {
+      expect(allowed.has(userAgentBucket(ua))).toBe(true)
+    }
   })
 })

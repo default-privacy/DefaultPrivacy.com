@@ -34,10 +34,11 @@ describe("withMcpGate", () => {
 
   it("counts method, app, protocol and Accept shape on a connect", async () => {
     const init = { jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18", clientInfo: { name: "Cursor" } } }
-    await withMcpGate(ok)(post(init, { accept: "*/*" }))
+    await withMcpGate(ok)(post(init, { accept: "*/*", "user-agent": "curl/8.5.0" }))
     expect(counted).toEqual(
       expect.arrayContaining([
         ["mcp_accept", "any"],
+        ["mcp_ua", "script"],
         ["mcp_method", "initialize"],
         ["mcp_client", "cursor"],
         ["mcp_protocol", "2025-06-18"],
@@ -47,7 +48,7 @@ describe("withMcpGate", () => {
 
   it("counts the Accept shape even when the body can't be parsed", async () => {
     await withMcpGate(ok)(post("not json"))
-    expect(counted).toEqual([["mcp_accept", "none"]])
+    expect(counted).toEqual([["mcp_accept", "none"], ["mcp_ua", "none"]])
   })
 
   it("counts nothing for a GET", async () => {

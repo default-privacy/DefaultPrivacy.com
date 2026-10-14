@@ -106,6 +106,26 @@ export function acceptBucket(header: string | null): string {
   return "other"
 }
 
+/**
+ * What kind of software sent a POST, folded from its User-Agent to a fixed set. The
+ * header is read, matched and dropped: only the bucket name is ever counted, so a
+ * caller cannot write text into the table, and it is never stored beside an IP.
+ * Its one job is to tell people's software from scripts and self-declared probes, so
+ * demand numbers can be read without them. A prober that does not say what it is
+ * lands in "script" or "other", so this narrows the noise rather than removing it.
+ */
+const BOT_WORDS = ["bot", "crawl", "spider", "probe", "monitor", "liveness", "uptime"]
+const SCRIPT_CLIENTS = ["curl", "wget", "python", "aiohttp", "httpx", "node", "undici", "axios", "go-http", "okhttp", "java", "php", "ruby", "deno", "bun/"]
+
+export function userAgentBucket(header: string | null): string {
+  const ua = header?.trim().toLowerCase()
+  if (!ua) return "none"
+  if (BOT_WORDS.some((word) => ua.includes(word))) return "bot-declared"
+  if (ua.startsWith("mozilla/")) return "browser-like"
+  if (SCRIPT_CLIENTS.some((name) => ua.startsWith(name))) return "script"
+  return "other"
+}
+
 export function mcpRequestCounts(body: unknown): { methods: string[]; client: string | null } {
   const messages = Array.isArray(body) ? body : [body]
   const methods = new Set<string>()

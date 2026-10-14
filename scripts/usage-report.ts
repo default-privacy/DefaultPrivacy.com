@@ -107,6 +107,11 @@ async function main() {
     console.log("  requests by protocol version (2026-07-28 = apps with no handshake, so no app name):")
     for (const k of protocols) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
   }
+  const senders = usage.topKeys.filter((k) => k.kind === "mcp_ua")
+  if (senders.length > 0) {
+    console.log("  POSTs by kind of sender (bot-declared and script are not people's apps):")
+    for (const k of senders) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
+  }
   const accepts = usage.topKeys.filter((k) => k.kind === "mcp_accept")
   if (accepts.length > 0) {
     console.log("  POSTs by Accept header (anything but json+sse gets a 406):")
