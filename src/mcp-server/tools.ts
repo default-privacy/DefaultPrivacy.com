@@ -17,6 +17,7 @@ import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
 import { BASELINE, matchSituations, type SituationItem } from "@/lib/situations"
 import { MCP_BAR, MCP_CATEGORY, MCP_CHECKLIST, matchMcpRef } from "@/lib/mcp-vetting"
+import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
 import { keywords, oneLine, rankContent, searchContent } from "@/lib/site-search"
 import {
   getAllGlossaryTerms,
@@ -560,11 +561,11 @@ export function registerTools(server: McpServer): void {
     {
       title: "Check an MCP server against Default Privacy's vetted list",
       description:
-        "Before connecting an MCP server, check whether it is in Default Privacy's vetted list and what it can read or change. Give its repository URL, server URL, name or slug. A listed server returns its record with sources and caveats. An unlisted one returns a short checklist; unlisted is not a verdict, only that we have not reviewed it.",
+        "Before connecting an MCP server, check whether it is in Default Privacy's vetted list and what it can read or change. Give its repository URL, server URL, name or slug. A listed server returns its record with sources and caveats. An unlisted one returns a short checklist plus, for a GitHub or registry name, what the publisher declared in the official MCP registry (not a review); unlisted is not a verdict, only that we have not reviewed it.",
       inputSchema: {
         server: z.string().min(2).max(300).describe("The server's repository URL, server URL, name or slug, e.g. 'https://github.com/bitwarden/mcp-server'."),
       },
-      annotations: { readOnlyHint: true, openWorldHint: false },
+      annotations: { readOnlyHint: true, openWorldHint: true },
     },
     async ({ server: ref }) => {
       countUsage("mcp_tool", "dp_check_mcp_server")
@@ -578,6 +579,7 @@ export function registerTools(server: McpServer): void {
           meta: { citation: citation(`directory/${exact.slug}`) },
         })
       }
+      const lookup = await lookupRegistry(ref)
       return jsonContent({
         data: {
           listed: false,
@@ -585,6 +587,10 @@ export function registerTools(server: McpServer): void {
             "Not in Default Privacy's vetted list. That is not a verdict: we have not reviewed it. Work through the checklist before connecting it.",
           bar: MCP_BAR,
           checklist: MCP_CHECKLIST,
+          registry:
+            lookup.state === "found"
+              ? { state: "found", ...lookup.facts, caveat: REGISTRY_CAVEAT }
+              : { state: lookup.state, caveat: REGISTRY_CAVEAT },
           similar_listed: similar.map((l) => ({ name: l.name, slug: l.slug, source_code_url: l.trust.source_code_url })),
           vetted_list: url(`directory?category=${MCP_CATEGORY}`),
           guide,
