@@ -22,7 +22,7 @@ Default Privacy runs a Model Context Protocol (MCP) server so agents can call th
 
 - Endpoint (Streamable HTTP, no auth): `https://mcp.defaultprivacy.com`
 - Descriptor: [/.well-known/mcp-server.json](https://defaultprivacy.com/.well-known/mcp-server.json)
-- Tools: `dp_search` (start here: one search across tools, guides, stacks and glossary), `dp_search_tools`, `dp_get_tool`, `dp_list_categories`, `dp_find_alternatives`, `dp_get_related_tools`, `dp_compare_tools`, `dp_search_guides`, `dp_get_guide`, `dp_list_stacks`, `dp_get_stack`, `dp_route` (describe a situation, get the guides and stacks to read), `dp_check_mcp_server` (is an MCP server in our vetted list, and what can it touch), `dp_search_glossary`, `dp_get_glossary_term`, `dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`
+- Tools: `dp_search` (start here: one search across tools, guides, stacks and glossary), `dp_search_tools`, `dp_get_tool`, `dp_list_categories`, `dp_find_alternatives`, `dp_how_private` (how private is an app or service: our record, replacements, ToS;DR's dated grade of its terms, the vendor's privacy policy), `dp_get_related_tools`, `dp_compare_tools`, `dp_search_guides`, `dp_get_guide`, `dp_list_stacks`, `dp_get_stack`, `dp_route` (describe a situation, get the guides and stacks to read), `dp_check_mcp_server` (is an MCP server in our vetted list, and what can it touch), `dp_search_glossary`, `dp_get_glossary_term`, `dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`
 - Resources: `defaultprivacy://categories`, `defaultprivacy://guides`, `defaultprivacy://stacks`, `defaultprivacy://glossary`, `defaultprivacy://stats`
 - Prompts: `find_private_alternative`, `audit_domain_privacy`, `harden_email`
 

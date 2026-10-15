@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.privatebydefault/default-privacy",
   "title": "Default Privacy",
-  "description": "Search privacy tools, guides, stacks and glossary, find app replacements, run privacy checks.",
-  "version": "1.6.0",
+  "description": "Sourced privacy answers: how private an app is, tool picks, app swaps, de-Googling, breaches.",
+  "version": "1.7.0",
   "websiteUrl": "https://defaultprivacy.com",
   "remotes": [
     {

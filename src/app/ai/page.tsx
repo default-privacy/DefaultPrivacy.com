@@ -113,7 +113,11 @@ export default function UseInYourAiPage() {
               Pwned&apos;s public breach list (we download the whole list, so the domain isn&apos;t
               sent to them). If you ask us to check an MCP server we don&apos;t list, we look its
               name up in the official MCP registry, which sees that name and our server&apos;s
-              address, not yours.
+              address, not yours. When you ask how private a product is, the terms grade comes from{" "}
+              <a href="https://tosdr.org" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                ToS;DR
+              </a>{" "}
+              (CC BY-SA 3.0): we copy their reviews about once a week, so they never see what anyone asks.
             </p>
             <p>
               You don&apos;t have to take our word for it: the server&apos;s code is open source on{" "}

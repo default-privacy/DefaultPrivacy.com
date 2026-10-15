@@ -18,6 +18,7 @@ Every tool is read-only and needs no account. Among them:
 - `dp_search`: one search across tools, guides, stacks and the glossary
 - `dp_get_tool`: one tool's record, with the sources behind each fact and the caveats worth knowing
 - `dp_find_alternatives`: private replacements for mainstream apps, and what switching involves
+- `dp_how_private`: how private an app or service is, from our record, ToS;DR's dated grade of its terms (credited to ToS;DR) and the vendor's own privacy policy
 - `dp_route`: describe a situation in plain words and get the guides and stacks to read
 - `dp_check_mcp_server`: check an MCP server against our vetted list before connecting it
 - `dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`: free checks on a domain

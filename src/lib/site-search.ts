@@ -30,11 +30,13 @@ export function keywords(query: string): string[] {
   return [...new Set(words(query).filter((w) => !STOP_WORDS.has(w)))]
 }
 
-type Searchable = { title: string; description: string; tags?: string[] }
+type Searchable = { title: string; description: string; tags?: string[]; content?: string }
 
 /**
  * Items matching every keyword, best first: a keyword scores 3 in the title, 2 in a tag,
- * 1 in the description. Ties keep the input order. No keywords → items unchanged.
+ * 1 in the description, 0.5 in the body (a guide or stack's text, so a name it covers, like
+ * "spokeo" in the data-broker guide, still finds it). Ties keep the input order. No keywords →
+ * items unchanged.
  */
 export function rankContent<T extends Searchable>(items: T[], query: string): T[] {
   const terms = keywords(query).map(stem)
@@ -45,6 +47,7 @@ export function rankContent<T extends Searchable>(items: T[], query: string): T[
       { words: new Set(words(item.title).map(stem)), weight: 3 },
       { words: new Set(words((item.tags ?? []).join(" ")).map(stem)), weight: 2 },
       { words: new Set(words(item.description).map(stem)), weight: 1 },
+      { words: new Set(words(item.content ?? "").map(stem)), weight: 0.5 },
     ]
     let score = 0
     for (const term of terms) {

@@ -1,5 +1,6 @@
 /**
- * Content freshness: which guides haven't been checked in over 90 days? A guide's date
+ * Content freshness: which guides haven't been checked in over 90 days, and is the ToS;DR
+ * snapshot (src/data/tosdr-snapshot.json) older than 10 days? A guide's date
  * is its "Last checked:" line (e.g. "**Last checked: October 2026**"), else updatedAt,
  * else publishedAt. Report only, never fails: rechecking a guide is a human job.
  *
@@ -65,6 +66,19 @@ if (stale.length > 0) {
     lines.push(`| [${title}](https://defaultprivacy.com/guides/${r.slug}) | ${date} | ${r.source} | ${age(r) === Infinity ? "?" : age(r)} |`)
   }
 }
+// The ToS;DR terms reviews dp_how_private serves are a weekly copy (bun run sync:tosdr).
+const TOSDR_MAX_AGE_DAYS = 10
+const tosdrCopied = (JSON.parse(readFileSync(join(import.meta.dir, "../src/data/tosdr-snapshot.json"), "utf8")) as { copied_on: string }).copied_on
+const tosdrAge = Math.floor((now - Date.parse(`${tosdrCopied}T00:00:00Z`)) / DAY_MS)
+lines.push(
+  "",
+  "## ToS;DR snapshot",
+  "",
+  tosdrAge > TOSDR_MAX_AGE_DAYS
+    ? `Copied ${tosdrCopied}, ${tosdrAge} days ago: older than ${TOSDR_MAX_AGE_DAYS} days. Run \`bun run sync:tosdr\` and commit src/data/tosdr-snapshot.json.`
+    : `Copied ${tosdrCopied}, ${tosdrAge} days ago.`,
+)
+
 const report = `${lines.join("\n")}\n`
 
 console.log(report)

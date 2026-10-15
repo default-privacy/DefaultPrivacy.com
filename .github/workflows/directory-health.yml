@@ -5,7 +5,8 @@ name: Directory Health
 #    domain, parked domain). Fix the URL or unpublish the listing to turn it green.
 #  - Maintenance: reports archived / gone / long-untouched GitHub repos. Never fails;
 #    deprecating a listing is a human call.
-#  - Content freshness: reports guides not checked in 90+ days. Never fails.
+#  - Content freshness: reports guides not checked in 90+ days, and a ToS;DR snapshot
+#    older than 10 days (run `bun run sync:tosdr`). Never fails.
 # All reports land in the run summary and as an artifact.
 
 on:

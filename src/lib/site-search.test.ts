@@ -43,6 +43,14 @@ describe("content loads", () => {
 })
 
 describe("rankContent", () => {
+  it("finds a name that appears only in a guide's text, ranked below title and tag hits", async () => {
+    const guides = await getAllGuides()
+    expect(rankContent(guides, "spokeo").map((g) => g.slug)).toContain("remove-name-from-data-brokers")
+    expect(rankContent(guides, "whitepages").map((g) => g.slug)).toContain("remove-name-from-data-brokers")
+    const item = (title: string, content = "") => ({ title, description: "", tags: [], content })
+    expect(rankContent([item("A", "a guide about vpn setup"), item("B vpn")], "vpn").map((i) => i.title)).toEqual(["B vpn", "A"])
+  })
+
   const item = (title: string, description = "", tags: string[] = []) => ({ title, description, tags })
 
   it("matches whole words, so 'tor' doesn't hit 'history'", () => {

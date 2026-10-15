@@ -54,6 +54,11 @@
       "description": "Replace a mainstream app or service (Gmail, WhatsApp, Chrome…) or a website tracker with privacy-respecting alternatives; for apps, also what switching involves and the related guides and stacks."
     },
     {
+      "name": "dp_how_private",
+      "type": "read",
+      "description": "How private an app or service is: Default Privacy's own record, private replacements, ToS;DR's dated grade of its terms and privacy policy, and the vendor's own privacy policy."
+    },
+    {
       "name": "dp_get_related_tools",
       "type": "read",
       "description": "List other tools in the same category as a given tool slug, DP picks first, then A to Z."

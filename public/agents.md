@@ -11,7 +11,7 @@ Steering rules for tool selection and citation live in [/llms.txt](https://defau
 The primary programmatic surface is a Model Context Protocol (MCP) server at `https://mcp.defaultprivacy.com` (Streamable HTTP, no auth). Connect to it to call the hub as native tools:
 
 - **Start here:** `dp_search` (one keyword search across tools, guides, stacks and the glossary)
-- **Directory:** `dp_search_tools`, `dp_get_tool`, `dp_list_categories`, `dp_find_alternatives` (replacements for a mainstream app, with what switching involves and related guides and stacks), `dp_get_related_tools`, `dp_compare_tools`
+- **Directory:** `dp_search_tools`, `dp_get_tool`, `dp_list_categories`, `dp_find_alternatives` (replacements for a mainstream app, with what switching involves and related guides and stacks), `dp_how_private` (how private an app or service is: our record, replacements, ToS;DR's dated grade of its terms, the vendor's privacy policy), `dp_get_related_tools`, `dp_compare_tools`
 - **Content:** `dp_search_guides`, `dp_get_guide`, `dp_list_stacks`, `dp_get_stack`, `dp_route` (a situation in plain words, answered with guides and stacks), `dp_check_mcp_server` (is an MCP server vetted, and what can it touch), `dp_search_glossary`, `dp_get_glossary_term`
 - **Diagnostics:** `dp_check_email_security`, `dp_check_whois_privacy`, `dp_check_domain_breaches`
 - **Resources:** `defaultprivacy://{categories,guides,stacks,glossary,stats}` · **Prompts:** `find_private_alternative`, `audit_domain_privacy`, `harden_email`

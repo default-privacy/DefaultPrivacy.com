@@ -25,7 +25,8 @@
     "check:tracker-alts": "bun --env-file=.env --env-file=.env.local run scripts/check-tracker-alternatives.ts",
     "dns:check": "bun scripts/check-dns.ts",
     "usage:report": "bun run scripts/usage-report.ts",
-    "smoke:mcp:prod": "bun scripts/mcp-prod-smoke.mjs"
+    "smoke:mcp:prod": "bun scripts/mcp-prod-smoke.mjs",
+    "sync:tosdr": "bun scripts/sync-tosdr.ts"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.2.8",

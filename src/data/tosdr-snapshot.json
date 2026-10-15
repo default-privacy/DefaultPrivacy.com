@@ -1,0 +1,3381 @@
+{
+  "source": "ToS;DR (https://tosdr.org)",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "copied_on": "2026-10-15",
+  "services": {
+    "157": {
+      "id": 157,
+      "name": "Tuta",
+      "rating": "A",
+      "reviewed_fully": false,
+      "newest_point": "2026-06-29",
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 2,
+        "good": 4
+      },
+      "points": [
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-29"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": "https://tutanota.com/fr/privacy",
+          "updated": "2026-06-29"
+        },
+        {
+          "title": "This service claims User-generated content is encrypted, and they can not decrypt it",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-29"
+        },
+        {
+          "title": "You will be notified if personal data has been affected by data breaches",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-29"
+        }
+      ],
+      "privacy_policy_url": "https://tuta.com/privacy-policy",
+      "url": "https://tosdr.org/en/service/157"
+    },
+    "158": {
+      "id": 158,
+      "name": "Apple Services",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-13",
+      "counts": {
+        "blocker": 2,
+        "bad": 13,
+        "neutral": 24,
+        "good": 18
+      },
+      "points": [
+        {
+          "title": "Content you post may be edited by the service for any reason",
+          "class": "blocker",
+          "source": "https://www.apple.com/legal/internet-services/itunes/gamecenter/us/terms.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": "https://www.apple.com/legal/internet-services/itunes/gamecenter/us/terms.html",
+          "updated": "2026-03-22"
+        },
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to you",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+          "class": "bad",
+          "source": "",
+          "updated": "2026-04-07"
+        },
+        {
+          "title": "Your personal data may be sold or otherwise transferred as part of a bankruptcy proceeding or other type of financial transaction",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-03-22"
+        },
+        {
+          "title": "The service has non-exclusive use of your content",
+          "class": "good",
+          "source": "https://www.apple.com/legal/internet-services/itunes/gamecenter/us/terms.html",
+          "updated": "2026-03-22"
+        },
+        {
+          "title": "The service will only respond to government requests that are reasonable",
+          "class": "good",
+          "source": null,
+          "updated": "2026-03-22"
+        },
+        {
+          "title": "Your personal data will not be used for an automated decision-making",
+          "class": "good",
+          "source": null,
+          "updated": "2026-03-22"
+        }
+      ],
+      "privacy_policy_url": "https://www.apple.com/legal/privacy/en-ww/",
+      "url": "https://tosdr.org/en/service/158"
+    },
+    "161": {
+      "id": 161,
+      "name": "LastPass",
+      "rating": "D",
+      "reviewed_fully": false,
+      "newest_point": "2026-08-04",
+      "counts": {
+        "blocker": 0,
+        "bad": 6,
+        "neutral": 4,
+        "good": 4
+      },
+      "points": [
+        {
+          "title": "Emails sent to lastpass may be published publically",
+          "class": "bad",
+          "source": "https://www.logmeininc.com/legal/terms-and-conditions",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Tracking via third-party cookies for other purposes without your consent.",
+          "class": "bad",
+          "source": "https://www.logmeininc.com/legal/privacy/international",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Third-party cookies are used for statistics",
+          "class": "bad",
+          "source": "https://www.logmeininc.com/legal/privacy/international",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your profile is combined across various products",
+          "class": "bad",
+          "source": "https://www.logmeininc.com/legal/privacy/international",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service may collect, use, and share location data",
+          "class": "bad",
+          "source": "https://www.logmeininc.com/legal/privacy/international",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "User suspension from the service will be fair and proportionate.",
+          "class": "good",
+          "source": "https://www.logmeininc.com/legal/terms-and-conditions",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can opt out of promotional communications",
+          "class": "good",
+          "source": "https://www.logmeininc.com/legal/privacy/international",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": "https://www.logmeininc.com/legal/privacy/international",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://www.logmeininc.com/legal/privacy/international",
+      "url": "https://tosdr.org/en/service/161"
+    },
+    "182": {
+      "id": 182,
+      "name": "Facebook",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-08-13",
+      "counts": {
+        "blocker": 4,
+        "bad": 21,
+        "neutral": 22,
+        "good": 17
+      },
+      "points": [
+        {
+          "title": "Your identity is used in ads that are shown to other users",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-03-18"
+        },
+        {
+          "title": "Private messages that are not end-to-end encrypted can be read",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-03-18"
+        },
+        {
+          "title": "Your data is collected even if you did not interact with the service directly",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-08-10"
+        },
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-03-29"
+        },
+        {
+          "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-03-18"
+        },
+        {
+          "title": "This service claims that your personal data is not being sold",
+          "class": "good",
+          "source": "https://www.facebook.com/legal/terms",
+          "updated": "2026-08-10"
+        },
+        {
+          "title": "This service provides an onion site accessible over Tor",
+          "class": "good",
+          "source": "https://www.facebookcorewwwi.onion/",
+          "updated": "2023-03-30"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": null,
+          "updated": "2026-03-18"
+        }
+      ],
+      "privacy_policy_url": "https://www.facebook.com/about/basics",
+      "url": "https://tosdr.org/en/service/182"
+    },
+    "190": {
+      "id": 190,
+      "name": "Amazon",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2026-05-18",
+      "counts": {
+        "blocker": 1,
+        "bad": 13,
+        "neutral": 11,
+        "good": 10
+      },
+      "points": [
+        {
+          "title": "Content you post may be edited by the service for any reason",
+          "class": "blocker",
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508088",
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "The service can delete your account without prior notice and without a reason",
+          "class": "bad",
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201544030",
+          "updated": "2026-02-26"
+        },
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to the user",
+          "class": "bad",
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508088",
+          "updated": "2026-02-26"
+        },
+        {
+          "title": "Information is gathered about you through third parties",
+          "class": "bad",
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=202075050",
+          "updated": "2026-03-28"
+        },
+        {
+          "title": "Your personal data may be disclosed to comply with government requests without notice to you",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "A free help desk is provided",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "You can opt out of promotional communications",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        }
+      ],
+      "privacy_policy_url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+      "url": "https://tosdr.org/en/service/190"
+    },
+    "194": {
+      "id": 194,
+      "name": "Reddit",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2026-05-18",
+      "counts": {
+        "blocker": 4,
+        "bad": 22,
+        "neutral": 38,
+        "good": 28
+      },
+      "points": [
+        {
+          "title": "You sign away moral rights",
+          "class": "blocker",
+          "source": "https://www.redditinc.com/policies/user-agreement",
+          "updated": "2026-04-01"
+        },
+        {
+          "title": "Private messages can be read",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "This service can license user content to third parties",
+          "class": "bad",
+          "source": "https://www.redditinc.com/policies/user-agreement",
+          "updated": "2026-04-01"
+        },
+        {
+          "title": "The service's data retention period is kept to the minimum necessary for fulfilling its purposes",
+          "class": "good",
+          "source": "https://www.redditinc.com/policies/privacy-policy",
+          "updated": "2026-02-21"
+        },
+        {
+          "title": "Third parties used by the service are bound by confidentiality obligations",
+          "class": "good",
+          "source": "https://www.redditinc.com/policies/privacy-policy",
+          "updated": "2026-02-21"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        }
+      ],
+      "privacy_policy_url": "https://www.reddit.com/policies/privacy-policy",
+      "url": "https://tosdr.org/en/service/194"
+    },
+    "195": {
+      "id": 195,
+      "name": "X (Twitter)",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-05-18",
+      "counts": {
+        "blocker": 5,
+        "bad": 34,
+        "neutral": 38,
+        "good": 22
+      },
+      "points": [
+        {
+          "title": "Content you post may be edited by the service for any reason",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Private messages can be read",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "They store data on you even if you did not interact with the service",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "An onion site accessible over Tor is provided",
+          "class": "good",
+          "source": "https://help.twitter.com/en/using-twitter/twitter-supported-browsers",
+          "updated": "2022-11-26"
+        },
+        {
+          "title": "The terms for this service are easy to read",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "You maintain ownership of your content",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        }
+      ],
+      "privacy_policy_url": "https://x.com/en/privacy",
+      "url": "https://tosdr.org/en/service/195"
+    },
+    "198": {
+      "id": 198,
+      "name": "WhatsApp",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-17",
+      "counts": {
+        "blocker": 2,
+        "bad": 20,
+        "neutral": 36,
+        "good": 12
+      },
+      "points": [
+        {
+          "title": "They store data on you even if you did not interact with the service",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "Private messages can be read by third parties",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+          "updated": "2026-03-04"
+        },
+        {
+          "title": "The service can delete your account without prior notice and without a reason",
+          "class": "bad",
+          "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+          "updated": "2026-03-04"
+        },
+        {
+          "title": "The service is only available in some countries approved by its government",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "The service provides information about how they intend to use your personal data",
+          "class": "good",
+          "source": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+          "updated": "2026-03-04"
+        },
+        {
+          "title": "The service has non-exclusive use of your content",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "User accounts can be terminated after having been in breach of the terms of service repeatedly",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-12"
+        }
+      ],
+      "privacy_policy_url": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+      "url": "https://tosdr.org/en/service/198"
+    },
+    "206": {
+      "id": 206,
+      "name": "Slack",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-02-17",
+      "counts": {
+        "blocker": 1,
+        "bad": 2,
+        "neutral": 10,
+        "good": 8
+      },
+      "points": [
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2025-09-12"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": "https://slack.com/terms-of-service",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Extra data may be collected about you through promotions",
+          "class": "bad",
+          "source": "https://slack.com/privacy-policy",
+          "updated": "2026-02-17"
+        },
+        {
+          "title": "You maintain ownership of your data",
+          "class": "good",
+          "source": "https://slack.com/terms-of-service",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://slack.com/terms-of-service",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://slack.com/terms-of-service",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service will warn users about website maintenance",
+          "class": "good",
+          "source": "https://slack.com/terms-of-service",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service gives 30 days of notice before closing your account",
+          "class": "good",
+          "source": "https://slack.com/terms-of-service",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://slack.com/privacy-policy",
+      "url": "https://tosdr.org/en/service/206"
+    },
+    "207": {
+      "id": 207,
+      "name": "Evernote",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-27",
+      "counts": {
+        "blocker": 3,
+        "bad": 21,
+        "neutral": 37,
+        "good": 27
+      },
+      "points": [
+        {
+          "title": "Content you post may be edited by the service for any reason",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "Your data is collected even if you did not interact with the service directly",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "Your content can be licensed to third parties",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "You waive your right to a class action",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "Information is provided about what kind of personal information is collected",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "Copyright license limited for the purposes of that same service but transferable and sublicenseable",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-25"
+        },
+        {
+          "title": "You maintain ownership of your content",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-25"
+        }
+      ],
+      "privacy_policy_url": "https://evernote.com/privacy/policy",
+      "url": "https://tosdr.org/en/service/207"
+    },
+    "217": {
+      "id": 217,
+      "name": "Google",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-08-12",
+      "counts": {
+        "blocker": 5,
+        "bad": 19,
+        "neutral": 16,
+        "good": 22
+      },
+      "points": [
+        {
+          "title": "Your identity is used in ads that are shown to other users",
+          "class": "blocker",
+          "source": "https://policies.google.com/privacy#",
+          "updated": "2026-08-10"
+        },
+        {
+          "title": "You may still be tracked even after opting out from tracking",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-06-17"
+        },
+        {
+          "title": "Your data may be collected even if you did not interact with the service directly",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-08-10"
+        },
+        {
+          "title": "Your browsing history can be viewed by the service",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-03-07"
+        },
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-03-07"
+        },
+        {
+          "title": "The service reviews its privacy policy on a regular basis",
+          "class": "good",
+          "source": "https://policies.google.com/privacy#",
+          "updated": "2026-08-10"
+        },
+        {
+          "title": "This service allows you to retrieve an archive of your data",
+          "class": "good",
+          "source": "https://policies.google.com/privacy#",
+          "updated": "2026-08-10"
+        },
+        {
+          "title": "You can choose with whom you share content",
+          "class": "good",
+          "source": "https://policies.google.com/privacy#",
+          "updated": "2026-08-10"
+        }
+      ],
+      "privacy_policy_url": "https://policies.google.com/privacy#",
+      "url": "https://tosdr.org/en/service/217"
+    },
+    "219": {
+      "id": 219,
+      "name": "Instagram",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-22",
+      "counts": {
+        "blocker": 4,
+        "bad": 25,
+        "neutral": 33,
+        "good": 16
+      },
+      "points": [
+        {
+          "title": "The service can read your private messages",
+          "class": "blocker",
+          "source": "https://help.instagram.com/519522125107875",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your identity is used in ads that are shown to other users",
+          "class": "blocker",
+          "source": "https://help.instagram.com/581066165581870",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service holds onto content that you've deleted",
+          "class": "blocker",
+          "source": "https://help.instagram.com/581066165581870",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "They store data on you even if you did not interact with the service",
+          "class": "blocker",
+          "source": "https://help.instagram.com/519522125107875",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Usernames can be rejected for any reason",
+          "class": "bad",
+          "source": "https://help.instagram.com/581066165581870",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service will not allow third parties to access your personal information without a legal basis",
+          "class": "good",
+          "source": "https://help.instagram.com/494561080557017",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service does not sell your personal data",
+          "class": "good",
+          "source": "https://help.instagram.com/519522125107875",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service provides information about how they intend to use your personal data",
+          "class": "good",
+          "source": "https://help.instagram.com/519522125107875",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": null,
+      "url": "https://tosdr.org/en/service/219"
+    },
+    "222": {
+      "id": 222,
+      "name": "DuckDuckGo",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-07-28",
+      "counts": {
+        "blocker": 0,
+        "bad": 6,
+        "neutral": 11,
+        "good": 10
+      },
+      "points": [
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user in the last 12 months or 100$",
+          "class": "bad",
+          "source": "",
+          "updated": "2026-02-22"
+        },
+        {
+          "title": "You may be tracked on other websites",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-28"
+        },
+        {
+          "title": "Tracking pixels are used in service-to-user communication",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-28"
+        },
+        {
+          "title": "This service shares your personal data with third parties that are not essential to its operation",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-28"
+        },
+        {
+          "title": "Your data may be processed and stored anywhere in the world",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-28"
+        },
+        {
+          "title": "This service provides an onion site accessible over Tor",
+          "class": "good",
+          "source": "https://duckduckgo.com/privacy",
+          "updated": "2021-11-19"
+        },
+        {
+          "title": "This service claims that your personal data is not being sold",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-28"
+        },
+        {
+          "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+          "class": "good",
+          "source": null,
+          "updated": "2026-02-22"
+        }
+      ],
+      "privacy_policy_url": "https://duckduckgo.com/privacy",
+      "url": "https://tosdr.org/en/service/222"
+    },
+    "244": {
+      "id": 244,
+      "name": "Microsoft Services",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-27",
+      "counts": {
+        "blocker": 1,
+        "bad": 18,
+        "neutral": 13,
+        "good": 2
+      },
+      "points": [
+        {
+          "title": "The service can delete specific content without prior notice and without a reason",
+          "class": "blocker",
+          "source": "https://www.microsoft.com/en-us/servicesagreement/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Microsoft may remotely disabled software you are not licensed to use.",
+          "class": "bad",
+          "source": "https://www.microsoft.com/en-us/servicesagreement/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service gathers information about you through third parties",
+          "class": "bad",
+          "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Many third parties are involved in operating the service",
+          "class": "bad",
+          "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your data may be processed and stored anywhere in the world",
+          "class": "bad",
+          "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can request access and deletion of personal data",
+          "class": "good",
+          "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can opt out of targeted advertising",
+          "class": "good",
+          "source": "https://www.microsoft.com/en-us/servicesagreement/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://privacy.microsoft.com/en-us/privacystatement",
+      "url": "https://tosdr.org/en/service/244"
+    },
+    "270": {
+      "id": 270,
+      "name": "Dropbox",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-17",
+      "counts": {
+        "blocker": 0,
+        "bad": 18,
+        "neutral": 28,
+        "good": 15
+      },
+      "points": [
+        {
+          "title": "Many third parties are involved in operating the service",
+          "class": "bad",
+          "source": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service receives your percise location through GPS coordinates",
+          "class": "bad",
+          "source": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Tracking via third-party cookies for other purposes without your consent.",
+          "class": "bad",
+          "source": "https://www.dropbox.com/privacy",
+          "updated": "2026-03-30"
+        },
+        {
+          "title": "Your Personal data may be sold unless you opt out",
+          "class": "bad",
+          "source": "https://help.dropbox.com/security/cookies",
+          "updated": "2026-06-17"
+        },
+        {
+          "title": "Tracking pixels are used in service-to-user communication",
+          "class": "bad",
+          "source": "https://help.dropbox.com/security/cookies",
+          "updated": "2026-03-30"
+        },
+        {
+          "title": "You are entitled to a refund if certain thresholds or standards are not met by the service",
+          "class": "good",
+          "source": "https://www.dropbox.com/privacy#terms",
+          "updated": "2026-03-30"
+        },
+        {
+          "title": "You maintain ownership of your data",
+          "class": "good",
+          "source": "https://www.dropbox.com/privacy#terms",
+          "updated": "2026-03-30"
+        },
+        {
+          "title": "You can delete your content from this service",
+          "class": "good",
+          "source": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+          "updated": "2026-03-30"
+        }
+      ],
+      "privacy_policy_url": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+      "url": "https://tosdr.org/en/service/270"
+    },
+    "309": {
+      "id": 309,
+      "name": "Yahoo!",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-09",
+      "counts": {
+        "blocker": 2,
+        "bad": 17,
+        "neutral": 17,
+        "good": 5
+      },
+      "points": [
+        {
+          "title": "They store data on you even if you did not interact with the service",
+          "class": "blocker",
+          "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service can read your private messages",
+          "class": "blocker",
+          "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
+          "class": "bad",
+          "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service gathers information about you through third parties",
+          "class": "bad",
+          "source": "https://www.verizonmedia.com/policies/us/en/verizonmedia/privacy/topics/location/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service may use your personal information for marketing purposes",
+          "class": "bad",
+          "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service has non-exclusive use of your content",
+          "class": "good",
+          "source": "https://policies.oath.com/us/en/oath/terms/otos/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service provides information about how they intend to use your personal data",
+          "class": "good",
+          "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service provides details about what kinds of personal information they collect",
+          "class": "good",
+          "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://policies.oath.com/us/en/oath/privacy/index.html",
+      "url": "https://tosdr.org/en/service/309"
+    },
+    "311": {
+      "id": 311,
+      "name": "Snap Inc. (Snapchat)",
+      "rating": "E",
+      "reviewed_fully": false,
+      "newest_point": "2026-07-22",
+      "counts": {
+        "blocker": 4,
+        "bad": 29,
+        "neutral": 36,
+        "good": 16
+      },
+      "points": [
+        {
+          "title": "Private messages can be read",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-07-14"
+        },
+        {
+          "title": "Your data is collected even if you did not interact with the service directly",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-07-14"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-07-14"
+        },
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-07-14"
+        },
+        {
+          "title": "You are forced into binding arbitration in case of disputes",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-17"
+        },
+        {
+          "title": "Information is provided about what kind of personal information is collected",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-14"
+        },
+        {
+          "title": "You maintain ownership of your content",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-14"
+        },
+        {
+          "title": "Two factor authentication is provided for your account",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-14"
+        }
+      ],
+      "privacy_policy_url": "https://values.snap.com/privacy/privacy-policy?lang=en-US",
+      "url": "https://tosdr.org/en/service/311"
+    },
+    "405": {
+      "id": 405,
+      "name": "Feedly",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-08-23",
+      "counts": {
+        "blocker": 1,
+        "bad": 2,
+        "neutral": 4,
+        "good": 6
+      },
+      "points": [
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": "https://feedly.com/i/legal/privacy",
+          "updated": "2023-06-30"
+        },
+        {
+          "title": "Your personal information is used for many different purposes",
+          "class": "bad",
+          "source": "https://feedly.com/i/legal/privacy",
+          "updated": "2023-06-30"
+        },
+        {
+          "title": "You waive your right to a class action.",
+          "class": "bad",
+          "source": "https://feedly.com/i/legal",
+          "updated": "2026-08-23"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://feedly.com/i/legal/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": "https://feedly.com/i/legal/privacy",
+          "updated": "2023-06-30"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": "https://feedly.com/i/legal/privacy",
+          "updated": "2023-06-30"
+        },
+        {
+          "title": "The service claims to be CCPA compliant for California users",
+          "class": "good",
+          "source": null,
+          "updated": "2023-07-14"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": null,
+          "updated": "2023-07-14"
+        }
+      ],
+      "privacy_policy_url": "https://feedly.com/i/legal/privacy",
+      "url": "https://tosdr.org/en/service/405"
+    },
+    "491": {
+      "id": 491,
+      "name": "Proton AG",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2026-08-01",
+      "counts": {
+        "blocker": 0,
+        "bad": 8,
+        "neutral": 31,
+        "good": 8
+      },
+      "points": [
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to you",
+          "class": "bad",
+          "source": null,
+          "updated": "2025-02-18"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": null,
+          "updated": "2025-01-31"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+          "class": "bad",
+          "source": "https://proton.me/legal/privacy",
+          "updated": "2026-07-29"
+        },
+        {
+          "title": "This service assumes no liability for unauthorized access to your personal information",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-06-11"
+        },
+        {
+          "title": "Certain features may be throttled",
+          "class": "bad",
+          "source": "",
+          "updated": "2026-08-01"
+        },
+        {
+          "title": "The service provides two factor authentification for your account",
+          "class": "good",
+          "source": "https://protonmail.com/support/knowledge-base/two-factor-authentication/",
+          "updated": "2020-11-25"
+        },
+        {
+          "title": "This service provides an onion site accessible over Tor",
+          "class": "good",
+          "source": "https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/",
+          "updated": "2023-04-12"
+        },
+        {
+          "title": "Pseudonyms are allowed",
+          "class": "good",
+          "source": null,
+          "updated": "2025-09-10"
+        }
+      ],
+      "privacy_policy_url": "https://proton.me/legal/privacy",
+      "url": "https://tosdr.org/en/service/491"
+    },
+    "525": {
+      "id": 525,
+      "name": "Fedora",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2026-09-10",
+      "counts": {
+        "blocker": 0,
+        "bad": 2,
+        "neutral": 8,
+        "good": 9
+      },
+      "points": [
+        {
+          "title": "This service receives your precise location through GPS coordinates",
+          "class": "bad",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service may collect, use, and share location data",
+          "class": "bad",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2026-09-10"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You are informed about the risk of publishing personal info online",
+          "class": "good",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The publishing of personally identifiable information without the owner’s consent is not allowed",
+          "class": "good",
+          "source": "https://docs.fedoraproject.org/en-US/project/code-of-conduct/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about security practices",
+          "class": "good",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about how they collect personal data",
+          "class": "good",
+          "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+      "url": "https://tosdr.org/en/service/525"
+    },
+    "528": {
+      "id": 528,
+      "name": "Signal",
+      "rating": "B",
+      "reviewed_fully": false,
+      "newest_point": "2026-06-17",
+      "counts": {
+        "blocker": 0,
+        "bad": 2,
+        "neutral": 19,
+        "good": 15
+      },
+      "points": [
+        {
+          "title": "Any liability on behalf of the service is only limited to $100",
+          "class": "bad",
+          "source": "https://signal.org/legal/",
+          "updated": "2026-03-24"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-06-17"
+        },
+        {
+          "title": "This service does not sell your personal data",
+          "class": "good",
+          "source": "https://signal.org/legal/",
+          "updated": "2026-03-24"
+        },
+        {
+          "title": "You can delete your content from this service",
+          "class": "good",
+          "source": "https://support.signal.org/hc/en-us/articles/360004066371-Signal-and-the-General-Data-Protection-Regulation-GDPR-",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://signal.org/legal/",
+          "updated": "2026-03-24"
+        },
+        {
+          "title": "This service allows you to retrieve an archive of your data",
+          "class": "good",
+          "source": "https://support.signal.org/hc/en-us/articles/360007059412",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service does not track you",
+          "class": "good",
+          "source": "https://support.signal.org/hc/en-us/articles/360007059412",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": "https://support.signal.org/hc/en-us/articles/360007059412",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://signal.org/legal/",
+      "url": "https://tosdr.org/en/service/528"
+    },
+    "530": {
+      "id": 530,
+      "name": "Mozilla.org",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-12",
+      "counts": {
+        "blocker": 0,
+        "bad": 6,
+        "neutral": 5,
+        "good": 6
+      },
+      "points": [
+        {
+          "title": "The service can sell or otherwise transfer your personal data as part of a bankruptcy proceeding or other type of financial transaction.",
+          "class": "bad",
+          "source": "https://www.mozilla.org/en-US/privacy/",
+          "updated": "2026-05-05"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+          "class": "bad",
+          "source": "https://www.mozilla.org/en-US/privacy/",
+          "updated": "2026-05-05"
+        },
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You must provide your legal name, pseudonyms are not allowed",
+          "class": "bad",
+          "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service employs third-party cookies, but with opt-out instructions",
+          "class": "bad",
+          "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service respects your browser's Do Not Track (DNT) headers",
+          "class": "good",
+          "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service provides information about how they intend to use your personal data",
+          "class": "good",
+          "source": "https://www.mozilla.org/en-US/privacy/",
+          "updated": "2020-12-15"
+        },
+        {
+          "title": "User feedback is invited regarding changes to the terms.",
+          "class": "good",
+          "source": "https://www.mozilla.org/en-US/privacy/",
+          "updated": "2020-12-15"
+        }
+      ],
+      "privacy_policy_url": "https://www.mozilla.org/en-US/privacy/websites/",
+      "url": "https://tosdr.org/en/service/530"
+    },
+    "536": {
+      "id": 536,
+      "name": "Discord",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-16",
+      "counts": {
+        "blocker": 3,
+        "bad": 25,
+        "neutral": 33,
+        "good": 22
+      },
+      "points": [
+        {
+          "title": "Changes in policies are applied retroactively.",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "They store data on you even if you did not interact with the service",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+          "class": "bad",
+          "source": "https://discord.com/terms",
+          "updated": "2023-06-10"
+        },
+        {
+          "title": "Your account can be deleted without prior notice and without a reason",
+          "class": "bad",
+          "source": null,
+          "updated": "2024-03-29"
+        },
+        {
+          "title": "You can delete your content from this service",
+          "class": "good",
+          "source": null,
+          "updated": "2023-10-09"
+        },
+        {
+          "title": "A list of all cookies set by the website is provided",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "Two factor authentication is provided for your account",
+          "class": "good",
+          "source": null,
+          "updated": "2026-03-12"
+        }
+      ],
+      "privacy_policy_url": "https://discord.com/privacy",
+      "url": "https://tosdr.org/en/service/536"
+    },
+    "578": {
+      "id": 578,
+      "name": "Canonical (Ubuntu)",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2026-07-12",
+      "counts": {
+        "blocker": 0,
+        "bad": 14,
+        "neutral": 10,
+        "good": 13
+      },
+      "points": [
+        {
+          "title": "The service can sell or otherwise transfer your personal data as part of a bankruptcy proceeding or other type of financial transaction.",
+          "class": "bad",
+          "source": "https://ubuntu.com/legal/data-privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data may be used for marketing purposes",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-08"
+        },
+        {
+          "title": "Many different types of personal data are collected",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-08"
+        },
+        {
+          "title": "Your profile is combined across various products",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-08"
+        },
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-08"
+        },
+        {
+          "title": "You can retrieve an archive of your data",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-08"
+        },
+        {
+          "title": "Information is provided about what kind of personal information is collected",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-08"
+        },
+        {
+          "title": "Archives of their agreements are provided so that changes can be viewed over time",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-07"
+        }
+      ],
+      "privacy_policy_url": "https://canonical.com/legal/data-privacy",
+      "url": "https://tosdr.org/en/service/578"
+    },
+    "639": {
+      "id": 639,
+      "name": "Mastodon",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 1,
+        "bad": 4,
+        "neutral": 7,
+        "good": 10
+      },
+      "points": [
+        {
+          "title": "Private messages can be read",
+          "class": "blocker",
+          "source": "https://mastodon.social/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service can delete your account without prior notice",
+          "class": "bad",
+          "source": "https://mastodon.social/about/more",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You shall not interfere with another person's enjoyment of the service",
+          "class": "bad",
+          "source": "https://mastodon.social/about/more",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to you",
+          "class": "bad",
+          "source": "https://mastodon.social/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service reserves the right to disclose your personal information without notifying you",
+          "class": "bad",
+          "source": "https://mastodon.social/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The user is informed about security practices",
+          "class": "good",
+          "source": "https://mastodon.social/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service provides two factor authentification for your account",
+          "class": "good",
+          "source": "https://mastodon.social/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "User logs are deleted after a finite period of time",
+          "class": "good",
+          "source": "https://mastodon.social/terms",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://mastodon.social/privacy-policy",
+      "url": "https://tosdr.org/en/service/639"
+    },
+    "641": {
+      "id": 641,
+      "name": "Mullvad",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2026-05-29",
+      "counts": {
+        "blocker": 0,
+        "bad": 3,
+        "neutral": 10,
+        "good": 25
+      },
+      "points": [
+        {
+          "title": "Information is gathered about you through third parties",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Some personal data may be kept for business interests or legal obligations",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Inconvenient process for obtaining personal data",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "The terms for this service are easy to read",
+          "class": "good",
+          "source": "https://mullvad.net/en/#privacy",
+          "updated": "2018-08-09"
+        },
+        {
+          "title": "An onion site accessible over Tor is provided",
+          "class": "good",
+          "source": "https://mullvad.net/",
+          "updated": "2023-03-30"
+        },
+        {
+          "title": "An anonymous payment method is offered",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "No third-party analytics or tracking platforms are used",
+          "class": "good",
+          "source": null,
+          "updated": "2026-03-31"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        }
+      ],
+      "privacy_policy_url": "https://mullvad.net/en/help/privacy-policy",
+      "url": "https://tosdr.org/en/service/641"
+    },
+    "1348": {
+      "id": 1348,
+      "name": "Bitwarden",
+      "rating": "B",
+      "reviewed_fully": false,
+      "newest_point": "2026-05-18",
+      "counts": {
+        "blocker": 0,
+        "bad": 3,
+        "neutral": 7,
+        "good": 11
+      },
+      "points": [
+        {
+          "title": "The service does not guarantee that software errors will be corrected",
+          "class": "bad",
+          "source": "https://bitwarden.com/terms/",
+          "updated": "2026-04-24"
+        },
+        {
+          "title": "Some personal data may be kept for business interests or legal obligations",
+          "class": "bad",
+          "source": "https://bitwarden.com/privacy/",
+          "updated": "2023-06-10"
+        },
+        {
+          "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
+          "class": "bad",
+          "source": "https://bitwarden.com/privacy/",
+          "updated": "2026-04-24"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": "https://bitwarden.com/privacy/",
+          "updated": "2023-06-10"
+        },
+        {
+          "title": "Information is provided about how they collect personal data",
+          "class": "good",
+          "source": "https://bitwarden.com/privacy/",
+          "updated": "2023-06-10"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": "https://bitwarden.com/privacy/",
+          "updated": "2023-06-10"
+        },
+        {
+          "title": "Features of the website are made available under a free software license (AGPL) v3.0",
+          "class": "good",
+          "source": "https://github.com/bitwarden/server/blob/master/LICENSE.txt",
+          "updated": "2023-09-30"
+        },
+        {
+          "title": "The terms for this service are easy to read",
+          "class": "good",
+          "source": null,
+          "updated": "2023-09-30"
+        }
+      ],
+      "privacy_policy_url": "https://bitwarden.com/privacy/",
+      "url": "https://tosdr.org/en/service/1348"
+    },
+    "1448": {
+      "id": 1448,
+      "name": "TikTok",
+      "rating": "E",
+      "reviewed_fully": true,
+      "newest_point": "2026-09-10",
+      "counts": {
+        "blocker": 4,
+        "bad": 19,
+        "neutral": 8,
+        "good": 6
+      },
+      "points": [
+        {
+          "title": "Private messages can be read",
+          "class": "blocker",
+          "source": "https://www.tiktok.com/en/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You waive your moral rights",
+          "class": "blocker",
+          "source": null,
+          "updated": "2023-10-23"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": null,
+          "updated": "2023-11-15"
+        },
+        {
+          "title": "Content you post may be edited by the service for any reason",
+          "class": "blocker",
+          "source": null,
+          "updated": "2023-11-15"
+        },
+        {
+          "title": "This service forces users into binding arbitration in the case of disputes",
+          "class": "bad",
+          "source": "https://www.tiktok.com/en/terms-of-use",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Details are provided about what kind of information they collect",
+          "class": "good",
+          "source": "https://www.tiktok.com/en/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": "https://www.tiktok.com/en/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": "https://www.tiktok.com/en/privacy-policy",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://www.tiktok.com/en-uk/privacy-policy",
+      "url": "https://tosdr.org/en/service/1448"
+    },
+    "1487": {
+      "id": 1487,
+      "name": "Brave",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2026-08-05",
+      "counts": {
+        "blocker": 1,
+        "bad": 10,
+        "neutral": 27,
+        "good": 16
+      },
+      "points": [
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "This service throttles your use",
+          "class": "bad",
+          "source": "https://brave.com/terms-of-use/",
+          "updated": "2026-03-10"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-05-18"
+        },
+        {
+          "title": "An onion site accessible over Tor is provided",
+          "class": "good",
+          "source": "https://support.brave.com/hc/en-us/articles/4537609459469-List-of-Brave-Onion-Addresses",
+          "updated": "2022-11-26"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://brave.com/terms-of-use/",
+          "updated": "2026-03-10"
+        },
+        {
+          "title": "The service is open-source",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        }
+      ],
+      "privacy_policy_url": "https://brave.com/privacy/website/",
+      "url": "https://tosdr.org/en/service/1487"
+    },
+    "1574": {
+      "id": 1574,
+      "name": "Dashlane",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 2,
+        "neutral": 6,
+        "good": 5
+      },
+      "points": [
+        {
+          "title": "You waive your right to a class action.",
+          "class": "bad",
+          "source": "https://www.dashlane.com/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service forces users into binding arbitration in the case of disputes",
+          "class": "bad",
+          "source": "https://www.dashlane.com/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be LGPD compliant for Brazilian users",
+          "class": "good",
+          "source": "https://www.dashlane.com/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": "https://www.dashlane.com/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be CCPA compliant for California users",
+          "class": "good",
+          "source": "https://www.dashlane.com/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://www.dashlane.com/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": "https://www.dashlane.com/privacy",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://www.dashlane.com/privacy",
+      "url": "https://tosdr.org/en/service/1574"
+    },
+    "1596": {
+      "id": 1596,
+      "name": "PeerTube",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 0,
+        "good": 1
+      },
+      "points": [
+        {
+          "title": "This service may collect, use, and share location data",
+          "class": "bad",
+          "source": "https://peertube.touhoppai.moe/about/peertube#privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The user is informed about security practices",
+          "class": "good",
+          "source": "https://peertube.touhoppai.moe/about/peertube#privacy",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://peertube.touhoppai.moe/about/peertube#privacy",
+      "url": "https://tosdr.org/en/service/1596"
+    },
+    "1817": {
+      "id": 1817,
+      "name": "Notion",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 2,
+        "bad": 6,
+        "neutral": 5,
+        "good": 7
+      },
+      "points": [
+        {
+          "title": "This service holds onto content that you've deleted",
+          "class": "blocker",
+          "source": "https://www.notion.so/Terms-Conditions-4e1c5dd3e3de45dfa4a8ed60f1a43da0",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": "https://www.notion.so/Terms-Conditions-4e1c5dd3e3de45dfa4a8ed60f1a43da0",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is gathered about you through third parties",
+          "class": "bad",
+          "source": "https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Extra data may be collected about you through promotions",
+          "class": "bad",
+          "source": "https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Third-party cookies are used for statistics",
+          "class": "bad",
+          "source": "https://www.notion.so/GDPR-c8eac6ea83a64fb1a3ea3bcd5c3d4951",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": "https://www.notion.so/GDPR-c8eac6ea83a64fb1a3ea3bcd5c3d4951",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can request access, correction and/or deletion of your data",
+          "class": "good",
+          "source": "https://www.notion.so/GDPR-c8eac6ea83a64fb1a3ea3bcd5c3d4951",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You will be notified if personal data has been affected by data breaches",
+          "class": "good",
+          "source": "https://www.notion.so/help/security-and-privacy",
+          "updated": "2022-02-15"
+        }
+      ],
+      "privacy_policy_url": "https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091",
+      "url": "https://tosdr.org/en/service/1817"
+    },
+    "1946": {
+      "id": 1946,
+      "name": "Telegram",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-03-01",
+      "counts": {
+        "blocker": 1,
+        "bad": 0,
+        "neutral": 0,
+        "good": 2
+      },
+      "points": [
+        {
+          "title": "Private messages can be read",
+          "class": "blocker",
+          "source": "",
+          "updated": "2026-03-01"
+        },
+        {
+          "title": "This service does not sell your personal data",
+          "class": "good",
+          "source": "https://telegram.org/faq",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service allows you to retrieve an archive of your data",
+          "class": "good",
+          "source": "https://telegram.org/blog/export-and-more",
+          "updated": "2020-12-15"
+        }
+      ],
+      "privacy_policy_url": "https://telegram.org/privacy",
+      "url": "https://tosdr.org/en/service/1946"
+    },
+    "2077": {
+      "id": 2077,
+      "name": "LibreOffice",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2024-07-04",
+      "counts": {
+        "blocker": 0,
+        "bad": 3,
+        "neutral": 6,
+        "good": 8
+      },
+      "points": [
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Many third parties are involved in operating the service",
+          "class": "bad",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service uses third-party cookies for statistics",
+          "class": "bad",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Features of the website are made available under a free software license",
+          "class": "good",
+          "source": "https://www.libreoffice.org/about-us/source-code/",
+          "updated": "2021-03-03"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "User logs are deleted after a finite period of time",
+          "class": "good",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service does not require you to provide your real name",
+          "class": "good",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can delete your content from this service",
+          "class": "good",
+          "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+      "url": "https://tosdr.org/en/service/2077"
+    },
+    "2198": {
+      "id": 2198,
+      "name": "Zoom Video Communications",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-14",
+      "counts": {
+        "blocker": 0,
+        "bad": 20,
+        "neutral": 24,
+        "good": 13
+      },
+      "points": [
+        {
+          "title": "This service forces users into binding arbitration in the case of disputes",
+          "class": "bad",
+          "source": "https://zoom.us/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
+          "class": "bad",
+          "source": "https://zoom.us/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service may sell your data unless you opt out",
+          "class": "bad",
+          "source": "https://zoom.us/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service gathers information about you through third parties",
+          "class": "bad",
+          "source": "https://zoom.us/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": "https://zoom.us/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service provides archives of their Terms of Service so that changes can be viewed over time",
+          "class": "good",
+          "source": "https://zoom.us/privacy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection.",
+          "class": "good",
+          "source": "https://zoom.us/terms",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Third parties used by the service are bound by confidentiality obligations",
+          "class": "good",
+          "source": "https://zoom.us/privacy",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://zoom.us/privacy",
+      "url": "https://tosdr.org/en/service/2198"
+    },
+    "2201": {
+      "id": 2201,
+      "name": "Jitsi",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 5,
+        "neutral": 20,
+        "good": 10
+      },
+      "points": [
+        {
+          "title": "The service can delete your account without prior notice and without a reason",
+          "class": "bad",
+          "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service throttles your use",
+          "class": "bad",
+          "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You waive your right to a class action.",
+          "class": "bad",
+          "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to USD $10",
+          "class": "bad",
+          "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The court of law governing the terms is in a jurisdiction that is less friendly to user privacy protection.",
+          "class": "bad",
+          "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service provides a complaint mechanism for the handling of personal data",
+          "class": "good",
+          "source": "https://jitsi.org/meet-jit-si-privacy/\"",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://jitsi.org/meet-jit-si-privacy/\"",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You maintain ownership of your data",
+          "class": "good",
+          "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://jitsi.org/meet-jit-si-privacy/",
+      "url": "https://tosdr.org/en/service/2201"
+    },
+    "2532": {
+      "id": 2532,
+      "name": "Authy (Twilio)",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 12,
+        "neutral": 21,
+        "good": 24
+      },
+      "points": [
+        {
+          "title": "Users shall not interfere with another person's enjoyment of the service",
+          "class": "bad",
+          "source": "https://www.twilio.com/legal/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service assumes no liability for unauthorized access to your personal information",
+          "class": "bad",
+          "source": "https://www.twilio.com/legal/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Tracking pixels are used in service-to-user communication",
+          "class": "bad",
+          "source": "https://www.twilio.com/legal/privacy/cookies",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+          "class": "bad",
+          "source": "https://www.twilio.com/legal/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "If you offer suggestions to the service, they become the owner of the ideas that you give them",
+          "class": "bad",
+          "source": "https://www.twilio.com/legal/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The terms for this service are easy to read",
+          "class": "good",
+          "source": "https://www.twilio.com/legal/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Third parties used by the service are bound by confidentiality obligations",
+          "class": "good",
+          "source": "https://www.twilio.com/legal/privacy",
+          "updated": "2021-02-24"
+        },
+        {
+          "title": "Tracking cookies refused will not limit your ability to use the service",
+          "class": "good",
+          "source": "https://www.twilio.com/legal/privacy/cookies",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://www.twilio.com/legal/privacy",
+      "url": "https://tosdr.org/en/service/2532"
+    },
+    "2558": {
+      "id": 2558,
+      "name": "Calyx Institute",
+      "rating": "B",
+      "reviewed_fully": false,
+      "newest_point": "2026-09-12",
+      "counts": {
+        "blocker": 0,
+        "bad": 2,
+        "neutral": 2,
+        "good": 11
+      },
+      "points": [
+        {
+          "title": "You waive your right to a class action.",
+          "class": "bad",
+          "source": "https://calyxinstitute.org/legal/terms-of-service",
+          "updated": "2026-09-12"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+          "class": "bad",
+          "source": "https://calyxinstitute.org/legal/terms-of-service",
+          "updated": "2026-09-09"
+        },
+        {
+          "title": "Details are provided about what kind of information they collect",
+          "class": "good",
+          "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Logs are deleted after a finite period of time",
+          "class": "good",
+          "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "An onion site accessible over Tor is provided",
+          "class": "good",
+          "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "No third-party analytics or tracking platforms are used",
+          "class": "good",
+          "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://calyxinstitute.org/legal/privacy-policy",
+      "url": "https://tosdr.org/en/service/2558"
+    },
+    "2568": {
+      "id": 2568,
+      "name": "NewPipe",
+      "rating": "A",
+      "reviewed_fully": true,
+      "newest_point": "2026-06-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 3,
+        "good": 18
+      },
+      "points": [
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can limit how your information is used by the service",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2021-03-25"
+        },
+        {
+          "title": "A complaint mechanism is provided for the handling of personal data",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service does not use third-party analytics or tracking platforms",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2021-03-25"
+        },
+        {
+          "title": "The service provides details about what kinds of information they collect",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Users can access most of the pages on the service's website without revealing any personal information",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service allows you to use pseudonyms",
+          "class": "good",
+          "source": "https://newpipe.net/legal/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Content is published under a free license instead of a bilateral one",
+          "class": "good",
+          "source": "https://newpipe.net/legal/license/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://newpipe.net/legal/privacy/",
+      "url": "https://tosdr.org/en/service/2568"
+    },
+    "2875": {
+      "id": 2875,
+      "name": "e-foundation",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 4,
+        "neutral": 4,
+        "good": 5
+      },
+      "points": [
+        {
+          "title": "Third-party cookies are used for statistics",
+          "class": "bad",
+          "source": "https://e.foundation/legal-notice-privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service can delete your account without prior notice and without a reason",
+          "class": "bad",
+          "source": "https://community.e.foundation/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to the user",
+          "class": "bad",
+          "source": "https://community.e.foundation/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+          "class": "bad",
+          "source": "https://community.e.foundation/tos",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "User-generated content is encrypted",
+          "class": "good",
+          "source": "https://e.foundation/legal-notice-privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": "https://e.foundation/legal-notice-privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The user is informed about security practices",
+          "class": "good",
+          "source": "https://e.foundation/legal-notice-privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The website is open-source",
+          "class": "good",
+          "source": "https://e.foundation/legal-notice-privacy/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://e.foundation/legal-notice-privacy/",
+      "url": "https://tosdr.org/en/service/2875"
+    },
+    "3804": {
+      "id": 3804,
+      "name": "KeePassXC",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 2,
+        "good": 7
+      },
+      "points": [
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": "https://keepassxc.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "No third-party analytics or tracking platforms are used",
+          "class": "good",
+          "source": "https://keepassxc.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is not shared with third parties",
+          "class": "good",
+          "source": "https://keepassxc.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your browser's Do Not Track (DNT) headers are respected",
+          "class": "good",
+          "source": "https://keepassxc.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You can access most of the pages on the service's website without revealing any personal information",
+          "class": "good",
+          "source": "https://keepassxc.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Features of the website are made available under a free software license",
+          "class": "good",
+          "source": "https://keepassxc.org/",
+          "updated": "2021-06-26"
+        },
+        {
+          "title": "The service is open-source",
+          "class": "good",
+          "source": "https://github.com/keepassxreboot/keepassxc",
+          "updated": "2021-06-26"
+        },
+        {
+          "title": "IP addresses of website visitors are not tracked",
+          "class": "good",
+          "source": "https://keepassxc.org/privacy/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://keepassxc.org/privacy/",
+      "url": "https://tosdr.org/en/service/3804"
+    },
+    "3848": {
+      "id": 3848,
+      "name": "Box",
+      "rating": "D",
+      "reviewed_fully": false,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 1,
+        "good": 0
+      },
+      "points": [
+        {
+          "title": "Third party cookies are employed, but with opt out instructions",
+          "class": "bad",
+          "source": "https://www.box.com/legal/cookie-notification",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://www.box.com/legal/privacypolicy",
+      "url": "https://tosdr.org/en/service/3848"
+    },
+    "3996": {
+      "id": 3996,
+      "name": "FreeTube",
+      "rating": "B",
+      "reviewed_fully": true,
+      "newest_point": "2026-09-08",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 2,
+        "good": 14
+      },
+      "points": [
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to you",
+          "class": "bad",
+          "source": "https://freetubeapp.io/privacy.php",
+          "updated": "2026-09-08"
+        },
+        {
+          "title": "No third-party analytics or tracking platforms are used",
+          "class": "good",
+          "source": "https://freetubeapp.io/privacy.php",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Features of the website are made available under a free software license",
+          "class": "good",
+          "source": "https://freetubeapp.io",
+          "updated": "2021-06-10"
+        },
+        {
+          "title": "The service is open-source",
+          "class": "good",
+          "source": "http://github.com/FreeTubeApp/FreeTubeApp.io",
+          "updated": "2021-06-10"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": "https://freetubeapp.io/privacy.php",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://freetubeapp.io/privacy.php",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is not shared with third parties",
+          "class": "good",
+          "source": "https://freetubeapp.io/privacy.php",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Only necessary logs are kept by the service to ensure quality",
+          "class": "good",
+          "source": "https://freetubeapp.io/privacy.php",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://freetubeapp.io/privacy.php",
+      "url": "https://tosdr.org/en/service/3996"
+    },
+    "4076": {
+      "id": 4076,
+      "name": "Aegis Authenticator",
+      "rating": "A",
+      "reviewed_fully": true,
+      "newest_point": "2026-09-09",
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 1,
+        "good": 8
+      },
+      "points": [
+        {
+          "title": "The service is open-source",
+          "class": "good",
+          "source": "https://github.com/beemdevelopment/Aegis",
+          "updated": "2021-06-15"
+        },
+        {
+          "title": "No logs are kept",
+          "class": "good",
+          "source": "https://getaegis.app/aegis/privacy.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Features of the service are made available under a free software license",
+          "class": "good",
+          "source": "https://f-droid.org/en/packages/com.beemdevelopment.aegis",
+          "updated": "2021-06-15"
+        },
+        {
+          "title": "You are not being tracked",
+          "class": "good",
+          "source": "https://getaegis.app/aegis/privacy.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "No third-party analytics or tracking platforms are used",
+          "class": "good",
+          "source": "https://getaegis.app/aegis/privacy.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service does not collect, use, or share location data",
+          "class": "good",
+          "source": "https://getaegis.app/aegis/privacy.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://getaegis.app/aegis/privacy.html",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "A complaint mechanism is provided for the handling of personal data",
+          "class": "good",
+          "source": "https://getaegis.app/aegis/privacy.html",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://getaegis.app/aegis/privacy.html",
+      "url": "https://tosdr.org/en/service/4076"
+    },
+    "4148": {
+      "id": 4148,
+      "name": "Notesnook",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-09-04",
+      "counts": {
+        "blocker": 0,
+        "bad": 9,
+        "neutral": 13,
+        "good": 12
+      },
+      "points": [
+        {
+          "title": "Your data may be processed and stored anywhere in the world",
+          "class": "bad",
+          "source": "https://notesnook.com/privacy",
+          "updated": "2025-10-15"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": "https://notesnook.com/tos/",
+          "updated": "2026-09-02"
+        },
+        {
+          "title": "If you offer suggestions to the service, they become the owner of the ideas that you give them",
+          "class": "bad",
+          "source": "https://notesnook.com/tos/",
+          "updated": "2025-05-07"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+          "class": "bad",
+          "source": null,
+          "updated": "2025-12-16"
+        },
+        {
+          "title": "Some personal data may be kept for business interests or legal obligations",
+          "class": "bad",
+          "source": "https://notesnook.com/privacy",
+          "updated": "2026-09-02"
+        },
+        {
+          "title": "You are not being tracked",
+          "class": "good",
+          "source": "https://notesnook.com/privacy",
+          "updated": "2025-10-15"
+        },
+        {
+          "title": "Information is provided about security practices",
+          "class": "good",
+          "source": "https://notesnook.com/privacy",
+          "updated": "2025-10-15"
+        },
+        {
+          "title": "You can retrieve an archive of your data",
+          "class": "good",
+          "source": "https://notesnook.com/privacy",
+          "updated": "2026-04-04"
+        }
+      ],
+      "privacy_policy_url": "https://notesnook.com/privacy",
+      "url": "https://tosdr.org/en/service/4148"
+    },
+    "4403": {
+      "id": 4403,
+      "name": "Cryptomator",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2023-07-11",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 3,
+        "good": 5
+      },
+      "points": [
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": "https://cryptomator.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": "https://cryptomator.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You are not being tracked",
+          "class": "good",
+          "source": "https://cryptomator.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "An anonymous payment method is offered",
+          "class": "good",
+          "source": "https://cryptomator.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The data retention period is kept to the minimum necessary for fulfilling its purposes",
+          "class": "good",
+          "source": "https://cryptomator.org/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": "https://cryptomator.org/privacy/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://cryptomator.org/privacy/",
+      "url": "https://tosdr.org/en/service/4403"
+    },
+    "4675": {
+      "id": 4675,
+      "name": "Keeper",
+      "rating": null,
+      "reviewed_fully": false,
+      "newest_point": null,
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 0,
+        "good": 0
+      },
+      "points": [],
+      "privacy_policy_url": "https://www.keepersecurity.com/privacypolicy.html",
+      "url": "https://tosdr.org/en/service/4675"
+    },
+    "5256": {
+      "id": 5256,
+      "name": "Ente",
+      "rating": "D",
+      "reviewed_fully": true,
+      "newest_point": "2026-07-13",
+      "counts": {
+        "blocker": 0,
+        "bad": 12,
+        "neutral": 27,
+        "good": 12
+      },
+      "points": [
+        {
+          "title": "Some personal data may be kept for business interests or legal obligations",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-13"
+        },
+        {
+          "title": "You are forced into binding arbitration in case of disputes",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-11"
+        },
+        {
+          "title": "You waive your right to a class action",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-11"
+        },
+        {
+          "title": "Users can be fined for Terms of Service violations",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-11"
+        },
+        {
+          "title": "This service assumes no liability for unauthorized access to your personal information",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-07-11"
+        },
+        {
+          "title": "This Service provides a list of Third Parties involved in its operation.",
+          "class": "good",
+          "source": null,
+          "updated": "2023-11-01"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": null,
+          "updated": "2023-11-01"
+        },
+        {
+          "title": "This service claims User-generated content is encrypted, and they can not decrypt it",
+          "class": "good",
+          "source": null,
+          "updated": "2026-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://ente.com/privacy/",
+      "url": "https://tosdr.org/en/service/5256"
+    },
+    "5630": {
+      "id": 5630,
+      "name": "Opera",
+      "rating": "D",
+      "reviewed_fully": false,
+      "newest_point": "2026-08-16",
+      "counts": {
+        "blocker": 2,
+        "bad": 4,
+        "neutral": 20,
+        "good": 2
+      },
+      "points": [
+        {
+          "title": "Content you post may be edited by the service for any reason",
+          "class": "blocker",
+          "source": "https://legal.opera.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Specific content can be deleted without reason and may be removed without prior notice",
+          "class": "blocker",
+          "source": null,
+          "updated": "2026-08-14"
+        },
+        {
+          "title": "Your account can be deleted without prior notice and without a reason",
+          "class": "bad",
+          "source": "https://legal.opera.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service assumes no liability for unauthorized access to your personal information",
+          "class": "bad",
+          "source": "https://legal.opera.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to you",
+          "class": "bad",
+          "source": null,
+          "updated": "2026-08-14"
+        },
+        {
+          "title": "You maintain ownership of your content",
+          "class": "good",
+          "source": "https://legal.opera.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection (Norway)",
+          "class": "good",
+          "source": "",
+          "updated": "2026-08-14"
+        }
+      ],
+      "privacy_policy_url": "https://www.opera.com/legal/privacy",
+      "url": "https://tosdr.org/en/service/5630"
+    },
+    "7080": {
+      "id": 7080,
+      "name": "Linux Mint",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-07-18",
+      "counts": {
+        "blocker": 0,
+        "bad": 3,
+        "neutral": 4,
+        "good": 6
+      },
+      "points": [
+        {
+          "title": "Third-party cookies are used for advertising",
+          "class": "bad",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-06-11"
+        },
+        {
+          "title": "Third-party cookies are used for statistics",
+          "class": "bad",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-06-11"
+        },
+        {
+          "title": "Third party cookies are employed, but with opt out instructions",
+          "class": "bad",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-06-11"
+        },
+        {
+          "title": "Information is provided about security practices",
+          "class": "good",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-07-18"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-06-11"
+        },
+        {
+          "title": "The service claims to be GDPR compliant for European users",
+          "class": "good",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-06-11"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "",
+          "updated": "2026-06-12"
+        },
+        {
+          "title": "You can request access, correction and/or deletion of your data",
+          "class": "good",
+          "source": "https://linuxmint.com/privacy.php",
+          "updated": "2026-06-11"
+        }
+      ],
+      "privacy_policy_url": "https://linuxmint.com/privacy.php",
+      "url": "https://tosdr.org/en/service/7080"
+    },
+    "7108": {
+      "id": 7108,
+      "name": "OpenAI (ChatGPT)",
+      "rating": "C",
+      "reviewed_fully": true,
+      "newest_point": "2026-07-29",
+      "counts": {
+        "blocker": 1,
+        "bad": 9,
+        "neutral": 24,
+        "good": 9
+      },
+      "points": [
+        {
+          "title": "Your personal data is used for automated decision-making, profiling or AI training",
+          "class": "blocker",
+          "source": "https://openai.com/policies/privacy-policy",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": "https://openai.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You waive your right to a class action.",
+          "class": "bad",
+          "source": "https://openai.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
+          "class": "bad",
+          "source": "https://openai.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Some personal data may be kept for business interests or legal obligations",
+          "class": "bad",
+          "source": "https://openai.com/privacy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "30 days of notice are given before closing your account",
+          "class": "good",
+          "source": "https://openai.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://openai.com/terms/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
+          "class": "good",
+          "source": "https://openai.com/terms/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://openai.com/policies/privacy-policy",
+      "url": "https://tosdr.org/en/service/7108"
+    },
+    "7638": {
+      "id": 7638,
+      "name": "SimpleX Chat",
+      "rating": "B",
+      "reviewed_fully": false,
+      "newest_point": "2026-07-18",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 10,
+        "good": 8
+      },
+      "points": [
+        {
+          "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
+          "class": "bad",
+          "source": null,
+          "updated": "2024-02-02"
+        },
+        {
+          "title": "User-generated content is encrypted, and this service cannot decrypt it",
+          "class": "good",
+          "source": null,
+          "updated": "2024-02-04"
+        },
+        {
+          "title": "Your personal data is used for limited purposes",
+          "class": "good",
+          "source": null,
+          "updated": "2024-02-04"
+        },
+        {
+          "title": "Features of the website are made available under a free software license",
+          "class": "good",
+          "source": null,
+          "updated": "2024-02-04"
+        },
+        {
+          "title": "A free help desk is provided",
+          "class": "good",
+          "source": null,
+          "updated": "2024-03-23"
+        },
+        {
+          "title": "Information is provided about security practices",
+          "class": "good",
+          "source": null,
+          "updated": "2024-02-04"
+        },
+        {
+          "title": "Information is provided about what kind of information they collect",
+          "class": "good",
+          "source": null,
+          "updated": "2024-02-04"
+        },
+        {
+          "title": "Your personal data is not sold",
+          "class": "good",
+          "source": null,
+          "updated": "2024-02-04"
+        }
+      ],
+      "privacy_policy_url": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+      "url": "https://tosdr.org/en/service/7638"
+    },
+    "8170": {
+      "id": 8170,
+      "name": "Jami",
+      "rating": "B",
+      "reviewed_fully": false,
+      "newest_point": "2026-09-08",
+      "counts": {
+        "blocker": 0,
+        "bad": 1,
+        "neutral": 2,
+        "good": 7
+      },
+      "points": [
+        {
+          "title": "This service tracks which web page referred you to it",
+          "class": "bad",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2026-09-08"
+        },
+        {
+          "title": "This Service does not keep any logs.",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "The cookies used by this service do not contain information that would personally identify you",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about security practices",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "This service offers a symbolic but nonbinding statement about a matter of opinion, ethics, society, or politics",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Account creation does not require providing personal data",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Features of the website are made available under a free software license",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        },
+        {
+          "title": "Information is provided about how your personal data is used",
+          "class": "good",
+          "source": "https://jami.net/privacy-policy/",
+          "updated": "2023-07-11"
+        }
+      ],
+      "privacy_policy_url": "https://jami.net/privacy-policy/",
+      "url": "https://tosdr.org/en/service/8170"
+    },
+    "8201": {
+      "id": 8201,
+      "name": "2FAS",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-03-19",
+      "counts": {
+        "blocker": 0,
+        "bad": 5,
+        "neutral": 2,
+        "good": 5
+      },
+      "points": [
+        {
+          "title": "Terms may be changed any time at their discretion, without notice to you",
+          "class": "bad",
+          "source": null,
+          "updated": "2023-11-23"
+        },
+        {
+          "title": "Your data may be processed and stored anywhere in the world",
+          "class": "bad",
+          "source": "https://2fas.com/privacy-policy/",
+          "updated": "2025-07-19"
+        },
+        {
+          "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
+          "class": "bad",
+          "source": "https://2fas.com/terms-of-service/",
+          "updated": "2025-07-19"
+        },
+        {
+          "title": "Third-party cookies are used for advertising",
+          "class": "bad",
+          "source": "https://2fas.com/cookie-policy/",
+          "updated": "2025-07-19"
+        },
+        {
+          "title": "You waive your right to a class action.",
+          "class": "bad",
+          "source": "https://2fas.com/terms-of-service/",
+          "updated": "2025-07-19"
+        },
+        {
+          "title": "Accessibility to this service is guaranteed at 99% or more",
+          "class": "good",
+          "source": null,
+          "updated": "2023-11-23"
+        },
+        {
+          "title": "You can request access, correction and/or deletion of your data",
+          "class": "good",
+          "source": null,
+          "updated": "2023-11-23"
+        },
+        {
+          "title": "You have the right to leave this service at any time",
+          "class": "good",
+          "source": "https://2fas.com/privacy-policy/",
+          "updated": "2025-07-19"
+        }
+      ],
+      "privacy_policy_url": "https://2fas.com/privacy-policy/",
+      "url": "https://tosdr.org/en/service/8201"
+    },
+    "9477": {
+      "id": 9477,
+      "name": "Joplin",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-05-18",
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 0,
+        "good": 1
+      },
+      "points": [
+        {
+          "title": "You can delete your content from this service",
+          "class": "good",
+          "source": null,
+          "updated": "2026-05-18"
+        }
+      ],
+      "privacy_policy_url": "https://joplinapp.org/privacy/",
+      "url": "https://tosdr.org/en/service/9477"
+    },
+    "9563": {
+      "id": 9563,
+      "name": "Wechat (微信)",
+      "rating": null,
+      "reviewed_fully": false,
+      "newest_point": null,
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 0,
+        "good": 0
+      },
+      "points": [],
+      "privacy_policy_url": "https://www.wechat.com/en/privacy_policy.html",
+      "url": "https://tosdr.org/en/service/9563"
+    },
+    "11708": {
+      "id": 11708,
+      "name": "GrapheneOS",
+      "rating": "C",
+      "reviewed_fully": false,
+      "newest_point": "2026-06-17",
+      "counts": {
+        "blocker": 0,
+        "bad": 0,
+        "neutral": 0,
+        "good": 3
+      },
+      "points": [
+        {
+          "title": "Do Not Track (DNT) headers are respected",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-13"
+        },
+        {
+          "title": "Logs are deleted after a finite period of time",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-13"
+        },
+        {
+          "title": "Features of the service are available under a free software and/or open source license",
+          "class": "good",
+          "source": null,
+          "updated": "2026-06-17"
+        }
+      ],
+      "privacy_policy_url": null,
+      "url": "https://tosdr.org/en/service/11708"
+    }
+  }
+}

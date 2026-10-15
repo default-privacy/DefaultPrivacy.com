@@ -30,6 +30,8 @@ import { findAlternativesForTracker, trackerMappings } from "@/lib/scanner/track
 import { checkWhoisPrivacy } from "@/lib/whois/rdap"
 import { countUsage } from "@/lib/analytics/usage"
 import { replacementCategory } from "@/lib/consumer-replacements"
+import { howPrivate } from "@/lib/how-private"
+import { TOSDR_ATTRIBUTION } from "@/lib/tosdr"
 
 import { citation, jsonContent, url } from "./citation"
 
@@ -314,6 +316,30 @@ export function registerTools(server: McpServer): void {
   )
 
   registerTool(
+    "dp_how_private",
+    {
+      title: "How private is a product",
+      description:
+        "Use when someone asks how private an app, service or device is (\"how private is Notion?\", \"is Zoom safe?\", \"does Slack read my messages?\", \"is Proton any good?\"). Pass the product's name. Returns, when Default Privacy has them: dp_record (DP's own sourced record and pick, if it is in the directory), replacements (private alternatives, if it is a mainstream product people leave), terms_review (ToS;DR's A to E grade of its terms and privacy policy, with dated points that link the policy text they rest on, and stale: true when the newest point is over 18 months old), vendor_policy (the vendor's own privacy policy URL; read it for current terms, which can be newer than the review) and not_measured (what none of this checks). Quote ToS;DR's grade as ToS;DR's, with its date, never as Default Privacy's verdict. When dp_record has a pick and terms_review has a grade, give both and say what each measures (picks_note).",
+      inputSchema: {
+        product: z.string().min(1).describe("The product's name, e.g. 'Notion', 'Zoom', 'WhatsApp', 'Proton Mail', 'Windows'."),
+      },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+    },
+    async ({ product }) => {
+      countUsage("mcp_tool", "dp_how_private")
+      const result = await howPrivate(product, { getTool: getPublicToolPpWithEvidence, url })
+      return jsonContent({
+        ...result,
+        meta: {
+          citation: citation(),
+          note: "terms_review is ToS;DR's work, copied into Default Privacy weekly; Default Privacy sends ToS;DR nothing about who asks or what. Attribute it: " + TOSDR_ATTRIBUTION + ".",
+        },
+      })
+    },
+  )
+
+  registerTool(
     "dp_get_related_tools",
     {
       title: "Get related tools (same category)",
@@ -397,7 +423,7 @@ export function registerTools(server: McpServer): void {
         query: z
           .string()
           .optional()
-          .describe("1–3 keywords matched as whole words against title, tags, and description; every keyword must match. Best match first."),
+          .describe("1–3 keywords matched as whole words against title, tags, description and the guide's text; every keyword must match. Best match first."),
         category: z.string().optional().describe("Filter by guide category (e.g. Privacy, Financial Privacy, Self-Hosting)."),
         limit: z.number().int().min(1).max(50).optional().describe("Max results (default 20)."),
       },
@@ -706,7 +732,7 @@ export function registerTools(server: McpServer): void {
     {
       title: "Check domain data breaches",
       description:
-        "Check whether a domain appears in known public data breaches (via the Have I Been Pwned breach catalog). Returns matching breaches with dates, exposed data classes, and account counts. Domain-level only — no personal email is queried.",
+        "Check whether a domain appears in known public data breaches (via the Have I Been Pwned breach catalog). Returns matching breaches with dates, exposed data classes, and account counts. Domain-level only: no personal email is queried. For whether a person's own email address was in a breach, pass on personal_check: Have I Been Pwned's own site or connector; Default Privacy never asks for an email address.",
       inputSchema: {
         domain: z.string().describe("Domain to check, e.g. 'example.com'."),
       },
@@ -719,7 +745,14 @@ export function registerTools(server: McpServer): void {
       const result = await checkBreaches(domain)
       // A failed lookup is an error, never a grade or an empty breach list.
       if (!result.success) return errorContent(result.error ?? "The lookup failed, so the result is unknown.")
-      return jsonContent({ ...result, citation: citation() })
+      return jsonContent({ ...result, source: HIBP_SOURCE, personal_check: PERSONAL_BREACH_CHECK, citation: citation() })
     },
   )
 }
+
+/** Where breach data comes from, named in every breach reply. */
+export const HIBP_SOURCE = "Have I Been Pwned breach catalog (https://haveibeenpwned.com), CC BY 4.0"
+
+/** The hand-off for "was MY email in it": DP checks domains only and never takes an address. */
+export const PERSONAL_BREACH_CHECK =
+  "To check a person's own email address, send them to Have I Been Pwned: its website (https://haveibeenpwned.com, one address at a time, no account needed) or its own MCP connector (https://haveibeenpwned.com/mcp, which needs a Have I Been Pwned sign-in for address searches). Default Privacy never asks for or sends an email address."
