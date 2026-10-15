@@ -42,8 +42,17 @@ describe("withMcpGate", () => {
         ["mcp_method", "initialize"],
         ["mcp_client", "cursor"],
         ["mcp_protocol", "2025-06-18"],
+        ["mcp_sender", "connect:script"],
       ]),
     )
+  })
+
+  it("counts a tool call by kind of sender, and only connects and tool calls", async () => {
+    const call = { jsonrpc: "2.0", id: 2, method: "tools/call", params: { name: "dp_search", arguments: { query: "vpn" } } }
+    await withMcpGate(ok)(post(call, { "user-agent": "Claude-User/1.0" }))
+    await withMcpGate(ok)(post(msgs(1), { "user-agent": "curl/8.5.0" }))
+    const senders = counted.filter(([kind]) => kind === "mcp_sender")
+    expect(senders).toEqual([["mcp_sender", "call:anthropic"]])
   })
 
   it("counts the Accept shape even when the body can't be parsed", async () => {

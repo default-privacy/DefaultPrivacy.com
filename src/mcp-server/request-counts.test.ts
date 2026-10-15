@@ -104,6 +104,15 @@ describe("acceptBucket", () => {
 })
 
 describe("userAgentBucket", () => {
+  it("names an AI company's app but keeps its crawler a bot", () => {
+    expect(userAgentBucket("claude-code/2.1")).toBe("anthropic")
+    expect(userAgentBucket("Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-User/1.0)")).toBe("anthropic")
+    expect(userAgentBucket("Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0")).toBe("openai")
+    expect(userAgentBucket("openai-mcp/1.0.0")).toBe("openai")
+    expect(userAgentBucket("Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)")).toBe("bot-declared")
+    expect(userAgentBucket("Mozilla/5.0 (compatible; OAI-SearchBot/1.0)")).toBe("bot-declared")
+  })
+
   it("separates a self-declared prober from people's software", () => {
     expect(userAgentBucket("SentinelOracle/0.1 (+https://glimind.com/opt-out; liveness-only, never invokes tools)")).toBe("bot-declared")
     expect(userAgentBucket("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")).toBe("bot-declared")
@@ -120,8 +129,8 @@ describe("userAgentBucket", () => {
     expect(userAgentBucket(null)).toBe("none")
     expect(userAgentBucket("   ")).toBe("none")
     expect(userAgentBucket("me@example.com")).toBe("other")
-    expect(userAgentBucket("claude-code/2.1")).toBe("other")
-    const allowed = new Set(["none", "bot-declared", "browser-like", "script", "other"])
+    expect(userAgentBucket("some-agent/2.1")).toBe("other")
+    const allowed = new Set(["none", "bot-declared", "browser-like", "script", "anthropic", "openai", "other"])
     for (const ua of ["x".repeat(5000), "a@b.c", "Mozilla/5.0 " + "z".repeat(900), "\u0000\u0001"]) {
       expect(allowed.has(userAgentBucket(ua))).toBe(true)
     }

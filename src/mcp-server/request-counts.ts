@@ -116,11 +116,21 @@ export function acceptBucket(header: string | null): string {
  */
 const BOT_WORDS = ["bot", "crawl", "spider", "probe", "monitor", "liveness", "uptime"]
 const SCRIPT_CLIENTS = ["curl", "wget", "python", "aiohttp", "httpx", "node", "undici", "axios", "go-http", "okhttp", "java", "php", "ruby", "deno", "bun/"]
+// Apps that name their AI company in the header (Claude-User, ChatGPT-User, claude-code).
+// Checked after BOT_WORDS, so a company's crawler (ClaudeBot, OAI-SearchBot) stays a bot.
+const AI_APPS: [needle: string, bucket: string][] = [
+  ["claude", "anthropic"],
+  ["anthropic", "anthropic"],
+  ["chatgpt", "openai"],
+  ["openai", "openai"],
+]
 
 export function userAgentBucket(header: string | null): string {
   const ua = header?.trim().toLowerCase()
   if (!ua) return "none"
   if (BOT_WORDS.some((word) => ua.includes(word))) return "bot-declared"
+  const app = AI_APPS.find(([needle]) => ua.includes(needle))
+  if (app) return app[1]
   if (ua.startsWith("mozilla/")) return "browser-like"
   if (SCRIPT_CLIENTS.some((name) => ua.startsWith(name))) return "script"
   return "other"

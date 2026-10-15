@@ -34,6 +34,8 @@ const KIND_LABEL: Record<string, string> = {
   mcp_client: "MCP connections (apps)",
   mcp_protocol: "MCP requests by protocol version",
   mcp_accept: "MCP POSTs by Accept header",
+  mcp_ua: "MCP POSTs by kind of sender",
+  mcp_sender: "MCP connects / tool calls by sender",
 }
 
 const isContentKind = (kind: string) => kind === "guide_read" || kind === "glossary_read"
@@ -112,6 +114,11 @@ async function main() {
     console.log("  POSTs by kind of sender (bot-declared and script are not people's apps):")
     for (const k of senders) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
   }
+  const bySender = usage.topKeys.filter((k) => k.kind === "mcp_sender")
+  if (bySender.length > 0) {
+    console.log("  connects and tool calls by kind of sender:")
+    for (const k of bySender) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
+  }
   const accepts = usage.topKeys.filter((k) => k.kind === "mcp_accept")
   if (accepts.length > 0) {
     console.log("  POSTs by Accept header (anything but json+sse gets a 406):")
@@ -133,6 +140,15 @@ async function main() {
     console.log(`  connections from a recognised app   ${known} of ${inits}  (${Math.round((known / inits) * 100)}%)`)
     console.log(`  tools/call per connection            ${(calls / inits).toFixed(2)}`)
     console.log(`  tools/list per tools/call            ${calls ? (lists / calls).toFixed(1) : "n/a"}`)
+  }
+  // mcp_sender started later than mcp_method, so its own total is the denominator.
+  const senderCalls = bySender.filter((k) => k.key.startsWith("call:"))
+  const callTotal = senderCalls.reduce((n, k) => n + k.total, 0)
+  if (callTotal > 0) {
+    const noise = senderCalls
+      .filter((k) => ["call:bot-declared", "call:script"].includes(k.key))
+      .reduce((n, k) => n + k.total, 0)
+    console.log(`  tool calls from bots or scripts      ${noise} of ${callTotal}  (${Math.round((noise / callTotal) * 100)}%)`)
   }
   const topTools = toolKeys.filter((k) => k.kind === "mcp_tool").slice(0, 6)
   if (topTools.length === 6) {
