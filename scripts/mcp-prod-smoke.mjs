@@ -58,8 +58,9 @@ assertSortedEqual(discovery.resource_uris ?? [], expected.resource_uris, "discov
 assertSortedEqual(discovery.prompt_names ?? [], expected.prompt_names, "discovery prompt_names")
 
 const liveMcp = discovery.transports?.streamable_http?.url
-if (liveMcp !== `${base}/api/mcp`) {
-  throw new Error(`discovery streamable_http.url mismatch: expected ${base}/api/mcp, got ${liveMcp}`)
+const expectedMcp = expected.transports?.streamable_http?.url
+if (liveMcp !== expectedMcp) {
+  throw new Error(`discovery streamable_http.url mismatch: expected ${expectedMcp}, got ${liveMcp}`)
 }
 console.log("OK  discovery  /.well-known/mcp-server.json parity")
 
