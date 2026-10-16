@@ -7,7 +7,10 @@
  *
  *   DRY RUN (default):  bun run scripts/load-claims.ts [--dir <claims dir>] [--draft <file>]... [slug...]
  *   APPLY:              ... --apply            one transaction per tool
- *   Also fix columns:   ... --apply --set-columns   (isOpenSource, acceptsCrypto, isNoKyc, isSecurityAudited)
+ *   Also fix columns:   ... --apply --set-columns   (every sourced privacy field: e2ee, logsIp, logsMetadata,
+ *                       zeroKnowledge, jurisdiction, requiresEmail/Phone/RealName, hasFreeTier, isOpenSource,
+ *                       plus the retired gated flags). This is how a column cleared by the 2026-10-12
+ *                       honesty pass gets a value again: only from a sourced claim, never by hand.
  *
  * A claim is skipped when its value disagrees with the tool column, unless --set-columns
  * (then the column is updated to the claim's value in the same transaction). Claims with a
@@ -20,6 +23,7 @@ import { readdirSync, readFileSync } from "node:fs"
 import path from "node:path"
 import { and, eq, inArray } from "drizzle-orm"
 import { db, toolClaims, tools } from "@/lib/db"
+import { getJurisdictionRisk } from "@/lib/privacy-protocol/jurisdiction"
 import {
   convertDraftRow,
   convertResearchFile,
@@ -31,7 +35,11 @@ import {
 
 // Research claim files live outside the repo; point at them with --dir or CLAIMS_DIR.
 const DEFAULT_DIR = process.env.CLAIMS_DIR ?? ""
-const SET_COLUMN_ATTRS = new Set(["isOpenSource", "acceptsCrypto", "isNoKyc", "isSecurityAudited"])
+const SET_COLUMN_ATTRS = new Set([
+  "e2ee", "logsIp", "logsMetadata", "zeroKnowledge", "jurisdiction",
+  "requiresEmail", "requiresPhone", "requiresRealName", "hasFreeTier",
+  "isOpenSource", "acceptsCrypto", "isNoKyc", "isSecurityAudited",
+])
 
 const args = process.argv.slice(2)
 const APPLY = args.includes("--apply")
@@ -125,6 +133,8 @@ async function main() {
       if (!valuesEqual(c.attribute, c.value, col)) {
         if (SET_COLUMNS && SET_COLUMN_ATTRS.has(c.attribute)) {
           colUpdates[c.attribute] = c.value
+          // jurisdiction_risk is a stored column derived from the country, so it moves with it.
+          if (c.attribute === "jurisdiction") colUpdates.jurisdictionRisk = getJurisdictionRisk(typeof c.value === "string" ? c.value : null)
           lines.push(`  column   ${inp.slug} ${c.attribute}: ${JSON.stringify(col)} -> ${JSON.stringify(c.value)}`)
           stats.columnsSet++
         } else {
