@@ -75,8 +75,8 @@ export function registerPrompts(server: McpServer): void {
       userMessage(
         `Help harden the email setup for "${domain}".\n\n` +
           `1. Call dp_check_email_security for "${domain}" and explain any SPF/DKIM/DMARC gaps in plain terms.\n` +
-          `2. Call dp_search_tools with category "email" (prefer e2ee: true, open_source: true) to suggest ` +
-          `private email providers or tooling.\n` +
+          `2. Call dp_search_tools with category "encrypted-email" to suggest private email providers, picks first. ` +
+          `Read each record's fields: a null field is unchecked by Default Privacy, never a no.\n` +
           `3. Give a short, prioritized action plan combining the DNS fixes and any recommended tools, with citations.`,
       ),
   )

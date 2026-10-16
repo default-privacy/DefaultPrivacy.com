@@ -31,6 +31,7 @@ import { checkWhoisPrivacy } from "@/lib/whois/rdap"
 import { countUsage } from "@/lib/analytics/usage"
 import { replacementCategory } from "@/lib/consumer-replacements"
 import { howPrivate } from "@/lib/how-private"
+import { picksLeftOutUnchecked } from "@/lib/filter-gaps"
 import { TOSDR_ATTRIBUTION } from "@/lib/tosdr"
 
 import { citation, jsonContent, url } from "./citation"
@@ -141,7 +142,7 @@ export function registerTools(server: McpServer): void {
     {
       title: "Search privacy tools",
       description:
-        "Use when a user wants privacy tool recommendations (VPNs, email, browsers, messengers, password managers, etc.). Matches records containing every query word, so 1–2 keywords such as 'vpn' or 'password manager' work and a full sentence usually returns nothing. For a whole kind of tool, use `category` instead (slugs from dp_list_categories). Put requirements in the filters. Returns 10 records by default (up to 50 with limit), ordered DP picks first (in DP's order, within the category if one is given), then A to Z. A record has `pick` when Default Privacy recommends it as a starting point in a category (null otherwise; not a security guarantee). Records carry jurisdiction, logging, encryption, and `dp_url` (the record's Default Privacy page). A null field means Default Privacy has not checked it (never read null as no). For sources and caveats call dp_get_tool.",
+        "Use when a user wants privacy tool recommendations (VPNs, email, browsers, messengers, password managers, etc.). Matches records containing every query word, so 1–2 keywords such as 'vpn' or 'password manager' work and a full sentence usually returns nothing. For a whole kind of tool, use `category` instead (slugs from dp_list_categories). Put requirements in the filters; a filter matches only a sourced yes, so with a category it also returns picks_not_checked: that category's picks left out only because the field is unchecked, which the user should still hear about. Returns 10 records by default (up to 50 with limit), ordered DP picks first (in DP's order, within the category if one is given), then A to Z. A record has `pick` when Default Privacy recommends it as a starting point in a category (null otherwise; not a security guarantee). Records carry jurisdiction, logging, encryption, and `dp_url` (the record's Default Privacy page). A null field means Default Privacy has not checked it (never read null as no). For sources and caveats call dp_get_tool.",
       inputSchema: {
         query: z
           .string()
@@ -151,9 +152,9 @@ export function registerTools(server: McpServer): void {
           .string()
           .optional()
           .describe("Category slug or name to filter by (see dp_list_categories)."),
-        open_source: z.boolean().optional().describe("Only open-source tools."),
-        e2ee: z.boolean().optional().describe("Only end-to-end encrypted tools."),
-        has_free_tier: z.boolean().optional().describe("Only tools with a free tier."),
+        open_source: z.boolean().optional().describe("Only tools Default Privacy has confirmed open source from a source. Tools it has not checked are left out (see picks_not_checked)."),
+        e2ee: z.boolean().optional().describe("Only tools Default Privacy has confirmed end-to-end encrypted from a source. Tools it has not checked are left out (see picks_not_checked)."),
+        has_free_tier: z.boolean().optional().describe("Only tools Default Privacy has confirmed have a free tier. Tools it has not checked are left out (see picks_not_checked)."),
         sort: z
           .enum(["picks", "ado_score", "name", "recently_verified", "recently_added"])
           .optional()
@@ -175,6 +176,14 @@ export function registerTools(server: McpServer): void {
         limit: args.limit,
         offset: args.offset,
       })
+      const leftOut = args.offset
+        ? []
+        : await picksLeftOutUnchecked(
+            args.category,
+            { open_source: args.open_source, e2ee: args.e2ee, has_free_tier: args.has_free_tier },
+            result.tools.map((t) => t.slug),
+            getPublicToolPp,
+          )
 
       return jsonContent({
         pp_version: "1.1",
@@ -185,6 +194,11 @@ export function registerTools(server: McpServer): void {
           offset: result.offset,
           has_more: result.hasMore,
         },
+        ...(leftOut.length > 0 && {
+          picks_not_checked: leftOut,
+          picks_note:
+            "These Default Privacy picks were left out only because Default Privacy has not checked the filtered field for them yet (null, which never means no). Mention them, and say the field is unchecked.",
+        }),
         meta: { citation: citation("directory") },
       })
     },
