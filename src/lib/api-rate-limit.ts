@@ -169,16 +169,8 @@ export function withRateLimit(
     if (!result.allowed) {
       const responseTimeMs = Date.now() - startTime
 
-      // Log rate-limited request (fire and forget)
-      import("@/lib/api-analytics").then(({ logApiRequest, updateDailyStats }) => {
-        logApiRequest({
-          endpoint: options.resource ?? "unknown",
-          method: request.method,
-          statusCode: 429,
-          responseTimeMs,
-          rateLimitTier: tier,
-          rateLimitRemaining: 0,
-        })
+      // Count the rate-limited request in the daily totals (fire and forget). No per-request row.
+      import("@/lib/api-analytics").then(({ updateDailyStats }) => {
         updateDailyStats(options.resource ?? "unknown", 429, responseTimeMs)
       })
 
@@ -201,17 +193,9 @@ export function withRateLimit(
     const response = await handler(request)
     const responseTimeMs = Date.now() - startTime
 
-    // Log successful request (fire and forget)
-    import("@/lib/api-analytics").then(({ logApiRequest, updateDailyStats }) => {
+    // Count the request in the daily totals (fire and forget). No per-request row.
+    import("@/lib/api-analytics").then(({ updateDailyStats }) => {
       const url = new URL(request.url)
-      logApiRequest({
-        endpoint: options.resource ?? url.pathname,
-        method: request.method,
-        statusCode: response.status,
-        responseTimeMs,
-        rateLimitTier: tier,
-        rateLimitRemaining: result.remaining,
-      })
       updateDailyStats(options.resource ?? url.pathname, response.status, responseTimeMs)
     })
 

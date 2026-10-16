@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
                   We practice what we preach. This policy explains exactly what data we touch, why, and how
                   little of it we keep.
                 </p>
-                <p className="text-sm text-foreground/45">Last updated: October 11, 2026</p>
+                <p className="text-sm text-foreground/45">Last updated: October 16, 2026</p>
               </div>
             </div>
           </div>
@@ -107,14 +107,14 @@ export default function PrivacyPolicyPage() {
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">Privacy Tools Directory</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
                     <li>• <strong className="text-foreground/70">No personal data collected</strong> — browsing and searching the directory is anonymous.</li>
-                    <li>• We don&apos;t log or store your searches. Search words are part of the page address, so our host&apos;s request logs can briefly contain them.</li>
+                    <li>• We don&apos;t log or store your searches. We count how many searches happen each day, never the words. Search words are part of the page address, so our host&apos;s request logs can briefly contain them.</li>
                     <li>• Tool logos load from our storage on Amazon S3 or, for some tools, from the tool&apos;s own website or an image host. Like any image on the web, those servers see your IP address when the logo loads.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">AI assistant connector</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
-                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), of which MCP protocol version each request uses, of which response formats a request says it accepts, and of which broad kind of software sends a request (browser-like, script, self-declared bot, an AI company&apos;s app such as Claude or ChatGPT, or other, never the raw text), and of how many connections and tool calls each of those kinds makes. Lookups aren&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
+                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), of which MCP protocol version each request uses, of which response formats a request says it accepts, and of which broad kind of software sends a request (browser-like, script, self-declared bot, an AI company&apos;s app such as Claude or ChatGPT, or other, never the raw text), and of how many connections and tool calls each of those kinds makes. We also count which guide or glossary entry an assistant opens. What an assistant sends to look something up isn&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
@@ -190,7 +190,7 @@ export default function PrivacyPolicyPage() {
               </div>
               <ul className="space-y-1 text-foreground/58">
                 <li>• <strong className="text-foreground/75">Encryption in transit</strong> — all connections use HTTPS/TLS</li>
-                <li>• <strong className="text-foreground/75">Minimal retention</strong> — website scan results expire after 48 hours and are deleted at the next scan; Exposure Check keeps anonymous counts of browser settings; nothing else from the tools is stored</li>
+                <li>• <strong className="text-foreground/75">Minimal retention</strong> — website scan results expire after 48 hours and are deleted at the next scan. We keep anonymous daily counts, with no lookup and no IP: how often the website scanner, WHOIS, breach and email-security checks and directory search are used, a total per API endpoint of requests, errors and average response time, Exposure Check&apos;s counts of browser settings, and the connector counts above. Counts are kept until we delete them. Nothing else from the tools is stored.</li>
                 <li>• <strong className="text-foreground/75">No profiles</strong> — because there are no accounts, there is no profile of you to protect or leak</li>
               </ul>
             </div>

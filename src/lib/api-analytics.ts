@@ -1,49 +1,17 @@
 /**
  * API Usage Analytics
  *
- * Logs API requests and aggregates daily stats for the Privacy Protocol API.
- * Used by the rate limiter to track usage patterns.
+ * Aggregates daily stats (requests, errors, rate limits, average speed) per endpoint for
+ * the Privacy Protocol API and the MCP server. Used by the rate limiter. Per-request rows
+ * in api_request_logs are no longer written (2026-10-16): nothing read them.
  */
 
 import { db, isDatabaseConfigured } from "@/lib/db"
 import { apiRequestLogs, apiDailyStats } from "@/lib/db/schema"
-import { gte, lte, sql, desc } from "drizzle-orm"
-
-export type ApiLogEntry = {
-  endpoint: string
-  method: string
-  statusCode: number
-  responseTimeMs?: number
-  rateLimitTier?: string
-  rateLimitRemaining?: number
-}
-
-/**
- * Log an API request (fire-and-forget, doesn't block response).
- */
-export async function logApiRequest(entry: ApiLogEntry): Promise<void> {
-  if (!isDatabaseConfigured) return
-
-  try {
-    // Privacy: we deliberately do NOT persist client IP, user-agent, or query params.
-    // Endpoint + status + timing is enough for operational stats; the raw-PII columns on
-    // api_request_logs are no longer written (kept nullable pending a drop migration).
-    await db.insert(apiRequestLogs).values({
-      endpoint: entry.endpoint,
-      method: entry.method,
-      statusCode: entry.statusCode,
-      responseTimeMs: entry.responseTimeMs,
-      rateLimitTier: entry.rateLimitTier,
-      rateLimitRemaining: entry.rateLimitRemaining,
-    })
-  } catch (error) {
-    console.error("[api-analytics] Failed to log request:", error)
-  }
-}
+import { desc, gte, lte, sql } from "drizzle-orm"
 
 /**
  * Update daily aggregated stats for an endpoint.
- * Called after logging individual requests.
  */
 export async function updateDailyStats(
   endpoint: string,
@@ -169,39 +137,10 @@ export async function getApiStats(days = 30): Promise<{
 }
 
 /**
- * Get recent request logs for debugging.
- */
-export async function getRecentLogs(limit = 100): Promise<{
-  id: string
-  endpoint: string
-  method: string
-  statusCode: number
-  responseTimeMs: number | null
-  createdAt: Date
-}[]> {
-  if (!isDatabaseConfigured) return []
-
-  return db
-    .select({
-      id: apiRequestLogs.id,
-      endpoint: apiRequestLogs.endpoint,
-      method: apiRequestLogs.method,
-      statusCode: apiRequestLogs.statusCode,
-      responseTimeMs: apiRequestLogs.responseTimeMs,
-      createdAt: apiRequestLogs.createdAt,
-    })
-    .from(apiRequestLogs)
-    .orderBy(desc(apiRequestLogs.createdAt))
-    .limit(limit)
-}
-
-/**
- * Prune old request logs (keep last N days).
+ * Clear old rows from api_request_logs.
  *
- * MANUAL / OPS UTILITY — v5 runs no cron, so nothing calls this automatically and
- * api_request_logs grows unbounded. Prune on demand by invoking this, or run the
- * equivalent SQL directly against the DB:
- *   DELETE FROM api_request_logs WHERE created_at < now() - interval '30 days';
+ * Rows are no longer written. Run once with daysToKeep = 0 to clear the rows written
+ * before 2026-10-16 (or DELETE FROM api_request_logs;), then drop the table in a migration.
  */
 export async function pruneOldLogs(daysToKeep = 30): Promise<number> {
   if (!isDatabaseConfigured) return 0
