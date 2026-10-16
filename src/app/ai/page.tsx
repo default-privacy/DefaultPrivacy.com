@@ -120,6 +120,14 @@ export default function UseInYourAiPage() {
               (CC BY-SA 3.0): we copy their reviews about once a week, so they never see what anyone asks.
             </p>
             <p>
+              If you add us through{" "}
+              <a href="https://smithery.ai/servers/privatebydefault/default-privacy" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                Smithery
+              </a>
+              , your requests pass through Smithery&apos;s gateway before they reach us, so Smithery sees them
+              too. Connect to {MCP_URL} directly to avoid that.
+            </p>
+            <p>
               You don&apos;t have to take our word for it: the server&apos;s code is open source on{" "}
               <a href="https://github.com/default-privacy/DefaultPrivacy.com" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
                 GitHub
