@@ -534,3 +534,36 @@ export const toolClaims = pgTable(
   },
   (table) => [primaryKey({ columns: [table.toolId, table.attribute, table.sortOrder] })]
 )
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MCP SCAN — monthly read-only scan of hosted MCP servers in the official registry
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// One row per (scan month, registry server). The probe sends initialize and tools/list
+// only (src/lib/mcp-scan/probe.ts). CHECK constraints live in drizzle/0004_mcp_scan_results.sql.
+export const mcpScanResults = pgTable(
+  "mcp_scan_results",
+  {
+    scanId: text("scan_id").notNull(),
+    serverName: text("server_name").notNull(),
+    registryVersion: text("registry_version"),
+    url: text("url"),
+    host: text("host"),
+    outcome: text("outcome").notNull(),
+    httpStatus: integer("http_status"),
+    protocolVersion: text("protocol_version"),
+    serverInfo: jsonb("server_info"),
+    toolCount: integer("tool_count"),
+    toolNames: text("tool_names").array(),
+    reach: text("reach").array(),
+    reachEvidence: jsonb("reach_evidence"),
+    readOnlyTools: integer("read_only_tools"),
+    destructiveTools: integer("destructive_tools"),
+    error: text("error"),
+    checkedAt: timestamp("checked_at", { withTimezone: true }).defaultNow().notNull(),
+  },
+  (table) => [
+    primaryKey({ columns: [table.scanId, table.serverName] }),
+    index("mcp_scan_results_scan_host_idx").on(table.scanId, table.host),
+  ]
+)

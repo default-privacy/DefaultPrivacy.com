@@ -67,7 +67,8 @@ function isPrivateIPv6(ip: string): boolean {
   return false
 }
 
-function isPrivateIp(ip: string): boolean {
+/** True for any address the scanner must never reach: private, loopback, link-local, reserved, or not an IP. */
+export function isPrivateIp(ip: string): boolean {
   const family = net.isIP(ip)
   if (family === 4) return isPrivateIPv4(ip)
   if (family === 6) return isPrivateIPv6(ip)
