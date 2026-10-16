@@ -13,6 +13,10 @@ This repository is the code for the website and for the Default Privacy MCP serv
 
 ## What the MCP server does
 
+[![Default Privacy MCP connector: tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/io.github.privatebydefault/default-privacy/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.privatebydefault/default-privacy)
+
+Also listed on [Smithery](https://smithery.ai/servers/privatebydefault/default-privacy). Connections made through Smithery pass through Smithery's gateway; connect to `https://mcp.defaultprivacy.com` directly to avoid that.
+
 Every tool is read-only and needs no account. Among them:
 
 - `dp_search`: one search across tools, guides, stacks and the glossary
