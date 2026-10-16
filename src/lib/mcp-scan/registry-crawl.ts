@@ -21,8 +21,12 @@ export async function crawlRegistry(userAgent: string, onPage?: (n: number, tota
     const u = `${REGISTRY}?limit=100&version=latest${cursor ? `&cursor=${encodeURIComponent(cursor)}` : ""}`
     let res: Response | undefined
     for (let attempt = 0; attempt < 4; attempt++) {
-      res = await fetch(u, { headers: { "user-agent": userAgent, accept: "application/json" } })
-      if (res.ok) break
+      try {
+        res = await fetch(u, { headers: { "user-agent": userAgent, accept: "application/json" }, signal: AbortSignal.timeout(30_000) })
+      } catch {
+        res = undefined
+      }
+      if (res?.ok) break
       await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)))
     }
     if (!res?.ok) throw new Error(`registry page ${page}: HTTP ${res?.status}`)

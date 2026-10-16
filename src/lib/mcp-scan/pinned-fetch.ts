@@ -122,7 +122,10 @@ function requestAt(url: URL, address: string, opts: PinnedFetchOptions): Promise
       })
       res.on("error", (e) => reject(new PinnedFetchError(e.message, "NETWORK")))
     })
-    req.setTimeout(timeoutMs, () => req.destroy(new PinnedFetchError(`Timed out after ${timeoutMs} ms`, "TIMEOUT")))
+    // Hard deadline for the whole exchange: an idle timer alone lets a server that drips one
+    // byte every few seconds hold a worker forever.
+    const deadline = setTimeout(() => req.destroy(new PinnedFetchError(`Timed out after ${timeoutMs} ms`, "TIMEOUT")), timeoutMs)
+    req.on("close", () => clearTimeout(deadline))
     req.on("error", (e) => reject(e instanceof PinnedFetchError ? e : new PinnedFetchError(e.message, "NETWORK")))
     req.end(body)
   })
