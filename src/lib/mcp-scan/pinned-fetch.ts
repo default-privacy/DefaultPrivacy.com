@@ -98,7 +98,11 @@ function requestAt(url: URL, address: string, opts: PinnedFetchOptions): Promise
     lookup: ((_h: string, o: { all?: boolean }, cb: (...a: unknown[]) => void) =>
       o?.all ? cb(null, [{ address, family }]) : cb(null, address, family)) as unknown as RequestOptions["lookup"],
   }
-  return new Promise((resolve, reject) => {
+  return new Promise((resolveOuter, rejectOuter) => {
+    let settled = false
+    const done = (fn: () => void) => { if (!settled) { settled = true; clearTimeout(deadline); fn() } }
+    const resolve = (v: PinnedResponse) => done(() => resolveOuter(v))
+    const reject = (e: unknown) => done(() => rejectOuter(e))
     const req = https.request(options, (res) => {
       // Pinning check: refuse if the socket somehow landed elsewhere.
       const remote = res.socket?.remoteAddress?.replace(/^::ffff:/, "")
@@ -122,10 +126,14 @@ function requestAt(url: URL, address: string, opts: PinnedFetchOptions): Promise
       })
       res.on("error", (e) => reject(new PinnedFetchError(e.message, "NETWORK")))
     })
-    // Hard deadline for the whole exchange: an idle timer alone lets a server that drips one
-    // byte every few seconds hold a worker forever.
-    const deadline = setTimeout(() => req.destroy(new PinnedFetchError(`Timed out after ${timeoutMs} ms`, "TIMEOUT")), timeoutMs)
-    req.on("close", () => clearTimeout(deadline))
+    // Hard deadline for the whole exchange. It settles the promise itself: under Bun,
+    // destroying a request after the response has started neither closes the socket nor
+    // fires 'error' or 'end', so waiting on events alone hung three workers for an hour.
+    const deadline = setTimeout(() => {
+      reject(new PinnedFetchError(`Timed out after ${timeoutMs} ms`, "TIMEOUT"))
+      req.destroy()
+      req.socket?.destroy()
+    }, timeoutMs)
     req.on("error", (e) => reject(e instanceof PinnedFetchError ? e : new PinnedFetchError(e.message, "NETWORK")))
     req.end(body)
   })

@@ -5,6 +5,7 @@
  *   bun run scripts/scan-mcp-servers.ts                     full scan of every hosted server
  *   flags: --scan YYYY-MM (default this month) · --per-host 3 · --concurrency 8
  *          --registry <file.json> (reuse a crawl) · --no-db (raw file + summary only)
+ *          --resume <raw.jsonl.gz> (reuse finished probes from an interrupted run; probe the rest)
  *
  * Probes send initialize and tools/list only (src/lib/mcp-scan/probe.ts), one host at a
  * time per worker, at most --per-host distinct URLs per host; servers sharing a URL share
@@ -15,7 +16,7 @@
 import { createWriteStream, mkdirSync, readFileSync, writeFileSync } from "node:fs"
 import os from "node:os"
 import path from "node:path"
-import { createGzip } from "node:zlib"
+import { constants as zc, createGzip, gunzipSync } from "node:zlib"
 import { sql } from "drizzle-orm"
 import { db, mcpScanResults } from "@/lib/db"
 import { crawlRegistry, probeUrlFor, type CrawledServer } from "@/lib/mcp-scan/registry-crawl"
@@ -74,6 +75,23 @@ async function main() {
   if (LIMIT) hosts = seededShuffle(hosts, Number(SCAN.replace("-", ""))).slice(0, LIMIT)
   console.log(`${byHost.size} hosts; probing ${hosts.length}${LIMIT ? " (sample)" : ""}, up to ${PER_HOST} URLs each, ${CONCURRENCY} at a time`)
 
+  // Finished probes from an interrupted run, keyed by URL. Read fully before the raw file
+  // is reopened for writing (it may be the same path). A cut-off gzip tail is tolerated.
+  const resumed = new Map<string, ProbeResult>()
+  const resumeFile = opt("--resume")
+  if (resumeFile) {
+    const text = gunzipSync(readFileSync(resumeFile), { finishFlush: zc.Z_SYNC_FLUSH }).toString("utf8")
+    for (const line of text.split("\n")) {
+      try {
+        const r = JSON.parse(line)
+        resumed.set(r.url, { outcome: r.outcome, httpStatus: r.httpStatus, protocolVersion: r.protocolVersion, serverInfo: r.serverInfo, tools: r.tools, error: r.error })
+      } catch {
+        /* blank or cut-off line */
+      }
+    }
+    console.log(`resuming: ${resumed.size} finished probes reused from ${resumeFile}`)
+  }
+
   mkdirSync(RAW_DIR, { recursive: true })
   const rawPath = path.join(RAW_DIR, `${SCAN}${LIMIT ? `-sample${LIMIT}` : ""}.jsonl.gz`)
   const gz = createGzip()
@@ -89,7 +107,7 @@ async function main() {
           for (const s of group) rows.push({ scanId: SCAN, serverName: s.name, registryVersion: s.version, url, host, outcome: "host_capped" })
           continue
         }
-        const r: ProbeResult = await probeServer(url)
+        const r: ProbeResult = resumed.get(url) ?? (await probeServer(url))
         const tools = r.tools ?? []
         const { reach, evidence } = reachOf(tools)
         const hints = hintCounts(tools)
