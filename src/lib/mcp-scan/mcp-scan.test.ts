@@ -108,6 +108,18 @@ describe("reach flags", () => {
     const r = reachOf([t("get_page"), t("read_page"), t("browse_topics"), t("musicbrainz_browse_entities"), t("get_booking_url"), t("get_terminal_logs"), t("sendgrid_search_contacts_by_email")])
     expect(r.reach).toEqual([])
   })
+  it("does not flag the independent check's wrong patterns", () => {
+    const wrong = ["search_swiss_directory", "dub_list_folders", "get_font_files", "billomat_create_draft_invoice", "send_invoice",
+      "record_purchase", "analyze_purchase", "create_buy_request", "draft_email", "list_redactable_line_text",
+      "fetch_cometchat_doc_page", "shell_escape", "generate_no_shell_prompt"]
+    for (const name of wrong) expect(reachOf([t(name)]).reach, name).toEqual([])
+  })
+  it("still flags the plain cases", () => {
+    expect(reachOf([t("buy_course")]).reach).toEqual(["money"])
+    expect(reachOf([t("upload_file")]).reach).toEqual(["files"])
+    expect(reachOf([t("read_webpage")]).reach).toEqual(["browse"])
+    expect(reachOf([t("execute_python")]).reach).toEqual(["code"])
+  })
   it("catches the first sample's missed money tools", () => {
     expect(reachOf([t("request_paid_access")]).reach).toEqual(["money"])
     expect(reachOf([t("create_checkout_link")]).reach).toEqual(["money"])

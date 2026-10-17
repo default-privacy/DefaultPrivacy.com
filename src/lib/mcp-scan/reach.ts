@@ -13,27 +13,32 @@ export const REACH_FLAGS = ["files", "messages", "money", "browse", "code"] as c
 export type ReachFlag = (typeof REACH_FLAGS)[number]
 
 const set = (s: string) => new Set(s.split(" "))
-type Rule = { verbs: Set<string> | null; objects: Set<string> }
-
 // verbs: null means the object word alone is enough (it already names an action).
+// first: the object word must be the name's first word ("buy_course", not "compare_rent_vs_buy").
+type Rule = { verbs: Set<string> | null; objects: Set<string>; first?: boolean }
+
+// Tightened 2026-10-16 after an independent check of 99 flagged hosts found 25 wrong:
+// "directory"/"folder" were phone books and link folders, draft/sent invoices moved no
+// money, "draft_email" sent nothing, "fetch ... page" read the vendor's own docs, and a
+// bare "shell" matched a string-quoting helper.
 const RULES: Record<ReachFlag, Rule[]> = {
   files: [
-    { verbs: set("read write edit delete remove list create move copy upload download search get open save"), objects: set("file files directory directories dir dirs folder folders filesystem fs") },
+    { verbs: set("read write edit delete remove list create move copy upload download open save"), objects: set("file files filesystem fs") },
   ],
   messages: [
-    { verbs: set("send post reply forward draft compose read list"), objects: set("email emails mail mails message messages sms text texts dm dms inbox tweet tweets chat chats") },
+    { verbs: set("send post reply forward read list"), objects: set("email emails mail mails message messages sms dm dms inbox tweet tweets chat chats") },
   ],
   money: [
-    { verbs: set("create make send submit initiate process issue execute request place pay"), objects: set("payment payments charge charges refund refunds transfer transfers payout payouts invoice invoices order orders paid") },
-    { verbs: null, objects: set("checkout purchase buy") },
+    { verbs: set("create make send submit initiate process issue execute request place pay"), objects: set("payment payments charge charges refund refunds transfer transfers payout payouts order orders paid") },
+    { verbs: null, objects: set("checkout") },
+    { verbs: null, objects: set("buy purchase"), first: true },
   ],
   browse: [
-    { verbs: set("navigate visit fetch scrape crawl screenshot distill"), objects: set("url urls page pages webpage webpages website websites site") },
+    { verbs: set("navigate visit fetch scrape crawl screenshot distill read open"), objects: set("url urls webpage webpages website websites") },
     { verbs: null, objects: set("scrape crawl screenshot webpage") },
   ],
   code: [
     { verbs: set("run execute exec eval"), objects: set("code command commands shell bash script scripts python javascript js terminal") },
-    { verbs: null, objects: set("shell bash") },
   ],
 }
 
@@ -49,9 +54,13 @@ export function nameTokens(name: string): string[] {
 export function reachOf(tools: ProbeTool[]): { reach: ReachFlag[]; evidence: Partial<Record<ReachFlag, string[]>> } {
   const evidence: Partial<Record<ReachFlag, string[]>> = {}
   for (const t of tools) {
-    const tok = new Set(nameTokens(t.name))
+    const words = nameTokens(t.name)
     for (const f of REACH_FLAGS) {
-      const hit = RULES[f].some((r) => [...tok].some((w) => r.objects.has(w)) && (r.verbs === null || [...tok].some((w) => r.verbs!.has(w))))
+      const hit = RULES[f].some(
+        (r) =>
+          (r.first ? r.objects.has(words[0]) : words.some((w) => r.objects.has(w))) &&
+          (r.verbs === null || words.some((w) => r.verbs!.has(w))),
+      )
       if (hit && (evidence[f] ??= []).length < 10) evidence[f]!.push(t.name)
     }
   }
