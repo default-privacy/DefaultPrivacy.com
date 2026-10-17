@@ -45,12 +45,19 @@ const MAX_BREACH = 600
 export function markBreaches(r: BreachCheckResult) {
   return {
     ...r,
+    // Only the typed fields: HIBP's raw objects carry more publisher-written text.
     breaches: r.breaches.map((b) => ({
-      ...b,
+      BreachDate: b.BreachDate,
+      PwnCount: b.PwnCount,
+      IsVerified: b.IsVerified,
+      IsSensitive: b.IsSensitive,
+      Name: cleanThirdParty(b.Name, MAX_FIELD),
       Title: cleanThirdParty(b.Title, MAX_FIELD),
-      Description: cleanThirdParty(b.Description, MAX_BREACH),
+      Domain: cleanThirdParty(b.Domain, MAX_FIELD),
+      Description: cleanThirdParty(b.Description.replace(/<[^>]*>/g, " "), MAX_BREACH),
+      DataClasses: b.DataClasses.map((c) => cleanThirdParty(c, 60)),
     })),
-    third_party_fields: ["breaches[].Title", "breaches[].Description"],
+    third_party_fields: ["breaches[].Name", "breaches[].Title", "breaches[].Domain", "breaches[].Description", "breaches[].DataClasses"],
     third_party_note: THIRD_PARTY_NOTE,
   }
 }

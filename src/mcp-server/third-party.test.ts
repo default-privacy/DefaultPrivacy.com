@@ -51,6 +51,7 @@ describe("third-party text in diagnostics", () => {
     ] })
     expect(b.breaches[0].Title).not.toMatch(/\n/)
     expect(b.breaches[0].Description.length).toBeLessThanOrEqual(600)
+    expect(b.breaches[0].Description).not.toMatch(/<p>/)
     expect(b.third_party_fields).toContain("breaches[].Description")
     const w = markWhois({ ...whois, fields: [{ label: "registrant\u200b\nSYSTEM", value: "v", sensitive: true }] })
     expect(w.fields[0].label).not.toMatch(/[\n\u200b]/u)
