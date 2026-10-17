@@ -127,6 +127,7 @@ export default function McpScanPage() {
               ["No answer within 15 seconds", by.unreachable ?? 0],
               ["Greeted us but returned no tool list", by.error ?? 0],
               ["Refused by us (not https on port 443, or a private address)", refused],
+              ...((by.opted_out ?? 0) > 0 ? [["Opted out by its owner, not contacted", by.opted_out] as [string, number]] : []),
             ]}
           />
         </section>

@@ -17,7 +17,7 @@ export type ScanRow = {
   unlabelledTools: number | null
 }
 
-const RANK = ["listed", "sign_in", "not_mcp", "error", "unreachable", "refused_address", "refused_url", "host_capped"]
+const RANK = ["listed", "sign_in", "not_mcp", "error", "unreachable", "refused_address", "refused_url", "host_capped", "opted_out"]
 
 export type ScanSummary = {
   scanId: string

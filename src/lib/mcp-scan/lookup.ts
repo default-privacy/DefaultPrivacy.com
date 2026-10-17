@@ -24,6 +24,7 @@ const OUTCOME_WORDS: Record<string, string> = {
   refused_address: "not scanned: points at a private network address",
   host_capped: "not scanned: its host has more than three servers, and we scan three per host",
   no_remote: "not scanned: a package you run yourself, with no hosted address",
+  opted_out: "not scanned: its owner asked us not to",
 }
 
 export const SCAN_CAVEAT =

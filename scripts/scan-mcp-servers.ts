@@ -22,6 +22,7 @@ import { db, mcpScanResults } from "@/lib/db"
 import { crawlRegistry, probeUrlFor, type CrawledServer } from "@/lib/mcp-scan/registry-crawl"
 import { probeServer, SCAN_USER_AGENT, type ProbeResult } from "@/lib/mcp-scan/probe"
 import { hintCounts, reachOf } from "@/lib/mcp-scan/reach"
+import { isOptedOut } from "@/lib/mcp-scan/optout"
 
 const args = process.argv.slice(2)
 const opt = (k: string) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : undefined }
@@ -103,6 +104,11 @@ async function main() {
     for (let host = queue.shift(); host !== undefined; host = queue.shift()) {
       const urls = [...byHost.get(host)!.entries()].sort(([a], [b]) => a.localeCompare(b))
       for (const [i, [url, group]] of urls.entries()) {
+        // Owners who asked not to be scanned: never contacted, recorded as opted out.
+        const out = group.filter((s) => isOptedOut(host, s.name))
+        for (const s of out) rows.push({ scanId: SCAN, serverName: s.name, registryVersion: s.version, url, host, outcome: "opted_out" })
+        if (out.length === group.length) continue
+        if (out.length) group.splice(0, group.length, ...group.filter((s) => !out.includes(s)))
         if (i >= PER_HOST) {
           for (const s of group) rows.push({ scanId: SCAN, serverName: s.name, registryVersion: s.version, url, host, outcome: "host_capped" })
           continue
@@ -146,7 +152,7 @@ async function main() {
   }
 
   // Summary by HOST (one vote per host: its best outcome), so registry farms cannot skew it.
-  const rank = ["listed", "sign_in", "not_mcp", "error", "unreachable", "refused_address", "refused_url", "host_capped"]
+  const rank = ["listed", "sign_in", "not_mcp", "error", "unreachable", "refused_address", "refused_url", "host_capped", "opted_out"]
   const best = new Map<string, Row>()
   for (const r of rows) if (r.host && (!best.has(r.host) || rank.indexOf(r.outcome) < rank.indexOf(best.get(r.host)!.outcome))) best.set(r.host, r)
   const tally: Record<string, number> = {}

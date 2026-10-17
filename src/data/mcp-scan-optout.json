@@ -1,0 +1,4 @@
+{
+  "_note": "Hosts or registry names whose owners asked (privacy@defaultprivacy.com) not to be scanned. The scan never contacts a listed host and writes its rows as outcome 'opted_out'. Each entry: {\"host\" or \"name\", \"date\": \"YYYY-MM-DD\", \"via\": \"how the request came in\"}.",
+  "entries": []
+}

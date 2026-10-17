@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS public.mcp_scan_results (
     CONSTRAINT mcp_scan_results_scan_id_shape CHECK (scan_id ~ '^[0-9]{4}-[0-9]{2}$'),
     CONSTRAINT mcp_scan_results_outcome_known CHECK (outcome IN (
         'listed', 'sign_in', 'refused_url', 'refused_address', 'unreachable', 'not_mcp', 'error',
-        'host_capped', 'no_remote'))
+        'host_capped', 'no_remote', 'opted_out'))
 );
 
 CREATE INDEX IF NOT EXISTS mcp_scan_results_scan_host_idx ON public.mcp_scan_results (scan_id, host);

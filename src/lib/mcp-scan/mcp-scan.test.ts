@@ -170,3 +170,18 @@ describe("scan facts for dp_check_mcp_server", () => {
     expect("name_hints" in f).toBe(false)
   })
 })
+
+import { isOptedOut } from "./optout"
+
+describe("opt-out list", () => {
+  const list = [{ host: "Mcp.Example.com", date: "2026-10-20", via: "email" }, { name: "com.other/srv", date: "2026-10-20", via: "email" }]
+  it("matches an exact host, case-insensitive, or an exact registry name", () => {
+    expect(isOptedOut("mcp.example.com", "x/y", list)).toBe(true)
+    expect(isOptedOut("api.other.com", "com.other/srv", list)).toBe(true)
+  })
+  it("does not match subdomains or lookalikes", () => {
+    expect(isOptedOut("evil.mcp.example.com", "x/y", list)).toBe(false)
+    expect(isOptedOut("mcp.example.com.evil", "x/y", list)).toBe(false)
+    expect(isOptedOut(null, "com.other/srv2", list)).toBe(false)
+  })
+})
