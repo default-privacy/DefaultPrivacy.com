@@ -7,6 +7,7 @@
  * only names in MCP's own name format pass (letters, digits, _ - .), cut to 64 characters.
  */
 
+import { cleanThirdParty } from "@/lib/third-party-text"
 import { and, eq, inArray } from "drizzle-orm"
 import { db, isDatabaseConfigured, mcpScanResults } from "@/lib/db"
 import { registryNameFor } from "@/lib/mcp-registry"
@@ -46,8 +47,8 @@ export function scanFactsFrom(row: Row, methodUrl: string) {
   return {
     state: "found" as const,
     scan: row.scanId,
-    registry_name: row.serverName,
-    url: row.url,
+    registry_name: row.serverName === null ? null : cleanThirdParty(row.serverName, 200),
+    url: row.url === null ? null : cleanThirdParty(row.url, 300),
     result: OUTCOME_WORDS[row.outcome] ?? row.outcome,
     ...(listed
       ? {

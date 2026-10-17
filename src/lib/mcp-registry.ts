@@ -11,6 +11,8 @@
  * gets no lookup.
  */
 
+import { cleanThirdParty } from "@/lib/third-party-text"
+
 const REGISTRY = "https://registry.modelcontextprotocol.io/v0/servers"
 const TIMEOUT_MS = 2500
 
@@ -57,24 +59,24 @@ type RegistryEntry = {
 // too little to carry instructions.
 const MAX_CHARS = 200
 const MAX_ITEMS = 5
-const clip = (v: unknown): string | null => (typeof v === "string" ? v.slice(0, MAX_CHARS) : null)
+const clip = (v: unknown): string | null => (typeof v === "string" ? cleanThirdParty(v, MAX_CHARS) : null)
 
 export function factsFrom(entry: RegistryEntry): RegistryFacts | null {
   const s = entry.server
   if (!s || typeof s.name !== "string") return null
   const meta = entry._meta?.["io.modelcontextprotocol.registry/official"]
   return {
-    name: s.name.slice(0, MAX_CHARS),
+    name: cleanThirdParty(s.name, MAX_CHARS),
     status: clip(meta?.status),
     published_at: clip(meta?.publishedAt),
     source_repository: clip(s.repository?.url),
     remotes: (s.remotes ?? [])
-      .flatMap((r) => (typeof r.url === "string" ? [{ url: r.url.slice(0, MAX_CHARS), https: r.url.startsWith("https://") }] : []))
+      .flatMap((r) => (typeof r.url === "string" ? [{ url: cleanThirdParty(r.url, MAX_CHARS), https: r.url.startsWith("https://") }] : []))
       .slice(0, MAX_ITEMS),
     packages: (s.packages ?? [])
       .flatMap((p) =>
         typeof p.identifier === "string"
-          ? [{ registry: clip(p.registryType) ?? "unknown", identifier: p.identifier.slice(0, MAX_CHARS) }]
+          ? [{ registry: clip(p.registryType) ?? "unknown", identifier: cleanThirdParty(p.identifier, MAX_CHARS) }]
           : [],
       )
       .slice(0, MAX_ITEMS),

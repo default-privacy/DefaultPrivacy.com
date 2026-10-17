@@ -175,7 +175,7 @@ export default function McpScanPage() {
             &quot;create_payment&quot;. An independent reviewer checked a random sample of 80 of those guesses and found
             62 right, 16 wrong and 2 unclear. A tool named &quot;create_sales_order&quot; turned out to make an unsent
             draft, and one named &quot;send_message&quot; passed notes between bots. At that error rate a published count
-            would wrongly list real businesses, so we don&apos;t publish these guesses.
+            would wrongly list real businesses, so we don&apos;t publish counts or lists of these guesses. When you ask our MCP about one exact server, it shows the guess together with the tool name it came from, marked as a guess.
           </p>
         </section>
 
