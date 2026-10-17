@@ -17,6 +17,7 @@ import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
 import { BASELINE, matchSituations, type SituationItem } from "@/lib/situations"
 import { MCP_BAR, MCP_CATEGORY, MCP_CHECKLIST, matchMcpRef } from "@/lib/mcp-vetting"
+import { lookupScan } from "@/lib/mcp-scan/lookup"
 import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
 import { keywords, oneLine, rankContent, searchContent } from "@/lib/site-search"
 import {
@@ -601,7 +602,7 @@ export function registerTools(server: McpServer): void {
     {
       title: "Check an MCP server against Default Privacy's vetted list",
       description:
-        "Before connecting an MCP server, check whether it is in Default Privacy's vetted list and what it can read or change. Give its repository URL, server URL, name or slug. A listed server returns its record with sources and caveats. An unlisted one returns a short checklist plus, for a GitHub or registry name, what the publisher declared in the official MCP registry (not a review); unlisted is not a verdict, only that we have not reviewed it.",
+        "Before connecting an MCP server, check whether it is in Default Privacy's vetted list and what it can read or change. Give its repository URL, server URL, name or slug. A listed server returns its record with sources and caveats. An unlisted one returns a short checklist plus, for a GitHub or registry name, what the publisher declared in the official MCP registry (not a review), and, for an exact registry name or server URL, what Default Privacy's monthly read-only scan saw: whether it needed a sign-in, its tool names and its own read-only/destructive labels. Unlisted is not a verdict, only that we have not reviewed it.",
       inputSchema: {
         server: z.string().min(2).max(300).describe("The server's repository URL, server URL, name or slug, e.g. 'https://github.com/bitwarden/mcp-server'."),
       },
@@ -619,7 +620,10 @@ export function registerTools(server: McpServer): void {
           meta: { citation: citation(`directory/${exact.slug}`) },
         })
       }
-      const lookup = await lookupRegistry(ref)
+      const [lookup, scan] = await Promise.all([
+        lookupRegistry(ref),
+        lookupScan(ref, url("mcp-scan")).catch(() => ({ state: "unavailable" as const })),
+      ])
       return jsonContent({
         data: {
           listed: false,
@@ -631,6 +635,7 @@ export function registerTools(server: McpServer): void {
             lookup.state === "found"
               ? { state: "found", ...lookup.facts, caveat: REGISTRY_CAVEAT }
               : { state: lookup.state, caveat: REGISTRY_CAVEAT },
+          scan,
           similar_listed: similar.map((l) => ({ name: l.name, slug: l.slug, source_code_url: l.trust.source_code_url })),
           vetted_list: url(`directory?category=${MCP_CATEGORY}`),
           guide,
