@@ -33,6 +33,7 @@ import { sortByPicks } from "@/lib/picks"
 import { getPublicToolPp, getPublicToolPpWithEvidence, searchPublicToolsPp } from "@/lib/privacy-protocol/query"
 import { findAlternativesForTracker, trackerMappings } from "@/lib/scanner/tracker-alternatives"
 import { checkWhoisPrivacy } from "@/lib/whois/rdap"
+import { markEmailSecurity, markWhois } from "./third-party"
 import { countUsage } from "@/lib/analytics/usage"
 import { replacementCategory } from "@/lib/consumer-replacements"
 import { howPrivate } from "@/lib/how-private"
@@ -743,7 +744,7 @@ export function registerTools(server: McpServer): void {
       const result = await checkEmailSecurity(domain)
       // A failed lookup is an error, never a grade or an empty breach list.
       if (!result.success) return errorContent(result.error ?? "The lookup failed, so the result is unknown.")
-      return jsonContent({ ...result, citation: citation("email-security") })
+      return jsonContent({ ...markEmailSecurity(result), citation: citation("email-security") })
     },
   )
 
@@ -764,7 +765,7 @@ export function registerTools(server: McpServer): void {
       if (limit) return errorContent(limit)
       const result = await checkWhoisPrivacy(domain)
       if (!result.success) return errorContent(result.error ?? "The lookup failed, so the result is unknown.")
-      return jsonContent({ ...result, citation: citation("whois") })
+      return jsonContent({ ...markWhois(result), citation: citation("whois") })
     },
   )
 
