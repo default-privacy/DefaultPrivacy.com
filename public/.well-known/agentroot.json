@@ -76,7 +76,7 @@
     {
       "name": "dp_get_guide",
       "type": "read",
-      "description": "Fetch one guide's full content by slug."
+      "description": "Fetch one guide by slug: its sections and short FAQ answers, one section, or the full text."
     },
     {
       "name": "dp_list_stacks",
@@ -86,7 +86,7 @@
     {
       "name": "dp_get_stack",
       "type": "read",
-      "description": "Fetch one privacy stack's full content by slug."
+      "description": "Fetch one privacy stack by slug: its layers and tools in setup order, one section, or the full text."
     },
     {
       "name": "dp_route",

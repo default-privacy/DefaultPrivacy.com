@@ -19,6 +19,9 @@ import { BASELINE, matchSituations, type SituationItem } from "@/lib/situations"
 import { MCP_BAR, MCP_CATEGORY, MCP_CHECKLIST, matchMcpRef } from "@/lib/mcp-vetting"
 import { lookupScan } from "@/lib/mcp-scan/lookup"
 import { searchAnswers } from "@/lib/answers"
+import { CARD_NOTE, toolCard } from "./compact"
+import { findSection, guideSections, stackOutline } from "@/lib/guide-outline"
+import { parseGuideFaqsFromContent } from "@/lib/guide-faq"
 import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
 import { keywords, oneLine, rankContent, searchContent } from "@/lib/site-search"
 import {
@@ -198,7 +201,8 @@ export function registerTools(server: McpServer): void {
 
       return jsonContent({
         pp_version: "1.1",
-        data: result.tools,
+        data: result.tools.map(toolCard),
+        note: CARD_NOTE,
         pagination: {
           total: result.total,
           limit: result.limit,
@@ -294,7 +298,8 @@ export function registerTools(server: McpServer): void {
         return jsonContent({
           pp_version: "1.1",
           replaces: { name: mapping.name, category: mapping.category, issue: mapping.issue },
-          data,
+          data: data.map(toolCard),
+          note: CARD_NOTE,
           total: data.length,
           curated_slugs: mapping.alternativeSlugs,
           meta: { citation: citation("directory") },
@@ -322,12 +327,12 @@ export function registerTools(server: McpServer): void {
             name: product,
             replaced_by: replacement.label,
           },
-          data,
+          data: data.map(toolCard),
           total: data.length,
           what_changes: replacement.whatChanges,
           guides: guides.map(link("guides")).filter(Boolean),
           stacks: stacks.map(link("stacks")).filter(Boolean),
-          note: `Hand-picked ${replacement.label} from the directory. DP picks come first, in DP's order; the rest follow the list. Pick by what the user needs. More in the category page.`,
+          note: `Hand-picked ${replacement.label} from the directory. DP picks come first, in DP's order; the rest follow the list. Pick by what the user needs. More in the category page. ${CARD_NOTE}`,
           meta: { citation: citation(`directory?category=${replacement.category}`) },
         })
       }
@@ -395,7 +400,8 @@ export function registerTools(server: McpServer): void {
       return jsonContent({
         pp_version: "1.1",
         of: { slug, category: tool.category },
-        data,
+        data: data.map(toolCard),
+        note: CARD_NOTE,
         total: data.length,
         meta: { citation: citation(`directory/${slug}`) },
       })
@@ -477,13 +483,16 @@ export function registerTools(server: McpServer): void {
     "dp_get_guide",
     {
       title: "Get one guide",
-      description: "Fetch a single guide's full markdown content and metadata by slug.",
+      description:
+        "Fetch one guide by slug. By default returns its summary, its section headings and its short checked FAQ answers, not the whole text. Pass section (one of the headings) to get that section's text, or full: true for the whole guide.",
       inputSchema: {
         slug: z.string().describe("Guide slug, e.g. 'remove-name-from-data-brokers'."),
+        section: z.string().max(200).optional().describe("A heading from the guide's sections, to return just that section."),
+        full: z.boolean().optional().describe("Return the whole guide's markdown (long; prefer section)."),
       },
       annotations: { readOnlyHint: true, openWorldHint: false },
     },
-    async ({ slug }) => {
+    async ({ slug, section, full }) => {
       countUsage("mcp_tool", "dp_get_guide")
       const guide = await getGuideBySlug(slug)
       if (!guide) return errorContent(`No guide found with slug '${slug}'.`)
@@ -492,19 +501,20 @@ export function registerTools(server: McpServer): void {
       // string — that keeps it a bounded enum per the usage.ts privacy contract and
       // stops a caller minting arbitrary keys with junk slugs. Do not "fix" the order.
       countUsage("guide_read", guide.slug)
+      const head = { title: guide.title, slug: guide.slug, description: guide.description, url: url(`guides/${guide.slug}`) }
+      const meta = { citation: citation(`guides/${slug}`) }
+      const sections = guideSections(guide.content).map((s) => s.heading)
+      if (full) return jsonContent({ data: { ...head, content: guide.content }, meta })
+      if (section) {
+        const s = findSection(guide.content, section)
+        if (!s) return jsonContent({ data: { ...head, sections }, message: `No section matching '${section}'. Pick one of sections.`, meta })
+        return jsonContent({ data: { ...head, section: s.heading, text: s.text }, meta })
+      }
+      const faq = parseGuideFaqsFromContent(guide.content).map((f) => ({ question: f.question, answer: f.answer, sources: f.sources.slice(0, 3) }))
       return jsonContent({
-        data: {
-          title: guide.title,
-          slug: guide.slug,
-          description: guide.description,
-          category: guide.category,
-          difficulty: guide.difficulty,
-          time_to_complete: guide.timeToComplete,
-          tags: guide.tags,
-          content: guide.content,
-          url: url(`guides/${guide.slug}`),
-        },
-        meta: { citation: citation(`guides/${slug}`) },
+        data: { ...head, sections, ...(faq.length && { faq }) },
+        next: "Pass section (one of sections) for its text, or full: true for the whole guide.",
+        meta,
       })
     },
   )
@@ -536,29 +546,31 @@ export function registerTools(server: McpServer): void {
     {
       title: "Get one privacy stack",
       description:
-        "Fetch one privacy stack's full markdown content and metadata by slug: the tools in setup order, why each one, and the tradeoffs. Slugs come from dp_list_stacks or dp_search.",
+        "Fetch one privacy stack by slug. By default returns its summary and its layers with the tools in each, in setup order. Pass section (a layer heading) for why each tool and the tradeoffs, or full: true for the whole stack. Slugs come from dp_list_stacks or dp_search.",
       inputSchema: {
         slug: z.string().describe("Stack slug, e.g. 'privacy-starter-kit', 'degoogle-android-phone'."),
+        section: z.string().max(200).optional().describe("A layer heading from sections, to return just that part."),
+        full: z.boolean().optional().describe("Return the whole stack's markdown (long; prefer section)."),
       },
       annotations: { readOnlyHint: true, openWorldHint: false },
     },
-    async ({ slug }) => {
+    async ({ slug, section, full }) => {
       countUsage("mcp_tool", "dp_get_stack")
       const stack = await getStackBySlug(slug)
       if (!stack) return errorContent(`No stack found with slug '${slug}'. See dp_list_stacks.`)
+      const content = stripEmbeddedJsonLd(stack.content)
+      const head = { title: stack.title, slug: stack.slug, description: stack.description, url: url(`stacks/${stack.slug}`) }
+      const meta = { citation: citation(`stacks/${stack.slug}`) }
+      if (full) return jsonContent({ data: { ...head, content }, meta })
+      if (section) {
+        const s = findSection(content, section)
+        if (!s) return jsonContent({ data: { ...head, sections: stackOutline(content) }, message: `No section matching '${section}'. Pick one of sections.`, meta })
+        return jsonContent({ data: { ...head, section: s.heading, text: s.text }, meta })
+      }
       return jsonContent({
-        data: {
-          title: stack.title,
-          slug: stack.slug,
-          description: stack.description,
-          category: stack.category,
-          difficulty: stack.difficulty,
-          time_to_complete: stack.timeToComplete,
-          tags: stack.tags,
-          content: stripEmbeddedJsonLd(stack.content),
-          url: url(`stacks/${stack.slug}`),
-        },
-        meta: { citation: citation(`stacks/${stack.slug}`) },
+        data: { ...head, sections: stackOutline(content) },
+        next: "Pass section (a heading from sections) for why each tool and the tradeoffs, or full: true for the whole stack.",
+        meta,
       })
     },
   )

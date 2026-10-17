@@ -27,7 +27,8 @@ export function jsonContent(payload: unknown) {
     content: [
       {
         type: "text" as const,
-        text: JSON.stringify(payload, null, 2),
+        // Compact, not pretty-printed: indentation was a large share of every reply and a model reads either.
+        text: JSON.stringify(payload),
       },
     ],
   }
