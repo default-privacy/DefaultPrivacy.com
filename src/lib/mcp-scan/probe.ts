@@ -11,7 +11,7 @@ import { pinnedFetch, PinnedFetchError, type PinnedResponse } from "./pinned-fet
 export const ALLOWED_METHODS = new Set(["initialize", "notifications/initialized", "tools/list"])
 export const PROTOCOL_VERSION = "2025-06-18"
 export const SCAN_USER_AGENT =
-  "DefaultPrivacy-MCP-scan/0.1 (+https://defaultprivacy.com/ai; read-only: initialize and tools/list only; opt out: privacy@defaultprivacy.com)"
+  "DefaultPrivacy-MCP-scan/0.1 (+https://defaultprivacy.com/mcp-scan; read-only: initialize and tools/list only; opt out: privacy@defaultprivacy.com)"
 
 export type ProbeTool = {
   name: string

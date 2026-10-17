@@ -119,6 +119,7 @@ async function main() {
             toolCount: r.tools ? tools.length : null, toolNames: r.tools ? tools.map((t) => t.name) : null,
             reach: r.tools ? reach : null, reachEvidence: r.tools ? evidence : null,
             readOnlyTools: r.tools ? hints.readOnly : null, destructiveTools: r.tools ? hints.destructive : null,
+            unlabelledTools: r.tools ? hints.undeclared : null,
             error: r.error,
           })
         }
@@ -137,7 +138,7 @@ async function main() {
         .onConflictDoUpdate({
           target: [mcpScanResults.scanId, mcpScanResults.serverName],
           set: Object.fromEntries(
-            ["registryVersion", "url", "host", "outcome", "httpStatus", "protocolVersion", "serverInfo", "toolCount", "toolNames", "reach", "reachEvidence", "readOnlyTools", "destructiveTools", "error"]
+            ["registryVersion", "url", "host", "outcome", "httpStatus", "protocolVersion", "serverInfo", "toolCount", "toolNames", "reach", "reachEvidence", "readOnlyTools", "destructiveTools", "unlabelledTools", "error"]
               .map((k) => [k, sql.raw(`excluded.${k.replace(/[A-Z]/g, (c) => "_" + c.toLowerCase())}`)]),
           ),
         })

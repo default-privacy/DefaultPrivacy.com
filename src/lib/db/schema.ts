@@ -559,7 +559,9 @@ export const mcpScanResults = pgTable(
     reachEvidence: jsonb("reach_evidence"),
     readOnlyTools: integer("read_only_tools"),
     destructiveTools: integer("destructive_tools"),
+    unlabelledTools: integer("unlabelled_tools"),
     error: text("error"),
+    // When the row was written, not when the server was asked (a --resume run rewrites it).
     checkedAt: timestamp("checked_at", { withTimezone: true }).defaultNow().notNull(),
   },
   (table) => [

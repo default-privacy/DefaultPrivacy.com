@@ -1,0 +1,26 @@
+{
+  "scanId": "2026-10",
+  "registryEntries": 43983,
+  "hostedEntries": 27431,
+  "packageOnlyEntries": 16552,
+  "hosts": 19666,
+  "hostsByOutcome": {
+    "sign_in": 6529,
+    "listed": 11038,
+    "not_mcp": 1315,
+    "unreachable": 757,
+    "error": 17,
+    "refused_address": 1,
+    "refused_url": 9
+  },
+  "openHosts": {
+    "total": 11038,
+    "allReadOnly": 3838,
+    "someDestructive": 1512,
+    "labelsNoDestructive": 1768,
+    "noLabels": 3914,
+    "noTools": 6
+  },
+  "download": "/data/mcp-scan-2026-10.csv.gz",
+  "downloadBytes": 1680301
+}

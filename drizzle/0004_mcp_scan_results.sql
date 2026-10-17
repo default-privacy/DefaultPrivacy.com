@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS public.mcp_scan_results (
     reach_evidence jsonb,
     read_only_tools integer,
     destructive_tools integer,
+    unlabelled_tools integer,
     error text,
     checked_at timestamp with time zone DEFAULT now() NOT NULL,
     CONSTRAINT mcp_scan_results_pkey PRIMARY KEY (scan_id, server_name),

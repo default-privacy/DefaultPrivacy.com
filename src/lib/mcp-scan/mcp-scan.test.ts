@@ -125,3 +125,26 @@ describe("reach flags", () => {
     expect(reachOf([t("create_checkout_link")]).reach).toEqual(["money"])
   })
 })
+
+import { summarizeScan, type ScanRow } from "./summary"
+
+describe("scan summary", () => {
+  const row = (host: string, url: string, outcome: string, tools?: [number, number, number, number]): ScanRow => ({
+    scanId: "2026-10", host, url, outcome,
+    toolCount: tools?.[0] ?? null, readOnlyTools: tools?.[1] ?? null, destructiveTools: tools?.[2] ?? null, unlabelledTools: tools?.[3] ?? null,
+  })
+  it("counts each host once, by its best outcome, and sums labels over distinct listed URLs", () => {
+    const s = summarizeScan([
+      row("a", "https://a/1", "sign_in"), row("a", "https://a/2", "listed", [2, 2, 0, 0]), row("a", "https://a/2", "listed", [2, 2, 0, 0]),
+      row("b", "https://b", "listed", [3, 0, 0, 3]),
+      row("c", "https://c", "listed", [2, 1, 1, 0]),
+      row("d", "https://d", "listed", [2, 1, 0, 1]),
+      row("e", "https://e", "sign_in"), row("e", "https://e/x", "host_capped"),
+      { scanId: "2026-10", host: null, url: null, outcome: "no_remote", toolCount: null, readOnlyTools: null, destructiveTools: null, unlabelledTools: null },
+    ])
+    expect(s.hosts).toBe(5)
+    expect(s.hostsByOutcome).toEqual({ listed: 4, sign_in: 1 })
+    expect(s.openHosts).toEqual({ total: 4, allReadOnly: 1, someDestructive: 1, labelsNoDestructive: 1, noLabels: 1, noTools: 0 })
+    expect(s.packageOnlyEntries).toBe(1)
+  })
+})

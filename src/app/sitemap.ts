@@ -37,6 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/editorial-policy`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/transparency`, changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE_URL}/ai`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/mcp-scan`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE_URL}/terms`, changeFrequency: "yearly", priority: 0.3 },
   ]
