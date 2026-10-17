@@ -7,7 +7,7 @@
 
 import { getAllGuides } from "./guides"
 import { parseGuideFaqsFromContent } from "./guide-faq"
-import { rankContent } from "./site-search"
+import { rankContent, stemmedKeywords } from "./site-search"
 
 export type Answer = {
   question: string
@@ -34,12 +34,29 @@ export async function getAllAnswers(): Promise<Answer[]> {
   return cache
 }
 
-/** Answers whose own question contains every keyword. The answer text is not searched: a keyword in a body is how off-topic answers came back (10-16 test). */
+/**
+ * Answers whose own question contains every keyword. The answer text is not searched: a keyword
+ * in a body is how off-topic answers came back (10-16 test). A whole sentence rarely matches
+ * every word, so when nothing does, an answer still counts if at least 3 of its question's
+ * keywords, and 75% of them, appear in the query.
+ */
 export async function searchAnswers(query: string, limit: number): Promise<Answer[]> {
   const all = await getAllAnswers()
   const ranked = rankContent(
     all.map((a) => ({ a, title: a.question, description: "" })),
     query,
   )
-  return ranked.slice(0, limit).map((r) => r.a)
+  if (ranked.length > 0) return ranked.slice(0, limit).map((r) => r.a)
+  const asked = stemmedKeywords(query)
+  if (asked.size < 4) return []
+  return all
+    .map((a) => {
+      const own = [...stemmedKeywords(a.question)]
+      const hit = own.filter((w) => asked.has(w)).length
+      return { a, hit, share: own.length ? hit / own.length : 0 }
+    })
+    .filter((x) => x.hit >= 3 && x.share >= 0.75)
+    .sort((x, y) => y.share - x.share || y.hit - x.hit)
+    .slice(0, limit)
+    .map((x) => x.a)
 }

@@ -46,4 +46,10 @@ describe("answer map v0", () => {
       expect(parseGuideFaqsFromContent(g.content).length, g.slug).toBe(asked)
     }
   })
+  it("matches a whole question by its FAQ's own words, and never loosely", async () => {
+    const [hit] = await searchAnswers("How can I make a Discord account without providing my real phone number?", 2)
+    expect(hit?.question).toMatch(/Discord account/)
+    expect(await searchAnswers("How i can have more privacy in iran?", 2)).toEqual([])
+    expect(await searchAnswers("How do I stop my smart TV from tracking what I watch?", 2)).toEqual([])
+  })
 })

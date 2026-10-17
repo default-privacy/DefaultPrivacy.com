@@ -130,7 +130,7 @@ const REPLACEMENTS: Replacement[] = [
     category: "team-collaboration",
     label: "team and community chat",
     products: ["slack", "discord"],
-    slugs: ["element", "matrix", "mattermost", "rocket-chat"],
+    slugs: ["element", "matrix", "mattermost", "rocket-chat", "zulip", "stoat"],
     whatChanges: [
       "Everyone in the group has to move: channels and members don't carry over on their own.",
       "Message history stays in the old workspace unless you export it first.",

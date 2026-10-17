@@ -25,6 +25,9 @@ const words = (text: string) => text.toLowerCase().split(/[^a-z0-9]+/).filter(Bo
 // "brokers" → "broker"; short words like "ios" are left alone.
 const stem = (word: string) => (word.length > 3 && word.endsWith("s") ? word.slice(0, -1) : word)
 
+/** Meaningful words, stemmed, for loose matching of a whole sentence. */
+export const stemmedKeywords = (text: string) => new Set(keywords(text).map(stem))
+
 /** The query's meaningful words, in order, unstemmed: what the directory search gets. */
 export function keywords(query: string): string[] {
   return [...new Set(words(query).filter((w) => !STOP_WORDS.has(w)))]
