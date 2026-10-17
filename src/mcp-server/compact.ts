@@ -30,8 +30,9 @@ export function toolCard(t: PrivacyProtocolTool) {
   return {
     name: t.name,
     slug: t.slug,
-    summary: oneLine(t.tagline ?? t.description ?? "", 160),
-    ...(t.pick && { pick: t.pick.reason }),
+    // A pick's summary is DP's own reason, not the vendor's marketing line.
+    summary: t.pick ? t.pick.reason : oneLine(t.tagline ?? t.description ?? "", 160),
+    ...(t.pick && { pick: true }),
     ...(Object.keys(facts).length && { facts }),
     ...(t.deprecated && { deprecated: t.deprecated.reason ?? true }),
     url: t.dp_url,

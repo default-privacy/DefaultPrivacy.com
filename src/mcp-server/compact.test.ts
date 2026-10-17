@@ -24,7 +24,9 @@ describe("tool card", () => {
   })
   it("carries the pick reason and is much smaller than the record", () => {
     const t = tool({ pick: { reason: "Because", category: "c" } })
-    expect(toolCard(t).pick).toBe("Because")
+    expect(toolCard(t).pick).toBe(true)
+    expect(toolCard(t).summary).toBe("Because")
+    expect(toolCard(tool()).summary).toBe("A thing")
     expect(JSON.stringify(toolCard(t)).length).toBeLessThan(JSON.stringify(t).length / 2)
   })
 })
