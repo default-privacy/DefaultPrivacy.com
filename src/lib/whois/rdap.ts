@@ -59,7 +59,7 @@ function isRedacted(value: string): boolean {
   return privacyIndicators.some((p) => lower.includes(p)) || lower === "" || lower === "n/a"
 }
 
-function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
+export function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
   const fields: WhoisField[] = []
 
   for (const entity of entities) {
@@ -71,6 +71,9 @@ function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
         : roles.includes("tech") || roles.includes("technical")
           ? "Tech"
           : roles.join(", ")
+    // Registrar and abuse contacts are the company running the registration, not the owner,
+    // so they are shown but never count as exposed personal data.
+    const isOwnerContact = roleLabel === "Registrant" || roleLabel === "Admin" || roleLabel === "Tech"
 
     const vcardArray = entity.vcardArray as [string, unknown[][]] | undefined
     if (!vcardArray || vcardArray[0] !== "vcard") continue
@@ -85,7 +88,7 @@ function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
         fields.push({
           label: `${roleLabel} Name`,
           value: redacted ? "(Privacy Protected)" : v,
-          sensitive: !redacted,
+          sensitive: isOwnerContact && !redacted,
         })
       }
       if (name === "org" && value) {
@@ -94,7 +97,7 @@ function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
         fields.push({
           label: `${roleLabel} Organization`,
           value: redacted ? "(Privacy Protected)" : v,
-          sensitive: !redacted,
+          sensitive: isOwnerContact && !redacted,
         })
       }
       if (name === "adr" && value) {
@@ -104,7 +107,7 @@ function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
           fields.push({
             label: `${roleLabel} Address`,
             value: redacted ? "(Privacy Protected)" : parts,
-            sensitive: !redacted,
+            sensitive: isOwnerContact && !redacted,
           })
         }
       }
@@ -114,7 +117,7 @@ function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
         fields.push({
           label: `${roleLabel} Phone`,
           value: redacted ? "(Privacy Protected)" : v,
-          sensitive: !redacted,
+          sensitive: isOwnerContact && !redacted,
         })
       }
       if (name === "email" && value) {
@@ -123,7 +126,7 @@ function extractVcardFields(entities: Record<string, unknown>[]): WhoisField[] {
         fields.push({
           label: `${roleLabel} Email`,
           value: redacted ? "(Privacy Protected)" : v,
-          sensitive: !redacted,
+          sensitive: isOwnerContact && !redacted,
         })
       }
     }
