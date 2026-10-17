@@ -87,4 +87,10 @@ describe("howPrivate", () => {
     expect(r.dp_record).toBeNull()
     expect(r.terms_review?.service).toBe("Signal")
   })
+
+  it("prefers the exact product slug over the ToS;DR service's other tied slugs", async () => {
+    const { deps } = directory([tool("ente", "Ente"), tool("ente-auth", "Ente Auth")])
+    const r = await howPrivate("Ente Auth", deps)
+    expect(r.dp_record?.name).toBe("Ente Auth")
+  })
 })

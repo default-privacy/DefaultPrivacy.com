@@ -6,7 +6,7 @@ category: Privacy
 difficulty: beginner
 timeToComplete: "15 minutes"
 publishedAt: "2026-10-10"
-updatedAt: "2026-10-10"
+updatedAt: "2026-10-17"
 author: Default Privacy
 tags:
   - private browser
@@ -168,3 +168,7 @@ Usually no. Mullvad and GrapheneOS both warn that extra changes can make you eas
 **What should I use on an iPhone?**
 
 Safari is the built-in choice, and Apple says it includes tracking prevention by default ([Apple](https://www.apple.com/safari/)). Brave and Firefox also have iPhone apps; check each maker's page for what the iPhone version includes.
+
+**Should I use installed web apps or separate browser profiles to keep sites apart?**
+
+Profiles or containers. Chrome says profiles keep your "bookmarks, history, passwords, and other settings" separate ([Chrome Help](https://support.google.com/chrome/answer/2364824?hl=en)). Brave's built-in containers give each container its own cookies, site storage and caches inside one profile, while extensions, passwords and history stay shared ([Brave Help Center](https://support.brave.app/hc/en-us/articles/39077103885325-How-do-I-use-Containers-in-Brave)); in Firefox, Mozilla's Multi-Account Containers add-on separates cookies and site storage per container ([Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)). An installed web app opens in its own window ([Brave Help Center](https://support.brave.app/hc/en-us/articles/39077114659597-How-do-I-install-and-use-Web-Apps-in-Brave)), but neither Brave nor Google says it gets its own cookies. Until one does, don't count on a web app to keep a site apart; use profiles or containers for that.

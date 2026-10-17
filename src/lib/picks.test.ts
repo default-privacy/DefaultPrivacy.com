@@ -29,8 +29,8 @@ describe("PICKS data", () => {
     }
   })
 
-  it("only names the 16 head categories", () => {
-    expect(headCategories.size).toBe(16)
+  it("only names the 17 head categories", () => {
+    expect(headCategories.size).toBe(17)
     for (const cat of Object.keys(PICKS)) expect(headCategories.has(cat), cat).toBe(true)
   })
 

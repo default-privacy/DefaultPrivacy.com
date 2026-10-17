@@ -124,9 +124,10 @@ describe("dp_search content for Techlore questions", () => {
     ["19 password managers", "password manager", { stack: "privacy-starter-kit", glossary: "password-manager" }],
     ["20 Bitwarden or Proton Pass", "bitwarden proton pass", { guide: "bitwarden-vs-proton-pass" }],
     ["21 2FA", "2fa", { glossary: "two-factor-authentication" }],
-    // Two guides have GrapheneOS in the title and tie; the newer comparison comes first. The older
-    // "what still works" guide keeps its own case below (banking apps).
-    ["25 GrapheneOS", "grapheneos", { guide: "grapheneos-vs-calyxos", stack: "degoogle-android-phone", glossary: "grapheneos" }],
+    // Two guides have GrapheneOS in the title and tie; the more recently updated one comes first
+    // (since 2026-10-17, "what still works"). The comparison keeps its own case (GrapheneOS vs CalyxOS).
+    ["25 GrapheneOS", "grapheneos", { guide: "what-still-works-after-switching-to-grapheneos", stack: "degoogle-android-phone", glossary: "grapheneos" }],
+    ["25b GrapheneOS vs CalyxOS", "calyxos", { guide: "grapheneos-vs-calyxos" }],
     ["26 banking apps on a de-Googled phone", "banking apps", { guide: "what-still-works-after-switching-to-grapheneos" }],
     ["27 which phone for privacy", "privacy friendly phone", { glossary: "privacy-friendly-phone" }],
     ["29 Windows 11 telemetry", "windows", { stack: "windows-privacy-hardening" }],

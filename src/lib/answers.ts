@@ -34,11 +34,11 @@ export async function getAllAnswers(): Promise<Answer[]> {
   return cache
 }
 
-/** Answers whose question and answer together contain every keyword; question words weigh most. */
+/** Answers whose own question contains every keyword. The answer text is not searched: a keyword in a body is how off-topic answers came back (10-16 test). */
 export async function searchAnswers(query: string, limit: number): Promise<Answer[]> {
   const all = await getAllAnswers()
   const ranked = rankContent(
-    all.map((a) => ({ a, title: a.question, description: a.answer })),
+    all.map((a) => ({ a, title: a.question, description: "" })),
     query,
   )
   return ranked.slice(0, limit).map((r) => r.a)

@@ -26,4 +26,12 @@ describe("answer map v0", () => {
   it("returns nothing rather than a loose match", async () => {
     expect(await searchAnswers("zzzz unrelated", 2)).toEqual([])
   })
+  it("does not match on words that only appear in an answer body", async () => {
+    for (const q of ["veracrypt", "sms", "iran"]) {
+      for (const a of await searchAnswers(q, 5)) expect(a.question.toLowerCase(), q).toContain(q)
+    }
+    const all = await getAllAnswers()
+    const body = all.find((a) => /Tor/.test(a.answer) && !/tor/i.test(a.question))
+    expect(body).toBeTruthy()
+  })
 })

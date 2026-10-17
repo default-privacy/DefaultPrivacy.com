@@ -8,6 +8,8 @@ describe("replacementCategory", () => {
     expect(replacementCategory("WhatsApp")?.category).toBe("encrypted-messaging")
     expect(replacementCategory("Google Drive")?.category).toBe("encrypted-cloud-storage")
     expect(replacementCategory("facebook")?.category).toBe("social-networks")
+    expect(replacementCategory("Discord")?.category).toBe("team-collaboration")
+    expect(replacementCategory("Slack")?.slugs).toContain("mattermost")
   })
 
   it("matches whole names only", () => {
@@ -72,7 +74,7 @@ describe("Techlore questions that name a product to leave", () => {
     ["12/13 most private browser (leaving Chrome)", "Chrome", "browsers", undefined, "privacy-starter-kit"],
     ["15 private search engine in place of Google", "Google", "private-search", undefined, "de-google-your-life"],
     ["16 my family is on WhatsApp", "WhatsApp", "encrypted-messaging", "signal-vs-simplex", "secure-messaging-stack"],
-    ["17 Discord without my real phone number", "Discord", "encrypted-messaging", "get-a-second-phone-number"],
+    ["17 Discord without my real phone number", "Discord", "team-collaboration"],
     ["18 YouTube without being tracked", "YouTube", "video-platforms"],
     ["19 which password manager (leaving LastPass)", "LastPass", "password-managers", "bitwarden-vs-proton-pass", "privacy-starter-kit"],
     ["21 which 2FA app", "Google Authenticator", "auth-2fa", undefined, "privacy-starter-kit"],

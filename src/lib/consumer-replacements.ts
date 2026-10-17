@@ -43,7 +43,7 @@ const REPLACEMENTS: Replacement[] = [
   {
     category: "encrypted-messaging",
     label: "encrypted messaging",
-    products: ["whatsapp", "messenger", "facebook messenger", "imessage", "telegram", "sms", "wechat", "discord", "snapchat"],
+    products: ["whatsapp", "messenger", "facebook messenger", "imessage", "telegram", "sms", "wechat", "snapchat"],
     slugs: ["signal", "simplex-chat", "session", "threema-libre", "element", "briar", "jami", "cwtch"],
     whatChanges: [
       "Your contacts have to install the new app too: messages don't cross between apps.",
@@ -122,6 +122,19 @@ const REPLACEMENTS: Replacement[] = [
     whatChanges: [
       "Download your documents in standard formats like .docx, .xlsx or .odt and open them in the new suite.",
       "Complex formatting, macros and shared editing may not carry over exactly.",
+    ],
+    guides: [],
+    stacks: [],
+  },
+  {
+    category: "team-collaboration",
+    label: "team and community chat",
+    products: ["slack", "discord"],
+    slugs: ["element", "matrix", "mattermost", "rocket-chat"],
+    whatChanges: [
+      "Everyone in the group has to move: channels and members don't carry over on their own.",
+      "Message history stays in the old workspace unless you export it first.",
+      "Self-hosting means you run the server, its updates and its backups.",
     ],
     guides: [],
     stacks: [],

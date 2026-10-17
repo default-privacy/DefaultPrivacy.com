@@ -24,8 +24,11 @@ const slugify = (s: string) =>
 export async function howPrivate(product: string, deps: HowPrivateDeps) {
   const byName = tosdrServiceForName(product)
 
-  // Directory record: the service's tied slug first, else the product name as a slug.
-  const slugs = [...(byName?.dpSlugs ?? []), slugify(product)].filter(Boolean)
+  // Directory record: the service's tied slugs, the one named exactly first ("Ente Auth" is
+  // ente-auth, not ente); then the product name as a slug.
+  const named = slugify(product)
+  const tied = byName?.dpSlugs ?? []
+  const slugs = [...(tied.includes(named) ? [named] : []), ...tied, named].filter(Boolean)
   let tool: PrivacyProtocolTool | null = null
   for (const slug of [...new Set(slugs)]) {
     tool = await deps.getTool(slug)
