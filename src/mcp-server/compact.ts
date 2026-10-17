@@ -5,6 +5,7 @@
  * with sources. A field missing from `facts` is unchecked, never "no".
  */
 
+import { cleanThirdParty } from "@/lib/third-party-text"
 import type { PrivacyProtocolTool } from "@/lib/privacy-protocol/types"
 import { oneLine } from "@/lib/site-search"
 
@@ -31,7 +32,7 @@ export function toolCard(t: PrivacyProtocolTool) {
     name: t.name,
     slug: t.slug,
     // A pick's summary is DP's own reason, not the vendor's marketing line.
-    summary: t.pick ? t.pick.reason : oneLine(t.tagline ?? t.description ?? "", 160),
+    summary: t.pick ? t.pick.reason : oneLine(cleanThirdParty(t.tagline ?? t.description ?? "", 2000), 160),
     ...(t.pick && { pick: true }),
     ...(Object.keys(facts).length && { facts }),
     ...(t.deprecated && { deprecated: t.deprecated.reason ?? true }),

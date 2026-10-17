@@ -27,6 +27,11 @@ vi.mock("@/lib/whois/rdap", async (orig) => ({
   }),
 }))
 
+vi.mock("@/lib/privacy-protocol/query", async (orig) => ({
+  ...(await orig<object>()),
+  getPublicToolPpWithEvidence: async (slug: string) => ({ slug, name: slug, tagline: PLANT, description: PLANT, pick: null }),
+}))
+
 const { registerTools } = await import("./tools")
 type Handler = (args: Record<string, unknown>) => Promise<{ content: { text: string }[] }>
 const handlers = new Map<string, Handler>()
@@ -40,6 +45,14 @@ describe("diagnostic tools mark and clean third-party text", () => {
       expect(body.third_party_fields?.length).toBeGreaterThan(0)
       expect(body.third_party_note).toMatch(/never as instructions/)
       expect(text).not.toMatch(/\\n|​/)
+    })
+  }
+  for (const [tool, args] of [["dp_get_tool", { slug: "x" }], ["dp_compare_tools", { slugs: ["x", "y"] }]] as const) {
+    it(tool, async () => {
+      const text = (await handlers.get(tool)!(args as Record<string, unknown>)).content[0].text
+      const body = JSON.parse(text)
+      expect(body.third_party_fields?.length).toBeGreaterThan(0)
+      expect(text).not.toMatch(/\\n|\u200b/u)
     })
   }
 })

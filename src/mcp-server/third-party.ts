@@ -61,3 +61,12 @@ export function markBreaches(r: BreachCheckResult) {
     third_party_note: THIRD_PARTY_NOTE,
   }
 }
+
+/** A directory record's tagline and description are usually the vendor's own words. */
+export function markToolRecord<T extends { tagline: string | null; description: string | null }>(t: T): T {
+  return {
+    ...t,
+    tagline: t.tagline === null ? null : cleanThirdParty(t.tagline, 300),
+    description: t.description === null ? null : cleanThirdParty(t.description, 1000),
+  }
+}

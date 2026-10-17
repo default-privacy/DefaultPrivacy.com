@@ -33,12 +33,12 @@ import { sortByPicks } from "@/lib/picks"
 import { getPublicToolPp, getPublicToolPpWithEvidence, searchPublicToolsPp } from "@/lib/privacy-protocol/query"
 import { findAlternativesForTracker, trackerMappings } from "@/lib/scanner/tracker-alternatives"
 import { checkWhoisPrivacy } from "@/lib/whois/rdap"
-import { cleanThirdParty, markBreaches, markEmailSecurity, markWhois, THIRD_PARTY_NOTE } from "./third-party"
+import { cleanThirdParty, markBreaches, markEmailSecurity, markToolRecord, markWhois, THIRD_PARTY_NOTE } from "./third-party"
 import { countUsage } from "@/lib/analytics/usage"
 import { replacementCategory } from "@/lib/consumer-replacements"
 import { howPrivate } from "@/lib/how-private"
 import { picksLeftOutUnchecked } from "@/lib/filter-gaps"
-import { TOSDR_ATTRIBUTION } from "@/lib/tosdr"
+import { TOSDR_ATTRIBUTION, TOSDR_COPIED_ON } from "@/lib/tosdr"
 
 import { citation, jsonContent, url } from "./citation"
 
@@ -239,7 +239,9 @@ export function registerTools(server: McpServer): void {
       }
       return jsonContent({
         pp_version: "1.1",
-        data: tool,
+        data: markToolRecord(tool),
+        third_party_fields: ["data.tagline", "data.description"],
+        third_party_note: THIRD_PARTY_NOTE,
         meta: { citation: citation(`directory/${slug}`) },
       })
     },
@@ -366,15 +368,22 @@ export function registerTools(server: McpServer): void {
           ? {
               terms_review: {
                 ...result.terms_review,
-                points: result.terms_review.points.map((p) => ({ ...p, title: cleanThirdParty(p.title, 200) })),
+                service: cleanThirdParty(result.terms_review.service, 120),
+                url: cleanThirdParty(result.terms_review.url, 300),
+                points: result.terms_review.points.map((p) => ({
+                  ...p,
+                  title: cleanThirdParty(p.title, 200),
+                  source: p.source === null ? null : cleanThirdParty(p.source, 300),
+                })),
               },
-              third_party_fields: ["terms_review.points"],
+              ...(result.vendor_policy ? { vendor_policy: cleanThirdParty(result.vendor_policy, 300) } : {}),
+              third_party_fields: ["terms_review", "vendor_policy"],
               third_party_note: THIRD_PARTY_NOTE,
             }
           : {}),
         meta: {
           citation: citation(),
-          note: "terms_review is ToS;DR's work, copied into Default Privacy weekly; Default Privacy sends ToS;DR nothing about who asks or what. Attribute it: " + TOSDR_ATTRIBUTION + ".",
+          note: "terms_review is ToS;DR's work, copied into Default Privacy by hand (this copy: " + TOSDR_COPIED_ON + "); Default Privacy sends ToS;DR nothing about who asks or what. Attribute it: " + TOSDR_ATTRIBUTION + ".",
         },
       })
     },
@@ -445,7 +454,9 @@ export function registerTools(server: McpServer): void {
       }
       return jsonContent({
         pp_version: "1.1",
-        data,
+        data: data.map(markToolRecord),
+        third_party_fields: ["data[].tagline", "data[].description"],
+        third_party_note: THIRD_PARTY_NOTE,
         missing_slugs: missing,
         total: data.length,
         meta: { citation: citation("directory") },

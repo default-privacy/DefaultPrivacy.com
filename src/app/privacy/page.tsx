@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
                   We practice what we preach. This policy explains exactly what data we touch, why, and how
                   little of it we keep.
                 </p>
-                <p className="text-sm text-foreground/45">Last updated: October 16, 2026</p>
+                <p className="text-sm text-foreground/45">Last updated: October 17, 2026</p>
               </div>
             </div>
           </div>
@@ -165,8 +165,8 @@ export default function PrivacyPolicyPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-foreground/10 text-foreground/55">
-                      <tr><td className="px-4 py-2.5">Vercel</td><td className="px-4 py-2.5">Hosting</td><td className="px-4 py-2.5">Server logs (IP, user agent, page address)</td></tr>
-                      <tr><td className="px-4 py-2.5">Neon</td><td className="px-4 py-2.5">Database (directory data, 48-hour scan results by domain, anonymous counts)</td><td className="px-4 py-2.5">No personal data</td></tr>
+                      <tr><td className="px-4 py-2.5">Vercel</td><td className="px-4 py-2.5">Hosting (United States, Washington, D.C. region)</td><td className="px-4 py-2.5">Server logs (IP, user agent, page address), kept by Vercel for at most a day on our plan</td></tr>
+                      <tr><td className="px-4 py-2.5">Neon</td><td className="px-4 py-2.5">Database (United States, Ohio region; directory data, 48-hour scan results by domain, anonymous counts)</td><td className="px-4 py-2.5">No personal data</td></tr>
                       <tr><td className="px-4 py-2.5">Have I Been Pwned</td><td className="px-4 py-2.5">Password/breach checks</td><td className="px-4 py-2.5">First 5 characters of a password hash, and your IP (the password check runs from your browser)</td></tr>
                       <tr><td className="px-4 py-2.5">Cloudflare</td><td className="px-4 py-2.5">Website scanner (headless browser)</td><td className="px-4 py-2.5">The URL you ask us to scan</td></tr>
                       <tr><td className="px-4 py-2.5">Official MCP registry</td><td className="px-4 py-2.5">MCP server check (unlisted servers only)</td><td className="px-4 py-2.5">The server name you ask about, and our server&apos;s address</td></tr>
@@ -190,7 +190,7 @@ export default function PrivacyPolicyPage() {
               </div>
               <ul className="space-y-1 text-foreground/58">
                 <li>• <strong className="text-foreground/75">Encryption in transit</strong> — all connections use HTTPS/TLS</li>
-                <li>• <strong className="text-foreground/75">Minimal retention</strong> — website scan results expire after 48 hours and are deleted at the next scan. We keep anonymous daily counts, with no lookup and no IP: how often the website scanner, WHOIS, breach and email-security checks and directory search are used, a total per API endpoint of requests, errors and average response time, Exposure Check&apos;s counts of browser settings, and the connector counts above. Counts are kept until we delete them. Nothing else from the tools is stored.</li>
+                <li>• <strong className="text-foreground/75">Minimal retention</strong> — website scan results expire after 48 hours and are deleted at the next scan. We keep anonymous daily counts, with no lookup and no IP: how often the website scanner, WHOIS, breach and email-security checks and directory search are used, a total per API endpoint of requests, errors and average response time, Exposure Check&apos;s counts of browser settings, and the connector counts above. Counts are kept until we delete them, and each count also records when it last changed, so the most recent use of a tool can be dated to the second. We don&apos;t copy Vercel&apos;s server logs into our database. Nothing else from the tools is stored.</li>
                 <li>• <strong className="text-foreground/75">No profiles</strong> — because there are no accounts, there is no profile of you to protect or leak</li>
               </ul>
             </div>

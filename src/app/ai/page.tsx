@@ -4,6 +4,7 @@ import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
 import { ConnectAiCard } from "@/components/ai/connect-ai-card"
 import { AI_APPS, MCP_URL } from "@/lib/mcp-connect"
+import { TOSDR_COPIED_ON } from "@/lib/tosdr"
 
 export const metadata: Metadata = {
   title: "Use Default Privacy in your AI | Default Privacy",
@@ -118,7 +119,7 @@ export default function UseInYourAiPage() {
               <a href="https://tosdr.org" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
                 ToS;DR
               </a>{" "}
-              (CC BY-SA 3.0): we copy their reviews about once a week, so they never see what anyone asks.
+              (CC BY-SA 3.0): we copy their reviews by hand (latest copy: {TOSDR_COPIED_ON}), so they never see what anyone asks.
             </p>
             <p>
               If you add us through{" "}

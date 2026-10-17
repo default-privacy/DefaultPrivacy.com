@@ -146,7 +146,7 @@ export default function McpScanPage() {
             </li>
             <li>We never connected to an address inside a private network.</li>
             <li>
-              Every request named Default Privacy. The requests in the full scan also gave an opt-out address:
+              Every request named Default Privacy. The requests in the October full scan also gave an opt-out address, in exactly this form (later scans point to this page instead of /ai):
             </li>
           </ul>
           <code className="block select-all overflow-x-auto whitespace-pre-wrap rounded border border-foreground/10 bg-muted/30 px-4 py-3 font-mono text-xs text-foreground">
