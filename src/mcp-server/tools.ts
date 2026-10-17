@@ -18,6 +18,7 @@ import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
 import { BASELINE, matchSituations, type SituationItem } from "@/lib/situations"
 import { MCP_BAR, MCP_CATEGORY, MCP_CHECKLIST, matchMcpRef } from "@/lib/mcp-vetting"
 import { lookupScan } from "@/lib/mcp-scan/lookup"
+import { searchAnswers } from "@/lib/answers"
 import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
 import { keywords, oneLine, rankContent, searchContent } from "@/lib/site-search"
 import {
@@ -67,7 +68,7 @@ export function registerTools(server: McpServer): void {
     {
       title: "Search everything",
       description:
-        "Start here for a general privacy question. One keyword search across the whole hub: directory tools, how-to guides, curated tool stacks and the glossary. Use 1–3 keywords such as 'vpn', 'data broker' or 'grapheneos'; every keyword must match, and filler words like 'how', 'best' and 'private' are ignored. Returns the top few results of each type, each with type, title, slug, a one-line summary and its Default Privacy url. The type-specific tools are for the rest: dp_search_tools for filters (open source, e2ee, category…), dp_get_tool / dp_get_guide / dp_get_stack / dp_get_glossary_term for full content, and dp_find_alternatives to replace a named product such as WhatsApp or Gmail.",
+        "Start here for a general privacy question. One keyword search across the whole hub: short checked answers to common questions (each with its sources, the guide it comes from and the date that guide was checked), directory tools, how-to guides, curated tool stacks and the glossary. Use 1–3 keywords such as 'vpn', 'data broker' or 'grapheneos'; every keyword must match, and filler words like 'how', 'best' and 'private' are ignored. Returns the top few results of each type, each with type, title, slug, a one-line summary and its Default Privacy url. The type-specific tools are for the rest: dp_search_tools for filters (open source, e2ee, category…), dp_get_tool / dp_get_guide / dp_get_stack / dp_get_glossary_term for full content, and dp_find_alternatives to replace a named product such as WhatsApp or Gmail.",
       inputSchema: {
         query: z.string().min(1).describe("1–3 keywords, e.g. 'vpn', 'data broker', 'tor', 'grapheneos'."),
         limit: z.number().int().min(1).max(10).optional().describe("Max results per type (1–10, default 3)."),
@@ -86,11 +87,20 @@ export function registerTools(server: McpServer): void {
           meta: { citation: citation() },
         })
       }
-      const [found, content] = await Promise.all([
+      const [found, content, answers] = await Promise.all([
         searchPublicToolsPp({ q: words.join(" "), limit: n }),
         searchContent(query, n),
+        searchAnswers(query, Math.min(n, 2)),
       ])
       const data = [
+        ...answers.map((a) => ({
+          type: "answer",
+          title: a.question,
+          answer: a.answer,
+          sources: a.sources.slice(0, 3),
+          checked: a.checked,
+          url: url(`guides/${a.guide.slug}`),
+        })),
         ...found.tools.map((t) => ({
           type: "tool",
           title: t.name,

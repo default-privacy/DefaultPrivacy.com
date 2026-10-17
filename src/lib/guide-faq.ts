@@ -6,7 +6,11 @@
 export type GuideFaqItem = {
   question: string
   answer: string
+  /** The markdown links in the answer, in order: the sources the answer cites. */
+  sources: { label: string; url: string }[]
 }
+
+const LINK = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g
 
 const FAQ_HEADING = /^## (?:FAQ|Questions people (?:actually )?ask)\s*$/im
 
@@ -36,8 +40,9 @@ export function parseGuideFaqsFromContent(content: string): GuideFaqItem[] {
     if (!m) continue
     const question = m[1].trim()
     const answer = faqAnswerToPlainText(m[2])
+    const sources = [...m[2].matchAll(LINK)].map((l) => ({ label: l[1].trim(), url: l[2] }))
     if (question && answer) {
-      items.push({ question, answer })
+      items.push({ question, answer, sources: sources.filter((s, i) => sources.findIndex((x) => x.url === s.url) === i) })
     }
   }
 
