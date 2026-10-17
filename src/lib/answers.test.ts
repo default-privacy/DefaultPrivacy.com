@@ -34,4 +34,16 @@ describe("answer map v0", () => {
     const body = all.find((a) => /Tor/.test(a.answer) && !/tor/i.test(a.question))
     expect(body).toBeTruthy()
   })
+  it("parses every bold question under a guide's FAQ heading (a `---` divider ends the block and hides later ones)", async () => {
+    const { getAllGuides } = await import("./guides")
+    for (const g of await getAllGuides()) {
+      const h = g.content.match(/^## (?:FAQ|Questions people (?:actually )?ask)\s*$/im)
+      if (!h || h.index === undefined) continue
+      const after = g.content.slice(h.index + h[0].length)
+      const end = after.search(/\n## /)
+      const section = end === -1 ? after : after.slice(0, end)
+      const asked = (section.match(/^\*\*[^*]+\?\*\*\s*$/gm) ?? []).length
+      expect(parseGuideFaqsFromContent(g.content).length, g.slug).toBe(asked)
+    }
+  })
 })

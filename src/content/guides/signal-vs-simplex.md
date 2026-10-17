@@ -225,11 +225,11 @@ On Signal, you can restore your messages with your 64-character recovery key onl
 
 Signal. It shows which of your contacts already use it ([Signal Support](https://support.signal.org/hc/en-us/articles/360007061452-Does-Signal-send-my-number-to-my-contacts)), while SimpleX needs a link or QR code for every new contact ([FAQ](https://simplex.chat/faq/#how-do-i-connect-to-people)).
 
----
-
 **Is WhatsApp better than SMS?**
 
 For what you say, yes. SMS isn't encrypted, and CISA warns that someone with access to a phone company's network can read it ([CISA](https://www.cisa.gov/sites/default/files/2025-12/guidance-mobile-communications-best-practices_508c.pdf)). WhatsApp encrypts personal chats end to end and the encryption can't be turned off, though it doesn't count chats with Meta's services or with businesses on its Cloud API as end-to-end encrypted ([WhatsApp security whitepaper](https://www.whatsapp.com/security/WhatsApp-Security-Whitepaper.pdf)). What WhatsApp still collects is who you are and how you use it: your phone number, your contacts if you upload them, your IP address, device details, and when and how often you use the app, with identifiers linked to Meta's other products ([WhatsApp Privacy Policy](https://www.whatsapp.com/legal/privacy-policy)). On Android, Google Messages encrypts RCS chats end to end only when everyone in the chat uses Google Messages with RCS turned on ([Google Messages Help](https://support.google.com/messages/answer/10252671?hl=en)).
+
+---
 
 ## Keep reading
 

@@ -203,11 +203,11 @@ Having one to keep your real number private is ordinary, and phones support it o
 
 It goes back to the provider and can be given to someone else. JMP reclaims a cancelled number after 30 days ([JMP FAQ](https://jmp.chat/faq)), and Google can reclaim a Voice number after 3 months without calls or texts ([Google Voice policies](https://support.google.com/voice/answer/9230450?hl=en)). Move any accounts off the number first.
 
----
-
 **Can I make a Discord account without my real phone number?**
 
 Usually, yes. On a computer or in a browser, Discord's sign-up asks for an email, username, password and date of birth, not a phone number ([Discord Support](https://support.discord.com/hc/en-us/articles/31676852332439-Discord-Sign-Up-and-Registration-Guide)). Discord may ask you to verify a phone later, for example when a server requires it or after activity such as joining many servers in a short time, and it says "VOIP, Burner, or Landline numbers cannot be used" ([Discord Support](https://support.discord.com/hc/en-us/articles/6181726888215-How-to-Verify-Your-Discord-Account)). Servers set to the Highest verification level require a verified phone ([Discord Support](https://support.discord.com/hc/en-us/articles/216679607-Verification-Levels)). Since the phone-number apps above give VoIP numbers, a second prepaid SIM or eSIM is the option to try if Discord asks, though Discord doesn't say which mobile numbers it accepts.
+
+---
 
 ## Keep reading
 

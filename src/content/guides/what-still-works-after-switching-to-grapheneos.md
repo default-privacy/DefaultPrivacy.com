@@ -213,11 +213,11 @@ Not through Google's device backup. GrapheneOS never uses Google Play as the bac
 
 Yes. The install guide explains how to [reinstall the stock OS](https://grapheneos.org/install/web#replacing-grapheneos-with-the-stock-os) and fully return the phone to a stock state. Going back wipes the phone again, so back up first.
 
----
-
 **Does the Cape mobile carrier work on GrapheneOS?**
 
 Cape says it supports "Google Pixel (including GrapheneOS)" on Android 13 or higher, works on eSIM-compatible phones, and offers its ID Rotation feature on those Pixels ([Cape FAQ](https://www.cape.co/faqs)). It requires Cape's app, which creates the key pair you log in with, and links its app on Google Play ([Cape](https://www.cape.co/)). Cape says it asks for a phone number and zip code at sign-up, not your name ([Cape Privacy Policy](https://www.cape.co/privacy-policy)).
+
+---
 
 ## Keep reading
 
