@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
-    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@modelcontextprotocol/sdk": "^1.32.1",
     "@neondatabase/serverless": "^1.0.2",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -73,7 +73,7 @@
     "@playwright/test": "^1.58.2",
     "@rollup/rollup-linux-x64-gnu": "4.59.0",
     "@tailwindcss/oxide-linux-x64-gnu": "4.1.18",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.3.3",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
@@ -97,5 +97,8 @@
   "trustedDependencies": [
     "sharp",
     "unrs-resolver"
-  ]
+  ],
+  "overrides": {
+    "eslint-plugin-react-hooks": "7.0.1"
+  }
 }
