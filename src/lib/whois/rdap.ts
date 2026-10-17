@@ -155,7 +155,8 @@ async function getRdapBootstrap(): Promise<{ services: [string[], string[]][] }>
 export async function checkWhoisPrivacy(input: string): Promise<WhoisResult> {
   const domain = extractDomain(input)
 
-  if (!domain || !domain.includes(".")) {
+  // Same shape check as the breach lookup: the domain goes into the RDAP URL path.
+  if (!domain || !/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(domain)) {
     return {
       success: false,
       domain: input,

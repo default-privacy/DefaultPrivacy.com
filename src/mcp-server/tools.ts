@@ -109,7 +109,7 @@ export function registerTools(server: McpServer): void {
           type: "tool",
           title: t.name,
           slug: t.slug,
-          summary: oneLine(t.tagline ?? t.description ?? ""),
+          summary: oneLine(cleanThirdParty(t.tagline ?? t.description ?? "", 2000)),
           url: t.dp_url,
         })),
         ...content.guides.map((g) => ({
@@ -142,6 +142,8 @@ export function registerTools(server: McpServer): void {
         }),
         data,
         total: data.length,
+        third_party_fields: ["data[].summary (type tool)"],
+        third_party_note: THIRD_PARTY_NOTE,
         ...(data.length === 0 && {
           message: "Nothing matched every keyword. Try fewer keywords, e.g. the topic alone ('email', 'vpn').",
         }),
@@ -660,7 +662,9 @@ export function registerTools(server: McpServer): void {
       if (exact) {
         const record = await getPublicToolPpWithEvidence(exact.slug)
         return jsonContent({
-          data: { listed: true, bar: MCP_BAR, server: record, guide },
+          data: { listed: true, bar: MCP_BAR, server: record && markToolRecord(record), guide },
+          third_party_fields: ["data.server.tagline", "data.server.description"],
+          third_party_note: THIRD_PARTY_NOTE,
           meta: { citation: citation(`directory/${exact.slug}`) },
         })
       }
