@@ -5,7 +5,7 @@
  * Uses in-memory storage (acceptable for single-instance; upgrade to Redis for multi-instance).
  *
  * Tiers:
- * - free: 100 requests/day (identified by IP)
+ * - free: 1,000 requests/day (identified by IP; AI apps that fetch from shared servers share one IP)
  * - developer: 10,000 requests/day (future: API key or x402 receipt)
  * - unlimited: no limit (enterprise / x402 paid)
  */
@@ -21,7 +21,7 @@ type TierConfig = {
 
 const TIER_CONFIGS: Record<RateLimitTier, TierConfig> = {
   free: {
-    maxRequests: 100,
+    maxRequests: 1_000,
     windowMs: 24 * 60 * 60 * 1000, // 24 hours
   },
   developer: {
