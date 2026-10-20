@@ -29,7 +29,7 @@ Most pages selling anonymous LLCs won't tell you this part. An anonymous LLC is 
 
 ## Privacy is camouflage, not armor
 
-An anonymous LLC lowers your **visibility**. It keeps your name off the public formation record and your home address out of public filings, so you're harder to find by a stalker, a competitor, or a data broker.
+An anonymous LLC lowers your **visibility**. It can keep your name as a member off the public formation record and your home address out of public filings, so you're harder to find by a stalker, a competitor, or a data broker.
 
 What it does **not** do is change your **obligations**. Once someone has a valid legal reason to reach you, a court, the IRS, your bank, or a creditor with a judgment, anonymity doesn't stop them.
 
@@ -71,7 +71,7 @@ We lead with the "no" because companies that blur this line, promising you'll be
 
 ### It does
 
-- Keep your name off the public state formation record. Wyoming, New Mexico, and Delaware don't publish member names. On a Wyoming filing, the organizer's printed name is on the [articles form](https://sos.wyo.gov/Forms/Business/LLC/LLC-ArticlesOrganization.pdf), and that filed form is a public record ([W.S. 17-29-201](https://sos.wyo.gov/Forms/WyoBiz/Wyoming_Limited_Liability_Company_Act_and_Close_LLC_Supplement.pdf))
+- Keep a member's name off the public state formation record. Wyoming, New Mexico, and Delaware do not require member names. On a Wyoming filing, the organizer's printed name is on the [articles form](https://sos.wyo.gov/Forms/Business/LLC/LLC-ArticlesOrganization.pdf), and that filed form is a public record ([W.S. 17-29-201](https://sos.wyo.gov/Forms/WyoBiz/Wyoming_Limited_Liability_Company_Act_and_Close_LLC_Supplement.pdf)). A New Mexico filing can still show the organizer's name and manager names. A Delaware certificate names the person who signs it
 - Keep your home address off public filings. The registered agent's address is used instead
 - Reduce your exposure to data brokers and casual public-record searches
 - Mean no federal ownership report for a company formed in the United States. FinCEN made that exemption permanent on August 14, 2026 ([FinCEN](https://www.fincen.gov/boi)). A company formed abroad and registered to do business in a U.S. state can still have to file
@@ -94,7 +94,7 @@ No. Think of privacy as camouflage, not armor: it helps you avoid being targeted
 
 **Is an anonymous LLC the same as asset protection?**
 
-No. They're different disciplines. An anonymous LLC keeps your name off the public formation record. Asset protection is a separate legal practice, the job of a licensed attorney. A company that markets anonymity as asset protection is misrepresenting what you're buying.
+No. They're different disciplines. An anonymous LLC can keep your name as a member off the public formation record. Asset protection is a separate legal practice, the job of a licensed attorney. A company that markets anonymity as asset protection is misrepresenting what you're buying.
 
 **Does an anonymous LLC hide me from the IRS or my bank?**
 
