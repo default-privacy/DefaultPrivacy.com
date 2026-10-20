@@ -206,6 +206,10 @@ Not necessarily. Proton's sign-up guide says Proton VPN's own sign-up page asks 
 
 No. Mullvad Browser is a separate, free browser made with the Tor Project. It works with any VPN or none ([Mullvad](https://mullvad.net/en/browser)).
 
+**Can I use Mullvad or Proton VPN with Tails?**
+
+Tails says it does not work with VPNs, and that a VPN gives weaker anonymity than Tor because the provider can see both where you connect from and where you connect to ([Tails FAQ](https://tails.net/support/faq/)). Some write-ups describe importing a Mullvad config file in Tails' network settings ([linuxmind](https://linuxmind.dev/2025/11/25/how-to-choose-use-and-configure-a-vpn-in-tails-the-amnesic-incognito-live-system-comparison/)). Those steps use OpenVPN files, and Mullvad removed OpenVPN on 15 January 2026, from both its app and its servers ([Mullvad](https://mullvad.net/en/blog/removing-openvpn-15th-january-2026)). We could not verify that Tails' network settings accept a WireGuard file, so we won't give steps.
+
 ---
 
 ## Keep reading

@@ -183,6 +183,14 @@ Yes. Boot from a live USB stick. In Mint's live session [changes are not permane
 
 Only if your threat model calls for it. They are built for specific risks and are harder to use day to day. Start with a beginner distro and use [your threat model](/guides/how-to-build-your-threat-model) to decide.
 
+**Is Kodachi Linux trustworthy?**
+
+Kodachi is a Debian-based privacy distro by one developer, Warith Al Maawali ([Wikipedia](https://en.wikipedia.org/wiki/Kodachi_OS)). Its README says it is source-available and noncommercial, not open source ([README](https://github.com/WMAL/kodachios)), and its site says the Kodachi-authored binaries ship closed, as signed builds ([Kodachi](https://kodachi.cloud/)). Downloads carry a detached RSA-4096 signature, and the page says to verify the SHA-256 checksum before booting ([downloads](https://kodachi.cloud/downloads)). Version 8 was based on Ubuntu 18.04.5 and 9.0.1 on Debian 13, so an older review that called it Ubuntu with shell scripts predates the change ([Wikipedia](https://en.wikipedia.org/wiki/Kodachi_OS), [2021 review](https://bitsex.net/english/2021/kodachi-linux-is-probably-not-secure/)).
+
+**Is it safe to install a browser in Distrobox?**
+
+Distrobox is not a sandbox. Its site says the container is tightly integrated with the host and shares your HOME directory, external storage, USB devices, graphical apps and audio ([Distrobox](https://distrobox.it/)). The Arch Wiki adds that complete isolation is not possible, because containers get full access to your home folder and application directories ([Arch Wiki](https://wiki.archlinux.org/title/Distrobox)). A browser in a container can read the same files as one outside it. You can give a container its own home directory with the `--home` option ([distrobox-create](https://distrobox.it/usage/distrobox-create/)). Updating the browser inside is a separate step: `distrobox-upgrade` runs each container's own package manager ([distrobox-upgrade](https://distrobox.it/usage/distrobox-upgrade/)). Which browser you run matters more than how it is packaged; see [private browsers compared](/guides/private-browsers-compared).
+
 **Will my games and software work?**
 
 Many games run through [Proton](https://github.com/ValveSoftware/Proton), and [ProtonDB](https://www.protondb.com/) shows reports per game. Some commercial creative tools have no Linux version. Test in a live session first.
