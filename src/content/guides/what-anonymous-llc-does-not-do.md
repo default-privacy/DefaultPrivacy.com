@@ -71,7 +71,7 @@ We lead with the "no" because companies that blur this line, promising you'll be
 
 ### It does
 
-- Keep your name off the public state formation record. Wyoming, New Mexico, and Delaware don't publish member names
+- Keep your name off the public state formation record. Wyoming, New Mexico, and Delaware don't publish member names. On a Wyoming filing, the organizer's printed name is on the [articles form](https://sos.wyo.gov/Forms/Business/LLC/LLC-ArticlesOrganization.pdf), and that filed form is a public record ([W.S. 17-29-201](https://sos.wyo.gov/Forms/WyoBiz/Wyoming_Limited_Liability_Company_Act_and_Close_LLC_Supplement.pdf))
 - Keep your home address off public filings. The registered agent's address is used instead
 - Reduce your exposure to data brokers and casual public-record searches
 - Mean no federal ownership report for a company formed in the United States. FinCEN made that exemption permanent on August 14, 2026 ([FinCEN](https://www.fincen.gov/boi)). A company formed abroad and registered to do business in a U.S. state can still have to file

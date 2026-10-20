@@ -33,11 +33,11 @@ The phrase became popular because it is easy to market. The reality is more spec
 
 In most states, when you form an LLC, the state publishes a record. That record often lists the names of members (owners) or managers. In some states, it lists the registered agent, the organizer, and sometimes the address of the business.
 
-In a handful of states, Wyoming and New Mexico are the most commonly used, the state does not require member or manager names to appear in the public filing. The only name that appears publicly is the registered agent.
+In a handful of states, Wyoming and New Mexico are the most commonly used, the state does not require member or manager names to appear in the public filing. The registered agent's name is on that filing. The organizer's printed name is on the [articles form](https://sos.wyo.gov/Forms/Business/LLC/LLC-ArticlesOrganization.pdf), and that filed form is a public record ([W.S. 17-29-201](https://sos.wyo.gov/Forms/WyoBiz/Wyoming_Limited_Liability_Company_Act_and_Close_LLC_Supplement.pdf)).
 
 That is it. That is the whole thing.
 
-A "Wyoming anonymous LLC" means: **a Wyoming LLC formed by a registered agent, where your name does not appear on the public-facing state record.**
+A "Wyoming anonymous LLC" means: **a Wyoming LLC formed by a registered agent, where your name as a member does not appear on the public-facing state record.**
 
 Your name still exists in formation documents, operating agreements, and bank records. You are still the legal owner. You have not erased yourself. You have simply moved your name off one public database.
 
