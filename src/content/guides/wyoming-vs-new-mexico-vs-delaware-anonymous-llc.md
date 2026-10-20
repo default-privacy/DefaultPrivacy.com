@@ -35,12 +35,14 @@ Anonymity **leaks the same way in all three states**: registered agent, IRS EIN 
 |---|---------|------------|----------|
 | **Filing cost** | ~$100 | **~$50, cheapest** | ~$110 |
 | **Annual report / fee** | Annual report (no member names listed) | **None. No annual report** | **$400/yr** tax, no annual report |
-| **Member names public?** | No | No | No |
+| **Member names public?** | No† | No | No |
 | **Charging-order reputation** | Strongest brand (WY courts) | Standard | Strong case law |
 | **Federal ownership report (U.S.-formed)** | None* | None* | None* |
 | **Best for** | Operating companies, recognized privacy stack | Cost-sensitive holding / quiet entities | VC, complex equity, Chancery court |
 
 \*A company formed in the United States does not file a federal beneficial-ownership report. FinCEN made that exemption permanent on August 14, 2026 ([FinCEN](https://www.fincen.gov/boi)). Delaware's yearly tax is $400, due June 1, with no annual report ([Delaware Division of Corporations](https://corp.delaware.gov/alt-entitytaxinstructions/)).
+
+†Wyoming does not require member names on the articles. The statute only requires the company name, the registered office street address, and the registered agent's name ([W.S. 17-29-201](https://sos.wyo.gov/Forms/WyoBiz/Wyoming_Limited_Liability_Company_Act_and_Close_LLC_Supplement.pdf)). The organizer's printed name is on the [articles form](https://sos.wyo.gov/Forms/Business/LLC/LLC-ArticlesOrganization.pdf), and that filed form is a public record.
 
 Formation service fees are separate from and additional to the state filing fees shown above.
 
