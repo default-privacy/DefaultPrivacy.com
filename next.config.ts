@@ -100,8 +100,6 @@ const nextConfig: NextConfig = {
       "series-llc-operations",
       "trust-vs-llc-for-privacy",
       "trustee-selection",
-      "what-anonymous-llc-does-not-do",
-      "what-anonymous-llc-means",
       "when-you-do-not-need-an-ein",
       "why-cheap-nominee-services-fail",
       "will-boi-return-2026",
