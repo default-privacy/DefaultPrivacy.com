@@ -104,7 +104,6 @@ const nextConfig: NextConfig = {
       "why-cheap-nominee-services-fail",
       "will-boi-return-2026",
       "wyoming-llc-privacy",
-      "wyoming-vs-new-mexico-vs-delaware-anonymous-llc",
       "wyoming-vs-new-mexico",
     ]
     return [
