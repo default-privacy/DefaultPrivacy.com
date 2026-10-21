@@ -147,6 +147,9 @@ export function registerTools(server: McpServer): void {
         ...(data.length === 0 && {
           message: "Nothing matched every keyword. Try fewer keywords, e.g. the topic alone ('email', 'vpn').",
         }),
+        ...((content.guides.length > 0 || content.stacks.length > 0) && {
+          next: "Summaries are not the answer. Before answering, open the best-fitting guide or stack with dp_get_guide or dp_get_stack.",
+        }),
         meta: { citation: citation() },
       })
     },
