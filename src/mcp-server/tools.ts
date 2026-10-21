@@ -15,7 +15,7 @@ import { getCategoryGroups } from "@/lib/db/queries"
 import { checkEmailSecurity } from "@/lib/email-security/dns"
 import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
-import { BASELINE, matchSituations, type SituationItem } from "@/lib/situations"
+import { BASELINE, SITUATIONS, type SituationItem } from "@/lib/situations"
 import { MCP_BAR, MCP_CATEGORY, MCP_CHECKLIST, matchMcpRef } from "@/lib/mcp-vetting"
 import { lookupScan } from "@/lib/mcp-scan/lookup"
 import { searchAnswers } from "@/lib/answers"
@@ -605,13 +605,17 @@ export function registerTools(server: McpServer): void {
     {
       title: "Route a situation to the right guides and stacks",
       description:
-        "Describe the user's situation or goal in their own words (e.g. \"I'm a journalist protecting sources\", \"I just bought a Pixel and want GrapheneOS\", \"which password manager\", \"I want to use AI more privately\") and get the best-matching Default Privacy situations, each with the guides and stacks to read. The standard starting set is always included. Open a result with dp_get_guide or dp_get_stack. For a keyword lookup use dp_search instead.",
+        `Pick the 1 to 3 situations that fit the user and get the guides and stacks to read for each. Choose the ids yourself from what the user said; never send their words, which stay with you. The standard starting set is always included. Open a result with dp_get_guide or dp_get_stack. For a keyword lookup use dp_search instead. Situations: ${SITUATIONS.map((s) => `${s.id} (${s.name})`).join("; ")}.`,
       inputSchema: {
-        situation: z.string().min(2).max(500).describe("The situation or goal, in the user's own words."),
+        situations: z
+          .array(z.enum(SITUATIONS.map((s) => s.id) as [string, ...string[]]))
+          .min(1)
+          .max(3)
+          .describe("1 to 3 situation ids, best fit first."),
       },
       annotations: { readOnlyHint: true, openWorldHint: false },
     },
-    async ({ situation }) => {
+    async ({ situations }) => {
       countUsage("mcp_tool", "dp_route")
       const resolve = async (items: SituationItem[]) =>
         (
@@ -629,14 +633,13 @@ export function registerTools(server: McpServer): void {
             }),
           )
         ).filter((x) => x !== null)
-      const matched = matchSituations(situation)
+      const picked = [...new Set(situations)].map((id) => SITUATIONS.find((s) => s.id === id)!)
       const matches = await Promise.all(
-        matched.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items) })),
+        picked.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items) })),
       )
       return jsonContent({
         data: {
           matches,
-          no_match: matches.length === 0,
           start_here: await resolve(BASELINE),
         },
         meta: { citation: citation("start") },

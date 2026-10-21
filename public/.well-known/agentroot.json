@@ -91,7 +91,7 @@
     {
       "name": "dp_route",
       "type": "read",
-      "description": "Describe a situation in plain words and get the best-matching guides and stacks to read."
+      "description": "Pick 1 to 3 situations from a fixed list and get the guides and stacks to read for each."
     },
     {
       "name": "dp_check_mcp_server",

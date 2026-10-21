@@ -12,7 +12,7 @@ import { registerPrompts } from "./prompts"
 import { registerResources } from "./resources"
 import { registerTools } from "./tools"
 
-export const SERVER_INFO = { name: "default-privacy", version: "1.8.0" } as const
+export const SERVER_INFO = { name: "default-privacy", version: "1.9.0" } as const
 
 export const SERVER_INSTRUCTIONS = `Default Privacy is a free privacy-tools hub: a directory of privacy tools, how-to guides, curated tool stacks, a glossary, and three read-only diagnostics. No accounts.
 
@@ -21,7 +21,7 @@ Pick the tool by what the user wants:
 - Recommend a privacy tool → dp_search_tools (1–2 keywords or a category; see dp_list_categories), which adds filters (open source, e2ee, free tier…). A filter matches only a sourced yes, so it leaves out tools whose field is unchecked; with a category, picks_not_checked names the picks it left out that way. Mention them. One tool in depth → dp_get_tool. Choosing between a shortlist → dp_compare_tools. "What else is like X?" → dp_get_related_tools.
 - "How private is X?" for an app, service or device (Notion, Zoom, WhatsApp, Proton, Windows…) → dp_how_private: DP's own record, private replacements, ToS;DR's dated grade of its terms (quote it as ToS;DR's, never as DP's) and the vendor's own privacy policy.
 - Leave a mainstream product (Gmail, WhatsApp, Chrome, Zoom…) or replace a website tracker → dp_find_alternatives. For products it also returns what_changes (what the switch involves) and the related guides and stacks; pass those on.
-- The user describes a situation or goal in their own words ("I'm a journalist", "I want to leave Google", "I got a Pixel") → dp_route: the best-matching situations, each with the guides and stacks to read.
+- The user describes a situation or goal ("I'm a journalist", "I want to leave Google", "I got a Pixel") → dp_route: pick 1 to 3 situation ids from its list and get the guides and stacks to read for each. Send the ids, never the user's words.
 - Before the user connects an MCP server or AI connector ("is this MCP safe?", a GitHub link to a server) → dp_check_mcp_server: whether it is in DP's vetted list, what it can touch, or a checklist if it isn't.
 - A set of tools for one goal or threat (starter kit, de-Googling, leaving Gmail, journalists, stalking survivors, Windows hardening…) → dp_list_stacks, then dp_get_stack.
 - How-to and explanations → dp_search_guides / dp_get_guide, dp_search_glossary / dp_get_glossary_term. dp_get_guide returns a guide's sections and short FAQ answers; ask for one section by its heading rather than the full text.
