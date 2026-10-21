@@ -126,8 +126,9 @@ export default function UseInYourAiPage() {
               <a href="https://smithery.ai/servers/privatebydefault/default-privacy" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
                 Smithery
               </a>
-              , your requests pass through Smithery&apos;s gateway before they reach us, so Smithery sees them
-              too. Connect to {MCP_URL} directly to avoid that.
+              , your requests pass through Smithery&apos;s gateway, so Smithery sees them too. That gateway
+              shuts down on October 31, 2026 and the connection stops working then. Connect to {MCP_URL}{" "}
+              directly instead.
             </p>
             <p>
               You don&apos;t have to take our word for it: the server&apos;s code is open source on{" "}
