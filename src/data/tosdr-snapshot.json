@@ -2,7 +2,7 @@
   "source": "ToS;DR (https://tosdr.org)",
   "licence": "CC BY-SA 3.0",
   "licence_url": "https://creativecommons.org/licenses/by-sa/3.0/",
-  "copied_on": "2026-10-15",
+  "copied_on": "2026-10-21",
   "services": {
     "157": {
       "id": 157,
@@ -18,27 +18,35 @@
       },
       "points": [
         {
+          "id": 326840,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
-          "source": null,
+          "source": "https://tuta.com/privacy-policy",
+          "quote": "Processing of personal data takes place in compliance with the General Data Protection Regulation (GDPR) a",
           "updated": "2026-06-29"
         },
         {
+          "id": 127607,
           "title": "Your personal data is not sold",
           "class": "good",
           "source": "https://tutanota.com/fr/privacy",
+          "quote": "There will be no sale of data.",
           "updated": "2026-06-29"
         },
         {
+          "id": 326838,
           "title": "This service claims User-generated content is encrypted, and they can not decrypt it",
           "class": "good",
-          "source": null,
+          "source": "https://tuta.com/privacy-policy",
+          "quote": "All user data is stored end-to-end encrypted in Tuta.",
           "updated": "2026-06-29"
         },
         {
+          "id": 326841,
           "title": "You will be notified if personal data has been affected by data breaches",
           "class": "good",
-          "source": null,
+          "source": "https://tuta.com/privacy-policy",
+          "quote": "Tutao GmbH notifies Tuta users in case of a data breach according to German and European laws.",
           "updated": "2026-06-29"
         }
       ],
@@ -59,51 +67,67 @@
       },
       "points": [
         {
+          "id": 20942,
           "title": "Content you post may be edited by the service for any reason",
           "class": "blocker",
           "source": "https://www.apple.com/legal/internet-services/itunes/gamecenter/us/terms.html",
+          "quote": "Apple reserves the right to not post or publish any materials and to remove or edit any material, at any time in its sole discretion without notice or liability.",
           "updated": "2023-07-11"
         },
         {
+          "id": 144239,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
           "source": "https://www.apple.com/legal/internet-services/itunes/gamecenter/us/terms.html",
+          "quote": "Apple reserves the right to not post or publish any materials and to remove or edit any material, at any time in its sole discretion without notice or liability.",
           "updated": "2026-03-22"
         },
         {
+          "id": 323322,
           "title": "Terms may be changed any time at their discretion, without notice to you",
           "class": "bad",
-          "source": null,
+          "source": "https://www.apple.com/legal/internet-services/terms/site.html",
+          "quote": "Apple reserves the right, at its sole discretion, to change, modify, add or remove portions of these Terms of Use, at any time. It is your responsibility to check these Terms of Use periodically for changes.",
           "updated": "2026-05-18"
         },
         {
+          "id": 75660,
           "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
           "class": "bad",
-          "source": "",
+          "source": "https://www.apple.com/legal/privacy/en-ww/",
+          "quote": "Apple’s websites, online services, interactive applications, and advertisements may use “cookies” and other technologies such as web beacons.",
           "updated": "2026-04-07"
         },
         {
+          "id": 75655,
           "title": "Your personal data may be sold or otherwise transferred as part of a bankruptcy proceeding or other type of financial transaction",
           "class": "bad",
-          "source": null,
+          "source": "https://www.apple.com/legal/privacy/en-ww/",
+          "quote": "We may also disclose information about you where there is a lawful basis for doing so, if we determine that disclosure is reasonably necessary to enforce our terms and conditions or to protect our operations or users, or in the event of a reorganization, merger, or sale.",
           "updated": "2026-03-22"
         },
         {
+          "id": 304999,
           "title": "The service has non-exclusive use of your content",
           "class": "good",
           "source": "https://www.apple.com/legal/internet-services/itunes/gamecenter/us/terms.html",
+          "quote": "You hereby grant Apple a worldwide, royalty-free, non-exclusive license to use such materials as part of the Service or in providing or marketing the Service, without any compensation or obligation to you.",
           "updated": "2026-03-22"
         },
         {
+          "id": 75628,
           "title": "The service will only respond to government requests that are reasonable",
           "class": "good",
-          "source": null,
+          "source": "https://www.apple.com/legal/privacy/en-ww/",
+          "quote": "We may also disclose information about you, but only where there is a lawful basis for doing so, if we determine that disclosure is reasonably necessary to enforce our terms and conditions or protect our operations or users. This could include providing information to public or governmental…",
           "updated": "2026-03-22"
         },
         {
+          "id": 75653,
           "title": "Your personal data will not be used for an automated decision-making",
           "class": "good",
-          "source": null,
+          "source": "https://www.apple.com/legal/privacy/en-ww/",
+          "quote": "Apple does not use algorithms or profiling to make any decision that would significantly affect you without the opportunity for human review.",
           "updated": "2026-03-22"
         }
       ],
@@ -124,51 +148,67 @@
       },
       "points": [
         {
+          "id": 959,
           "title": "Emails sent to lastpass may be published publically",
           "class": "bad",
           "source": "https://www.logmeininc.com/legal/terms-and-conditions",
+          "quote": "If you provide feedback (“ Feedback ”) about the Beta Service, you agree that we own any Feedback that you share with us.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19370,
           "title": "Tracking via third-party cookies for other purposes without your consent.",
           "class": "bad",
           "source": "https://www.logmeininc.com/legal/privacy/international",
+          "quote": "Portions of our website may also use Google Analytics for Display Advertisers including DoubleClick or Dynamic Remarketing which provide interest-based ads based on your visit to this or other websites. You can use Ads Settings to manage the Google ads you see and opt-out of interest-based ads.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19369,
           "title": "Third-party cookies are used for statistics",
           "class": "bad",
           "source": "https://www.logmeininc.com/legal/privacy/international",
+          "quote": "We continuously improve our websites and Services through the use of first- and third-party cookies and other web analytics tools, which help us understand how our visitors use our websites, desktop tools, and mobile applications, what webpages, features and functions they like and dislike, and…",
           "updated": "2023-07-11"
         },
         {
+          "id": 19372,
           "title": "Your profile is combined across various products",
           "class": "bad",
           "source": "https://www.logmeininc.com/legal/privacy/international",
+          "quote": "(a) with our affiliated companies and subsidiaries which are directly or indirectly owned by our parent entity, LogMeIn, Inc..",
           "updated": "2023-07-11"
         },
         {
+          "id": 19371,
           "title": "This service may collect, use, and share location data",
           "class": "bad",
           "source": "https://www.logmeininc.com/legal/privacy/international",
+          "quote": "We collect location-based data for the purpose of providing, operating, and supporting the service and for fraud prevention and security monitoring. you can disable location data transmission on mobile devices at any time by disabling location services from the settings menu on your device.",
           "updated": "2023-07-11"
         },
         {
+          "id": 562,
           "title": "User suspension from the service will be fair and proportionate.",
           "class": "good",
           "source": "https://www.logmeininc.com/legal/terms-and-conditions",
+          "quote": "We may suspend the Services or terminate the Agreement if you, your users, or attendees are using the Services in a manner that is likely to cause harm to us.",
           "updated": "2023-07-11"
         },
         {
+          "id": 28443,
           "title": "You can opt out of promotional communications",
           "class": "good",
           "source": "https://www.logmeininc.com/legal/privacy/international",
+          "quote": "If you wish to no longer receive marketing communications from us, you can opt-out of marketing by clicking on the unsubscribe link on any marketing email you receive",
           "updated": "2023-07-11"
         },
         {
+          "id": 28442,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
           "source": "https://www.logmeininc.com/legal/privacy/international",
+          "quote": "We also process your personal data to comply with applicable laws, including those of the European Union (\"EU\") and/or individual European Economic Area (\"EEA\") Member States and such compliance obligations are the legal basis for such processing.",
           "updated": "2023-07-11"
         }
       ],
@@ -189,51 +229,67 @@
       },
       "points": [
         {
+          "id": 318241,
           "title": "Your identity is used in ads that are shown to other users",
           "class": "blocker",
-          "source": null,
+          "source": "https://mbasic.facebook.com/legal/terms/plain_text_terms/",
+          "quote": "You give us permission to use your name and profile picture and information about actions you have taken on Facebook next to or in connection with ads, offers, and other sponsored or commercial content that we display across our Products, without any compensation to you.",
           "updated": "2026-03-18"
         },
         {
+          "id": 318261,
           "title": "Private messages that are not end-to-end encrypted can be read",
           "class": "blocker",
-          "source": "",
+          "source": "https://mbasic.facebook.com/privacy/policy/printable/version/25862970456621906/",
+          "quote": "Messages you send and receive, including their content, subject to applicable law.",
           "updated": "2026-03-18"
         },
         {
+          "id": 320757,
           "title": "Your data is collected even if you did not interact with the service directly",
           "class": "blocker",
-          "source": "",
+          "source": "https://mbasic.facebook.com/privacy/policies/cookies/printable/",
+          "quote": "Meta uses cookies and receives information when you visit those sites and apps, including device information and information about your activity, without any further action from you. This occurs whether or not you have a Facebook or Instagram account or are logged in.",
           "updated": "2026-08-10"
         },
         {
+          "id": 320777,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://mbasic.facebook.com/privacy/policy/printable/version/25862970456621906/",
+          "quote": "Across Meta Company Products, you can interact with Meta’s generative AI features and experiences, collectively called AI at Meta . We collect information when you or others use, or exchange information with, AI at Meta, such as: Prompts that can include questions, messages, media and other…",
           "updated": "2026-03-29"
         },
         {
+          "id": 318265,
           "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
           "class": "bad",
-          "source": null,
+          "source": "https://mbasic.facebook.com/privacy/policy/printable/version/25862970456621906/",
+          "quote": "We also receive information using cookies and similar technologies, like the Meta Pixel or Social Plugins, when you visit other websites and apps that use our Business Tools or other Meta Products",
           "updated": "2026-03-18"
         },
         {
+          "id": 10717,
           "title": "This service claims that your personal data is not being sold",
           "class": "good",
           "source": "https://www.facebook.com/legal/terms",
+          "quote": "We don't sell your personal data.",
           "updated": "2026-08-10"
         },
         {
+          "id": 16745,
           "title": "This service provides an onion site accessible over Tor",
           "class": "good",
           "source": "https://www.facebookcorewwwi.onion/",
+          "quote": null,
           "updated": "2023-03-30"
         },
         {
+          "id": 318266,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
-          "source": null,
+          "source": "https://mbasic.facebook.com/privacy/policy/printable/version/25862970456621906/",
+          "quote": "Why we collect this information",
           "updated": "2026-03-18"
         }
       ],
@@ -254,51 +310,67 @@
       },
       "points": [
         {
+          "id": 144224,
           "title": "Content you post may be edited by the service for any reason",
           "class": "blocker",
           "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508088",
+          "quote": "Amazon reserves the right (but not the obligation) to remove or edit such content, but does not regularly review posted content.",
           "updated": "2026-05-18"
         },
         {
+          "id": 5930,
           "title": "The service can delete your account without prior notice and without a reason",
           "class": "bad",
           "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201544030",
+          "quote": "We may terminate the Agreement or restrict, suspend or terminate your use of the Service at our discretion at any time without notice.",
           "updated": "2026-02-26"
         },
         {
+          "id": 5926,
           "title": "Terms may be changed any time at their discretion, without notice to the user",
           "class": "bad",
           "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508088",
+          "quote": "We reserve the right to make changes to our site, policies, Service Terms, and these Conditions of Use at any time",
           "updated": "2026-02-26"
         },
         {
+          "id": 293047,
           "title": "Information is gathered about you through third parties",
           "class": "bad",
           "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=202075050",
+          "quote": "Some third-parties may provide us pseudonymized information about you (such as demographic information or sites where you have been shown ads) from offline and online sources that we may use to provide you more relevant and useful advertising.",
           "updated": "2026-03-28"
         },
         {
+          "id": 320702,
           "title": "Your personal data may be disclosed to comply with government requests without notice to you",
           "class": "bad",
-          "source": null,
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+          "quote": "We release account and other personal information when we believe release is appropriate to comply with the law; enforce or apply our Conditions of Use and other agreements; or protect the rights, property, or safety of Amazon, our users, or others. This includes exchanging information with other…",
           "updated": "2026-05-18"
         },
         {
+          "id": 320699,
           "title": "Your personal data is not sold",
           "class": "good",
-          "source": null,
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+          "quote": "Information about our customers is an important part of our business, and we are not in the business of selling our customers' personal information to others.",
           "updated": "2026-05-18"
         },
         {
+          "id": 320707,
           "title": "A free help desk is provided",
           "class": "good",
-          "source": null,
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+          "quote": "If you have any questions as to how we collect and use your personal information, please contact our Customer Service .",
           "updated": "2026-05-18"
         },
         {
+          "id": 320708,
           "title": "You can opt out of promotional communications",
           "class": "good",
-          "source": null,
+          "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ",
+          "quote": "If you do not want to receive email or other communications from us, please adjust your Customer Communication Preferences .",
           "updated": "2026-05-18"
         }
       ],
@@ -319,51 +391,67 @@
       },
       "points": [
         {
+          "id": 9849,
           "title": "You sign away moral rights",
           "class": "blocker",
           "source": "https://www.redditinc.com/policies/user-agreement",
+          "quote": "you irrevocably waive any claims and assertions of moral rights or attribution with respect to Your Content.",
           "updated": "2026-04-01"
         },
         {
+          "id": 320938,
           "title": "Private messages can be read",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.reddit.com/policies/privacy-policy",
+          "quote": "Non-Public Content You Submit Non-public content you submit includes your saved drafts of posts or comments, your non-public messages with other users (such as private messages, private chats, and modmail), and your reports and other communications with moderators and with us.",
           "updated": "2026-05-18"
         },
         {
+          "id": 320986,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "http://www.reddit.com/help/useragreement",
+          "quote": "For example, this license includes the right to use Your Content to train AI and machine learning models, as further described in our Public Content Policy .",
           "updated": "2026-05-18"
         },
         {
+          "id": 320987,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
-          "source": null,
+          "source": "http://www.reddit.com/help/useragreement",
+          "quote": "Although we have no obligation to screen, edit, or monitor Your Content, we may, in our sole discretion, delete, deem your content ineligible for monetization, or remove Your Content, at any time and for any reason, including for violating these Terms, our Reddit Rules , or our other terms and…",
           "updated": "2026-05-18"
         },
         {
+          "id": 8176,
           "title": "This service can license user content to third parties",
           "class": "bad",
           "source": "https://www.redditinc.com/policies/user-agreement",
+          "quote": "This license includes the right for us to make Your Content available for syndication, broadcast, distribution, or publication by other companies, organizations, or individuals who partner with Reddit.",
           "updated": "2026-04-01"
         },
         {
+          "id": 13329,
           "title": "The service's data retention period is kept to the minimum necessary for fulfilling its purposes",
           "class": "good",
           "source": "https://www.redditinc.com/policies/privacy-policy",
+          "quote": "We store the information we collect for as long as it is necessary for the purpose(s) for which we originally collected it.",
           "updated": "2026-02-21"
         },
         {
+          "id": 13327,
           "title": "Third parties used by the service are bound by confidentiality obligations",
           "class": "good",
           "source": "https://www.redditinc.com/policies/privacy-policy",
+          "quote": "Their use of personal data will be subject to appropriate confidentiality and security measures.",
           "updated": "2026-02-21"
         },
         {
+          "id": 320936,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
-          "source": null,
+          "source": "https://www.reddit.com/policies/privacy-policy",
+          "quote": "What Information We Collect",
           "updated": "2026-05-18"
         }
       ],
@@ -384,51 +472,67 @@
       },
       "points": [
         {
+          "id": 321363,
           "title": "Content you post may be edited by the service for any reason",
           "class": "blocker",
-          "source": null,
+          "source": "https://x.com/en/tos",
+          "quote": "You understand that we may modify or adapt your Content as it is distributed, syndicated, published, or broadcast by us and our partners and/or make changes to your Content in order to adapt the Content to different media.",
           "updated": "2026-05-18"
         },
         {
+          "id": 321367,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
-          "source": null,
+          "source": "https://x.com/en/tos",
+          "quote": "We may also remove or refuse to distribute any Content on the Services, limit distribution or visibility of any Content on the service, suspend or terminate users, and reclaim usernames without liability to you.",
           "updated": "2026-05-18"
         },
         {
+          "id": 321416,
           "title": "Private messages can be read",
           "class": "blocker",
-          "source": null,
+          "source": "https://x.com/en/privacy",
+          "quote": "How you interact with others on the platform, such as people you follow and people who follow you, metadata related to Encrypted Messages , and when you use Direct Messages , including the contents of the messages, the recipients, and date and time of messages.",
           "updated": "2026-05-18"
         },
         {
+          "id": 321425,
           "title": "They store data on you even if you did not interact with the service",
           "class": "blocker",
-          "source": null,
+          "source": "https://x.com/en/privacy",
+          "quote": "We may receive information when you view content on or otherwise interact with our products and services, even if you have not created an account or are signed out",
           "updated": "2026-05-18"
         },
         {
+          "id": 321435,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://x.com/en/privacy",
+          "quote": "We may use the information we collect and publicly available information to help train our machine learning or artificial intelligence models for the purposes outlined in this policy.",
           "updated": "2026-05-18"
         },
         {
+          "id": 29044,
           "title": "An onion site accessible over Tor is provided",
           "class": "good",
           "source": "https://help.twitter.com/en/using-twitter/twitter-supported-browsers",
+          "quote": null,
           "updated": "2022-11-26"
         },
         {
+          "id": 321347,
           "title": "The terms for this service are easy to read",
           "class": "good",
-          "source": null,
+          "source": "https://x.com/en/tos",
+          "quote": "Summary of our Terms",
           "updated": "2026-05-18"
         },
         {
+          "id": 321359,
           "title": "You maintain ownership of your content",
           "class": "good",
-          "source": null,
+          "source": "https://x.com/en/tos",
+          "quote": "You retain your rights to any Content, including anything referenced therein, you submit, input, create, generate, post, or display on or through the Services. What’s yours is yours — you own your Content (and your incorporated audio, photos, and videos are considered part of the Content).",
           "updated": "2026-05-18"
         }
       ],
@@ -449,51 +553,67 @@
       },
       "points": [
         {
+          "id": 318890,
           "title": "They store data on you even if you did not interact with the service",
           "class": "blocker",
-          "source": "",
+          "source": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+          "quote": "You can use the contact upload feature and provide us, if permitted by applicable laws, with the phone numbers in your address book on a regular basis, including those of users of our Services and your other contacts. If any of your contacts aren’t yet using our Services, we’ll manage this…",
           "updated": "2026-06-12"
         },
         {
+          "id": 318900,
           "title": "Private messages can be read by third parties",
           "class": "blocker",
-          "source": "",
+          "source": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+          "quote": "When you message with a business on WhatsApp, keep in mind that the content you share may be visible to several people in that business. In addition, some businesses might be working with third-party service providers (which may include Meta) to help manage their communications with their…",
           "updated": "2026-06-12"
         },
         {
+          "id": 13043,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
           "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+          "quote": "OUR AGGREGATE LIABILITY RELATING TO, ARISING OUT OF, OR IN ANY WAY IN CONNECTION WITH OUR TERMS, US, OR OUR SERVICES WILL NOT EXCEED THE GREATER OF ONE HUNDRED DOLLARS ($100) OR THE AMOUNT YOU HAVE PAID US IN THE PAST TWELVE MONTHS.",
           "updated": "2026-03-04"
         },
         {
+          "id": 14582,
           "title": "The service can delete your account without prior notice and without a reason",
           "class": "bad",
           "source": "https://www.whatsapp.com/legal/?lang=en&doc=terms-of-service&version=20200128",
+          "quote": "We may modify, suspend, or terminate your access to or use of our Services anytime for any reason, such as if you violate the letter or spirit of our Terms or create harm, risk, or possible legal exposure for us, our users, or others.",
           "updated": "2026-03-04"
         },
         {
+          "id": 318880,
           "title": "The service is only available in some countries approved by its government",
           "class": "bad",
-          "source": null,
+          "source": "https://www.whatsapp.com/legal/terms-of-service",
+          "quote": "You will not use or download our Services if you are located in a restricted country or territory, if you are currently listed on any United States or non-United States restricted parties list, or for any purpose prohibited by Export Laws, and you will not disguise your location through IP proxying…",
           "updated": "2026-06-12"
         },
         {
+          "id": 13031,
           "title": "The service provides information about how they intend to use your personal data",
           "class": "good",
           "source": "https://www.whatsapp.com/legal/privacy-policy?eea=0&lang=en",
+          "quote": "How We Use Information",
           "updated": "2026-03-04"
         },
         {
+          "id": 318864,
           "title": "The service has non-exclusive use of your content",
           "class": "good",
-          "source": null,
+          "source": "https://www.whatsapp.com/legal/terms-of-service",
+          "quote": "In order to operate and provide our Services, you grant WhatsApp a worldwide, non-exclusive",
           "updated": "2026-06-12"
         },
         {
+          "id": 318856,
           "title": "User accounts can be terminated after having been in breach of the terms of service repeatedly",
           "class": "good",
-          "source": null,
+          "source": "https://www.whatsapp.com/legal/terms-of-service",
+          "quote": "If you violate our Terms or policies, we may take action with respect to your account, including disabling or suspending your account",
           "updated": "2026-06-12"
         }
       ],
@@ -514,51 +634,67 @@
       },
       "points": [
         {
+          "id": 37076,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://slack.com/intl/en-gb/trust/data-management/privacy-principles",
+          "quote": "To develop non-generative AI/ML models for features such as emoji and channel recommendations, our systems analyse Customer Data (e.g. messages, content and files) submitted to Slack as well as Other Information (including usage information) as defined in our privacy policy and in your customer…",
           "updated": "2025-09-12"
         },
         {
+          "id": 8968,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
           "source": "https://slack.com/terms-of-service",
+          "quote": "OTHER THAN IN CONNECTION WITH A PARTY’S INDEMNIFICATION OBLIGATIONS HEREUNDER, IN NO EVENT WILL EITHER CUSTOMER’S OR THE SLACK EXTENDED FAMILY’S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THE CONTRACT OR THE USER TERMS (WHETHER IN CONTRACT OR TORT OR UNDER ANY OTHER THEORY OF LIABILITY)…",
           "updated": "2023-07-11"
         },
         {
+          "id": 160067,
           "title": "Extra data may be collected about you through promotions",
           "class": "bad",
           "source": "https://slack.com/privacy-policy",
+          "quote": "We also receive Other Information when submitted to our Websites or in other ways, such as if you participate in a focus group, contest, activity or event, apply for a job, enroll in a certification program or other educational program hosted by Slack or a vendor, request support, interact with our…",
           "updated": "2026-02-17"
         },
         {
+          "id": 5642,
           "title": "You maintain ownership of your data",
           "class": "good",
           "source": "https://slack.com/terms-of-service",
+          "quote": "Customer will own all Customer Data. Subject to the terms and conditions of the Contract,",
           "updated": "2023-07-11"
         },
         {
+          "id": 8962,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://slack.com/terms-of-service",
+          "quote": "We will (a) make the Services available to Customer and its Authorized Users as described in the Contract. and (b) not use or process Customer Data for any purpose without Customer’s prior written instructions. provided, however, that “prior written instructions” will be deemed to include use of…",
           "updated": "2023-07-11"
         },
         {
+          "id": 5643,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://slack.com/terms-of-service",
+          "quote": "Customer may terminate its free subscriptions immediately without cause.",
           "updated": "2023-07-11"
         },
         {
+          "id": 8963,
           "title": "This service will warn users about website maintenance",
           "class": "good",
           "source": "https://slack.com/terms-of-service",
+          "quote": "We expect planned downtime to be infrequent but will endeavor to provide Customer with advance notice (e.g., through the Services), if we think it may exceed five (5) continuous minutes.",
           "updated": "2023-07-11"
         },
         {
+          "id": 8964,
           "title": "The service gives 30 days of notice before closing your account",
           "class": "good",
           "source": "https://slack.com/terms-of-service",
+          "quote": "We may also terminate Customer’s free subscriptions without cause, but we will provide Customer with thirty (30) days prior written notice.",
           "updated": "2023-07-11"
         }
       ],
@@ -579,51 +715,67 @@
       },
       "points": [
         {
+          "id": 326413,
           "title": "Content you post may be edited by the service for any reason",
           "class": "blocker",
-          "source": null,
+          "source": "https://evernote.com/legal/terms-of-service",
+          "quote": "Finally, you understand and agree that, in performing the required technical steps to provide the Evernote Service to our users, we may make such changes to your Content as are necessary to conform and adapt that Content to the technical requirements of connecting networks, devices, services or…",
           "updated": "2026-06-25"
         },
         {
+          "id": 326409,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
-          "source": null,
+          "source": "https://evernote.com/legal/terms-of-service",
+          "quote": "You also agree that we have the right to elect not to accept, post, store, display, publish or transmit any Content in our sole discretion.",
           "updated": "2026-06-25"
         },
         {
+          "id": 326456,
           "title": "Your data is collected even if you did not interact with the service directly",
           "class": "blocker",
-          "source": null,
+          "source": "https://evernote.com/privacy/policy",
+          "quote": "Your contacts To auto-complete email addresses when you share Content. To display photos of your Evernote contacts (from their Evernote profiles) when they are viewing shared items. To save scanned business cards.",
           "updated": "2026-06-25"
         },
         {
+          "id": 326412,
           "title": "Your content can be licensed to third parties",
           "class": "bad",
-          "source": null,
+          "source": "https://evernote.com/legal/terms-of-service",
+          "quote": "If the third-party service or application you elect to use would access or extract Content, you grant us the right and license to enable third-party access to and extraction of your Content.",
           "updated": "2026-06-25"
         },
         {
+          "id": 326398,
           "title": "You waive your right to a class action",
           "class": "bad",
-          "source": null,
+          "source": "https://evernote.com/legal/terms-of-service",
+          "quote": "IF YOU RESIDE IN THE UNITED STATES OR ARE OTHERWISE SUBJECT TO THE U.S. FEDERAL ARBITRATION ACT, THESE TERMS ALSO CONTAIN A MANDATORY AND BINDING INDIVIDUAL ARBITRATION AGREEMENT AND CLASS-ACTION WAIVER WHICH MEANS THAT MOST DISPUTES BETWEEN YOU AND US WILL BE RESOLVED IN BINDING, INDIVIDUAL…",
           "updated": "2026-06-25"
         },
         {
+          "id": 326447,
           "title": "Information is provided about what kind of personal information is collected",
           "class": "good",
-          "source": null,
+          "source": "https://evernote.com/privacy/policy",
+          "quote": "What data do we collect?",
           "updated": "2026-06-25"
         },
         {
+          "id": 326411,
           "title": "Copyright license limited for the purposes of that same service but transferable and sublicenseable",
           "class": "good",
-          "source": null,
+          "source": "https://evernote.com/legal/terms-of-service",
+          "quote": "You agree that these rights and licenses are royalty free, transferable, sub-licensable, worldwide and irrevocable (for so long as your Content is stored with us), and include a right for us to make such Content available to, and pass these rights along to, others with whom we have contractual…",
           "updated": "2026-06-25"
         },
         {
+          "id": 326408,
           "title": "You maintain ownership of your content",
           "class": "good",
-          "source": null,
+          "source": "https://evernote.com/legal/terms-of-service",
+          "quote": "You retain copyright and any other rights you already held in your Content before you submitted, posted or displayed it on or through the Evernote Service.",
           "updated": "2026-06-25"
         }
       ],
@@ -644,51 +796,67 @@
       },
       "points": [
         {
+          "id": 12831,
           "title": "Your identity is used in ads that are shown to other users",
           "class": "blocker",
           "source": "https://policies.google.com/privacy#",
+          "quote": "Choose whether your name and photo appear next to your activity, like reviews and recommendations, that appear in ads",
           "updated": "2026-08-10"
         },
         {
+          "id": 318333,
           "title": "You may still be tracked even after opting out from tracking",
           "class": "blocker",
-          "source": "",
+          "source": "https://policies.google.com/privacy#",
+          "quote": "activity on third-party sites and apps that use our services Websites and apps that integrate Google services like ads and analytics share information with us. This information is collected regardless of which browser or browser mode you use. For example, although Incognito mode in Chrome can help…",
           "updated": "2026-06-17"
         },
         {
+          "id": 318283,
           "title": "Your data may be collected even if you did not interact with the service directly",
           "class": "blocker",
-          "source": "",
+          "source": "https://policies.google.com/privacy#",
+          "quote": "Google also collects information about you from publicly accessible sources . For example, if your name appears in your local newspaper, Google’s Search engine may index that article and display it to other people if they search for your name.",
           "updated": "2026-08-10"
         },
         {
+          "id": 318611,
           "title": "Your browsing history can be viewed by the service",
           "class": "blocker",
-          "source": null,
+          "source": "https://policies.google.com/privacy#",
+          "quote": "Information about your activity in our services , such as your search terms, Chrome browsing history you’ve synced with your Google Account",
           "updated": "2026-03-07"
         },
         {
+          "id": 318323,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://policies.google.com/privacy#",
+          "quote": "We use publicly available information online or from other public sources to help train new machine learning models and build foundational technologies that power various Google products such as Google Translate, Gemini Apps, and Cloud AI capabilities. * We use your interactions with AI models and…",
           "updated": "2026-03-07"
         },
         {
+          "id": 13938,
           "title": "The service reviews its privacy policy on a regular basis",
           "class": "good",
           "source": "https://policies.google.com/privacy#",
+          "quote": "We regularly review this Privacy Policy and make sure that we process your information in ways that comply with it.",
           "updated": "2026-08-10"
         },
         {
+          "id": 5843,
           "title": "This service allows you to retrieve an archive of your data",
           "class": "good",
           "source": "https://policies.google.com/privacy#",
+          "quote": "You can export a copy of your information or delete it from your Google Account at any time You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google.",
           "updated": "2026-08-10"
         },
         {
+          "id": 12832,
           "title": "You can choose with whom you share content",
           "class": "good",
           "source": "https://policies.google.com/privacy#",
+          "quote": "Many of our services let you share information with other people, and you have control over how you share.",
           "updated": "2026-08-10"
         }
       ],
@@ -709,51 +877,67 @@
       },
       "points": [
         {
+          "id": 12190,
           "title": "The service can read your private messages",
           "class": "blocker",
           "source": "https://help.instagram.com/519522125107875",
+          "quote": "Our systems automatically process content and communications you and others provide to analyze context and what's in them for the purposes described below.",
           "updated": "2023-07-11"
         },
         {
+          "id": 11358,
           "title": "Your identity is used in ads that are shown to other users",
           "class": "blocker",
           "source": "https://help.instagram.com/581066165581870",
+          "quote": "Permission to use your username, profile picture, and information about your relationships and actions with accounts, ads, and sponsored content. You give us permission to show your username, profile picture, and information about your actions (such as likes) or relationships (such as follows) next…",
           "updated": "2023-07-11"
         },
         {
+          "id": 12230,
           "title": "This service holds onto content that you've deleted",
           "class": "blocker",
           "source": "https://help.instagram.com/581066165581870",
+          "quote": "Content you delete may persist for a limited period of time in backup copies and will still be visible where others have shared it.",
           "updated": "2023-07-11"
         },
         {
+          "id": 12228,
           "title": "They store data on you even if you did not interact with the service",
           "class": "blocker",
           "source": "https://help.instagram.com/519522125107875",
+          "quote": "These partners provide information about your activities off Facebook—including information about your device, websites you visit, purchases you make, the ads you see, and how you use their services—whether or not you have a Facebook account or are logged into Facebook. For example, a game…",
           "updated": "2023-07-11"
         },
         {
+          "id": 12232,
           "title": "Usernames can be rejected for any reason",
           "class": "bad",
           "source": "https://help.instagram.com/581066165581870",
+          "quote": "If you select a username or similar identifier for your account, we may change it if we believe it is appropriate or necessary (for example, if it infringes someone's intellectual property or impersonates another user).",
           "updated": "2023-07-11"
         },
         {
+          "id": 12248,
           "title": "The service will not allow third parties to access your personal information without a legal basis",
           "class": "good",
           "source": "https://help.instagram.com/494561080557017",
+          "quote": "We will not review or respond to correspondence sent by non-law enforcement officials to the addresses above.",
           "updated": "2023-07-11"
         },
         {
+          "id": 12219,
           "title": "This service does not sell your personal data",
           "class": "good",
           "source": "https://help.instagram.com/519522125107875",
+          "quote": "We don't sell any of your information to anyone, and we never will.",
           "updated": "2023-07-11"
         },
         {
+          "id": 12202,
           "title": "The service provides information about how they intend to use your personal data",
           "class": "good",
           "source": "https://help.instagram.com/519522125107875",
+          "quote": "How do we use this information? We use the information we have (subject to choices you make) as described below and to provide and support the Facebook Products and related services described in the Facebook Terms and Instagram Terms.",
           "updated": "2023-07-11"
         }
       ],
@@ -774,51 +958,67 @@
       },
       "points": [
         {
+          "id": 104435,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user in the last 12 months or 100$",
           "class": "bad",
-          "source": "",
+          "source": "https://duckduckgo.com/terms",
+          "quote": "TO THE FULLEST EXTENT PERMITTED BY LAW, THE DUCKDUCKGO PARTIES' MAXIMUM AGGREGATE LIABILITY TO YOU FOR ANY CAUSE AND REGARDLESS OF THE FORM OF THE ACTION, WILL AT ALL TIMES BE LIMITED TO THE AMOUNT PAID BY YOU FOR USE OF THE RELEVANT SERVICES DURING THE PRIOR 12 MONTHS OR ONE HUNDRED DOLLARS ($100)…",
           "updated": "2026-02-22"
         },
         {
+          "id": 329566,
           "title": "You may be tracked on other websites",
           "class": "bad",
-          "source": null,
+          "source": "https://duckduckgo.com/privacy",
+          "quote": "We also observe what people are saying about our product across social channels and may search for, review, and share this publicly available information internally for consideration.",
           "updated": "2026-07-28"
         },
         {
+          "id": 329558,
           "title": "Tracking pixels are used in service-to-user communication",
           "class": "bad",
-          "source": null,
+          "source": "https://duckduckgo.com/privacy",
+          "quote": "Similarly, we may also anonymously use information we receive from you when using our products and features, such as click timing in Email Protection, for security, and to protect against fraud and abuse.",
           "updated": "2026-07-28"
         },
         {
+          "id": 329570,
           "title": "This service shares your personal data with third parties that are not essential to its operation",
           "class": "bad",
-          "source": null,
+          "source": "https://duckduckgo.com/privacy",
+          "quote": "For information voluntarily provided in surveys, we sometimes use additional vendors for processing, though their access to personal information is contractually limited to what is necessary to perform their services.",
           "updated": "2026-07-28"
         },
         {
+          "id": 329573,
           "title": "Your data may be processed and stored anywhere in the world",
           "class": "bad",
-          "source": null,
+          "source": "https://duckduckgo.com/privacy",
+          "quote": "Related, there are scenarios where we may transfer this limited personal information (for example, your email address) to countries other than the country in which it was received. For example, we have servers across the world and while your device will typically try to automatically connect to…",
           "updated": "2026-07-28"
         },
         {
+          "id": 25636,
           "title": "This service provides an onion site accessible over Tor",
           "class": "good",
           "source": "https://duckduckgo.com/privacy",
+          "quote": null,
           "updated": "2021-11-19"
         },
         {
+          "id": 329574,
           "title": "This service claims that your personal data is not being sold",
           "class": "good",
-          "source": null,
+          "source": "https://duckduckgo.com/privacy",
+          "quote": "We do not sell your personal information. We have never sold any personal information.",
           "updated": "2026-07-28"
         },
         {
+          "id": 104275,
           "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
           "class": "good",
-          "source": null,
+          "source": "https://duckduckgo.com/terms",
+          "quote": "If you choose to provide us with feedback about our Services (for example, by completing a survey or sending us an email), you grant us a forever license to use your input to improve our Services without any payment or credit to you.",
           "updated": "2026-02-22"
         }
       ],
@@ -839,45 +1039,59 @@
       },
       "points": [
         {
+          "id": 1255,
           "title": "The service can delete specific content without prior notice and without a reason",
           "class": "blocker",
           "source": "https://www.microsoft.com/en-us/servicesagreement/",
+          "quote": "We may also block delivery of a communication (like email, file sharing or instant message) to or from the Services in an effort to enforce these Terms or we may remove or refuse to publish Your Content for any reason.",
           "updated": "2023-07-11"
         },
         {
+          "id": 1248,
           "title": "Microsoft may remotely disabled software you are not licensed to use.",
           "class": "bad",
           "source": "https://www.microsoft.com/en-us/servicesagreement/",
+          "quote": "The application is licensed, not sold. This agreement only gives you some rights to use the application. If Microsoft disables the ability to use the applications on your devices pursuant to your agreement with Microsoft, any associated license rights will terminate. The application publisher…",
           "updated": "2023-07-11"
         },
         {
+          "id": 10894,
           "title": "This service gathers information about you through third parties",
           "class": "bad",
           "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "quote": "We also obtain data from third parties.",
           "updated": "2023-07-11"
         },
         {
+          "id": 14259,
           "title": "Many third parties are involved in operating the service",
           "class": "bad",
           "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "quote": "These third parties may place cookies on your computer and collect data about your online activities across websites or online services. These companies currently include, but are not limited to: AppNexus, Facebook, Media.net, Outbrain, Taboola and Verizon Media.",
           "updated": "2023-07-11"
         },
         {
+          "id": 14257,
           "title": "Your data may be processed and stored anywhere in the world",
           "class": "bad",
           "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "quote": "We transfer personal data from the European Economic Area, the United Kingdom, and Switzerland to other countries, some of which have not yet been determined by the European Commission to have an adequate level of data protection.",
           "updated": "2023-07-11"
         },
         {
+          "id": 10057,
           "title": "You can request access and deletion of personal data",
           "class": "good",
           "source": "https://privacy.microsoft.com/en-us/privacystatement",
+          "quote": "Access and clear some of your data through the Microsoft privacy dashboard.",
           "updated": "2023-07-11"
         },
         {
+          "id": 14258,
           "title": "You can opt out of targeted advertising",
           "class": "good",
           "source": "https://www.microsoft.com/en-us/servicesagreement/",
+          "quote": "Controls for how Microsoft personalizes advertising are available at http://choice.live.com (https://go.microsoft.com/fwlink/?LinkId=286759).",
           "updated": "2023-07-11"
         }
       ],
@@ -898,51 +1112,67 @@
       },
       "points": [
         {
+          "id": 11244,
           "title": "Many third parties are involved in operating the service",
           "class": "bad",
           "source": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+          "quote": "Trusted third parties include: Dropbox, Inc. Amazon Web Services, Inc. Teleperformance A.E. Salesforce.com, LLC Serenova, LLC (formerly LiveOps Cloud Platform, LLC) Google LLC Zendesk, Inc. Oracle America, Inc.",
           "updated": "2023-07-11"
         },
         {
+          "id": 13572,
           "title": "This service receives your percise location through GPS coordinates",
           "class": "bad",
           "source": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+          "quote": "“Device information” refers to information about the particular devices you use to access the Services, which may include Usage information or device-specific information, such as an online identifier or Internet Protocol address, or geolocation data.",
           "updated": "2023-07-11"
         },
         {
+          "id": 11245,
           "title": "Tracking via third-party cookies for other purposes without your consent.",
           "class": "bad",
           "source": "https://www.dropbox.com/privacy",
+          "quote": "We may also use third-party service providers that set cookies and similar technologies to promote Dropbox services.",
           "updated": "2026-03-30"
         },
         {
+          "id": 169153,
           "title": "Your Personal data may be sold unless you opt out",
           "class": "bad",
           "source": "https://help.dropbox.com/security/cookies",
+          "quote": "You can opt out of the selling or sharing of personal information by Dropbox or update your preferences, as described in the California Consumer Privacy Act, by clicking Cookies &",
           "updated": "2026-06-17"
         },
         {
+          "id": 166281,
           "title": "Tracking pixels are used in service-to-user communication",
           "class": "bad",
           "source": "https://help.dropbox.com/security/cookies",
+          "quote": "A pixel tag (\"pixel\") is a small piece of code belonging to a third-party that can be embedded on websites and in emails.",
           "updated": "2026-03-30"
         },
         {
+          "id": 27189,
           "title": "You are entitled to a refund if certain thresholds or standards are not met by the service",
           "class": "good",
           "source": "https://www.dropbox.com/privacy#terms",
+          "quote": "Where applicable, we’ll offer you a prorated refund based on the amounts you have prepaid for Services and your account cancellation date.",
           "updated": "2026-03-30"
         },
         {
+          "id": 1602,
           "title": "You maintain ownership of your data",
           "class": "good",
           "source": "https://www.dropbox.com/privacy#terms",
+          "quote": "These Terms don’t give us any rights to Your Stuff except for the limited rights that enable us to offer the Services.",
           "updated": "2026-03-30"
         },
         {
+          "id": 110763,
           "title": "You can delete your content from this service",
           "class": "good",
           "source": "https://help.dropbox.com/accounts-billing/security/privacy-policy-faq",
+          "quote": "When you delete your Dropbox Basic, Plus, Family, or Professional account, we will initiate deletion of the files you store on our Services after 30 days. If you’re a user on a Dropbox Business Team, only your admin can disable your account and delete your files. Find more information on how long…",
           "updated": "2026-03-30"
         }
       ],
@@ -963,51 +1193,67 @@
       },
       "points": [
         {
+          "id": 15630,
           "title": "They store data on you even if you did not interact with the service",
           "class": "blocker",
           "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "quote": "(Please note, when you use our Services, we may recognize you or your devices even if you are not signed in to our Services.)",
           "updated": "2023-07-11"
         },
         {
+          "id": 15631,
           "title": "The service can read your private messages",
           "class": "blocker",
           "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "quote": "When you use our Services to communicate with others or post, upload or store content (such as comments, photos, voice inputs, videos, emails, messaging services and attachments). Verizon Media analyzes and stores all communications content, including email content from incoming and outgoing mail.…",
           "updated": "2023-07-11"
         },
         {
+          "id": 1132,
           "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
           "class": "bad",
           "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "quote": "Verizon Media may use device IDs, cookies, and other signals, including information obtained from third parties, to associate accounts and/or devices with you.",
           "updated": "2023-07-11"
         },
         {
+          "id": 11228,
           "title": "This service gathers information about you through third parties",
           "class": "bad",
           "source": "https://www.verizonmedia.com/policies/us/en/verizonmedia/privacy/topics/location/index.html",
+          "quote": "Verizon Media may receive location data from third parties that you have linked your account with.",
           "updated": "2023-07-11"
         },
         {
+          "id": 11225,
           "title": "This service may use your personal information for marketing purposes",
           "class": "bad",
           "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "quote": "We may recognize your devices to provide you with personalized experiences and advertising across the devices you use",
           "updated": "2023-07-11"
         },
         {
+          "id": 15686,
           "title": "The service has non-exclusive use of your content",
           "class": "good",
           "source": "https://policies.oath.com/us/en/oath/terms/otos/index.html",
+          "quote": "you grant to us a worldwide, royalty-free, non-exclusive,",
           "updated": "2023-07-11"
         },
         {
+          "id": 15664,
           "title": "The service provides information about how they intend to use your personal data",
           "class": "good",
           "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "quote": "How We Use This Information",
           "updated": "2023-07-11"
         },
         {
+          "id": 15690,
           "title": "The service provides details about what kinds of personal information they collect",
           "class": "good",
           "source": "https://policies.oath.com/us/en/oath/privacy/index.html",
+          "quote": "Information Collection",
           "updated": "2023-07-11"
         }
       ],
@@ -1028,51 +1274,67 @@
       },
       "points": [
         {
+          "id": 328819,
           "title": "Private messages can be read",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.snap.com/terms?lang=en-US",
+          "quote": "Much of the content on our Services is produced by users, publishers, and other third parties. Whether that content is posted publicly or sent privately, the content is the sole responsibility of the user or entity that submitted it. Although Snap reserves the right to review, moderate, or remove…",
           "updated": "2026-07-14"
         },
         {
+          "id": 328870,
           "title": "Your data is collected even if you did not interact with the service directly",
           "class": "blocker",
-          "source": null,
+          "source": "https://values.snap.com/privacy/privacy-policy?lang=en-US",
+          "quote": "If you’ve explicitly granted device-level permissions, device information may also include information about your device phonebook (contacts and related information)",
           "updated": "2026-07-14"
         },
         {
+          "id": 328814,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.snap.com/terms?lang=en-US",
+          "quote": "While we’re not required to do so, we may access, review, screen, and delete your content at any time and for any reason, including to provide and develop the Services or if we think your content violates these Terms or any applicable laws.",
           "updated": "2026-07-14"
         },
         {
+          "id": 328882,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://values.snap.com/privacy/privacy-policy?lang=en-US",
+          "quote": "Our teams are constantly coming up with new ideas for features and ways to improve our Services. In order to do this, we also develop and improve the algorithms and machine learning models (an expression of an algorithm that combs through significant amounts of data to find patterns or make…",
           "updated": "2026-07-14"
         },
         {
+          "id": 328805,
           "title": "You are forced into binding arbitration in case of disputes",
           "class": "bad",
-          "source": null,
+          "source": "https://www.snap.com/terms?lang=en-US",
+          "quote": "YOU AND SNAP AGREE THAT, EXCEPT FOR CERTAIN TYPES OF DISPUTES MENTIONED IN THAT ARBITRATION CLAUSE, DISPUTES BETWEEN US WILL BE RESOLVED BY MANDATORY BINDING ARBITRATION, AND YOU AND SNAP WAIVE ANY RIGHT TO PARTICIPATE IN A CLASS-ACTION LAWSUIT OR CLASS-WIDE ARBITRATION.",
           "updated": "2026-07-17"
         },
         {
+          "id": 328859,
           "title": "Information is provided about what kind of personal information is collected",
           "class": "good",
-          "source": null,
+          "source": "https://values.snap.com/privacy/privacy-policy?lang=en-US",
+          "quote": "Information We Collect",
           "updated": "2026-07-14"
         },
         {
+          "id": 328809,
           "title": "You maintain ownership of your content",
           "class": "good",
-          "source": null,
+          "source": "https://www.snap.com/terms?lang=en-US",
+          "quote": "Many of our Services let you create, upload, post, send, receive, and store content. When you do that, you retain whatever ownership rights in that content you had to begin with.",
           "updated": "2026-07-14"
         },
         {
+          "id": 328830,
           "title": "Two factor authentication is provided for your account",
           "class": "good",
-          "source": null,
+          "source": "https://www.snap.com/terms?lang=en-US",
+          "quote": "One way to help keep your account secure is to select a strong password that you don’t use for any other account and to enable two-factor authentication.",
           "updated": "2026-07-14"
         }
       ],
@@ -1093,51 +1355,67 @@
       },
       "points": [
         {
+          "id": 34130,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
           "source": "https://feedly.com/i/legal/privacy",
+          "quote": "includes the following types of services: sales automation",
           "updated": "2023-06-30"
         },
         {
+          "id": 34131,
           "title": "Your personal information is used for many different purposes",
           "class": "bad",
           "source": "https://feedly.com/i/legal/privacy",
+          "quote": "sales automation, website management, payment processing, integration partners, platform hosting, security monitoring, email marketing, marketing communications, marketing analytics, and technical support.",
           "updated": "2023-06-30"
         },
         {
+          "id": 37507,
           "title": "You waive your right to a class action.",
           "class": "bad",
           "source": "https://feedly.com/i/legal",
+          "quote": "It is part of your contract with Company and affects your rights. It contains procedures for MANDATORY BINDING ARBITRATION AND A CLASS ACTION WAIVER . (a) Applicability of Arbitration Agreement.",
           "updated": "2026-08-23"
         },
         {
+          "id": 16612,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://feedly.com/i/legal/privacy",
+          "quote": ". a. Information You Provide to Us When you order Services on our Site or App, we will collect all information necessary to complete the transaction, including your name, third party payment provider information (e.g. credit card or PayPal account information), and billing information. We may…",
           "updated": "2023-07-11"
         },
         {
+          "id": 34128,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
           "source": "https://feedly.com/i/legal/privacy",
+          "quote": "Specifically, Feedly receives or collects the following types of Customer PI: First Name and Last Name. Contact information (E-mail address, physical business address) and profile picture .",
           "updated": "2023-06-30"
         },
         {
+          "id": 34127,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
           "source": "https://feedly.com/i/legal/privacy",
+          "quote": "Feedly receives Customer Personal Information for the business purposes of providing software as a service",
           "updated": "2023-06-30"
         },
         {
+          "id": 34367,
           "title": "The service claims to be CCPA compliant for California users",
           "class": "good",
-          "source": null,
+          "source": "https://feedly.com/i/legal/privacy",
+          "quote": "California Residents : Feedly does not sell PI as defined under CCPA. Feedly upholds the right of non-discrimination as defined under CCPA.",
           "updated": "2023-07-14"
         },
         {
+          "id": 34368,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
-          "source": null,
+          "source": "https://feedly.com/i/legal/privacy",
+          "quote": "EU Users . EU users have several rights with respect to their personal data including the following:",
           "updated": "2023-07-14"
         }
       ],
@@ -1158,51 +1436,67 @@
       },
       "points": [
         {
+          "id": 75724,
           "title": "Terms may be changed any time at their discretion, without notice to you",
           "class": "bad",
-          "source": null,
+          "source": "https://proton.me/legal/terms",
+          "quote": "Within the limits of applicable law, the Company reserves the right to review and change these Terms at any time.",
           "updated": "2025-02-18"
         },
         {
+          "id": 75722,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
-          "source": null,
+          "source": "https://proton.me/legal/terms",
+          "quote": "Without limitation of the foregoing, and to the extent not prohibited by law, the total liability of the Company’s parties for any reason whatsoever arising out of or related to the use of, or inability to use, your Account or the Services, or these Terms, shall not exceed $100, or the amount you…",
           "updated": "2025-01-31"
         },
         {
+          "id": 311907,
           "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
           "class": "bad",
           "source": "https://proton.me/legal/privacy",
+          "quote": "Continued use of the Services after such changes are performed shall constitute your consent to it.",
           "updated": "2026-07-29"
         },
         {
+          "id": 318982,
           "title": "This service assumes no liability for unauthorized access to your personal information",
           "class": "bad",
-          "source": null,
+          "source": "https://proton.me/legal/terms",
+          "quote": "Furthermore, you will not hold the Company liable or seek indemnification if confidential material is unintentionally released as the result of a security failure or vulnerability in the performance of the Services or if data is deleted for an inactive account (see section 3).",
           "updated": "2026-06-11"
         },
         {
+          "id": 318988,
           "title": "Certain features may be throttled",
           "class": "bad",
-          "source": "",
+          "source": "https://proton.me/legal/terms",
+          "quote": "If your Account exceeds the limits of our free subscription tier (for example, including but not limited to by exceeding storage capacity or having sub-users) after the downgrade, your Account will be put in a delinquent restricted state which will limit the use of features of the Account.",
           "updated": "2026-08-01"
         },
         {
+          "id": 11626,
           "title": "The service provides two factor authentification for your account",
           "class": "good",
           "source": "https://protonmail.com/support/knowledge-base/two-factor-authentication/",
+          "quote": null,
           "updated": "2020-11-25"
         },
         {
+          "id": 16744,
           "title": "This service provides an onion site accessible over Tor",
           "class": "good",
           "source": "https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion/",
+          "quote": null,
           "updated": "2023-04-12"
         },
         {
+          "id": 130002,
           "title": "Pseudonyms are allowed",
           "class": "good",
-          "source": null,
+          "source": "https://proton.me/legal/privacy",
+          "quote": "Account creation : It is not necessary to provide personal information in order to create an Account, but you may provide an external email address for notification or password recovery purposes.",
           "updated": "2025-09-10"
         }
       ],
@@ -1223,51 +1517,67 @@
       },
       "points": [
         {
+          "id": 31000,
           "title": "This service receives your precise location through GPS coordinates",
           "class": "bad",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "your geographic coordinates (longitude/latitude)",
           "updated": "2023-07-11"
         },
         {
+          "id": 283468,
           "title": "This service may collect, use, and share location data",
           "class": "bad",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "Your IP address is used to help identify you and your location, in order to provide you data and content from our services as quickly as possible.",
           "updated": "2026-09-10"
         },
         {
+          "id": 30998,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "The Information We Collect",
           "updated": "2023-07-11"
         },
         {
+          "id": 31002,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "Using (Processing) Your Personal Data",
           "updated": "2023-07-11"
         },
         {
+          "id": 31006,
           "title": "You are informed about the risk of publishing personal info online",
           "class": "good",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "Fedora often makes chat rooms, forums, mailing lists, message boards, and/or news groups available to its users. Please remember that any information that is disclosed in these areas becomes public information. Exercise caution when deciding to disclose your personal data.",
           "updated": "2023-07-11"
         },
         {
+          "id": 31013,
           "title": "The publishing of personally identifiable information without the owner’s consent is not allowed",
           "class": "good",
           "source": "https://docs.fedoraproject.org/en-US/project/code-of-conduct/",
+          "quote": "Publishing someone else’s private information, such as a physical or electronic address, without explicit permission",
           "updated": "2023-07-11"
         },
         {
+          "id": 31005,
           "title": "Information is provided about security practices",
           "class": "good",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "Our Commitment to Data Security",
           "updated": "2023-07-11"
         },
         {
+          "id": 30999,
           "title": "Information is provided about how they collect personal data",
           "class": "good",
           "source": "https://docs.fedoraproject.org/en-US/legal/privacy/",
+          "quote": "Fedora collects personal data when:",
           "updated": "2023-07-11"
         }
       ],
@@ -1288,51 +1598,67 @@
       },
       "points": [
         {
+          "id": 21935,
           "title": "Any liability on behalf of the service is only limited to $100",
           "class": "bad",
           "source": "https://signal.org/legal/",
+          "quote": "OUR AGGREGATE LIABILITY RELATING TO, ARISING OUT OF, OR IN ANY WAY IN CONNECTION WITH OUR TERMS, US, OR OUR SERVICES WILL NOT EXCEED ONE HUNDRED DOLLARS ($100).",
           "updated": "2026-03-24"
         },
         {
+          "id": 325139,
           "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage",
           "class": "bad",
-          "source": null,
+          "source": "https://signal.org/legal/",
+          "quote": "When we update our Terms, we will update the “Last Modified” date associated with the updated Terms. Your continued use of our Services confirms your acceptance of our updated Terms and supersedes any prior Terms.",
           "updated": "2026-06-17"
         },
         {
+          "id": 4411,
           "title": "This service does not sell your personal data",
           "class": "good",
           "source": "https://signal.org/legal/",
+          "quote": "Signal does not sell, rent or monetize your personal data or content in any way – ever.",
           "updated": "2026-03-24"
         },
         {
+          "id": 4419,
           "title": "You can delete your content from this service",
           "class": "good",
           "source": "https://support.signal.org/hc/en-us/articles/360004066371-Signal-and-the-General-Data-Protection-Regulation-GDPR-",
+          "quote": "You can permanently disable your phone number from being recognized as a Signal user by unregistering your phone number here. You will need access to this phone number to verify and complete this action.",
           "updated": "2023-07-11"
         },
         {
+          "id": 17273,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://signal.org/legal/",
+          "quote": "You may end these Terms with Signal at any time by deleting Signal Messenger from your device and discontinuing use of our Services.",
           "updated": "2026-03-24"
         },
         {
+          "id": 17271,
           "title": "This service allows you to retrieve an archive of your data",
           "class": "good",
           "source": "https://support.signal.org/hc/en-us/articles/360007059412",
+          "quote": "Can I export my data out of Signal? Signal messages, pictures, files, and other contents are stored locally on your device. These contents are readable by the open source Signal clients. Because everything in Signal is end-to-end encrypted, the Signal service does not have access to any of this…",
           "updated": "2023-07-11"
         },
         {
+          "id": 18075,
           "title": "This service does not track you",
           "class": "good",
           "source": "https://support.signal.org/hc/en-us/articles/360007059412",
+          "quote": "Signal is designed to never collect or store any sensitive information.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19630,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
           "source": "https://support.signal.org/hc/en-us/articles/360007059412",
+          "quote": "See more Signal and the General Data Protection Regulation (GDPR) Signal is committed to protecting your privacy and the security of your data.",
           "updated": "2023-07-11"
         }
       ],
@@ -1353,51 +1679,67 @@
       },
       "points": [
         {
+          "id": 6310,
           "title": "The service can sell or otherwise transfer your personal data as part of a bankruptcy proceeding or other type of financial transaction.",
           "class": "bad",
           "source": "https://www.mozilla.org/en-US/privacy/",
+          "quote": "If our organizational structure or status changes (if we undergo a restructuring, are acquired, or go bankrupt) we may pass your information to a successor or affiliate.",
           "updated": "2026-05-05"
         },
         {
+          "id": 19089,
           "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
           "class": "bad",
           "source": "https://www.mozilla.org/en-US/privacy/",
+          "quote": "Your continued use of the product or service after the effective date of such changes constitutes your acceptance of such changes.",
           "updated": "2026-05-05"
         },
         {
+          "id": 19091,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
           "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "quote": "HTTP Referral Data, which may be included with Firefox’s installer, to understand the website domain or advertising campaign that referred you to our download page. This information helps us understand the effectiveness of our advertising campaigns and improve them.",
           "updated": "2023-07-11"
         },
         {
+          "id": 28980,
           "title": "You must provide your legal name, pseudonyms are not allowed",
           "class": "bad",
           "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "quote": "give us a name, street address, telephone number, email address, and resume, and sometimes additional information as well.",
           "updated": "2023-07-11"
         },
         {
+          "id": 6315,
           "title": "This service employs third-party cookies, but with opt-out instructions",
           "class": "bad",
           "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "quote": "You can control individual cookie preferences, indicate your cookie preferences to others, and opt-out of web analytics and optimization tools.",
           "updated": "2023-07-11"
         },
         {
+          "id": 6313,
           "title": "This service respects your browser's Do Not Track (DNT) headers",
           "class": "good",
           "source": "https://www.mozilla.org/en-US/privacy/websites/",
+          "quote": "If you have configured your browser to send a “Do Not Track” signal when accessing our websites, Mozilla will not utilize any of the tools described in the Metrics section.",
           "updated": "2023-07-11"
         },
         {
+          "id": 9127,
           "title": "The service provides information about how they intend to use your personal data",
           "class": "good",
           "source": "https://www.mozilla.org/en-US/privacy/",
+          "quote": null,
           "updated": "2020-12-15"
         },
         {
+          "id": 9124,
           "title": "User feedback is invited regarding changes to the terms.",
           "class": "good",
           "source": "https://www.mozilla.org/en-US/privacy/",
+          "quote": null,
           "updated": "2020-12-15"
         }
       ],
@@ -1418,51 +1760,67 @@
       },
       "points": [
         {
+          "id": 319074,
           "title": "Changes in policies are applied retroactively.",
           "class": "blocker",
-          "source": null,
+          "source": "https://discord.com/guidelines",
+          "quote": "These Guidelines will continue to evolve over time. This means we may take action against an account, server, or content that violates the spirit of these Guidelines when we encounter a new threat or harm that is not explicitly covered in the current version.",
           "updated": "2026-06-12"
         },
         {
+          "id": 319085,
           "title": "They store data on you even if you did not interact with the service",
           "class": "blocker",
-          "source": null,
+          "source": "https://discord.com/privacy",
+          "quote": "When you take certain actions on other sites, we may receive information about you. For example, when we advertise for Discord on third party platforms, if you click on the ad, we may receive information about which ad you saw and on which platform.",
           "updated": "2026-06-12"
         },
         {
+          "id": 319091,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://discord.com/privacy",
+          "quote": "This processing can include use of automated technologies such as machine learning systems that help us power and improve our services.",
           "updated": "2026-06-12"
         },
         {
+          "id": 34114,
           "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
           "class": "bad",
           "source": "https://discord.com/terms",
+          "quote": "If you continue to use our services after the changes have taken effect, it means that you agree to the changes.",
           "updated": "2023-06-10"
         },
         {
+          "id": 35062,
           "title": "Your account can be deleted without prior notice and without a reason",
           "class": "bad",
-          "source": null,
+          "source": "https://discord.com/terms",
+          "quote": "Subject to applicable law, we reserve the right to suspend or terminate your account and/or your access to some or all of our services with or without notice, at our discretion for the following reasons: You breach these terms, our policies, or additional terms that apply to specific products.…",
           "updated": "2024-03-29"
         },
         {
+          "id": 35058,
           "title": "You can delete your content from this service",
           "class": "good",
-          "source": null,
+          "source": "https://discord.com/privacy",
+          "quote": "You may edit or delete specific pieces of information within the services: You can edit or delete any message you have sent or content you have posted if you still have access to the space where you posted it. You can edit or delete a Discord server if you have the permissions needed to do so. You…",
           "updated": "2023-10-09"
         },
         {
+          "id": 319144,
           "title": "A list of all cookies set by the website is provided",
           "class": "good",
-          "source": null,
+          "source": "https://discord.com/terms/cookie-policy",
+          "quote": "The services use the following types of cookies:",
           "updated": "2026-06-12"
         },
         {
+          "id": 130067,
           "title": "Two factor authentication is provided for your account",
           "class": "good",
-          "source": null,
+          "source": "https://discord.com/privacy",
+          "quote": "You can help maintain the security of your account by configuring two-factor authentication.",
           "updated": "2026-03-12"
         }
       ],
@@ -1483,51 +1841,67 @@
       },
       "points": [
         {
+          "id": 9393,
           "title": "The service can sell or otherwise transfer your personal data as part of a bankruptcy proceeding or other type of financial transaction.",
           "class": "bad",
           "source": "https://ubuntu.com/legal/data-privacy",
+          "quote": "In the event that we sell or buy any business or assets, in which case we will disclose your personal data to the prospective seller or buyer of such business or assets. If Canonical or substantially all of its assets are acquired by a third party, in which case personal data held by it about its…",
           "updated": "2023-07-11"
         },
         {
+          "id": 328137,
           "title": "Your personal data may be used for marketing purposes",
           "class": "bad",
-          "source": null,
+          "source": "https://canonical.com/legal/data-privacy",
+          "quote": "To market our products or services to you. Unless you have notified us otherwise, Canonical may occasionally send you email to tell you about new features, solicit feedback, or just to keep you up to date with what's going on.",
           "updated": "2026-07-08"
         },
         {
+          "id": 328124,
           "title": "Many different types of personal data are collected",
           "class": "bad",
-          "source": null,
+          "source": "https://canonical.com/legal/data-privacy",
+          "quote": "It also includes information you provide when you register to use our site, your login information where provided on a site or make a purchase on our site. It may include the following: first name, last name; company name; company size; industry; job title; level; phone number; email address; state…",
           "updated": "2026-07-08"
         },
         {
+          "id": 328127,
           "title": "Your profile is combined across various products",
           "class": "bad",
-          "source": null,
+          "source": "https://canonical.com/legal/data-privacy",
+          "quote": "Information we receive from other sources . This is information we receive about you if you use any of the other websites we operate or the other services we provide.",
           "updated": "2026-07-08"
         },
         {
+          "id": 328132,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
-          "source": null,
+          "source": "https://canonical.com/legal/data-privacy",
+          "quote": "Canonical may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, referring site, and the date and time of each visitor request.",
           "updated": "2026-07-08"
         },
         {
+          "id": 328143,
           "title": "You can retrieve an archive of your data",
           "class": "good",
-          "source": null,
+          "source": "https://canonical.com/legal/data-privacy",
+          "quote": "Under the data protection legislation, you have the following rights. These consist of: The right to be informed The right of access The right to rectification The right to erasure The right to restrict processing The right to data portability",
           "updated": "2026-07-08"
         },
         {
+          "id": 328122,
           "title": "Information is provided about what kind of personal information is collected",
           "class": "good",
-          "source": null,
+          "source": "https://canonical.com/legal/data-privacy",
+          "quote": "Information we collect from you",
           "updated": "2026-07-08"
         },
         {
+          "id": 328096,
           "title": "Archives of their agreements are provided so that changes can be viewed over time",
           "class": "good",
-          "source": null,
+          "source": "https://canonical.com/legal/ubuntu-pro-service-terms",
+          "quote": "Older versions 25 April 2026 › 16 June 2025 › 10 December 2024 › 16 February 2024 › 25 January 2023 › 11 February 2019 › 24 June 2016 › 20 May 2016 › 09 September 2015 › 24 June 2015",
           "updated": "2026-07-07"
         }
       ],
@@ -1548,51 +1922,67 @@
       },
       "points": [
         {
+          "id": 18854,
           "title": "Private messages can be read",
           "class": "blocker",
           "source": "https://mastodon.social/terms",
+          "quote": "Please keep in mind that the operators of the server and any receiving server may view such messages , and that recipients may screenshot, copy or otherwise re-share them.",
           "updated": "2023-07-11"
         },
         {
+          "id": 8124,
           "title": "The service can delete your account without prior notice",
           "class": "bad",
           "source": "https://mastodon.social/about/more",
+          "quote": "These provisions notwithstanding, the administration of the service reserves the right to revoke any user's access permissions, at any time, for any reason, except as limited by law.",
           "updated": "2023-07-11"
         },
         {
+          "id": 21353,
           "title": "You shall not interfere with another person's enjoyment of the service",
           "class": "bad",
           "source": "https://mastodon.social/about/more",
+          "quote": "or to impede other users from utilizing the service",
           "updated": "2023-07-11"
         },
         {
+          "id": 21347,
           "title": "Terms may be changed any time at their discretion, without notice to you",
           "class": "bad",
           "source": "https://mastodon.social/terms",
+          "quote": "If we decide to change our privacy policy, we will post those changes on this page.",
           "updated": "2023-07-11"
         },
         {
+          "id": 21346,
           "title": "This service reserves the right to disclose your personal information without notifying you",
           "class": "bad",
           "source": "https://mastodon.social/terms",
+          "quote": "We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others rights, property, or safety.",
           "updated": "2023-07-11"
         },
         {
+          "id": 8364,
           "title": "The user is informed about security practices",
           "class": "good",
           "source": "https://mastodon.social/terms",
+          "quote": "How do we protect your information? We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information. Among other things, your browser session, as well as the traffic between your applications and the API,…",
           "updated": "2023-07-11"
         },
         {
+          "id": 8361,
           "title": "The service provides two factor authentification for your account",
           "class": "good",
           "source": "https://mastodon.social/terms",
+          "quote": "You may enable two-factor authentication to further secure access to your account.",
           "updated": "2023-07-11"
         },
         {
+          "id": 8362,
           "title": "User logs are deleted after a finite period of time",
           "class": "good",
           "source": "https://mastodon.social/terms",
+          "quote": "We will make a good faith effort to: Retain server logs containing the IP address of all requests to this server, in so far as such logs are kept, no more than 90 days.",
           "updated": "2023-07-11"
         }
       ],
@@ -1613,51 +2003,67 @@
       },
       "points": [
         {
+          "id": 320905,
           "title": "Information is gathered about you through third parties",
           "class": "bad",
-          "source": null,
+          "source": "https://mullvad.net/en/help/privacy-policy",
+          "quote": "Mullvad can access the personal data below through our payment service providers but that does not necessarily mean that Mullvad are storing the data anywhere else than in the service.",
           "updated": "2026-05-18"
         },
         {
+          "id": 320910,
           "title": "Some personal data may be kept for business interests or legal obligations",
           "class": "bad",
-          "source": null,
+          "source": "https://mullvad.net/en/help/privacy-policy",
+          "quote": "Certain payment data must be kept for the statutory retention period described in applicable local laws such as the Swedish Accounting Act (some information must be stored for seven years from the end of the fiscal year).",
           "updated": "2026-05-18"
         },
         {
+          "id": 320917,
           "title": "Inconvenient process for obtaining personal data",
           "class": "bad",
-          "source": null,
+          "source": "https://mullvad.net/en/help/privacy-policy",
+          "quote": "If you would like to exercise your rights, please contact support@mullvadvpn.net for more information.",
           "updated": "2026-05-18"
         },
         {
+          "id": 4473,
           "title": "The terms for this service are easy to read",
           "class": "good",
           "source": "https://mullvad.net/en/#privacy",
+          "quote": null,
           "updated": "2018-08-09"
         },
         {
+          "id": 22327,
           "title": "An onion site accessible over Tor is provided",
           "class": "good",
           "source": "https://mullvad.net/",
+          "quote": null,
           "updated": "2023-03-30"
         },
         {
+          "id": 320897,
           "title": "An anonymous payment method is offered",
           "class": "good",
-          "source": null,
+          "source": "https://mullvad.net/en/help/terms-service",
+          "quote": "We accept payment by cash in bills (EUR, USD, GBP, SEK, NOK, CHF, CAD, AUD, NZD) sent by regular mail, Bitcoin, Bitcoin Cash, Monero, credit card, SEPA, PayPal, iOS in-app purchases, our Mullvad vouchers, and Swish.",
           "updated": "2026-05-18"
         },
         {
+          "id": 130209,
           "title": "No third-party analytics or tracking platforms are used",
           "class": "good",
-          "source": null,
+          "source": "https://mullvad.net/en/help/privacy-policy",
+          "quote": "We refrain from sending usage statistics to external parties such as Google Analytics.",
           "updated": "2026-03-31"
         },
         {
+          "id": 320904,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
-          "source": null,
+          "source": "https://mullvad.net/en/help/privacy-policy",
+          "quote": "Categories of personal data We are processing the following categories of personal data.",
           "updated": "2026-05-18"
         }
       ],
@@ -1678,51 +2084,67 @@
       },
       "points": [
         {
+          "id": 6693,
           "title": "The service does not guarantee that software errors will be corrected",
           "class": "bad",
           "source": "https://bitwarden.com/terms/",
+          "quote": "that any defects or errors will be corrected",
           "updated": "2026-04-24"
         },
         {
+          "id": 34116,
           "title": "Some personal data may be kept for business interests or legal obligations",
           "class": "bad",
           "source": "https://bitwarden.com/privacy/",
+          "quote": "We retain Administrative Data for as long as you are a customer of Bitwarden and as required by law. If you terminate your relationship with Bitwarden, we will delete your Personal Information in accordance with our data retention policies.",
           "updated": "2023-06-10"
         },
         {
+          "id": 26866,
           "title": "You are tracked via web beacons, tracking pixels, browser fingerprinting, and/or device fingerprinting",
           "class": "bad",
           "source": "https://bitwarden.com/privacy/",
+          "quote": "Information gathered via cookies, pixel tags, logs, or other similar technologies.",
           "updated": "2026-04-24"
         },
         {
+          "id": 34120,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
           "source": "https://bitwarden.com/privacy/",
+          "quote": "Name Business name and address Business telephone number Email address IP-address and other online identifiers Any customer testimonial you have given us consent to share. Information you provide to the Site's Interactive Areas, such as fillable forms or text boxes, training, webinars or event…",
           "updated": "2023-06-10"
         },
         {
+          "id": 34119,
           "title": "Information is provided about how they collect personal data",
           "class": "good",
           "source": "https://bitwarden.com/privacy/",
+          "quote": "When you use the Site or communicate with us (e.g. via email) you will provide, and Bitwarden will collect certain Personal Information",
           "updated": "2023-06-10"
         },
         {
+          "id": 34118,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
           "source": "https://bitwarden.com/privacy/",
+          "quote": "Bitwarden has a legitimate interest to further process your Administrative Data as follows: To administer your Bitwarden Service user accounts. To enable your access and use of the Bitwarden Service, and to enable you to communicate, collaborate, and share information with those you designate. To…",
           "updated": "2023-06-10"
         },
         {
+          "id": 35001,
           "title": "Features of the website are made available under a free software license (AGPL) v3.0",
           "class": "good",
           "source": "https://github.com/bitwarden/server/blob/master/LICENSE.txt",
+          "quote": null,
           "updated": "2023-09-30"
         },
         {
+          "id": 35002,
           "title": "The terms for this service are easy to read",
           "class": "good",
-          "source": null,
+          "source": "https://bitwarden.com/terms/",
+          "quote": "For your convenience, we have presented these terms in a short non-binding summary followed by the full legal terms",
           "updated": "2023-09-30"
         }
       ],
@@ -1743,51 +2165,67 @@
       },
       "points": [
         {
+          "id": 22067,
           "title": "Private messages can be read",
           "class": "blocker",
           "source": "https://www.tiktok.com/en/privacy-policy",
+          "quote": "Messages We collect and process, which includes scanning and analyzing, information you provide when you compose, send, or receive messages through the Platform’s messaging functionality. That information includes the content of the message and information about when the message has been sent,…",
           "updated": "2023-07-11"
         },
         {
+          "id": 35068,
           "title": "You waive your moral rights",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.tiktok.com/legal/terms-of-use?lang=en",
+          "quote": "To the extent any moral rights are not transferable or assignable, you hereby waive and agree never to assert any and all moral rights, or to support, maintain or permit any action based on any moral rights that you may have in or with respect to any User Content you Post to or through the Services.",
           "updated": "2023-10-23"
         },
         {
+          "id": 35064,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.tiktok.com/legal/terms-of-use?lang=en",
+          "quote": "We reserve the right, at any time and without prior notice, to remove or disable access to content at our discretion for any reason or no reason.",
           "updated": "2023-11-15"
         },
         {
+          "id": 35301,
           "title": "Content you post may be edited by the service for any reason",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.tiktok.com/en/terms-of-use",
+          "quote": "We, or authorised third parties, reserve the right to cut, crop, edit or refuse to publish, your content at our or their sole discretion.",
           "updated": "2023-11-15"
         },
         {
+          "id": 11637,
           "title": "This service forces users into binding arbitration in the case of disputes",
           "class": "bad",
           "source": "https://www.tiktok.com/en/terms-of-use",
+          "quote": "EXCEPT FOR CERTAIN TYPES OF DISPUTES MENTIONED IN THAT ARBITRATION CLAUSE, YOU AND TIKTOK AGREE THAT DISPUTES BETWEEN US WILL BE RESOLVED BY MANDATORY BINDING ARBITRATION,",
           "updated": "2023-07-11"
         },
         {
+          "id": 22062,
           "title": "Details are provided about what kind of information they collect",
           "class": "good",
           "source": "https://www.tiktok.com/en/privacy-policy",
+          "quote": "What information do we collect?",
           "updated": "2023-07-11"
         },
         {
+          "id": 22070,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
           "source": "https://www.tiktok.com/en/privacy-policy",
+          "quote": "How we use your information",
           "updated": "2023-07-11"
         },
         {
+          "id": 22073,
           "title": "Your personal data is not sold",
           "class": "good",
           "source": "https://www.tiktok.com/en/privacy-policy",
+          "quote": "TikTok does not sell personal information to third parties",
           "updated": "2023-07-11"
         }
       ],
@@ -1808,51 +2246,67 @@
       },
       "points": [
         {
+          "id": 321325,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
-          "source": null,
+          "source": "https://brave.com/privacy/browser/",
+          "quote": "In certain circumstances, you can object to the processing of your personal data (for example to object to the use of your data for profiling and/or purely automated decision making).",
           "updated": "2026-05-18"
         },
         {
+          "id": 14814,
           "title": "This service throttles your use",
           "class": "bad",
           "source": "https://brave.com/terms-of-use/",
+          "quote": "Brave may also impose limits on certain features and services or restrict your access to parts or all of the Service without notice or liability.",
           "updated": "2026-03-10"
         },
         {
+          "id": 321284,
           "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage",
           "class": "bad",
-          "source": null,
+          "source": "https://brave.com/terms-of-use/",
+          "quote": "It is your responsibility to check the Terms of Use periodically for changes. Your continued use of the Service following the posting of any changes to the Terms of Use constitutes acceptance of those changes.",
           "updated": "2026-05-18"
         },
         {
+          "id": 321291,
           "title": "Your account can be deleted or permanently suspended without prior notice and without a reason",
           "class": "bad",
-          "source": null,
+          "source": "https://brave.com/terms-of-use/",
+          "quote": "Brave may terminate your access to all or any part of the Service at any time if you fail to comply with these Terms of Use, which may result in the forfeiture and destruction of all information associated with your account. Further, either party may terminate the Services for any reason and at any…",
           "updated": "2026-05-18"
         },
         {
+          "id": 321297,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
-          "source": null,
+          "source": "https://brave.com/terms-of-use/",
+          "quote": "OR (III) FOR ANY DIRECT DAMAGES IN EXCESS (IN THE AGGREGATE) OF THE FEES PAID BY YOU FOR THE SERVICE OR, IF GREATER, $500.",
           "updated": "2026-05-18"
         },
         {
+          "id": 29018,
           "title": "An onion site accessible over Tor is provided",
           "class": "good",
           "source": "https://support.brave.com/hc/en-us/articles/4537609459469-List-of-Brave-Onion-Addresses",
+          "quote": null,
           "updated": "2022-11-26"
         },
         {
+          "id": 14817,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://brave.com/terms-of-use/",
+          "quote": "If you wish to terminate your account, you may do so by following the instructions on the Service.",
           "updated": "2026-03-10"
         },
         {
+          "id": 321285,
           "title": "The service is open-source",
           "class": "good",
-          "source": null,
+          "source": "https://brave.com/terms-of-use/",
+          "quote": "The executable code version of the Brave browser is made available under the terms set forth below. Source code for parts of the Brave browser may be available for use under open source licenses and accessible via https://github.com/brave .",
           "updated": "2026-05-18"
         }
       ],
@@ -1873,45 +2327,59 @@
       },
       "points": [
         {
+          "id": 6732,
           "title": "You waive your right to a class action.",
           "class": "bad",
           "source": "https://www.dashlane.com/terms",
+          "quote": "Waiver of Class Action . ANY CLAIMS WITHIN THE SCOPE OF THIS ARBITRATION AGREEMENT MUST BE BROUGHT IN THE RESPECTIVE PARTY’S INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING, AND THE ARBITRATOR MAY NOT (i) CONSOLIDATE MORE THAN ONE PERSON’S…",
           "updated": "2023-07-11"
         },
         {
+          "id": 6731,
           "title": "This service forces users into binding arbitration in the case of disputes",
           "class": "bad",
           "source": "https://www.dashlane.com/terms",
+          "quote": "Arbitration . Subject to Section 10(f ), any dispute arising out of these Terms, the Privacy Policy, or the Services will be resolved exclusively on an individual basis by binding and confidential arbitration conducted in the English language, in New York, New York, before a single commercial…",
           "updated": "2023-07-11"
         },
         {
+          "id": 21233,
           "title": "The service claims to be LGPD compliant for Brazilian users",
           "class": "good",
           "source": "https://www.dashlane.com/privacy",
+          "quote": "and Brazil’s LGPD.",
           "updated": "2023-07-11"
         },
         {
+          "id": 21232,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
           "source": "https://www.dashlane.com/privacy",
+          "quote": "the European Union’s General Data Protection Legislation (“ GDPR ”)",
           "updated": "2023-07-11"
         },
         {
+          "id": 21231,
           "title": "The service claims to be CCPA compliant for California users",
           "class": "good",
           "source": "https://www.dashlane.com/privacy",
+          "quote": "Certain provisions of the Policy apply only to residents of, or people subject to the laws of, jurisdictions with specific statutes governing individuals’ rights over their Personal Data (as defined below), such as the California Consumer Privacy Act (“ CCPA ”),",
           "updated": "2023-07-11"
         },
         {
+          "id": 26447,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://www.dashlane.com/terms",
+          "quote": "You may cancel a Subscription or close your Account at any time. If you cancel a Subscription, it will remain active until the end of the Subscription period.",
           "updated": "2023-07-11"
         },
         {
+          "id": 21275,
           "title": "Your personal data is not sold",
           "class": "good",
           "source": "https://www.dashlane.com/privacy",
+          "quote": "We never exchange Personal Data for money or any other consideration",
           "updated": "2023-07-11"
         }
       ],
@@ -1932,15 +2400,19 @@
       },
       "points": [
         {
+          "id": 15362,
           "title": "This service may collect, use, and share location data",
           "class": "bad",
           "source": "https://peertube.touhoppai.moe/about/peertube#privacy",
+          "quote": "The main threat to your privacy induced by BitTorrent lies in your IP address being stored in the instance's BitTorrent tracker as long as you download or watch the video.",
           "updated": "2023-07-11"
         },
         {
+          "id": 15218,
           "title": "The user is informed about security practices",
           "class": "good",
           "source": "https://peertube.touhoppai.moe/about/peertube#privacy",
+          "quote": "PeerTube wants to deliver the best countermeasures possible, to give you more choice and render attacks less likely.",
           "updated": "2023-07-11"
         }
       ],
@@ -1961,51 +2433,67 @@
       },
       "points": [
         {
+          "id": 26261,
           "title": "This service holds onto content that you've deleted",
           "class": "blocker",
           "source": "https://www.notion.so/Terms-Conditions-4e1c5dd3e3de45dfa4a8ed60f1a43da0",
+          "quote": "However, some of your User Content may not be completely removed and copies of your User Content may continue to exist on the Service.",
           "updated": "2023-07-11"
         },
         {
+          "id": 21958,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
           "source": "https://www.notion.so/Terms-Conditions-4e1c5dd3e3de45dfa4a8ed60f1a43da0",
+          "quote": "We reserve the right, but are not obligated, to remove or disable access to any Content, including User Content, at any time and without notice, including, but not limited to, if we, at our sole discretion, consider any Content to be objectionable or in violation of these Terms",
           "updated": "2023-07-11"
         },
         {
+          "id": 21890,
           "title": "Information is gathered about you through third parties",
           "class": "bad",
           "source": "https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091",
+          "quote": "We use third-party payment providers to process payments on the Services. We may receive information associated with your payment information",
           "updated": "2023-07-11"
         },
         {
+          "id": 21887,
           "title": "Extra data may be collected about you through promotions",
           "class": "bad",
           "source": "https://www.notion.so/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091",
+          "quote": "If you decide to participate, you may be asked to provide certain information which may include personal information",
           "updated": "2023-07-11"
         },
         {
+          "id": 21896,
           "title": "Third-party cookies are used for statistics",
           "class": "bad",
           "source": "https://www.notion.so/GDPR-c8eac6ea83a64fb1a3ea3bcd5c3d4951",
+          "quote": "We use analytics services to improve the product and troubleshoot customer issues. These include Intercom, Amplitude, Segment, Crashlytics, Google Cloud, Snowflake, and Loggly",
           "updated": "2023-07-11"
         },
         {
+          "id": 21879,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
           "source": "https://www.notion.so/GDPR-c8eac6ea83a64fb1a3ea3bcd5c3d4951",
+          "quote": "At Notion, we're committed to complying with GDPR",
           "updated": "2023-07-11"
         },
         {
+          "id": 25487,
           "title": "You can request access, correction and/or deletion of your data",
           "class": "good",
           "source": "https://www.notion.so/GDPR-c8eac6ea83a64fb1a3ea3bcd5c3d4951",
+          "quote": "A customer may withdraw their consent and delete their account at any time by deleting their workspaces via our workspace settings menu.",
           "updated": "2023-07-11"
         },
         {
+          "id": 25921,
           "title": "You will be notified if personal data has been affected by data breaches",
           "class": "good",
           "source": "https://www.notion.so/help/security-and-privacy",
+          "quote": null,
           "updated": "2022-02-15"
         }
       ],
@@ -2026,21 +2514,27 @@
       },
       "points": [
         {
+          "id": 37392,
           "title": "Private messages can be read",
           "class": "blocker",
-          "source": "",
+          "source": "https://telegram.org/privacy",
+          "quote": "Cloud Chats Telegram is a cloud service. We store messages, photos, videos and documents from your cloud chats on our servers so that you can access your data from any of your devices anytime without having to rely on third-party backups.",
           "updated": "2026-03-01"
         },
         {
+          "id": 8188,
           "title": "This service does not sell your personal data",
           "class": "good",
           "source": "https://telegram.org/faq",
+          "quote": "We don’t use your data for ad targeting, we don’t sell it to others",
           "updated": "2023-07-11"
         },
         {
+          "id": 8168,
           "title": "This service allows you to retrieve an archive of your data",
           "class": "good",
           "source": "https://telegram.org/blog/export-and-more",
+          "quote": null,
           "updated": "2020-12-15"
         }
       ],
@@ -2061,51 +2555,67 @@
       },
       "points": [
         {
+          "id": 13459,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "Websites from which the user's system reaches our website;",
           "updated": "2023-07-11"
         },
         {
+          "id": 13474,
           "title": "Many third parties are involved in operating the service",
           "class": "bad",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "We use components from the Twitter service on our websites. Twitter is a service of Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, United States. Each time you visit our websites which contain such a component, this component causes the browser you are using to download a…",
           "updated": "2023-07-11"
         },
         {
+          "id": 13462,
           "title": "This service uses third-party cookies for statistics",
           "class": "bad",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "In addition, some services offered through our web servers use cookies to store custom settings across sessions. These are in particular: Jitsi (the specified user name is stored), OpenGrok (search preferences), WordPress (user name, URL and email address) and EtherPad (user name and text colour…",
           "updated": "2023-07-11"
         },
         {
+          "id": 15721,
           "title": "Features of the website are made available under a free software license",
           "class": "good",
           "source": "https://www.libreoffice.org/about-us/source-code/",
+          "quote": null,
           "updated": "2021-03-03"
         },
         {
+          "id": 13471,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "you have the option to cancel the registration at any time.",
           "updated": "2023-07-11"
         },
         {
+          "id": 13464,
           "title": "User logs are deleted after a finite period of time",
           "class": "good",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "The data will be deleted as soon as it is not needed to achieve the purposes for which it was collected. In the case of data collection used to providing the website, this takes place when the respective session is completed.",
           "updated": "2023-07-11"
         },
         {
+          "id": 13467,
           "title": "The service does not require you to provide your real name",
           "class": "good",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "Details like the name (\"real name\") or further personal information is always voluntary.",
           "updated": "2023-07-11"
         },
         {
+          "id": 13468,
           "title": "You can delete your content from this service",
           "class": "good",
           "source": "https://www.libreoffice.org/about-us/privacy/privacy-policy-en/",
+          "quote": "The user has the option – at any time – to revoke his consent to the processing of his personal data. If the user contacts us by email, he may object to the storage of his personal data at any time. In such a case, the conversation can not continue. All you need to do is send an mail with relevant…",
           "updated": "2023-07-11"
         }
       ],
@@ -2126,51 +2636,67 @@
       },
       "points": [
         {
+          "id": 18103,
           "title": "This service forces users into binding arbitration in the case of disputes",
           "class": "bad",
           "source": "https://zoom.us/terms",
+          "quote": "Zoom reserves the right to require arbitration.",
           "updated": "2023-07-11"
         },
         {
+          "id": 18110,
           "title": "The service may use tracking pixels, web beacons, browser fingerprinting, and/or device fingerprinting on users.",
           "class": "bad",
           "source": "https://zoom.us/privacy",
+          "quote": "Data collected through the use of cookies and pixels from tools (such as Google Analytics and Google Ads)",
           "updated": "2023-07-11"
         },
         {
+          "id": 18113,
           "title": "The service may sell your data unless you opt out",
           "class": "bad",
           "source": "https://zoom.us/privacy",
+          "quote": "You can get more information and opt-out of the use of cookies on our Marketing Pages by clicking the Do Not Sell My Personal Information link in the footer of this webpage.",
           "updated": "2023-07-11"
         },
         {
+          "id": 18106,
           "title": "This service gathers information about you through third parties",
           "class": "bad",
           "source": "https://zoom.us/privacy",
+          "quote": "We also obtain data about you from third parties.",
           "updated": "2023-07-11"
         },
         {
+          "id": 18108,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
           "source": "https://zoom.us/privacy",
+          "quote": "Referrer URL, Exit pages",
           "updated": "2023-07-11"
         },
         {
+          "id": 15337,
           "title": "This service provides archives of their Terms of Service so that changes can be viewed over time",
           "class": "good",
           "source": "https://zoom.us/privacy",
+          "quote": "Change Log Summary of Updates Made",
           "updated": "2023-07-11"
         },
         {
+          "id": 18098,
           "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection.",
           "class": "good",
           "source": "https://zoom.us/terms",
+          "quote": "This Agreement shall be governed by and construed under the laws of the State of California, U.S.A.",
           "updated": "2023-07-11"
         },
         {
+          "id": 18115,
           "title": "Third parties used by the service are bound by confidentiality obligations",
           "class": "good",
           "source": "https://zoom.us/privacy",
+          "quote": "Zoom contractually prohibits such vendors from using the personal data for any reason other than to provide the contracted-for services and Zoom contractually requires its vendors to comply with all appropriate privacy and security requirements.",
           "updated": "2023-07-11"
         }
       ],
@@ -2191,51 +2717,67 @@
       },
       "points": [
         {
+          "id": 16186,
           "title": "The service can delete your account without prior notice and without a reason",
           "class": "bad",
           "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "quote": "8×8 may – in its sole discretion, at any time, with or without notice, and without any obligation or liability to You or any other party – suspend, alter, or stop providing the Service to You or any other party for any or no reason, including without limitation if You do not comply with these Terms…",
           "updated": "2023-07-11"
         },
         {
+          "id": 16187,
           "title": "This service throttles your use",
           "class": "bad",
           "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "quote": "If 8×8 determines – in its sole discretion – that You are Using or responsible for Usage of the Service in excess of this limit, 8×8 may – in addition to any other rights and remedies provided under these Terms – limit such Use and/or require You to transition to a paid service in order to continue…",
           "updated": "2023-07-11"
         },
         {
+          "id": 16175,
           "title": "You waive your right to a class action.",
           "class": "bad",
           "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "quote": "AND INCLUDING A CLASS ACTION WAIVER.",
           "updated": "2023-07-11"
         },
         {
+          "id": 16194,
           "title": "Any liability on behalf of the service is only limited to USD $10",
           "class": "bad",
           "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "quote": "TO THE EXTENT PERMITTED BY LAW, THE TOTAL LIABILITY OF 8X8, AND ITS SUPPLIERS AND DISTRIBUTORS, FOR ANY CLAIMS UNDER THESE TERMS, INCLUDING FOR ANY IMPLIED WARRANTIES, IS LIMITED TO TEN DOLLARS (USD$10).",
           "updated": "2023-07-11"
         },
         {
+          "id": 16200,
           "title": "The court of law governing the terms is in a jurisdiction that is less friendly to user privacy protection.",
           "class": "bad",
           "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "quote": "All claims arising out of or relating to these Terms or the Service will be litigated exclusively in the federal or state courts located in New York City, New York, USA, and You and 8×8 consent to personal jurisdiction in those courts.",
           "updated": "2023-07-11"
         },
         {
+          "id": 13819,
           "title": "The service provides a complaint mechanism for the handling of personal data",
           "class": "good",
           "source": "https://jitsi.org/meet-jit-si-privacy/\"",
+          "quote": "If you have any questions or concerns about our use of your personal information, please contact our data protection officer at: dpo@8×8.com.",
           "updated": "2023-07-11"
         },
         {
+          "id": 13818,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://jitsi.org/meet-jit-si-privacy/\"",
+          "quote": "8×8 uses this information to deliver the meet.jit.si service, to identify and troubleshoot problems with the meet.jit.si service, and to improve the meet.jit.si service.",
           "updated": "2023-07-11"
         },
         {
+          "id": 16188,
           "title": "You maintain ownership of your data",
           "class": "good",
           "source": "https://jitsi.org/meet-jit-si-terms-of-service/",
+          "quote": "You retain ownership of any intellectual property rights that You hold in Your Content.",
           "updated": "2023-07-11"
         }
       ],
@@ -2256,51 +2798,67 @@
       },
       "points": [
         {
+          "id": 16832,
           "title": "Users shall not interfere with another person's enjoyment of the service",
           "class": "bad",
           "source": "https://www.twilio.com/legal/tos",
+          "quote": "3. your use negatively impacts the operation of our services.",
           "updated": "2023-07-11"
         },
         {
+          "id": 16829,
           "title": "This service assumes no liability for unauthorized access to your personal information",
           "class": "bad",
           "source": "https://www.twilio.com/legal/tos",
+          "quote": "We will not be liable for any loss or damage arising from unauthorized use of your customer account(s).",
           "updated": "2023-07-11"
         },
         {
+          "id": 16860,
           "title": "Tracking pixels are used in service-to-user communication",
           "class": "bad",
           "source": "https://www.twilio.com/legal/privacy/cookies",
+          "quote": "We use web beacons along with cookies to gather data about use of the Twilio Site and account portal and interaction with emails from Twilio.",
           "updated": "2023-07-11"
         },
         {
+          "id": 16824,
           "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
           "class": "bad",
           "source": "https://www.twilio.com/legal/tos",
+          "quote": "If you keep using our Services after you receive notice from us that the terms have changed, then that means you have accepted those changes and they will be binding on you.",
           "updated": "2023-07-11"
         },
         {
+          "id": 16837,
           "title": "If you offer suggestions to the service, they become the owner of the ideas that you give them",
           "class": "bad",
           "source": "https://www.twilio.com/legal/tos",
+          "quote": "Suggestions and Contributions. We welcome your Contributions about the Services. But please know that by submitting Contributions you agree that: (a) we are not under any obligation of confidentiality with respect to your Contributions. (b) we may use or disclose (or choose not to use or disclose)…",
           "updated": "2023-07-11"
         },
         {
+          "id": 16848,
           "title": "The terms for this service are easy to read",
           "class": "good",
           "source": "https://www.twilio.com/legal/tos",
+          "quote": "19. Fun Let your imagination run wild with Twilio! You understand and acknowledge that developing applications should be fun and easy, and by using the Services, you agree to let your imagination run wild.",
           "updated": "2023-07-11"
         },
         {
+          "id": 16873,
           "title": "Third parties used by the service are bound by confidentiality obligations",
           "class": "good",
           "source": "https://www.twilio.com/legal/privacy",
+          "quote": null,
           "updated": "2021-02-24"
         },
         {
+          "id": 16863,
           "title": "Tracking cookies refused will not limit your ability to use the service",
           "class": "good",
           "source": "https://www.twilio.com/legal/privacy/cookies",
+          "quote": "To learn more about how to opt out of targeting and advertising cookies, you can go to the Your Online Choices page, the Network Advertising Initiative page, and the Digital Advertising Alliance’s Consumer Choice page.",
           "updated": "2023-07-11"
         }
       ],
@@ -2321,51 +2879,67 @@
       },
       "points": [
         {
+          "id": 37606,
           "title": "You waive your right to a class action.",
           "class": "bad",
           "source": "https://calyxinstitute.org/legal/terms-of-service",
+          "quote": "NEITHER PARTY SHALL, AND EACH PARTY WAIVES ANY RIGHT TO, PARTICIPATE IN A CLASS ACTION (INCLUDING ANY CLASS ARBITRATION)",
           "updated": "2026-09-12"
         },
         {
+          "id": 307036,
           "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
           "class": "bad",
           "source": "https://calyxinstitute.org/legal/terms-of-service",
+          "quote": "YOU ACKNOWLEDGE THAT YOU UNDERSTAND THE ENGLISH LANGUAGE, THAT YOU HAVE READ AND UNDERSTAND THE FOREGOING TERMS OF SERVICE, AND THAT YOUR USE OF THE EQUIPMENT OR THE SERVICE CONSTITUTES YOUR ACCEPTANCE OF AND AGREEMENT WITH THESE TERMS OF SERVICE IN ACCORDANCE HEREWITH.",
           "updated": "2026-09-09"
         },
         {
+          "id": 24726,
           "title": "Details are provided about what kind of information they collect",
           "class": "good",
           "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "quote": "II. Information That We Collect",
           "updated": "2023-07-11"
         },
         {
+          "id": 24727,
           "title": "Logs are deleted after a finite period of time",
           "class": "good",
           "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "quote": "Your IP address may be logged, but we will delete such logs on a regular basis.",
           "updated": "2023-07-11"
         },
         {
+          "id": 24723,
           "title": "Your personal data is not sold",
           "class": "good",
           "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "quote": "We do not sell or share personal information or data with other individuals or groups not affiliated with Calyx other than as necessary to upgrade, maintain and repair our network and infrastructure.",
           "updated": "2023-07-11"
         },
         {
+          "id": 24729,
           "title": "An onion site accessible over Tor is provided",
           "class": "good",
           "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "quote": "We make our Websites available via the Tor Project’s anonymity network as \"hidden services\" which makes it easier for users to cloak their true IP address and protect their web browsing metadata from third parties.",
           "updated": "2023-07-11"
         },
         {
+          "id": 24725,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "quote": "We do not collect any personal information for the purpose of advertising, marketing, or consumer research.",
           "updated": "2023-07-11"
         },
         {
+          "id": 24731,
           "title": "No third-party analytics or tracking platforms are used",
           "class": "good",
           "source": "https://calyxinstitute.org/legal/privacy-policy",
+          "quote": "We may use cookies on our Websites for the purposes of tracking your session but we do not include third party cookies.",
           "updated": "2023-07-11"
         }
       ],
@@ -2386,51 +2960,67 @@
       },
       "points": [
         {
+          "id": 17747,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": "In many cases, due to our philosophy, the data is highly anonymized. If your data is, and we think it should be, anonymized so that we cannot associate with any user, we can most likely not delete it from our system. In these cases, however, no personal data is collected.",
           "updated": "2023-07-11"
         },
         {
+          "id": 17748,
           "title": "You can limit how your information is used by the service",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": null,
           "updated": "2021-03-25"
         },
         {
+          "id": 17744,
           "title": "A complaint mechanism is provided for the handling of personal data",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": "According to GDPR Art. 77, you may, at any time, file a complaint about our data processing at your local data protection officer.",
           "updated": "2023-07-11"
         },
         {
+          "id": 17746,
           "title": "The service does not use third-party analytics or tracking platforms",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": null,
           "updated": "2021-03-25"
         },
         {
+          "id": 17749,
           "title": "The service provides details about what kinds of information they collect",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": "The following document fulfills the requirements of the GDPR Articles 13 and 14, and informs you about the collection and processing of personal data within our project.",
           "updated": "2023-07-11"
         },
         {
+          "id": 17732,
           "title": "Users can access most of the pages on the service's website without revealing any personal information",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": "We do not collect any personal data of visitors of the NewPipe website.",
           "updated": "2023-07-11"
         },
         {
+          "id": 17736,
           "title": "The service allows you to use pseudonyms",
           "class": "good",
           "source": "https://newpipe.net/legal/privacy/",
+          "quote": "Users have the ability to leave comments themselves. We use the excellent isso software to provide this feature. If a user sends a comment, the following data is collected: mandatory data: a name (can, but does not have to be a user's real name), allowing users to let others (including the NewPipe…",
           "updated": "2023-07-11"
         },
         {
+          "id": 17730,
           "title": "Content is published under a free license instead of a bilateral one",
           "class": "good",
           "source": "https://newpipe.net/legal/license/",
+          "quote": "The contents of this site, except for third-party resources or where noted otherwise, are licensed under the terms of the Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0).",
           "updated": "2023-07-11"
         }
       ],
@@ -2451,51 +3041,67 @@
       },
       "points": [
         {
+          "id": 19551,
           "title": "Third-party cookies are used for statistics",
           "class": "bad",
           "source": "https://e.foundation/legal-notice-privacy/",
+          "quote": "We use Slimstat to create visitors statistics for our internal use.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19503,
           "title": "The service can delete your account without prior notice and without a reason",
           "class": "bad",
           "source": "https://community.e.foundation/tos",
+          "quote": "e Foundation may terminate your access to all or any part of the Website at any time, with or without cause, with or without notice, effective immediately",
           "updated": "2023-07-11"
         },
         {
+          "id": 19504,
           "title": "Terms may be changed any time at their discretion, without notice to the user",
           "class": "bad",
           "source": "https://community.e.foundation/tos",
+          "quote": "e Foundation reserves the right, at its sole discretion, to modify or replace any part of this Agreement. It is your responsibility to check this Agreement periodically for changes.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19505,
           "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
           "class": "bad",
           "source": "https://community.e.foundation/tos",
+          "quote": "Your continued use of or access to the Website following the posting of any changes to this Agreement constitutes acceptance of those changes.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19510,
           "title": "User-generated content is encrypted",
           "class": "good",
           "source": "https://e.foundation/legal-notice-privacy/",
+          "quote": "All data on your “own” /e/ server is encrypted and never shared, sold or traded to any third party.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19507,
           "title": "Your personal data is not sold",
           "class": "good",
           "source": "https://e.foundation/legal-notice-privacy/",
+          "quote": "All data on your “own” /e/ server is encrypted and never shared, sold or traded to any third party.",
           "updated": "2023-07-11"
         },
         {
+          "id": 19509,
           "title": "The user is informed about security practices",
           "class": "good",
           "source": "https://e.foundation/legal-notice-privacy/",
+          "quote": "Your personal information is contained behind secured networks at our partners and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive information you supply is encrypted…",
           "updated": "2023-07-11"
         },
         {
+          "id": 20140,
           "title": "The website is open-source",
           "class": "good",
           "source": "https://e.foundation/legal-notice-privacy/",
+          "quote": "The source code of the website can be found in https://github.com/WordPress/WordPress.",
           "updated": "2023-07-11"
         }
       ],
@@ -2516,51 +3122,67 @@
       },
       "points": [
         {
+          "id": 23079,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
           "source": "https://keepassxc.org/privacy/",
+          "quote": "Your HTTP referrer if coming from another website",
           "updated": "2023-07-11"
         },
         {
+          "id": 23083,
           "title": "No third-party analytics or tracking platforms are used",
           "class": "good",
           "source": "https://keepassxc.org/privacy/",
+          "quote": "Statistics are generated using a self-hosted Piwik installation.",
           "updated": "2023-07-11"
         },
         {
+          "id": 23082,
           "title": "Your personal data is not shared with third parties",
           "class": "good",
           "source": "https://keepassxc.org/privacy/",
+          "quote": "and is not shared with any third parties",
           "updated": "2023-07-11"
         },
         {
+          "id": 23084,
           "title": "Your browser's Do Not Track (DNT) headers are respected",
           "class": "good",
           "source": "https://keepassxc.org/privacy/",
+          "quote": "You can opt out of browser data collection at any time by clicking this opt-out link and following the instructions. Alternatively, you can also configure your browser to send a Do Not Track header.",
           "updated": "2023-07-11"
         },
         {
+          "id": 23081,
           "title": "You can access most of the pages on the service's website without revealing any personal information",
           "class": "good",
           "source": "https://keepassxc.org/privacy/",
+          "quote": "does not allow personal identification",
           "updated": "2023-07-11"
         },
         {
+          "id": 23120,
           "title": "Features of the website are made available under a free software license",
           "class": "good",
           "source": "https://keepassxc.org/",
+          "quote": null,
           "updated": "2021-06-26"
         },
         {
+          "id": 23121,
           "title": "The service is open-source",
           "class": "good",
           "source": "https://github.com/keepassxreboot/keepassxc",
+          "quote": null,
           "updated": "2021-06-26"
         },
         {
+          "id": 23078,
           "title": "IP addresses of website visitors are not tracked",
           "class": "good",
           "source": "https://keepassxc.org/privacy/",
+          "quote": "When you visit our website, we collect the following data: Your anonymized IP address (we store only the first 2 byte for IPv4 and the first 6 byte for IPv6)",
           "updated": "2023-07-11"
         }
       ],
@@ -2581,9 +3203,11 @@
       },
       "points": [
         {
+          "id": 28052,
           "title": "Third party cookies are employed, but with opt out instructions",
           "class": "bad",
           "source": "https://www.box.com/legal/cookie-notification",
+          "quote": "You can directly opt out of Google Ad personalization here",
           "updated": "2023-07-11"
         }
       ],
@@ -2604,51 +3228,67 @@
       },
       "points": [
         {
+          "id": 45741,
           "title": "Terms may be changed any time at their discretion, without notice to you",
           "class": "bad",
           "source": "https://freetubeapp.io/privacy.php",
+          "quote": "Last Updated: March 2019 This privacy policy is to explain what information is collected by visitors of the FreeTube website (FreeTubeApp.io) and how it is used. This privacy policy may be changed or updated at any point in the future.",
           "updated": "2026-09-08"
         },
         {
+          "id": 22185,
           "title": "No third-party analytics or tracking platforms are used",
           "class": "good",
           "source": "https://freetubeapp.io/privacy.php",
+          "quote": "Your privacy is very important, which is why this site runs without any JavaScript and does not use Google Analytics.",
           "updated": "2023-07-11"
         },
         {
+          "id": 22193,
           "title": "Features of the website are made available under a free software license",
           "class": "good",
           "source": "https://freetubeapp.io",
+          "quote": null,
           "updated": "2021-06-10"
         },
         {
+          "id": 22192,
           "title": "The service is open-source",
           "class": "good",
           "source": "http://github.com/FreeTubeApp/FreeTubeApp.io",
+          "quote": null,
           "updated": "2021-06-10"
         },
         {
+          "id": 22196,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
           "source": "https://freetubeapp.io/privacy.php",
+          "quote": "How It Is Used",
           "updated": "2023-07-11"
         },
         {
+          "id": 22199,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://freetubeapp.io/privacy.php",
+          "quote": "Your privacy is taken very seriously as a FreeTube user. Your subscriptions, history, favorited videos, and settings are saved and stored locally on your machine.",
           "updated": "2023-07-11"
         },
         {
+          "id": 22198,
           "title": "Your personal data is not shared with third parties",
           "class": "good",
           "source": "https://freetubeapp.io/privacy.php",
+          "quote": "This data is never uploaded or saved to any server.",
           "updated": "2023-07-11"
         },
         {
+          "id": 22197,
           "title": "Only necessary logs are kept by the service to ensure quality",
           "class": "good",
           "source": "https://freetubeapp.io/privacy.php",
+          "quote": "This information is anonymous and cannot be used to identify you.",
           "updated": "2023-07-11"
         }
       ],
@@ -2669,51 +3309,67 @@
       },
       "points": [
         {
+          "id": 22453,
           "title": "The service is open-source",
           "class": "good",
           "source": "https://github.com/beemdevelopment/Aegis",
+          "quote": null,
           "updated": "2021-06-15"
         },
         {
+          "id": 22457,
           "title": "No logs are kept",
           "class": "good",
           "source": "https://getaegis.app/aegis/privacy.html",
+          "quote": "Aegis Authenticator does not collect any data from your mobile device",
           "updated": "2023-07-11"
         },
         {
+          "id": 22452,
           "title": "Features of the service are made available under a free software license",
           "class": "good",
           "source": "https://f-droid.org/en/packages/com.beemdevelopment.aegis",
+          "quote": null,
           "updated": "2021-06-15"
         },
         {
+          "id": 22456,
           "title": "You are not being tracked",
           "class": "good",
           "source": "https://getaegis.app/aegis/privacy.html",
+          "quote": "Aegis Authenticator does not collect any data from your mobile device.",
           "updated": "2023-07-11"
         },
         {
+          "id": 22458,
           "title": "No third-party analytics or tracking platforms are used",
           "class": "good",
           "source": "https://getaegis.app/aegis/privacy.html",
+          "quote": "Aegis Authenticator does not collect any data from your mobile device.",
           "updated": "2023-07-11"
         },
         {
+          "id": 22455,
           "title": "This service does not collect, use, or share location data",
           "class": "good",
           "source": "https://getaegis.app/aegis/privacy.html",
+          "quote": "Aegis Authenticator does not collect any data from your mobile device",
           "updated": "2023-07-11"
         },
         {
+          "id": 22459,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://getaegis.app/aegis/privacy.html",
+          "quote": "Camera access is only used for scanning OTP QR codes.",
           "updated": "2023-07-11"
         },
         {
+          "id": 22454,
           "title": "A complaint mechanism is provided for the handling of personal data",
           "class": "good",
           "source": "https://getaegis.app/aegis/privacy.html",
+          "quote": "If you believe this policy has been violated in any way, please file an issue.",
           "updated": "2023-07-11"
         }
       ],
@@ -2734,51 +3390,67 @@
       },
       "points": [
         {
+          "id": 25588,
           "title": "Your data may be processed and stored anywhere in the world",
           "class": "bad",
           "source": "https://notesnook.com/privacy",
+          "quote": "Your information, including Personal Data, may be transferred to – and maintained on – computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction",
           "updated": "2025-10-15"
         },
         {
+          "id": 85298,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
           "source": "https://notesnook.com/tos/",
+          "quote": "OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE…",
           "updated": "2026-09-02"
         },
         {
+          "id": 113513,
           "title": "If you offer suggestions to the service, they become the owner of the ideas that you give them",
           "class": "bad",
           "source": "https://notesnook.com/tos/",
+          "quote": "You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback. (ii) Company may have development ideas similar to the Feedback.",
           "updated": "2025-05-07"
         },
         {
+          "id": 37269,
           "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
           "class": "bad",
-          "source": null,
+          "source": "https://notesnook.com/terms",
+          "quote": "Your continued use of the Platform following the posting of revised Terms means that you accept and agree to the changes. You are expected to check this page frequently so you are aware of any changes, as they are binding on you. By continuing to access or use our Service after any revisions become…",
           "updated": "2025-12-16"
         },
         {
+          "id": 277341,
           "title": "Some personal data may be kept for business interests or legal obligations",
           "class": "bad",
           "source": "https://notesnook.com/privacy",
+          "quote": "We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies. We will also retain Usage Data for internal…",
           "updated": "2026-09-02"
         },
         {
+          "id": 25583,
           "title": "You are not being tracked",
           "class": "good",
           "source": "https://notesnook.com/privacy",
+          "quote": "We do not sell, collect, use, disclose, read, edit, modify or distribute any data that you create in our Service.",
           "updated": "2025-10-15"
         },
         {
+          "id": 25584,
           "title": "Information is provided about security practices",
           "class": "good",
           "source": "https://notesnook.com/privacy",
+          "quote": "All your data is encrypted using state-of-the-art encryption algorithms (XChaCha20-Poly1305-IETF & Argon2) on your device before any transmission over the Internet",
           "updated": "2025-10-15"
         },
         {
+          "id": 65111,
           "title": "You can retrieve an archive of your data",
           "class": "good",
           "source": "https://notesnook.com/privacy",
+          "quote": "You have the right to be provided with a copy of your Personal Data in a structured, machine-readable and commonly used format; (f) the right to withdraw consent.",
           "updated": "2026-04-04"
         }
       ],
@@ -2799,39 +3471,51 @@
       },
       "points": [
         {
+          "id": 32090,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
           "source": "https://cryptomator.org/privacy/",
+          "quote": "The following data is collected: browser name and version the user’s operating system referrer URL",
           "updated": "2023-07-11"
         },
         {
+          "id": 32088,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
           "source": "https://cryptomator.org/privacy/",
+          "quote": "General Data Protection Regulation (GDPR)",
           "updated": "2023-07-11"
         },
         {
+          "id": 32092,
           "title": "You are not being tracked",
           "class": "good",
           "source": "https://cryptomator.org/privacy/",
+          "quote": "Our website only uses technically necessary cookies. Cookies are text files that are stored in the internet browser or by the internet browser on the user’s computer system. If a user visits a website, a cookie may be stored on the user’s operating system. This cookie contains a characteristic…",
           "updated": "2023-07-11"
         },
         {
+          "id": 32093,
           "title": "An anonymous payment method is offered",
           "class": "good",
           "source": "https://cryptomator.org/privacy/",
+          "quote": "CoinPayments (CoinPayments Inc., Hodltech OÜ, Tornimäe 5, 10145 Tallinn, Estland).",
           "updated": "2023-07-11"
         },
         {
+          "id": 32089,
           "title": "The data retention period is kept to the minimum necessary for fulfilling its purposes",
           "class": "good",
           "source": "https://cryptomator.org/privacy/",
+          "quote": "The personal data of the data subject will be deleted or blocked as soon as the purpose of the storage no longer applies.",
           "updated": "2023-07-11"
         },
         {
+          "id": 32094,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
           "source": "https://cryptomator.org/privacy/",
+          "quote": "As a matter of principle, we collect and process personal data of our users only to the extent necessary to provide a functional website and our contents and services.",
           "updated": "2023-07-11"
         }
       ],
@@ -2868,51 +3552,67 @@
       },
       "points": [
         {
+          "id": 328311,
           "title": "Some personal data may be kept for business interests or legal obligations",
           "class": "bad",
-          "source": null,
+          "source": "https://ente.com/terms/",
+          "quote": "Upon Termination, we will schedule their uploaded Files and Data for deletion within the next thirty (30) days. In case of shared Files and Data, we may retain them to ensure access to Authorized Persons. We may also maintain Subscriber's email address, IP address and user agent information in a…",
           "updated": "2026-07-13"
         },
         {
+          "id": 328293,
           "title": "You are forced into binding arbitration in case of disputes",
           "class": "bad",
-          "source": null,
+          "source": "https://ente.com/terms/",
+          "quote": "PLEASE NOTE THAT THESE TERMS CONTAIN A BINDING AND MANDATORY ARBITRATION PROVISION AND CLASS ACTION/JURY TRIAL WAIVER PROVISION.",
           "updated": "2026-07-11"
         },
         {
+          "id": 328333,
           "title": "You waive your right to a class action",
           "class": "bad",
-          "source": null,
+          "source": "https://ente.com/terms/",
+          "quote": "Users and Ente agree that any Dispute arising out of or related to these Terms or use or access of our Services is personal to Users and Ente and that such Dispute will be resolved solely through individual arbitration and will not be brought as a class arbitration, class action or any other type…",
           "updated": "2026-07-11"
         },
         {
+          "id": 328306,
           "title": "Users can be fined for Terms of Service violations",
           "class": "bad",
-          "source": null,
+          "source": "https://ente.com/terms/",
+          "quote": "If at any time Subscribers do not make a payment to us when they are supposed to (including on Termination), we can suspend or terminate their use of the service. We may also additionally pursue any other rights or remedies we may have against such Subscribers.",
           "updated": "2026-07-11"
         },
         {
+          "id": 328321,
           "title": "This service assumes no liability for unauthorized access to your personal information",
           "class": "bad",
-          "source": null,
+          "source": "https://ente.com/terms/",
+          "quote": "We make no warranty or representation and disclaim all responsibility and liability for: (i) the completeness, accuracy, availability, timeliness, security or reliability of our websites or apps or any content; (ii) any harm to Users' computer system, loss of data, or other harm that results from…",
           "updated": "2026-07-11"
         },
         {
+          "id": 35266,
           "title": "This Service provides a list of Third Parties involved in its operation.",
           "class": "good",
-          "source": null,
+          "source": "https://ente.com/privacy/",
+          "quote": "We use the following third-party services to deliver specific services to you. 15.1. Payment Processors We use third-party services to process your payments. We will not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use…",
           "updated": "2023-11-01"
         },
         {
+          "id": 35260,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
-          "source": null,
+          "source": "https://ente.com/privacy/",
+          "quote": "When you use our services, the following information is retained in their unencrypted form: Your email address to serve as a medium of communication and as an identifier for your account. Your name and avatar (both optional) for notifying other users when you invite/share files with them. Amount of…",
           "updated": "2023-11-01"
         },
         {
+          "id": 328294,
           "title": "This service claims User-generated content is encrypted, and they can not decrypt it",
           "class": "good",
-          "source": null,
+          "source": "https://ente.com/terms/",
+          "quote": "Using Ente, Subscribers can do the following: encrypt their Files by way of user-controlled encryption (\"UCE\"), upload, access, store, manage, share, communicate, download and decrypt Files and other data (\"Data\"); and give access to their Data and Files to others (\"Authorized Person(s)\").",
           "updated": "2026-07-11"
         }
       ],
@@ -2933,45 +3633,59 @@
       },
       "points": [
         {
+          "id": 29308,
           "title": "Content you post may be edited by the service for any reason",
           "class": "blocker",
           "source": "https://legal.opera.com/terms/",
+          "quote": "Opera has the right to refuse to post, edit, or deliver User Generated Content.",
           "updated": "2023-07-11"
         },
         {
+          "id": 330678,
           "title": "Specific content can be deleted without reason and may be removed without prior notice",
           "class": "blocker",
-          "source": null,
+          "source": "https://www.opera.com/legal/terms",
+          "quote": "Opera has no duty to pre-screen User Generated Content, but Opera has the right to refuse to post, edit, or deliver User Generated Content. Opera reserves the right to remove User Generated Content for any reason, but Opera is not responsible for any failure or delay in removing such material.",
           "updated": "2026-08-14"
         },
         {
+          "id": 29181,
           "title": "Your account can be deleted without prior notice and without a reason",
           "class": "bad",
           "source": "https://legal.opera.com/terms/",
+          "quote": "Opera reserves the right at any time to modify or discontinue the Services in whole or in part, and to terminate your access to the Services at any time, with or without notice.",
           "updated": "2023-07-11"
         },
         {
+          "id": 29372,
           "title": "This service assumes no liability for unauthorized access to your personal information",
           "class": "bad",
           "source": "https://legal.opera.com/terms/",
+          "quote": "You agree that Opera shall not be responsible for unauthorized access to or alteration of your transmissions or data, any material or data sent or received or not sent or received, or any transactions entered into through the Services.",
           "updated": "2023-07-11"
         },
         {
+          "id": 330691,
           "title": "Terms may be changed any time at their discretion, without notice to you",
           "class": "bad",
-          "source": null,
+          "source": "https://www.opera.com/legal/terms",
+          "quote": "Opera may modify these General Terms. Opera may update these General Terms or the Privacy Statement from time to time. The current version of these General Terms are posted at https://www.opera.com/legal/terms . The Privacy Statement is posted at https://www.opera.com/legal/privacy . It is your…",
           "updated": "2026-08-14"
         },
         {
+          "id": 29176,
           "title": "You maintain ownership of your content",
           "class": "good",
           "source": "https://legal.opera.com/terms/",
+          "quote": "Opera does not claim ownership of any User Generated Content.",
           "updated": "2023-07-11"
         },
         {
+          "id": 330689,
           "title": "The court of law governing the terms is in a jurisdiction that is friendlier to user privacy protection (Norway)",
           "class": "good",
-          "source": "",
+          "source": "https://www.opera.com/legal/terms",
+          "quote": "These General Terms are based on Norwegian law. These General Terms are governed by the laws of Norway without giving effect to any conflicts of law principles that may require the application of the laws of a different country.",
           "updated": "2026-08-14"
         }
       ],
@@ -2992,51 +3706,67 @@
       },
       "points": [
         {
+          "id": 56601,
           "title": "Third-party cookies are used for advertising",
           "class": "bad",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "These cookies are generated and necessary for our web software to authenticate you and log you in your account correctly. Advertising We use Google Adsense to provide advertising and help fund our project. On all websites using Adsense, including Linux Mint's, Google use cookies to track your web…",
           "updated": "2026-06-11"
         },
         {
+          "id": 265042,
           "title": "Third-party cookies are used for statistics",
           "class": "bad",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "Analytics On URLs which start with linuxmint.com/start, we use Google Analytics to measure the number of visits and have a rough idea of how successful new releases are. Google Analytics use cookies to provide us with this information. What information is collected on me via cookies?",
           "updated": "2026-06-11"
         },
         {
+          "id": 54095,
           "title": "Third party cookies are employed, but with opt out instructions",
           "class": "bad",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "Third Party Cookies Third party services such as Google Adsense and Analytics provide their own policies: Google Privacy Policy Information about Google Analytics How Doubleclick uses Cookies How do I restrict cookies? You can adjust the settings on your internet browser and choose from the…",
           "updated": "2026-06-11"
         },
         {
+          "id": 176008,
           "title": "Information is provided about security practices",
           "class": "good",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "We protect data via strong security, encryption and anonymizing techniques.",
           "updated": "2026-07-18"
         },
         {
+          "id": 184774,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "What information is collected on me via cookies?",
           "updated": "2026-06-11"
         },
         {
+          "id": 313515,
           "title": "The service claims to be GDPR compliant for European users",
           "class": "good",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "This privacy policy complies with the EU’s General Data Protection Regulation (GDPR).",
           "updated": "2026-06-11"
         },
         {
+          "id": 325163,
           "title": "You have the right to leave this service at any time",
           "class": "good",
-          "source": "",
+          "source": "https://linuxmint.com/privacy.php",
+          "quote": "You may also request the permanent deletion of your account",
           "updated": "2026-06-12"
         },
         {
+          "id": 134499,
           "title": "You can request access, correction and/or deletion of your data",
           "class": "good",
           "source": "https://linuxmint.com/privacy.php",
+          "quote": "In accordance with the GDPR, you also have the right to data access and portability (including the right to obtain and download a copy of the personal data you provided to Linux Mint), data correction (the ability to update the personal data we collect and display on you, in many cases via your…",
           "updated": "2026-06-11"
         }
       ],
@@ -3057,51 +3787,67 @@
       },
       "points": [
         {
+          "id": 33639,
           "title": "Your personal data is used for automated decision-making, profiling or AI training",
           "class": "blocker",
           "source": "https://openai.com/policies/privacy-policy",
+          "quote": "As noted above, we may use Content you provide us to improve our Services, for example to train the models that power ChatGPT",
           "updated": "2023-07-11"
         },
         {
+          "id": 29552,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
           "source": "https://openai.com/terms/",
+          "quote": "OUR AGGREGATE LIABILITY UNDER THESE TERMS SHALL NOT EXCEED ​​THE GREATER OF THE AMOUNT YOU PAID FOR THE SERVICE THAT GAVE RISE TO THE CLAIM DURING THE 12 MONTHS BEFORE THE LIABILITY AROSE OR ONE HUNDRED DOLLARS ($100).",
           "updated": "2023-07-11"
         },
         {
+          "id": 29554,
           "title": "You waive your right to a class action.",
           "class": "bad",
           "source": "https://openai.com/terms/",
+          "quote": "(f) NO CLASS ACTIONS . Disputes must be brought on an individual basis only, and may not be brought as a plaintiff or class member in any purported class, consolidated, or representative proceeding. Class arbitrations, class actions, private attorney general actions, and consolidation with other…",
           "updated": "2023-07-11"
         },
         {
+          "id": 29556,
           "title": "Instead of asking directly, this Service will assume your consent merely from your usage.",
           "class": "bad",
           "source": "https://openai.com/terms/",
+          "quote": "Your continued use of the Services after any change means you agree to such change.",
           "updated": "2023-07-11"
         },
         {
+          "id": 29569,
           "title": "Some personal data may be kept for business interests or legal obligations",
           "class": "bad",
           "source": "https://openai.com/privacy/",
+          "quote": "and To comply with legal obligations and legal process and to protect our rights, privacy, safety, or property, and/or that of our affiliates, you, or other third parties.",
           "updated": "2023-07-11"
         },
         {
+          "id": 29601,
           "title": "30 days of notice are given before closing your account",
           "class": "good",
           "source": "https://openai.com/terms/",
+          "quote": "We may terminate these Terms for any reason by providing you at least 30 days’ advance notice.",
           "updated": "2023-07-11"
         },
         {
+          "id": 29600,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://openai.com/terms/",
+          "quote": "You may terminate these Terms at any time for any reason by discontinuing the use of the Services and Content.",
           "updated": "2023-07-11"
         },
         {
+          "id": 29543,
           "title": "If you offer suggestions to the service, they may use that without your approval or compensation, but they do not become the owner",
           "class": "good",
           "source": "https://openai.com/terms/",
+          "quote": "We appreciate feedback, comments, ideas, proposals and suggestions for improvements. If you provide any of these things, we may use it without restriction or compensation to you.",
           "updated": "2023-07-11"
         }
       ],
@@ -3122,51 +3868,67 @@
       },
       "points": [
         {
+          "id": 35973,
           "title": "Instead of asking directly, this Service will assume your consent to changes of terms merely from your usage.",
           "class": "bad",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "Your continued use of our Services confirms your acceptance of our updated Terms and supersedes any prior Terms.",
           "updated": "2024-02-02"
         },
         {
+          "id": 35966,
           "title": "User-generated content is encrypted, and this service cannot decrypt it",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "SimpleX Chat cannot decrypt or otherwise access the content or even size of your messages (each message is padded to a fixed size of 16kb).",
           "updated": "2024-02-04"
         },
         {
+          "id": 35967,
           "title": "Your personal data is used for limited purposes",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "If you contact SimpleX Chat any personal data you may share with us is kept only for the purposes of researching the issue and contacting you about your case.",
           "updated": "2024-02-04"
         },
         {
+          "id": 35971,
           "title": "Features of the website are made available under a free software license",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "The source-code of services is available and can be used under [AGPL v3 licence]",
           "updated": "2024-02-04"
         },
         {
+          "id": 35998,
           "title": "A free help desk is provided",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "If you have specific questions about these Terms, please contact us at chat@simplex.chat.",
           "updated": "2024-03-23"
         },
         {
+          "id": 35990,
           "title": "Information is provided about security practices",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "SimpleX Chat Ltd. (\"SimpleX Chat\") uses the best industry practices for security and encryption to provide secure [end-to-end encrypted](./docs/GLOSSARY.md#end-to-end-encryption)",
           "updated": "2024-02-04"
         },
         {
+          "id": 35994,
           "title": "Information is provided about what kind of information they collect",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": ". We do not retain any data we transmit for any longer than necessary to provide the Services. We only collect aggregate statistics across all users, not per user - we do not have information about how many people use SimpleX Chat (we only know an approximate number of app installations and the…",
           "updated": "2024-02-04"
         },
         {
+          "id": 35995,
           "title": "Your personal data is not sold",
           "class": "good",
-          "source": null,
+          "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/stable/PRIVACY.md",
+          "quote": "n any case, we do not and will not sell or in any way monetize user data.",
           "updated": "2024-02-04"
         }
       ],
@@ -3187,51 +3949,67 @@
       },
       "points": [
         {
+          "id": 298279,
           "title": "This service tracks which web page referred you to it",
           "class": "bad",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "We obtain session information (browser, time spent, page visits, referring sites, etc.)",
           "updated": "2026-09-08"
         },
         {
+          "id": 32085,
           "title": "This Service does not keep any logs.",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "Both services do not store any logs or personal information and can be deactivated from the application settings if wanted",
           "updated": "2023-07-11"
         },
         {
+          "id": 32077,
           "title": "The cookies used by this service do not contain information that would personally identify you",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "These cookies only gather information for statistical purposes and do not allow to directly identify you.",
           "updated": "2023-07-11"
         },
         {
+          "id": 32078,
           "title": "Information is provided about security practices",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "We use state of the art end-to-end encryption with perfect forward secrecy for all communications and comply with the X.509 standard. We use TLS/SRTP to secure connection and communications over the network.",
           "updated": "2023-07-11"
         },
         {
+          "id": 32076,
           "title": "This service offers a symbolic but nonbinding statement about a matter of opinion, ethics, society, or politics",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "At Jami, we think that privacy is a primary right on the internet. Everybody should be free not to give its data to corporations to benefit from an essential service on the internet. We know better than anyone else why personal information is sensitive, what our responsibility is to protect it, and…",
           "updated": "2023-07-11"
         },
         {
+          "id": 32079,
           "title": "Account creation does not require providing personal data",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "Jami does not require any personal information to create an account and to communicate",
           "updated": "2023-07-11"
         },
         {
+          "id": 32080,
           "title": "Features of the website are made available under a free software license",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "Jami is a free/libre software. You can redistribute it and/or modify it under the terms of the GNU General Public License",
           "updated": "2023-07-11"
         },
         {
+          "id": 32082,
           "title": "Information is provided about how your personal data is used",
           "class": "good",
           "source": "https://jami.net/privacy-policy/",
+          "quote": "Why we process your information",
           "updated": "2023-07-11"
         }
       ],
@@ -3252,51 +4030,67 @@
       },
       "points": [
         {
+          "id": 35331,
           "title": "Terms may be changed any time at their discretion, without notice to you",
           "class": "bad",
-          "source": null,
+          "source": "https://2fas.com/privacy-policy/",
+          "quote": "We reserve the right, in our sole discretion, to change, modify, add, or remove portions of this Privacy Policy at any time, without prior notice to you.",
           "updated": "2023-11-23"
         },
         {
+          "id": 117082,
           "title": "Your data may be processed and stored anywhere in the world",
           "class": "bad",
           "source": "https://2fas.com/privacy-policy/",
+          "quote": "We may transfer and store your Personal Data in countries other than the country in which the Personal Data was originally collected. These countries may be outside of the European Economic Area (“EEA”).",
           "updated": "2025-07-19"
         },
         {
+          "id": 84422,
           "title": "Any liability on behalf of the service is only limited to the fees you paid as a user",
           "class": "bad",
           "source": "https://2fas.com/terms-of-service/",
+          "quote": "All other warranties, including warranties of merchantability and fitness for a particular purpose, are expressly excluded from this warranty. Your sole and exclusive remedy for any cause of action arising out of any defective software or breach of this Agreement is limited to us providing…",
           "updated": "2025-07-19"
         },
         {
+          "id": 57009,
           "title": "Third-party cookies are used for advertising",
           "class": "bad",
           "source": "https://2fas.com/cookie-policy/",
+          "quote": "When you use the website, you may also be sent third-party cookies. Our advertisers and service providers may send you cookies. They may use the information they get from your use of their cookies:",
           "updated": "2025-07-19"
         },
         {
+          "id": 37826,
           "title": "You waive your right to a class action.",
           "class": "bad",
           "source": "https://2fas.com/terms-of-service/",
+          "quote": "No Class Actions – All disputes between you and us will be resolved on an individual basis and you agree not to bring or participate in any class, consolidated, or representative action against us, including our future affiliates.",
           "updated": "2025-07-19"
         },
         {
+          "id": 35332,
           "title": "Accessibility to this service is guaranteed at 99% or more",
           "class": "good",
-          "source": null,
+          "source": "https://2fas.com/terms-of-service/",
+          "quote": "We guarantee an Uptime for Services of 99.00% on an annual basis.",
           "updated": "2023-11-23"
         },
         {
+          "id": 35329,
           "title": "You can request access, correction and/or deletion of your data",
           "class": "good",
-          "source": null,
+          "source": "https://2fas.com/privacy-policy/",
+          "quote": "You have the right to request that we delete the Personal Information we have gathered on you.",
           "updated": "2023-11-23"
         },
         {
+          "id": 109701,
           "title": "You have the right to leave this service at any time",
           "class": "good",
           "source": "https://2fas.com/privacy-policy/",
+          "quote": "After you cancel your Services and ask to delete your account, we will delete all your Personal Data within 7 days.",
           "updated": "2025-07-19"
         }
       ],
@@ -3317,9 +4111,11 @@
       },
       "points": [
         {
+          "id": 324232,
           "title": "You can delete your content from this service",
           "class": "good",
-          "source": null,
+          "source": "https://joplinapp.org/privacy/",
+          "quote": "Any data that Joplin saves, such as notes or images, are saved to your own device and you are free to delete this data at any time.",
           "updated": "2026-05-18"
         }
       ],
@@ -3356,21 +4152,27 @@
       },
       "points": [
         {
+          "id": 325245,
           "title": "Do Not Track (DNT) headers are respected",
           "class": "good",
-          "source": null,
+          "source": "https://grapheneos.org/faq",
+          "quote": "GrapheneOS services follow the EFF's privacy-friendly Do Not Track (DNT) policy for all users of our publicly available services, not just those opting out of tracking via Do Not Track.",
           "updated": "2026-06-13"
         },
         {
+          "id": 325246,
           "title": "Logs are deleted after a finite period of time",
           "class": "good",
-          "source": null,
+          "source": "https://grapheneos.org/faq",
+          "quote": "our servers only retain logs for at most 10 days",
           "updated": "2026-06-13"
         },
         {
+          "id": 325546,
           "title": "Features of the service are available under a free software and/or open source license",
           "class": "good",
-          "source": null,
+          "source": "https://grapheneos.org/faq",
+          "quote": "The copyright for GrapheneOS code is entirely owned by the GrapheneOS developers and is made available under OSI-approved Open Source licenses. The upstream licensing is inherited for the modifications to those projects and MIT licensing is used for our own standalone projects.",
           "updated": "2026-06-17"
         }
       ],

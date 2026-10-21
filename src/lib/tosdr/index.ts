@@ -24,7 +24,7 @@ export type TermsReview = {
   newest_point: string | null
   stale: boolean
   counts: { blocker: number; bad: number; neutral: number; good: number }
-  points: { title: string; class: string; source: string | null; updated: string | null }[]
+  points: { id: number; title: string; class: string; source: string | null; quote: string | null; updated: string | null }[]
   url: string
   attribution: string
   copied_on: string

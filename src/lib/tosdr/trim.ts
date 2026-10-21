@@ -9,9 +9,11 @@
 export const MAX_POINTS = 8
 
 export type RawPoint = {
+  id: number
   title: string
   source: string | null
   status: string
+  document_id: number | null
   updated_at: string | null
   case: { classification: string; weight: number | null } | null
 }
@@ -20,12 +22,34 @@ export type RawService = {
   name: string
   rating: string | null
   is_comprehensively_reviewed: boolean
-  documents: { name: string; url: string }[]
+  documents: { id: number; name: string; url: string }[]
   points: RawPoint[]
 }
 
 const ORDER: Record<string, number> = { blocker: 0, bad: 1, good: 2, neutral: 3 }
 const clean = (s: string) => s.replace(/\s+/g, " ").trim()
+
+export const MAX_QUOTE = 300
+
+const ENTITIES: Record<string, string> = { nbsp: " ", amp: "&", lt: "<", gt: ">", quot: '"', "#39": "'", rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“" }
+
+/**
+ * ToS;DR's quote of the policy text a point rests on, cut at a word near MAX_QUOTE.
+ * Quotes are pasted page markup, so tags, entities and table pipes go before the cut.
+ */
+export function clipQuote(q: string | null | undefined): string | null {
+  const s = clean(
+    (q ?? "")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/^\s*[a-z0-9]*>|<\/?[a-z0-9]*\s*$/gi, "")
+      .replace(/&(nbsp|amp|lt|gt|quot|#39|rsquo|lsquo|rdquo|ldquo)[;.]?/g, (_, e: string) => ENTITIES[e])
+      .replace(/\|/g, " "),
+  )
+  if (!s) return null
+  if (s.length <= MAX_QUOTE) return s
+  const cut = s.slice(0, MAX_QUOTE)
+  return `${cut.slice(0, cut.lastIndexOf(" ") > 0 ? cut.lastIndexOf(" ") : MAX_QUOTE)}…`
+}
 
 export function trimService(raw: RawService) {
   const byTitle = new Map<string, RawPoint>()
@@ -59,10 +83,13 @@ export function trimService(raw: RawService) {
     reviewed_fully: raw.is_comprehensively_reviewed,
     newest_point: dated.at(-1) ?? null,
     counts,
+    // Some points carry an empty source; fall back to the document ToS;DR filed them under.
     points: [...concerns, ...good].map((p) => ({
+      id: p.id,
       title: clean(p.title),
       class: p.case!.classification,
-      source: p.source,
+      source: p.source || raw.documents.find((d) => d.id === p.document_id)?.url || null,
+      quote: null as string | null,
       updated: (p.updated_at ?? "").slice(0, 10) || null,
     })),
     privacy_policy_url: policy?.url ?? null,

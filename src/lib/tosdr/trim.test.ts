@@ -1,13 +1,14 @@
 import { describe, expect, it } from "vitest"
-import { MAX_POINTS, trimService, type RawPoint } from "./trim"
+import { clipQuote, MAX_POINTS, MAX_QUOTE, trimService, type RawPoint } from "./trim"
 
+let nextId = 1
 const point = (title: string, cls: string, updated: string, weight = 50): RawPoint => ({
-  title, source: "https://vendor.test/privacy", status: "approved", updated_at: `${updated}T00:00:00Z`,
+  id: nextId++, title, source: "https://vendor.test/privacy", status: "approved", document_id: 210, updated_at: `${updated}T00:00:00Z`,
   case: { classification: cls, weight },
 })
 const raw = (points: RawPoint[]) => ({
   id: 1, name: " Example ", rating: "D", is_comprehensively_reviewed: true,
-  documents: [{ name: "Privacy Policy", url: "https://vendor.test/privacy" }], points,
+  documents: [{ id: 209, name: "Terms", url: "https://vendor.test/terms" }, { id: 210, name: "Privacy Policy", url: "https://vendor.test/privacy" }], points,
 })
 
 describe("trimService", () => {
@@ -45,5 +46,26 @@ describe("trimService", () => {
   it("drops points that are not approved", () => {
     const pending = { ...point("pending", "bad", "2026-01-01"), status: "pending" }
     expect(trimService(raw([pending])).points).toEqual([])
+  })
+
+  it("falls back to the point's own document when ToS;DR gives no source", () => {
+    const withSource = (source: string | null) => trimService(raw([{ ...point("x", "bad", "2026-01-01"), source }])).points[0].source
+    expect(withSource("")).toBe("https://vendor.test/privacy")
+    expect(withSource(null)).toBe("https://vendor.test/privacy")
+    expect(withSource("https://vendor.test/terms#3")).toBe("https://vendor.test/terms#3")
+  })
+})
+
+describe("clipQuote", () => {
+  it("cleans spaces, drops empties, cuts long quotes at a word", () => {
+    expect(clipQuote("")).toBeNull()
+    expect(clipQuote(null)).toBeNull()
+    expect(clipQuote("  a  b ")).toBe("a b")
+    expect(clipQuote('<p>See <a href="https://x.test">our&nbsp;policy</a> &amp; terms.</p>')).toBe("See our policy & terms.")
+    expect(clipQuote("p>Starts mid-tag and ends mid-tag.</")).toBe("Starts mid-tag and ends mid-tag.")
+    expect(clipQuote("| Your contacts | To auto-complete. |")).toBe("Your contacts To auto-complete.")
+    const q = clipQuote("word ".repeat(100))!
+    expect(q.length).toBeLessThanOrEqual(MAX_QUOTE + 1)
+    expect(q.endsWith("word…")).toBe(true)
   })
 })

@@ -69,3 +69,15 @@ describe("termsReview", () => {
     }
   })
 })
+
+describe("the snapshot's quotes", () => {
+  it("WhatsApp's 'messages can be read' point quotes the business-messaging text", () => {
+    const p = termsReview(tosdrServiceForName("WhatsApp")!)!.points.find((x) => /private messages can be read/i.test(x.title))!
+    expect(p.quote).toMatch(/business/i)
+  })
+
+  it("carries no page markup", () => {
+    for (const s of TOSDR_SERVICES)
+      for (const p of termsReview(s)!.points) if (p.quote) expect(p.quote, s.name).not.toMatch(/[<>|]|&[a-z#0-9]+;/i)
+  })
+})
