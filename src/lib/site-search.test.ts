@@ -64,6 +64,15 @@ describe("rankContent", () => {
     expect(rankContent(items, "data brokers").map((i) => i.title)).toEqual(["Data broker removal"])
   })
 
+  it("matches -ed and -ing forms, so 'doxxed' finds the Dox Yourself First stack", async () => {
+    const stacks = await getAllStacks()
+    for (const q of ["doxxed", "doxing", "doxxing", "dox"]) {
+      expect(rankContent(stacks, q).map((s) => s.slug), q).toContain("osint-yourself-exposure-check")
+    }
+    const items = [item("Is my phone being tracked?"), item("Tracker blockers")]
+    expect(rankContent(items, "tracking").map((i) => i.title)).toEqual(["Is my phone being tracked?"])
+  })
+
   it("ranks a title hit over a tag hit over a description hit", () => {
     const items = [item("A", "about vpn"), item("B", "", ["vpn"]), item("C vpn")]
     expect(rankContent(items, "vpn").map((i) => i.title)).toEqual(["C vpn", "B", "A"])

@@ -12,7 +12,7 @@ import { registerPrompts } from "./prompts"
 import { registerResources } from "./resources"
 import { registerTools, SURVIVOR_KIT, SURVIVOR_SAFETY } from "./tools"
 
-export const SERVER_INFO = { name: "default-privacy", version: "1.10.0" } as const
+export const SERVER_INFO = { name: "default-privacy", version: "1.10.1" } as const
 
 export const SERVER_INSTRUCTIONS = `Default Privacy is a free privacy-tools hub: a directory of privacy tools, how-to guides, curated tool stacks, a glossary, and three read-only diagnostics. No accounts.
 

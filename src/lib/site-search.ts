@@ -23,10 +23,21 @@ const STOP_WORDS = new Set(
 const words = (text: string) => text.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
 
 // "brokers" → "broker"; short words like "ios" are left alone.
-const stem = (word: string) => (word.length > 3 && word.endsWith("s") ? word.slice(0, -1) : word)
+const stemPlural = (word: string) => (word.length > 3 && word.endsWith("s") ? word.slice(0, -1) : word)
 
-/** Meaningful words, stemmed, for loose matching of a whole sentence. */
-export const stemmedKeywords = (text: string) => new Set(keywords(text).map(stem))
+// Also "doxxed"/"doxing" → "dox", "tracked" → "track". Both the query and the content go
+// through it, so a crude stem still matches like with like.
+const stem = (word: string) => {
+  const bare = word.replace(/(?<=^.{3,})(?:ing|ed)$/, "")
+  return bare === word ? stemPlural(word) : bare.replace(/([b-df-hj-np-tv-z])\1$/, "$1")
+}
+
+/**
+ * Meaningful words, plural-stemmed only, for loose matching of a whole sentence. Not the
+ * -ed/-ing stem: it let "stop my smart TV from tracking what I watch" match the bare FAQ
+ * answer "Is my smart TV watching me?", which points at steps it doesn't carry.
+ */
+export const stemmedKeywords = (text: string) => new Set(keywords(text).map(stemPlural))
 
 /** The query's meaningful words, in order, unstemmed: what the directory search gets. */
 export function keywords(query: string): string[] {
