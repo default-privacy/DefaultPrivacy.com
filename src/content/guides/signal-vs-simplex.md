@@ -13,6 +13,7 @@ tags:
   - simplex
   - simplex chat
   - private messenger
+  - whatsapp alternative
   - encrypted messaging
   - metadata
   - phone number privacy

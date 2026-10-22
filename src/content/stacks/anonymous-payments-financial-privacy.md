@@ -13,6 +13,7 @@ tags:
   - threat-model
   - monero
   - masked-cards
+  - virtual-cards
   - privacy
 relatedTools:
   - name: Privacy.com
