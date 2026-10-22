@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://defaultprivacy.com/editorial-policy" },
 }
 
-const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50"
-const body = "space-y-4 text-sm leading-relaxed text-foreground/70"
+const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground"
+const body = "space-y-4 text-sm leading-relaxed text-foreground-soft"
 const strong = "font-medium text-foreground"
 const link = "underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
 
@@ -149,7 +149,7 @@ export default function EditorialPolicyPage() {
           </p>
         </section>
 
-        <p className="mt-12 font-mono text-[11px] text-foreground/40">Last reviewed {LAST_REVIEWED}</p>
+        <p className="mt-12 font-mono text-[11px] text-muted-foreground">Last reviewed {LAST_REVIEWED}</p>
       </main>
       <Footer />
     </div>

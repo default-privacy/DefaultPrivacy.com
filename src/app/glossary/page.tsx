@@ -76,13 +76,13 @@ export default async function GlossaryPage() {
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-foreground/[0.06] border border-foreground/10">
-                <BookOpen className="h-5 w-5 text-foreground/65" aria-hidden="true" />
+                <BookOpen className="h-5 w-5 text-foreground-soft" aria-hidden="true" />
               </div>
-              <h1 className="text-3xl font-medium tracking-tight text-foreground/90">
+              <h1 className="text-3xl font-medium tracking-tight text-foreground">
                 Privacy Glossary
               </h1>
             </div>
-            <p className="text-lg text-foreground/58 max-w-2xl mb-6">
+            <p className="text-lg text-muted-foreground max-w-2xl mb-6">
               {terms.length} terms covering encryption, networking, security,
               and digital privacy. Understand the language of online privacy.
             </p>
@@ -98,7 +98,7 @@ export default async function GlossaryPage() {
                 <a
                   key={letter}
                   href={`#letter-${letter}`}
-                  className="brand2-focus w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-foreground/65 hover:text-foreground hover:bg-foreground/[0.06] transition-colors"
+                  className="brand2-focus w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-foreground-soft hover:text-foreground hover:bg-foreground/[0.06] transition-colors"
                 >
                   {letter}
                 </a>
@@ -110,16 +110,16 @@ export default async function GlossaryPage() {
         {/* Categories overview */}
         <section className="border-b border-foreground/10">
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-            <h2 className="text-sm font-medium text-foreground/65 mb-4">Browse by Category</h2>
+            <h2 className="text-sm font-medium text-foreground-soft mb-4">Browse by Category</h2>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <Link
                   key={category}
                   href={`#category-${category.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="brand2-focus inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-xs text-foreground/65 hover:text-foreground hover:border-foreground/20 transition-colors"
+                  className="brand2-focus inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-xs text-foreground-soft hover:text-foreground hover:border-foreground/20 transition-colors"
                 >
                   {category}
-                  <span className="text-foreground/40">
+                  <span className="text-muted-foreground">
                     {termsByCategory[category]?.length || 0}
                   </span>
                 </Link>
@@ -134,7 +134,7 @@ export default async function GlossaryPage() {
             <div className="space-y-12">
               {letters.map((letter) => (
                 <div key={letter} id={`letter-${letter}`} className="scroll-mt-20">
-                  <h2 className="text-2xl font-medium tracking-tight text-foreground/90 mb-4 pb-2 border-b border-foreground/10">
+                  <h2 className="text-2xl font-medium tracking-tight text-foreground mb-4 pb-2 border-b border-foreground/10">
                     {letter}
                   </h2>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -145,14 +145,14 @@ export default async function GlossaryPage() {
                         className="brand2-focus group block rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4 hover:border-foreground/20 hover:bg-foreground/[0.04] transition-all"
                       >
                         <div className="flex items-start justify-between gap-2 mb-2">
-                          <h3 className="font-medium text-sm text-foreground/85 group-hover:text-foreground transition-colors">
+                          <h3 className="font-medium text-sm text-foreground group-hover:text-foreground transition-colors">
                             {term.term}
                           </h3>
-                          <span className="shrink-0 text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2 py-0.5">
+                          <span className="shrink-0 text-[10px] font-mono text-muted-foreground border border-foreground/10 rounded-full px-2 py-0.5">
                             {term.category}
                           </span>
                         </div>
-                        <p className="text-xs text-foreground/55 line-clamp-2">
+                        <p className="text-xs text-muted-foreground line-clamp-2">
                           {term.definition}
                         </p>
                       </Link>

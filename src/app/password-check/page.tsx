@@ -33,7 +33,7 @@ export default function PasswordCheckPage() {
       />
       <main className="container py-12 max-w-2xl mx-auto" style={{ touchAction: "manipulation" }}>
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-medium tracking-cinematic text-foreground/90 mb-3">
+          <h1 className="text-3xl font-medium tracking-cinematic text-foreground mb-3">
             Password Strength Analyzer
           </h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
@@ -65,7 +65,7 @@ export default function PasswordCheckPage() {
                   href="https://github.com/dropbox/zxcvbn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="brand2-focus text-foreground/80 hover:text-foreground underline underline-offset-2"
+                  className="brand2-focus text-foreground hover:text-foreground underline underline-offset-2"
                 >
                   zxcvbn
                 </a>{" "}
@@ -78,7 +78,7 @@ export default function PasswordCheckPage() {
                   href="https://haveibeenpwned.com/API/v3#PwnedPasswords"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="brand2-focus text-foreground/80 hover:text-foreground underline underline-offset-2"
+                  className="brand2-focus text-foreground hover:text-foreground underline underline-offset-2"
                 >
                   Have I Been Pwned
                 </a>{" "}

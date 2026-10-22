@@ -36,7 +36,7 @@ export function Footer() {
       <div className="container relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-12">
           <div>
-            <p className="text-[10px] font-mono text-foreground/65 uppercase tracking-[0.35em] mb-5 font-extralight">
+            <p className="text-[10px] font-mono text-foreground-soft uppercase tracking-[0.35em] mb-5 font-extralight">
               Directory
             </p>
             <ul className="space-y-2">
@@ -44,7 +44,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-sm text-sm text-foreground/72 transition-colors brand2-focus hover:text-foreground"
+                    className="rounded-sm text-sm text-foreground-soft transition-colors brand2-focus hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -53,7 +53,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-[10px] font-mono text-foreground/65 uppercase tracking-[0.35em] mb-5 font-extralight">
+            <p className="text-[10px] font-mono text-foreground-soft uppercase tracking-[0.35em] mb-5 font-extralight">
               Free Tools
             </p>
             <ul className="space-y-2">
@@ -61,7 +61,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-sm text-sm text-foreground/72 transition-colors brand2-focus hover:text-foreground"
+                    className="rounded-sm text-sm text-foreground-soft transition-colors brand2-focus hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -70,7 +70,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-[10px] font-mono text-foreground/65 uppercase tracking-[0.35em] mb-5 font-extralight">
+            <p className="text-[10px] font-mono text-foreground-soft uppercase tracking-[0.35em] mb-5 font-extralight">
               Learn
             </p>
             <ul className="space-y-2">
@@ -78,7 +78,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-sm text-sm text-foreground/72 transition-colors brand2-focus hover:text-foreground"
+                    className="rounded-sm text-sm text-foreground-soft transition-colors brand2-focus hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -87,7 +87,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-[10px] font-mono text-foreground/65 uppercase tracking-[0.35em] mb-5 font-extralight">
+            <p className="text-[10px] font-mono text-foreground-soft uppercase tracking-[0.35em] mb-5 font-extralight">
               Legal
             </p>
             <ul className="space-y-2">
@@ -95,7 +95,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="rounded-sm text-sm text-foreground/72 transition-colors brand2-focus hover:text-foreground"
+                    className="rounded-sm text-sm text-foreground-soft transition-colors brand2-focus hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -114,9 +114,9 @@ export function Footer() {
               height={20}
               className="h-5 w-5 opacity-60"
             />
-            <span className="text-sm text-foreground/62">© 2026 Default Privacy</span>
+            <span className="text-sm text-foreground-soft">© 2026 Default Privacy</span>
           </div>
-          <p className="max-w-md text-center text-xs leading-relaxed text-foreground/45 md:text-right">
+          <p className="max-w-md text-center text-xs leading-relaxed text-muted-foreground md:text-right">
             An independent directory of privacy tools. No paid placements.
           </p>
         </div>

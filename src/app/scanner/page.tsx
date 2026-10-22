@@ -26,10 +26,10 @@ function FeatureCell({ icon: Icon, title, description }: { icon: React.ElementTy
   return (
     <div className="text-center">
       <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/8 bg-foreground/[0.02]">
-        <Icon className="h-5 w-5 text-foreground/50" />
+        <Icon className="h-5 w-5 text-muted-foreground" />
       </div>
-      <h3 className="text-[13px] font-medium text-foreground/90">{title}</h3>
-      <p className="mt-1 text-[12px] text-foreground/50">{description}</p>
+      <h3 className="text-[13px] font-medium text-foreground">{title}</h3>
+      <p className="mt-1 text-[12px] text-muted-foreground">{description}</p>
     </div>
   )
 }
@@ -58,17 +58,17 @@ export default function ScannerPage() {
             <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               {/* Left: Copy */}
               <div>
-                <span className="mb-3 inline-block rounded-full border border-foreground/10 bg-foreground/[0.02] px-3 py-1 text-[11px] font-medium text-foreground/60">
+                <span className="mb-3 inline-block rounded-full border border-foreground/10 bg-foreground/[0.02] px-3 py-1 text-[11px] font-medium text-foreground-soft">
                   Free Tool
                 </span>
                 <h1 className="text-3xl font-medium tracking-tight text-foreground md:text-4xl">
                   Privacy Scanner
                 </h1>
-                <p className="mt-4 text-[16px] leading-relaxed text-foreground/55">
+                <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">
                   Discover what trackers, cookies, and fingerprinting techniques websites use
                   to monitor your activity.
                 </p>
-                <p className="mt-3 text-[13px] text-foreground/40">
+                <p className="mt-3 text-[13px] text-muted-foreground">
                   No signup required. Results are cached for 48 hours.
                 </p>
               </div>
@@ -134,29 +134,29 @@ export default function ScannerPage() {
               </h2>
               <div className="grid gap-8 md:grid-cols-3">
                 <div className="text-center">
-                  <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full border border-foreground/10 bg-background text-[13px] font-medium tabular-nums text-foreground/60">
+                  <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full border border-foreground/10 bg-background text-[13px] font-medium tabular-nums text-foreground-soft">
                     1
                   </div>
-                  <h3 className="text-[13px] font-medium text-foreground/90">Enter URL</h3>
-                  <p className="mt-1 text-[12px] text-foreground/50">
+                  <h3 className="text-[13px] font-medium text-foreground">Enter URL</h3>
+                  <p className="mt-1 text-[12px] text-muted-foreground">
                     Paste any website URL you want to analyze
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full border border-foreground/10 bg-background text-[13px] font-medium tabular-nums text-foreground/60">
+                  <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full border border-foreground/10 bg-background text-[13px] font-medium tabular-nums text-foreground-soft">
                     2
                   </div>
-                  <h3 className="text-[13px] font-medium text-foreground/90">We Scan</h3>
-                  <p className="mt-1 text-[12px] text-foreground/50">
+                  <h3 className="text-[13px] font-medium text-foreground">We Scan</h3>
+                  <p className="mt-1 text-[12px] text-muted-foreground">
                     Our scanner visits the site and analyzes all requests
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full border border-foreground/10 bg-background text-[13px] font-medium tabular-nums text-foreground/60">
+                  <div className="mx-auto mb-3 flex h-8 w-8 items-center justify-center rounded-full border border-foreground/10 bg-background text-[13px] font-medium tabular-nums text-foreground-soft">
                     3
                   </div>
-                  <h3 className="text-[13px] font-medium text-foreground/90">Get Results</h3>
-                  <p className="mt-1 text-[12px] text-foreground/50">
+                  <h3 className="text-[13px] font-medium text-foreground">Get Results</h3>
+                  <p className="mt-1 text-[12px] text-muted-foreground">
                     View a detailed privacy report with grade
                   </p>
                 </div>

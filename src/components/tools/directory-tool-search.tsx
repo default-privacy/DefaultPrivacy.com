@@ -45,7 +45,7 @@ export function DirectoryToolSearch({
       <div className="relative">
         <Search
           className={cn(
-            "absolute top-1/2 -translate-y-1/2 text-foreground/40",
+            "absolute top-1/2 -translate-y-1/2 text-muted-foreground",
             prominent ? "left-4 h-[18px] w-[18px]" : "left-3 h-3.5 w-3.5",
           )}
         />

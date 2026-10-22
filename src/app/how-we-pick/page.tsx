@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://defaultprivacy.com/how-we-pick" },
 }
 
-const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50"
-const body = "space-y-4 text-sm leading-relaxed text-foreground/70"
+const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground"
+const body = "space-y-4 text-sm leading-relaxed text-foreground-soft"
 const strong = "font-medium text-foreground"
 const link = "underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
 
@@ -53,7 +53,7 @@ export default function HowWePickPage() {
 
         <section className="mt-12 space-y-4">
           <h2 className={label}>WHAT WE LOOK AT</h2>
-          <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/70">
+          <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground-soft">
             {LOOKS_AT.map((t) => (
               <li key={t}>{t}</li>
             ))}

@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Brand System V2 — "Cinematic Silence"
-  - Deeper canvas, whisper-then-shout typography helpers, semantic accent tokens
-  - Foreground opacity utilities: use text-foreground/20 … /100 in markup
+  Paper theme (2026-10): warm paper, ink text, light only.
+  Text takes one of three roles, never an opacity: text-foreground (ink),
+  text-foreground-soft, text-muted-foreground. src/lib/theme-guard.test.ts
+  enforces that and the 4.5:1 floor on every text token.
 */
 
 @theme inline {
@@ -27,6 +28,11 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-soft: var(--foreground-soft);
+  --color-link: var(--link);
+  --color-border-strong: var(--border-strong);
+  --color-highlight: var(--highlight);
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -118,27 +124,33 @@
   --lift-2: -4px;
   --nudge-1: 3px;
 
-  /* Canonical UI blue = logo-icon.svg / layout favicon (#3B82F6) */
+  /* Canonical UI blue = logo-icon.svg / layout favicon (#3B82F6).
+     The mark, the hero grid and the highlighter only. Never text: 3.6:1 on paper. */
   --brand-blueprint: #3b82f6;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  /* Exact match to public/logo-icon.svg, favicon, and blueprint assets */
-  --primary: var(--brand-blueprint);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Paper + ink, from the locked C2 and Paper mockups. Hex on purpose: theme-guard.test.ts parses these. */
+  --background: #fdfcfa;
+  --foreground: #191919;
+  --foreground-soft: #3e3c39;
+  --link: #1e40af;
+  --highlight: #cfdcff;
+  --card: #fdfcfa;
+  --card-foreground: #191919;
+  --popover: #fdfcfa;
+  --popover-foreground: #191919;
+  /* Actions are solid ink on paper */
+  --primary: #191919;
+  --primary-foreground: #fdfcfa;
+  --secondary: #f6f3ee;
+  --secondary-foreground: #191919;
+  --muted: #f6f3ee;
+  --muted-foreground: #5e5b56;
+  --accent: #f1ede6;
+  --accent-foreground: #191919;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #e8e4dd;
+  --border-strong: #cbc5bb;
+  --input: #e8e4dd;
+  --ring: #1e40af;
   --heritage: oklch(0.78 0.15 85);
   --heritage-foreground: oklch(0.2 0.04 85);
   --success: oklch(0.7 0.17 160);
@@ -164,69 +176,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  /*
-    Geist-style 12-step gray scale (dark mode, blue-shifted 264°)
-    1-2: App backgrounds | 3-4: Component backgrounds
-    5-6: Borders | 7-8: Borders (hover) | 9-10: Solid | 11-12: Text
-  */
-  --gray-1: oklch(0.115 0.004 264);
-  --gray-2: oklch(0.14 0.005 264);
-  --gray-3: oklch(0.145 0.007 264);
-  --gray-4: oklch(0.175 0.008 264);
-  --gray-5: oklch(0.215 0.010 264);
-  --gray-6: oklch(0.265 0.011 264);
-  --gray-7: oklch(0.335 0.011 264);
-  --gray-8: oklch(0.42 0.010 264);
-  --gray-9: oklch(0.50 0.008 264);
-  --gray-10: oklch(0.58 0.006 264);
-  --gray-11: oklch(0.72 0.004 264);
-  --gray-12: oklch(0.93 0 0);
-
-  /* Near-black canvas, lifted surfaces */
-  --background: var(--gray-1);
-  --foreground: var(--gray-12);
-  --card: var(--gray-3);
-  --card-foreground: var(--gray-12);
-  --popover: var(--gray-3);
-  --popover-foreground: var(--gray-12);
-  /* Same blueprint blue as light mode (logo / favicon) */
-  --primary: var(--brand-blueprint);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: var(--gray-4);
-  --secondary-foreground: var(--gray-12);
-  --muted: var(--gray-4);
-  --muted-foreground: var(--gray-11);
-  --accent: var(--gray-5);
-  --accent-foreground: var(--gray-12);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: var(--gray-5);
-  --input: var(--gray-5);
-  --ring: color-mix(in srgb, var(--brand-blueprint) 45%, transparent);
-  --heritage: oklch(0.78 0.15 85);
-  --heritage-foreground: oklch(0.12 0.03 85);
-  --success: oklch(0.72 0.16 160);
-  --success-foreground: oklch(0.12 0.03 160);
-  --caution: oklch(0.78 0.17 75);
-  --caution-foreground: oklch(0.15 0.04 75);
-  --attention: oklch(0.68 0.19 15);
-  --attention-foreground: oklch(0.985 0 0);
-  --technical: oklch(0.62 0.19 290);
-  --technical-foreground: oklch(0.985 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.09 0.006 264);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: var(--brand-blueprint);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.16 0.008 264);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 6%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
 
 @layer base {
   * {
@@ -243,7 +192,7 @@
     text-rendering: optimizeLegibility;
   }
   ::selection {
-    background: oklch(0.62 0.2 262 / 0.28);
+    background: var(--highlight);
     color: var(--foreground);
   }
   code, pre, kbd, samp {
@@ -307,51 +256,6 @@
   .border-gray-8 { border-color: var(--gray-8); }
 }
 
-/*
-  Surface contrast lift (dark mode)
-  ---------------------------------
-  The site is locked into `.dark`. Hundreds of cards use bg-foreground/[0.01–0.03]
-  (1–3% white over a near-black canvas) plus border-foreground/8–12 — patterns that
-  read "subtle" in design tools but visually disappear on real dark surfaces.
-
-  These overrides keep the spec-style class names but bump their effective values
-  in dark mode so containers actually read as containers. Specificity is bumped
-  via the `.dark &` ancestor so they reliably beat Tailwind's base utilities
-  without `!important`.
-*/
-@layer utilities {
-  .dark .bg-foreground\/\[0\.01\] {
-    background-color: color-mix(in oklab, var(--foreground) 4%, transparent);
-  }
-  .dark .bg-foreground\/\[0\.02\] {
-    background-color: color-mix(in oklab, var(--foreground) 5.5%, transparent);
-  }
-  .dark .bg-foreground\/\[0\.03\] {
-    background-color: color-mix(in oklab, var(--foreground) 7%, transparent);
-  }
-  .dark .bg-foreground\/\[0\.04\] {
-    background-color: color-mix(in oklab, var(--foreground) 8%, transparent);
-  }
-  .dark .bg-foreground\/\[0\.06\] {
-    background-color: color-mix(in oklab, var(--foreground) 10%, transparent);
-  }
-
-  .dark .border-foreground\/8 {
-    border-color: color-mix(in oklab, var(--foreground) 14%, transparent);
-  }
-  .dark .border-foreground\/10 {
-    border-color: color-mix(in oklab, var(--foreground) 16%, transparent);
-  }
-  .dark .border-foreground\/12 {
-    border-color: color-mix(in oklab, var(--foreground) 18%, transparent);
-  }
-  .dark .border-foreground\/15 {
-    border-color: color-mix(in oklab, var(--foreground) 21%, transparent);
-  }
-  .dark .border-foreground\/18 {
-    border-color: color-mix(in oklab, var(--foreground) 24%, transparent);
-  }
-}
 
 /* Container — slightly more air */
 @layer components {
@@ -387,56 +291,23 @@
     Scoped utilities; keep the rest of the app on default tokens.
   */
   .brand2-surface {
-    @apply rounded-xl border border-foreground/10 bg-card/90 backdrop-blur-sm;
-    box-shadow:
-      0 4px 24px oklch(0 0 0 / 0.22),
-      0 0 0 1px oklch(1 0 0 / 0.03) inset;
+    @apply rounded-xl border border-border bg-card;
   }
   .brand2-surface-interactive {
-    @apply rounded-xl border border-foreground/10 bg-card/90 backdrop-blur-sm transition-[transform,box-shadow,border-color] duration-[260ms] motion-reduce:transition-none;
-    box-shadow:
-      0 4px 24px oklch(0 0 0 / 0.22),
-      0 0 0 1px oklch(1 0 0 / 0.03) inset;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    @apply rounded-xl border border-border bg-card transition-[border-color] duration-[160ms] motion-reduce:transition-none;
   }
   @media (hover: hover) and (pointer: fine) {
     .brand2-surface-interactive:hover {
-      @apply border-foreground/18;
-      transform: translateY(-4px);
-      box-shadow:
-        0 16px 48px oklch(0 0 0 / 0.28),
-        0 0 40px color-mix(in oklch, var(--brand-blueprint) 12%, transparent),
-        0 0 0 1px oklch(1 0 0 / 0.04) inset;
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .brand2-surface-interactive:hover {
-      transform: none;
+      border-color: var(--border-strong);
     }
   }
 
   .brand2-featured-shell {
-    @apply rounded-xl p-px shadow-[0_8px_36px_oklch(0_0_0/0.3)];
-    background: linear-gradient(
-      135deg,
-      color-mix(in oklch, var(--brand-blueprint) 35%, transparent),
-      color-mix(in oklch, var(--foreground) 12%, transparent),
-      color-mix(in oklch, var(--technical) 25%, transparent)
-    );
+    @apply rounded-xl p-px;
+    background: var(--foreground);
   }
   .brand2-featured-inner {
-    @apply flex h-full flex-col rounded-[11px] bg-card/95 p-8 backdrop-blur-sm transition-[transform] duration-300 motion-reduce:transition-none;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  @media (hover: hover) and (pointer: fine) {
-    .brand2-featured-shell:hover .brand2-featured-inner {
-      transform: translateY(-4px);
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .brand2-featured-shell:hover .brand2-featured-inner {
-      transform: none;
-    }
+    @apply flex h-full flex-col rounded-[11px] bg-card p-8;
   }
 
   /* Gradient border — recommended / featured card variant
@@ -453,13 +324,8 @@
     z-index: -1;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(
-      135deg,
-      color-mix(in oklch, var(--brand-blueprint) 55%, transparent),
-      color-mix(in oklch, var(--foreground) 15%, transparent) 40%,
-      color-mix(in oklch, var(--technical) 40%, transparent)
-    );
-    /* Mask clips gradient to border only */
+    background: var(--foreground);
+    /* Mask clips the ink to the border only */
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
@@ -478,33 +344,19 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* Divider with glow */
+  /* Divider: an ink rule */
   .brand2-divider {
     height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      oklch(1 0 0 / 0.08) 15%,
-      oklch(1 0 0 / 0.18) 35%,
-      oklch(1 0 0 / 0.25) 50%,
-      oklch(1 0 0 / 0.18) 65%,
-      oklch(1 0 0 / 0.08) 85%,
-      transparent 100%
-    );
+    background: var(--border-strong);
   }
   .brand2-divider-dot {
     @apply w-2 h-2 rounded-full;
-    background: var(--brand-blueprint);
-    box-shadow:
-      0 0 0 2px oklch(0.62 0.21 260 / 0.3),
-      0 0 20px oklch(0.62 0.21 260 / 0.7),
-      0 0 40px oklch(0.62 0.21 260 / 0.4);
+    background: var(--foreground);
   }
 
   /* Overlay backdrop — shared by sheet/dialog/alert shells */
   .brand2-overlay-backdrop {
-    background: oklch(0 0 0 / 0.6);
-    backdrop-filter: blur(2px);
+    background: color-mix(in srgb, var(--foreground) 40%, transparent);
   }
 
   /* Stagger animation — Geist-subtle: almost imperceptible */
@@ -595,66 +447,46 @@
     .group:hover .brand2-arrow-nudge { transform: none; }
   }
 
-  /* Focus ring with glow */
+  /* Focus ring: offset ring, no glow */
   .brand2-focus:focus-visible {
     outline: none;
     box-shadow:
       0 0 0 2px var(--background),
-      0 0 0 4px var(--brand-blueprint),
-      0 0 18px oklch(0.55 0.2 250 / 0.28);
+      0 0 0 4px var(--link);
   }
 
-  /* Material ladder — Geist-inspired elevation presets */
+  /* Material ladder on paper: no elevation. Resting surfaces get a rule, floating ones a heavier ink rule. */
   .brand2-material-base {
     @apply rounded-md border bg-card;
-    border-color: color-mix(in oklch, var(--foreground) 10%, transparent);
-    box-shadow: 0 1px 1px oklch(0 0 0 / 0.12);
+    border-color: var(--border);
   }
   .brand2-material-small {
     @apply rounded-md border bg-card;
-    border-color: color-mix(in oklch, var(--foreground) 11%, transparent);
-    box-shadow:
-      0 1px 2px oklch(0 0 0 / 0.12),
-      0 0 0 1px oklch(1 0 0 / 0.02) inset;
+    border-color: var(--border);
   }
   .brand2-material-medium {
     @apply rounded-xl border bg-card;
-    border-color: color-mix(in oklch, var(--foreground) 12%, transparent);
-    box-shadow:
-      0 8px 28px oklch(0 0 0 / 0.2),
-      0 0 0 1px oklch(1 0 0 / 0.03) inset;
+    border-color: var(--border-strong);
   }
   .brand2-material-large {
     @apply rounded-xl border bg-card;
-    border-color: color-mix(in oklch, var(--foreground) 13%, transparent);
-    box-shadow:
-      0 14px 40px oklch(0 0 0 / 0.28),
-      0 0 36px color-mix(in oklch, var(--brand-blueprint) 11%, transparent),
-      0 0 0 1px oklch(1 0 0 / 0.04) inset;
+    border-color: var(--border-strong);
   }
   .brand2-material-tooltip {
     @apply rounded-md border bg-card px-3 py-2;
-    border-color: color-mix(in oklch, var(--foreground) 12%, transparent);
-    box-shadow: 0 10px 24px oklch(0 0 0 / 0.22);
+    border-color: var(--foreground);
   }
   .brand2-material-menu {
     @apply rounded-xl border bg-card p-3;
-    border-color: color-mix(in oklch, var(--foreground) 12%, transparent);
-    box-shadow: 0 18px 40px oklch(0 0 0 / 0.26);
+    border-color: var(--foreground);
   }
   .brand2-material-modal {
     @apply rounded-xl border bg-card p-6;
-    border-color: color-mix(in oklch, var(--foreground) 13%, transparent);
-    box-shadow:
-      0 24px 60px oklch(0 0 0 / 0.32),
-      0 0 0 1px oklch(1 0 0 / 0.04) inset;
+    border-color: var(--foreground);
   }
   .brand2-material-fullscreen {
     @apply rounded-2xl border bg-card p-6;
-    border-color: color-mix(in oklch, var(--foreground) 14%, transparent);
-    box-shadow:
-      0 28px 80px oklch(0 0 0 / 0.38),
-      0 0 0 1px oklch(1 0 0 / 0.05) inset;
+    border-color: var(--foreground);
   }
 
   /* Typography semantics — label vs copy */
@@ -711,67 +543,56 @@
   /* Form anatomy helpers */
   .brand2-input {
     @apply h-10 w-full rounded-lg border px-3 text-sm outline-none transition-[border-color,box-shadow,background-color] duration-150;
-    background: color-mix(in oklch, var(--gray-3) 85%, transparent);
-    border-color: color-mix(in oklch, var(--foreground) 10%, transparent);
-    color: var(--gray-12);
+    background: var(--background);
+    border-color: var(--border);
+    color: var(--foreground);
   }
   .brand2-input::placeholder {
-    color: color-mix(in oklch, var(--foreground) 46%, transparent);
+    color: var(--muted-foreground);
   }
   .brand2-input:hover {
-    border-color: color-mix(in oklch, var(--foreground) 16%, transparent);
+    border-color: var(--border-strong);
   }
   .brand2-input:focus-visible {
-    border-color: color-mix(in oklch, var(--brand-blueprint) 78%, white 22%);
+    border-color: var(--link);
     box-shadow:
-      0 0 0 2px var(--gray-1),
-      0 0 0 4px color-mix(in oklch, var(--brand-blueprint) 75%, transparent),
-      0 0 14px oklch(0.62 0.2 262 / 0.2);
+      0 0 0 2px var(--background),
+      0 0 0 4px var(--link);
   }
   .brand2-textarea {
     @apply h-24 w-full rounded-lg border px-3 py-2.5 text-sm outline-none transition-[border-color,box-shadow,background-color] duration-150;
-    background: color-mix(in oklch, var(--gray-3) 85%, transparent);
-    border-color: color-mix(in oklch, var(--foreground) 10%, transparent);
-    color: var(--gray-12);
+    background: var(--background);
+    border-color: var(--border);
+    color: var(--foreground);
     resize: vertical;
     min-height: 6rem;
   }
   .brand2-textarea::placeholder {
-    color: color-mix(in oklch, var(--foreground) 46%, transparent);
+    color: var(--muted-foreground);
   }
   .brand2-textarea:hover {
-    border-color: color-mix(in oklch, var(--foreground) 16%, transparent);
+    border-color: var(--border-strong);
   }
   .brand2-textarea:focus-visible {
-    border-color: color-mix(in oklch, var(--brand-blueprint) 78%, white 22%);
+    border-color: var(--link);
     box-shadow:
-      0 0 0 2px var(--gray-1),
-      0 0 0 4px color-mix(in oklch, var(--brand-blueprint) 75%, transparent),
-      0 0 14px oklch(0.62 0.2 262 / 0.2);
+      0 0 0 2px var(--background),
+      0 0 0 4px var(--link);
   }
   .brand2-kbd {
     @apply inline-flex min-h-5 items-center rounded-md border px-1.5 py-0.5 text-[10px] font-medium;
-    border-color: color-mix(in oklch, var(--foreground) 14%, transparent);
-    background: color-mix(in oklch, var(--gray-3) 80%, transparent);
-    color: color-mix(in oklch, var(--foreground) 74%, transparent);
+    border-color: var(--border-strong);
+    background: var(--muted);
+    color: var(--foreground-soft);
   }
 
-  /* Primary button with inset highlight — Geist-subtle */
+  /* Primary button: solid ink (bg-primary), a nudge on hover, no shadow */
   .brand2-btn-primary {
-    box-shadow:
-      0 1px 2px oklch(0 0 0 / 0.1),
-      inset 0 1px 0 oklch(1 0 0 / 0.1);
-    transition:
-      transform 150ms ease,
-      box-shadow 150ms ease;
+    transition: transform 150ms ease;
   }
   @media (hover: hover) and (pointer: fine) {
     .brand2-btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow:
-        0 4px 12px oklch(0 0 0 / 0.15),
-        0 0 0 1px oklch(0.62 0.2 262 / 0.1),
-        inset 0 1px 0 oklch(1 0 0 / 0.12);
     }
   }
   .brand2-btn-primary:active {
@@ -798,34 +619,34 @@
 @layer components {
   .prose {
     @apply leading-[1.75] text-[0.95rem];
-    /* Typography plugin: map neutral longform to semantic tokens (not Tailwind gray ramps) */
-    --tw-prose-body: color-mix(in srgb, var(--foreground) 72%, transparent);
+    /* Typography plugin: ink body, muted furniture, link blue (no opacity: paper needs solid colours) */
+    --tw-prose-body: var(--foreground);
     --tw-prose-headings: var(--foreground);
-    --tw-prose-lead: color-mix(in srgb, var(--foreground) 78%, transparent);
-    --tw-prose-links: var(--primary);
+    --tw-prose-lead: var(--foreground-soft);
+    --tw-prose-links: var(--link);
     --tw-prose-bold: var(--foreground);
-    --tw-prose-counters: color-mix(in srgb, var(--foreground) 55%, transparent);
-    --tw-prose-bullets: color-mix(in srgb, var(--foreground) 48%, transparent);
-    --tw-prose-hr: color-mix(in srgb, var(--foreground) 14%, transparent);
-    --tw-prose-quotes: color-mix(in srgb, var(--foreground) 82%, transparent);
-    --tw-prose-quote-borders: color-mix(in srgb, var(--foreground) 14%, transparent);
-    --tw-prose-captions: color-mix(in srgb, var(--foreground) 52%, transparent);
+    --tw-prose-counters: var(--muted-foreground);
+    --tw-prose-bullets: var(--muted-foreground);
+    --tw-prose-hr: var(--border);
+    --tw-prose-quotes: var(--foreground-soft);
+    --tw-prose-quote-borders: var(--border-strong);
+    --tw-prose-captions: var(--muted-foreground);
     --tw-prose-code: var(--foreground);
     --tw-prose-pre-code: var(--foreground);
     --tw-prose-pre-bg: var(--muted);
-    --tw-prose-th-borders: color-mix(in srgb, var(--foreground) 16%, transparent);
-    --tw-prose-td-borders: color-mix(in srgb, var(--foreground) 10%, transparent);
+    --tw-prose-th-borders: var(--border-strong);
+    --tw-prose-td-borders: var(--border);
   }
   .prose h2 {
-    @apply text-2xl font-medium mt-10 mb-4 text-foreground/90;
+    @apply text-2xl font-medium mt-10 mb-4 text-foreground;
     letter-spacing: var(--tracking-cinematic);
   }
   .prose h3 {
-    @apply text-lg font-medium mt-8 mb-3 text-foreground/90;
+    @apply text-lg font-medium mt-8 mb-3 text-foreground;
     letter-spacing: var(--tracking-cinematic);
   }
   .prose p {
-    @apply mb-4 text-foreground/60;
+    @apply mb-4 text-foreground;
   }
   .prose ul {
     @apply mb-4 ml-6 list-disc space-y-1;
@@ -834,16 +655,16 @@
     @apply mb-4 ml-6 list-decimal space-y-1;
   }
   .prose li {
-    @apply text-foreground/55;
+    @apply text-foreground;
   }
   .prose strong {
     @apply font-semibold text-foreground;
   }
   .prose code {
-    @apply px-1.5 py-0.5 rounded-sm border border-border/60 bg-muted/40 text-sm font-mono;
+    @apply px-1.5 py-0.5 rounded-sm border border-border bg-muted text-sm font-mono;
   }
   .prose a {
-    @apply text-primary underline underline-offset-4 decoration-primary/40 hover:text-primary/85;
+    @apply text-link underline underline-offset-4 decoration-link/40 hover:decoration-link;
   }
 }
 
@@ -853,13 +674,12 @@
 */
 @layer components {
 
-  /* Focus ring — Geist style: offset ring + primary glow */
+  /* Focus ring — offset ring, no glow */
   .geist-focus:focus-visible {
     outline: none;
     box-shadow:
-      0 0 0 2px var(--gray-1),
-      0 0 0 4px var(--brand-blueprint),
-      0 0 12px oklch(0.62 0.2 262 / 0.2);
+      0 0 0 2px var(--background),
+      0 0 0 4px var(--link);
   }
 
   /* Error state — input or field */

@@ -25,7 +25,7 @@ export default function DirectoryError({
       <main className="flex-1 container py-16">
         <div className="text-center max-w-md mx-auto">
           <AlertTriangle className="h-16 w-16 text-muted-foreground mx-auto mb-6" />
-          <h1 className="text-3xl font-medium tracking-cinematic text-foreground/90 mb-4">Directory Unavailable</h1>
+          <h1 className="text-3xl font-medium tracking-cinematic text-foreground mb-4">Directory Unavailable</h1>
           <p className="text-muted-foreground mb-8">
             We couldn&apos;t load the privacy tools directory just now. This is usually
             temporary &mdash; try again in a moment.

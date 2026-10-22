@@ -94,14 +94,14 @@ export default async function AboutPage() {
             <div className="mx-auto mb-8 h-40 w-40">
               <LogoBlueprint />
             </div>
-            <span className="mb-5 inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary/90">
+            <span className="mb-5 inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
               About Default Privacy
             </span>
-            <h1 className="brand2-hero-animate text-4xl font-extralight tracking-tight text-foreground/92 sm:text-5xl">
+            <h1 className="brand2-hero-animate text-4xl font-extralight tracking-tight text-foreground sm:text-5xl">
               A privacy directory that{" "}
               <span className="font-light text-primary">money can&apos;t move.</span>
             </h1>
-            <p className="brand2-hero-animate-delay-1 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-foreground/58">
+            <p className="brand2-hero-animate-delay-1 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Most &ldquo;best privacy tool&rdquo; lists are paid placements. Default Privacy is an
               independent, vetted directory of {toolsLabel} privacy tools — ranked on merit, never on who
               pays — plus free tools to check your own exposure and guides to take your privacy back.
@@ -124,8 +124,8 @@ export default async function AboutPage() {
       {/* What you get */}
       <section className="container py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">What you get</p>
-          <h2 className="max-w-3xl text-balance text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary">What you get</p>
+          <h2 className="max-w-3xl text-balance text-3xl font-extralight tracking-tight text-foreground md:text-4xl">
             The knowledge and tools to defend your own privacy.
           </h2>
           <div className="brand2-stagger mt-12 grid gap-6 md:grid-cols-3">
@@ -137,11 +137,11 @@ export default async function AboutPage() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
                       <Icon className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
                     </div>
-                    <span className="shrink-0 font-mono text-[11px] tabular-nums text-foreground/30">{c.n}</span>
+                    <span className="shrink-0 font-mono text-[11px] tabular-nums text-muted-foreground">{c.n}</span>
                   </div>
-                  <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">{c.h}</h3>
-                  <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">{c.p}</p>
-                  <p className="mt-4 text-[13px] text-foreground/45">{c.note}</p>
+                  <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">{c.h}</h3>
+                  <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">{c.p}</p>
+                  <p className="mt-4 text-[13px] text-muted-foreground">{c.note}</p>
                 </div>
               )
             })}
@@ -153,8 +153,8 @@ export default async function AboutPage() {
       <section className="relative border-t border-foreground/10 bg-foreground/[0.02]">
         <div className="container py-16 md:py-24">
           <div className="mx-auto max-w-3xl">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">Principles</p>
-            <h2 className="mb-8 text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
+            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary">Principles</p>
+            <h2 className="mb-8 text-3xl font-extralight tracking-tight text-foreground md:text-4xl">
               How we operate
             </h2>
             <div className="space-y-5">
@@ -169,18 +169,18 @@ export default async function AboutPage() {
                       <Icon className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
                     </div>
                     <div>
-                      <p className="text-base font-medium tracking-tight text-foreground/88">{pr.h}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-foreground/56">{pr.p}</p>
+                      <p className="text-base font-medium tracking-tight text-foreground">{pr.h}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{pr.p}</p>
                     </div>
                   </div>
                 )
               })}
             </div>
-            <p id="contact" className="mt-8 scroll-mt-24 text-sm leading-relaxed text-foreground/56">
+            <p id="contact" className="mt-8 scroll-mt-24 text-sm leading-relaxed text-muted-foreground">
               Questions, corrections or a tool to suggest? Email{" "}
               <a
                 href="mailto:privacy@defaultprivacy.com"
-                className="brand2-focus rounded-sm text-foreground/70 underline underline-offset-2 hover:text-foreground"
+                className="brand2-focus rounded-sm text-foreground-soft underline underline-offset-2 hover:text-foreground"
               >
                 privacy@defaultprivacy.com
               </a>
@@ -197,10 +197,10 @@ export default async function AboutPage() {
             <div className="absolute left-[50%] top-[30%] h-[300px] w-[500px] -translate-x-1/2 rounded-full bg-primary/12 blur-[100px]" />
           </div>
           <div className="relative z-10">
-            <h2 className="mb-4 text-3xl font-extralight tracking-tight text-foreground/90 md:text-4xl">
+            <h2 className="mb-4 text-3xl font-extralight tracking-tight text-foreground md:text-4xl">
               Find the tools that keep you private.
             </h2>
-            <p className="mx-auto mb-8 max-w-xl leading-relaxed text-foreground/56">
+            <p className="mx-auto mb-8 max-w-xl leading-relaxed text-muted-foreground">
               {toolsLabel} vetted privacy tools, no paid placements — start browsing, or run a free check on
               your own exposure.
             </p>

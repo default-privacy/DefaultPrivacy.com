@@ -36,8 +36,8 @@ export default function GlobalError({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "oklch(0.115 0.004 264)",
-          color: "oklch(0.93 0 0)",
+          backgroundColor: "#fdfcfa",
+          color: "#191919",
           fontFamily:
             "'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif",
           padding: "1.5rem",
@@ -54,7 +54,7 @@ export default function GlobalError({
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              border: "1px solid oklch(0.265 0.011 264)",
+              border: "1px solid #cbc5bb",
               color: "#3b82f6",
               fontSize: "1.75rem",
               lineHeight: 1,
@@ -74,7 +74,7 @@ export default function GlobalError({
           </h1>
           <p
             style={{
-              color: "oklch(0.72 0.004 264)",
+              color: "#3e3c39",
               lineHeight: 1.6,
               margin: "0 0 2rem",
             }}
@@ -91,8 +91,8 @@ export default function GlobalError({
               padding: "0.625rem 1.5rem",
               fontSize: "0.95rem",
               fontWeight: 500,
-              backgroundColor: "#3b82f6",
-              color: "#fff",
+              backgroundColor: "#191919",
+              color: "#fdfcfa",
             }}
           >
             Try Again

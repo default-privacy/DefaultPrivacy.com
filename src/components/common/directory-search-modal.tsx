@@ -130,7 +130,7 @@ export function DirectorySearchModal({
       >
         <div className="relative border-b border-foreground/10">
           <SearchIcon
-            className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground/45"
+            className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
             aria-hidden
           />
           <input
@@ -140,14 +140,14 @@ export function DirectorySearchModal({
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Search privacy tools…"
-            className="h-12 w-full bg-transparent pl-11 pr-11 text-sm text-foreground placeholder:text-foreground/40 focus:outline-none"
+            className="h-12 w-full bg-transparent pl-11 pr-11 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
             autoComplete="off"
             spellCheck={false}
           />
           <button
             type="button"
             onClick={onClose}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-foreground/45 brand2-focus hover:bg-foreground/[0.06] hover:text-foreground"
+            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-1 text-muted-foreground brand2-focus hover:bg-foreground/[0.06] hover:text-foreground"
             aria-label="Close"
           >
             <XIcon className="h-4 w-4" />
@@ -156,19 +156,19 @@ export function DirectorySearchModal({
 
         <div className="max-h-[min(50vh,360px)] overflow-y-auto p-2">
           {query.length < 2 && (
-            <p className="px-3 py-6 text-center text-[12px] text-foreground/45">
+            <p className="px-3 py-6 text-center text-[12px] text-muted-foreground">
               Type at least 2 characters, or press Enter to open the full directory.
             </p>
           )}
 
           {query.length >= 2 && isLoading && (
-            <p className="px-3 py-4 text-center text-[12px] text-foreground/45">
+            <p className="px-3 py-4 text-center text-[12px] text-muted-foreground">
               Searching…
             </p>
           )}
 
           {query.length >= 2 && !isLoading && results.length === 0 && (
-            <p className="px-3 py-4 text-center text-[12px] text-foreground/45">
+            <p className="px-3 py-4 text-center text-[12px] text-muted-foreground">
               No tools found.{" "}
               <button
                 type="button"
@@ -203,7 +203,7 @@ export function DirectorySearchModal({
                         className="h-5 w-5 object-contain"
                       />
                     ) : (
-                      <span className="text-[10px] font-medium text-foreground/50">
+                      <span className="text-[10px] font-medium text-muted-foreground">
                         {tool.name.slice(0, 1)}
                       </span>
                     )}
@@ -213,7 +213,7 @@ export function DirectorySearchModal({
                       {tool.name}
                     </div>
                     {tool.tagline && (
-                      <div className="truncate text-[11px] text-foreground/50">
+                      <div className="truncate text-[11px] text-muted-foreground">
                         {tool.tagline}
                       </div>
                     )}
@@ -224,12 +224,12 @@ export function DirectorySearchModal({
           </ul>
         </div>
 
-        <div className="flex items-center justify-between border-t border-foreground/8 px-3 py-2 text-[10px] text-foreground/40">
+        <div className="flex items-center justify-between border-t border-foreground/8 px-3 py-2 text-[10px] text-muted-foreground">
           <span>↑↓ navigate · ↵ open · esc close</span>
           {query.trim().length >= 2 && (
             <button
               type="button"
-              className="underline brand2-focus hover:text-foreground/60"
+              className="underline brand2-focus hover:text-foreground-soft"
               onClick={() => goToDirectory(query.trim())}
             >
               View all in directory

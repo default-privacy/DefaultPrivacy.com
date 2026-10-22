@@ -43,7 +43,7 @@ export default async function ToolsPage({
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-medium tracking-tight text-foreground md:text-[28px]">Privacy Tools Directory</h1>
           </div>
-          <p className="mt-2 text-[15px] text-foreground/50">
+          <p className="mt-2 text-[15px] text-muted-foreground">
             Browse our curated collection of privacy-focused tools and services.
           </p>
           <PartnerRevenueDisclosure variant="directory-note" className="mt-3 max-w-2xl" />

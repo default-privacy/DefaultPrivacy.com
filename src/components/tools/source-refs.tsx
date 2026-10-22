@@ -7,7 +7,7 @@ export function SourceRefs({ urls, index }: { urls: string[] | undefined; index:
         <a
           key={u}
           href={`#source-${index(u)}`}
-          className="px-px text-foreground/50 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
+          className="px-px text-muted-foreground underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
           aria-label={`Source ${index(u)}`}
         >
           [{index(u)}]

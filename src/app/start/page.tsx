@@ -28,8 +28,8 @@ async function resolveAll(items: Item[]): Promise<Resolved[]> {
   return (await Promise.all(items.map(resolve))).filter((r): r is Resolved => r !== null)
 }
 
-const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50"
-const body = "text-sm leading-relaxed text-foreground/70"
+const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground"
+const body = "text-sm leading-relaxed text-foreground-soft"
 const link = "underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
 
 function ItemList({ items }: { items: Resolved[] }) {
@@ -37,10 +37,10 @@ function ItemList({ items }: { items: Resolved[] }) {
     <ul className="mt-3 space-y-2">
       {items.map((i) => (
         <li key={i.href} className="text-sm leading-relaxed">
-          <Link href={i.href} className={`${link} text-foreground/85`}>
+          <Link href={i.href} className={`${link} text-foreground`}>
             {i.title}
           </Link>{" "}
-          <span className="font-mono text-[10px] uppercase tracking-wider text-foreground/40">{i.kind}</span>
+          <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">{i.kind}</span>
         </li>
       ))}
     </ul>
@@ -77,7 +77,7 @@ export default async function StartPage() {
             {situations.map((s) =>
               s.resolved.length === 0 ? null : (
                 <div key={s.name}>
-                  <h3 className="text-base font-medium text-foreground/90">{s.name}</h3>
+                  <h3 className="text-base font-medium text-foreground">{s.name}</h3>
                   <p className={`mt-1 ${body}`}>{s.blurb}</p>
                   <ItemList items={s.resolved} />
                 </div>

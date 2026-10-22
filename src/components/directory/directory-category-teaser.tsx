@@ -11,10 +11,10 @@ import { getToolCategoryTagMap, getToolsInCategoryNames } from "@/lib/db/queries
 export const DATA_BROKER_DIRECTORY_CATEGORIES = ["Data Broker Redaction"] as const
 
 const chipClassName =
-  "inline-flex items-center rounded-full border border-foreground/10 bg-background/45 px-3.5 py-1.5 text-xs font-medium text-foreground/80 shadow-none transition-colors brand2-focus hover:border-foreground/16 hover:bg-foreground/[0.03]"
+  "inline-flex items-center rounded-full border border-foreground/10 bg-background/45 px-3.5 py-1.5 text-xs font-medium text-foreground shadow-none transition-colors brand2-focus hover:border-foreground/16 hover:bg-foreground/[0.03]"
 
 const viewAllChipClassName =
-  "inline-flex items-center gap-1 rounded-full border border-dashed border-foreground/14 bg-transparent px-3.5 py-1.5 text-xs font-medium text-foreground/55 shadow-none transition-colors brand2-focus hover:border-foreground/22 hover:text-foreground/85"
+  "inline-flex items-center gap-1 rounded-full border border-dashed border-foreground/14 bg-transparent px-3.5 py-1.5 text-xs font-medium text-muted-foreground shadow-none transition-colors brand2-focus hover:border-foreground/22 hover:text-foreground"
 
 export type DirectoryCategoryTeaserProps = {
   categoryNames: readonly string[] | string[]
@@ -82,9 +82,9 @@ export async function DirectoryCategoryTeaser({
       <div className="relative overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.02]">
         <div className="relative z-10 px-6 py-6 md:px-8 md:py-7 space-y-6">
           <div>
-            <p className="mb-2 text-xs font-mono text-foreground/58 uppercase tracking-[0.3em]">{eyebrow}</p>
-            <h2 className="mb-2 text-2xl font-medium tracking-cinematic text-foreground/90 md:text-3xl">{title}</h2>
-            <p className="text-foreground/50 max-w-2xl">{description}</p>
+            <p className="mb-2 text-xs font-mono text-muted-foreground uppercase tracking-[0.3em]">{eyebrow}</p>
+            <h2 className="mb-2 text-2xl font-medium tracking-cinematic text-foreground md:text-3xl">{title}</h2>
+            <p className="text-muted-foreground max-w-2xl">{description}</p>
           </div>
 
           {showCategoryChips && names.length > 0 && (

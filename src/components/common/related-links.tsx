@@ -30,7 +30,7 @@ export function RelatedLinks({
         </div>
         <div>
           <h3 className="text-[14px] font-medium text-success">{title}</h3>
-          {description && <p className="text-[12px] text-foreground/45">{description}</p>}
+          {description && <p className="text-[12px] text-muted-foreground">{description}</p>}
         </div>
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
@@ -38,7 +38,7 @@ export function RelatedLinks({
           <Link
             key={target.href}
             href={target.href}
-            className="brand2-focus group flex items-center justify-between gap-2 rounded-lg border border-success/20 bg-background px-3 py-2 text-[13px] text-foreground/75 transition-colors hover:border-success/40 hover:bg-success/10 hover:text-foreground"
+            className="brand2-focus group flex items-center justify-between gap-2 rounded-lg border border-success/20 bg-background px-3 py-2 text-[13px] text-foreground-soft transition-colors hover:border-success/40 hover:bg-success/10 hover:text-foreground"
           >
             <span>{target.label}</span>
             <ArrowRight className="h-3.5 w-3.5 shrink-0 text-success/60 brand2-arrow-nudge" aria-hidden="true" />

@@ -51,8 +51,8 @@ type WhoAmI = {
 function Field({ label, value, wide = false }: { label: string; value: string | null; wide?: boolean }) {
   return (
     <div className={`rounded-lg border border-foreground/8 bg-foreground/[0.01] p-3 ${wide ? "col-span-2 sm:col-span-3" : ""}`}>
-      <div className="brand2-label-12-mono text-foreground/40">{label}</div>
-      <div className={`mt-1 font-mono text-[14px] text-foreground/85 ${wide ? "break-all" : "truncate"}`}>
+      <div className="brand2-label-12-mono text-muted-foreground">{label}</div>
+      <div className={`mt-1 font-mono text-[14px] text-foreground ${wide ? "break-all" : "truncate"}`}>
         {value || "—"}
       </div>
     </div>
@@ -62,8 +62,8 @@ function Field({ label, value, wide = false }: { label: string; value: string | 
 function SectionHeader({ icon: Icon, title }: { icon: typeof Cpu; title: string }) {
   return (
     <div className="mb-3 flex items-center gap-2">
-      <Icon className="h-4 w-4 text-foreground/45" />
-      <h2 className="text-[15px] font-medium tracking-tight text-foreground/85">{title}</h2>
+      <Icon className="h-4 w-4 text-muted-foreground" />
+      <h2 className="text-[15px] font-medium tracking-tight text-foreground">{title}</h2>
     </div>
   )
 }
@@ -136,7 +136,7 @@ export function ExposureReadout() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-caution/70" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-caution" />
           </span>
-          <span className="brand2-label-12-mono text-foreground/45">
+          <span className="brand2-label-12-mono text-muted-foreground">
             {revealed ? "LIVE · READ FROM YOUR CONNECTION" : "READING YOUR CONNECTION…"}
           </span>
         </div>
@@ -147,12 +147,12 @@ export function ExposureReadout() {
               {revealed ? (
                 <span className="brand2-hero-animate">{geo!.ip}</span>
               ) : geoFailed ? (
-                <span className="text-foreground/35">unavailable</span>
+                <span className="text-muted-foreground">unavailable</span>
               ) : (
-                <span className="text-foreground/30">scanning…</span>
+                <span className="text-muted-foreground">scanning…</span>
               )}
             </div>
-            <p className="mt-2 text-[13px] text-foreground/50">
+            <p className="mt-2 text-[13px] text-muted-foreground">
               Sent to every website, ad network, and tracker you touch — automatically, with no
               login and no prompt.
             </p>
@@ -168,7 +168,7 @@ export function ExposureReadout() {
             <Field label="COORDINATES" value={coords} />
           </div>
           {geo && !geo.geoAvailable && (
-            <p className="text-[12px] text-foreground/40">
+            <p className="text-[12px] text-muted-foreground">
               Location is hidden here because you’re on localhost — it fills in on the live site.
             </p>
           )}
@@ -192,11 +192,11 @@ export function ExposureReadout() {
         <div className="overflow-hidden rounded-xl border border-foreground/12 bg-card p-5 sm:p-6">
           <div className="brand2-label-12-mono text-caution">FINGERPRINT</div>
           <div className="mt-1 font-mono text-2xl font-light tracking-tight text-foreground sm:text-3xl">
-            {s ? <span className="brand2-hero-animate">{s.fingerprintId}</span> : <span className="text-foreground/30">analyzing…</span>}
+            {s ? <span className="brand2-hero-animate">{s.fingerprintId}</span> : <span className="text-muted-foreground">analyzing…</span>}
           </div>
-          <p className="mt-2 max-w-2xl text-[13px] text-foreground/50">
+          <p className="mt-2 max-w-2xl text-[13px] text-muted-foreground">
             Built from your device’s quirks — GPU, canvas, audio, screen, language. It’s stable
-            across sites and <span className="text-foreground/75">survives clearing cookies and incognito</span>,
+            across sites and <span className="text-foreground-soft">survives clearing cookies and incognito</span>,
             so it can re-identify you without any login.
           </p>
           <Link href={fixHref("Fingerprint Protection")} className={FIX_LINK_CLASS}>
@@ -227,7 +227,7 @@ export function ExposureReadout() {
           ) : (
             <ShieldAlert className={`mt-0.5 h-5 w-5 shrink-0 ${rtcTone === "alert" ? "text-destructive" : "text-caution"}`} />
           )}
-          <p className="text-[13.5px] text-foreground/70">{det ? rtcMsg : "Checking for WebRTC leaks…"}</p>
+          <p className="text-[13.5px] text-foreground-soft">{det ? rtcMsg : "Checking for WebRTC leaks…"}</p>
         </div>
         <Link href={fixHref("Browser Extensions")} className={FIX_LINK_CLASS}>
           fix this — block WebRTC with an extension →

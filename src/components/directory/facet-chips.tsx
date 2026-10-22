@@ -35,7 +35,7 @@ export function FacetChips({ className }: { className?: string }) {
   const base =
     "rounded-full border px-3.5 py-1.5 text-[12px] font-medium transition-colors brand2-focus"
   const off =
-    "border-foreground/10 text-foreground/55 hover:border-foreground/25 hover:text-foreground/80"
+    "border-foreground/10 text-muted-foreground hover:border-foreground/25 hover:text-foreground"
   const on = "border-primary bg-primary text-primary-foreground"
 
   return (

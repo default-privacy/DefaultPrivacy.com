@@ -174,7 +174,7 @@ export default async function GuideDetailPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/guides"
-            className="brand2-focus inline-flex items-center gap-1 text-sm text-foreground/55 hover:text-foreground mb-6 rounded"
+            className="brand2-focus inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6 rounded"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Field Guide
@@ -183,7 +183,7 @@ export default async function GuideDetailPage({ params }: Props) {
           {/* Header */}
           <header className="mb-8">
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2.5 py-1">
+              <span className="text-[10px] font-mono text-muted-foreground border border-foreground/10 rounded-full px-2.5 py-1">
                 {guide.category}
               </span>
               <span className={`text-[10px] font-mono border rounded-full px-2.5 py-1 ${diff.bg} ${diff.color}`}>
@@ -191,15 +191,15 @@ export default async function GuideDetailPage({ params }: Props) {
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-medium tracking-cinematic text-foreground/90 mb-4">
+            <h1 className="text-3xl md:text-4xl font-medium tracking-cinematic text-foreground mb-4">
               {guide.title}
             </h1>
 
-            <p className="text-lg text-foreground/58 leading-relaxed mb-6">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               {guide.description}
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-foreground/45">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
                 {new Date(guide.publishedAt).toLocaleDateString("en-US", {
@@ -224,18 +224,18 @@ export default async function GuideDetailPage({ params }: Props) {
           {guide.relatedTools && guide.relatedTools.length > 0 && (
             <div className="mb-8 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6">
               <div className="flex items-center gap-2 mb-4">
-                <Layers className="h-4 w-4 text-foreground/65" aria-hidden="true" />
-                <h2 className="text-sm font-medium text-foreground/85">Related tools</h2>
+                <Layers className="h-4 w-4 text-foreground-soft" aria-hidden="true" />
+                <h2 className="text-sm font-medium text-foreground">Related tools</h2>
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
                 {guide.relatedTools.map((tool) => (
                   <Link
                     key={tool.href}
                     href={tool.href}
-                    className="brand2-focus group flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm text-foreground/75 hover:border-foreground/20 hover:text-foreground transition-colors"
+                    className="brand2-focus group flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm text-foreground-soft hover:border-foreground/20 hover:text-foreground transition-colors"
                   >
                     <span>{tool.name}</span>
-                    <ArrowRight className="h-3.5 w-3.5 text-foreground/40 brand2-arrow-nudge" aria-hidden="true" />
+                    <ArrowRight className="h-3.5 w-3.5 text-muted-foreground brand2-arrow-nudge" aria-hidden="true" />
                   </Link>
                 ))}
               </div>
@@ -246,9 +246,9 @@ export default async function GuideDetailPage({ params }: Props) {
 
           {/* Content */}
           <div
-            className="prose dark:prose-invert max-w-none
+            className="prose max-w-none
               prose-headings:scroll-mt-20
-              prose-a:text-foreground/85 prose-a:no-underline hover:prose-a:underline
+              prose-a:text-foreground prose-a:no-underline hover:prose-a:underline
               prose-code:before:content-none prose-code:after:content-none
               prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm
               prose-pre:bg-muted prose-pre:border prose-pre:border-foreground/10 prose-pre:rounded-xl
@@ -261,14 +261,14 @@ export default async function GuideDetailPage({ params }: Props) {
           {/* Tags */}
           {guide.tags.length > 0 && (
             <div className="mt-12 pt-6 border-t border-foreground/10">
-              <p className="text-[10px] font-mono text-foreground/45 uppercase tracking-[0.3em] mb-3">
+              <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.3em] mb-3">
                 Tags
               </p>
               <div className="flex flex-wrap gap-2">
                 {guide.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-mono text-foreground/55 border border-foreground/10 rounded-full px-2.5 py-1"
+                    className="text-xs font-mono text-muted-foreground border border-foreground/10 rounded-full px-2.5 py-1"
                   >
                     {tag}
                   </span>
@@ -281,11 +281,11 @@ export default async function GuideDetailPage({ params }: Props) {
             <div className="mt-12 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6">
               <div className="flex items-start gap-4">
                 <div className="p-2 rounded-lg bg-foreground/[0.06] border border-foreground/10 shrink-0">
-                  <Shield className="h-5 w-5 text-foreground/65" aria-hidden="true" />
+                  <Shield className="h-5 w-5 text-foreground-soft" aria-hidden="true" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-medium text-foreground/85 mb-1">Check what a site leaks</h3>
-                  <p className="text-sm text-foreground/55 mb-3">
+                  <h3 className="font-medium text-foreground mb-1">Check what a site leaks</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
                     Run the free privacy scanner to see any site&apos;s trackers, cookies, and fingerprinting.
                   </p>
                   <Button variant="outline" size="sm" asChild className="brand2-focus">

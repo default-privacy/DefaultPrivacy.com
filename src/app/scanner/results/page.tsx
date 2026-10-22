@@ -39,9 +39,9 @@ const GRADE_TEXT: Record<PrivacyGrade, string> = {
 const CATEGORY_TAG: Record<string, { label: string; cls: string }> = {
   analytics: { label: "ANALYTICS", cls: "bg-caution/15 text-caution" },
   advertising: { label: "ADVERTISING", cls: "bg-destructive/15 text-destructive" },
-  social: { label: "SOCIAL", cls: "bg-foreground/10 text-foreground/60" },
+  social: { label: "SOCIAL", cls: "bg-foreground/10 text-foreground-soft" },
   fingerprinting: { label: "FINGERPRINT", cls: "bg-technical/20 text-technical" },
-  unknown: { label: "OTHER", cls: "bg-foreground/10 text-foreground/50" },
+  unknown: { label: "OTHER", cls: "bg-foreground/10 text-muted-foreground" },
 }
 
 const titleCase = (slug: string) => slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())
@@ -56,7 +56,7 @@ async function ScanResults({ domain }: { domain: string }) {
           <AlertTriangle className="h-5 w-5" />
           <h2 className="text-[15px] font-medium">Scan failed</h2>
         </div>
-        <p className="mt-2 text-[13px] text-foreground/55">
+        <p className="mt-2 text-[13px] text-muted-foreground">
           {response.error || "We couldn't scan this website. It may be blocking our scanner or experiencing issues."}
         </p>
         <Button className="brand2-btn-primary mt-4" asChild>
@@ -100,7 +100,7 @@ async function ScanResults({ domain }: { domain: string }) {
     { label: "TRACKERS", value: String(trackerCount), tone: trackerCount > 0 ? "text-destructive" : "text-success" },
     { label: "3RD PARTIES", value: String(result.thirdPartyRequests.length), tone: "text-caution" },
     { label: "COOKIES", value: String(result.cookies.length), tone: "text-caution" },
-    { label: "FINGERPRINT", value: result.hasFingerprinting ? "ON" : "off", tone: result.hasFingerprinting ? "text-destructive" : "text-foreground/50" },
+    { label: "FINGERPRINT", value: result.hasFingerprinting ? "ON" : "off", tone: result.hasFingerprinting ? "text-destructive" : "text-muted-foreground" },
   ]
 
   const breakdown: { label: string; score: number }[] = [
@@ -129,7 +129,7 @@ async function ScanResults({ domain }: { domain: string }) {
           <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-caution" />
           <div>
             <h2 className="text-[14px] font-medium text-caution">Simulated result — not a real scan</h2>
-            <p className="mt-1 text-[13px] text-foreground/60">
+            <p className="mt-1 text-[13px] text-foreground-soft">
               Our live measurement server is offline, so these numbers are illustrative — not a real
               measurement of {domain}. Sharing is disabled until a live scan runs.
             </p>
@@ -147,14 +147,14 @@ async function ScanResults({ domain }: { domain: string }) {
           <span className="h-3 w-3 rounded-full bg-destructive/70" />
           <span className="h-3 w-3 rounded-full bg-caution/70" />
           <span className="h-3 w-3 rounded-full bg-success/70" />
-          <span className="ml-2 truncate font-mono text-[12.5px] text-foreground/40">scan://{domain}</span>
+          <span className="ml-2 truncate font-mono text-[12.5px] text-muted-foreground">scan://{domain}</span>
           <div className="ml-auto flex items-center gap-2">
             {!response.simulated && <ShareButton title={`Privacy scan of ${domain} — grade ${score.grade}`} />}
             <a
               href={`https://${domain}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden font-mono text-[12px] text-foreground/45 hover:text-foreground/70 sm:inline"
+              className="hidden font-mono text-[12px] text-muted-foreground hover:text-foreground-soft sm:inline"
             >
               visit ↗
             </a>
@@ -163,7 +163,7 @@ async function ScanResults({ domain }: { domain: string }) {
 
         <div className="space-y-6 p-4 font-mono sm:space-y-8 sm:p-8">
           {/* command line */}
-          <div className="break-all text-[12px] text-foreground/55 sm:text-[13px]">
+          <div className="break-all text-[12px] text-muted-foreground sm:text-[13px]">
             <span className="text-primary">$</span> privacy scan{" "}
             <span className="text-foreground">{domain}</span> --with-dnt --gpc
             <span className="ml-1 inline-block h-[15px] w-2 translate-y-[2px] animate-pulse bg-primary align-middle" />
@@ -187,18 +187,18 @@ async function ScanResults({ domain }: { domain: string }) {
                 >
                   {score.grade}
                 </span>
-                <span className="mt-1 text-[12px] tabular-nums text-foreground/40">{pct} / 100</span>
+                <span className="mt-1 text-[12px] tabular-nums text-muted-foreground">{pct} / 100</span>
               </div>
             </div>
 
             <div className="text-center sm:text-left">
-              <div className="text-[11px] tracking-[0.18em] text-foreground/35">[ VERDICT ]</div>
+              <div className="text-[11px] tracking-[0.18em] text-muted-foreground">[ VERDICT ]</div>
               <h1 className="mt-2 font-sans text-[clamp(1.5rem,6vw,2rem)] font-light leading-[1.1] tracking-tight text-foreground">
                 {verdict.pre}
                 <span className={`font-medium ${gradeText}`}>{verdict.emphasis}</span>
                 {verdict.post}
               </h1>
-              <p className="mt-3 text-[12.5px] text-foreground/50">
+              <p className="mt-3 text-[12.5px] text-muted-foreground">
                 {gradeInfo.label} · {metaBits.join(" · ")}
               </p>
             </div>
@@ -208,7 +208,7 @@ async function ScanResults({ domain }: { domain: string }) {
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-2.5">
             {stats.map(s => (
               <div key={s.label} className="rounded-lg border border-foreground/8 bg-foreground/[0.02] p-3 sm:p-4">
-                <div className="text-[11px] tracking-wide text-foreground/40">{s.label}</div>
+                <div className="text-[11px] tracking-wide text-muted-foreground">{s.label}</div>
                 <div className={`mt-1.5 text-[26px] font-medium tabular-nums leading-none ${s.tone}`}>{s.value}</div>
               </div>
             ))}
@@ -221,15 +221,15 @@ async function ScanResults({ domain }: { domain: string }) {
                 <span className="text-primary">[ DETECTED ]</span>{" "}
                 {/* the "//" is HUD dressing, not a code comment — braced so
                     react/jsx-no-comment-textnodes doesn't read it as one */}
-                <span className="text-foreground/35">{"// "}{trackerCount} {trackerCount === 1 ? "company" : "companies"} observed</span>
+                <span className="text-muted-foreground">{"// "}{trackerCount} {trackerCount === 1 ? "company" : "companies"} observed</span>
               </div>
               <div className="divide-y divide-foreground/8 overflow-hidden rounded-lg border border-foreground/10">
                 {result.trackers.map((t, i) => {
                   const tag = CATEGORY_TAG[t.category] ?? CATEGORY_TAG.unknown
                   return (
                     <div key={i} className="flex items-center gap-2 px-3 py-3 odd:bg-foreground/[0.015] sm:gap-3 sm:px-4">
-                      <span className="min-w-0 flex-1 truncate text-[12.5px] text-foreground/90">{t.name}</span>
-                      <span className="hidden min-w-0 max-w-[42%] truncate text-right text-[12px] text-foreground/40 sm:block">
+                      <span className="min-w-0 flex-1 truncate text-[12.5px] text-foreground">{t.name}</span>
+                      <span className="hidden min-w-0 max-w-[42%] truncate text-right text-[12px] text-muted-foreground sm:block">
                         {t.domain}
                       </span>
                       <span className={`shrink-0 rounded px-2 py-1 text-[10px] font-medium tracking-wide ${tag.cls}`}>
@@ -249,13 +249,13 @@ async function ScanResults({ domain }: { domain: string }) {
               style={{ background: "linear-gradient(180deg, color-mix(in oklab, var(--primary) 6%, transparent), transparent)" }}
             >
               <div className="mb-4 text-[12px] tracking-[0.14em] text-primary">
-                [ RECOMMENDED ] <span className="text-foreground/45">detected → private swap</span>
+                [ RECOMMENDED ] <span className="text-muted-foreground">detected → private swap</span>
               </div>
               <div className="space-y-3">
                 {withAlternatives.map(m => (
                   <div key={m.name} className="flex flex-col gap-2 border-b border-dashed border-foreground/10 pb-3 last:border-0 last:pb-0 sm:flex-row sm:items-center sm:gap-3">
-                    <span className="text-[12.5px] text-foreground/45 sm:whitespace-nowrap">
-                      detected <span className="text-foreground/70 line-through">{m.name}</span>
+                    <span className="text-[12.5px] text-muted-foreground sm:whitespace-nowrap">
+                      detected <span className="text-foreground-soft line-through">{m.name}</span>
                     </span>
                     <span className="hidden text-primary sm:inline">→</span>
                     <div className="flex flex-1 flex-wrap gap-2 sm:justify-end">
@@ -273,11 +273,11 @@ async function ScanResults({ domain }: { domain: string }) {
                 ))}
                 {guidanceCategories.map(cat => (
                   <div key={cat} className="flex flex-col gap-2 border-b border-dashed border-foreground/10 pb-3 last:border-0 last:pb-0 sm:flex-row sm:items-center">
-                    <span className="text-[12.5px] text-foreground/45 sm:flex-1">
-                      <span className="text-foreground/70">{cat}</span> trackers detected
+                    <span className="text-[12.5px] text-muted-foreground sm:flex-1">
+                      <span className="text-foreground-soft">{cat}</span> trackers detected
                     </span>
-                    <span className="hidden text-foreground/30 sm:inline">·</span>
-                    <span className="text-[12px] text-foreground/50 sm:max-w-[55%] sm:text-right">
+                    <span className="hidden text-muted-foreground sm:inline">·</span>
+                    <span className="text-[12px] text-muted-foreground sm:max-w-[55%] sm:text-right">
                       {categoryRecommendations[cat]?.message}
                     </span>
                   </div>
@@ -292,13 +292,13 @@ async function ScanResults({ domain }: { domain: string }) {
           {/* breakdown + checklist */}
           <div className="grid gap-6 sm:grid-cols-2 sm:gap-8">
             <div>
-              <div className="mb-3 text-[12px] tracking-[0.14em] text-foreground/35">[ SCORE BREAKDOWN ]</div>
+              <div className="mb-3 text-[12px] tracking-[0.14em] text-muted-foreground">[ SCORE BREAKDOWN ]</div>
               <div className="space-y-3">
                 {breakdown.map(b => (
                   <div key={b.label}>
                     <div className="mb-1 flex items-center justify-between text-[12px]">
-                      <span className="text-foreground/60">{b.label}</span>
-                      <span className="tabular-nums text-foreground/45">{b.score}/100</span>
+                      <span className="text-foreground-soft">{b.label}</span>
+                      <span className="tabular-nums text-muted-foreground">{b.score}/100</span>
                     </div>
                     <div className="h-1.5 overflow-hidden rounded-full bg-foreground/8">
                       <div
@@ -315,12 +315,12 @@ async function ScanResults({ domain }: { domain: string }) {
             </div>
 
             <div>
-              <div className="mb-3 text-[12px] tracking-[0.14em] text-foreground/35">[ CHECKLIST ]</div>
+              <div className="mb-3 text-[12px] tracking-[0.14em] text-muted-foreground">[ CHECKLIST ]</div>
               <div className="grid grid-cols-1 gap-x-4 gap-y-2">
                 {checklist.map(c => (
                   <div key={c.label} className="flex items-center gap-2 text-[12.5px]">
-                    <span className={c.ok ? "text-success" : "text-foreground/30"}>{c.ok ? "✓" : "✕"}</span>
-                    <span className={c.ok ? "text-foreground/55" : "text-foreground/75"}>{c.label}</span>
+                    <span className={c.ok ? "text-success" : "text-muted-foreground"}>{c.ok ? "✓" : "✕"}</span>
+                    <span className={c.ok ? "text-muted-foreground" : "text-foreground-soft"}>{c.label}</span>
                   </div>
                 ))}
               </div>
@@ -328,7 +328,7 @@ async function ScanResults({ domain }: { domain: string }) {
           </div>
 
           {/* disclaimer */}
-          <p className="border-t border-foreground/8 pt-5 font-sans text-[12px] leading-relaxed text-foreground/40">
+          <p className="border-t border-foreground/8 pt-5 font-sans text-[12px] leading-relaxed text-muted-foreground">
             Automated informational snapshot of what this site loaded when we visited it — not an audit of the
             company, and not legal or security advice. Trackers, headers, and behavior change over time. Verify
             independently before drawing conclusions.
@@ -338,7 +338,7 @@ async function ScanResults({ domain }: { domain: string }) {
 
       {/* scan another */}
       <div className="rounded-xl border border-foreground/8 bg-foreground/[0.01] p-4 sm:p-5">
-        <h3 className="mb-4 text-[14px] font-medium text-foreground/90">Scan another website</h3>
+        <h3 className="mb-4 text-[14px] font-medium text-foreground">Scan another website</h3>
         <ScannerForm />
       </div>
     </div>
@@ -379,8 +379,8 @@ export default async function ScannerResultsPage({
         <main className="flex-1">
           <div className="container py-8">
             <div className="rounded-xl border border-foreground/8 bg-foreground/[0.01] p-6">
-              <h2 className="text-[15px] font-medium text-foreground/90">No domain specified</h2>
-              <p className="mt-1 text-[13px] text-foreground/50">Please enter a website URL to scan.</p>
+              <h2 className="text-[15px] font-medium text-foreground">No domain specified</h2>
+              <p className="mt-1 text-[13px] text-muted-foreground">Please enter a website URL to scan.</p>
               <Button className="brand2-btn-primary mt-4" asChild>
                 <Link href="/scanner">Go to scanner</Link>
               </Button>
@@ -399,7 +399,7 @@ export default async function ScannerResultsPage({
         <div className="container max-w-3xl py-8">
           <Link
             href="/scanner"
-            className="group mb-6 inline-flex items-center text-[13px] text-foreground/50 transition-colors hover:text-foreground/70"
+            className="group mb-6 inline-flex items-center text-[13px] text-muted-foreground transition-colors hover:text-foreground-soft"
           >
             <ArrowLeft className="mr-1.5 h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
             Back to scanner

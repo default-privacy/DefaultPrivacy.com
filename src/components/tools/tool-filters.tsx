@@ -130,7 +130,7 @@ export function ToolFilters({
           <button
             type="button"
             onClick={clearFilters}
-            className="rounded p-1 text-foreground/40 transition-colors brand2-focus hover:text-foreground/70"
+            className="rounded p-1 text-muted-foreground transition-colors brand2-focus hover:text-foreground-soft"
           >
             <X className="h-4 w-4" />
           </button>
@@ -140,7 +140,7 @@ export function ToolFilters({
       {/* Tool search — hidden on lg where DirectoryToolSearch sits above the grid */}
       <div className="lg:hidden">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-foreground/40" />
+          <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
           <Input
             placeholder="Search tools…"
             className="h-9 pl-9 text-[13px] brand2-input"
@@ -164,7 +164,7 @@ export function ToolFilters({
                   "rounded-md px-2.5 py-1 text-[12px] transition-colors brand2-focus",
                   isActive
                     ? "bg-foreground/10 font-medium text-foreground"
-                    : "text-foreground/55 hover:bg-foreground/[0.04] hover:text-foreground/80"
+                    : "text-muted-foreground hover:bg-foreground/[0.04] hover:text-foreground"
                 )}
               >
                 {tag.name}
@@ -179,14 +179,14 @@ export function ToolFilters({
         {/* Redundant with the "Filter Tools" header in the categories-only rail; keep it
             in the drawer where it separates the tag cloud from the category tree. */}
         {showTags && (
-          <p className="mb-3 text-[11px] font-medium uppercase tracking-wider text-foreground/40">
+          <p className="mb-3 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
             Categories
           </p>
         )}
 
         {/* Category search */}
         <div className="relative mb-3">
-          <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-foreground/35" />
+          <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
           <Input
             placeholder="Filter categories…"
             className="h-8 pl-8 pr-7 text-[12px] brand2-input"
@@ -198,7 +198,7 @@ export function ToolFilters({
             <button
               type="button"
               onClick={() => setCategorySearch("")}
-              className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-foreground/40 hover:text-foreground/70"
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-0.5 text-muted-foreground hover:text-foreground-soft"
             >
               <X className="h-3 w-3" />
             </button>
@@ -221,16 +221,16 @@ export function ToolFilters({
                       return next
                     })
                   }
-                  className="flex w-full items-center gap-1.5 py-1.5 text-[13px] text-foreground/70 transition-colors brand2-focus hover:text-foreground"
+                  className="flex w-full items-center gap-1.5 py-1.5 text-[13px] text-foreground-soft transition-colors brand2-focus hover:text-foreground"
                 >
                   <ChevronRight
                     className={cn(
-                      "h-3.5 w-3.5 text-foreground/35 transition-transform duration-150",
+                      "h-3.5 w-3.5 text-muted-foreground transition-transform duration-150",
                       isOpen && "rotate-90"
                     )}
                   />
                   <span className="flex-1 text-left">{group.label}</span>
-                  <span className="text-[11px] tabular-nums text-foreground/35">{group.total}</span>
+                  <span className="text-[11px] tabular-nums text-muted-foreground">{group.total}</span>
                 </button>
 
                 {isOpen && (
@@ -257,7 +257,7 @@ export function ToolFilters({
                             "flex w-full items-center justify-between py-1 text-[12px] transition-colors brand2-focus",
                             isActive
                               ? "font-medium text-foreground"
-                              : "text-foreground/50 hover:text-foreground/80"
+                              : "text-muted-foreground hover:text-foreground"
                           )}
                         >
                           <span className="flex items-center gap-2 truncate">
@@ -266,7 +266,7 @@ export function ToolFilters({
                             )}
                             {item.name}
                           </span>
-                          <span className="shrink-0 text-[10px] tabular-nums text-foreground/30">
+                          <span className="shrink-0 text-[10px] tabular-nums text-muted-foreground">
                             {item.count}
                           </span>
                         </button>
@@ -285,12 +285,12 @@ export function ToolFilters({
       {/* Active filters */}
       {hasActiveFilters && (
         <div className="border-t border-foreground/8 pt-4">
-          <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-foreground/40">
+          <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
             Active Filters
           </p>
           <div className="flex flex-wrap gap-1.5">
             {params.search && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-foreground/[0.06] px-2 py-0.5 text-[11px] text-foreground/70">
+              <span className="inline-flex items-center gap-1 rounded-md bg-foreground/[0.06] px-2 py-0.5 text-[11px] text-foreground-soft">
                 &ldquo;{params.search}&rdquo;
                 <button type="button" onClick={() => updateFilter("search", "")} className="ml-0.5 rounded-sm p-0.5 hover:bg-foreground/10">
                   <X className="h-2.5 w-2.5" />
@@ -298,7 +298,7 @@ export function ToolFilters({
               </span>
             )}
             {params.subCategory && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-foreground/[0.06] px-2 py-0.5 text-[11px] text-foreground/70">
+              <span className="inline-flex items-center gap-1 rounded-md bg-foreground/[0.06] px-2 py-0.5 text-[11px] text-foreground-soft">
                 {params.subCategory}
                 <button type="button" onClick={() => setParams({ category: "", subCategory: "", page: 1 })} className="ml-0.5 rounded-sm p-0.5 hover:bg-foreground/10">
                   <X className="h-2.5 w-2.5" />
@@ -308,7 +308,7 @@ export function ToolFilters({
             {Array.from(activeTagSlugs).map(slug => {
               const tag = publicTags.find(t => t.slug === slug)
               return (
-                <span key={slug} className="inline-flex items-center gap-1 rounded-md bg-foreground/[0.06] px-2 py-0.5 text-[11px] text-foreground/70">
+                <span key={slug} className="inline-flex items-center gap-1 rounded-md bg-foreground/[0.06] px-2 py-0.5 text-[11px] text-foreground-soft">
                   {tag?.name ?? slug}
                   <button type="button" onClick={() => toggleTag(slug)} className="ml-0.5 rounded-sm p-0.5 hover:bg-foreground/10">
                     <X className="h-2.5 w-2.5" />
@@ -321,7 +321,7 @@ export function ToolFilters({
       )}
 
       {isPending && (
-        <div className="text-[11px] text-foreground/40">Loading...</div>
+        <div className="text-[11px] text-muted-foreground">Loading...</div>
       )}
     </div>
   )

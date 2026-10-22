@@ -45,7 +45,7 @@ export default function BreachCheckPage() {
       />
       <main className="container py-12 max-w-2xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-medium tracking-cinematic text-foreground/90 mb-3">
+          <h1 className="text-3xl font-medium tracking-cinematic text-foreground mb-3">
             Have I Been Breached?
           </h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
@@ -62,13 +62,13 @@ export default function BreachCheckPage() {
           <section className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-5">
             <div className="flex items-start gap-3 mb-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-background">
-                <Mail className="h-5 w-5 text-foreground/55" aria-hidden />
+                <Mail className="h-5 w-5 text-muted-foreground" aria-hidden />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-foreground/45 mb-1">
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground mb-1">
                   Step 1
                 </p>
-                <h2 className="text-lg font-medium text-foreground/90">Check your personal email</h2>
+                <h2 className="text-lg font-medium text-foreground">Check your personal email</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Open Have I Been Pwned and enter the inbox you use for banking, email, and important
                   accounts. This checks your address — not just the service provider.
@@ -86,13 +86,13 @@ export default function BreachCheckPage() {
           <section className="rounded-xl border border-foreground/10 p-5">
             <div className="flex items-start gap-3 mb-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-background">
-                <KeyRound className="h-5 w-5 text-foreground/55" aria-hidden />
+                <KeyRound className="h-5 w-5 text-muted-foreground" aria-hidden />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-foreground/45 mb-1">
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground mb-1">
                   Step 2
                 </p>
-                <h2 className="text-lg font-medium text-foreground/90">Check password reuse</h2>
+                <h2 className="text-lg font-medium text-foreground">Check password reuse</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   If an account was breached, assume passwords from that site are public. Test whether
                   you reused them — analysis runs in your browser with k-anonymity.
@@ -110,13 +110,13 @@ export default function BreachCheckPage() {
           <section className="rounded-xl border border-foreground/10 p-5">
             <div className="flex items-start gap-3 mb-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-background">
-                <ShieldAlert className="h-5 w-5 text-foreground/55" aria-hidden />
+                <ShieldAlert className="h-5 w-5 text-muted-foreground" aria-hidden />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-foreground/45 mb-1">
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground mb-1">
                   Step 3
                 </p>
-                <h2 className="text-lg font-medium text-foreground/90">Lock down high-value accounts</h2>
+                <h2 className="text-lg font-medium text-foreground">Lock down high-value accounts</h2>
                 <ul className="mt-2 space-y-1 text-sm text-muted-foreground list-disc list-inside">
                   <li>Enable two-factor authentication on email, banking, and crypto accounts</li>
                   <li>Use a unique password for every site — not a variation of an old one</li>
@@ -129,13 +129,13 @@ export default function BreachCheckPage() {
           <section className="rounded-xl border border-foreground/10 p-5">
             <div className="flex items-start gap-3 mb-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-background">
-                <UserX className="h-5 w-5 text-foreground/55" aria-hidden />
+                <UserX className="h-5 w-5 text-muted-foreground" aria-hidden />
               </div>
               <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-foreground/45 mb-1">
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground mb-1">
                   Step 4
                 </p>
-                <h2 className="text-lg font-medium text-foreground/90">Reduce re-exposure</h2>
+                <h2 className="text-lg font-medium text-foreground">Reduce re-exposure</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Breach data often resurfaces on people-search and data broker sites. Removal is a
                   separate layer from breach detection — but it matters if your name and address are
@@ -158,19 +158,19 @@ export default function BreachCheckPage() {
           <h3 className="font-medium text-foreground">Personal email vs business domain</h3>
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-md border border-foreground/10 bg-background/50 p-3">
-              <p className="font-medium text-foreground/85 text-xs mb-1">Personal email</p>
+              <p className="font-medium text-foreground text-xs mb-1">Personal email</p>
               <p className="text-xs leading-relaxed">
                 you@gmail.com, you@icloud.com — use Step 1 above (Have I Been Pwned).
               </p>
             </div>
             <div className="rounded-md border border-foreground/10 bg-background/50 p-3">
-              <p className="font-medium text-foreground/85 text-xs mb-1">Business domain</p>
+              <p className="font-medium text-foreground text-xs mb-1">Business domain</p>
               <p className="text-xs leading-relaxed">
                 yourcompany.com — check your domain&apos;s email security (SPF/DKIM/DMARC) and WHOIS exposure.
               </p>
               <Link
                 href="/email-security"
-                className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-foreground/75 brand2-focus hover:text-foreground"
+                className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-foreground-soft brand2-focus hover:text-foreground"
               >
                 Check email security
                 <ArrowRight className="h-3 w-3" aria-hidden />

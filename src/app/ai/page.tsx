@@ -27,8 +27,8 @@ const CLIENTS = [
   { name: "VS Code (.vscode/mcp.json)", code: `{ "servers": { "default-privacy": { "type": "http", "url": "${MCP_URL}" } } }` },
 ]
 
-const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50"
-const body = "space-y-4 text-sm leading-relaxed text-foreground/70"
+const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground"
+const body = "space-y-4 text-sm leading-relaxed text-foreground-soft"
 
 export default function UseInYourAiPage() {
   return (
@@ -78,7 +78,7 @@ export default function UseInYourAiPage() {
           <div className="space-y-3">
             {CLIENTS.map((c) => (
               <div key={c.name}>
-                <p className="mb-1 text-xs text-foreground/50">{c.name}</p>
+                <p className="mb-1 text-xs text-muted-foreground">{c.name}</p>
                 <code className="block select-all overflow-x-auto whitespace-pre rounded border border-foreground/10 bg-muted/30 px-4 py-3 font-mono text-xs text-foreground">
                   {c.code}
                 </code>

@@ -24,7 +24,7 @@ export function CopyAddress({ value }: { value: string }) {
         type="button"
         onClick={copy}
         aria-label={copied ? "Address copied" : "Copy address"}
-        className="brand2-focus flex shrink-0 items-center gap-1.5 border-l border-foreground/10 px-3 font-mono text-[12px] text-foreground/60 transition-colors hover:text-foreground"
+        className="brand2-focus flex shrink-0 items-center gap-1.5 border-l border-foreground/10 px-3 font-mono text-[12px] text-foreground-soft transition-colors hover:text-foreground"
       >
         {copied ? <Check className="h-3.5 w-3.5 text-success" /> : <Copy className="h-3.5 w-3.5" />}
         {copied ? "Copied" : "Copy"}

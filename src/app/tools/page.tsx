@@ -92,16 +92,16 @@ function ToolCard({ item }: { item: ToolItem }) {
       className="brand2-focus group flex items-start gap-4 rounded-xl border border-foreground/10 bg-foreground/[0.01] p-5 transition-colors hover:border-foreground/15 hover:bg-foreground/[0.02]"
     >
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.02] transition-colors group-hover:border-foreground/15">
-        <Icon className="h-5 w-5 text-foreground/50" aria-hidden />
+        <Icon className="h-5 w-5 text-muted-foreground" aria-hidden />
       </div>
 
       <div className="min-w-0 flex-1">
-        <p className="text-[14px] font-medium leading-snug text-foreground/85">{item.concern}</p>
-        <p className="mt-1 text-[12px] text-foreground/50">{item.tool}</p>
-        <p className="mt-2 text-[13px] leading-relaxed text-foreground/45">{item.summary}</p>
+        <p className="text-[14px] font-medium leading-snug text-foreground">{item.concern}</p>
+        <p className="mt-1 text-[12px] text-muted-foreground">{item.tool}</p>
+        <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{item.summary}</p>
       </div>
 
-      <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-foreground/25 brand2-arrow-nudge" aria-hidden />
+      <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground brand2-arrow-nudge" aria-hidden />
     </Link>
   )
 }
@@ -115,13 +115,13 @@ export default async function ToolsPage() {
 
       <section className="container py-12 md:py-20">
         <div className="mb-10 text-center">
-          <span className="mb-4 inline-block rounded-full border border-foreground/10 bg-foreground/[0.02] px-3 py-1 text-[11px] font-medium text-foreground/50">
+          <span className="mb-4 inline-block rounded-full border border-foreground/10 bg-foreground/[0.02] px-3 py-1 text-[11px] font-medium text-muted-foreground">
             Free Tools
           </span>
           <h1 className="mb-3 text-3xl font-medium tracking-tight text-foreground md:text-4xl">
             Free Privacy Tools
           </h1>
-          <p className="mx-auto max-w-lg text-[15px] text-foreground/55">
+          <p className="mx-auto max-w-lg text-[15px] text-muted-foreground">
             Pick a concern. Check it yourself. No signup, no account, nothing tied to you.
           </p>
         </div>
@@ -139,19 +139,19 @@ export default async function ToolsPage() {
           <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
             <div className="space-y-1">
               <div className="text-2xl font-medium tabular-nums tracking-tight text-foreground">7</div>
-              <div className="text-[11px] text-foreground/45">Free Tools</div>
+              <div className="text-[11px] text-muted-foreground">Free Tools</div>
             </div>
             <div className="space-y-1">
               <div className="text-2xl font-medium tabular-nums tracking-tight text-foreground">0</div>
-              <div className="text-[11px] text-foreground/45">Data Stored</div>
+              <div className="text-[11px] text-muted-foreground">Data Stored</div>
             </div>
             <div className="space-y-1">
               <div className="text-2xl font-medium tabular-nums tracking-tight text-foreground">{directoryStats.toolsLabel}</div>
-              <div className="text-[11px] text-foreground/45">Tools Listed</div>
+              <div className="text-[11px] text-muted-foreground">Tools Listed</div>
             </div>
             <div className="space-y-1">
               <div className="text-2xl font-medium tabular-nums tracking-tight text-foreground">500+</div>
-              <div className="text-[11px] text-foreground/45">Glossary Terms</div>
+              <div className="text-[11px] text-muted-foreground">Glossary Terms</div>
             </div>
           </div>
         </div>

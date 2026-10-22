@@ -183,28 +183,28 @@ export function PasswordChecker() {
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-md bg-muted/50 p-3">
                 <div className="text-xs text-muted-foreground mb-1">Online attack</div>
-                <div className="text-lg font-medium tracking-cinematic text-foreground/90">
+                <div className="text-lg font-medium tracking-cinematic text-foreground">
                   {formatCrackTime(result.crack_times_display.online_throttling_100_per_hour as string)}
                 </div>
                 <div className="text-[10px] text-muted-foreground mt-0.5">100 guesses/hour</div>
               </div>
               <div className="rounded-md bg-muted/50 p-3">
                 <div className="text-xs text-muted-foreground mb-1">Online (no throttle)</div>
-                <div className="text-lg font-medium tracking-cinematic text-foreground/90">
+                <div className="text-lg font-medium tracking-cinematic text-foreground">
                   {formatCrackTime(result.crack_times_display.online_no_throttling_10_per_second as string)}
                 </div>
                 <div className="text-[10px] text-muted-foreground mt-0.5">10 guesses/sec</div>
               </div>
               <div className="rounded-md bg-muted/50 p-3">
                 <div className="text-xs text-muted-foreground mb-1">Offline (slow hash)</div>
-                <div className="text-lg font-medium tracking-cinematic text-foreground/90">
+                <div className="text-lg font-medium tracking-cinematic text-foreground">
                   {formatCrackTime(result.crack_times_display.offline_slow_hashing_1e4_per_second as string)}
                 </div>
                 <div className="text-[10px] text-muted-foreground mt-0.5">10K guesses/sec</div>
               </div>
               <div className="rounded-md bg-muted/50 p-3">
                 <div className="text-xs text-muted-foreground mb-1">Offline (fast hash)</div>
-                <div className="text-lg font-medium tracking-cinematic text-foreground/90">
+                <div className="text-lg font-medium tracking-cinematic text-foreground">
                   {formatCrackTime(result.crack_times_display.offline_fast_hashing_1e10_per_second as string)}
                 </div>
                 <div className="text-[10px] text-muted-foreground mt-0.5">10B guesses/sec</div>
@@ -316,15 +316,15 @@ export function PasswordChecker() {
 
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
-              <div className="text-2xl font-medium tracking-cinematic text-foreground/90">{password.length}</div>
+              <div className="text-2xl font-medium tracking-cinematic text-foreground">{password.length}</div>
               <div className="text-xs text-muted-foreground">Characters</div>
             </div>
             <div>
-              <div className="text-2xl font-medium tracking-cinematic text-foreground/90">{result.guesses.toLocaleString()}</div>
+              <div className="text-2xl font-medium tracking-cinematic text-foreground">{result.guesses.toLocaleString()}</div>
               <div className="text-xs text-muted-foreground">Guesses Needed</div>
             </div>
             <div>
-              <div className="text-2xl font-medium tracking-cinematic text-foreground/90">{result.sequence.length}</div>
+              <div className="text-2xl font-medium tracking-cinematic text-foreground">{result.sequence.length}</div>
               <div className="text-xs text-muted-foreground">Patterns Found</div>
             </div>
           </div>

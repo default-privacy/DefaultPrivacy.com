@@ -42,12 +42,12 @@ export function ScanProgress({ domain }: { domain: string }) {
         <span className="h-3 w-3 rounded-full bg-destructive/70" />
         <span className="h-3 w-3 rounded-full bg-caution/70" />
         <span className="h-3 w-3 rounded-full bg-success/70" />
-        <span className="ml-2 truncate font-mono text-[12.5px] text-foreground/40">scan://{domain}</span>
-        <span className="ml-auto font-mono text-[11px] tracking-[0.14em] text-foreground/30">RUNNING</span>
+        <span className="ml-2 truncate font-mono text-[12.5px] text-muted-foreground">scan://{domain}</span>
+        <span className="ml-auto font-mono text-[11px] tracking-[0.14em] text-muted-foreground">RUNNING</span>
       </div>
 
       <div className="space-y-6 p-4 font-mono sm:p-8">
-        <div className="break-all text-[12px] text-foreground/55 sm:text-[13px]">
+        <div className="break-all text-[12px] text-muted-foreground sm:text-[13px]">
           <span className="text-primary">$</span> privacy scan <span className="text-foreground">{domain}</span> --with-dnt --gpc
           <span className="ml-1 inline-block h-[15px] w-2 translate-y-[2px] animate-pulse bg-primary align-middle" />
         </div>
@@ -61,7 +61,7 @@ export function ScanProgress({ domain }: { domain: string }) {
         {reduced ? (
           <div className="flex items-center gap-2.5 text-[12.5px]">
             <span className="w-4 shrink-0 text-center text-primary">›</span>
-            <span className="text-foreground/75">
+            <span className="text-foreground-soft">
               Scanning {domain} — loading the page, checking requests, cookies, headers, then grading.
             </span>
           </div>
@@ -75,7 +75,7 @@ export function ScanProgress({ domain }: { domain: string }) {
                   <span className="w-4 shrink-0 text-center">
                     {state === "done" ? <span className="text-success/70">✓</span> : <span className="text-primary">›</span>}
                   </span>
-                  <span className={state === "done" ? "text-foreground/40" : "text-foreground/75"}>{stage.label}</span>
+                  <span className={state === "done" ? "text-muted-foreground" : "text-foreground-soft"}>{stage.label}</span>
                   {state === "active" && (
                     <span className="geist-loading-dots ml-1 text-primary" aria-hidden>
                       <span />

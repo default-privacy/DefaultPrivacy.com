@@ -21,6 +21,22 @@ const plusJakarta = localFont({
   display: "swap",
 })
 
+// Source Serif 4 - self-hosted from @fontsource-variable; reading-page body text only
+const sourceSerif = localFont({
+  src: [
+    {
+      path: "../../node_modules/@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2",
+      style: "normal",
+    },
+    {
+      path: "../../node_modules/@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-italic.woff2",
+      style: "italic",
+    },
+  ],
+  variable: "--font-source-serif",
+  display: "swap",
+})
+
 // Keep Geist Mono for code blocks
 const geistMono = Geist_Mono({
   variable: "--font-mono",
@@ -132,7 +148,7 @@ export default async function RootLayout({
   const jsonLd = buildSiteJsonLd(toolsLabel)
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         {env.NEXT_PUBLIC_WEBMCP_OT_TOKEN && (
           <meta httpEquiv="origin-trial" content={env.NEXT_PUBLIC_WEBMCP_OT_TOKEN} />
@@ -146,7 +162,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakarta.variable} ${geistMono.variable} antialiased min-h-screen bg-background`}
+        className={`${plusJakarta.variable} ${sourceSerif.variable} ${geistMono.variable} antialiased min-h-screen bg-background`}
       >
         <SkipLink />
         <WebMcpBridge />

@@ -90,7 +90,7 @@ export default async function Home({
 
         <div className="container relative py-14 md:py-[4.75rem]">
           <div className="mx-auto max-w-xl text-center">
-            <h1 className="brand2-hero-animate text-balance text-4xl font-light leading-[1.06] tracking-cinematic text-foreground/90 md:text-[3.25rem]">
+            <h1 className="brand2-hero-animate text-balance text-4xl font-light leading-[1.06] tracking-cinematic text-foreground md:text-[3.25rem]">
               No Freedom Without <span className="hero-shout">Privacy.</span>
             </h1>
 
@@ -108,19 +108,19 @@ export default async function Home({
             <div className="brand2-hero-animate-delay-3 mt-6 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 text-[13px]">
               {HERO_CATEGORIES.map((c, i) => (
                 <Fragment key={c}>
-                  {i > 0 && <span className="text-foreground/20" aria-hidden>·</span>}
+                  {i > 0 && <span className="text-muted-foreground" aria-hidden>·</span>}
                   <Link
                     href={{ pathname: "/directory", query: { category: c } }}
-                    className="rounded-sm text-foreground/60 transition-colors brand2-focus hover:text-primary"
+                    className="rounded-sm text-foreground-soft transition-colors brand2-focus hover:text-primary"
                   >
                     {c}
                   </Link>
                 </Fragment>
               ))}
-              <span className="text-foreground/20" aria-hidden>·</span>
+              <span className="text-muted-foreground" aria-hidden>·</span>
               <Link
                 href="#directory"
-                className="rounded-sm text-foreground/45 transition-colors brand2-focus hover:text-foreground/80"
+                className="rounded-sm text-muted-foreground transition-colors brand2-focus hover:text-foreground"
               >
                 Browse all ↓
               </Link>

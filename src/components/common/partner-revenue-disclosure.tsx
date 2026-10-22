@@ -20,18 +20,18 @@ export function PartnerRevenueDisclosure({
 }: PartnerRevenueDisclosureProps) {
   if (variant === "canonical") {
     return (
-      <div className={cn("space-y-4 text-sm leading-relaxed text-foreground/55", className)}>
+      <div className={cn("space-y-4 text-sm leading-relaxed text-muted-foreground", className)}>
         <p>
-          <strong className="font-medium text-foreground/75">Tools directory.</strong> We don&apos;t put
+          <strong className="font-medium text-foreground-soft">Tools directory.</strong> We don&apos;t put
           affiliate links in our tool directory, and listings aren&apos;t paid placements. Tools are included
           and ranked on Privacy Protocol data — not because a vendor paid us.
         </p>
         <p>
-          <strong className="font-medium text-foreground/75">Affiliate links.</strong> Some outbound links to
+          <strong className="font-medium text-foreground-soft">Affiliate links.</strong> Some outbound links to
           tools may be affiliate links. When one is, we&apos;ll tell you next to the link — and you can always
           reach the tool without it.
         </p>
-        <p className="text-foreground/50">
+        <p className="text-muted-foreground">
           Directory rankings are never for sale — they&apos;re driven by Privacy Protocol data, not payment.
         </p>
       </div>
@@ -40,9 +40,9 @@ export function PartnerRevenueDisclosure({
 
   if (variant === "directory-note") {
     return (
-      <p className={cn("text-[13px] leading-relaxed text-foreground/50", className)}>
+      <p className={cn("text-[13px] leading-relaxed text-muted-foreground", className)}>
         Listings aren&apos;t paid placements — we don&apos;t use affiliate links in the directory.{" "}
-        <Link href={transparencyHref} className="text-foreground/70 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+        <Link href={transparencyHref} className="text-foreground-soft underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
           How we earn
         </Link>
       </p>
@@ -51,7 +51,7 @@ export function PartnerRevenueDisclosure({
 
   if (variant === "partner-cta") {
     return (
-      <p className={cn("text-xs leading-relaxed text-foreground/50", className)}>
+      <p className={cn("text-xs leading-relaxed text-muted-foreground", className)}>
         {partnerName ? (
           <>
             Fulfilled with {partnerName}, a vetted partner. We may earn a commission.{" "}
@@ -59,7 +59,7 @@ export function PartnerRevenueDisclosure({
         ) : (
           <>We may earn a commission on partner links. </>
         )}
-        <Link href={transparencyHref} className="text-foreground/65 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+        <Link href={transparencyHref} className="text-foreground-soft underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
           How we earn
         </Link>
       </p>
@@ -68,10 +68,10 @@ export function PartnerRevenueDisclosure({
 
   // inline
   return (
-    <p className={cn("text-[13px] leading-relaxed text-foreground/50", className)}>
+    <p className={cn("text-[13px] leading-relaxed text-muted-foreground", className)}>
       We don&apos;t put affiliate links in our tool directory. When we recommend a partner on a service
       page, we disclose it next to the link.{" "}
-      <Link href={transparencyHref} className="text-foreground/70 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+      <Link href={transparencyHref} className="text-foreground-soft underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
         How we earn
       </Link>
     </p>

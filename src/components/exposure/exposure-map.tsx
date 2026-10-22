@@ -46,7 +46,7 @@ export function ExposureMap({ latitude, longitude, city, region, country }: Prop
         </div>
       </div>
       <div className="border-t border-caution/20 bg-caution/[0.04] px-4 py-3">
-        <p className="text-[13px] text-foreground/55">
+        <p className="text-[13px] text-muted-foreground">
           <span className="font-medium text-caution">Every website you visit</span> can see roughly
           where you are — from your IP alone. No permission required.
         </p>

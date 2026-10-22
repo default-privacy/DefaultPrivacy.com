@@ -107,7 +107,7 @@ export const VerificationBadge = ({
 
       {/* Hash snippet */}
       {hash && (
-        <span className="text-muted-foreground/60 font-normal">
+        <span className="text-muted-foreground font-normal">
           {truncateHash(hash, sizeStyles.hashLength)}
         </span>
       )}
@@ -159,7 +159,7 @@ export const HashDisplay = ({
         className,
       )}
     >
-      <span className="text-foreground/58">{prefix}:</span>
+      <span className="text-muted-foreground">{prefix}:</span>
       <span>{displayHash}</span>
     </code>
   )

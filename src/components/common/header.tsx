@@ -56,7 +56,7 @@ export function Header() {
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   className={`inline-flex h-9 items-center rounded-md px-3 text-sm font-medium tracking-tight transition-colors brand2-focus hover:bg-foreground/[0.04] hover:text-foreground ${
-                    active ? "text-foreground" : "text-foreground/70"
+                    active ? "text-foreground" : "text-foreground-soft"
                   }`}
                 >
                   {item.label}
@@ -67,7 +67,7 @@ export function Header() {
               <a
                 href={SHOP_URL}
                 rel="noopener"
-                className="inline-flex h-9 items-center rounded-md px-3 text-sm font-medium tracking-tight text-foreground/70 transition-colors brand2-focus hover:bg-foreground/[0.04] hover:text-foreground"
+                className="inline-flex h-9 items-center rounded-md px-3 text-sm font-medium tracking-tight text-foreground-soft transition-colors brand2-focus hover:bg-foreground/[0.04] hover:text-foreground"
               >
                 Shop
               </a>
@@ -112,7 +112,7 @@ export function Header() {
                   className={`rounded-md px-3 py-2.5 text-sm font-medium tracking-tight brand2-focus ${
                     isActive(item.href)
                       ? "bg-foreground/[0.06] text-foreground"
-                      : "text-foreground/70 hover:bg-foreground/[0.04] hover:text-foreground"
+                      : "text-foreground-soft hover:bg-foreground/[0.04] hover:text-foreground"
                   }`}
                 >
                   {item.label}
@@ -123,7 +123,7 @@ export function Header() {
                   href={SHOP_URL}
                   rel="noopener"
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-3 py-2.5 text-sm font-medium tracking-tight text-foreground/70 brand2-focus hover:bg-foreground/[0.04] hover:text-foreground"
+                  className="rounded-md px-3 py-2.5 text-sm font-medium tracking-tight text-foreground-soft brand2-focus hover:bg-foreground/[0.04] hover:text-foreground"
                 >
                   Shop
                 </a>

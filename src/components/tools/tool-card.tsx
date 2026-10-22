@@ -33,7 +33,7 @@ function TagPill({ icon: Icon, label, tooltip }: { icon: React.ElementType; labe
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className="inline-flex items-center gap-1 rounded-full border border-foreground/8 bg-foreground/[0.02] px-2 py-0.5 text-[10px] font-medium text-foreground/60 transition-colors hover:border-foreground/12 hover:text-foreground/80">
+          <span className="inline-flex items-center gap-1 rounded-full border border-foreground/8 bg-foreground/[0.02] px-2 py-0.5 text-[10px] font-medium text-foreground-soft transition-colors hover:border-foreground/12 hover:text-foreground">
             <Icon className="h-2.5 w-2.5" />
             {label}
           </span>
@@ -80,11 +80,11 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
           </div>
         ) : (
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-foreground/8 bg-foreground/[0.02]">
-            <Shield className="h-4 w-4 text-foreground/40" />
+            <Shield className="h-4 w-4 text-muted-foreground" />
           </div>
         )}
         <div className="min-w-0 flex-1">
-          <h3 className="text-[13px] font-medium text-foreground/90 transition-colors group-hover:text-foreground">
+          <h3 className="text-[13px] font-medium text-foreground transition-colors group-hover:text-foreground">
             {variant === "teaser" ? (
               <span className="block truncate">{tool.name}</span>
             ) : (
@@ -94,7 +94,7 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
             )}
           </h3>
           {displayCategory && (
-            <p className="truncate text-[11px] text-foreground/45">
+            <p className="truncate text-[11px] text-muted-foreground">
               {displayCategory}
             </p>
           )}
@@ -102,7 +102,7 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
       </div>
 
       {/* Description */}
-      <p className="mt-3 flex-1 text-[12px] leading-relaxed text-foreground/50 line-clamp-2">
+      <p className="mt-3 flex-1 text-[12px] leading-relaxed text-muted-foreground line-clamp-2">
         {tool.tagline || tool.description?.slice(0, 100)}
       </p>
 
@@ -120,7 +120,7 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
           <div className="flex items-center justify-between gap-3">
             <OutboundLink
               href={tool.websiteUrl}
-              className="group/link flex items-center gap-1.5 rounded-sm text-[11px] text-foreground/50 brand2-focus transition-colors hover:text-foreground/80"
+              className="group/link flex items-center gap-1.5 rounded-sm text-[11px] text-muted-foreground brand2-focus transition-colors hover:text-foreground"
             >
               Visit Site
               <ExternalLinkIcon className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5" />
@@ -129,7 +129,7 @@ export function ToolCard({ tool, categoryLabel, tags, variant = "default", class
               <Link
                 href="/how-we-pick"
                 title={`DP pick: ${pick.reason} How we pick`}
-                className="inline-flex shrink-0 items-center gap-1 rounded-full border border-foreground/15 bg-foreground/[0.04] px-2 py-0.5 text-[10px] font-medium text-foreground/70 brand2-focus transition-colors hover:border-foreground/30 hover:text-foreground"
+                className="inline-flex shrink-0 items-center gap-1 rounded-full border border-foreground/15 bg-foreground/[0.04] px-2 py-0.5 text-[10px] font-medium text-foreground-soft brand2-focus transition-colors hover:border-foreground/30 hover:text-foreground"
               >
                 <Star className="h-2.5 w-2.5" aria-hidden />
                 DP pick

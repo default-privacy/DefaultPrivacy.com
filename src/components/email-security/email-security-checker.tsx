@@ -130,7 +130,7 @@ export function EmailSecurityChecker() {
                   <p className="font-medium">{result.domain}</p>
                   <p className="text-sm text-muted-foreground">Email security assessment</p>
                 </div>
-                <div className={`flex items-center justify-center h-14 w-14 rounded-lg border-2 text-2xl font-medium tracking-cinematic text-foreground/90 ${gradeColors[result.grade]}`}>
+                <div className={`flex items-center justify-center h-14 w-14 rounded-lg border-2 text-2xl font-medium tracking-cinematic text-foreground ${gradeColors[result.grade]}`}>
                   {result.grade}
                 </div>
               </div>

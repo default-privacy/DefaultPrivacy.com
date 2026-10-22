@@ -60,7 +60,7 @@ export function CookieConsent() {
         <button
           type="button"
           onClick={closeBanner}
-          className="absolute top-2 right-2 rounded-md p-1 text-foreground/50 brand2-focus hover:bg-foreground/[0.06] hover:text-foreground"
+          className="absolute top-2 right-2 rounded-md p-1 text-muted-foreground brand2-focus hover:bg-foreground/[0.06] hover:text-foreground"
           aria-label="Dismiss"
         >
           <X className="h-4 w-4" />
@@ -83,22 +83,22 @@ export function CookieConsent() {
             </div>
           </div>
 
-          <p className="text-[13px] leading-relaxed text-foreground/60">
+          <p className="text-[13px] leading-relaxed text-foreground-soft">
             We only use essential cookies for sign-in and security. No ad trackers,
             no cross-site profiling.
           </p>
 
-          <div className="flex items-start gap-2 text-[12px] text-foreground/55">
-            <Cookie className="mt-0.5 h-4 w-4 shrink-0 text-foreground/45" aria-hidden />
+          <div className="flex items-start gap-2 text-[12px] text-muted-foreground">
+            <Cookie className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
             <span>
-              <span className="font-medium text-foreground/70">Essential only:</span>{" "}
+              <span className="font-medium text-foreground-soft">Essential only:</span>{" "}
               session cookie when you sign in. Browse without an account — no login cookie.
             </span>
           </div>
 
-          <p className="text-[11px] text-foreground/45">
+          <p className="text-[11px] text-muted-foreground">
             Details in our{" "}
-            <Link href="/privacy" className="underline brand2-focus hover:text-foreground/70">
+            <Link href="/privacy" className="underline brand2-focus hover:text-foreground-soft">
               Privacy Policy
             </Link>
             .

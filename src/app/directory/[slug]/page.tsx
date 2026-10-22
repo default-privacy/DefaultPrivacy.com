@@ -150,7 +150,7 @@ export default async function ToolDetailPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/directory"
-            className="mb-6 inline-flex items-center rounded-md text-[13px] text-foreground/50 transition-colors brand2-focus hover:text-foreground/80"
+            className="mb-6 inline-flex items-center rounded-md text-[13px] text-muted-foreground transition-colors brand2-focus hover:text-foreground"
           >
             <ArrowLeft className="mr-1.5 h-3.5 w-3.5" />
             Back to Tools Directory
@@ -159,13 +159,13 @@ export default async function ToolDetailPage({ params }: Props) {
           {/* Stocked-vendor disclosure (01-BIAS-AND-TRUST): the day we sell a vendor's
               product, its listing says so. */}
           {isStockedVendor(tool.slug) && (
-            <p className="mb-6 rounded-md border border-foreground/10 bg-foreground/[0.02] px-4 py-3 text-[13px] leading-relaxed text-foreground/60">
+            <p className="mb-6 rounded-md border border-foreground/10 bg-foreground/[0.02] px-4 py-3 text-[13px] leading-relaxed text-foreground-soft">
               Default Privacy sells {tool.name} in{" "}
-              <a href={SHOP_URL} rel="noopener" className="text-foreground/80 underline underline-offset-2 hover:text-foreground">
+              <a href={SHOP_URL} rel="noopener" className="text-foreground underline underline-offset-2 hover:text-foreground">
                 its shop
               </a>
               . Nothing else on this listing changes because of it.{" "}
-              <Link href="/transparency" className="text-foreground/80 underline underline-offset-2 hover:text-foreground">
+              <Link href="/transparency" className="text-foreground underline underline-offset-2 hover:text-foreground">
                 How we earn
               </Link>
             </p>
@@ -189,14 +189,14 @@ export default async function ToolDetailPage({ params }: Props) {
                 </div>
               ) : (
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-foreground/8 bg-foreground/[0.02]">
-                  <Shield className="h-6 w-6 text-foreground/40" />
+                  <Shield className="h-6 w-6 text-muted-foreground" />
                 </div>
               )}
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h1 className="text-2xl font-medium tracking-tight text-foreground/95">{tool.name}</h1>
+                  <h1 className="text-2xl font-medium tracking-tight text-foreground">{tool.name}</h1>
                   {tool.isDeprecated && (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-foreground/12 bg-foreground/[0.04] px-2 py-0.5 text-[11px] font-medium text-foreground/60">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-foreground/12 bg-foreground/[0.04] px-2 py-0.5 text-[11px] font-medium text-foreground-soft">
                       Deprecated
                     </span>
                   )}
@@ -204,7 +204,7 @@ export default async function ToolDetailPage({ params }: Props) {
                     <Link
                       href="/how-we-pick"
                       title="How Default Privacy chooses its picks"
-                      className="inline-flex items-center gap-1 rounded-full border border-foreground/15 bg-foreground/[0.04] px-2 py-0.5 text-[11px] font-medium text-foreground/70 brand2-focus transition-colors hover:border-foreground/30 hover:text-foreground"
+                      className="inline-flex items-center gap-1 rounded-full border border-foreground/15 bg-foreground/[0.04] px-2 py-0.5 text-[11px] font-medium text-foreground-soft brand2-focus transition-colors hover:border-foreground/30 hover:text-foreground"
                     >
                       <Star className="h-3 w-3" aria-hidden />
                       DP pick
@@ -212,16 +212,16 @@ export default async function ToolDetailPage({ params }: Props) {
                   )}
                 </div>
                 {displayCategory && (
-                  <p className="mt-1 text-[13px] text-foreground/50">
+                  <p className="mt-1 text-[13px] text-muted-foreground">
                     {displayCategory}
                   </p>
                 )}
                 {tool.tagline && (
-                  <p className="mt-2 text-[15px] text-foreground/70">{tool.tagline}</p>
+                  <p className="mt-2 text-[15px] text-foreground-soft">{tool.tagline}</p>
                 )}
                 {pick && !tool.isDeprecated && (
-                  <p className="mt-2 text-[13px] text-foreground/60">
-                    <span className="font-medium text-foreground/75">Why it is a DP pick:</span> {pick.reason}{" "}
+                  <p className="mt-2 text-[13px] text-foreground-soft">
+                    <span className="font-medium text-foreground-soft">Why it is a DP pick:</span> {pick.reason}{" "}
                     <Link href="/how-we-pick" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
                       How we pick
                     </Link>
@@ -238,7 +238,7 @@ export default async function ToolDetailPage({ params }: Props) {
                   <div>
                     <p className="text-[13px] font-medium text-caution">This tool has been deprecated</p>
                     {tool.deprecatedReason && (
-                      <p className="mt-1 text-[12px] text-foreground/60">
+                      <p className="mt-1 text-[12px] text-foreground-soft">
                         {tool.deprecatedReason}
                       </p>
                     )}
@@ -264,20 +264,20 @@ export default async function ToolDetailPage({ params }: Props) {
                   {tool.isOpenSource === true && (
                     <span
                       title="Open source: the software's code is public. For services, the app may be open while the servers are not."
-                      className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/[0.03] px-3 py-1 text-[11px] font-medium text-foreground/70"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/[0.03] px-3 py-1 text-[11px] font-medium text-foreground-soft"
                     >
                       <Github className="h-3.5 w-3.5" />
                       Open Source
                     </span>
                   )}
                   {(showAndroid || showIos) && (
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/[0.03] px-3 py-1 text-[11px] font-medium text-foreground/70">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/[0.03] px-3 py-1 text-[11px] font-medium text-foreground-soft">
                       <Smartphone className="h-3.5 w-3.5" />
                       {showAndroid && showIos ? "Android & iOS" : showAndroid ? "Android" : "iOS"}
                     </span>
                   )}
                   {extraTags.map(tag => (
-                    <span key={tag.slug} className="inline-flex items-center rounded-full border border-foreground/8 bg-transparent px-3 py-1 text-[11px] text-foreground/55">
+                    <span key={tag.slug} className="inline-flex items-center rounded-full border border-foreground/8 bg-transparent px-3 py-1 text-[11px] text-muted-foreground">
                       {tag.name}
                     </span>
                   ))}
@@ -288,11 +288,11 @@ export default async function ToolDetailPage({ params }: Props) {
             {/* Description */}
             {tool.description && (
               <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-5">
-                <h2 className="text-[13px] font-medium text-foreground/90">
+                <h2 className="text-[13px] font-medium text-foreground">
                   About
                   <SourceRefs urls={evidence.sources["description"]?.urls} index={refs.index} />
                 </h2>
-                <p className="mt-3 whitespace-pre-wrap text-[13px] leading-relaxed text-foreground/60">
+                <p className="mt-3 whitespace-pre-wrap text-[13px] leading-relaxed text-foreground-soft">
                   {tool.description}
                 </p>
               </div>
@@ -302,8 +302,8 @@ export default async function ToolDetailPage({ params }: Props) {
                 duplicates them word for word on researched tools. */}
             {hasCaveats && (
               <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-5">
-                <h2 className="text-[13px] font-medium text-foreground/90">Things to know</h2>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-[13px] leading-relaxed text-foreground/60">
+                <h2 className="text-[13px] font-medium text-foreground">Things to know</h2>
+                <ul className="mt-3 list-disc space-y-2 pl-5 text-[13px] leading-relaxed text-foreground-soft">
                   {evidence.caveats.map((c, i) => (
                     <li key={i}>
                       {c.text}
@@ -317,9 +317,9 @@ export default async function ToolDetailPage({ params }: Props) {
             {/* Content (if available) */}
             {tool.content && !hasCaveats && (
               <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-5">
-                <h2 className="text-[13px] font-medium text-foreground/90">Details</h2>
+                <h2 className="text-[13px] font-medium text-foreground">Details</h2>
                 <div
-                  className="prose prose-sm dark:prose-invert mt-3 max-w-none text-foreground/60"
+                  className="prose prose-sm mt-3 max-w-none text-foreground-soft"
                   dangerouslySetInnerHTML={{ __html: tool.content }}
                 />
               </div>
@@ -327,7 +327,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
             {/* Share & Feedback */}
             <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-5">
-              <h2 className="text-[13px] font-medium text-foreground/90">Share & Feedback</h2>
+              <h2 className="text-[13px] font-medium text-foreground">Share & Feedback</h2>
               <div className="mt-4 space-y-4">
                 <div className="flex flex-wrap gap-2">
                   <Button variant="outline" size="sm" className="h-8 border-foreground/12 text-[12px] brand2-focus" asChild>
@@ -353,11 +353,11 @@ export default async function ToolDetailPage({ params }: Props) {
                 </div>
                 <div className="h-px bg-foreground/8" />
                 <div className="space-y-2">
-                  <p className="text-[11px] text-foreground/45">
+                  <p className="text-[11px] text-muted-foreground">
                     Help improve our directory
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <Button variant="ghost" size="sm" className="h-8 text-[11px] text-foreground/60 brand2-focus hover:text-foreground/80" asChild>
+                    <Button variant="ghost" size="sm" className="h-8 text-[11px] text-foreground-soft brand2-focus hover:text-foreground" asChild>
                       <a href={`mailto:privacy@defaultprivacy.com?subject=Suggest Edit: ${encodeURIComponent(tool.name)}&body=${encodeURIComponent(`Tool: ${tool.name}\nURL: https://defaultprivacy.com/directory/${tool.slug}\n\nSuggested change:\n`)}`}>
                         <MessageSquarePlus className="mr-1.5 h-3.5 w-3.5" />
                         Suggest Edit
@@ -383,7 +383,7 @@ export default async function ToolDetailPage({ params }: Props) {
                 {/* Privacy Score */}
                 {tool.latestPrivacyScore !== null && (
                   <div className="border-b border-foreground/8 pb-4 text-center">
-                    <p className="mb-1 text-[11px] text-foreground/50">Privacy Score</p>
+                    <p className="mb-1 text-[11px] text-muted-foreground">Privacy Score</p>
                     <div
                       className={`text-3xl font-medium tabular-nums tracking-tight ${
                         tool.latestPrivacyScore >= 80
@@ -438,7 +438,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
             {/* Quick Info */}
             <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-4">
-              <h3 className="mb-3 text-[13px] font-medium text-foreground/90">Quick Info</h3>
+              <h3 className="mb-3 text-[13px] font-medium text-foreground">Quick Info</h3>
               <div className="space-y-2">
                 <InfoRow label="Open Source" value={tool.isOpenSource === true} type="boolean" urls={evidence.sources["trust.is_open_source"]?.urls} index={refs.index} />
                 <div className="h-px bg-foreground/8" />
@@ -448,11 +448,11 @@ export default async function ToolDetailPage({ params }: Props) {
                   <>
                     <div className="h-px bg-foreground/8" />
                     <div className="flex items-center justify-between text-[12px]">
-                      <span className="flex items-center gap-1.5 text-foreground/50">
+                      <span className="flex items-center gap-1.5 text-muted-foreground">
                         <Calendar className="h-3 w-3" />
                         Added
                       </span>
-                      <span className="text-foreground/70">
+                      <span className="text-foreground-soft">
                         {new Date(tool.publishedAt).toLocaleDateString("en-US", {
                           year: "numeric",
                           month: "short",
@@ -469,20 +469,20 @@ export default async function ToolDetailPage({ params }: Props) {
             {refs.urls.length > 0 && (
               <>
               <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-4">
-                <h3 className="mb-3 text-[13px] font-medium text-foreground/90">Sources</h3>
-                <ol className="space-y-1.5 text-[11px] text-foreground/60">
+                <h3 className="mb-3 text-[13px] font-medium text-foreground">Sources</h3>
+                <ol className="space-y-1.5 text-[11px] text-foreground-soft">
                   {refs.urls.map((u, i) => (
                     <li key={u} id={`source-${i + 1}`} className="break-all">
                       [{i + 1}]{" "}
                       <a href={u} target="_blank" rel="noopener noreferrer nofollow" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
                         {sourceLabel(u)}
                       </a>{" "}
-                      <span className="text-foreground/40">checked {new Date(refs.checked[i] + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })}</span>
+                      <span className="text-muted-foreground">checked {new Date(refs.checked[i] + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" })}</span>
                     </li>
                   ))}
                 </ol>
               </div>
-              <p className="px-1 text-[11px] text-foreground/40">Each sourced fact links to the page we checked it against.</p>
+              <p className="px-1 text-[11px] text-muted-foreground">Each sourced fact links to the page we checked it against.</p>
               </>
             )}
 
@@ -490,11 +490,11 @@ export default async function ToolDetailPage({ params }: Props) {
             <div className="rounded-lg border border-foreground/8 bg-foreground/[0.01] p-4">
               <div className="mb-3 flex items-start gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-md border border-foreground/8 bg-foreground/[0.02]">
-                  <Shield className="h-4 w-4 text-foreground/50" />
+                  <Shield className="h-4 w-4 text-muted-foreground" />
                 </div>
                 <div>
-                  <p className="text-[13px] font-medium text-foreground/90">Privacy Scanner</p>
-                  <p className="text-[11px] text-foreground/50">
+                  <p className="text-[13px] font-medium text-foreground">Privacy Scanner</p>
+                  <p className="text-[11px] text-muted-foreground">
                     See what trackers this tool uses
                   </p>
                 </div>
@@ -520,7 +520,7 @@ export default async function ToolDetailPage({ params }: Props) {
           {/* Related Tools */}
           {relatedTools.length > 0 && (
             <section className="mt-12 border-t border-foreground/8 pt-10">
-              <h2 className="mb-6 text-lg font-medium tracking-tight text-foreground/90">
+              <h2 className="mb-6 text-lg font-medium tracking-tight text-foreground">
                 More in {relatedCategory}
               </h2>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -562,20 +562,20 @@ function InfoRow({
 }) {
   return (
     <div className="flex items-center justify-between text-[12px]">
-      <span className="text-foreground/50">
+      <span className="text-muted-foreground">
         {label}
         {value && index && <SourceRefs urls={urls} index={index} />}
       </span>
-      {detail && value && <span className="mr-1.5 ml-auto text-foreground/60">{detail}</span>}
+      {detail && value && <span className="mr-1.5 ml-auto text-foreground-soft">{detail}</span>}
       {type === "boolean" ? (
         value ? (
           <CheckCircle2 className="h-3.5 w-3.5 text-success" />
         ) : (
           // Most records only know when something is true: "no" was never checked, so say so.
-          <span className="text-foreground/30" title="Not checked">—</span>
+          <span className="text-muted-foreground" title="Not checked">—</span>
         )
       ) : (
-        <span className="text-foreground/70">{value || "—"}</span>
+        <span className="text-foreground-soft">{value || "—"}</span>
       )}
     </div>
   )

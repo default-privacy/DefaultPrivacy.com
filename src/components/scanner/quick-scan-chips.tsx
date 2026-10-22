@@ -39,7 +39,7 @@ export function QuickScanChips() {
               type="button"
               onClick={() => scan(domain)}
               disabled={isPending}
-              className="group brand2-focus inline-flex items-center gap-2 rounded-full border border-foreground/12 bg-foreground/[0.02] px-4 py-1.5 font-mono text-[12.5px] text-foreground/70 transition-colors hover:border-primary/50 hover:text-foreground disabled:opacity-50"
+              className="group brand2-focus inline-flex items-center gap-2 rounded-full border border-foreground/12 bg-foreground/[0.02] px-4 py-1.5 font-mono text-[12.5px] text-foreground-soft transition-colors hover:border-primary/50 hover:text-foreground disabled:opacity-50"
             >
               {isThis ? <Spinner className="h-3.5 w-3.5" /> : <ScanSearch className="h-3.5 w-3.5 brand2-icon-breathe" aria-hidden />}
               {isThis ? "scanning…" : domain}
@@ -50,7 +50,7 @@ export function QuickScanChips() {
           type="button"
           onClick={focusInput}
           disabled={isPending}
-          className="brand2-focus inline-flex items-center gap-2 rounded-full border border-primary/30 bg-foreground/[0.02] px-4 py-1.5 font-mono text-[12.5px] text-foreground/80 transition-colors hover:border-primary/60 hover:text-foreground disabled:opacity-50"
+          className="brand2-focus inline-flex items-center gap-2 rounded-full border border-primary/30 bg-foreground/[0.02] px-4 py-1.5 font-mono text-[12.5px] text-foreground transition-colors hover:border-primary/60 hover:text-foreground disabled:opacity-50"
         >
           scan your own site
         </button>

@@ -34,7 +34,7 @@ export function ShareButton({ title }: { title: string }) {
     <button
       type="button"
       onClick={share}
-      className="brand2-focus inline-flex items-center gap-2 rounded-lg border border-foreground/12 px-3 py-1.5 font-mono text-[12px] text-foreground/60 transition-colors hover:border-primary/50 hover:text-foreground"
+      className="brand2-focus inline-flex items-center gap-2 rounded-lg border border-foreground/12 px-3 py-1.5 font-mono text-[12px] text-foreground-soft transition-colors hover:border-primary/50 hover:text-foreground"
     >
       {copied ? <Check className="h-3.5 w-3.5 text-success" /> : <Share2 className="h-3.5 w-3.5" />}
       {copied ? "Copied link" : "Share readout"}

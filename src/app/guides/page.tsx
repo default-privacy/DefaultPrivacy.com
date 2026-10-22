@@ -65,10 +65,10 @@ export default async function GuidesPage() {
         {/* Hero */}
         <section className="container py-12 md:py-16">
           <div className="mx-auto max-w-3xl rounded-2xl border border-foreground/10 bg-foreground/[0.02] px-6 py-10 md:px-10">
-            <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground/90 mb-4">
+            <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground mb-4">
               Field Guide
             </h1>
-            <p className="text-lg text-foreground/58">
+            <p className="text-lg text-muted-foreground">
               Practical how-tos: run your own VPN, get your name off data-broker sites, and
               keep a home address off people-search listings.
             </p>
@@ -88,7 +88,7 @@ export default async function GuidesPage() {
                     className="brand2-focus group block rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 hover:border-foreground/20 hover:bg-foreground/[0.04] transition-all"
                   >
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2.5 py-1">
+                      <span className="text-[10px] font-mono text-muted-foreground border border-foreground/10 rounded-full px-2.5 py-1">
                         {guide.category}
                       </span>
                       <span className={`text-[10px] font-mono border rounded-full px-2.5 py-1 ${diff.bg} ${diff.color}`}>
@@ -96,15 +96,15 @@ export default async function GuidesPage() {
                       </span>
                     </div>
 
-                    <h2 className="text-base font-medium text-foreground/85 group-hover:text-foreground transition-colors mb-2">
+                    <h2 className="text-base font-medium text-foreground group-hover:text-foreground transition-colors mb-2">
                       {guide.title}
                     </h2>
 
-                    <p className="text-sm text-foreground/55 mb-4 flex-1">
+                    <p className="text-sm text-muted-foreground mb-4 flex-1">
                       {guide.description}
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-foreground/45 pt-3 border-t border-foreground/10">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-foreground/10">
                       <div className="flex items-center gap-3">
                         <span className="flex items-center gap-1">
                           <Clock className="h-3 w-3" aria-hidden="true" />
@@ -134,9 +134,9 @@ export default async function GuidesPage() {
         {/* CTA */}
         <section className="container pb-16">
           <div className="mx-auto max-w-3xl rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 text-center">
-            <BookOpen className="h-7 w-7 text-foreground/65 mx-auto mb-3" aria-hidden="true" />
-            <p className="font-medium text-foreground/85 mb-2">Put the guides into practice</p>
-            <p className="text-sm text-foreground/55 mb-4 max-w-lg mx-auto">
+            <BookOpen className="h-7 w-7 text-foreground-soft mx-auto mb-3" aria-hidden="true" />
+            <p className="font-medium text-foreground mb-2">Put the guides into practice</p>
+            <p className="text-sm text-muted-foreground mb-4 max-w-lg mx-auto">
               Browse the vetted directory to find the right tools, or run a free check on your own exposure.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">

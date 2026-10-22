@@ -91,7 +91,7 @@ export const DimensionDivider = ({
 }: Omit<SectionDividerProps, "children" | "showCaps"> & { label?: string }) => (
   <SectionDivider showCaps className={className} {...props}>
     {label && (
-      <span className="text-xs font-mono text-foreground/58 uppercase tracking-wider">{label}</span>
+      <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{label}</span>
     )}
   </SectionDivider>
 )

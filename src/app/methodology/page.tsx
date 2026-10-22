@@ -122,14 +122,14 @@ export default async function MethodologyPage() {
           </div>
           <div className="container relative py-20 md:py-28">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="mb-5 inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary/90">
+              <span className="mb-5 inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary">
                 Methodology
               </span>
-              <h1 className="text-4xl font-extralight tracking-tight text-foreground/92 sm:text-5xl">
+              <h1 className="text-4xl font-extralight tracking-tight text-foreground sm:text-5xl">
                 How we vet, rank, and{" "}
                 <span className="font-light text-primary">stay honest.</span>
               </h1>
-              <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-foreground/58">
+              <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 Default Privacy lists {toolsLabel} privacy tools. This is how a tool earns a place,
                 what our labels mean, how the free checks work — and why money can&apos;t move any of it.
               </p>
@@ -140,10 +140,10 @@ export default async function MethodologyPage() {
         {/* Standards */}
         <section className="container py-16 md:py-24">
           <div className="mx-auto max-w-6xl">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">
+            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary">
               How a tool earns a listing
             </p>
-            <h2 className="max-w-3xl text-balance text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
+            <h2 className="max-w-3xl text-balance text-3xl font-extralight tracking-tight text-foreground md:text-4xl">
               Evidence in, not marketing.
             </h2>
             <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -154,8 +154,8 @@ export default async function MethodologyPage() {
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
                       <Icon className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
                     </div>
-                    <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">{s.h}</h3>
-                    <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">{s.p}</p>
+                    <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">{s.h}</h3>
+                    <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">{s.p}</p>
                   </div>
                 )
               })}
@@ -167,13 +167,13 @@ export default async function MethodologyPage() {
         <section className="relative border-t border-foreground/10 bg-foreground/[0.02]">
           <div className="container py-16 md:py-24">
             <div className="mx-auto max-w-4xl">
-              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">
+              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary">
                 How the free tools work
               </p>
-              <h2 className="mb-4 text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
+              <h2 className="mb-4 text-3xl font-extralight tracking-tight text-foreground md:text-4xl">
                 What each check reads — and what it never touches.
               </h2>
-              <p className="mb-10 max-w-2xl text-sm leading-relaxed text-foreground/56">
+              <p className="mb-10 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                 Every free tool runs on public signals or in your own browser. No account, and nothing
                 you enter is stored.
               </p>
@@ -183,11 +183,11 @@ export default async function MethodologyPage() {
                     key={t.name}
                     className="rounded-xl border border-foreground/10 bg-background p-5"
                   >
-                    <dt className="flex items-center gap-2 text-base font-medium tracking-tight text-foreground/88">
-                      <Wrench className="h-4 w-4 text-primary/80" aria-hidden />
+                    <dt className="flex items-center gap-2 text-base font-medium tracking-tight text-foreground">
+                      <Wrench className="h-4 w-4 text-primary" aria-hidden />
                       {t.name}
                     </dt>
-                    <dd className="mt-2 text-sm leading-relaxed text-foreground/56">{t.how}</dd>
+                    <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.how}</dd>
                   </div>
                 ))}
               </dl>
@@ -202,13 +202,13 @@ export default async function MethodologyPage() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
                 <MessageSquarePlus className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
               </div>
-              <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">Found something wrong?</h3>
-              <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">
-                Every tool page has a <span className="text-foreground/75">Suggest Edit</span> and{" "}
-                <span className="text-foreground/75">Report Issue</span> link. Attributes change when the
+              <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">Found something wrong?</h3>
+              <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">
+                Every tool page has a <span className="text-foreground-soft">Suggest Edit</span> and{" "}
+                <span className="text-foreground-soft">Report Issue</span> link. Attributes change when the
                 evidence does — a maintainer drops open-source, a project is abandoned.
                 Tell us and we&apos;ll correct it. Our starting-point recommendations are explained on{" "}
-                <Link href="/how-we-pick" className="text-foreground/75 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                <Link href="/how-we-pick" className="text-foreground-soft underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
                   How we pick
                 </Link>
                 .
@@ -224,13 +224,13 @@ export default async function MethodologyPage() {
               <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
                 <Building2 className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
               </div>
-              <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">Who&apos;s behind this</h3>
-              <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">
+              <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground">Who&apos;s behind this</h3>
+              <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-muted-foreground">
                 Default Privacy is an independent privacy-tools directory — not owned by, or beholden to,
                 any tool it lists. We make no money from placements. Default Privacy is not a law firm and
                 does not provide legal advice.
               </p>
-              <p className="mt-4 font-mono text-[11px] text-foreground/40">
+              <p className="mt-4 font-mono text-[11px] text-muted-foreground">
                 Last reviewed {LAST_REVIEWED}
               </p>
             </div>

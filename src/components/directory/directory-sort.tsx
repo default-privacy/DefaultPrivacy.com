@@ -24,13 +24,13 @@ export function DirectorySort({ className }: { className?: string }) {
   })
 
   return (
-    <label className={cn("flex items-center gap-1.5 text-[12px] text-foreground/50", className)}>
+    <label className={cn("flex items-center gap-1.5 text-[12px] text-muted-foreground", className)}>
       <span className="hidden sm:inline">Sort</span>
       <select
         value={sort ?? ""}
         onChange={(e) => void setParams({ sort: e.target.value, page: 1 })}
         aria-label="Sort tools"
-        className="rounded-full border border-foreground/10 bg-background px-3 py-1.5 text-[12px] font-medium text-foreground/70 brand2-focus transition-colors hover:border-foreground/25"
+        className="rounded-full border border-foreground/10 bg-background px-3 py-1.5 text-[12px] font-medium text-foreground-soft brand2-focus transition-colors hover:border-foreground/25"
       >
         {OPTIONS.map((o) => (
           <option key={o.value} value={o.value}>

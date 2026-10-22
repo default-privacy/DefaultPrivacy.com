@@ -108,9 +108,9 @@ async function ToolsGrid({
     return (
       <>
         <div className="flex flex-col items-center justify-center rounded-lg border border-dashed border-foreground/10 bg-foreground/[0.01] py-16 text-center">
-          <Shield className="mb-4 h-10 w-10 text-foreground/30" aria-hidden />
-          <h3 className="text-lg font-medium text-foreground/80">No tools found</h3>
-          <p className="mt-1 text-sm text-foreground/50">
+          <Shield className="mb-4 h-10 w-10 text-muted-foreground" aria-hidden />
+          <h3 className="text-lg font-medium text-foreground">No tools found</h3>
+          <p className="mt-1 text-sm text-muted-foreground">
             Try adjusting your filters or search terms.
           </p>
           <Button variant="outline" className="brand2-focus mt-4 border-foreground/12" asChild>
@@ -125,8 +125,8 @@ async function ToolsGrid({
     <>
       {/* Result count — mirrors the mock's count bar */}
       <div className="mb-4 flex items-center justify-between border-b border-foreground/8 pb-3">
-        <span className="font-mono text-[12px] text-foreground/45">
-          <span className="font-medium tabular-nums text-foreground/80">{totalCount}</span> tools
+        <span className="font-mono text-[12px] text-muted-foreground">
+          <span className="font-medium tabular-nums text-foreground">{totalCount}</span> tools
           {totalPages > 1 && (
             <>
               {" "}
@@ -178,7 +178,7 @@ async function ToolsGrid({
               </>
             )}
           </Button>
-          <span className="px-4 text-[12px] tabular-nums text-foreground/50">
+          <span className="px-4 text-[12px] tabular-nums text-muted-foreground">
             Page {page} of {totalPages}
           </span>
           <Button

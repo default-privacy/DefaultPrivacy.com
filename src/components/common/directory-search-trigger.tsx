@@ -21,7 +21,7 @@ export function DirectorySearchTrigger({
       type="button"
       onClick={open}
       className={cn(
-        "inline-flex items-center gap-2 rounded-md border border-foreground/10 bg-foreground/[0.03] px-2.5 py-1.5 text-foreground/55 brand2-focus transition-colors hover:bg-foreground/[0.06] hover:text-foreground/75",
+        "inline-flex items-center gap-2 rounded-md border border-foreground/10 bg-foreground/[0.03] px-2.5 py-1.5 text-muted-foreground brand2-focus transition-colors hover:bg-foreground/[0.06] hover:text-foreground-soft",
         className,
       )}
       aria-label="Search directory (⌘K)"
@@ -31,7 +31,7 @@ export function DirectorySearchTrigger({
       {showShortcut && (
         <span className="hidden text-[11px] font-medium tracking-tight sm:inline">
           Search
-          <kbd className="ml-1.5 rounded border border-foreground/12 bg-foreground/[0.04] px-1 py-0.5 font-mono text-[10px] text-foreground/40">
+          <kbd className="ml-1.5 rounded border border-foreground/12 bg-foreground/[0.04] px-1 py-0.5 font-mono text-[10px] text-muted-foreground">
             ⌘K
           </kbd>
         </span>

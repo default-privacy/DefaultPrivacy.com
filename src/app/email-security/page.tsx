@@ -35,7 +35,7 @@ export default function EmailSecurityPage() {
       />
       <main className="container py-12 max-w-2xl mx-auto" style={{ touchAction: "manipulation" }}>
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-medium tracking-cinematic text-foreground/90 mb-3">
+          <h1 className="text-3xl font-medium tracking-cinematic text-foreground mb-3">
             Email Security Checker
           </h1>
           <p className="text-muted-foreground max-w-lg mx-auto">

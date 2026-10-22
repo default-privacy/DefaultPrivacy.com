@@ -164,7 +164,7 @@ export function DnsLeakChecker() {
               {resolvers.map((r) => (
                 <div key={r.ip} className="flex items-center justify-between gap-3 px-4 py-3">
                   <div className="min-w-0">
-                    <p className="truncate font-mono text-sm text-foreground/85">{r.ip}</p>
+                    <p className="truncate font-mono text-sm text-foreground">{r.ip}</p>
                     {r.isp && (
                       <p className="truncate text-xs text-muted-foreground">{r.isp}</p>
                     )}
@@ -210,9 +210,9 @@ export function DnsLeakChecker() {
       {status === "fallback" && (
         <div className="space-y-4">
           <div className="flex items-start gap-3 rounded-lg border border-foreground/15 bg-foreground/[0.03] p-4">
-            <AlertTriangle className="h-6 w-6 shrink-0 text-foreground/60" aria-hidden="true" />
+            <AlertTriangle className="h-6 w-6 shrink-0 text-foreground-soft" aria-hidden="true" />
             <div>
-              <p className="font-medium text-foreground/85">Live resolver detection is coming online</p>
+              <p className="font-medium text-foreground">Live resolver detection is coming online</p>
               <p className="mt-1 text-sm text-muted-foreground">
                 The measurement server that identifies which DNS resolvers answered your queries
                 isn&apos;t connected yet, so we can&apos;t show your resolvers right now. Everything below

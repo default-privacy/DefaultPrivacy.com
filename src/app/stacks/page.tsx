@@ -65,10 +65,10 @@ export default async function StacksPage() {
         {/* Hero */}
         <section className="container py-12 md:py-16">
           <div className="mx-auto max-w-3xl rounded-2xl border border-foreground/10 bg-foreground/[0.02] px-6 py-10 md:px-10">
-            <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground/90 mb-4">
+            <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground mb-4">
               Privacy Stacks
             </h1>
-            <p className="text-lg text-foreground/58">
+            <p className="text-lg text-muted-foreground">
               Curated tool bundles for a specific threat model — the exact set of privacy tools for
               your situation, in setup order, with the tradeoffs spelled out. Start with a stack instead
               of a blank directory.
@@ -89,7 +89,7 @@ export default async function StacksPage() {
                     className="brand2-focus group block rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 hover:border-foreground/20 hover:bg-foreground/[0.04] transition-all"
                   >
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2.5 py-1">
+                      <span className="text-[10px] font-mono text-muted-foreground border border-foreground/10 rounded-full px-2.5 py-1">
                         {stack.category}
                       </span>
                       <span className={`text-[10px] font-mono border rounded-full px-2.5 py-1 ${diff.bg} ${diff.color}`}>
@@ -97,15 +97,15 @@ export default async function StacksPage() {
                       </span>
                     </div>
 
-                    <h2 className="text-base font-medium text-foreground/85 group-hover:text-foreground transition-colors mb-2">
+                    <h2 className="text-base font-medium text-foreground group-hover:text-foreground transition-colors mb-2">
                       {stack.title}
                     </h2>
 
-                    <p className="text-sm text-foreground/55 mb-4 flex-1">
+                    <p className="text-sm text-muted-foreground mb-4 flex-1">
                       {stack.description}
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-foreground/45 pt-3 border-t border-foreground/10">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground pt-3 border-t border-foreground/10">
                       <div className="flex items-center gap-3">
                         <span className="flex items-center gap-1">
                           <Clock className="h-3 w-3" aria-hidden="true" />
@@ -135,9 +135,9 @@ export default async function StacksPage() {
         {/* CTA */}
         <section className="container pb-16">
           <div className="mx-auto max-w-3xl rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 text-center">
-            <Layers className="h-7 w-7 text-foreground/65 mx-auto mb-3" aria-hidden="true" />
-            <p className="font-medium text-foreground/85 mb-2">Want to go tool by tool?</p>
-            <p className="text-sm text-foreground/55 mb-4 max-w-lg mx-auto">
+            <Layers className="h-7 w-7 text-foreground-soft mx-auto mb-3" aria-hidden="true" />
+            <p className="font-medium text-foreground mb-2">Want to go tool by tool?</p>
+            <p className="text-sm text-muted-foreground mb-4 max-w-lg mx-auto">
               Browse the full vetted directory to compare every option, or read the guides for step-by-step walkthroughs.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">

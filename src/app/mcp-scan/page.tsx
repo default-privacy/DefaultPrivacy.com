@@ -19,16 +19,16 @@ const by = summary.hostsByOutcome as Record<string, number>
 const signIn = by.sign_in ?? 0
 const refused = (by.refused_url ?? 0) + (by.refused_address ?? 0)
 
-const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50"
-const body = "space-y-4 text-sm leading-relaxed text-foreground/70"
+const label = "text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground"
+const body = "space-y-4 text-sm leading-relaxed text-foreground-soft"
 const link = "underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
-const th = "py-2 pr-4 text-left font-medium text-foreground/60"
+const th = "py-2 pr-4 text-left font-medium text-foreground-soft"
 const td = "py-2 pr-4"
 const tdNum = "py-2 text-right tabular-nums text-foreground"
 
 function Table({ rows, head }: { head: [string, string]; rows: [string, number][] }) {
   return (
-    <table className="w-full border-collapse text-sm text-foreground/70">
+    <table className="w-full border-collapse text-sm text-foreground-soft">
       <thead>
         <tr className="border-b border-foreground/10">
           <th className={th}>{head[0]}</th>

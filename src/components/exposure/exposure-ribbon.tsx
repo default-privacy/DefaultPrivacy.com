@@ -45,7 +45,7 @@ export function ExposureRibbon() {
               <>
                 This site can see you:{" "}
                 <span className="text-foreground">{ip}</span>
-                {loc ? <span className="text-foreground/55"> · {loc}</span> : null}
+                {loc ? <span className="text-muted-foreground"> · {loc}</span> : null}
               </>
             ) : (
               <span className="text-caution/70">reading your connection…</span>

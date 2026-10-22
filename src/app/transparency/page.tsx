@@ -23,10 +23,10 @@ export default function TransparencyPage() {
         </h1>
 
         <section id={PARTNER_REVENUE_SECTION_ID} className="mt-12 space-y-4 scroll-mt-24">
-          <h2 className="text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50">
+          <h2 className="text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground">
             HOW WE EARN
           </h2>
-          <div className="space-y-4 text-sm leading-relaxed text-foreground/70">
+          <div className="space-y-4 text-sm leading-relaxed text-foreground-soft">
             <p>
               <strong className="font-medium text-foreground">The directory takes no money.</strong>{" "}
               Listings aren&apos;t paid placements, rankings aren&apos;t for sale, and there are no
@@ -54,17 +54,17 @@ export default function TransparencyPage() {
         </section>
 
         <section className="mt-12 space-y-4">
-          <h2 className="text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-foreground/50">
+          <h2 className="text-xs font-medium tracking-[var(--tracking-cinematic-wide)] text-muted-foreground">
             WHERE OUR BIAS ACTUALLY IS
           </h2>
-          <p className="text-sm leading-relaxed text-foreground/70">
+          <p className="text-sm leading-relaxed text-foreground-soft">
             We do have opinions. We prefer open source. We think jurisdiction matters more than most
             reviewers do. We think a company that can be compelled is different from one that
             cannot, even when both are behaving well today. Those judgments shape what we include
             and how we describe it — that is a viewpoint you should weigh, and it is a different
             thing from being paid to say something.
           </p>
-          <p className="text-sm leading-relaxed text-foreground/70">
+          <p className="text-sm leading-relaxed text-foreground-soft">
             How we choose our picks, and what a pick does not mean, is on{" "}
             <Link href="/how-we-pick" className="underline underline-offset-2 hover:text-foreground">
               How we pick

@@ -134,7 +134,7 @@ export default async function GlossaryTermPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/glossary"
-            className="brand2-focus inline-flex items-center gap-1 text-sm text-foreground/55 hover:text-foreground mb-6 rounded"
+            className="brand2-focus inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6 rounded"
           >
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             Back to Glossary
@@ -144,16 +144,16 @@ export default async function GlossaryTermPage({ params }: Props) {
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-foreground/[0.06] border border-foreground/10">
-                <BookOpen className="h-5 w-5 text-foreground/65" aria-hidden="true" />
+                <BookOpen className="h-5 w-5 text-foreground-soft" aria-hidden="true" />
               </div>
-              <span className="text-[10px] font-mono text-foreground/45 uppercase tracking-[0.3em] border border-foreground/10 rounded-full px-2.5 py-1">
+              <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.3em] border border-foreground/10 rounded-full px-2.5 py-1">
                 {term.category}
               </span>
             </div>
-            <h1 className="text-4xl font-medium tracking-cinematic text-foreground/90 mb-4">
+            <h1 className="text-4xl font-medium tracking-cinematic text-foreground mb-4">
               What is {term.term}?
             </h1>
-            <p className="text-xl text-foreground/58 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               {term.definition}
             </p>
           </div>
@@ -161,11 +161,11 @@ export default async function GlossaryTermPage({ params }: Props) {
           {/* Aliases */}
           {term.aliases && term.aliases.length > 0 && (
             <div className="mb-6">
-              <p className="text-sm text-foreground/55">
+              <p className="text-sm text-muted-foreground">
                 Also known as:{" "}
                 {term.aliases.map((alias, i) => (
                   <span key={alias}>
-                    <span className="text-foreground/80">{alias}</span>
+                    <span className="text-foreground">{alias}</span>
                     {i < term.aliases!.length - 1 && ", "}
                   </span>
                 ))}
@@ -184,7 +184,7 @@ export default async function GlossaryTermPage({ params }: Props) {
           {/* Related terms */}
           {relatedTerms.length > 0 && (
             <section className="mt-12">
-              <h2 className="text-lg font-medium text-foreground/85 mb-4">Related Terms</h2>
+              <h2 className="text-lg font-medium text-foreground mb-4">Related Terms</h2>
               <div className="grid sm:grid-cols-2 gap-4">
                 {relatedTerms.map((related) => (
                   <Link
@@ -192,10 +192,10 @@ export default async function GlossaryTermPage({ params }: Props) {
                     href={`/glossary/${related.slug}`}
                     className="brand2-focus group block rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4 hover:border-foreground/20 hover:bg-foreground/[0.04] transition-all"
                   >
-                    <h3 className="font-medium text-sm text-foreground/85 group-hover:text-foreground mb-1 transition-colors">
+                    <h3 className="font-medium text-sm text-foreground group-hover:text-foreground mb-1 transition-colors">
                       {related.term}
                     </h3>
-                    <p className="text-xs text-foreground/55 line-clamp-2">
+                    <p className="text-xs text-muted-foreground line-clamp-2">
                       {related.definition}
                     </p>
                   </Link>
@@ -207,7 +207,7 @@ export default async function GlossaryTermPage({ params }: Props) {
           {/* See also (tools) */}
           {term.seeAlso && term.seeAlso.length > 0 && (
             <section className="mt-12">
-              <h2 className="text-sm font-medium text-foreground/65 flex items-center gap-2 mb-3">
+              <h2 className="text-sm font-medium text-foreground-soft flex items-center gap-2 mb-3">
                 <Wrench className="h-4 w-4" aria-hidden="true" />
                 Related Tools
               </h2>
@@ -216,7 +216,7 @@ export default async function GlossaryTermPage({ params }: Props) {
                   <Link
                     key={tool.slug}
                     href={`/directory/${tool.slug}`}
-                    className="brand2-focus inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1.5 text-xs text-foreground/65 hover:text-foreground hover:border-foreground/20 transition-colors"
+                    className="brand2-focus inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1.5 text-xs text-foreground-soft hover:text-foreground hover:border-foreground/20 transition-colors"
                   >
                     {tool.name}
                     <ExternalLink className="h-3 w-3" aria-hidden="true" />
