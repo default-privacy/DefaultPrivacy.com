@@ -19,6 +19,15 @@ export const BASELINE: SituationItem[] = [
   { kind: "stack", slug: "privacy-starter-kit" },
 ]
 
+/** dp_route only: /start already shows the starting set as its own section. As a situation,
+ * its first page carries its Short Answer, which the start_here list never does. */
+export const NEW_TO_PRIVACY: Situation = {
+  id: "new-to-privacy",
+  name: "I'm new to privacy and don't know where to start",
+  blurb: "The standard setup most people need first.",
+  items: BASELINE,
+}
+
 export const SITUATIONS: Situation[] = [
   {
     id: "work-or-business",

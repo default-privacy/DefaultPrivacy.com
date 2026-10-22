@@ -15,7 +15,7 @@ import { getCategoryGroups } from "@/lib/db/queries"
 import { checkEmailSecurity } from "@/lib/email-security/dns"
 import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
-import { BASELINE, SITUATIONS, type SituationItem } from "@/lib/situations"
+import { BASELINE, NEW_TO_PRIVACY, SITUATIONS, type SituationItem } from "@/lib/situations"
 import { MCP_BAR, MCP_CATEGORY, MCP_CHECKLIST, matchMcpRef } from "@/lib/mcp-vetting"
 import { lookupScan } from "@/lib/mcp-scan/lookup"
 import { searchAnswers } from "@/lib/answers"
@@ -59,6 +59,8 @@ async function limitExceeded(resource: string): Promise<string | null> {
 function errorContent(message: string) {
   return { ...jsonContent({ error: message }), isError: true as const }
 }
+
+const ROUTE_SITUATIONS = [NEW_TO_PRIVACY, ...SITUATIONS]
 
 export const SURVIVOR_KIT = "stalking-abuse-survivor-safety-kit"
 /** What the survivor kit says up front; dp_search and dp_route repeat it so hosts with old instructions still see it. */
@@ -618,10 +620,10 @@ export function registerTools(server: McpServer): void {
     {
       title: "Route a situation to the right guides and stacks",
       description:
-        `Pick the 1 to 3 situations that fit the user and get the guides and stacks to read for each. Choose the ids yourself from what the user said; never send their words, which stay with you. The standard starting set is always included. Open a result with dp_get_guide or dp_get_stack. For a keyword lookup use dp_search instead. Situations: ${SITUATIONS.map((s) => `${s.id} (${s.name})`).join("; ")}.`,
+        `Pick the 1 to 3 situations that fit the user and get the guides and stacks to read for each. Choose the ids yourself from what the user said; never send their words, which stay with you. The standard starting set is always included. Open a result with dp_get_guide or dp_get_stack. For a keyword lookup use dp_search instead. Situations: ${ROUTE_SITUATIONS.map((s) => `${s.id} (${s.name})`).join("; ")}.`,
       inputSchema: {
         situations: z
-          .array(z.enum(SITUATIONS.map((s) => s.id) as [string, ...string[]]))
+          .array(z.enum(ROUTE_SITUATIONS.map((s) => s.id) as [string, ...string[]]))
           .min(1)
           .max(3)
           .describe("1 to 3 situation ids, best fit first."),
@@ -648,7 +650,7 @@ export function registerTools(server: McpServer): void {
             }),
           )
         ).filter((x) => x !== null)
-      const picked = [...new Set(situations)].map((id) => SITUATIONS.find((s) => s.id === id)!)
+      const picked = [...new Set(situations)].map((id) => ROUTE_SITUATIONS.find((s) => s.id === id)!)
       const matches = await Promise.all(
         picked.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items, true) })),
       )
@@ -659,7 +661,7 @@ export function registerTools(server: McpServer): void {
         ...(hasKit && { safety: SURVIVOR_NOTE }),
         data: {
           matches,
-          start_here: await resolve(BASELINE),
+          start_here: await resolve(BASELINE.filter((b) => !picked.some((p) => p.items.some((i) => i.slug === b.slug)))),
         },
         ...(top && { next: openFirst({ kind: top.type, slug: top.slug }) }),
         meta: { citation: citation("start") },

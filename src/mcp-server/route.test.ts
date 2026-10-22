@@ -53,3 +53,13 @@ describe("dp_route safety note", () => {
     expect(await safety(["browser"])).toBeUndefined()
   })
 })
+
+// Beginners have no other fitting id, and the start_here list carries no Short Answer.
+describe("dp_route new-to-privacy", () => {
+  it("leads with where-to-start and its Short Answer, without repeating it in start_here", async () => {
+    const { data } = JSON.parse((await route.handler({ situations: ["new-to-privacy"] })).content[0].text)
+    expect(data.matches[0].items[0].slug).toBe("privacy-where-to-start")
+    expect(data.matches[0].items[0].short_answer).toBeTruthy()
+    expect(data.start_here).toEqual([])
+  })
+})

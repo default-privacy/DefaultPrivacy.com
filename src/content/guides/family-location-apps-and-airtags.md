@@ -6,7 +6,7 @@ category: Privacy
 difficulty: beginner
 timeToComplete: "20 minutes"
 publishedAt: "2026-10-10"
-updatedAt: "2026-10-11"
+updatedAt: "2026-10-22"
 author: Default Privacy
 tags:
   - life360
@@ -261,6 +261,20 @@ If this is part of a wider pattern, start with our [Digital Safety Kit for Stalk
 
 No court has found Apple liable. The claims are allegations. Apple has settled some cases and is contesting the rest ([The Mac Observer](https://www.macobserver.com/news/apple-settled-20-airtag-stalking-lawsuits-two-months/)).
 
+### Tracking a partner or another adult
+
+Secretly tracking another adult can be a crime. It depends on your state, and owning the car doesn't always make it legal.
+
+- **Florida** bars knowingly using "a tracking device or tracking application to determine the location or movement of another person or another person's property without that person's consent." A violation is a felony ([Fla. Stat. 934.425](http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0934/Sections/0934.425.html)).
+- **California** says no one may "use an electronic tracking device to determine the location or movement of a person." The law doesn't apply when a vehicle's registered owner, lessor or lessee has consented to tracking that vehicle. A violation is a misdemeanor ([Cal. Penal Code 637.7](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=637.7)).
+- **Federal stalking law** covers someone who intends to "place under surveillance with intent to kill, injure, harass, or intimidate another person" and uses the mail, an online service or "any other facility of interstate or foreign commerce" for a course of conduct that puts that person in reasonable fear of death or serious injury, or "would be reasonably expected to cause substantial emotional distress" ([18 U.S.C. 2261A](https://www.law.cornell.edu/uscode/text/18/2261A)).
+
+Other states have their own tracking and stalking laws, and laws change. This is not legal advice.
+
+A hidden tag may not stay hidden either. An AirTag moving with someone can set off an alert on their iPhone or Android phone (see How phone alerts work, above). If you want to know where a partner is, ask them to share location in Find My or Google, where they can see who they share with and stop.
+
+If you think someone is tracking you, start with If you find one, above.
+
 ### Tracking your own family
 
 The makers say these tags are for things.
@@ -294,6 +308,10 @@ Probably not. Google's alert list doesn't include Tile ([Google](https://support
 **Is Find My location sharing private?**
 
 Apple says that when you and the other person both run iOS 17 or later, your location "will not be accessible to Apple." Apple's page also says your location "is retained for up to 24 hours in order to provide the service" ([Apple](https://www.apple.com/legal/privacy/data/en/find-my/)). Apple still knows who you share with. The people you share with see where you are, so review the list in Find My > People.
+
+**Is it legal to put an AirTag on my partner's car?**
+
+It can be a crime, and it depends on your state. Florida bars knowingly using a tracking device "to determine the location or movement of another person or another person's property without that person's consent" ([Fla. Stat. 934.425](http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0934/Sections/0934.425.html)). California bars using a tracking device to find "the location or movement of a person," but not when a vehicle's registered owner, lessor or lessee consents to tracking that vehicle ([Cal. Penal Code 637.7](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=637.7)). Tracking someone to harass or intimidate them can also be federal stalking ([18 U.S.C. 2261A](https://www.law.cornell.edu/uscode/text/18/2261A)). Their phone may alert them to the tag anyway. Ask them to share location instead.
 
 **Should I put an AirTag on my kid?**
 
