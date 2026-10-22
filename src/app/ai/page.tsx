@@ -34,27 +34,31 @@ export default function UseInYourAiPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="mx-auto w-full max-w-2xl flex-1 px-5 pb-24 pt-14">
-        <h1 className="text-3xl font-extralight tracking-[var(--tracking-cinematic)]">
-          Use Default Privacy in your AI
-        </h1>
-        <p className={`mt-6 ${body}`}>
-          Ask your assistant about privacy tools and it answers from this directory: DP picks first, then A to Z,
-          with a link back to each listing. Free, no account, no key. How we choose picks is on{" "}
-          <Link href="/how-we-pick" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
-            How we pick
-          </Link>
-          .
-        </p>
+      <main className="container flex-1 pb-24 pt-14">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-start">
+          <div className="max-w-xl">
+            <h1 className="text-4xl font-light tracking-[var(--tracking-cinematic)] md:text-5xl">
+              Use Default Privacy in your AI
+            </h1>
+            <p className={`mt-6 ${body}`}>
+              Ask your assistant about privacy tools and it answers from this directory: DP picks first, then A to Z,
+              with a link back to each listing. Free, no account, no key. How we choose picks is on{" "}
+              <Link href="/how-we-pick" className="underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                How we pick
+              </Link>
+              .
+            </p>
 
-        <ConnectAiCard className="mt-12" />
+          </div>
+          <ConnectAiCard className="lg:mt-2" />
+        </div>
 
         <section className="mt-12 space-y-4">
           <h2 className={label}>ADD IT TO YOUR APP</h2>
-          <ul className="space-y-5">
+          <ul className="grid gap-3.5 md:grid-cols-2">
             {AI_APPS.filter((a) => a.steps).map((a) => (
-              <li key={a.id} id={`app-${a.id}`} className={`scroll-mt-24 ${body}`}>
-                <p className="font-medium text-foreground">{a.name}</p>
+              <li key={a.id} id={`app-${a.id}`} className={`scroll-mt-24 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-5 ${body}`}>
+                <p className="mb-1.5 font-medium text-foreground">{a.name}</p>
                 <p>
                   {a.steps}
                   {a.note && <> {a.note}</>}{" "}
@@ -75,7 +79,7 @@ export default function UseInYourAiPage() {
           <div className={body}>
             <p>Editors and other tools that accept a remote MCP server URL work the same way:</p>
           </div>
-          <div className="space-y-3">
+          <div className="grid gap-3 lg:grid-cols-3">
             {CLIENTS.map((c) => (
               <div key={c.name}>
                 <p className="mb-1 text-xs text-foreground/50">{c.name}</p>
