@@ -105,7 +105,7 @@ export default function UseInYourAiPage() {
           <div className={body}>
             <p>
               Your assistant decides what to send us. Our tools ask only for what they need, like a
-              product name, a domain, or a short description of your situation, and we don&apos;t
+              product name, a domain, or a situation picked from a fixed list, and we don&apos;t
               store it. We keep daily counts of each tool and request type, of which guide, stack or glossary
               entry is opened, of which kind of app connects (Claude, Cursor and the like; any other name
               counts as &quot;other&quot;), of which version of the MCP protocol each request uses, of which response formats a request says it accepts, and of which broad kind of software sends a request (browser-like, script, self-declared bot, an AI company&apos;s app such as Claude or ChatGPT, or other, never the raw text), and of how many connections and tool calls each of those kinds makes. We also keep a daily total per endpoint of

@@ -121,6 +121,7 @@ export default function PrivacyPolicyPage() {
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">Server logs</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
                     <li>• Like any website, our host records basic request logs (IP address, user agent, and the page address requested) for security and reliability. We don&apos;t use them to profile you.</li>
+                    <li>• To enforce rate limits, your IP address is held in memory for up to a day, then dropped. It is never written to our database.</li>
                   </ul>
                 </div>
               </div>

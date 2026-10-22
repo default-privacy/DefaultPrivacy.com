@@ -84,7 +84,7 @@ Standard SMS and most chat apps can read your messages and log who you talk to. 
 
 ## Tradeoffs — read before you rely on it
 
-Every tool here is free or has a real free tier, so cost isn't the friction. Understanding what each one does *not* do is.
+Four of the five tools here are free or have a real free tier. Mullvad is paid, at a flat €5 a month, and the free option for that layer is below. So cost is rarely the friction. Understanding what each one does *not* do is.
 
 | Tool | The honest limit |
 |---|---|
