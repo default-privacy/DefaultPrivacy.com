@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
                   We practice what we preach. This policy explains exactly what data we touch, why, and how
                   little of it we keep.
                 </p>
-                <p className="text-sm text-foreground/45">Last updated: October 17, 2026</p>
+                <p className="text-sm text-foreground/45">Last updated: October 22, 2026</p>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <h4 className="mb-2 text-sm font-medium text-foreground/80">AI assistant connector</h4>
                   <ul className="space-y-1 text-sm text-foreground/55">
-                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), of which MCP protocol version each request uses, of which response formats a request says it accepts, and of which broad kind of software sends a request (browser-like, script, self-declared bot, an AI company&apos;s app such as Claude or ChatGPT, or other, never the raw text), and of how many connections and tool calls each of those kinds makes. We also count which guide or glossary entry an assistant opens. What an assistant sends to look something up isn&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
+                    <li>• We keep daily counts of each tool and request type an assistant uses, of which kind of app connects (Claude, Cursor and the like; any other name counts as &quot;other&quot;), of which MCP protocol version each request uses, of which response formats a request says it accepts, and of which broad kind of software sends a request (browser-like, script, self-declared bot, an AI company&apos;s app such as Claude or ChatGPT, or other, never the raw text), and of how many connections and tool calls each of those kinds makes. We also count which guide, stack or glossary entry an assistant opens. What an assistant sends to look something up isn&apos;t stored. Details on <a href="/ai" className="underline hover:text-foreground">/ai</a>.</li>
                   </ul>
                 </div>
                 <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">

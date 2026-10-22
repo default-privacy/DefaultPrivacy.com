@@ -30,6 +30,16 @@ relatedTools:
 
 *The stack that keeps you — and your clients' data — safe on Wi-Fi you don't control.*
 
+## The Short Answer
+
+Use a VPN on any network you don't control, then add four more layers so one weak spot doesn't expose client work.
+
+1. Turn on a VPN such as Mullvad on untrusted Wi-Fi. Keep it toggleable, since some sites block VPN exit IPs.
+2. Add encrypted DNS with DNScrypt-proxy 2. Even with a VPN, your DNS lookups can leak.
+3. Put every account in a password manager like Bitwarden. The master password is the whole vault.
+4. Encrypt client files with Cryptomator before they sync to the cloud.
+5. Use Signal for client calls and Element or Matrix for team chat.
+
 ## Who this is for and what it defends against
 
 You work from airports, hotel lobbies, coworking spaces, and cafés, on networks a stranger administers. That's the exposure: **hostile or public Wi-Fi** that can watch or tamper with your traffic, **account takeover** while you're logged into a dozen client systems, **client-data leakage** if a laptop is lost or a file syncs in the clear, and cross-border scrutiny of the device you carry.

@@ -51,6 +51,16 @@ Where to begin without getting overwhelmed was a question beginners asked on the
 
 ---
 
+## The Short Answer
+
+Start with your passwords and your email login, then work down ten changes, one at a time.
+
+1. Put your passwords in a password manager, email and bank first. Write the master password down and keep it safe at home.
+2. Turn on two-step login, email first. Use an authenticator app where you can, and text codes where they are the only choice.
+3. Check what has already leaked, and change those passwords.
+4. Turn on automatic updates. In the US, freeze your credit.
+5. Then block browser trackers, trim phone ad tracking, move chats to Signal, use email aliases, and opt out of data brokers.
+
 ## The first ten changes
 
 ### 1. Put your passwords in a password manager

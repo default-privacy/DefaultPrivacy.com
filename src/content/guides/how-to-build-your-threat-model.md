@@ -53,6 +53,16 @@ Which browser and which phone to use were among the most asked questions on the 
 
 ---
 
+## The Short Answer
+
+A threat model is a one-page written answer to what you protect, from whom, how likely, how bad, and how much effort you'll spend. It takes about fifteen minutes.
+
+1. List what you want to protect.
+2. Name real adversaries, such as a scammer who phishes your email password. "Hackers" is too vague.
+3. Rate how likely and how bad each threat is.
+4. Write down your limits on money, time and skill, and who you're doing this with.
+5. Put it on one page with a review date. Keep it where others can't reach it.
+
 ## The questions
 
 The best-known version comes from the Electronic Frontier Foundation's [Surveillance Self-Defense](/directory/surveillance-self-defense) guide. Its module [Your Security Plan](https://ssd.eff.org/module/your-security-plan) (last reviewed October 27, 2023) asks six questions. Here they are in plain words, with what to write down for each.

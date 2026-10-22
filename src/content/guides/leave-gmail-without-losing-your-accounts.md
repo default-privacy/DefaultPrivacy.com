@@ -43,6 +43,16 @@ You don't leave Gmail in one step. You set up the new inbox, start forwarding, c
 
 This guide is the how-to for the move. For choosing the new inbox, see [Proton Mail vs Tuta](/guides/proton-mail-vs-tuta).
 
+## The Short Answer
+
+You leave Gmail slowly, and keep it as a safety net. Set up the new inbox first.
+
+1. Create the new account. Turn on two-step login and save its recovery codes.
+2. Forward new Gmail mail to it, and keep Gmail's copy at first.
+3. Copy your old mail with the new provider's import tool or Google Takeout.
+4. Change the email on your accounts one at a time. Start with money accounts. If an account says "Continue with Google", set a separate email-and-password login first.
+5. Keep Gmail alive and sign in now and then. Google may delete an account unused for 2 years.
+
 ---
 
 ## Step 1: Pick the new inbox and an alias plan

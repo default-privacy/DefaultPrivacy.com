@@ -61,9 +61,10 @@ function errorContent(message: string) {
 }
 
 export const SURVIVOR_KIT = "stalking-abuse-survivor-safety-kit"
-/** What the survivor kit says up front; dp_search repeats it so hosts with old instructions still see it. */
+/** What the survivor kit says up front; dp_search and dp_route repeat it so hosts with old instructions still see it. */
 export const SURVIVOR_SAFETY =
   "changing a setting or signing a device out can alert the person watching, so plan visible changes with a trained advocate; in the US the National Domestic Violence Hotline is free, confidential and open 24/7 (call 1-800-799-7233, text START to 88788)."
+const SURVIVOR_NOTE = `This may touch stalking or abuse. Alongside any steps, say: ${SURVIVOR_SAFETY} Full kit: dp_get_stack with slug ${SURVIVOR_KIT}.`
 
 /** Agents skipped a generic "open the best one" on short questions, so this names the exact call. */
 const openFirst = (page: { kind: string; slug: string }) =>
@@ -144,7 +145,7 @@ export function registerTools(server: McpServer): void {
         // Top two only: "tracking pixel" lists the kit lower down, and the note would be out of place there.
         // "doxxed" finds the self-audit stacks, not the kit, but the person may be the target of one.
         ...((pages.slice(0, 2).some((p) => p.slug === SURVIVOR_KIT) || words.some((w) => w.startsWith("dox"))) && {
-          safety: `This may touch stalking or abuse. Alongside any steps, say: ${SURVIVOR_SAFETY} Full kit: dp_get_stack with slug ${SURVIVOR_KIT}.`,
+          safety: SURVIVOR_NOTE,
         }),
         ...(pages.length > 0 && { next: openFirst(pages[0]) }),
         ...(product && {
@@ -593,6 +594,8 @@ export function registerTools(server: McpServer): void {
       countUsage("mcp_tool", "dp_get_stack")
       const stack = await getStackBySlug(slug)
       if (!stack) return errorContent(`No stack found with slug '${slug}'. See dp_list_stacks.`)
+      // Per-slug demand, after the guard and keyed on the resolved slug, same as guide_read.
+      countUsage("stack_read", stack.slug)
       const content = stripEmbeddedJsonLd(stack.content)
       const head = { title: stack.title, slug: stack.slug, description: stack.description, url: url(`stacks/${stack.slug}`) }
       const meta = { citation: citation(`stacks/${stack.slug}`) }
@@ -650,7 +653,10 @@ export function registerTools(server: McpServer): void {
         picked.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items, true) })),
       )
       const top = matches.find((m) => m.items.length > 0)?.items[0]
+      const hasKit = matches.some((m) => m.items.some((i) => i.slug === SURVIVOR_KIT))
       return jsonContent({
+        // The kit has no Short Answer on purpose (too risky to compress), so route carries the warning like dp_search.
+        ...(hasKit && { safety: SURVIVOR_NOTE }),
         data: {
           matches,
           start_here: await resolve(BASELINE),

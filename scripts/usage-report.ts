@@ -29,6 +29,7 @@ const KIND_LABEL: Record<string, string> = {
   free_tool: "Free tools (humans)",
   directory_search: "Directory search",
   guide_read: "→ guides, per slug (agents)",
+  stack_read: "→ stacks, per slug (agents)",
   glossary_read: "→ glossary, per slug (agents)",
   mcp_method: "MCP messages (protocol)",
   mcp_client: "MCP connections (apps)",
@@ -38,7 +39,7 @@ const KIND_LABEL: Record<string, string> = {
   mcp_sender: "MCP connects / tool calls by sender",
 }
 
-const isContentKind = (kind: string) => kind === "guide_read" || kind === "glossary_read"
+const isContentKind = (kind: string) => kind === "guide_read" || kind === "stack_read" || kind === "glossary_read"
 
 const bar = (n: number, max: number, width = 24) =>
   max > 0 ? "█".repeat(Math.max(1, Math.round((n / max) * width))) : ""
@@ -76,7 +77,7 @@ async function main() {
     }
   }
 
-  section("Top content pulled by agents (guides / glossary, per slug)")
+  section("Top content pulled by agents (guides / stacks / glossary, per slug)")
   const contentKeys = usage.topKeys.filter((k) => isContentKind(k.kind))
   if (contentKeys.length === 0) {
     console.log("  (nothing recorded yet — ships empty until the next deploy)")
@@ -84,7 +85,7 @@ async function main() {
     const max = Math.max(...contentKeys.map((k) => k.total))
     for (const k of contentKeys.slice(0, 25)) {
       const label = `${k.key}`.padEnd(40)
-      const chan = `[${k.kind === "guide_read" ? "guide" : "glossary"}]`.padEnd(11)
+      const chan = `[${k.kind.replace("_read", "")}]`.padEnd(11)
       console.log(`  ${label} ${chan} ${String(k.total).padStart(5)}  ${bar(k.total, max, 16)}`)
     }
   }

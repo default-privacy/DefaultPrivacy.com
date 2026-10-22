@@ -42,3 +42,14 @@ describe("dp_route takes situation ids, never free text", () => {
     expect(res.next).toContain(`slug ${top.slug}`)
   })
 })
+
+// Hosts can hold old server instructions, so the kit's warning rides in the route reply too.
+describe("dp_route safety note", () => {
+  const safety = async (situations: string[]) => JSON.parse((await route.handler({ situations })).content[0].text).safety
+  it("carries the hotline when a match lists the survivor kit", async () => {
+    expect(await safety(["harassment"])).toContain("1-800-799-7233")
+  })
+  it("stays out of unrelated routes", async () => {
+    expect(await safety(["browser"])).toBeUndefined()
+  })
+})

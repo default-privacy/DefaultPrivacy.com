@@ -42,6 +42,16 @@ The best password manager is one you will actually use for every account. If you
 
 The US Cybersecurity and Infrastructure Security Agency (CISA) says to use long, random, unique passwords for every account, and says a password manager is one of the easiest ways to do it ([CISA](https://www.cisa.gov/secure-our-world/use-strong-passwords)).
 
+## The Short Answer
+
+The best password manager is the one you will actually use for every account. Pick by where you want your passwords to live.
+
+1. Pick Bitwarden or Proton Pass if you want sync across devices. Pick KeePassXC if you want no company holding your passwords.
+2. To stop reusing passwords today, use the manager built into your phone or browser.
+3. Make the master password long and unique, and turn on two-step login for the manager. Save its recovery codes.
+4. Start with email, banking and anything with money. Then add a few accounts a week.
+5. Back up your vault or export file.
+
 ---
 
 ## Four questions to ask

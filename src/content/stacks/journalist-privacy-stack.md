@@ -30,6 +30,15 @@ relatedTools:
 
 Protect a source from first contact through final storage — a layered stack, not a single app.
 
+## The Short Answer
+
+Protect a source in layers, so no single failure unmasks them. This will not stop a targeted device implant.
+
+1. Contact sources over Signal. Use Session if they won't share a phone number, and Briar if the network itself is the threat.
+2. Scrub every file with Mat2 before you store or share it. Use ExifEraser for phone photos.
+3. Keep your archive in Cryptomator, so a seized device yields only ciphertext.
+4. Use Tor Browser when who is looking must stay unknown. Use Mullvad when you only need to hide your traffic.
+
 ## Who this is for / Threat model
 
 You're a working journalist, investigative reporter, or freelancer handling material that could burn a source if it leaked. The adversary here is serious: **source de-anonymization, a subpoena aimed at your "no-logs" provider, a seized or borrowed device, metadata that quietly reveals who you met and when, and network surveillance by an employer or a state.**

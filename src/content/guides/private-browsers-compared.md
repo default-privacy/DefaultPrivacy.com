@@ -49,6 +49,16 @@ For most people, Firefox or Brave is the easy answer. Their makers say both bloc
 
 **A disclosure.** Mullvad and Brave also sell other products, and Default Privacy has no affiliate relationship with any browser here. No link in this guide earns us anything.
 
+## The Short Answer
+
+For most people, Firefox or Brave is the easy answer. Their makers say both block trackers by default. Pick by what you need.
+
+1. Pick Firefox or Brave for easy privacy that works with most sites.
+2. Pick Mullvad Browser or LibreWolf for the strongest protection against fingerprinting.
+3. Pick Tor Browser to hide your IP address from the sites you visit. It can be slower.
+4. On a GrapheneOS phone, use Vanadium. On an iPhone or Mac, Safari is a reasonable default.
+5. Keep your browser close to its defaults. Heavy changes can make you easier to recognize.
+
 ---
 
 ## Two ways a browser can protect you

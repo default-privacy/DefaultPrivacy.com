@@ -37,6 +37,16 @@ The answer is usually: yes, it may be; to a company you didn't pick; and often y
 
 ---
 
+## The Short Answer
+
+Yes, an AI can record you even if you avoid AI apps. Ask whether this is being recorded, where it goes, and whether you can say no.
+
+1. On a call, check the participant list. Desktop recorders don't show up there, so ask.
+2. To remove an Otter bot, anyone can type "stop otter" in the chat. A host can remove any bot.
+3. At the doctor, ask whether anything will record or transcribe the visit. You can usually decline the AI scribe.
+4. Around smart glasses, treat the light as a hint, not proof. Ask "Are those recording?"
+5. If anyone on a call is in a stricter recording-law state, assume everyone must agree.
+
 ## Meeting bots
 
 ### How a bot gets into your call

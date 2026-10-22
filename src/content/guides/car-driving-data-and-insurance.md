@@ -34,7 +34,15 @@ One question runs through this guide:
 
 **Who has my driving record, and how do I stop adding to it?**
 
----
+## The Short Answer
+
+Your car and phone may send driving data to insurers. You can see what they hold and cut it back.
+
+1. Request your reports from Arity and LexisNexis, plus Verisk for a GM, Honda or Hyundai.
+2. Switch off your car's connected services and ask for old data to be deleted. Some data may still be collected. In danger from someone who controls the car's app? Plan with an advocate first. Cutting off their access can alert them.
+3. Set location for apps like Life360 and GasBuddy to "Never" or "While Using."
+4. Joined an insurer's driving program? Read its rate wording before you leave. Progressive may add a surcharge.
+5. Then click confirmation emails, keep records, and re-pull your Arity and LexisNexis reports in 3 to 6 months.
 
 ## Step 1: See what they already have
 

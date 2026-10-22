@@ -48,6 +48,15 @@ AI privacy was the least-answered topic on the former Techlore privacy forum: 16
 
 ---
 
+## The Short Answer
+
+Most big chatbots keep your chats, and several train on them unless you switch that off. Private modes still let the company keep a copy for a while.
+
+1. Turn off the training setting in each chatbot you use. Skip the thumbs rating. On ChatGPT and Claude it can still keep or use the whole chat.
+2. Use Temporary or Incognito chat for one-off questions.
+3. Never paste passwords, ID or account numbers, health records, other people's private details or work secrets.
+4. For anything you wouldn't want on someone else's server, run a model on your own device.
+
 ## What the big five keep by default
 
 As of October 2026, from each provider's own pages:

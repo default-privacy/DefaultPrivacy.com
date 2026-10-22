@@ -34,6 +34,16 @@ The answers differ a lot from town to town. This guide shows you where to look.
 
 ---
 
+## The Short Answer
+
+You can't opt out of Flock cameras, but you can learn how long your town keeps the data and who can search it.
+
+1. Find nearby cameras on the DeFlock map. It only shows what volunteers have reported.
+2. Check your town's Flock transparency portal for its retention period and who it shares with. Flock says most keep 7 days.
+3. Request the contract, policy, sharing list and search audit log through a public records request.
+4. Speak up at the council meeting when the contract comes up for renewal.
+5. Don't cover your plate. It is illegal in many states.
+
 ## What a Flock camera records
 
 ### Plates, and more

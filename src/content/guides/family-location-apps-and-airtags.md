@@ -35,6 +35,15 @@ One question covers both:
 
 **Who can see where my family is, and for how long?**
 
+## The Short Answer
+
+Your family's location app shows them where you are, and some companies, like Life360, license that data. Check each app, then check for trackers that are not yours.
+
+1. In Life360, each adult opens Settings, then Privacy Center, then Your Privacy Choices, and turns off Include my data.
+2. In Find My and Google, review who you share with. If someone on that list could harm you, plan for safety before you stop sharing. Making changes can alert them.
+3. On your phone, look for apps set to "Always" location.
+4. If a tracker that is not yours turns up, think about safety before you disable it. The owner may notice it has gone quiet. Photograph where you found it.
+
 ---
 
 ## Part 1: Your family's location app

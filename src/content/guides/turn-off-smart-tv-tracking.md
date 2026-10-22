@@ -38,6 +38,16 @@ On most brands there is a switch. On the two brands researchers tested, opting o
 
 ---
 
+## The Short Answer
+
+Your TV may report what is on its screen, including a console or cable box plugged in over HDMI. On most brands there is a switch to stop it.
+
+1. Turn off ACR, the feature that identifies what is playing, in your TV brand's settings.
+2. Also turn off ad targeting, which is a separate switch, and reset the advertising ID.
+3. If you use a streaming box, still turn off ACR on the TV. It can fingerprint the box.
+4. Turning it off does not erase data already collected. Menus differ by model year, so check again after a reset.
+5. For more protection, keep the TV off your Wi-Fi. A streaming box then does the tracking instead.
+
 ## What ACR is
 
 Automatic content recognition (ACR) is a feature that identifies what is playing on your TV. Researchers who studied it call it "a Shazam-like technology." The TV regularly samples what's on screen and matches it against a library of shows and ads ([IMC 2024 paper](https://arxiv.org/abs/2409.06203)).

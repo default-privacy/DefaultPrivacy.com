@@ -53,6 +53,15 @@ Home network, DNS and ad blocking was among the most asked topics on the former 
 
 ---
 
+## The Short Answer
+
+Your DNS provider sees every site your devices look up. A private DNS service, or your own blocker, lets you choose who that is and block ad and tracker domains on every device. It is not anonymity.
+
+1. Want it on phone and laptop anywhere, with little upkeep? Pick NextDNS or Control D.
+2. Mostly care about home, with no company holding your logs? Self-host Pi-hole, AdGuard Home or Technitium. You handle updates.
+3. Set it on each device or on the router, then check your provider's log or status page.
+4. Start with one ad list. If a site breaks, allow the one blocked name.
+
 ## What DNS is and what your DNS provider can see
 
 DNS is the phone book of the internet. When you open a site, your device asks a DNS server for the site's address. Control D describes the usual route as your device, then your router, then a DNS provider, which could be your internet provider or a third party such as Cloudflare or Google ([Control D](https://docs.controld.com/docs/getting-started.md)).

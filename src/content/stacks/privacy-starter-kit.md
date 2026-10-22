@@ -30,6 +30,16 @@ relatedTools:
 
 *Five tools. One afternoon. The foundation every serious privacy setup is built on.*
 
+## The Short Answer
+
+Install five tools, in this order, to cover the basics of everyday privacy.
+
+1. Set up Bitwarden first. Make the master password long, because it is the whole vault.
+2. Turn on app-based two-factor with Ente Auth, not SMS. Back up your recovery codes.
+3. Switch to Brave, which blocks trackers by default.
+4. Add Mullvad. It hides your traffic from your ISP but does not make you anonymous.
+5. Install Signal, and invite the people you talk to.
+
 ## Who this is for and what it defends against
 
 You are almost certainly not the target of a nation-state. You are being **harvested** — by ad networks that follow you site to site, data brokers packaging your habits, and any one service careless enough to leak the password you reused everywhere.
