@@ -84,9 +84,6 @@ export default async function Home({
       <section className="relative overflow-hidden border-b border-foreground/8">
         {/* Blueprint grid + radial glow (from the approved mockup) */}
         <div className="hero-blueprint pointer-events-none absolute inset-0" aria-hidden />
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute left-1/2 top-[-16%] h-[min(52vw,380px)] w-[min(100vw,900px)] -translate-x-1/2 rounded-full bg-primary/14 opacity-60 blur-[120px]" />
-        </div>
 
         <div className="container relative py-14 md:py-[4.75rem]">
           <div className="mx-auto max-w-xl text-center">
