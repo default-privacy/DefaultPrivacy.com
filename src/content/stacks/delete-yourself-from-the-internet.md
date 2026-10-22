@@ -30,6 +30,16 @@ relatedTools:
 
 Type your name into a people-search site and there you are: home address, phone number, relatives, past addresses, sometimes a map to your door. Data brokers scraped it, packaged it, and sell it to anyone with a credit card — which is how scams, harassment, and doxxing start. You can pull most of it down.
 
+## The Short Answer
+
+You can pull most of your listings off data-broker and people-search sites. It is never one-and-done, because brokers re-scrape. It does not remove court records or things you publish yourself.
+
+1. File opt-outs at the major brokers using the free Big Ass Data Broker Opt Out List.
+2. Turn on Global Privacy Control in your browser.
+3. Use email aliases, masked phone numbers and virtual cards so you stop feeding brokers new data.
+4. Pay for DeleteMe or Easy Opt Outs only if the manual work isn't worth your time.
+5. Repeat a couple of times a year.
+
 ## Who this is for / Threat model
 
 You found yourself on a people-search site, you're a public-facing professional, or you're doxxing-wary and want off the public record. This stack defends against **data brokers and people-search sites aggregating and reselling your personal records**, and the downstream doxxing, scams, and harassment that follow. It does **not** remove information you publish yourself, court records, or news articles — those are different problems. And it is not one-and-done: brokers re-scrape, so removal is a maintenance habit, not a single click.

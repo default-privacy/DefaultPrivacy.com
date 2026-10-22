@@ -36,6 +36,17 @@ relatedTools:
 
 A credit freeze stops new lenders from reading your credit report, so nobody can open new credit in your name, [including you](https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts), until you lift it. In the US it is [free by federal law](https://www.ftc.gov/news-events/news/press-releases/2018/09/starting-today-new-federal-law-allows-consumers-place-free-credit-freezes-yearlong-fraud-alerts) to place, lift and remove, and it [doesn't affect your credit score](https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts). You place it separately at each of the three nationwide bureaus: Equifax, Experian and TransUnion.
 
+## The Short Answer
+
+In the US a credit freeze is free and blocks new credit in your name until you lift it.
+
+1. Freeze your file at Equifax, Experian and TransUnion. Each one is separate, so do all three.
+2. Save each login and any PIN in a password manager.
+3. Before you apply for a card, loan or mortgage, lift the freeze at the bureau the lender uses. If they can't say, lift all three.
+4. Check your free reports at AnnualCreditReport.com.
+
+A freeze does not cover accounts you already have.
+
 ---
 
 ## What a freeze does, and what it doesn't

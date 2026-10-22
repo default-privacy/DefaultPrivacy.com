@@ -43,6 +43,15 @@ Probably, and no website can tell you for sure. Have I Been Pwned [stopped searc
 
 This was the most-viewed question on the former Techlore privacy forum. Here is the full answer.
 
+## The Short Answer
+
+Probably, and no website can tell you for sure. Treat your number as already public.
+
+1. Search your email on Have I Been Pwned, since it no longer searches phone numbers. A clean result does not clear your number.
+2. Turn on the free SIM and port-out locks at your carrier. Switch the lock off before you change phones or carriers.
+3. Move your logins off text codes to an authenticator app, a passkey or a security key.
+4. Don't tap links in unexpected texts, and never give your carrier PIN to someone who calls you.
+
 ---
 
 ## How to check

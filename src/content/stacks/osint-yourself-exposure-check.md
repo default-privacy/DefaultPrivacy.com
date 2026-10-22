@@ -30,6 +30,16 @@ relatedTools:
 
 *Find what the open internet already knows about you — before someone with worse intentions does.*
 
+## The Short Answer
+
+Search for yourself the way a stranger would, then remove what you find. It will not hide you for good, because brokers re-list.
+
+1. Search your name, emails, phone numbers and reused usernames on a few independent search engines. Check your emails against known breaches.
+2. Test what your browser leaks with Browser Leaks and AmIUnique.
+3. File data-broker opt-outs, yourself or through a service, and turn on Global Privacy Control.
+4. Give each new sign-up a unique email alias.
+5. Repeat every few months.
+
 ## Who this is for and what it defends against
 
 Open-source intelligence, or OSINT, is the practice of assembling a picture of a person from nothing but public sources: search results, leaked breach data, reused usernames, exposed emails, and public records. Anyone can do it to you. The prudent move is to do it to yourself **first**, see what's exposed, and shut it down.

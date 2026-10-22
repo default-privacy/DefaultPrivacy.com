@@ -45,6 +45,15 @@ relatedTools:
 
 Most of your phone keeps working. Calls, texts, the camera, Android Auto and nearly every Play Store app run on GrapheneOS, many of them through an optional, sandboxed copy of Google Play. The real losses are Google Wallet tap-to-pay and the banking and [other apps](https://discuss.grapheneos.org/d/31710/5) that refuse any system Google hasn't certified.
 
+## The Short Answer
+
+Most of your phone keeps working on GrapheneOS. Google Wallet tap-to-pay does not, and some banking apps refuse to run.
+
+1. Check your bank's app on the PrivSec.dev compatibility list, and decide how you will pay in shops.
+2. If your bank approves sign-ins in its app, set up a backup sign-in method first. Keep your old phone working until the app runs on GrapheneOS.
+3. Back up your data, move two-factor codes to an authenticator, and save recovery codes. Installing wipes the phone.
+4. Get apps from Accrescent, or from the Play Store through sandboxed Google Play.
+
 ---
 
 ## What you give up, and what you keep

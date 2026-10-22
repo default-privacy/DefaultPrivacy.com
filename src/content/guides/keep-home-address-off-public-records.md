@@ -25,6 +25,16 @@ relatedTools:
 
 Your home address is sitting on people-search sites and data-broker profiles. Fixing it takes **two separate jobs**, not one.
 
+## The Short Answer
+
+Fixing it takes two jobs: scrub what is already public, then stop handing the address out again.
+
+1. Remove: file opt-outs at people-search sites and data brokers yourself, or pay a removal service to file them.
+2. Prevent: use a mail receiving address on the next public form, and turn on privacy protection on any domain you register.
+3. Check again, because brokers re-list when new data arrives. One pass is not a finish.
+
+Removal will not make you untraceable. It will not hide you from a bank, the IRS, or a court with valid process.
+
 ---
 
 ## Two jobs, not one

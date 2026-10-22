@@ -50,6 +50,16 @@ The easiest second number comes from a phone-number app such as [MySudo](/direct
 
 On the former Techlore privacy forum, signing up for things without a real phone number was among the most-viewed questions, and a quarter of the help requests about phone numbers got one reply or none.
 
+## The Short Answer
+
+The easiest second number comes from a phone-number app such as MySudo or JMP. It keeps your real number private. It does not make you anonymous.
+
+1. Use an app number for shops, sign-ups and selling things online.
+2. For verification codes, use a second prepaid SIM or eSIM. Some services reject internet-based (VoIP) numbers.
+3. Check that your phone and carrier support a second line before you buy.
+4. For two-factor login, use an authenticator app and leave the phone number out.
+5. Move your accounts off the number before you give it up.
+
 ---
 
 ## Why keep your real number to yourself

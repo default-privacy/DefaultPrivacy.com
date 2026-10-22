@@ -3,7 +3,7 @@ import { join } from "node:path"
 import { describe, expect, it } from "vitest"
 import { getAllGuides } from "./guides"
 import { getAllStacks, getStackBySlug } from "./stacks"
-import { keywords, mergePages, oneLine, rankContent, searchContent, searchGlossary } from "./site-search"
+import { keywords, mergePages, oneLine, rankContent, searchContent, searchGlossary, shortAnswer } from "./site-search"
 
 const mdFiles = (dir: string) =>
   readdirSync(join(process.cwd(), "src/content", dir)).filter((f) => f.endsWith(".md"))
@@ -175,5 +175,21 @@ describe("mergePages", () => {
     const pages = mergePages(await searchContent("stalking", 3), "stalking")
     expect(pages[0]?.slug).toBe("stalking-abuse-survivor-safety-kit")
     expect(pages[0]?.kind).toBe("stack")
+  })
+})
+
+describe("shortAnswer", () => {
+  it("takes the section up to the next heading or rule", () => {
+    expect(shortAnswer("Intro\n\n## The Short Answer\n\nDo this.\n\n1. One\n\n## Next\nmore")).toBe("Do this.\n\n1. One")
+    expect(shortAnswer("## The Short Answer\nShort.\n\n---\n\nrest")).toBe("Short.")
+    expect(shortAnswer("## The Short Answer\nLast section.")).toBe("Last section.")
+    expect(shortAnswer("## Something else\ntext")).toBeUndefined()
+  })
+
+  it("stays short on every page that has one", async () => {
+    for (const page of [...(await getAllGuides()), ...(await getAllStacks())]) {
+      const text = shortAnswer(page.content)
+      if (text) expect(text.split(/\s+/).length, page.slug).toBeLessThanOrEqual(130)
+    }
   })
 })

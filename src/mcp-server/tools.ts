@@ -23,7 +23,7 @@ import { CARD_NOTE, toolCard } from "./compact"
 import { findSection, guideSections, stackOutline } from "@/lib/guide-outline"
 import { parseGuideFaqsFromContent } from "@/lib/guide-faq"
 import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
-import { keywords, mergePages, oneLine, rankContent, searchContent } from "@/lib/site-search"
+import { keywords, mergePages, oneLine, rankContent, searchContent, shortAnswer } from "@/lib/site-search"
 import {
   getAllGlossaryTerms,
   getGlossaryTermBySlug,
@@ -122,11 +122,12 @@ export function registerTools(server: McpServer): void {
           summary: oneLine(cleanThirdParty(t.tagline ?? t.description ?? "", 2000)),
           url: t.dp_url,
         })),
-        ...pages.map((p) => ({
+        ...pages.map((p, i) => ({
           type: p.kind,
           title: p.title,
           slug: p.slug,
           summary: oneLine(p.description),
+          ...(i < 2 && { short_answer: shortAnswer(p.content) }),
           url: url(`${p.kind === "guide" ? "guides" : "stacks"}/${p.slug}`),
         })),
         ...content.glossary.map((t) => ({
@@ -626,10 +627,11 @@ export function registerTools(server: McpServer): void {
     },
     async ({ situations }) => {
       countUsage("mcp_tool", "dp_route")
-      const resolve = async (items: SituationItem[]) =>
+      // The first page of each match carries its short answer; all of them would bloat the reply.
+      const resolve = async (items: SituationItem[], withShortAnswer = false) =>
         (
           await Promise.all(
-            items.map(async (i) => {
+            items.map(async (i, n) => {
               const doc = i.kind === "guide" ? await getGuideBySlug(i.slug) : await getStackBySlug(i.slug)
               if (!doc) return null
               return {
@@ -638,13 +640,14 @@ export function registerTools(server: McpServer): void {
                 slug: doc.slug,
                 description: oneLine(doc.description),
                 url: url(`${i.kind === "guide" ? "guides" : "stacks"}/${doc.slug}`),
+                ...(withShortAnswer && n === 0 && { short_answer: shortAnswer(doc.content) }),
               }
             }),
           )
         ).filter((x) => x !== null)
       const picked = [...new Set(situations)].map((id) => SITUATIONS.find((s) => s.id === id)!)
       const matches = await Promise.all(
-        picked.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items) })),
+        picked.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items, true) })),
       )
       const top = matches.find((m) => m.items.length > 0)?.items[0]
       return jsonContent({

@@ -28,6 +28,15 @@ Data brokers are companies that collect personal information from public records
 
 For the home-address angle — brokers, people-search sites, and stopping the next copy — start with [Keep your home address off public records](/guides/keep-home-address-off-public-records).
 
+## The Short Answer
+
+You remove your name from data broker sites by asking each one to opt out, and you repeat it because listings come back.
+
+1. If you live in California, send one free DROP request. It only reaches brokers registered in California.
+2. Search for your name on the main people-search sites, such as Spokeo, Whitepages, BeenVerified and Intelius.
+3. Submit an opt-out for every listing you find, then check again after the stated removal time.
+4. Re-check every 90 days. Removal is ongoing maintenance, not a one-time task, and some listings may stay up.
+
 ---
 
 ## What Data Brokers Know About You

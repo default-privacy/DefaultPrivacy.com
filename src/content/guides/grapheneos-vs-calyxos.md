@@ -44,6 +44,15 @@ This is our reading of the sources, not a ranking from either project. The "Whic
 
 ---
 
+## The Short Answer
+
+If you can use a recent Pixel, GrapheneOS is the stronger choice on what the two projects document. Choose CalyxOS if your phone is one GrapheneOS doesn't support, or if you prefer its microG approach to Google apps. We did not test either.
+
+1. Pick GrapheneOS if you own or will buy a Pixel. For a new phone, GrapheneOS advises a Pixel 8 or newer.
+2. Pick CalyxOS if you own a Fairphone, a Motorola from its list, or a SHIFTphone.
+3. Back up first. Installing wipes the phone.
+4. Check each project's own pages before you install, since both change often.
+
 ## What they have in common
 
 Both projects replace the Android that came on your phone with a version that has Google's apps and services removed or contained. Both depend on Android's open source code. Android says that, starting in 2026, it publishes source code to the Android Open Source Project in Q2 and Q4 ([Android](https://source.android.com/docs/whatsnew)). Neither project's pages that we read explain how that change affects them.

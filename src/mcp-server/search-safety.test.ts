@@ -37,3 +37,11 @@ describe("dp_search next step", () => {
     expect((await search("doxxed")).next).toContain("dp_get_stack with slug osint-yourself-exposure-check")
   })
 })
+
+describe("dp_search short answers", () => {
+  it("carries the top page's short answer, so an answer from search still has the steps", async () => {
+    const top = (await search("doxxed")).data[0]
+    expect(top.slug).toBe("osint-yourself-exposure-check")
+    expect(top.short_answer).toMatch(/^Search for yourself/)
+  })
+})

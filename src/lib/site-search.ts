@@ -125,3 +125,9 @@ export function oneLine(text: string, max = 200): string {
   const cut = flat.lastIndexOf(" ", max)
   return `${flat.slice(0, cut > 0 ? cut : max).replace(/[,;:.]$/, "")}…`
 }
+
+/** A page's "## The Short Answer" section, so an AI that answers from search still gets the steps. */
+export function shortAnswer(content: string): string | undefined {
+  const m = content.match(/^## The Short Answer\n([\s\S]*?)(?=^## |^---$|(?![\s\S]))/m)
+  return m?.[1].trim() || undefined
+}

@@ -50,6 +50,17 @@ An email alias is a second address that forwards to your real inbox. You give ea
 
 In our review of topic titles on the former Techlore privacy forum, SimpleLogin was among the most-named tools. This guide pairs with [Proton Mail vs Tuta](/guides/proton-mail-vs-tuta), which covers the inbox the aliases forward to.
 
+## The Short Answer
+
+An email alias is a second address that forwards to your real inbox, so each site gets its own. SimpleLogin and Addy are the two main services, and both are open source with small free plans.
+
+1. Choose a service. Start free, or go straight to a paid plan if you want your own domain.
+2. Add your real inbox as the destination, and turn on two-step login on the alias account.
+3. Install the browser extension and test it with a harmless sign-up.
+4. Move accounts gradually: new sign-ups first, then shops and newsletters, then banking and email last.
+
+An alias does not make you anonymous.
+
 ---
 
 ## What an alias protects, and what it doesn't
