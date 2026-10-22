@@ -1065,3 +1065,175 @@
     box-shadow: 0 0 14px var(--primary);
   }
 }
+
+/*
+  Reading pages, composed (mockup D, locked 2026-10-22)
+  A 680px Jakarta measure, a sticky contents list on the left, side material on the
+  right, a mono frame row, READ FIRST on the Short Answer, outlined step circles and
+  bordered callouts. These pages use .prose-reading on their own, not .prose.
+*/
+@layer components {
+  .reading-layout {
+    --measure: 680px;
+    --rl-soft: color-mix(in oklab, var(--foreground) 80%, transparent);
+    --rl-muted: color-mix(in oklab, var(--foreground) 55%, transparent);
+    --rl-rule: color-mix(in oklab, var(--foreground) 12%, transparent);
+    --rl-rule-strong: color-mix(in oklab, var(--foreground) 24%, transparent);
+    --rl-tint: color-mix(in oklab, var(--foreground) 3%, transparent);
+    --rl-link: color-mix(in oklab, var(--primary) 70%, white);
+    display: grid;
+    grid-template-columns: minmax(0, var(--measure));
+    grid-template-areas: "article" "side";
+    gap: 40px 56px;
+    max-width: calc(var(--measure) + 48px);
+    margin: 0 auto;
+    padding: 40px 24px 120px;
+  }
+  .reading-article { grid-area: article; min-width: 0; }
+  .reading-side { grid-area: side; font-size: 14px; }
+  .reading-aside { display: none; grid-area: toc; position: sticky; top: calc(var(--header-height) + 32px); align-self: start; }
+  @media (min-width: 1100px) {
+    .reading-layout {
+      grid-template-columns: 236px minmax(0, var(--measure));
+      grid-template-areas: "toc article" ". side";
+      max-width: calc(236px + var(--measure) + 56px + 48px);
+    }
+    .reading-aside { display: block; }
+    .reading-toc-inline { display: none; }
+  }
+  @media (min-width: 1280px) {
+    .reading-layout {
+      grid-template-columns: 236px minmax(0, var(--measure)) 236px;
+      grid-template-areas: "toc article side";
+      max-width: calc(236px + var(--measure) + 236px + 112px + 48px);
+    }
+    .reading-side { position: sticky; top: calc(var(--header-height) + 32px); align-self: start; }
+  }
+  @media (max-width: 720px) {
+    .reading-layout { padding: 24px 18px 100px; }
+  }
+
+  /* frame */
+  .reading-back {
+    display: inline-flex; align-items: center; gap: 6px; margin-bottom: 22px;
+    font-size: 14px; font-weight: 500; color: var(--rl-muted); text-decoration: none;
+  }
+  .reading-back:hover { color: var(--foreground); }
+  .reading-frame h1 {
+    margin: 0 0 14px; font-size: 42px; line-height: 1.1; font-weight: 600;
+    letter-spacing: -0.03em; color: var(--foreground); text-wrap: balance;
+  }
+  .reading-dek { margin: 0 0 18px; font-size: 19px; line-height: 1.5; color: var(--rl-soft); }
+  .reading-file {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0;
+    margin: 0 0 32px; padding-bottom: 14px; border-bottom: 1px solid var(--rl-rule-strong);
+    font-family: var(--font-mono), ui-monospace, monospace; font-size: 12.5px; line-height: 1.5;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--rl-muted);
+  }
+  .reading-file-no { font-weight: 700; color: var(--foreground); }
+  .reading-file > span + span::before { content: "·"; margin: 0 10px; color: var(--rl-muted); }
+  .reading-file-right { margin-left: auto; }
+  .reading-file-right::before { content: none; }
+  @media (max-width: 720px) {
+    .reading-frame h1 { font-size: 32px; }
+    .reading-dek { font-size: 17px; }
+    .reading-file-right { margin-left: 0; flex-basis: 100%; }
+  }
+
+  /* contents list */
+  .reading-toc { font-size: 14px; line-height: 1.45; }
+  .reading-toc-label {
+    margin: 0 0 12px; font-family: var(--font-mono), ui-monospace, monospace; font-size: 11px;
+    font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rl-muted);
+  }
+  .reading-toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--rl-rule); }
+  .reading-toc a {
+    display: block; padding: 6px 0 6px 14px; margin-left: -1px;
+    border-left: 2px solid transparent; color: var(--rl-muted); text-decoration: none;
+  }
+  .reading-toc a:hover { color: var(--foreground); }
+  .reading-toc a[aria-current="location"] { color: var(--foreground); border-left-color: var(--foreground); font-weight: 600; }
+  .reading-toc-inline {
+    margin: 0 0 24px; padding: 12px 16px; border: 1px solid var(--rl-rule); border-radius: 10px; font-size: 15px;
+  }
+  .reading-toc-inline summary { font-weight: 600; cursor: pointer; }
+  .reading-toc-inline ol { margin: 10px 0 2px; padding-left: 1.3em; }
+  .reading-toc-inline li { margin: 6px 0; }
+  .reading-toc-inline a { color: var(--rl-link); }
+
+  /* body */
+  .prose-reading { font-size: 18px; line-height: 1.65; color: var(--rl-soft); }
+  @media (max-width: 720px) { .prose-reading { font-size: 17px; } }
+  .prose-reading :is(h2, h3, h4) { color: var(--foreground); text-wrap: balance; scroll-margin-top: calc(var(--header-height) + 20px); }
+  .prose-reading h2 { margin: 2.2em 0 0.6em; font-size: 26px; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; }
+  .prose-reading h3 { margin: 1.8em 0 0.5em; font-size: 20px; line-height: 1.3; font-weight: 600; }
+  .prose-reading h4 { margin: 1.5em 0 0.4em; font-size: 17px; line-height: 1.35; font-weight: 600; }
+  .prose-reading :is(p, ul, ol) { margin: 0 0 1.05em; }
+  .prose-reading ul { padding-left: 1.25em; }
+  .prose-reading li { margin: 0.35em 0; padding-left: 0.2em; }
+  .prose-reading li::marker { color: var(--rl-muted); }
+  .prose-reading a { color: var(--rl-link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .prose-reading a:hover { text-decoration-thickness: 2px; }
+  .prose-reading strong { font-weight: 600; color: var(--foreground); }
+  .prose-reading code {
+    font-family: var(--font-mono), ui-monospace, monospace; font-size: 0.85em; padding: 0.1em 0.35em;
+    border: 1px solid var(--rl-rule); border-radius: 4px; background: var(--rl-tint); color: var(--foreground);
+  }
+  .prose-reading pre {
+    margin: 0 0 1.2em; padding: 14px 16px; overflow-x: auto; border: 1px solid var(--rl-rule);
+    border-radius: 10px; background: var(--rl-tint); font-family: var(--font-mono), ui-monospace, monospace; font-size: 13.5px; line-height: 1.55;
+  }
+  .prose-reading pre code { padding: 0; border: 0; background: none; font-size: inherit; }
+  .prose-reading table { width: 100%; margin: 0 0 1.2em; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+  .prose-reading :is(th, td) { padding: 8px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rl-rule); }
+  .prose-reading th { font-weight: 600; color: var(--foreground); border-bottom: 1px solid var(--rl-rule-strong); }
+  .prose-reading hr { margin: 2em 0; border: 0; border-top: 1px solid var(--rl-rule); }
+  .prose-reading img { max-width: 100%; height: auto; }
+
+  /* numbered steps: outlined circles with a connector; top-level lists only */
+  .prose-reading > ol { --dot: 28px; list-style: none; counter-reset: step; margin: 14px 0 6px; padding: 0; }
+  .prose-reading > ol > li { counter-increment: step; position: relative; margin: 0; padding: 0 0 16px calc(var(--dot) + 16px); }
+  .prose-reading > ol > li::before {
+    content: counter(step); position: absolute; left: 0; top: calc((1.65em - var(--dot)) / 2);
+    width: var(--dot); height: var(--dot); display: grid; place-items: center;
+    border: 2px solid var(--foreground); border-radius: 50%; background: var(--background); color: var(--foreground);
+    font-size: 13px; font-weight: 700; line-height: 1;
+  }
+  .prose-reading > ol > li::after {
+    content: ""; position: absolute; left: calc(var(--dot) / 2 - 1px); top: calc((1.65em + var(--dot)) / 2 + 4px);
+    bottom: 4px; width: 2px; background: var(--rl-rule-strong);
+  }
+  .prose-reading > ol > li:last-child::after { display: none; }
+
+  /* a quote is a bar; a callout (opens with bold) is a bordered box with a circled ! */
+  .prose-reading blockquote { margin: 1.2em 0; padding: 2px 0 2px 20px; border-left: 3px solid var(--rl-rule-strong); color: var(--rl-soft); }
+  .prose-reading blockquote > :last-child { margin-bottom: 0; }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child) {
+    position: relative; padding: 18px 20px 16px 66px; border: 1.5px solid var(--rl-rule-strong);
+    border-radius: 10px; background: var(--rl-tint); color: var(--foreground);
+  }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child)::before {
+    content: "!"; position: absolute; left: 18px; top: 18px; width: 32px; height: 32px;
+    display: grid; place-items: center; border-radius: 50%; background: var(--foreground); color: var(--background);
+    font-size: 19px; font-weight: 800; line-height: 1;
+  }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child) > p:first-child > strong:first-child { display: block; margin-bottom: 2px; }
+  @media (max-width: 720px) {
+    .prose-reading blockquote:has(> p:first-child > strong:first-child) { padding: 14px 14px 12px 56px; }
+    .prose-reading blockquote:has(> p:first-child > strong:first-child)::before { left: 12px; top: 14px; width: 30px; height: 30px; }
+  }
+
+  /* the Short Answer: a tinted sheet with the READ FIRST tag */
+  .prose-reading .short-answer {
+    position: relative; margin: 40px 0 8px; padding: 6px 24px 10px;
+    border: 1px solid var(--rl-rule-strong); border-radius: 8px; background: var(--rl-tint);
+  }
+  .prose-reading .short-answer::before {
+    content: "Read first"; position: absolute; top: -12px; left: 20px; padding: 6px 9px 5px;
+    background: var(--foreground); color: var(--background);
+    font-family: var(--font-mono), ui-monospace, monospace; font-size: 11.5px; font-weight: 700; line-height: 1;
+    letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .prose-reading .short-answer h2 { margin: 0.9em 0 0.4em; font-size: 20px; }
+  @media (max-width: 720px) { .prose-reading .short-answer { padding: 4px 16px 8px; } }
+}

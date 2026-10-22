@@ -8,17 +8,14 @@ import {
   getAdjacentChapters,
   getRelatedChapters,
 } from "@/lib/playbook"
-import { marked } from "marked"
+import { renderReadingHtml } from "@/lib/reading-html"
+import { fileNumber } from "@/lib/reading-file-number"
+import { ReadingFrame, formatReadingDate } from "@/components/reading/reading-frame"
+import { ReadingLayout } from "@/components/reading/reading-layout"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import {
-  ArrowLeft,
-  ArrowRight,
-  Clock,
-  Calendar,
-  BookOpen,
-} from "lucide-react"
+import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -79,7 +76,8 @@ export default async function PlaybookDetailPage({ params }: Props) {
 
   if (!chapter) notFound()
 
-  const contentHtml = await marked(chapter.content)
+  const { html: contentHtml, headings } = renderReadingHtml(chapter.content)
+  const file = fileNumber("P", await getAllChapters(), slug)
   const { prev, next } = await getAdjacentChapters(chapter.chapterNumber)
   const related = chapter.relatedChapters?.length
     ? await getRelatedChapters(chapter.relatedChapters)
@@ -119,63 +117,27 @@ export default async function PlaybookDetailPage({ params }: Props) {
       />
 
       <main className="flex-1">
-        <article className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          {/* Back link */}
-          <Link
-            href="/playbook"
-            className="brand2-focus inline-flex items-center gap-1 text-sm text-foreground/55 hover:text-foreground mb-6 rounded"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            The Privacy Playbook
-          </Link>
-
-          {/* Header */}
-          <header className="mb-8">
-            <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2.5 py-1">
-                Chapter {chapter.chapterNumber}
-              </span>
-            </div>
-
-            <h1 className="text-3xl md:text-4xl font-medium tracking-cinematic text-foreground/90 mb-4">
-              {chapter.title}
-            </h1>
-
-            <p className="text-lg text-foreground/58 leading-relaxed mb-6">
-              {chapter.description}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 text-sm text-foreground/45">
-              <span className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
-                {new Date(chapter.publishedAt).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                {chapter.readingTime}
-              </span>
-            </div>
-          </header>
-
-          <div className="border-t border-foreground/10 my-8" />
+        <ReadingLayout
+          headings={headings}
+          header={
+            <>
+              <Link href="/playbook" className="reading-back brand2-focus rounded">
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                The Privacy Playbook
+              </Link>
+              <ReadingFrame
+                file={file}
+                title={chapter.title}
+                dek={chapter.description}
+                fields={[`Published ${formatReadingDate(chapter.publishedAt)}`, chapter.readingTime]}
+                right={`Chapter ${chapter.chapterNumber}`}
+              />
+            </>
+          }
+        >
 
           {/* Content */}
-          <div
-            className="prose dark:prose-invert max-w-none
-              prose-headings:scroll-mt-20
-              prose-a:text-foreground/85 prose-a:no-underline hover:prose-a:underline
-              prose-code:before:content-none prose-code:after:content-none
-              prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm
-              prose-pre:bg-muted prose-pre:border prose-pre:border-foreground/10 prose-pre:rounded-xl
-              prose-table:text-sm
-              prose-th:text-left prose-th:font-medium
-              prose-td:py-2 prose-th:py-2"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+          <div className="prose-reading" dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
           {/* Frequently asked questions (FAQs come from frontmatter, not the body) */}
           {chapter.faqs.length > 0 && (
@@ -350,7 +312,7 @@ export default async function PlaybookDetailPage({ params }: Props) {
               </div>
             </div>
           )}
-        </article>
+        </ReadingLayout>
       </main>
 
       <Footer />
