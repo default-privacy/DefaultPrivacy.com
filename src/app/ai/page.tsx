@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
 import { ConnectAiCard } from "@/components/ai/connect-ai-card"
-import { AI_APPS, MCP_URL } from "@/lib/mcp-connect"
+import { AI_APPS, MCP_URL, claudeCodeCommand } from "@/lib/mcp-connect"
 import { TOSDR_COPIED_ON } from "@/lib/tosdr"
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ const ASK = [
 ]
 
 const CLIENTS = [
-  { name: "Claude Code", code: `claude mcp add --transport http default-privacy ${MCP_URL}` },
+  { name: "Claude Code", code: claudeCodeCommand() },
   { name: "Cursor (~/.cursor/mcp.json)", code: `{ "mcpServers": { "default-privacy": { "url": "${MCP_URL}" } } }` },
   { name: "VS Code (.vscode/mcp.json)", code: `{ "servers": { "default-privacy": { "type": "http", "url": "${MCP_URL}" } } }` },
 ]

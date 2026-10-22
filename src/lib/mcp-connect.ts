@@ -10,6 +10,9 @@
 export const MCP_URL = "https://mcp.defaultprivacy.com"
 export const MCP_NAME = "default-privacy"
 
+/** The Claude Code one-liner, shown on /ai and the homepage. */
+export const claudeCodeCommand = () => `claude mcp add --transport http ${MCP_NAME} ${MCP_URL}`
+
 export const cursorInstallLink = () =>
   `cursor://anysphere.cursor-deeplink/mcp/install?name=${MCP_NAME}&config=${btoa(JSON.stringify({ url: MCP_URL }))}`
 
