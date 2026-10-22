@@ -885,3 +885,295 @@
     box-shadow: 0 0 14px var(--primary);
   }
 }
+
+/*
+  Reading pages (the locked C2 layout, 2026-10-22)
+  Serif body on paper, Jakarta headings and UI, ink furniture. These pages use
+  .prose-reading on their own, not the typography plugin's .prose.
+*/
+@layer components {
+  .reading-layout {
+    --measure: 660px;
+    --serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
+    --sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    --mono: var(--font-mono), ui-monospace, monospace;
+    display: grid;
+    grid-template-columns: minmax(0, var(--measure));
+    gap: 64px;
+    max-width: calc(var(--measure) + 48px);
+    margin: 0 auto;
+    padding: 40px 24px 120px;
+  }
+  .reading-article { min-width: 0; }
+  .reading-aside {
+    display: none;
+    position: sticky;
+    top: calc(var(--header-height) + 32px);
+    align-self: start;
+  }
+  @media (min-width: 1100px) {
+    .reading-layout {
+      grid-template-columns: minmax(0, var(--measure)) 236px;
+      max-width: calc(var(--measure) + 236px + 64px + 48px);
+    }
+    .reading-aside { display: block; }
+    .reading-toc-inline { display: none; }
+  }
+  @media (max-width: 720px) {
+    .reading-layout { padding: 24px 18px 120px; }
+  }
+
+  /* frame */
+  .reading-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 22px;
+    font: 500 14px/1 var(--sans);
+    color: var(--muted-foreground);
+    text-decoration: none;
+  }
+  .reading-back:hover { color: var(--foreground); }
+  .reading-frame h1 {
+    margin: 0 0 16px;
+    font: 750 42px/1.12 var(--sans);
+    letter-spacing: -0.025em;
+    color: var(--foreground);
+    text-wrap: balance;
+  }
+  .reading-dek {
+    margin: 0 0 18px;
+    font: italic 400 21px/1.5 var(--serif);
+    color: var(--foreground-soft);
+  }
+  .reading-file {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 0;
+    margin: 0 0 32px;
+    padding-bottom: 24px;
+    border-bottom: 1.5px solid var(--foreground);
+    font: 12.5px/1.5 var(--mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+  .reading-file-no { font-weight: 700; color: var(--foreground); }
+  .reading-file > span + span::before { content: "·"; margin: 0 10px; color: var(--muted-foreground); }
+  .reading-file-right { margin-left: auto; }
+  .reading-file-right::before { content: none; }
+  @media (max-width: 720px) {
+    .reading-frame h1 { font-size: 33px; }
+    .reading-dek { font-size: 19px; }
+    .reading-file-right { margin-left: 0; flex-basis: 100%; }
+  }
+
+  /* contents list */
+  .reading-toc { font: 14px/1.45 var(--sans); }
+  .reading-toc-label {
+    margin: 0 0 12px;
+    font: 600 11px/1 var(--mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+  .reading-toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--border); }
+  .reading-toc a {
+    display: block;
+    padding: 6px 0 6px 14px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: var(--muted-foreground);
+    text-decoration: none;
+  }
+  .reading-toc a:hover { color: var(--foreground); }
+  .reading-toc a[aria-current="location"] {
+    color: var(--foreground);
+    border-left-color: var(--foreground);
+    font-weight: 600;
+  }
+  .reading-toc-inline {
+    margin: 0 0 24px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font: 15px/1.5 var(--sans);
+  }
+  .reading-toc-inline summary { font-weight: 600; cursor: pointer; }
+  .reading-toc-inline ol { margin: 10px 0 2px; padding-left: 1.3em; }
+  .reading-toc-inline li { margin: 6px 0; }
+  .reading-toc-inline a { color: var(--link); }
+
+  /* body */
+  .prose-reading {
+    font: 20px/1.6 var(--serif);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+  }
+  @media (max-width: 720px) {
+    .prose-reading { font-size: 18px; }
+  }
+  .prose-reading :is(h2, h3, h4) {
+    font-family: var(--sans);
+    color: var(--foreground);
+    text-wrap: balance;
+    scroll-margin-top: calc(var(--header-height) + 20px);
+  }
+  .prose-reading h2 { margin: 2.2em 0 0.6em; font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em; }
+  .prose-reading h3 { margin: 1.8em 0 0.5em; font-size: 21px; line-height: 1.3; font-weight: 650; }
+  .prose-reading h4 { margin: 1.5em 0 0.4em; font-size: 18px; line-height: 1.35; font-weight: 650; }
+  .prose-reading :is(p, ul, ol) { margin: 0 0 1.05em; }
+  .prose-reading ul { padding-left: 1.25em; }
+  .prose-reading li { margin: 0.35em 0; padding-left: 0.2em; }
+  .prose-reading li::marker { color: var(--muted-foreground); }
+  .prose-reading a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .prose-reading a:hover { text-decoration-thickness: 2px; }
+  .prose-reading strong { font-weight: 700; color: var(--foreground); }
+  .prose-reading code {
+    font: 0.8em var(--mono);
+    padding: 0.1em 0.35em;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--muted);
+  }
+  .prose-reading pre {
+    margin: 0 0 1.2em;
+    padding: 16px 18px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--muted);
+    font: 14px/1.55 var(--mono);
+  }
+  .prose-reading pre code { padding: 0; border: 0; background: none; font-size: inherit; }
+  .prose-reading table {
+    width: 100%;
+    margin: 0 0 1.2em;
+    border-collapse: collapse;
+    font: 16px/1.5 var(--sans);
+  }
+  .prose-reading :is(th, td) { padding: 8px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+  .prose-reading th { font-weight: 600; border-bottom: 1.5px solid var(--foreground); }
+  .prose-reading hr { margin: 2em 0; border: 0; border-top: 1px solid var(--border); }
+  .prose-reading img { max-width: 100%; height: auto; }
+
+  /* numbered steps: outlined circles with a connector; top-level lists only */
+  .prose-reading > ol {
+    --dot: 28px;
+    list-style: none;
+    counter-reset: step;
+    margin: 14px 0 6px;
+    padding: 0;
+  }
+  .prose-reading > ol > li {
+    counter-increment: step;
+    position: relative;
+    margin: 0;
+    padding: 0 0 16px calc(var(--dot) + 16px);
+  }
+  .prose-reading > ol > li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: calc((1.6em - var(--dot)) / 2);
+    width: var(--dot);
+    height: var(--dot);
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--foreground);
+    border-radius: 50%;
+    background: var(--background);
+    color: var(--foreground);
+    font: 700 calc(var(--dot) * 0.48) / 1 var(--serif);
+  }
+  .prose-reading > ol > li::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--dot) / 2 - 1px);
+    top: calc((1.6em + var(--dot)) / 2 + 4px);
+    bottom: 4px;
+    width: 2px;
+    background: var(--border-strong);
+  }
+  .prose-reading > ol > li:last-child::after { display: none; }
+
+  /* a quote is italic with a grey bar; a callout (opens with bold) is an ink box with a circled ! */
+  .prose-reading blockquote {
+    margin: 1.2em 0;
+    padding: 2px 0 2px 20px;
+    border-left: 3px solid var(--border-strong);
+    color: var(--foreground-soft);
+    font-style: italic;
+  }
+  .prose-reading blockquote > :last-child { margin-bottom: 0; }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child) {
+    position: relative;
+    padding: 20px 22px 18px 74px;
+    border: 0;
+    color: var(--foreground);
+    font-style: normal;
+  }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid var(--foreground);
+    pointer-events: none;
+  }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child)::before {
+    content: "!";
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--foreground);
+    color: var(--background);
+    font: 900 22px/1 var(--serif);
+    transform: rotate(-6deg);
+  }
+  .prose-reading blockquote:has(> p:first-child > strong:first-child) > p:first-child > strong:first-child {
+    display: block;
+    margin-bottom: 2px;
+  }
+  @media (max-width: 720px) {
+    .prose-reading blockquote:has(> p:first-child > strong:first-child) { padding: 16px 16px 14px 60px; }
+    .prose-reading blockquote:has(> p:first-child > strong:first-child)::before { left: 14px; top: 14px; width: 32px; height: 32px; font-size: 20px; }
+  }
+
+  /* the Short Answer: a tinted sheet with the READ FIRST tag */
+  .prose-reading .short-answer {
+    position: relative;
+    margin: 40px 0 8px;
+    padding: 6px 26px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--muted);
+  }
+  .prose-reading .short-answer::before {
+    content: "Read first";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    padding: 6px 9px 5px;
+    background: var(--foreground);
+    color: var(--background);
+    font: 700 11.5px/1 var(--mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transform: rotate(-1.2deg);
+  }
+  .prose-reading .short-answer h2 { margin: 0.9em 0 0.4em; font-size: 21px; }
+  @media (max-width: 720px) {
+    .prose-reading .short-answer { padding: 4px 18px 8px; }
+  }
+}

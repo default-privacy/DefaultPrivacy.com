@@ -4,27 +4,23 @@ import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
 import { QuickExit } from "@/components/common/quick-exit"
 import { getAllStacks, getStackBySlug, stripEmbeddedJsonLd } from "@/lib/stacks"
-import { marked } from "marked"
+import { renderReadingHtml } from "@/lib/reading-html"
+import { fileNumber } from "@/lib/reading-file-number"
+import { ReadingFrame, formatReadingDate } from "@/components/reading/reading-frame"
+import { ReadingLayout } from "@/components/reading/reading-layout"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import {
-  ArrowLeft,
-  ArrowRight,
-  Clock,
-  Signal,
-  Calendar,
-  Layers,
-} from "lucide-react"
+import { ArrowLeft, ArrowRight, Layers } from "lucide-react"
 
 type Props = {
   params: Promise<{ slug: string }>
 }
 
-const difficultyConfig = {
-  beginner: { label: "Beginner", color: "text-success", bg: "bg-success/10 border-success/20" },
-  intermediate: { label: "Intermediate", color: "text-caution", bg: "bg-caution/10 border-caution/20" },
-  advanced: { label: "Advanced", color: "text-destructive", bg: "bg-destructive/10 border-destructive/20" },
+const difficultyLabel = {
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
 } as const
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -89,8 +85,8 @@ export default async function StackDetailPage({ params }: Props) {
 
   if (!stack) notFound()
 
-  const contentHtml = await marked(stripEmbeddedJsonLd(stack.content))
-  const diff = difficultyConfig[stack.difficulty]
+  const { html: contentHtml, headings } = renderReadingHtml(stripEmbeddedJsonLd(stack.content))
+  const file = fileNumber("S", await getAllStacks(), slug)
 
   const stackUrl = `https://defaultprivacy.com/stacks/${slug}`
   const jsonLd = {
@@ -127,54 +123,28 @@ export default async function StackDetailPage({ params }: Props) {
       />
 
       <main className="flex-1">
-        <article className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          {/* Back link */}
-          <Link
-            href="/stacks"
-            className="brand2-focus inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6 rounded"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            Privacy Stacks
-          </Link>
-
-          {/* Header */}
-          <header className="mb-8">
-            <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="text-[10px] font-mono text-muted-foreground border border-foreground/10 rounded-full px-2.5 py-1">
-                {stack.category}
-              </span>
-              <span className={`text-[10px] font-mono border rounded-full px-2.5 py-1 ${diff.bg} ${diff.color}`}>
-                {diff.label}
-              </span>
-            </div>
-
-            <h1 className="text-3xl md:text-4xl font-medium tracking-cinematic text-foreground mb-4">
-              {stack.title}
-            </h1>
-
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              {stack.description}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
-                {new Date(stack.publishedAt).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                {stack.timeToComplete}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Signal className="h-3.5 w-3.5" aria-hidden="true" />
-                {diff.label}
-              </span>
-            </div>
-          </header>
+        <ReadingLayout
+          headings={headings}
+          header={
+            <>
+              <Link href="/stacks" className="reading-back brand2-focus rounded">
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                Privacy Stacks
+              </Link>
+              <ReadingFrame
+                file={file}
+                title={stack.title}
+                dek={stack.description}
+                fields={[
+                  `Published ${formatReadingDate(stack.publishedAt)}`,
+                  ...(stack.updatedAt ? [`Updated ${formatReadingDate(stack.updatedAt)}`] : []),
+                  stack.timeToComplete,
+                ]}
+                right={`${stack.category} · ${difficultyLabel[stack.difficulty]}`}
+              />
+            </>
+          }
+        >
 
           {/* Tools in this stack */}
           {stack.relatedTools && stack.relatedTools.length > 0 && (
@@ -198,21 +168,8 @@ export default async function StackDetailPage({ params }: Props) {
             </div>
           )}
 
-          <div className="border-t border-foreground/10 my-8" />
-
           {/* Content */}
-          <div
-            className="prose max-w-none
-              prose-headings:scroll-mt-20
-              prose-a:text-foreground prose-a:no-underline hover:prose-a:underline
-              prose-code:before:content-none prose-code:after:content-none
-              prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm
-              prose-pre:bg-muted prose-pre:border prose-pre:border-foreground/10 prose-pre:rounded-xl
-              prose-table:text-sm
-              prose-th:text-left prose-th:font-medium
-              prose-td:py-2 prose-th:py-2"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+          <div className="prose-reading" dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
           {/* Tags */}
           {stack.tags.length > 0 && (
@@ -234,7 +191,7 @@ export default async function StackDetailPage({ params }: Props) {
           )}
 
           <ConnectAiCard size="slim" className="mt-10" />
-        </article>
+        </ReadingLayout>
       </main>
 
       <Footer />

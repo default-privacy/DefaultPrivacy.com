@@ -11,28 +11,23 @@ import { Header } from "@/components/common/header"
 import { Button } from "@/components/ui/button"
 import { parseGuideFaqsFromContent } from "@/lib/guide-faq"
 import { getAllGuides, getGuideBySlug } from "@/lib/guides"
-import { marked } from "marked"
+import { renderReadingHtml } from "@/lib/reading-html"
+import { fileNumber } from "@/lib/reading-file-number"
+import { ReadingFrame, formatReadingDate } from "@/components/reading/reading-frame"
+import { ReadingLayout } from "@/components/reading/reading-layout"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import {
-  ArrowLeft,
-  ArrowRight,
-  Clock,
-  Signal,
-  Calendar,
-  Layers,
-  Shield,
-} from "lucide-react"
+import { ArrowLeft, ArrowRight, Layers, Shield } from "lucide-react"
 
 type Props = {
   params: Promise<{ slug: string }>
 }
 
-const difficultyConfig = {
-  beginner: { label: "Beginner", color: "text-success", bg: "bg-success/10 border-success/20" },
-  intermediate: { label: "Intermediate", color: "text-caution", bg: "bg-caution/10 border-caution/20" },
-  advanced: { label: "Advanced", color: "text-destructive", bg: "bg-destructive/10 border-destructive/20" },
+const difficultyLabel = {
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
 } as const
 
 /**
@@ -111,8 +106,8 @@ export default async function GuideDetailPage({ params }: Props) {
 
   if (!guide) notFound()
 
-  const contentHtml = await marked(guide.content)
-  const diff = difficultyConfig[guide.difficulty]
+  const { html: contentHtml, headings } = renderReadingHtml(guide.content)
+  const file = fileNumber("G", await getAllGuides(), slug)
   const timeRequired = iso8601Duration(guide.timeToComplete)
 
   const guideUrl = `https://defaultprivacy.com/guides/${slug}`
@@ -170,54 +165,28 @@ export default async function GuideDetailPage({ params }: Props) {
       />
 
       <main className="flex-1">
-        <article className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          {/* Back link */}
-          <Link
-            href="/guides"
-            className="brand2-focus inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6 rounded"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            Field Guide
-          </Link>
-
-          {/* Header */}
-          <header className="mb-8">
-            <div className="flex flex-wrap items-center gap-2 mb-4">
-              <span className="text-[10px] font-mono text-muted-foreground border border-foreground/10 rounded-full px-2.5 py-1">
-                {guide.category}
-              </span>
-              <span className={`text-[10px] font-mono border rounded-full px-2.5 py-1 ${diff.bg} ${diff.color}`}>
-                {diff.label}
-              </span>
-            </div>
-
-            <h1 className="text-3xl md:text-4xl font-medium tracking-cinematic text-foreground mb-4">
-              {guide.title}
-            </h1>
-
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              {guide.description}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
-                {new Date(guide.publishedAt).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                {guide.timeToComplete}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Signal className="h-3.5 w-3.5" aria-hidden="true" />
-                {diff.label}
-              </span>
-            </div>
-          </header>
+        <ReadingLayout
+          headings={headings}
+          header={
+            <>
+              <Link href="/guides" className="reading-back brand2-focus rounded">
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                Field Guide
+              </Link>
+              <ReadingFrame
+                file={file}
+                title={guide.title}
+                dek={guide.description}
+                fields={[
+                  `Published ${formatReadingDate(guide.publishedAt)}`,
+                  ...(guide.updatedAt ? [`Updated ${formatReadingDate(guide.updatedAt)}`] : []),
+                  guide.timeToComplete,
+                ]}
+                right={`${guide.category} · ${difficultyLabel[guide.difficulty]}`}
+              />
+            </>
+          }
+        >
 
           {/* Related tools — renders the guide's relatedTools frontmatter (mirrors the
               stack page's "Tools in this stack" block) */}
@@ -242,21 +211,8 @@ export default async function GuideDetailPage({ params }: Props) {
             </div>
           )}
 
-          <div className="border-t border-foreground/10 my-8" />
-
           {/* Content */}
-          <div
-            className="prose max-w-none
-              prose-headings:scroll-mt-20
-              prose-a:text-foreground prose-a:no-underline hover:prose-a:underline
-              prose-code:before:content-none prose-code:after:content-none
-              prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm
-              prose-pre:bg-muted prose-pre:border prose-pre:border-foreground/10 prose-pre:rounded-xl
-              prose-table:text-sm
-              prose-th:text-left prose-th:font-medium
-              prose-td:py-2 prose-th:py-2"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+          <div className="prose-reading" dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
           {/* Tags */}
           {guide.tags.length > 0 && (
@@ -295,7 +251,7 @@ export default async function GuideDetailPage({ params }: Props) {
               </div>
             </div>
           <ConnectAiCard size="slim" className="mt-10" />
-        </article>
+        </ReadingLayout>
       </main>
 
       <Footer />

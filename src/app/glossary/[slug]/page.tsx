@@ -4,17 +4,19 @@
 import { BreadcrumbSchema } from "@/components/common/breadcrumb-schema"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
-import { Button } from "@/components/ui/button"
 import {
   getAllGlossaryTerms,
   getGlossaryTermBySlug,
   getRelatedTerms,
 } from "@/lib/glossary"
-import { marked } from "marked"
+import { renderReadingHtml } from "@/lib/reading-html"
+import { fileNumber } from "@/lib/reading-file-number"
+import { ReadingFrame } from "@/components/reading/reading-frame"
+import { ReadingLayout } from "@/components/reading/reading-layout"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, BookOpen, ExternalLink, Wrench } from "lucide-react"
+import { ArrowLeft, ExternalLink, Wrench } from "lucide-react"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -77,7 +79,8 @@ export default async function GlossaryTermPage({ params }: Props) {
 
   const relatedTerms = await getRelatedTerms(term)
 
-  const contentHtml = await marked(term.content)
+  const { html: contentHtml, headings } = renderReadingHtml(term.content)
+  const file = fileNumber("T", await getAllGlossaryTerms(), term.slug)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -130,56 +133,26 @@ export default async function GlossaryTermPage({ params }: Props) {
       />
 
       <main className="flex-1">
-        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-8">
-          {/* Back link */}
-          <Link
-            href="/glossary"
-            className="brand2-focus inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-6 rounded"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" />
-            Back to Glossary
-          </Link>
-
-          {/* Header */}
-          <div className="mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-foreground/[0.06] border border-foreground/10">
-                <BookOpen className="h-5 w-5 text-foreground-soft" aria-hidden="true" />
-              </div>
-              <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-[0.3em] border border-foreground/10 rounded-full px-2.5 py-1">
-                {term.category}
-              </span>
-            </div>
-            <h1 className="text-4xl font-medium tracking-cinematic text-foreground mb-4">
-              What is {term.term}?
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              {term.definition}
-            </p>
-          </div>
-
-          {/* Aliases */}
-          {term.aliases && term.aliases.length > 0 && (
-            <div className="mb-6">
-              <p className="text-sm text-muted-foreground">
-                Also known as:{" "}
-                {term.aliases.map((alias, i) => (
-                  <span key={alias}>
-                    <span className="text-foreground">{alias}</span>
-                    {i < term.aliases!.length - 1 && ", "}
-                  </span>
-                ))}
-              </p>
-            </div>
-          )}
-
-          <div className="border-t border-foreground/10 my-8" />
-
+        <ReadingLayout
+          headings={headings}
+          header={
+            <>
+              <Link href="/glossary" className="reading-back brand2-focus rounded">
+                <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                Back to Glossary
+              </Link>
+              <ReadingFrame
+                file={file}
+                title={`What is ${term.term}?`}
+                dek={term.definition}
+                fields={term.aliases && term.aliases.length > 0 ? [`Also ${term.aliases.join(", ")}`] : []}
+                right={term.category}
+              />
+            </>
+          }
+        >
           {/* Content */}
-          <div
-            className="prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: contentHtml }}
-          />
+          <div className="prose-reading" dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
           {/* Related terms */}
           {relatedTerms.length > 0 && (
@@ -226,7 +199,7 @@ export default async function GlossaryTermPage({ params }: Props) {
             </section>
           )}
 
-        </div>
+        </ReadingLayout>
       </main>
 
       <Footer />
