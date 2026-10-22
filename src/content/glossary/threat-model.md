@@ -53,7 +53,7 @@ keywords:
 
 ### Average Person
 **Protect**: Personal data, browsing habits
-**From**: Advertisers, data brokers, hackers
+**From**: Advertisers, data brokers, a scammer who phishes your email password
 **Effort**: Low-medium
 
 ### Journalist

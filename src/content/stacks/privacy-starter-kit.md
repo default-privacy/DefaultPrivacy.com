@@ -37,7 +37,7 @@ Install five tools, in this order, to cover the basics of everyday privacy.
 1. Set up Bitwarden first. Make the master password long, because it is the whole vault.
 2. Turn on app-based two-factor with Ente Auth, not SMS. Back up your recovery codes.
 3. Switch to Brave, which blocks trackers by default.
-4. Add Mullvad. It hides your traffic from your ISP but does not make you anonymous.
+4. Add Mullvad if you want a VPN. It is the one paid tool here, so it can wait. It hides your traffic from your ISP but does not make you anonymous.
 5. Install Signal, and invite the people you talk to.
 
 ## Who this is for and what it defends against
@@ -74,7 +74,7 @@ Most of your day-to-day exposure happens in the browser, where trackers stitch y
 
 *Audited · Public GitHub · No account or email*
 
-Your internet provider sees every site you visit and can log or sell that record. A VPN **insulates** that traffic, moving the view of what you do away from your ISP and off the local network. Mullvad is the clean pick: it has been independently audited, and it takes no email or account — you get a random number, not an identity. Honest caveat below on what a VPN can and can't do.
+Your internet provider sees every site you visit and can log or sell that record. A VPN **insulates** that traffic, moving the view of what you do away from your ISP and off the local network. Mullvad is the clean pick: it has been independently audited, and it takes no email or account — you get a random number, not an identity. It is the one paid tool in this kit, and our [where to start](/guides/privacy-where-to-start) guide puts the free steps first, so it can wait. Honest caveat below on what a VPN can and can't do.
 
 ### 5. Encrypted messaging — [Signal](/directory/signal)
 

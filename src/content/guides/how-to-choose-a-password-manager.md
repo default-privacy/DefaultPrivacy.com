@@ -48,7 +48,7 @@ The best password manager is the one you will actually use for every account. Pi
 
 1. Pick Bitwarden or Proton Pass if you want sync across devices. Pick KeePassXC if you want no company holding your passwords.
 2. To stop reusing passwords today, use the manager built into your phone or browser.
-3. Make the master password long and unique, and turn on two-step login for the manager. Save its recovery codes.
+3. Make the master password long and unique. A manager that can't read your vault generally can't reset it, so know its recovery steps first. Turn on two-step login for the manager and save the recovery codes for that login.
 4. Start with email, banking and anything with money. Then add a few accounts a week.
 5. Back up your vault or export file.
 

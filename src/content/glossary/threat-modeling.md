@@ -14,7 +14,7 @@ Threat modeling answers the fundamental question: what am I protecting, from who
 ## Key Questions
 
 1. **What do I want to protect?** (data, identity, location, communications)
-2. **Who do I want to protect it from?** (advertisers, hackers, government, ex-partner)
+2. **Who do I want to protect it from?** (advertisers, a scammer who phishes your email password, government, ex-partner)
 3. **How likely is the threat?** (targeted vs. opportunistic)
 4. **What are the consequences of failure?** (embarrassment vs. imprisonment)
 5. **What am I willing to sacrifice?** (convenience, money, time)

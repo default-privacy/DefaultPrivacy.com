@@ -35,7 +35,7 @@ relatedTools:
 Use a VPN on any network you don't control, then add four more layers so one weak spot doesn't expose client work.
 
 1. Turn on a VPN such as Mullvad on untrusted Wi-Fi. Keep it toggleable, since some sites block VPN exit IPs.
-2. Add encrypted DNS with DNScrypt-proxy 2. Even with a VPN, your DNS lookups can leak.
+2. With the VPN on, check that its own DNS answers your lookups. Use DNScrypt-proxy 2 for encrypted DNS when the VPN is off.
 3. Put every account in a password manager like Bitwarden. The master password is the whole vault.
 4. Encrypt client files with Cryptomator before they sync to the cloud.
 5. Use Signal for client calls and Element or Matrix for team chat.
@@ -60,7 +60,7 @@ On a network you don't control, a VPN is the first move: it insulates all of you
 
 *Public GitHub*
 
-Even with a VPN, your DNS lookups — the list of every domain you reach — can leak and reveal where you go. DNScrypt-proxy 2 encrypts and authenticates those lookups so the local network can't read or forge them. Want something with zero setup? [Control D](/directory/control-d) gives you customizable filtering DNS without editing config files — the friction-for-control tradeoff is yours to make.
+Your DNS lookups, the list of every domain you reach, reveal where you go. With the VPN on, its own resolver should answer them. Check your VPN app's DNS settings, because misconfigured clients and split tunneling can still leak lookups. Our [private DNS guide](/guides/private-dns-and-ad-blocking) explains why a second encrypted DNS layer adds little on top of a VPN. With the VPN off, DNScrypt-proxy 2 encrypts and authenticates your lookups so the local network can't read or forge them. Want something with zero setup? [Control D](/directory/control-d) gives you customizable filtering DNS without editing config files — the friction-for-control tradeoff is yours to make.
 
 ### Identity — [Bitwarden](/directory/bitwarden)
 
@@ -98,13 +98,13 @@ The recurring theme: privacy on the road costs a few seconds of friction per ses
 Six layers: a VPN for untrusted networks, encrypted DNS so your lookups don't leak, a password manager for account-takeover resistance, client-side-encrypted cloud storage for client files, and end-to-end-encrypted calls and team chat. A VPN alone is the common mistake — it's necessary but not sufficient.
 
 ### Is public Wi-Fi safe if I use a VPN?
-Much safer. A VPN insulates your traffic from the local network and whoever runs it, which neutralizes the main café- and airport-Wi-Fi risks of snooping and tampering. Pair it with encrypted DNS so your domain lookups don't leak separately, and you've covered the realistic threats on an untrusted network.
+Much safer. A VPN insulates your traffic from the local network and whoever runs it, which neutralizes the main café- and airport-Wi-Fi risks of snooping and tampering. Check that the VPN's own DNS answers your lookups so they don't leak separately, and you've covered the realistic threats on an untrusted network.
 
 ### How do I protect client data while working abroad?
 Encrypt it before it leaves your device. A client-side tool like Cryptomator turns any cloud folder into ciphertext the provider can't read, so a breached storage account or a lost laptop doesn't expose the underlying files. Combine that with a password manager and encrypted calls so the credentials and conversations around the data are protected too.
 
 ### Do I still need encrypted DNS if I have a VPN?
-Usually the VPN handles DNS, but leaks happen — misconfigured clients, split tunneling, or dropped connections can expose lookups to the local network. Running encrypted DNS such as DNScrypt-proxy 2 closes that gap by encrypting and authenticating the lookups themselves, independent of the VPN tunnel's state.
+Usually not while the VPN is on. Its own resolver should answer your lookups, and our [private DNS guide](/guides/private-dns-and-ad-blocking) explains why a second layer adds little. Check your VPN app's DNS settings, since misconfigured clients and split tunneling can still leak lookups. Use encrypted DNS such as DNScrypt-proxy 2 when the VPN is off.
 
 ### What's the best encrypted cloud storage for freelancers?
 Two good approaches: layer Cryptomator over the storage you already use so files are encrypted client-side, or move to native zero-knowledge storage like Filen that encrypts on-device by default. The layer is more flexible; the native option is simpler. Either keeps client files as ciphertext the provider can't read.
@@ -131,9 +131,9 @@ Two good approaches: layer Cryptomator over the storage you already use so files
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "What privacy tools do remote workers actually need?", "acceptedAnswer": { "@type": "Answer", "text": "Six layers: a VPN, encrypted DNS, a password manager, client-side-encrypted cloud storage, and end-to-end-encrypted calls and team chat. A VPN alone is necessary but not sufficient." } },
-    { "@type": "Question", "name": "Is public Wi-Fi safe if I use a VPN?", "acceptedAnswer": { "@type": "Answer", "text": "Much safer. A VPN insulates traffic from the local network, neutralizing snooping and tampering. Pair it with encrypted DNS so domain lookups don't leak separately." } },
+    { "@type": "Question", "name": "Is public Wi-Fi safe if I use a VPN?", "acceptedAnswer": { "@type": "Answer", "text": "Much safer. A VPN insulates traffic from the local network, neutralizing snooping and tampering. Check that the VPN's own DNS answers your lookups so they don't leak separately." } },
     { "@type": "Question", "name": "How do I protect client data while working abroad?", "acceptedAnswer": { "@type": "Answer", "text": "Encrypt it before it leaves your device with a client-side tool like Cryptomator, so a breached storage account or lost laptop doesn't expose the files." } },
-    { "@type": "Question", "name": "Do I still need encrypted DNS if I have a VPN?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, as a safety net. Misconfiguration, split tunneling, or dropped connections can leak DNS lookups; encrypted DNS such as DNScrypt-proxy 2 closes that gap." } },
+    { "@type": "Question", "name": "Do I still need encrypted DNS if I have a VPN?", "acceptedAnswer": { "@type": "Answer", "text": "Usually not while the VPN is on: its own resolver should answer. Check your VPN app's DNS settings, since misconfiguration and split tunneling can leak lookups. Use encrypted DNS such as DNScrypt-proxy 2 when the VPN is off." } },
     { "@type": "Question", "name": "What's the best encrypted cloud storage for freelancers?", "acceptedAnswer": { "@type": "Answer", "text": "Layer Cryptomator over your existing cloud for client-side encryption, or use native zero-knowledge storage like Filen. Either keeps files as ciphertext the provider can't read." } }
   ]
 }
