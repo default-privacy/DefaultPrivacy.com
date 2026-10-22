@@ -209,7 +209,7 @@ const nextConfig: NextConfig = {
       // v1 static pages → v4 equivalents
       {
         source: "/contact",
-        destination: "/about",
+        destination: "/about#contact",
         permanent: true,
       },
       {

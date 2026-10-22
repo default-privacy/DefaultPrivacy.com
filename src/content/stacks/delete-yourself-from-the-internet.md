@@ -6,6 +6,7 @@ category: Threat-Model Stacks
 difficulty: beginner
 timeToComplete: "30 minutes"
 publishedAt: "2026-07-07"
+updatedAt: "2026-10-22"
 author: Default Privacy
 tags:
   - data-brokers
@@ -92,7 +93,7 @@ Start with the free Big Ass Data Broker Opt Out List and file opt-outs at the ma
 DeleteMe is the established managed option with broad broker coverage; Easy Opt Outs is the lower-cost pick; Cloaked bundles removal with ongoing masking. The right one depends on whether you're buying breadth, budget, or prevention. We take no commission on any of them.
 
 ### Can I opt out of data brokers for free?
-Yes. Every broker is legally required to offer an opt-out, and the Big Ass Data Broker Opt Out List collects the direct links and steps. It costs time rather than money, and you'll need to repeat it periodically because brokers re-scrape.
+Yes. Most people-search sites take opt-out requests for free, often not because a law makes them, and the Big Ass Data Broker Opt Out List collects the direct links and steps. If you live in California, one free DROP request at privacy.ca.gov/drop reaches the brokers registered there. It costs time rather than money, and you'll need to repeat it periodically because brokers re-scrape.
 
 ### Do data removal services actually work?
 They remove your records from the brokers they cover and re-file when the records reappear, which is real and measurable. What no service can do is guarantee permanent deletion — brokers rebuild profiles from new sources, so removal is ongoing maintenance, not a one-time fix.

@@ -176,6 +176,16 @@ export default async function AboutPage() {
                 )
               })}
             </div>
+            <p id="contact" className="mt-8 scroll-mt-24 text-sm leading-relaxed text-foreground/56">
+              Questions, corrections or a tool to suggest? Email{" "}
+              <a
+                href="mailto:privacy@defaultprivacy.com"
+                className="brand2-focus rounded-sm text-foreground/70 underline underline-offset-2 hover:text-foreground"
+              >
+                privacy@defaultprivacy.com
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>
