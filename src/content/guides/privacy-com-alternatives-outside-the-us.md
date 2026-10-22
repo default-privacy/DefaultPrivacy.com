@@ -1,7 +1,7 @@
 ---
 title: "A Privacy.com Alternative That Works Outside the US"
 slug: privacy-com-alternatives-outside-the-us
-description: "Privacy.com only takes US citizens and legal residents with a US bank account. Outside the US, the closest match is a virtual card from Revolut, Wise or Curve, and prepaid codes or crypto-bought cards cover the rest. Here is what each hides, what it doesn't, and where each one works."
+description: "Privacy.com only takes US citizens and legal residents with a US bank account. Outside the US, the closest match is Halocard, or a virtual card from Revolut, Wise or Curve, and prepaid codes or crypto-bought cards cover the rest. Here is what each hides, what it doesn't, and where each one works."
 category: Privacy
 difficulty: beginner
 timeToComplete: "9 minutes"
@@ -32,7 +32,7 @@ relatedTools:
 
 **Last checked: October 2026** · Each claim links to the provider's own pages or the law. General information, not legal advice.
 
-If you live outside the US, you can't open a Privacy.com account, so the closest replacement is a virtual card from a bank-style app. Revolut offers a one-time "disposable" card in its app. Wise offers digital cards you can delete and replace. Curve puts one card number in front of the cards you already own. All three are financial companies that verify customers, as Wise's page below shows, so expect ID checks. They hide your card number from the shop, but the company that issued the card still knows who you are. A prepaid code or a card bought with crypto hides more, but works in fewer places and carries limits.
+If you live outside the US, you can't open a Privacy.com account, so the closest replacement is Halocard, which says it serves [customers in the US and 120+ countries](https://halocard.co/) with Privacy.com-style virtual cards, or a virtual card from a bank-style app. Revolut offers a one-time "disposable" card in its app. Wise offers digital cards you can delete and replace. Curve puts one card number in front of the cards you already own. All of these are financial companies that verify customers, as Halocard's and Wise's sign-up rules below show, so expect ID checks. They hide your card number from the shop, but the company that issued the card still knows who you are. A prepaid code or a card bought with crypto hides more, but works in fewer places and carries limits.
 
 ---
 
@@ -56,6 +56,7 @@ It does not hide you from the issuer. Wise says it is [a financial institution a
 
 | Option | Where it works | Hides you from the shop | Hides you from the issuer |
 |---|---|---|---|
+| Halocard | US and 120+ countries, it says | Card number, plus a name and billing address you set | No, ID and selfie at sign-up |
 | Revolut disposable card | Check the app for your country | Card number: new each payment | No |
 | Wise digital card | 11 countries plus the EEA | Card number: delete and replace | No |
 | Curve | UK and EEA | Says your real card details aren't shared | No |
@@ -66,6 +67,7 @@ It does not hide you from the issuer. Wise says it is [a financial institution a
 
 ## Bank and app cards (UK, EU and more)
 
+- **Halocard.** The closest match to Privacy.com that we found. It issues US Visa cards from an online account, and says it is [for customers in the US and 120+ countries]([Halocard](https://halocard.co/)). Sign-up needs a passport, driver's license or national ID card and a selfie, and you can fund it by card, bank transfer or crypto ([Halocard](https://halocard.co/)). Plans start at $12 a month, with no free plan and a minimum first deposit of $30, and non-USD purchases carry a 1.5% + $0.30 foreign exchange fee ([Halocard](https://halocard.co/)). Halocard says you set the billing address and cardholder name on each card ([Halocard](https://halocard.co/)). It is a US company registered with FinCEN as a money services business, and its cards are issued by Third National ([Halocard](https://halocard.co/)).
 - **Revolut.** It offers a [disposable debit card whose details change every time you pay](https://web.archive.org/web/20260710175220/https://www.revolut.com/cards/virtual-card/), and says that stops a shop charging you again with the same details. Its virtual card page (read from a July 2026 archive copy, as Revolut's site blocked our checker) says you can [create up to 4 multi-use cards every 30 days, hold up to 20, and have 1 disposable card, with up to 5 payments every 24 hours](https://web.archive.org/web/20260710175220/https://www.revolut.com/cards/virtual-card/). Revolut's page says the disposable card is for one-off online purchases, and the multi-use card is the one for [recurring and contactless payments](https://web.archive.org/web/20260710175220/https://www.revolut.com/cards/virtual-card/). Limits vary by country and plan, so check the app.
 - **Wise.** You can have [3 digital cards at a time and delete and replace them up to 3 times a day](https://www.wise.com/help/articles/1AqrRndtxosydM2GLR3U6T/getting-started-with-your-wise-digital-card). That isn't a true single-use card, but you can drop a number after one purchase. Digital cards are available if your account has a registered address in [Australia, Brazil, Canada, the EEA, Japan, Malaysia, New Zealand, the Philippines, Singapore, Switzerland, the UK or the US](https://www.wise.com/help/articles/1AqrRndtxosydM2GLR3U6T/getting-started-with-your-wise-digital-card). In Malaysia, only personal accounts get one.
 - **Curve.** You link your existing debit and credit cards to a Curve wallet, and Curve creates a [virtual card with its own 16-digit number](https://www.curve.com/blog/curve-pay/how-does-a-curve-card-work/). Curve says your [actual card details are not shared with third parties](https://www.curve.com/blog/curve-pay/how-does-a-curve-card-work/). Its cards are issued by [Curve UK Limited in the UK and Curve Europe UAB in Lithuania for the EEA](https://www.curve.com/en-gb/). Curve holds your real card details, and since every payment goes through it, assume it sees what you buy.
@@ -95,7 +97,7 @@ Buying crypto usually involves ID somewhere. See [why banks freeze crypto](/guid
 - **UK:** Revolut, Wise or Curve for everyday masking. Paysafecard for small payments where a shop accepts it.
 - **EU and EEA:** Revolut, Wise or Curve, subject to your country's availability. The rules for prepaid cards differ by country, so check the issuer's page.
 - **Canada, Australia, Brazil, Japan, Singapore and others on Wise's list:** a Wise digital card.
-- **Anywhere else:** a prepaid code or a card bought with crypto, accepting the limits above.
+- **Anywhere else:** Halocard if your country is covered, or a prepaid code or a card bought with crypto, accepting the limits above.
 
 ---
 
@@ -103,7 +105,7 @@ Buying crypto usually involves ID somewhere. See [why banks freeze crypto](/guid
 
 **Is there a direct clone of Privacy.com outside the US?**
 
-We couldn't confirm one. The closest features, per-merchant card numbers you can delete, come from Revolut's [disposable card](https://web.archive.org/web/20260710175220/https://www.revolut.com/cards/virtual-card/) and Wise's [replaceable digital cards](https://www.wise.com/help/articles/1AqrRndtxosydM2GLR3U6T/getting-started-with-your-wise-digital-card).
+Halocard is the closest we found: it markets itself as a Privacy.com alternative for [the US and 120+ countries]([Halocard](https://halocard.co/)). Other per-merchant card numbers you can delete come from Revolut's [disposable card](https://web.archive.org/web/20260710175220/https://www.revolut.com/cards/virtual-card/) and Wise's [replaceable digital cards](https://www.wise.com/help/articles/1AqrRndtxosydM2GLR3U6T/getting-started-with-your-wise-digital-card).
 
 **Can I use Privacy.com if I'm abroad but have a US bank account?**
 

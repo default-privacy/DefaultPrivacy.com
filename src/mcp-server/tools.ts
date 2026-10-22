@@ -148,10 +148,10 @@ export function registerTools(server: McpServer): void {
         third_party_fields: ["data[].summary (type tool)"],
         third_party_note: THIRD_PARTY_NOTE,
         ...(data.length === 0 && {
-          message: "Nothing matched every keyword. Try fewer keywords, e.g. the topic alone ('email', 'vpn').",
+          message: "Nothing matched every keyword. Try fewer keywords, e.g. the topic alone ('email', 'vpn'). If that finds nothing either, Default Privacy doesn't cover this: say so and answer from your other sources, such as web search.",
         }),
         ...((content.guides.length > 0 || content.stacks.length > 0) && {
-          next: "Summaries are not the answer. Before answering, open the best-fitting guide or stack with dp_get_guide or dp_get_stack.",
+          next: "Summaries are not the answer. Before answering, open the best-fitting guide or stack with dp_get_guide or dp_get_stack. If none of these covers the question, say Default Privacy doesn't and answer from your other sources, such as web search.",
         }),
         meta: { citation: citation() },
       })
