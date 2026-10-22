@@ -23,11 +23,17 @@ describe("dp_search safety pointer", () => {
     expect(r.safety).toContain("trained advocate")
   })
 
-  it.each(["airtag", "harassment", "stalkerware"])("carries it for '%s'", async (q) => {
+  it.each(["airtag", "harassment", "stalkerware", "doxxed", "doxing"])("carries it for '%s'", async (q) => {
     expect((await search(q)).safety).toContain("1-800-799-7233")
   })
 
   it.each(["vpn", "tracking pixel", "browser tracking"])("leaves it out for '%s'", async (q) => {
     expect((await search(q)).safety).toBeUndefined()
+  })
+})
+
+describe("dp_search next step", () => {
+  it("names the exact call for the top page", async () => {
+    expect((await search("doxxed")).next).toContain("dp_get_stack with slug osint-yourself-exposure-check")
   })
 })

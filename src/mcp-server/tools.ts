@@ -65,6 +65,10 @@ export const SURVIVOR_KIT = "stalking-abuse-survivor-safety-kit"
 export const SURVIVOR_SAFETY =
   "changing a setting or signing a device out can alert the person watching, so plan visible changes with a trained advocate; in the US the National Domestic Violence Hotline is free, confidential and open 24/7 (call 1-800-799-7233, text START to 88788)."
 
+/** Agents skipped a generic "open the best one" on short questions, so this names the exact call. */
+const openFirst = (page: { kind: string; slug: string }) =>
+  `Summaries are not the answer. Before answering, open the best fit, most likely ${page.kind === "guide" ? "dp_get_guide" : "dp_get_stack"} with slug ${page.slug}. If nothing here covers the question, say Default Privacy doesn't and answer from your other sources, such as web search.`
+
 export function registerTools(server: McpServer): void {
   // The Claude directory reads a tool's display name from annotations.title, not only title.
   const registerTool: McpServer["registerTool"] = (name, config, cb) =>
@@ -137,9 +141,11 @@ export function registerTools(server: McpServer): void {
       const product = replacementCategory(query)
       return jsonContent({
         // Top two only: "tracking pixel" lists the kit lower down, and the note would be out of place there.
-        ...(pages.slice(0, 2).some((p) => p.slug === SURVIVOR_KIT) && {
+        // "doxxed" finds the self-audit stacks, not the kit, but the person may be the target of one.
+        ...((pages.slice(0, 2).some((p) => p.slug === SURVIVOR_KIT) || words.some((w) => w.startsWith("dox"))) && {
           safety: `This may touch stalking or abuse. Alongside any steps, say: ${SURVIVOR_SAFETY} Full kit: dp_get_stack with slug ${SURVIVOR_KIT}.`,
         }),
+        ...(pages.length > 0 && { next: openFirst(pages[0]) }),
         ...(product && {
           see_also: `'${query.trim()}' is a mainstream product: dp_find_alternatives returns hand-picked replacements (${product.label}) and what switching involves.`,
         }),
@@ -149,9 +155,6 @@ export function registerTools(server: McpServer): void {
         third_party_note: THIRD_PARTY_NOTE,
         ...(data.length === 0 && {
           message: "Nothing matched every keyword. Try fewer keywords, e.g. the topic alone ('email', 'vpn'). If that finds nothing either, Default Privacy doesn't cover this: say so and answer from your other sources, such as web search.",
-        }),
-        ...((content.guides.length > 0 || content.stacks.length > 0) && {
-          next: "Summaries are not the answer. Before answering, open the best-fitting guide or stack with dp_get_guide or dp_get_stack. If none of these covers the question, say Default Privacy doesn't and answer from your other sources, such as web search.",
         }),
         meta: { citation: citation() },
       })
@@ -643,11 +646,13 @@ export function registerTools(server: McpServer): void {
       const matches = await Promise.all(
         picked.map(async (m) => ({ situation: m.name, summary: m.blurb, items: await resolve(m.items) })),
       )
+      const top = matches.find((m) => m.items.length > 0)?.items[0]
       return jsonContent({
         data: {
           matches,
           start_here: await resolve(BASELINE),
         },
+        ...(top && { next: openFirst({ kind: top.type, slug: top.slug }) }),
         meta: { citation: citation("start") },
       })
     },

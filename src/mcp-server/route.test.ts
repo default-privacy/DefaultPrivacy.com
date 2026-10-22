@@ -35,4 +35,10 @@ describe("dp_route takes situation ids, never free text", () => {
     expect(data.matches[0].items.length).toBeGreaterThan(0)
     expect(data.start_here.length).toBe(3)
   })
+
+  it("names the first match's top page to open", async () => {
+    const res = JSON.parse((await route.handler({ situations: ["clear-online"] })).content[0].text)
+    const top = res.data.matches[0].items[0]
+    expect(res.next).toContain(`slug ${top.slug}`)
+  })
 })
