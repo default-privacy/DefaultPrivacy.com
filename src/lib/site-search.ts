@@ -92,6 +92,21 @@ export async function searchContent(
   }
 }
 
+/**
+ * Guides and stacks as one list, best first. Ranked separately and printed guides-first, a weak
+ * guide match ("stalking" in the body of the LLC guide) sat above a strong stack match (the
+ * survivor kit's title).
+ */
+export function mergePages(found: { guides: Guide[]; stacks: Stack[] }, query: string) {
+  return rankContent(
+    [
+      ...found.guides.map((g) => ({ ...g, kind: "guide" as const })),
+      ...found.stacks.map((s) => ({ ...s, kind: "stack" as const })),
+    ],
+    query,
+  )
+}
+
 /** A summary on one line, cut at a word boundary when longer than `max` characters. */
 export function oneLine(text: string, max = 200): string {
   const flat = text.replace(/\s+/g, " ").trim()

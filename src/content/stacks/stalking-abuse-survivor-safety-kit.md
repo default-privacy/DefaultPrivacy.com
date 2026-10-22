@@ -12,6 +12,10 @@ tags:
   - safety
   - stalkerware
   - domestic-abuse
+  - harassment
+  - tracking
+  - airtag
+  - monitoring
   - threat-model
   - privacy
 relatedTools:

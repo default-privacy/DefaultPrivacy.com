@@ -23,7 +23,7 @@ import { CARD_NOTE, toolCard } from "./compact"
 import { findSection, guideSections, stackOutline } from "@/lib/guide-outline"
 import { parseGuideFaqsFromContent } from "@/lib/guide-faq"
 import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
-import { keywords, oneLine, rankContent, searchContent } from "@/lib/site-search"
+import { keywords, mergePages, oneLine, rankContent, searchContent } from "@/lib/site-search"
 import {
   getAllGlossaryTerms,
   getGlossaryTermBySlug,
@@ -59,6 +59,11 @@ async function limitExceeded(resource: string): Promise<string | null> {
 function errorContent(message: string) {
   return { ...jsonContent({ error: message }), isError: true as const }
 }
+
+export const SURVIVOR_KIT = "stalking-abuse-survivor-safety-kit"
+/** What the survivor kit says up front; dp_search repeats it so hosts with old instructions still see it. */
+export const SURVIVOR_SAFETY =
+  "changing a setting or signing a device out can alert the person watching, so plan visible changes with a trained advocate; in the US the National Domestic Violence Hotline is free, confidential and open 24/7 (call 1-800-799-7233, text START to 88788)."
 
 export function registerTools(server: McpServer): void {
   // The Claude directory reads a tool's display name from annotations.title, not only title.
@@ -96,6 +101,7 @@ export function registerTools(server: McpServer): void {
         searchContent(query, n),
         searchAnswers(query, Math.min(n, 2)),
       ])
+      const pages = mergePages(content, query)
       const data = [
         ...answers.map((a) => ({
           type: "answer",
@@ -112,19 +118,12 @@ export function registerTools(server: McpServer): void {
           summary: oneLine(cleanThirdParty(t.tagline ?? t.description ?? "", 2000)),
           url: t.dp_url,
         })),
-        ...content.guides.map((g) => ({
-          type: "guide",
-          title: g.title,
-          slug: g.slug,
-          summary: oneLine(g.description),
-          url: url(`guides/${g.slug}`),
-        })),
-        ...content.stacks.map((s) => ({
-          type: "stack",
-          title: s.title,
-          slug: s.slug,
-          summary: oneLine(s.description),
-          url: url(`stacks/${s.slug}`),
+        ...pages.map((p) => ({
+          type: p.kind,
+          title: p.title,
+          slug: p.slug,
+          summary: oneLine(p.description),
+          url: url(`${p.kind === "guide" ? "guides" : "stacks"}/${p.slug}`),
         })),
         ...content.glossary.map((t) => ({
           type: "glossary",
@@ -137,6 +136,10 @@ export function registerTools(server: McpServer): void {
       // A mainstream product name matches add-ons FOR it (PGP for Gmail), not replacements.
       const product = replacementCategory(query)
       return jsonContent({
+        // Top two only: "tracking pixel" lists the kit lower down, and the note would be out of place there.
+        ...(pages.slice(0, 2).some((p) => p.slug === SURVIVOR_KIT) && {
+          safety: `This may touch stalking or abuse. Alongside any steps, say: ${SURVIVOR_SAFETY} Full kit: dp_get_stack with slug ${SURVIVOR_KIT}.`,
+        }),
         ...(product && {
           see_also: `'${query.trim()}' is a mainstream product: dp_find_alternatives returns hand-picked replacements (${product.label}) and what switching involves.`,
         }),

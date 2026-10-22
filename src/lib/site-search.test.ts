@@ -3,7 +3,7 @@ import { join } from "node:path"
 import { describe, expect, it } from "vitest"
 import { getAllGuides } from "./guides"
 import { getAllStacks, getStackBySlug } from "./stacks"
-import { keywords, oneLine, rankContent, searchContent, searchGlossary } from "./site-search"
+import { keywords, mergePages, oneLine, rankContent, searchContent, searchGlossary } from "./site-search"
 
 const mdFiles = (dir: string) =>
   readdirSync(join(process.cwd(), "src/content", dir)).filter((f) => f.endsWith(".md"))
@@ -158,5 +158,13 @@ describe("dp_search content for Techlore questions", () => {
 
   it("a query of filler words searches nothing", async () => {
     expect(await searchContent("what is the best privacy", 3)).toEqual({ guides: [], stacks: [], glossary: [] })
+  })
+})
+
+describe("mergePages", () => {
+  it("puts the survivor kit first for 'stalking', above guides that only mention it", async () => {
+    const pages = mergePages(await searchContent("stalking", 3), "stalking")
+    expect(pages[0]?.slug).toBe("stalking-abuse-survivor-safety-kit")
+    expect(pages[0]?.kind).toBe("stack")
   })
 })
