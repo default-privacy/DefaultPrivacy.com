@@ -9,7 +9,7 @@
  *   APPLY:              ... --apply            one transaction per tool
  *   Also fix columns:   ... --apply --set-columns   (every sourced privacy field: e2ee, logsIp, logsMetadata,
  *                       zeroKnowledge, jurisdiction, requiresEmail/Phone/RealName, hasFreeTier, isOpenSource,
- *                       plus the retired gated flags). This is how a column cleared by the 2026-10-12
+ *                       githubUrl, plus the retired gated flags). This is how a column cleared by the 2026-10-12
  *                       honesty pass gets a value again: only from a sourced claim, never by hand.
  *
  * A claim is skipped when its value disagrees with the tool column, unless --set-columns
@@ -39,7 +39,7 @@ const DEFAULT_DIR = process.env.CLAIMS_DIR ?? ""
 const SET_COLUMN_ATTRS = new Set([
   "e2ee", "logsIp", "logsMetadata", "zeroKnowledge", "jurisdiction",
   "requiresEmail", "requiresPhone", "requiresRealName", "hasFreeTier",
-  "isOpenSource", "acceptsCrypto", "isNoKyc", "isSecurityAudited",
+  "isOpenSource", "acceptsCrypto", "isNoKyc", "isSecurityAudited", "githubUrl",
 ])
 
 const args = process.argv.slice(2)
