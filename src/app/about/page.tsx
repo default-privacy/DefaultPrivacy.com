@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { LogoBlueprint } from "@/components/branding/logo-blueprint"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
-import { ArrowRight, Compass, HeartHandshake, Lock, Shield, Wrench } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPublicDirectoryStats } from "@/lib/directory-stats"
@@ -21,6 +21,13 @@ export const metadata: Metadata = {
   },
 }
 
+// Same composition as /ai and the legal pages
+const label =
+  "flex items-center gap-4 font-mono text-[12.5px] font-medium uppercase tracking-[0.18em] text-foreground/50 after:h-px after:flex-1 after:bg-foreground/10"
+const body = "text-[15px] leading-relaxed text-foreground/70"
+const card = "rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4"
+const link = "text-foreground/80 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
+
 export default async function AboutPage() {
   const { toolsLabel } = await getPublicDirectoryStats()
 
@@ -35,21 +42,18 @@ export default async function AboutPage() {
 
   const pillars = [
     {
-      icon: Compass,
       n: "01",
       h: "The Directory",
       p: `${toolsLabel} privacy tools, independently vetted — filter by what actually matters: open-source, jurisdiction, and encryption.`,
       note: "Listed on merit. No paid placements, ever.",
     },
     {
-      icon: Wrench,
       n: "02",
       h: "Free Tools",
       p: "Check your own exposure — password strength, website trackers, breach history, email security, and WHOIS. No account, nothing tied to you.",
       note: "See where you stand before you change a thing.",
     },
     {
-      icon: Shield,
       n: "03",
       h: "Guides & Glossary",
       p: "Practical, no-fluff privacy guides and a privacy glossary that explains the jargon in plain language.",
@@ -59,17 +63,14 @@ export default async function AboutPage() {
 
   const principles = [
     {
-      icon: Lock,
       h: "Collect nothing we don't need",
       p: "No email capture on the free tools. Nothing you check is stored. If we can't justify keeping it, we don't.",
     },
     {
-      icon: HeartHandshake,
       h: "The directory stays independent",
       p: "Tools are listed on merit — never paid placement, and no affiliate links.",
     },
     {
-      icon: Shield,
       h: "Say what a tool can and can't do",
       p: "No tool makes you invisible. We'd rather be honest about limits than oversell a fix.",
     },
@@ -82,143 +83,87 @@ export default async function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
+      <main className="container flex-1 pb-28 pt-12">
+        <article className="mx-auto max-w-[680px]">
+          <div className="mb-10 aspect-[380.6/382.3] w-full">
+            <LogoBlueprint />
+          </div>
+          <p className="mb-7 flex flex-wrap gap-y-1 border-b border-foreground/15 pb-3.5 font-mono text-[12.5px] uppercase tracking-[0.08em] text-foreground/50">
+            <span className="font-semibold text-foreground">File DP · About</span>
+            <span className="before:mx-2.5 before:content-['·']">{toolsLabel} tools</span>
+            <span className="before:mx-2.5 before:content-['·']">No paid placements</span>
+          </p>
+          <h1 className="text-4xl font-semibold tracking-[var(--tracking-cinematic)] text-foreground md:text-[42px] md:leading-[1.1]">
+            A privacy directory that money can&apos;t move.
+          </h1>
+          <p className="mt-4 text-[19px] leading-relaxed text-foreground/70">
+            Most &ldquo;best privacy tool&rdquo; lists are paid placements. Default Privacy is an
+            independent, vetted directory of {toolsLabel} privacy tools — ranked on merit, never on who
+            pays — plus free tools to check your own exposure and guides to take your privacy back.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Button asChild className="brand2-btn-primary brand2-focus group">
+              <Link href="/directory">
+                Browse the directory
+                <ArrowRight className="ml-2 h-4 w-4 brand2-arrow-nudge" aria-hidden />
+              </Link>
+            </Button>
+            <Button variant="outline" asChild className="border-foreground/14 brand2-focus">
+              <Link href="/tools">Free tools</Link>
+            </Button>
+          </div>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0" aria-hidden>
-          <div className="absolute -left-[20%] top-[-10%] h-[min(80vw,600px)] w-[min(80vw,600px)] rounded-full bg-primary/15 opacity-60 blur-[100px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-        </div>
-        <div className="container relative py-20 md:py-28">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mx-auto mb-8 h-40 w-40">
-              <LogoBlueprint />
-            </div>
-            <span className="mb-5 inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary/90">
-              About Default Privacy
-            </span>
-            <h1 className="brand2-hero-animate text-4xl font-extralight tracking-tight text-foreground/92 sm:text-5xl">
-              A privacy directory that{" "}
-              <span className="font-light text-primary">money can&apos;t move.</span>
-            </h1>
-            <p className="brand2-hero-animate-delay-1 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-foreground/58">
-              Most &ldquo;best privacy tool&rdquo; lists are paid placements. Default Privacy is an
-              independent, vetted directory of {toolsLabel} privacy tools — ranked on merit, never on who
-              pays — plus free tools to check your own exposure and guides to take your privacy back.
+          <section className="mt-16 space-y-4">
+            <h2 className={label}>What you get</h2>
+            <p className="text-[20px] font-semibold tracking-tight text-foreground">
+              The knowledge and tools to defend your own privacy.
             </p>
-            <div className="brand2-hero-animate-delay-2 mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <Button size="lg" asChild className="brand2-btn-primary brand2-focus group">
-                <Link href="/directory">
-                  Browse the directory
-                  <ArrowRight className="ml-2 h-4 w-4 brand2-arrow-nudge" aria-hidden />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="border-foreground/14 brand2-focus">
-                <Link href="/tools">Free tools</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What you get */}
-      <section className="container py-16 md:py-24">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">What you get</p>
-          <h2 className="max-w-3xl text-balance text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
-            The knowledge and tools to defend your own privacy.
-          </h2>
-          <div className="brand2-stagger mt-12 grid gap-6 md:grid-cols-3">
-            {pillars.map((c) => {
-              const Icon = c.icon
-              return (
-                <div key={c.n} className="group brand2-surface-interactive flex h-full flex-col p-8">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
-                      <Icon className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
-                    </div>
-                    <span className="shrink-0 font-mono text-[11px] tabular-nums text-foreground/30">{c.n}</span>
-                  </div>
-                  <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">{c.h}</h3>
-                  <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">{c.p}</p>
-                  <p className="mt-4 text-[13px] text-foreground/45">{c.note}</p>
+            <div className="space-y-3">
+              {pillars.map((c) => (
+                <div key={c.n} className={card}>
+                  <p className="mb-1.5 font-mono text-[11.5px] uppercase tracking-[0.08em] text-foreground/50">
+                    <span className="font-semibold text-foreground">{c.n}</span>
+                    <span className="before:mx-2 before:content-['·']">{c.h}</span>
+                  </p>
+                  <p className={body}>{c.p}</p>
+                  <p className="mt-2 text-[13.5px] text-foreground/50">{c.note}</p>
                 </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Principles */}
-      <section className="relative border-t border-foreground/10 bg-foreground/[0.02]">
-        <div className="container py-16 md:py-24">
-          <div className="mx-auto max-w-3xl">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">Principles</p>
-            <h2 className="mb-8 text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
-              How we operate
-            </h2>
-            <div className="space-y-5">
-              {principles.map((pr) => {
-                const Icon = pr.icon
-                return (
-                  <div
-                    key={pr.h}
-                    className="group flex items-start gap-4 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-5 transition-colors hover:bg-foreground/[0.04]"
-                  >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
-                      <Icon className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
-                    </div>
-                    <div>
-                      <p className="text-base font-medium tracking-tight text-foreground/88">{pr.h}</p>
-                      <p className="mt-1 text-sm leading-relaxed text-foreground/56">{pr.p}</p>
-                    </div>
-                  </div>
-                )
-              })}
+              ))}
             </div>
-            <p id="contact" className="mt-8 scroll-mt-24 text-sm leading-relaxed text-foreground/56">
+          </section>
+
+          <section className="mt-14 space-y-4">
+            <h2 className={label}>How we operate</h2>
+            <div className="space-y-3">
+              {principles.map((pr) => (
+                <div key={pr.h} className={card}>
+                  <p className="font-medium text-foreground">{pr.h}</p>
+                  <p className={`mt-1 ${body}`}>{pr.p}</p>
+                </div>
+              ))}
+            </div>
+            <p id="contact" className={`scroll-mt-24 ${body}`}>
               Questions, corrections or a tool to suggest? Email{" "}
               <a
                 href="mailto:privacy@defaultprivacy.com"
-                className="brand2-focus rounded-sm text-foreground/70 underline underline-offset-2 hover:text-foreground"
+                className="brand2-focus rounded-sm text-foreground underline underline-offset-2 hover:text-foreground"
               >
                 privacy@defaultprivacy.com
               </a>
               .
             </p>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* CTA */}
-      <section className="relative container py-16 md:py-24">
-        <div className="relative overflow-hidden rounded-2xl border border-foreground/10 bg-gradient-to-br from-card to-background p-10 text-center md:p-14">
-          <div className="pointer-events-none absolute inset-0" aria-hidden>
-            <div className="absolute left-[50%] top-[30%] h-[300px] w-[500px] -translate-x-1/2 rounded-full bg-primary/12 blur-[100px]" />
-          </div>
-          <div className="relative z-10">
-            <h2 className="mb-4 text-3xl font-extralight tracking-tight text-foreground/90 md:text-4xl">
-              Find the tools that keep you private.
-            </h2>
-            <p className="mx-auto mb-8 max-w-xl leading-relaxed text-foreground/56">
-              {toolsLabel} vetted privacy tools, no paid placements — start browsing, or run a free check on
-              your own exposure.
+          <div className="mt-14 border-t border-foreground/10 pt-5 text-[14px] text-foreground/50">
+            <p className="font-medium text-foreground/80">Find the tools that keep you private.</p>
+            <p className="mt-1">
+              {toolsLabel} vetted privacy tools, no paid placements —{" "}
+              <Link href="/directory" className={link}>start browsing</Link>, or{" "}
+              <Link href="/tools" className={link}>run a free check</Link> on your own exposure.
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button size="lg" asChild className="brand2-btn-primary brand2-focus group">
-                <Link href="/directory">
-                  Browse the directory
-                  <ArrowRight className="ml-2 h-4 w-4 brand2-arrow-nudge" aria-hidden />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="border-foreground/14 brand2-focus">
-                <Link href="/tools">Free tools</Link>
-              </Button>
-            </div>
           </div>
-        </div>
-      </section>
-
+        </article>
+      </main>
       <Footer />
     </div>
   )

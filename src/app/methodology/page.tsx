@@ -1,18 +1,8 @@
 import { BreadcrumbSchema } from "@/components/common/breadcrumb-schema"
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
-import { Button } from "@/components/ui/button"
+import { PageNav } from "@/components/common/page-nav"
 import { getPublicDirectoryStats } from "@/lib/directory-stats"
-import {
-  ArrowRight,
-  Building2,
-  Eye,
-  MessageSquarePlus,
-  Scale,
-  Search,
-  ShieldCheck,
-  Wrench,
-} from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
 
@@ -31,6 +21,20 @@ export const metadata: Metadata = {
       "Our standards for inclusion, our trust attributes, how the free tools work, and how we stay independent.",
   },
 }
+
+const SECTIONS = [
+  { id: "listing", label: "Earning a listing" },
+  { id: "free-tools", label: "How the free tools work" },
+  { id: "corrections", label: "Corrections" },
+  { id: "who", label: "Who's behind this" },
+]
+
+// Same composition as /ai and the legal pages
+const label =
+  "flex items-center gap-4 font-mono text-[12.5px] font-medium uppercase tracking-[0.18em] text-foreground/50 after:h-px after:flex-1 after:bg-foreground/10"
+const body = "text-[15px] leading-relaxed text-foreground/70"
+const card = "rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4"
+const link = "text-foreground/80 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
 
 export default async function MethodologyPage() {
   const { toolsLabel } = await getPublicDirectoryStats()
@@ -51,22 +55,18 @@ export default async function MethodologyPage() {
   // Honest, verifiable statements only — each maps to something the site actually does.
   const standards = [
     {
-      icon: Scale,
       h: "Listed on merit, never paid placement",
       p: "No one can buy a listing, a ranking, or a badge, and there are no affiliate links: no vendor pays us when you choose their tool.",
     },
     {
-      icon: Search,
       h: "Checked against the tool's own record",
       p: "Each entry is built from the tool's public materials — its site, source repository, and documentation. Attributes are set from that evidence, not from marketing claims.",
     },
     {
-      icon: ShieldCheck,
       h: "Attributes you can filter on",
       p: "We surface the facts that change a privacy decision: open-source, end-to-end encryption, logging, platform, and jurisdiction. We only show what we have checked against a source: each fact links to its source and the date we checked it, and a fact we have not checked is left blank, not marked no.",
     },
     {
-      icon: Eye,
       h: "Honest about limits",
       p: "No tool makes you invisible. We describe what a tool does and where it stops, and we flag tools that are deprecated or no longer maintained rather than quietly leaving them up.",
     },
@@ -113,129 +113,84 @@ export default async function MethodologyPage() {
         ]}
       />
 
-      <main className="flex-1">
-        {/* Hero */}
-        <section className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0" aria-hidden>
-            <div className="absolute -left-[15%] top-[-20%] h-[min(60vw,440px)] w-[min(60vw,440px)] rounded-full bg-primary/12 opacity-55 blur-[90px]" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-          </div>
-          <div className="container relative py-20 md:py-28">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="mb-5 inline-flex rounded-full border border-primary/25 bg-primary/5 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.3em] text-primary/90">
-                Methodology
-              </span>
-              <h1 className="text-4xl font-extralight tracking-tight text-foreground/92 sm:text-5xl">
-                How we vet, rank, and{" "}
-                <span className="font-light text-primary">stay honest.</span>
-              </h1>
-              <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-foreground/58">
-                Default Privacy lists {toolsLabel} privacy tools. This is how a tool earns a place,
-                what our labels mean, how the free checks work — and why money can&apos;t move any of it.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Standards */}
-        <section className="container py-16 md:py-24">
-          <div className="mx-auto max-w-6xl">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">
-              How a tool earns a listing
+      <main className="container flex-1 pb-28 pt-12">
+        <div className="lg:grid lg:grid-cols-[220px_minmax(0,680px)] lg:justify-center lg:gap-16">
+          <aside className="hidden lg:block lg:sticky lg:top-24 lg:self-start">
+            <PageNav items={SECTIONS} back={{ href: "/", label: "Home" }} />
+          </aside>
+          <article className="min-w-0">
+            <p className="mb-7 flex flex-wrap gap-y-1 border-b border-foreground/15 pb-3.5 font-mono text-[12.5px] uppercase tracking-[0.08em] text-foreground/50">
+              <span className="font-semibold text-foreground">File DP · Methodology</span>
+              <span className="before:mx-2.5 before:content-['·']">Last reviewed {LAST_REVIEWED}</span>
             </p>
-            <h2 className="max-w-3xl text-balance text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
-              Evidence in, not marketing.
-            </h2>
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
-              {standards.map((s) => {
-                const Icon = s.icon
-                return (
-                  <div key={s.h} className="group brand2-surface-interactive flex h-full flex-col p-8">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
-                      <Icon className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
-                    </div>
-                    <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">{s.h}</h3>
-                    <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">{s.p}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+            <h1 className="text-4xl font-semibold tracking-[var(--tracking-cinematic)] text-foreground md:text-[42px] md:leading-[1.1]">
+              How we vet, rank, and stay honest.
+            </h1>
+            <p className="mt-4 text-[19px] leading-relaxed text-foreground/70">
+              Default Privacy lists {toolsLabel} privacy tools. This is how a tool earns a place,
+              what our labels mean, how the free checks work — and why money can&apos;t move any of it.
+            </p>
 
-        {/* Free tools */}
-        <section className="relative border-t border-foreground/10 bg-foreground/[0.02]">
-          <div className="container py-16 md:py-24">
-            <div className="mx-auto max-w-4xl">
-              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.4em] text-primary/85">
-                How the free tools work
-              </p>
-              <h2 className="mb-4 text-3xl font-extralight tracking-tight text-foreground/88 md:text-4xl">
+            <section id="listing" className="mt-14 scroll-mt-24 space-y-4">
+              <h2 className={label}>How a tool earns a listing</h2>
+              <p className="text-[20px] font-semibold tracking-tight text-foreground">Evidence in, not marketing.</p>
+              <div className="space-y-3">
+                {standards.map((st) => (
+                  <div key={st.h} className={card}>
+                    <p className="font-medium text-foreground">{st.h}</p>
+                    <p className={`mt-1 ${body}`}>{st.p}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section id="free-tools" className="mt-14 scroll-mt-24 space-y-4">
+              <h2 className={label}>How the free tools work</h2>
+              <p className="text-[20px] font-semibold tracking-tight text-foreground">
                 What each check reads — and what it never touches.
-              </h2>
-              <p className="mb-10 max-w-2xl text-sm leading-relaxed text-foreground/56">
+              </p>
+              <p className={body}>
                 Every free tool runs on public signals or in your own browser. No account, and nothing
                 you enter is stored.
               </p>
-              <dl className="grid gap-3">
+              <dl className="space-y-3">
                 {freeTools.map((t) => (
-                  <div
-                    key={t.name}
-                    className="rounded-xl border border-foreground/10 bg-background p-5"
-                  >
-                    <dt className="flex items-center gap-2 text-base font-medium tracking-tight text-foreground/88">
-                      <Wrench className="h-4 w-4 text-primary/80" aria-hidden />
-                      {t.name}
-                    </dt>
-                    <dd className="mt-2 text-sm leading-relaxed text-foreground/56">{t.how}</dd>
+                  <div key={t.name} className={card}>
+                    <dt className="font-medium text-foreground">{t.name}</dt>
+                    <dd className={`mt-1 ${body}`}>{t.how}</dd>
                   </div>
                 ))}
               </dl>
-            </div>
-          </div>
-        </section>
+            </section>
 
-        {/* Corrections + authorship */}
-        <section className="container py-16 md:py-24">
-          <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-            <div className="brand2-surface-interactive flex h-full flex-col p-8">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
-                <MessageSquarePlus className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
-              </div>
-              <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">Found something wrong?</h3>
-              <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">
-                Every tool page has a <span className="text-foreground/75">Suggest Edit</span> and{" "}
-                <span className="text-foreground/75">Report Issue</span> link. Attributes change when the
+            <section id="corrections" className="mt-14 scroll-mt-24 space-y-4">
+              <h2 className={label}>Found something wrong?</h2>
+              <p className={body}>
+                Every tool page has a <span className="text-foreground">Suggest Edit</span> and{" "}
+                <span className="text-foreground">Report Issue</span> link. Attributes change when the
                 evidence does — a maintainer drops open-source, a project is abandoned.
                 Tell us and we&apos;ll correct it. Our starting-point recommendations are explained on{" "}
-                <Link href="/how-we-pick" className="text-foreground/75 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                <Link href="/how-we-pick" className={link}>
                   How we pick
                 </Link>
                 .
               </p>
-              <Button variant="outline" size="sm" asChild className="mt-5 self-start border-foreground/14 brand2-focus">
-                <Link href="/directory">
-                  Browse the directory
-                  <ArrowRight className="ml-2 h-4 w-4 brand2-arrow-nudge" aria-hidden />
-                </Link>
-              </Button>
-            </div>
-            <div className="brand2-surface-interactive flex h-full flex-col p-8">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-foreground/10 bg-foreground/[0.04]">
-                <Building2 className="h-5 w-5 text-primary brand2-icon-breathe" aria-hidden />
-              </div>
-              <h3 className="mt-5 text-lg font-medium tracking-tight text-foreground/88">Who&apos;s behind this</h3>
-              <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-foreground/56">
+            </section>
+
+            <section id="who" className="mt-14 scroll-mt-24 space-y-4">
+              <h2 className={label}>Who&apos;s behind this</h2>
+              <p className={body}>
                 Default Privacy is an independent privacy-tools directory — not owned by, or beholden to,
                 any tool it lists. We make no money from placements. Default Privacy is not a law firm and
                 does not provide legal advice.
               </p>
-              <p className="mt-4 font-mono text-[11px] text-foreground/40">
-                Last reviewed {LAST_REVIEWED}
-              </p>
-            </div>
-          </div>
-        </section>
+            </section>
+
+            <p className="mt-14 border-t border-foreground/10 pt-5 text-[14px] text-foreground/50">
+              <Link href="/directory" className={link}>Browse the directory</Link>
+            </p>
+          </article>
+        </div>
       </main>
 
       <Footer />
