@@ -117,7 +117,7 @@ export function Footer() {
             <span className="text-sm text-foreground/62">© 2026 Default Privacy</span>
           </div>
           <p className="max-w-md text-center text-xs leading-relaxed text-foreground/45 md:text-right">
-            An independent directory of privacy tools. No paid placements.
+            An independent directory of privacy tools. No paid placements. No cookies, no tracking pixels.
           </p>
         </div>
       </div>
