@@ -10,10 +10,11 @@ const nextConfig: NextConfig = {
   // serverless function instead.
   serverExternalPackages: ["playwright", "playwright-core"],
   // playwright-core 1.64 loads browsers.json through a computed require() path, which
-  // the file tracer can't see, so the scanner died on import in production.
+  // the file tracer can't see, so the scanner died on import in production. Every route,
+  // not just the scanner's: Vercel packs all pages into one function, and a per-route
+  // include didn't reach it.
   outputFileTracingIncludes: {
-    "/scanner/**": ["./node_modules/playwright-core/browsers.json"],
-    "/privacy-score/**": ["./node_modules/playwright-core/browsers.json"],
+    "/**": ["./node_modules/playwright-core/browsers.json"],
   },
   // Conservative, non-breaking security headers for all routes. The CSP is
   // intentionally limited to frame-ancestors (clickjacking control) — an
