@@ -7,7 +7,8 @@ import Link from "next/link"
 import { useState, useMemo } from "react"
 
 type Props = {
-  terms: GlossaryTerm[]
+  // only what search reads and shows: the full article text would ship ~1 MB to the browser
+  terms: Pick<GlossaryTerm, "term" | "slug" | "definition" | "category" | "aliases" | "keywords">[]
 }
 
 export function GlossarySearch({ terms }: Props) {

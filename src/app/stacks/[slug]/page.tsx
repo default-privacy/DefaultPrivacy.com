@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: stack.description,
     alternates: {
       canonical: `https://defaultprivacy.com/stacks/${slug}`,
+      types: { "text/markdown": `https://defaultprivacy.com/stacks/${slug}.md` },
     },
     openGraph: {
       title: stack.title,

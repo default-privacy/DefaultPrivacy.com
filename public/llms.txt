@@ -66,7 +66,7 @@ DNS leak test API (used by the DNS leak tool):
 - [Glossary](https://defaultprivacy.com/glossary): Defined privacy and security terms with cross-references. Every term page is structured as "What is X?".
 - [Glossary term](https://defaultprivacy.com/glossary/{slug}): A single defined term.
 
-**Markdown mirrors:** append `.md` to any guide, glossary, or tool URL for a clean, chrome-free Markdown view — e.g. `/guides/{slug}.md`, `/glossary/{slug}.md`, `/directory/{slug}.md`, or the indexes `/guides.md`, `/glossary.md`, `/directory.md`.
+**Markdown mirrors:** append `.md` to any guide, stack, glossary, or tool URL for a clean, chrome-free Markdown view — e.g. `/guides/{slug}.md`, `/stacks/{slug}.md`, `/glossary/{slug}.md`, `/directory/{slug}.md`, or the indexes `/guides.md`, `/stacks.md`, `/glossary.md`, `/directory.md`.
 
 ## API reference
 

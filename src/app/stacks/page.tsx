@@ -1,13 +1,8 @@
 import { Footer } from "@/components/common/footer"
 import { Header } from "@/components/common/header"
-import { Button } from "@/components/ui/button"
+import { ReadingCard } from "@/components/reading/reading-card"
 import { getAllStacks } from "@/lib/stacks"
-import {
-  Layers,
-  Clock,
-  Signal,
-  ArrowRight,
-} from "lucide-react"
+import { fileNumber } from "@/lib/reading-file-number"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -22,14 +17,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://defaultprivacy.com/stacks",
+    types: { "text/markdown": "https://defaultprivacy.com/stacks.md" },
   },
 }
 
-const difficultyConfig = {
-  beginner: { label: "Beginner", color: "text-success", bg: "bg-success/10 border-success/20" },
-  intermediate: { label: "Intermediate", color: "text-caution", bg: "bg-caution/10 border-caution/20" },
-  advanced: { label: "Advanced", color: "text-destructive", bg: "bg-destructive/10 border-destructive/20" },
-} as const
+const DIFFICULTY = { beginner: "Beginner", intermediate: "Intermediate", advanced: "Advanced" } as const
+
+const link = "text-foreground/80 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm"
 
 export default async function StacksPage() {
   const stacks = await getAllStacks()
@@ -54,107 +48,50 @@ export default async function StacksPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col">
       <Header />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(stacksJsonLd) }}
       />
+      <main className="container flex-1 pb-28 pt-12">
+        <div className="mx-auto max-w-6xl">
+        <header className="max-w-[680px]">
+          <p className="mb-7 flex flex-wrap gap-y-1 border-b border-foreground/15 pb-3.5 font-mono text-[12.5px] uppercase tracking-[0.08em] text-foreground/50">
+            <span className="font-semibold text-foreground">File DP · Stacks</span>
+            <span className="before:mx-2.5 before:content-['·']">{stacks.length} files</span>
+          </p>
+          <h1 className="text-4xl font-semibold tracking-[var(--tracking-cinematic)] text-foreground md:text-[42px] md:leading-[1.1]">
+            Privacy Stacks
+          </h1>
+          <p className="mt-4 text-[19px] leading-relaxed text-foreground/70">
+            Curated tool bundles for a specific threat model — the exact set of privacy tools for your situation, in setup order, with the tradeoffs spelled out. Start with a stack instead of a blank directory.
+          </p>
+        </header>
 
-      <main className="flex-1">
-        {/* Hero */}
-        <section className="container py-12 md:py-16">
-          <div className="mx-auto max-w-3xl rounded-2xl border border-foreground/10 bg-foreground/[0.02] px-6 py-10 md:px-10">
-            <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-foreground/90 mb-4">
-              Privacy Stacks
-            </h1>
-            <p className="text-lg text-foreground/58">
-              Curated tool bundles for a specific threat model — the exact set of privacy tools for
-              your situation, in setup order, with the tradeoffs spelled out. Start with a stack instead
-              of a blank directory.
-            </p>
+        {stacks.length > 0 ? (
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {stacks.map((stack) => (
+              <ReadingCard
+                key={stack.slug}
+                href={`/stacks/${stack.slug}`}
+                file={fileNumber("S", stacks, stack.slug)}
+                category={stack.category}
+                title={stack.title}
+                description={stack.description}
+                fields={[stack.timeToComplete, DIFFICULTY[stack.difficulty]]}
+              />
+            ))}
           </div>
-        </section>
+        ) : (
+          <p className="mt-12 text-foreground/50">Stacks coming soon</p>
+        )}
 
-        {/* Stack Cards */}
-        <section className="container pb-16">
-          {stacks.length > 0 ? (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {stacks.map((stack) => {
-                const diff = difficultyConfig[stack.difficulty]
-                return (
-                  <Link
-                    key={stack.slug}
-                    href={`/stacks/${stack.slug}`}
-                    className="brand2-focus group block rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 hover:border-foreground/20 hover:bg-foreground/[0.04] transition-all"
-                  >
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2.5 py-1">
-                        {stack.category}
-                      </span>
-                      <span className={`text-[10px] font-mono border rounded-full px-2.5 py-1 ${diff.bg} ${diff.color}`}>
-                        {diff.label}
-                      </span>
-                    </div>
-
-                    <h2 className="text-base font-medium text-foreground/85 group-hover:text-foreground transition-colors mb-2">
-                      {stack.title}
-                    </h2>
-
-                    <p className="text-sm text-foreground/55 mb-4 flex-1">
-                      {stack.description}
-                    </p>
-
-                    <div className="flex items-center justify-between text-xs text-foreground/45 pt-3 border-t border-foreground/10">
-                      <div className="flex items-center gap-3">
-                        <span className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" aria-hidden="true" />
-                          {stack.timeToComplete}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Signal className="h-3 w-3" aria-hidden="true" />
-                          {diff.label}
-                        </span>
-                      </div>
-                      <ArrowRight className="h-3.5 w-3.5 brand2-arrow-nudge" aria-hidden="true" />
-                    </div>
-                  </Link>
-                )
-              })}
-            </div>
-          ) : (
-            <div className="geist-empty text-center py-16">
-              <div className="geist-empty-icon">
-                <Layers className="h-8 w-8" aria-hidden="true" />
-              </div>
-              <p className="geist-empty-title">Stacks coming soon</p>
-            </div>
-          )}
-        </section>
-
-        {/* CTA */}
-        <section className="container pb-16">
-          <div className="mx-auto max-w-3xl rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 text-center">
-            <Layers className="h-7 w-7 text-foreground/65 mx-auto mb-3" aria-hidden="true" />
-            <p className="font-medium text-foreground/85 mb-2">Want to go tool by tool?</p>
-            <p className="text-sm text-foreground/55 mb-4 max-w-lg mx-auto">
-              Browse the full vetted directory to compare every option, or read the guides for step-by-step walkthroughs.
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Button asChild className="brand2-btn-primary brand2-focus group">
-                <Link href="/directory">
-                  Browse the directory
-                  <ArrowRight className="ml-2 h-4 w-4 brand2-arrow-nudge" aria-hidden="true" />
-                </Link>
-              </Button>
-              <Button variant="outline" asChild className="brand2-focus">
-                <Link href="/guides">Read the guides</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        <p className="mt-14 max-w-[680px] border-t border-foreground/10 pt-5 text-[14px] text-foreground/50">
+          Want to go tool by tool? <Link href="/directory" className={link}>Browse the full directory</Link> or <Link href="/guides" className={link}>read the guides</Link> for step-by-step walkthroughs.
+        </p>
+        </div>
       </main>
-
       <Footer />
     </div>
   )

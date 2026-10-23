@@ -49,6 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: metaDesc,
     alternates: {
       canonical: `https://defaultprivacy.com/glossary/${term.slug}`,
+      types: { "text/markdown": `https://defaultprivacy.com/glossary/${term.slug}.md` },
     },
     openGraph: {
       title: `${whatIsTitle} - Privacy Glossary`,

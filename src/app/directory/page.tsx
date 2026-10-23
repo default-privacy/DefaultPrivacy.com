@@ -46,7 +46,7 @@ export default async function ToolsPage({
           <p className="mt-2 text-[15px] text-foreground/50">
             Browse our curated collection of privacy-focused tools and services.
           </p>
-          <PartnerRevenueDisclosure variant="directory-note" className="mt-3 max-w-2xl" />
+          <PartnerRevenueDisclosure className="mt-3 max-w-2xl" />
         </div>
 
         {/* Content Area */}

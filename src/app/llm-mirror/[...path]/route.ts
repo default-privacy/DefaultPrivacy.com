@@ -2,14 +2,15 @@
  * Clean-markdown mirrors for AI agents.
  *
  * next.config rewrites `/<path>.md` → `/llm-mirror/<path>`, so appending `.md` to any
- * guide, glossary term, or tool URL (or an index) returns a chrome-free Markdown view:
- *   /guides/anonymous-llc-wyoming.md   /glossary/metadata.md   /directory/proton-mail.md
- *   /guides.md   /glossary.md   /directory.md
+ * guide, stack, glossary term, or tool URL (or an index) returns a chrome-free Markdown view:
+ *   /guides/anonymous-llc-wyoming.md   /stacks/degoogle-android-phone.md   /glossary/metadata.md   /directory/proton-mail.md
+ *   /guides.md   /stacks.md   /glossary.md   /directory.md
  */
 
 import { env } from "@/lib/env"
 import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllGlossaryTerms, getGlossaryTermBySlug } from "@/lib/glossary"
+import { getAllStacks, getStackBySlug } from "@/lib/stacks"
 import { getPublicToolPpWithEvidence, searchPublicToolsPp } from "@/lib/privacy-protocol/query"
 
 export const dynamic = "force-dynamic"
@@ -48,6 +49,19 @@ async function guideMd(slug: string): Promise<Response> {
     ["Source", abs(`guides/${g.slug}`)],
   ])}`
   return markdown(`${head}\n\n---\n\n${g.content}`)
+}
+
+async function stackMd(slug: string): Promise<Response> {
+  const st = await getStackBySlug(slug)
+  if (!st) return notFound()
+  const head = `# ${st.title}\n\n> ${st.description}\n\n${meta([
+    ["Category", st.category],
+    ["Difficulty", st.difficulty],
+    ["Time to complete", st.timeToComplete],
+    ["Tags", st.tags?.join(", ")],
+    ["Source", abs(`stacks/${st.slug}`)],
+  ])}`
+  return markdown(`${head}\n\n---\n\n${st.content}`)
 }
 
 async function glossaryMd(slug: string): Promise<Response> {
@@ -101,6 +115,12 @@ async function guidesIndexMd(): Promise<Response> {
   return markdown(`# Guides\n\n${guides.length} privacy guides.\n\n${list}`)
 }
 
+async function stacksIndexMd(): Promise<Response> {
+  const stacks = await getAllStacks()
+  const list = stacks.map((st) => `- [${st.title}](${abs(`stacks/${st.slug}.md`)}) — ${st.description}`).join("\n")
+  return markdown(`# Stacks\n\n${stacks.length} privacy stacks: the tools for one situation, in setup order.\n\n${list}`)
+}
+
 async function glossaryIndexMd(): Promise<Response> {
   const terms = await getAllGlossaryTerms()
   const list = terms.map((t) => `- [${t.term}](${abs(`glossary/${t.slug}.md`)}) — ${t.definition}`).join("\n")
@@ -128,12 +148,14 @@ export async function GET(
 
   if (!slug) {
     if (type === "guides") return guidesIndexMd()
+    if (type === "stacks") return stacksIndexMd()
     if (type === "glossary") return glossaryIndexMd()
     if (type === "directory") return directoryIndexMd()
     return notFound()
   }
 
   if (type === "guides") return guideMd(slug)
+  if (type === "stacks") return stackMd(slug)
   if (type === "glossary") return glossaryMd(slug)
   if (type === "directory") return toolMd(slug)
   return notFound()

@@ -59,7 +59,7 @@ The DNS leak test also has a programmatic API: `POST /api/dns-leak/start` return
 - [/stacks](https://defaultprivacy.com/stacks) — curated bundles of tools for a specific goal or threat model; a single stack is at `/stacks/{slug}`.
 - [/glossary](https://defaultprivacy.com/glossary) — defined privacy/security terms, each structured as "What is X?"; a single term is at `/glossary/{slug}`.
 
-**Markdown mirrors:** append `.md` to any guide, glossary, or tool URL (`/guides/{slug}.md`, `/glossary/{slug}.md`, `/directory/{slug}.md`) — or an index (`/guides.md`, `/glossary.md`, `/directory.md`) — for a clean Markdown view with no page chrome.
+**Markdown mirrors:** append `.md` to any guide, stack, glossary, or tool URL (`/guides/{slug}.md`, `/stacks/{slug}.md`, `/glossary/{slug}.md`, `/directory/{slug}.md`) — or an index (`/guides.md`, `/stacks.md`, `/glossary.md`, `/directory.md`) — for a clean Markdown view with no page chrome.
 
 ---
 

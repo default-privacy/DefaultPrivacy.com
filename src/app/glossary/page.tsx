@@ -3,7 +3,7 @@ import { Header } from "@/components/common/header"
 import { getAllGlossaryTerms, getGlossaryCategories } from "@/lib/glossary"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { BookOpen } from "lucide-react"
+import { GlossaryCategoryFilter } from "./glossary-category-filter"
 import { GlossarySearch } from "./glossary-search"
 
 export const metadata: Metadata = {
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://defaultprivacy.com/glossary",
+    types: { "text/markdown": "https://defaultprivacy.com/glossary.md" },
   },
 }
 
@@ -73,20 +74,26 @@ export default async function GlossaryPage() {
       <main className="flex-1">
         {/* Hero */}
         <section className="border-b border-foreground/10">
-          <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-foreground/[0.06] border border-foreground/10">
-                <BookOpen className="h-5 w-5 text-foreground/65" aria-hidden="true" />
-              </div>
-              <h1 className="text-3xl font-medium tracking-tight text-foreground/90">
+          <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 pb-10 pt-12">
+            <div className="max-w-[680px]">
+              <p className="mb-7 flex flex-wrap gap-y-1 border-b border-foreground/15 pb-3.5 font-mono text-[12.5px] uppercase tracking-[0.08em] text-foreground/50">
+                <span className="font-semibold text-foreground">File DP · Glossary</span>
+                <span className="before:mx-2.5 before:content-['·']">{terms.length} terms</span>
+                <span className="before:mx-2.5 before:content-['·']">{categories.length} categories</span>
+              </p>
+              <h1 className="text-4xl font-semibold tracking-[var(--tracking-cinematic)] text-foreground md:text-[42px] md:leading-[1.1]">
                 Privacy Glossary
               </h1>
+              <p className="mb-8 mt-4 text-[19px] leading-relaxed text-foreground/70">
+                {terms.length} terms covering encryption, networking, security,
+                and digital privacy. Understand the language of online privacy.
+              </p>
             </div>
-            <p className="text-lg text-foreground/58 max-w-2xl mb-6">
-              {terms.length} terms covering encryption, networking, security,
-              and digital privacy. Understand the language of online privacy.
-            </p>
-            <GlossarySearch terms={terms} />
+            <GlossarySearch
+              terms={terms.map(({ term, slug, definition, category, aliases, keywords }) => ({
+                term, slug, definition, category, aliases, keywords,
+              }))}
+            />
           </div>
         </section>
 
@@ -98,7 +105,7 @@ export default async function GlossaryPage() {
                 <a
                   key={letter}
                   href={`#letter-${letter}`}
-                  className="brand2-focus w-8 h-8 flex items-center justify-center rounded text-sm font-medium text-foreground/65 hover:text-foreground hover:bg-foreground/[0.06] transition-colors"
+                  className="brand2-focus w-8 h-8 flex items-center justify-center rounded font-mono text-sm font-medium text-foreground/65 hover:text-foreground hover:bg-foreground/[0.06] transition-colors"
                 >
                   {letter}
                 </a>
@@ -110,57 +117,45 @@ export default async function GlossaryPage() {
         {/* Categories overview */}
         <section className="border-b border-foreground/10">
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-            <h2 className="text-sm font-medium text-foreground/65 mb-4">Browse by Category</h2>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <Link
-                  key={category}
-                  href={`#category-${category.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="brand2-focus inline-flex items-center gap-1.5 rounded-full border border-foreground/10 px-3 py-1 text-xs text-foreground/65 hover:text-foreground hover:border-foreground/20 transition-colors"
-                >
-                  {category}
-                  <span className="text-foreground/40">
-                    {termsByCategory[category]?.length || 0}
-                  </span>
-                </Link>
-              ))}
-            </div>
+            <h2 className="mb-4 font-mono text-[12.5px] font-medium uppercase tracking-[0.18em] text-foreground/50">Browse by Category</h2>
+            <GlossaryCategoryFilter
+              categories={categories.map((name) => ({ name, count: termsByCategory[name]?.length ?? 0 }))}
+            />
           </div>
         </section>
 
         {/* Terms by letter */}
         <section>
           <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-8">
-            <div className="space-y-12">
+            <div className="space-y-11">
               {letters.map((letter) => (
-                <div key={letter} id={`letter-${letter}`} className="scroll-mt-20">
-                  <h2 className="text-2xl font-medium tracking-tight text-foreground/90 mb-4 pb-2 border-b border-foreground/10">
+                <div key={letter} id={`letter-${letter}`} data-glossary-letter className="scroll-mt-20">
+                  <h2 className="mb-4 flex items-center gap-4 font-mono text-[15px] font-semibold uppercase tracking-[0.18em] text-foreground after:h-px after:flex-1 after:bg-foreground/10">
                     {letter}
                   </h2>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <ul className="columns-[220px] gap-x-10">
                     {termsByLetter[letter].map((term) => (
-                      <Link
-                        key={term.slug}
-                        href={`/glossary/${term.slug}`}
-                        className="brand2-focus group block rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4 hover:border-foreground/20 hover:bg-foreground/[0.04] transition-all"
-                      >
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <h3 className="font-medium text-sm text-foreground/85 group-hover:text-foreground transition-colors">
-                            {term.term}
-                          </h3>
-                          <span className="shrink-0 text-[10px] font-mono text-foreground/45 border border-foreground/10 rounded-full px-2 py-0.5">
-                            {term.category}
-                          </span>
-                        </div>
-                        <p className="text-xs text-foreground/55 line-clamp-2">
-                          {term.definition}
-                        </p>
-                      </Link>
+                      <li key={term.slug} data-glossary-cat={term.category} className="break-inside-avoid py-[3px] text-[15px] leading-snug">
+                        <Link
+                          href={`/glossary/${term.slug}`}
+                          className="brand2-focus rounded-sm text-foreground/75 underline-offset-[3px] hover:text-foreground hover:underline"
+                        >
+                          {term.term}
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
+            <p className="mt-14 max-w-[680px] border-t border-foreground/10 pt-5 text-[14px] text-foreground/50">
+              Every term has its own page with the full definition. AI agents can add .md to any term
+              address for a plain-text copy, or use the glossary tools on our{" "}
+              <Link href="/ai" className="text-foreground/80 underline underline-offset-2 hover:text-foreground brand2-focus rounded-sm">
+                MCP server
+              </Link>
+              .
+            </p>
           </div>
         </section>
       </main>

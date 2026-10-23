@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: guide.description,
     alternates: {
       canonical: `https://defaultprivacy.com/guides/${slug}`,
+      types: { "text/markdown": `https://defaultprivacy.com/guides/${slug}.md` },
     },
     openGraph: {
       title: guide.title,

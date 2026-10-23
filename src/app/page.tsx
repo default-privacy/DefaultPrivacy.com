@@ -148,7 +148,7 @@ export default async function Home({
         <AgentsSection className="mb-12" />
         <DirectoryBrowser searchParams={params} basePath="/" showSearch={false} />
         <ConnectAiCard size="slim" className="mt-10" />
-        <PartnerRevenueDisclosure variant="directory-note" className="mt-10" />
+        <PartnerRevenueDisclosure className="mt-10" />
       </main>
 
       <Footer />
