@@ -4,6 +4,8 @@ import Link from "next/link"
 const footerLinks = {
   services: [
     { href: "/directory", label: "Browse Directory" },
+    { href: "/stacks", label: "Stacks" },
+    { href: "/ai", label: "Use in your AI" },
   ],
   tools: [
     { href: "/privacy-score", label: "Privacy Score" },
@@ -12,12 +14,13 @@ const footerLinks = {
     { href: "/breach-check", label: "Breach Check" },
     { href: "/email-security", label: "Email Security" },
     { href: "/whois", label: "WHOIS Privacy" },
+    { href: "/dns-leak", label: "DNS Leak Test" },
+    { href: "/exposed", label: "Exposure Check" },
   ],
   learn: [
     { href: "/start", label: "Start here" },
     { href: "/guides", label: "Field Guide" },
     { href: "/glossary", label: "Glossary" },
-    { href: "/ai", label: "Use in your AI" },
   ],
   legal: [
     { href: "/about", label: "About" },
@@ -116,8 +119,12 @@ export function Footer() {
             />
             <span className="text-sm text-foreground/62">© 2026 Default Privacy</span>
           </div>
-          <p className="max-w-md text-center text-xs leading-relaxed text-foreground/45 md:text-right">
-            An independent directory of privacy tools. No paid placements. No cookies, no tracking pixels.
+          <p className="flex flex-wrap justify-center gap-y-1 font-mono text-[11.5px] uppercase tracking-[0.08em] text-foreground/50 md:justify-end">
+            {["No paid placements", "No cookies", "No tracking pixels", "No account"].map((f, i) => (
+              <span key={f} className={i > 0 ? "before:mx-2.5 before:content-['·']" : undefined}>
+                {f}
+              </span>
+            ))}
           </p>
         </div>
       </div>
