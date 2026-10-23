@@ -11,7 +11,9 @@ import { env } from "@/lib/env"
 import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllGlossaryTerms, getGlossaryTermBySlug } from "@/lib/glossary"
 import { getAllStacks, getStackBySlug } from "@/lib/stacks"
-import { getPublicToolPpWithEvidence, searchPublicToolsPp } from "@/lib/privacy-protocol/query"
+import { getPublishedToolIndex } from "@/lib/db/queries"
+import { isPick } from "@/lib/picks"
+import { getPublicToolPpWithEvidence } from "@/lib/privacy-protocol/query"
 
 export const dynamic = "force-dynamic"
 
@@ -128,10 +130,12 @@ async function glossaryIndexMd(): Promise<Response> {
 }
 
 async function directoryIndexMd(): Promise<Response> {
-  const { tools, total } = await searchPublicToolsPp({ sort: "picks", limit: 50 })
-  const list = tools.map((t) => `- [${t.name}](${abs(`directory/${t.slug}.md`)}) —${t.pick ? " DP pick —" : ""} ${t.tagline ?? ""}`).join("\n")
+  const all = await getPublishedToolIndex()
+  const list = all
+    .map((t) => `- [${t.name}](${abs(`directory/${t.slug}.md`)}) —${isPick(t.slug) ? " DP pick —" : ""} ${t.tagline ?? ""}`)
+    .join("\n")
   return markdown(
-    `# Directory\n\n${total} privacy tools. First 50 below, DP picks first then A to Z; browse all at ${abs("directory")}.\n\n${list}`,
+    `# Directory\n\n${all.length} listings, A to Z. Browse by category, DP picks first, at ${abs("directory")}.\n\n${list}`,
   )
 }
 

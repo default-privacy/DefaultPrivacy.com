@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/tools",
   },
+  openGraph: {
+    title: "Free Privacy Tools | Default Privacy",
+    description:
+      "Check your own exposure: password strength, website trackers, DNS leaks, breach history, email security and WHOIS. No signup, no account.",
+  },
 }
 
 type ToolItem = {

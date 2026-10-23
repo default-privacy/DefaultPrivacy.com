@@ -61,16 +61,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
+  // A pick's description is our own reason for picking it; anything else keeps the vendor's tagline
+  const pick = tool.isDeprecated ? null : pickInfo(tool.slug)
+  const description = pick
+    ? `${tool.name} is a Default Privacy pick. ${pick.reason}`
+    : tool.tagline || tool.description?.slice(0, 160)
+
   return {
     title: `${tool.name} | Default Privacy`,
-    description: tool.tagline || tool.description?.slice(0, 160),
+    description,
     alternates: {
       canonical: `https://defaultprivacy.com/directory/${tool.slug}`,
       types: { "text/markdown": `https://defaultprivacy.com/directory/${tool.slug}.md` },
     },
     openGraph: {
       title: tool.name,
-      description: tool.tagline || tool.description?.slice(0, 160),
+      description,
       images: tool.screenshotUrl ? [tool.screenshotUrl] : undefined,
     },
   }
@@ -104,26 +110,22 @@ export default async function ToolDetailPage({ params }: Props) {
   // Curated guide/stack cross-links keyed off the already-loaded category — no extra query.
   const relatedContent = resolveCategoryContent(categoryLabel)
 
+  // podcasts, channels and lists share this page; only real tools are software
+  const isSoftware = tool.contentType === "tool"
   const toolJsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": isSoftware ? "SoftwareApplication" : "CreativeWork",
     name: tool.name,
     url: `https://defaultprivacy.com/directory/${tool.slug}`,
     ...(tool.description && { description: tool.description }),
     ...(tool.tagline && { abstract: tool.tagline }),
-    applicationCategory: displayCategory ?? "Privacy & Security",
+    ...(isSoftware && { applicationCategory: displayCategory ?? "Privacy & Security" }),
     ...(tool.faviconUrl && { image: tool.faviconUrl }),
-    ...(tool.websiteUrl && {
-      offers: {
-        "@type": "Offer",
-        url: tool.websiteUrl,
-        availability: "https://schema.org/OnlineOnly",
-      },
-    }),
-    ...(tool.isOpenSource === true && tool.githubUrl && {
+    ...(tool.websiteUrl && { sameAs: tool.websiteUrl }),
+    ...(isSoftware && tool.isOpenSource === true && tool.githubUrl && {
       codeRepository: `https://github.com/${tool.githubUrl}`,
     }),
-    ...((showAndroid || showIos) && {
+    ...(isSoftware && (showAndroid || showIos) && {
       operatingSystem: [
         ...(showAndroid ? ["Android"] : []),
         ...(showIos ? ["iOS"] : []),

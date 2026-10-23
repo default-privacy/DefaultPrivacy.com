@@ -39,8 +39,10 @@ const nextConfig: NextConfig = {
         headers: [{ key: "Vercel-CDN-Cache-Control", value: "max-age=60, stale-while-revalidate=300" }],
       },
       {
+        // An hour, not a minute: crawlers walk /directory?page=N (allowed in robots.ts) and
+        // each page they hit fresh wakes the DB. A new tool can take up to an hour to show here.
         source: "/directory",
-        headers: [{ key: "Vercel-CDN-Cache-Control", value: "max-age=60, stale-while-revalidate=300" }],
+        headers: [{ key: "Vercel-CDN-Cache-Control", value: "max-age=3600, stale-while-revalidate=86400" }],
       },
     ]
   },

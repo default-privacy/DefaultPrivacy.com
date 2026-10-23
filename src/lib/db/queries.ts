@@ -797,6 +797,24 @@ export async function getAdminTools(filters: ToolFilters & { includeAll?: boolea
   }
 }
 
+/** Every published listing in one light query, name order: for full A–Z indexes. */
+export async function getPublishedToolIndex() {
+  if (!isDatabaseConfigured) {
+    return []
+  }
+
+  try {
+    return await db
+      .select({ name: tools.name, slug: tools.slug, tagline: tools.tagline, contentType: tools.contentType })
+      .from(tools)
+      .where(eq(tools.status, "Published"))
+      .orderBy(asc(tools.name), asc(tools.slug))
+  } catch (error) {
+    console.error("Database query failed:", error)
+    throw error
+  }
+}
+
 export async function getToolSlugs() {
   if (!isDatabaseConfigured) {
     return []

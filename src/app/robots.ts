@@ -8,13 +8,15 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: ["/", "/api/mcp", "/api/v1/", "/api/directory/"],
-        // Block faceted-nav permutations (?search=/category=/tags=/f=/sort=/page=…).
+        allow: ["/", "/api/mcp", "/api/v1/", "/api/directory/", "/directory?page="],
+        // Block faceted-nav permutations (?search=/category=/tags=/f=/sort=…).
         // Each combo is a fresh dynamic render that wakes the DB; crawlers spidering
         // them keep Neon from scaling to zero. `/*?` blocks all query-string URLs; the
         // explicit /api/* allows above out-rank it (longer match wins) so the agent
-        // API surface stays reachable.
-        disallow: ["/admin/", "/api/", "/*?"],
+        // API surface stays reachable. Plain /directory?page=N stays open so crawlers can
+        // reach every tool by link; the CDN holds each page for an hour, so a crawl rarely
+        // wakes the DB. A page number combined with anything else stays blocked.
+        disallow: ["/admin/", "/api/", "/*?", "/directory?page=*&"],
       },
       {
         // Live-retrieval / citation bots: they answer a user's question in the
@@ -40,8 +42,9 @@ export default function robots(): MetadataRoute.Robots {
           "/api/mcp",
           "/api/v1/",
           "/api/directory/",
+          "/directory?page=",
         ],
-        disallow: ["/admin/", "/api/", "/*?"],
+        disallow: ["/admin/", "/api/", "/*?", "/directory?page=*&"],
       },
       {
         // Pure training scrapers: bulk-ingest our verified data into model weights

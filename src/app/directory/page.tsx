@@ -9,17 +9,24 @@ import {
 } from "@/components/directory/directory-browser"
 import { getPublicDirectoryStats } from "@/lib/directory-stats"
 import type { Metadata } from "next"
-import Link from "next/link"
 
 export const dynamic = "force-dynamic"
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<DirectorySearchParams>
+}): Promise<Metadata> {
   const { toolsLabel } = await getPublicDirectoryStats()
+  // A plain page N is its own page (crawlers reach tools through it); any filter folds into /directory
+  const params = await searchParams
+  const page = Number(params.page) || 1
+  const plainPage = page > 1 && Object.keys(params).every((k) => k === "page")
   return {
     title: "Privacy Tools Directory | Default Privacy",
     description: `Browse ${toolsLabel} privacy tools, each with its privacy attributes and the vendor's own links. Filter by category, open source, encryption, jurisdiction, and more.`,
     alternates: {
-      canonical: "https://defaultprivacy.com/directory",
+      canonical: plainPage ? `https://defaultprivacy.com/directory?page=${page}` : "https://defaultprivacy.com/directory",
     },
   }
 }
