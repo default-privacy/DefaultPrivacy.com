@@ -6,6 +6,7 @@ import {
   convertDraftRow,
   convertResearchFile,
   numberSources,
+  shouldReplaceCaveats,
   sourceProblem,
   valuesEqual,
 } from "./index"
@@ -155,5 +156,27 @@ describe("checkInvariants", () => {
   it("reports non-http sources", () => {
     const r = checkInvariants(tools, [{ toolId: "1", attribute: "caveat", value: null, sourceUrls: ["file:///etc/passwd"] }])
     expect(r.badSources).toHaveLength(1)
+  })
+})
+
+describe("shouldReplaceCaveats", () => {
+  const stored = [{ sortOrder: 1, note: "Requires a phone number.", sourceUrls: ["https://a.example/"], checkedOn: "2026-10-16" }]
+  const caveat = (note: string) => ({ attribute: "caveat" as const, sortOrder: 1, value: null, note, sources: ["https://a.example/"], checked: "2026-10-16" })
+
+  it("never wipes stored caveats with an empty list", () => {
+    expect(shouldReplaceCaveats(stored, [])).toBe(false)
+    const r = convertResearchFile({ slug: "x", checked: "2026-10-23", claims: [], caveats: [] })
+    expect(shouldReplaceCaveats(stored, r.claims.filter((c) => c.attribute === "caveat"))).toBe(false)
+  })
+
+  it("never wipes stored caveats when every incoming caveat is refused", () => {
+    const r = convertResearchFile({ slug: "x", checked: "2026-10-23", claims: [], caveats: [{ text: "No source.", sources: [] }] })
+    expect(shouldReplaceCaveats(stored, r.claims.filter((c) => c.attribute === "caveat"))).toBe(false)
+  })
+
+  it("replaces only when the incoming list differs", () => {
+    expect(shouldReplaceCaveats(stored, [caveat("Requires a phone number.")])).toBe(false)
+    expect(shouldReplaceCaveats(stored, [caveat("Requires a phone number; usernames hide it from contacts.")])).toBe(true)
+    expect(shouldReplaceCaveats([], [caveat("New.")])).toBe(true)
   })
 })

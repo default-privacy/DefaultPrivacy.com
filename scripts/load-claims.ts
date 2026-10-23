@@ -28,6 +28,7 @@ import {
   convertDraftRow,
   convertResearchFile,
   GATED_ATTRIBUTES,
+  shouldReplaceCaveats,
   valuesEqual,
   type ClaimInput,
   type ConvertResult,
@@ -74,7 +75,7 @@ function loadInputs(): ConvertResult[] {
       try {
         out.push(convertResearchFile(JSON.parse(readFileSync(path.join(dir, f), "utf8"))))
       } catch (e) {
-        out.push({ slug: f, claims: [], unchecked: [], refused: [{ what: f, reason: `unreadable: ${(e as Error).message}` }], hasCaveats: false })
+        out.push({ slug: f, claims: [], unchecked: [], refused: [{ what: f, reason: `unreadable: ${(e as Error).message}` }] })
       }
     }
   }
@@ -173,11 +174,7 @@ async function main() {
       }
       planned.push({ toolId: tool.id, attribute: r.attribute, value: r.value })
     }
-    const oldCaveats = have.filter((h) => h.attribute === "caveat").sort((a, b) => a.sortOrder - b.sortOrder)
-    const caveatsSame =
-      oldCaveats.length === caveatRows.length &&
-      oldCaveats.every((o, i) => o.note === caveatRows[i].note && JSON.stringify(o.sourceUrls) === JSON.stringify(caveatRows[i].sources) && o.checkedOn === caveatRows[i].checked)
-    const replaceCaveats = inp.hasCaveats && !caveatsSame
+    const replaceCaveats = shouldReplaceCaveats(have.filter((h) => h.attribute === "caveat"), caveatRows)
     if (replaceCaveats) {
       changed += caveatRows.length
       stats.caveats += caveatRows.length

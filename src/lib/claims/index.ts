@@ -77,8 +77,6 @@ export type ConvertResult = {
   unchecked: { attribute: string; note: string | null }[]
   /** Claims refused before touching the DB (bad attribute, no source, non-http source). */
   refused: { what: string; reason: string }[]
-  /** True when the file defines its caveat list (so it replaces the stored one). */
-  hasCaveats: boolean
 }
 
 export function isHttpUrl(u: unknown): u is string {
@@ -109,12 +107,28 @@ export function valuesEqual(attribute: string, a: unknown, b: unknown): boolean 
 
 const str = (v: unknown): string | null => (typeof v === "string" && v.trim() ? v.trim() : null)
 
+/**
+ * Whether a load replaces a tool's stored caveats. An empty or fully refused caveat list
+ * leaves them alone: on 2026-10-17 a file with `caveats: []` wiped Signal's caveats.
+ */
+export function shouldReplaceCaveats(
+  stored: { sortOrder: number; note: string | null; sourceUrls: string[]; checkedOn: string }[],
+  incoming: ClaimInput[],
+): boolean {
+  if (incoming.length === 0) return false
+  const old = [...stored].sort((a, b) => a.sortOrder - b.sortOrder)
+  const same =
+    old.length === incoming.length &&
+    old.every((o, i) => o.note === incoming[i].note && JSON.stringify(o.sourceUrls) === JSON.stringify(incoming[i].sources) && o.checkedOn === incoming[i].checked)
+  return !same
+}
+
 /** Research shape: Directory/claims/<slug>.json */
 export function convertResearchFile(file: unknown): ConvertResult {
   const f = (file ?? {}) as Record<string, unknown>
   const slug = str(f.slug) ?? ""
   const checked = str(f.checked) ?? ""
-  const out: ConvertResult = { slug, claims: [], unchecked: [], refused: [], hasCaveats: Array.isArray(f.caveats) }
+  const out: ConvertResult = { slug, claims: [], unchecked: [], refused: [] }
   if (!slug) out.refused.push({ what: "file", reason: "missing slug" })
   if (!/^\d{4}-\d{2}-\d{2}$/.test(checked)) out.refused.push({ what: "file", reason: "missing or bad checked date" })
   if (out.refused.length) return out
@@ -179,7 +193,7 @@ function addCaveats(out: ConvertResult, caveats: unknown, checked: string) {
 export function convertDraftRow(row: Record<string, unknown>): ConvertResult {
   const slug = str(row.slug) ?? ""
   const checked = (str(row.lastVerified) ?? "").slice(0, 10)
-  const out: ConvertResult = { slug, claims: [], unchecked: [], refused: [], hasCaveats: Array.isArray(row.caveats) }
+  const out: ConvertResult = { slug, claims: [], unchecked: [], refused: [] }
   if (!slug || !/^\d{4}-\d{2}-\d{2}$/.test(checked)) {
     out.refused.push({ what: "row", reason: "missing slug or lastVerified" })
     return out
