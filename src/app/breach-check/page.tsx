@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/breach-check",
   },
+  openGraph: {
+    title: "Account Breach Check",
+    description: "Find out if your personal email was in a data breach. We don't see your email — check privately on Have I Been Pwned, then follow our recovery steps on Default Privacy.",
+  },
 }
 
 const HIBP_URL = "https://haveibeenpwned.com/"

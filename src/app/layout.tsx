@@ -109,7 +109,7 @@ function buildSiteJsonLd(toolsLabel: string) {
       name: "Default Privacy",
       publisher: { "@id": "https://defaultprivacy.com/#organization" },
       description:
-        `Privacy infrastructure for everyone. Seven free tools to check your exposure, ${toolsLabel} privacy tools, a privacy glossary, and practical privacy guides.`,
+        `Privacy infrastructure for everyone. Eight free tools to check your exposure, ${toolsLabel} privacy tools, a privacy glossary, and practical privacy guides.`,
       potentialAction: {
         "@type": "SearchAction",
         target: {

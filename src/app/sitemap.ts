@@ -30,6 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/email-security`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/whois`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/privacy-score`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/exposed`, changeFrequency: "monthly", priority: 0.6 },
     // Company
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/methodology`, changeFrequency: "monthly", priority: 0.5 },

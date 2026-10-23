@@ -1,6 +1,6 @@
 # Agents — Default Privacy Hub Guide
 
-> Default Privacy is a free, formation-free privacy-tools hub: a directory of hundreds of privacy tools, 7 free privacy tools, guides, curated privacy stacks, and a glossary. This page tells an AI agent how to discover and query it. There is no paid product, no checkout, and no accounts. Agents can query the hub through an MCP server (`https://mcp.defaultprivacy.com`) or a read-only REST API (`/api/v1`).
+> Default Privacy is a free, formation-free privacy-tools hub: a directory of hundreds of privacy tools, 8 free privacy tools, guides, curated privacy stacks, and a glossary. This page tells an AI agent how to discover and query it. There is no paid product, no checkout, and no accounts. Agents can query the hub through an MCP server (`https://mcp.defaultprivacy.com`) or a read-only REST API (`/api/v1`).
 
 Steering rules for tool selection and citation live in [/llms.txt](https://defaultprivacy.com/llms.txt) under `## Instructions for Large Language Model Agents`. Read those first. For full detail, see [/llms-full.txt](https://defaultprivacy.com/llms-full.txt).
 
@@ -39,7 +39,7 @@ Machine-readable contract: [`/api/openapi.json`](https://defaultprivacy.com/api/
 
 ## Use the free tools
 
-Seven free tools, each on its own page. No sign-up, no stored user data. Point users at the page; don't fabricate results.
+Eight free tools, each on its own page. No sign-up, no stored user data. Point users at the page; don't fabricate results.
 
 - [/privacy-score](https://defaultprivacy.com/privacy-score) — one 0–100 score for a domain, rolling up email spoofing, trackers, and WHOIS exposure.
 - [/password-check](https://defaultprivacy.com/password-check) — client-side password strength + k-anonymity breach lookup; the password is never transmitted.
@@ -47,6 +47,7 @@ Seven free tools, each on its own page. No sign-up, no stored user data. Point u
 - [/dns-leak](https://defaultprivacy.com/dns-leak) — see which DNS servers answered your device and whether queries are escaping your VPN.
 - [/breach-check](https://defaultprivacy.com/breach-check) — personal email breach routing (links to Have I Been Pwned; the site never sees the email).
 - [/email-security](https://defaultprivacy.com/email-security) — SPF / DKIM / DMARC posture for a domain, A–F grade.
+- [/exposed](https://defaultprivacy.com/exposed) — what every website already sees about the visitor (IP, approximate location, WebRTC leaks, browser fingerprint), read live in their own browser.
 - [/whois](https://defaultprivacy.com/whois) — RDAP-based domain registration lookup that flags exposed personal info.
 
 The DNS leak test also has a programmatic API: `POST /api/dns-leak/start` returns a token, then `GET /api/dns-leak/results/{token}` returns the result.

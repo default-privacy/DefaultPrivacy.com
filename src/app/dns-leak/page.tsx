@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/dns-leak",
   },
+  openGraph: {
+    title: "DNS Leak Test — Is Your VPN Leaking DNS?",
+    description: "Check whether your DNS queries are leaking outside your VPN. We see which DNS servers actually answered your device's lookups and flag when more than one resolver answers. No login; resolver data is discarded within minutes.",
+  },
 }
 
 export default function DnsLeakPage() {

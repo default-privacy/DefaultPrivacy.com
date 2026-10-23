@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/privacy-score",
   },
+  openGraph: {
+    title: "Privacy Score — One Domain, Three Checks",
+    description: "Get a single 0–100 privacy score for any domain. We combine email-spoofing (SPF/DKIM/DMARC), website-tracker, and WHOIS-exposure checks into one exposure band. No login, no account.",
+  },
 }
 
 export default function PrivacyScorePage() {

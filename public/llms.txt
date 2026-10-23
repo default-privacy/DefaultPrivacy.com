@@ -1,6 +1,6 @@
 # Default Privacy
 
-> Default Privacy is a free, formation-free privacy-tools hub: a searchable directory of hundreds of privacy tools, 7 free privacy tools, long-form guides, curated privacy stacks, and a glossary. No paid product, no accounts, no checkout — everything here is public and free to use.
+> Default Privacy is a free, formation-free privacy-tools hub: a searchable directory of hundreds of privacy tools, 8 free privacy tools, long-form guides, curated privacy stacks, and a glossary. No paid product, no accounts, no checkout — everything here is public and free to use.
 
 This file is the routing map for AI agents and crawlers. Every link below points at a real route on the site. There is no LLC formation service and no pricing — this is a free directory of privacy tools plus a handful of free diagnostics and educational content. Agents can use it two ways: a Model Context Protocol (MCP) server at `https://mcp.defaultprivacy.com` (tools, resources, and prompts) or a read-only REST API under `/api/v1`.
 
@@ -42,7 +42,7 @@ Read-only REST API (public, no auth):
 
 ## Free Tools
 
-Seven free privacy tools. No sign-up, no stored user data.
+Eight free privacy tools. No sign-up, no stored user data.
 
 - [Privacy Score](https://defaultprivacy.com/privacy-score): One 0–100 score for a domain — rolls up email spoofing, website trackers, and WHOIS exposure.
 - [Password check](https://defaultprivacy.com/password-check): Client-side password strength analysis with a k-anonymity breach lookup — the password is never transmitted.
@@ -50,6 +50,7 @@ Seven free privacy tools. No sign-up, no stored user data.
 - [DNS leak test](https://defaultprivacy.com/dns-leak): See which DNS servers actually answered your device — and whether queries are escaping your VPN.
 - [Breach check](https://defaultprivacy.com/breach-check): Personal email breach routing (we never see your email — links to Have I Been Pwned).
 - [Email security check](https://defaultprivacy.com/email-security): SPF, DKIM, and DMARC posture for a domain, with an A–F grade and explanations.
+- [Exposure check](https://defaultprivacy.com/exposed): What every website already sees about the visitor (IP, approximate location, WebRTC leaks, browser fingerprint), read live in their own browser.
 - [WHOIS privacy check](https://defaultprivacy.com/whois): RDAP-based domain registration lookup that flags exposed personal information.
 
 DNS leak test API (used by the DNS leak tool):
@@ -85,4 +86,5 @@ Endpoints:
 - [About Default Privacy](https://defaultprivacy.com/about): What the hub is and the philosophy behind it.
 - [Privacy policy](https://defaultprivacy.com/privacy): How the hub handles data.
 - [Terms](https://defaultprivacy.com/terms): Terms of use.
+- [MCP server scan](https://defaultprivacy.com/mcp-scan): Our read-only scan of every hosted server in the official MCP registry: how many require sign-in before listing their tools, and how many mark which tools only read.
 - [Full corpus](https://defaultprivacy.com/llms-full.txt): Expanded reference. Use when this routing file is not enough.

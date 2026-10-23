@@ -20,6 +20,10 @@ export const metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/scanner",
   },
+  openGraph: {
+    title: "Privacy Scanner",
+    description: "Scan any website to discover trackers, cookies, fingerprinting, and security issues. Free privacy audit tool.",
+  },
 }
 
 function FeatureCell({ icon: Icon, title, description }: { icon: React.ElementType; title: string; description: string }) {

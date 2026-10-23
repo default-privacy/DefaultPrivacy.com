@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/whois",
   },
+  openGraph: {
+    title: "WHOIS Privacy Checker — Is Your Domain Exposing You?",
+    description: "Check whether a domain's public WHOIS record exposes your name, address, email, or phone — or whether privacy protection is in place. No login, nothing stored.",
+  },
 }
 
 export default function WhoisPage() {

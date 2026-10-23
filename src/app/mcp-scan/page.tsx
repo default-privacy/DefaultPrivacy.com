@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "We checked every hosted MCP server | Default Privacy",
   description:
     "A read-only scan of every hosted server in the official MCP registry: how many ask you to sign in before showing what they can do, and how many label which tools only look.",
+  alternates: {
+    canonical: "https://defaultprivacy.com/mcp-scan",
+  },
+  openGraph: {
+    title: "We checked every hosted MCP server",
+    description: "A read-only scan of every hosted server in the official MCP registry: how many ask you to sign in before showing what they can do, and how many label which tools only look.",
+  },
 }
 
 // The exact user agent the October 2026 scan sent (later scans point at this page instead).

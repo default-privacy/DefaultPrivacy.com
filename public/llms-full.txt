@@ -36,7 +36,7 @@ This document is the long-form companion to [/llms.txt](https://defaultprivacy.c
 Default Privacy is a free, public privacy-tools hub. It exists to help people find and evaluate privacy tools and to run a handful of quick, free diagnostics on their own exposure. It has five surfaces:
 
 1. **Directory** — a searchable directory of hundreds of privacy tools, with DP picks marked per category.
-2. **Free tools** — seven free tools that identify exposure: a composite Privacy Score, password check, website scanner, DNS leak test, breach check, email security check, and WHOIS privacy check.
+2. **Free tools** — eight free tools that identify exposure: a composite Privacy Score, password check, website scanner, DNS leak test, breach check, email security check, and WHOIS privacy check.
 3. **Guides** — long-form privacy how-tos, e.g. switching to GrapheneOS, your own VPN, data-broker removal, home address, and banking privacy.
 4. **Privacy stacks** — curated bundles of tools for a specific goal or threat model.
 5. **Glossary** — defined privacy and security terms, each structured as "What is X?".
@@ -47,7 +47,7 @@ There is no LLC formation service, no payment flow, no user accounts, and no log
 
 ## 2. Free Privacy Tools — Detailed
 
-Seven free tools. Each runs client-side or with minimal server processing, and none stores user data.
+Eight free tools. Each runs client-side or with minimal server processing, and none stores user data.
 
 ### Privacy Score (/privacy-score)
 
@@ -105,6 +105,12 @@ Answers: "Does my domain registration expose my personal information?"
 Shows which DNS resolvers actually answered the user's device and whether queries are escaping their VPN or proxy — a common, silent privacy leak. Backed by a probe API (`POST /api/dns-leak/start` returns a token, then `GET /api/dns-leak/results/{token}`).
 
 Answers: "Is my VPN leaking my DNS queries?"
+
+### Exposure Check (/exposed)
+
+Shows what every website already sees about the visitor: IP address and approximate location (read from request headers, not stored), WebRTC leaks, and browser fingerprint signals, read live in their own browser. Only anonymous counts of a few coarse browser settings are kept, never the IP.
+
+Answers: "What does a website learn about me just from my visit?"
 
 ---
 

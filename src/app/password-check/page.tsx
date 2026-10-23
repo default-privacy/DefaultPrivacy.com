@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/password-check",
   },
+  openGraph: {
+    title: "Password Strength Analyzer",
+    description: "Check how strong your password is with crack time estimates, pattern detection, and breach checking. Your password never leaves your browser.",
+  },
 }
 
 export default function PasswordCheckPage() {

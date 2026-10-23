@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://defaultprivacy.com/email-security",
   },
+  openGraph: {
+    title: "Email Security Checker — SPF, DKIM & DMARC",
+    description: "Check whether a domain is protected against email spoofing. We read its public SPF, DKIM, and DMARC records and grade them A–F. No login, nothing stored.",
+  },
 }
 
 export default function EmailSecurityPage() {

@@ -2,17 +2,38 @@ import type { Metadata } from "next"
 import { Header } from "@/components/common/header"
 import { Footer } from "@/components/common/footer"
 import { ExposureReadout } from "@/components/exposure/exposure-readout"
+import { BreadcrumbSchema } from "@/components/common/breadcrumb-schema"
+import { ToolPageSchema } from "@/components/common/tool-page-schema"
 
 export const metadata: Metadata = {
   title: "What Are You Leaking? — Browser & Connection Exposure | Default Privacy",
   description:
     "See what your browser and connection reveal to every website you visit — your IP address, location, and more. Read live off your own connection. No signup, and nothing tied to you is stored.",
+  alternates: {
+    canonical: "https://defaultprivacy.com/exposed",
+  },
+  openGraph: {
+    title: "What Are You Leaking? — Browser & Connection Exposure",
+    description: "See what your browser and connection reveal to every website you visit — your IP address, location, and more. Read live off your own connection. No signup, and nothing tied to you is stored.",
+  },
 }
 
 export default function ExposedPage() {
   return (
     <div className="brand2-grain flex min-h-screen flex-col bg-background">
       <Header />
+      <ToolPageSchema
+        name="Exposure Check"
+        description="See what your browser and connection reveal to every website: IP address, approximate location, WebRTC leaks and browser fingerprint, read live in your own browser."
+        url="https://defaultprivacy.com/exposed"
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://defaultprivacy.com" },
+          { name: "Free Tools", url: "https://defaultprivacy.com/tools" },
+          { name: "Exposure Check", url: "https://defaultprivacy.com/exposed" },
+        ]}
+      />
       <main className="flex-1">
         <section className="container py-12 md:py-16">
           <div className="mx-auto max-w-2xl space-y-3 text-center">

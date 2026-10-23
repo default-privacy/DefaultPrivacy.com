@@ -9,6 +9,7 @@ import {
   ScanLineIcon,
   ShieldAlertIcon,
   WifiIcon,
+  EyeIcon,
 } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
@@ -85,6 +86,13 @@ const tools: ToolItem[] = [
     concern: "My domain registration exposes my name",
     tool: "WHOIS Privacy Checker",
     summary: "See what a domain's public WHOIS record reveals — and whether privacy protection is on.",
+  },
+  {
+    href: "/exposed",
+    icon: EyeIcon,
+    concern: "What does every website already know about me?",
+    tool: "Exposure Check",
+    summary: "Your IP, approximate location, WebRTC leaks and browser fingerprint, read live in your own browser.",
   },
 ]
 
