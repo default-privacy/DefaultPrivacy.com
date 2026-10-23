@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
   // Chromium). Marking it external makes Next trace the real package into the
   // serverless function instead.
   serverExternalPackages: ["playwright", "playwright-core"],
+  // playwright-core 1.64 loads browsers.json through a computed require() path, which
+  // the file tracer can't see, so the scanner died on import in production.
+  outputFileTracingIncludes: {
+    "/scanner/**": ["./node_modules/playwright-core/browsers.json"],
+    "/privacy-score/**": ["./node_modules/playwright-core/browsers.json"],
+  },
   // Conservative, non-breaking security headers for all routes. The CSP is
   // intentionally limited to frame-ancestors (clickjacking control) — an
   // enforcing script-src/default-src would require nonce middleware and break
