@@ -9,7 +9,7 @@ import { configureServer, SERVER_INFO, SERVER_INSTRUCTIONS } from "./server"
 type ToolConfig = {
   title?: string
   description?: string
-  annotations?: { readOnlyHint?: boolean; openWorldHint?: boolean }
+  annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean; idempotentHint?: boolean; openWorldHint?: boolean }
 }
 const tools = new Map<string, ToolConfig>()
 const resources: string[] = []
@@ -78,6 +78,8 @@ describe("every tool", () => {
     expect(t.title).toBeTruthy()
     expect(t.description).toBeTruthy()
     expect(t.annotations?.readOnlyHint).toBe(true)
+    expect(t.annotations?.destructiveHint).toBe(false)
+    expect(t.annotations?.idempotentHint).toBe(true)
     expect(typeof t.annotations?.openWorldHint).toBe("boolean")
   })
 
