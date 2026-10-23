@@ -6,7 +6,7 @@ import { getPublicDirectoryStats } from "@/lib/directory-stats"
 import type { Metadata } from "next"
 import Link from "next/link"
 
-const LAST_REVIEWED = "2026-07-11"
+const LAST_REVIEWED = "2026-10-23"
 
 export const metadata: Metadata = {
   title: "Methodology — How We Vet & Rank Privacy Tools | Default Privacy",
@@ -74,6 +74,10 @@ export default async function MethodologyPage() {
 
   const freeTools = [
     {
+      name: "Privacy Score",
+      how: "Combines three checks on a domain into one 0–100 score: how well its email is protected against spoofing (SPF, DKIM, DMARC), the trackers the scanner finds on its website, and what its WHOIS record exposes.",
+    },
+    {
       name: "Password Strength Analyzer",
       how: "Runs entirely in your browser via Dropbox's zxcvbn. Your password is never sent to a server; breach lookups use a k-anonymity hash prefix, never the full password.",
     },
@@ -83,7 +87,7 @@ export default async function MethodologyPage() {
     },
     {
       name: "Breach Check",
-      how: "Queries the Have I Been Pwned database for a personal email and returns the known breaches it appears in, with recovery steps.",
+      how: "Sends you to Have I Been Pwned to check your personal email there, so we never see or receive it, then walks you through recovery steps.",
     },
     {
       name: "Email Security Checker",
@@ -96,6 +100,10 @@ export default async function MethodologyPage() {
     {
       name: "DNS Leak Test",
       how: "Observes which DNS resolvers actually answered your device's lookups, so you can see whether queries are escaping your VPN.",
+    },
+    {
+      name: "Exposure Check",
+      how: "Shows what every website already sees: your IP address and approximate location, read from our host's request headers and not stored, plus WebRTC leaks and browser fingerprint signals, read in your own browser.",
     },
   ]
 
@@ -151,7 +159,7 @@ export default async function MethodologyPage() {
               </p>
               <p className={body}>
                 Every free tool runs on public signals or in your own browser. No account, and nothing
-                you enter is stored.
+                tied to you is stored.
               </p>
               <dl className="space-y-3">
                 {freeTools.map((t) => (
