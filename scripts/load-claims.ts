@@ -212,7 +212,8 @@ async function main() {
 
   // Coverage of gated flags, counting the claims planned above.
   const all = await db.select().from(tools)
-  const claimKeys = new Set(existing.map((e) => `${e.toolId}|${e.attribute}|${JSON.stringify(e.value)}`))
+  const gatedClaims = await db.select().from(toolClaims).where(inArray(toolClaims.attribute, [...GATED_ATTRIBUTES]))
+  const claimKeys = new Set(gatedClaims.map((e) => `${e.toolId}|${e.attribute}|${JSON.stringify(e.value)}`))
   for (const p of planned) claimKeys.add(`${p.toolId}|${p.attribute}|${JSON.stringify(p.value)}`)
   console.log("\nCoverage of gated flags (all tools; includes this run's claims" + (APPLY ? "" : " as if applied") + "):")
   for (const attr of GATED_ATTRIBUTES) {
