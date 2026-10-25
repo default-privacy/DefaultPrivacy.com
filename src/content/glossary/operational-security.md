@@ -1,5 +1,6 @@
 ---
 term: "Operational Security"
+abbr: "OPSEC"
 slug: "operational-security"
 definition: "The practice of protecting sensitive information by thinking like an adversary to identify vulnerabilities in your own behavior and communications. OPSEC goes beyond technical tools to address human factors that could expose you."
 category: "Security"

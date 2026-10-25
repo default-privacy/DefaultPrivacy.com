@@ -1,5 +1,6 @@
 ---
 term: "Privacy Impact Assessment"
+abbr: "PIA"
 slug: "privacy-impact-assessment"
 definition: "A systematic evaluation of how a new project, policy, or technology will affect the privacy of individuals whose data is involved."
 category: "Data Protection"

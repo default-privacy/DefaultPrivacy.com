@@ -1,5 +1,6 @@
 ---
 term: "Terms of Service"
+abbr: "ToS"
 slug: "terms-of-service"
 definition: "A legal agreement between a service provider and user that defines the rules, rights, and responsibilities of both parties, often containing privacy-relevant clauses."
 category: "Legal"

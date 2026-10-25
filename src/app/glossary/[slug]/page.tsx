@@ -8,6 +8,7 @@ import {
   getAllGlossaryTerms,
   getGlossaryTermBySlug,
   getRelatedTerms,
+  type GlossaryTerm,
 } from "@/lib/glossary"
 import { renderReadingHtml } from "@/lib/reading-html"
 import { fileNumber } from "@/lib/reading-file-number"
@@ -30,6 +31,12 @@ function truncateMeta(desc: string, max = META_DESC_MAX) {
   return (cut > max * 0.7 ? desc.slice(0, cut) : desc.slice(0, max - 3)) + "..."
 }
 
+// No "What is X?": English needs "a" before some terms (a VPN) and not others
+// (encryption, Tor), and the term data can't tell which.
+function displayName(term: GlossaryTerm) {
+  return term.abbr ? `${term.abbr} (${term.term})` : term.term
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const term = await getGlossaryTermBySlug(slug)
@@ -40,19 +47,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
-  const whatIsTitle = `What is ${term.term}?`
-  const whatIsDesc = `What is ${term.term}? ${term.definition}`
-  const metaDesc = truncateMeta(whatIsDesc)
+  const title = `${displayName(term)} explained`
+  const metaDesc = truncateMeta(term.definition)
 
   return {
-    title: `${whatIsTitle} | Privacy Glossary | Default Privacy`,
+    title: `${title} | Privacy Glossary | Default Privacy`,
     description: metaDesc,
     alternates: {
       canonical: `https://defaultprivacy.com/glossary/${term.slug}`,
       types: { "text/markdown": `https://defaultprivacy.com/glossary/${term.slug}.md` },
     },
     openGraph: {
-      title: `${whatIsTitle} - Privacy Glossary`,
+      title: `${title} - Privacy Glossary`,
       description: metaDesc,
     },
   }
@@ -79,6 +85,8 @@ export default async function GlossaryTermPage({ params }: Props) {
   }
 
   const relatedTerms = await getRelatedTerms(term)
+  const name = displayName(term)
+  const otherAliases = term.aliases?.filter((a) => a !== term.abbr) ?? []
 
   const { html: contentHtml, headings } = renderReadingHtml(term.content)
   const file = fileNumber("T", await getAllGlossaryTerms(), term.slug)
@@ -105,7 +113,7 @@ export default async function GlossaryTermPage({ params }: Props) {
     mainEntity: [
       {
         "@type": "Question",
-        name: `What is ${term.term}?`,
+        name: `What does ${name} mean?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: term.definition,
@@ -129,7 +137,7 @@ export default async function GlossaryTermPage({ params }: Props) {
         items={[
           { name: "Home", url: "https://defaultprivacy.com" },
           { name: "Privacy Glossary", url: "https://defaultprivacy.com/glossary" },
-          { name: `What is ${term.term}?`, url: `https://defaultprivacy.com/glossary/${term.slug}` },
+          { name, url: `https://defaultprivacy.com/glossary/${term.slug}` },
         ]}
       />
 
@@ -144,9 +152,9 @@ export default async function GlossaryTermPage({ params }: Props) {
               </Link>
               <ReadingFrame
                 file={file}
-                title={`What is ${term.term}?`}
+                title={name}
                 dek={term.definition}
-                fields={term.aliases && term.aliases.length > 0 ? [`Also ${term.aliases.join(", ")}`] : []}
+                fields={otherAliases.length > 0 ? [`Also ${otherAliases.join(", ")}`] : []}
                 right={term.category}
               />
             </>

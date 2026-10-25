@@ -1,5 +1,6 @@
 ---
 term: "Web Application Firewall"
+abbr: "WAF"
 slug: "web-application-firewall"
 definition: "A security tool that monitors and filters HTTP traffic between a web application and the internet, protecting against common web attacks."
 category: "Cloud"

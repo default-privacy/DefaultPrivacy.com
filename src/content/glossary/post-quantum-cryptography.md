@@ -1,5 +1,6 @@
 ---
 term: "Post-Quantum Cryptography"
+abbr: "PQC"
 slug: "post-quantum-cryptography"
 definition: "Cryptographic algorithms designed to resist attacks from both classical and quantum computers — the next generation of encryption being standardized to replace RSA, ECC, and other vulnerable algorithms."
 category: "Encryption"

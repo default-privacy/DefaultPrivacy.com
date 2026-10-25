@@ -1,5 +1,6 @@
 ---
 term: "Single Sign-On"
+abbr: "SSO"
 slug: "single-sign-on"
 definition: "An authentication method allowing users to access multiple applications with one set of credentials. While convenient for users and administrators, SSO creates a single point of failure—compromise one account, compromise them all."
 category: "Authentication"

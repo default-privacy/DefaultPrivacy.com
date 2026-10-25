@@ -1,5 +1,6 @@
 ---
 term: "Digital Markets Act"
+abbr: "DMA"
 slug: "digital-markets-act"
 definition: "An EU regulation targeting Big Tech 'gatekeepers' — including Apple, Google, Meta, Amazon, and Microsoft — requiring interoperability, prohibiting self-preferencing, and giving users more control over their data, apps, and default services."
 category: "Legal"

@@ -1,5 +1,6 @@
 ---
 term: "DNS over HTTPS"
+abbr: "DoH"
 slug: "dns-over-https"
 definition: "A protocol for performing DNS resolution via the HTTPS protocol. It encrypts DNS queries, preventing ISPs, network administrators, and attackers from seeing which websites you're trying to visit."
 category: "Networking"

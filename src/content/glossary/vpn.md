@@ -1,5 +1,6 @@
 ---
 term: "Virtual Private Network"
+abbr: "VPN"
 slug: "vpn"
 definition: "A technology that creates a secure, encrypted connection over a less secure network, such as the public internet. VPNs mask your IP address, encrypt your internet traffic, and can make it appear as though you're browsing from a different location."
 category: "Networking"

@@ -1,5 +1,6 @@
 ---
 term: "Transfer Impact Assessment"
+abbr: "TIA"
 slug: "transfer-impact-assessment"
 definition: "A Transfer Impact Assessment (TIA) is a legal analysis required under GDPR to evaluate whether a cross-border data transfer to a country outside the EEA adequately protects personal data despite the destination country's laws and surveillance practices."
 category: "Legal"

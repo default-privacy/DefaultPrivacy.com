@@ -1,5 +1,6 @@
 ---
 term: "Infrastructure as Code"
+abbr: "IaC"
 slug: "infrastructure-as-code"
 definition: "Managing and provisioning computing infrastructure through machine-readable configuration files rather than manual processes, enabling reproducible and auditable deployments."
 category: "Cloud"

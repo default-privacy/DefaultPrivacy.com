@@ -1,5 +1,6 @@
 ---
 term: "Multi-Factor Authentication"
+abbr: "MFA"
 slug: "multi-factor-authentication"
 definition: "A security method that requires two or more different types of verification: something you know, something you have, or something you are."
 category: "Authentication"

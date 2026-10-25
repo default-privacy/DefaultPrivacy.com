@@ -1,5 +1,6 @@
 ---
 term: "Know Your Customer"
+abbr: "KYC"
 slug: "know-your-customer"
 definition: "Regulatory requirements that force financial services to verify their customers' identities, creating data collection obligations that conflict with financial privacy."
 category: "Blockchain"

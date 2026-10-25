@@ -1,5 +1,6 @@
 ---
 term: "Man-in-the-Middle Attack"
+abbr: "MITM"
 slug: "man-in-the-middle"
 definition: "An attack where the adversary secretly intercepts and potentially alters communications between two parties who believe they're communicating directly with each other. MITM attacks can capture credentials, inject malware, or modify data."
 category: "Security"

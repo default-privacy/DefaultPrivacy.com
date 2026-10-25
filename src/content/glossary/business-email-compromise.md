@@ -1,5 +1,6 @@
 ---
 term: "Business Email Compromise"
+abbr: "BEC"
 slug: "business-email-compromise"
 definition: "A sophisticated scam where criminals impersonate executives, vendors, or business partners via email to trick employees into wiring money or sharing sensitive data."
 category: "Attacks"

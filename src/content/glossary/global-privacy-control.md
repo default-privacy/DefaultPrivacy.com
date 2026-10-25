@@ -1,5 +1,6 @@
 ---
 term: "Global Privacy Control"
+abbr: "GPC"
 slug: "global-privacy-control"
 definition: "A browser signal that tells websites you don't want your personal data sold or shared, legally enforceable under CCPA and recognized by some GDPR implementations."
 category: "Browsers"

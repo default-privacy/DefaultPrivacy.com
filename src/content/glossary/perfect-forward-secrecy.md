@@ -1,5 +1,6 @@
 ---
 term: "Perfect Forward Secrecy"
+abbr: "PFS"
 slug: "perfect-forward-secrecy"
 definition: "A feature of key-agreement protocols that ensures session keys cannot be compromised even if the server's long-term private key is compromised. Each session uses unique keys, so past communications remain secure even if future keys are exposed."
 category: "Encryption"

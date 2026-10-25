@@ -1,5 +1,6 @@
 ---
 term: "Kids Online Safety Act"
+abbr: "KOSA"
 slug: "kids-online-safety-act"
 definition: "Proposed US legislation (KOSA) requiring platforms to protect minors from harmful content online — raising concerns about age verification mandates, content censorship, and the creation of new surveillance infrastructure."
 category: "Legal"

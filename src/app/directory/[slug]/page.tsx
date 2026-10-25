@@ -67,15 +67,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? `${tool.name} is a Default Privacy pick. ${pick.reason}`
     : tool.tagline || tool.description?.slice(0, 160)
 
+  const title = `${tool.name}: privacy record and alternatives`
+
   return {
-    title: `${tool.name} | Default Privacy`,
+    title: `${title} | Default Privacy`,
     description,
     alternates: {
       canonical: `https://defaultprivacy.com/directory/${tool.slug}`,
       types: { "text/markdown": `https://defaultprivacy.com/directory/${tool.slug}.md` },
     },
     openGraph: {
-      title: tool.name,
+      title,
       description,
       images: tool.screenshotUrl ? [tool.screenshotUrl] : undefined,
     },
@@ -117,6 +119,8 @@ export default async function ToolDetailPage({ params }: Props) {
     "@type": isSoftware ? "SoftwareApplication" : "CreativeWork",
     name: tool.name,
     url: `https://defaultprivacy.com/directory/${tool.slug}`,
+    // Same date the sitemap publishes for this page, so the two agree
+    dateModified: tool.updatedAt.toISOString(),
     ...(tool.description && { description: tool.description }),
     ...(tool.tagline && { abstract: tool.tagline }),
     ...(isSoftware && { applicationCategory: displayCategory ?? "Privacy & Security" }),

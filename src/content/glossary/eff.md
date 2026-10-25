@@ -1,5 +1,6 @@
 ---
 term: "Electronic Frontier Foundation"
+abbr: "EFF"
 slug: "eff"
 definition: "A nonprofit digital rights organization that defends civil liberties in the digital world through litigation, policy analysis, and technology development."
 category: "Legal"

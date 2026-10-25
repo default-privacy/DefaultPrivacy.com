@@ -1,5 +1,6 @@
 ---
 term: "Distributed Denial of Service"
+abbr: "DDoS"
 slug: "ddos"
 definition: "An attack that overwhelms a service with traffic from many sources simultaneously, making it unavailable to legitimate users."
 category: "Attacks"

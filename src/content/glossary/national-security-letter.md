@@ -1,5 +1,6 @@
 ---
 term: "National Security Letter"
+abbr: "NSL"
 slug: "national-security-letter"
 definition: "An administrative subpoena issued by U.S. federal agencies (primarily the FBI) for national security investigations. NSLs come with gag orders preventing recipients from disclosing their existence, making them controversial tools of surveillance."
 category: "Legal"

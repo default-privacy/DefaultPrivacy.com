@@ -1,5 +1,6 @@
 ---
 term: "Quantum Key Distribution"
+abbr: "QKD"
 slug: "quantum-key-distribution"
 definition: "A method of using quantum mechanics to securely distribute encryption keys, where any eavesdropping attempt physically disturbs the quantum state and is detectable."
 category: "Encryption"

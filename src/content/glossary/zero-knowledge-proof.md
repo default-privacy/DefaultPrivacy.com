@@ -1,5 +1,6 @@
 ---
 term: "Zero-Knowledge Proof"
+abbr: "ZKP"
 slug: "zero-knowledge-proof"
 definition: "A cryptographic method by which one party can prove to another party that they know a value, without conveying any information apart from the fact that they know the value. This allows authentication and verification without exposing sensitive data."
 category: "Encryption"

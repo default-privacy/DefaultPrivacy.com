@@ -1,5 +1,6 @@
 ---
 term: "Key Derivation Function"
+abbr: "KDF"
 slug: "key-derivation-function"
 definition: "A cryptographic function that derives one or more secret keys from a master secret, password, or other source of entropy. KDFs add security through computational cost and produce keys of the required length and format."
 category: "Encryption"

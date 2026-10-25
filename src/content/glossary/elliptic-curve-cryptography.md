@@ -1,5 +1,6 @@
 ---
 term: "Elliptic Curve Cryptography"
+abbr: "ECC"
 slug: "elliptic-curve-cryptography"
 definition: "A public-key cryptography approach based on the algebraic structure of elliptic curves. ECC provides equivalent security to RSA with much smaller key sizes, making it ideal for mobile devices, IoT, and performance-critical applications."
 category: "Encryption"

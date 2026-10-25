@@ -1,5 +1,6 @@
 ---
 term: "Real-Time Bidding"
+abbr: "RTB"
 slug: "real-time-bidding"
 definition: "An automated auction system where your personal data is broadcast to hundreds of advertisers in milliseconds every time you load a webpage — creating the largest data leak most people have never heard of."
 category: "Surveillance"

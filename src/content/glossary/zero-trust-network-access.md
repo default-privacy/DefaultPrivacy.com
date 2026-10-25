@@ -1,5 +1,6 @@
 ---
 term: "Zero Trust Network Access"
+abbr: "ZTNA"
 slug: "zero-trust-network-access"
 definition: "A security model that replaces traditional VPNs by granting access to specific applications rather than entire networks, based on continuous identity verification."
 category: "Cloud"

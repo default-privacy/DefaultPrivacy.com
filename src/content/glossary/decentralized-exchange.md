@@ -1,5 +1,6 @@
 ---
 term: "Decentralized Exchange"
+abbr: "DEX"
 slug: "decentralized-exchange"
 definition: "A cryptocurrency exchange that operates without a central authority, allowing peer-to-peer trading without KYC requirements or custodial risk."
 category: "Blockchain"

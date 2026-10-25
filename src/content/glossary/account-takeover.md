@@ -1,5 +1,6 @@
 ---
 term: "Account Takeover"
+abbr: "ATO"
 slug: "account-takeover"
 definition: "A form of identity theft where criminals gain unauthorized access to a victim's online accounts — email, banking, social media, or shopping — by using stolen credentials, SIM swapping, or social engineering to lock out the real owner and exploit the account."
 category: "Attacks"

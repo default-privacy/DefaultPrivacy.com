@@ -1,5 +1,6 @@
 ---
 term: "End-to-End Encryption"
+abbr: "E2EE"
 slug: "end-to-end-encryption"
 definition: "A method of secure communication where only the communicating users can read the messages. In principle, it prevents potential eavesdroppers – including telecom providers, Internet providers, and even the provider of the communication service – from being able to access the cryptographic keys needed to decrypt the conversation."
 category: "Encryption"

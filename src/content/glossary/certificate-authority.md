@@ -1,5 +1,6 @@
 ---
 term: "Certificate Authority"
+abbr: "CA"
 slug: "certificate-authority"
 definition: "An organization trusted to issue digital certificates that verify the identity of websites, enabling HTTPS encrypted connections."
 category: "Encryption"

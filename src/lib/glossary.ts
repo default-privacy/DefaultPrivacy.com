@@ -12,6 +12,8 @@ const GLOSSARY_DIR = join(process.cwd(), "src/content/glossary")
 
 export type GlossaryTerm = {
   term: string
+  // The short form people search for ("VPN"), shown first in page titles
+  abbr?: string
   slug: string
   definition: string
   category: string
@@ -24,6 +26,7 @@ export type GlossaryTerm = {
 
 type GlossaryFrontmatter = {
   term: string
+  abbr?: string
   slug: string
   definition: string
   category: string

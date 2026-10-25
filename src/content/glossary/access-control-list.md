@@ -1,5 +1,6 @@
 ---
 term: "Access Control List"
+abbr: "ACL"
 slug: "access-control-list"
 definition: "A list of permissions that specifies which users or systems can access a resource and what operations they can perform."
 category: "Cloud"

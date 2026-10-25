@@ -1,5 +1,6 @@
 ---
 term: "Harvest Now, Decrypt Later"
+abbr: "HNDL"
 slug: "harvest-now-decrypt-later"
 definition: "A surveillance strategy where intelligence agencies intercept and store encrypted communications today, planning to decrypt them in the future when quantum computers become powerful enough to break the encryption."
 category: "Encryption"

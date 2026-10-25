@@ -1,5 +1,6 @@
 ---
 term: "Two-Factor Authentication"
+abbr: "2FA"
 slug: "two-factor-authentication"
 definition: "A security method requiring two different types of identification to access an account: something you know (password) plus something you have (phone, hardware key) or something you are (biometric). This significantly reduces the risk of unauthorized access even if your password is compromised."
 category: "Authentication"

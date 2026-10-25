@@ -1,5 +1,6 @@
 ---
 term: "Standard Contractual Clauses"
+abbr: "SCCs"
 slug: "standard-contractual-clauses"
 definition: "Standard Contractual Clauses (SCCs) are pre-approved contract terms issued by the European Commission that allow organizations to legally transfer personal data from the EU to countries that lack an adequacy decision, by binding the recipient to EU-level data protection obligations."
 category: "Legal"

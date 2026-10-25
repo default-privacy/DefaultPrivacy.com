@@ -1,5 +1,6 @@
 ---
 term: "Digital Services Act"
+abbr: "DSA"
 slug: "digital-services-act"
 definition: "An EU regulation that holds online platforms accountable for content moderation, algorithmic transparency, and user safety — requiring platforms to explain how their recommendation algorithms work and giving users the right to opt out of profiling-based content."
 category: "Legal"
