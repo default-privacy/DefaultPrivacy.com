@@ -6,7 +6,7 @@ category: Privacy
 difficulty: intermediate
 timeToComplete: "2 hours, spread over the weeks before and after the move"
 publishedAt: "2026-10-21"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-28"
 author: Default Privacy
 tags:
   - moving privacy
@@ -67,7 +67,7 @@ So give your bank and federal agencies your real details. For landlords and lend
 **What to do.** Rent a mailbox that isn't your home, in any city, while you still live at your old address. Two kinds:
 
 - **Private mailbox or virtual mailbox** (a "commercial mail receiving agency"). Examples in our directory: [Anytime Mailbox](/directory/anytime-mailbox). You sign USPS [PS Form 1583](https://about.usps.com/forms/ps1583.pdf). It needs two IDs: one government-issued photo ID, and a second that confirms the home address you list on the form. You sign, or confirm your signature, in front of the mailbox company's staff or a notary, in person or on live video. The form says to attach copies of both IDs. Before you pay, confirm the current rules on [usps.com](https://www.usps.com/).
-- **USPS PO Box.** You need two forms of ID, and USPS says the application isn't fully approved until it verifies your current permanent physical address ([USPS PO Box FAQ](https://faq.usps.com/articles/Knowledge/PO-Box-The-Basics)). It says that after you move you must complete verification again at your new address. That means a PO Box in the new city usually has to wait until you live there.
+- **USPS PO Box.** You need two forms of ID, and USPS says the application isn't fully approved until it verifies your current permanent physical address ([USPS PO Box FAQ](https://faq.usps.com/articles/Knowledge/PO-Box-The-Basics)). If you are moving, it says you can apply online or in person before you go. You start verification at a Post Office where you live now, then complete it again at your new address after you move.
 
 **The limit.** The mailbox company and USPS hold your real home address. USPS says it doesn't disclose that information to third parties without your consent except in listed cases, including law enforcement, auditors and agents it uses to do its work, and says information about someone who files a protective court order with the application won't be disclosed except under a court order ([PS Form 1583, Privacy Act statement](https://about.usps.com/forms/ps1583.pdf)). Give your bank your real home address; don't assume it will accept a mailbox address.
 
@@ -81,7 +81,7 @@ So give your bank and federal agencies your real details. For landlords and lend
 
 **Why.** USPS describes NCOALink as a dataset of about 160 million permanent change-of-address records, built from names and addresses of people who filed with USPS, and says the data goes regularly to companies it has licensed ([USPS PostalPro](https://postalpro.usps.com/mailing-and-shipping-services/NCOALink)). Mailers use it to update their lists before mailing. A permanent filing adds your new address to that dataset. A temporary request still gives USPS your new address.
 
-**The limit.** USPS's page describes permanent records. It does not say how temporary requests are treated, so treat temporary forwarding as the better option, not a guarantee. Temporary forwarding has a time limit, with a 15-day minimum. USPS's FAQ says up to 185 days, and a second request can extend it by up to 179 more, for 364 in total ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). Mail from businesses, banks and agencies that use ancillary endorsements (mailer instructions for undeliverable mail) may not be forwarded (USPS gives driver's licenses and bank statements as examples), so update those senders directly ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)).
+**The limit.** USPS's technical guide for licensees says temporary requests are only in the 48-month product, the one sold to its Full Service Provider licensees, and that a match to one comes back with no new address ([NCOALink User Technical Reference Guide](https://postalpro.usps.com/mnt/glusterfs/2023-04/usertechinfo_v12.pdf)). So a temporary request can still tell some mailers that you moved, just not where. Treat it as the better option, not a guarantee. Temporary forwarding has a time limit, with a 15-day minimum. USPS's FAQ says up to 185 days, and a second request can extend it by up to 179 more, for 364 in total ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). Mail from businesses, banks and agencies that use ancillary endorsements (mailer instructions for undeliverable mail) may not be forwarded (USPS gives driver's licenses and bank statements as examples), so update those senders directly ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). Any change of address, temporary or permanent, also makes USPS mail a Move Validation Letter to the address you are leaving ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). If you are leaving someone who still lives or gets mail there, that letter can alert them, so plan it with an advocate before you file (see the [stalking and abuse survivor safety kit](/stacks/stalking-abuse-survivor-safety-kit)).
 
 **How you know it's done.** Your important senders show the new mail address in their own accounts, and no permanent change of address is on file.
 
@@ -153,7 +153,7 @@ PS Form 1583, a government photo ID, a second ID that confirms the address on th
 
 **Can I get a PO Box in the new city before I move?**
 
-Probably not. USPS verifies your current permanent physical address, and says you must verify again at your new address after a move ([USPS PO Box FAQ](https://faq.usps.com/articles/Knowledge/PO-Box-The-Basics)).
+Yes, if a box is available. USPS says that if you are moving you can apply online or in person, start verification at a Post Office where you live now, and complete it again at your new address after you move ([USPS PO Box FAQ](https://faq.usps.com/articles/Knowledge/PO-Box-The-Basics)).
 
 **Is it legal to use a mailbox address instead of my home?**
 
