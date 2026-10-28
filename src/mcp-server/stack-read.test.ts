@@ -18,3 +18,25 @@ describe("dp_get_stack per-slug demand", () => {
     expect(counted.filter(([k]) => k === "stack_read")).toEqual([["stack_read", "privacy-starter-kit"]])
   })
 })
+
+// A plain page read should cost one call for most pages (2026-10-28: section-by-section reads crowded out web search).
+describe("one-call page reads", () => {
+  const read = async (tool: string, args: Record<string, unknown>) =>
+    JSON.parse(((await handlers.get(tool)!(args)) as { content: { text: string }[] }).content[0].text).data
+  it("returns a short guide whole", async () => {
+    const d = await read("dp_get_guide", { slug: "keep-home-address-off-public-records" })
+    expect(d.content).toContain("## ")
+    expect(d.sections).toBeUndefined()
+  })
+  it("returns a short stack whole", async () => {
+    const d = await read("dp_get_stack", { slug: "stalking-abuse-survivor-safety-kit" })
+    expect(d.content).toContain("800-799-7233")
+  })
+  it("still outlines a long page, and section still returns one part", async () => {
+    const d = await read("dp_get_stack", { slug: "start-over-privately" })
+    expect(d.content).toBeUndefined()
+    expect(d.sections.length).toBeGreaterThan(3)
+    const s = await read("dp_get_guide", { slug: "keep-home-address-off-public-records", section: "FAQ" })
+    expect(s.content).toBeUndefined()
+  })
+})

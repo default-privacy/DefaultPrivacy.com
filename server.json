@@ -3,7 +3,7 @@
   "name": "io.github.privatebydefault/default-privacy",
   "title": "Default Privacy",
   "description": "Sourced privacy answers: how private an app is, tool picks, app swaps, de-Googling, breaches.",
-  "version": "1.10.6",
+  "version": "1.10.7",
   "websiteUrl": "https://defaultprivacy.com",
   "remotes": [
     {

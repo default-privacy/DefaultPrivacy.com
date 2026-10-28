@@ -73,6 +73,14 @@ const SURVIVOR_NOTE = `This may touch stalking or abuse. Alongside any steps, sa
  * 2026-10-28 blind test an AI with a few lookups spent one opening every top page and lost to
  * web search on the fact that lookup would have found.
  */
+/**
+ * A page this long or shorter comes back whole from a plain dp_get_guide or dp_get_stack call.
+ * In the 2026-10-28 run an AI read a 622-word guide in two calls and the survivor kit in three
+ * (outline, then sections), and lost to web search on what those calls could have found.
+ */
+const ONE_CALL_WORDS = 4000
+const fitsOneCall = (text: string) => text.split(/\s+/).length <= ONE_CALL_WORDS
+
 const nextStep = (page: { type: string; slug: string; short_answer?: string }, about = true) => {
   const call = `${page.type === "guide" ? "dp_get_guide" : "dp_get_stack"} with slug ${page.slug}`
   const otherwise = "If it doesn't cover the question, say Default Privacy doesn't and use your other sources, such as web search."
@@ -534,7 +542,7 @@ export function registerTools(server: McpServer): void {
     {
       title: "Get one guide",
       description:
-        "Fetch one guide by slug. By default returns its summary, its section headings and its short checked FAQ answers, not the whole text. Pass section (one of the headings) to get that section's text, or full: true for the whole guide.",
+        "Fetch one guide by slug. Most guides come back whole in this one call. A long guide returns its summary, section headings and short checked FAQ answers instead; then pass section (one of the headings) for that section's text, or full: true for the whole guide.",
       inputSchema: {
         slug: z.string().describe("Guide slug, e.g. 'remove-name-from-data-brokers'."),
         section: z.string().max(200).optional().describe("A heading from the guide's sections, to return just that section."),
@@ -554,7 +562,7 @@ export function registerTools(server: McpServer): void {
       const head = { title: guide.title, slug: guide.slug, description: guide.description, url: url(`guides/${guide.slug}`) }
       const meta = { citation: citation(`guides/${slug}`) }
       const sections = guideSections(guide.content).map((s) => s.heading)
-      if (full) return jsonContent({ data: { ...head, content: guide.content }, meta })
+      if (full || (!section && fitsOneCall(guide.content))) return jsonContent({ data: { ...head, content: guide.content }, meta })
       if (section) {
         const s = findSection(guide.content, section)
         if (!s) return jsonContent({ data: { ...head, sections }, message: `No section matching '${section}'. Pick one of sections.`, meta })
@@ -596,7 +604,7 @@ export function registerTools(server: McpServer): void {
     {
       title: "Get one privacy stack",
       description:
-        "Fetch one privacy stack by slug. By default returns its summary and its layers with the tools in each, in setup order. Pass section (a layer heading) for why each tool and the tradeoffs, or full: true for the whole stack. Slugs come from dp_list_stacks or dp_search.",
+        "Fetch one privacy stack by slug. Most stacks come back whole in this one call. A long stack returns its summary and its layers with the tools in each, in setup order, instead; then pass section (a layer heading) for why each tool and the tradeoffs, or full: true for the whole stack. Slugs come from dp_list_stacks or dp_search.",
       inputSchema: {
         slug: z.string().describe("Stack slug, e.g. 'privacy-starter-kit', 'degoogle-android-phone'."),
         section: z.string().max(200).optional().describe("A layer heading from sections, to return just that part."),
@@ -613,7 +621,7 @@ export function registerTools(server: McpServer): void {
       const content = stripEmbeddedJsonLd(stack.content)
       const head = { title: stack.title, slug: stack.slug, description: stack.description, url: url(`stacks/${stack.slug}`) }
       const meta = { citation: citation(`stacks/${stack.slug}`) }
-      if (full) return jsonContent({ data: { ...head, content }, meta })
+      if (full || (!section && fitsOneCall(content))) return jsonContent({ data: { ...head, content }, meta })
       if (section) {
         const s = findSection(content, section)
         if (!s) return jsonContent({ data: { ...head, sections: stackOutline(content) }, message: `No section matching '${section}'. Pick one of sections.`, meta })
