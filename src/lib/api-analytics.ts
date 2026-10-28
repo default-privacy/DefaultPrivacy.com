@@ -7,6 +7,7 @@
  */
 
 import { db, isDatabaseConfigured } from "@/lib/db"
+import { failureCause, retryOnce } from "@/lib/db/retry"
 import { apiRequestLogs, apiDailyStats } from "@/lib/db/schema"
 import { desc, gte, lte, sql } from "drizzle-orm"
 
@@ -29,32 +30,34 @@ export async function updateDailyStats(
 
   try {
     // Upsert daily stats
-    await db
-      .insert(apiDailyStats)
-      .values({
-        date: today,
-        endpoint,
-        totalRequests: 1,
-        successCount: isSuccess ? 1 : 0,
-        errorCount: isError ? 1 : 0,
-        rateLimitedCount: isRateLimited ? 1 : 0,
-        avgResponseTimeMs: responseTimeMs ?? null,
-      })
-      .onConflictDoUpdate({
-        target: [apiDailyStats.date, apiDailyStats.endpoint],
-        set: {
-          totalRequests: sql`${apiDailyStats.totalRequests} + 1`,
-          successCount: sql`${apiDailyStats.successCount} + ${isSuccess ? 1 : 0}`,
-          errorCount: sql`${apiDailyStats.errorCount} + ${isError ? 1 : 0}`,
-          rateLimitedCount: sql`${apiDailyStats.rateLimitedCount} + ${isRateLimited ? 1 : 0}`,
-          avgResponseTimeMs: responseTimeMs
-            ? sql`(COALESCE(${apiDailyStats.avgResponseTimeMs}, 0) * ${apiDailyStats.totalRequests} + ${responseTimeMs}) / (${apiDailyStats.totalRequests} + 1)`
-            : apiDailyStats.avgResponseTimeMs,
-          updatedAt: new Date(),
-        },
-      })
+    await retryOnce(() =>
+      db
+        .insert(apiDailyStats)
+        .values({
+          date: today,
+          endpoint,
+          totalRequests: 1,
+          successCount: isSuccess ? 1 : 0,
+          errorCount: isError ? 1 : 0,
+          rateLimitedCount: isRateLimited ? 1 : 0,
+          avgResponseTimeMs: responseTimeMs ?? null,
+        })
+        .onConflictDoUpdate({
+          target: [apiDailyStats.date, apiDailyStats.endpoint],
+          set: {
+            totalRequests: sql`${apiDailyStats.totalRequests} + 1`,
+            successCount: sql`${apiDailyStats.successCount} + ${isSuccess ? 1 : 0}`,
+            errorCount: sql`${apiDailyStats.errorCount} + ${isError ? 1 : 0}`,
+            rateLimitedCount: sql`${apiDailyStats.rateLimitedCount} + ${isRateLimited ? 1 : 0}`,
+            avgResponseTimeMs: responseTimeMs
+              ? sql`(COALESCE(${apiDailyStats.avgResponseTimeMs}, 0) * ${apiDailyStats.totalRequests} + ${responseTimeMs}) / (${apiDailyStats.totalRequests} + 1)`
+              : apiDailyStats.avgResponseTimeMs,
+            updatedAt: new Date(),
+          },
+        }),
+    )
   } catch (error) {
-    console.error("[api-analytics] Failed to update daily stats:", error)
+    console.error("[api-analytics] Failed to update daily stats twice:", failureCause(error))
   }
 }
 

@@ -23,6 +23,7 @@
  */
 
 import { db, isDatabaseConfigured } from "@/lib/db"
+import { failureCause, retryOnce } from "@/lib/db/retry"
 import { fpAttributeCounts } from "@/lib/db/schema"
 import { sql } from "drizzle-orm"
 
@@ -42,20 +43,22 @@ export function countAttributes(pairs: AttributePair[]): void {
 
   // One upsert per pair: seed row with count=1 on insert, atomic `count + 1` on
   // conflict. Fire-and-forget: kick it off, swallow everything, never rethrow.
-  void db
-    .insert(fpAttributeCounts)
-    .values(pairs.map((p) => ({ attribute: p.attribute, value: p.value, count: 1 })))
-    .onConflictDoUpdate({
-      target: [fpAttributeCounts.attribute, fpAttributeCounts.value],
-      set: {
-        count: sql`${fpAttributeCounts.count} + 1`,
-        updatedAt: now,
-      },
-    })
-    .then(
-      () => {},
-      (error) => {
-        console.error("[attributes] Failed to count attributes:", error)
-      },
-    )
+  // The cause only: the query error's own message lists the attribute values.
+  void retryOnce(() =>
+    db
+      .insert(fpAttributeCounts)
+      .values(pairs.map((p) => ({ attribute: p.attribute, value: p.value, count: 1 })))
+      .onConflictDoUpdate({
+        target: [fpAttributeCounts.attribute, fpAttributeCounts.value],
+        set: {
+          count: sql`${fpAttributeCounts.count} + 1`,
+          updatedAt: now,
+        },
+      }),
+  ).then(
+    () => {},
+    (error) => {
+      console.error("[attributes] Failed to count attributes twice:", failureCause(error))
+    },
+  )
 }

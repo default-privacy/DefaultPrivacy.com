@@ -14,11 +14,12 @@
  * Operational contract:
  *   - Gated on isDatabaseConfigured (mirrors src/lib/api-analytics.ts) so telemetry
  *     never couples latency or uptime to the hot path.
- *   - Fire-and-forget: callers do NOT await; failures are swallowed with a
- *     console.error and never thrown.
+ *   - Fire-and-forget: callers do NOT await; a failed write is tried once more
+ *     (retryOnce), then swallowed with a console.error and never thrown.
  */
 
 import { db, isDatabaseConfigured } from "@/lib/db"
+import { failureCause, retryOnce } from "@/lib/db/retry"
 import { usageCounts } from "@/lib/db/schema"
 import { and, desc, gte, notInArray, sql } from "drizzle-orm"
 
@@ -43,22 +44,23 @@ export function countUsage(kind: string, key: string): void {
   day.setHours(0, 0, 0, 0)
 
   // Fire-and-forget: kick off the upsert, catch everything, never rethrow.
-  void db
-    .insert(usageCounts)
-    .values({ day, kind, key, count: 1 })
-    .onConflictDoUpdate({
-      target: [usageCounts.day, usageCounts.kind, usageCounts.key],
-      set: {
-        count: sql`${usageCounts.count} + 1`,
-        updatedAt: new Date(),
-      },
-    })
-    .then(
-      () => {},
-      (error) => {
-        console.error("[usage] Failed to count usage:", error)
-      },
-    )
+  void retryOnce(() =>
+    db
+      .insert(usageCounts)
+      .values({ day, kind, key, count: 1 })
+      .onConflictDoUpdate({
+        target: [usageCounts.day, usageCounts.kind, usageCounts.key],
+        set: {
+          count: sql`${usageCounts.count} + 1`,
+          updatedAt: new Date(),
+        },
+      }),
+  ).then(
+    () => {},
+    (error) => {
+      console.error(`[usage] Failed to count ${kind} twice:`, failureCause(error))
+    },
+  )
 }
 
 /**
