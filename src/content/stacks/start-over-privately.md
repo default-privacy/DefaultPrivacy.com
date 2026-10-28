@@ -4,7 +4,7 @@ slug: start-over-privately
 description: "A fresh start, set up in order: aliases and a second number first, then a mailing address that isn't your home, masked cards and a quiet move. It is not a new identity. Not legal advice."
 category: Threat-Model Stacks
 difficulty: intermediate
-timeToComplete: "One evening to start, then a few hours spread over the weeks around the move"
+timeToComplete: "One evening, then a few hours"
 publishedAt: "2026-10-28"
 updatedAt: "2026-10-28"
 author: Default Privacy

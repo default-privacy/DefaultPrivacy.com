@@ -154,12 +154,12 @@ export default async function StackDetailPage({ params }: Props) {
                     <Layers className="h-4 w-4 text-foreground/65" aria-hidden="true" />
                     <h2 className="text-sm font-medium text-foreground/85">Tools in this stack</h2>
                   </div>
-                  <div className="grid gap-2 sm:grid-cols-2">
+                  <div className="flex flex-wrap gap-2">
                     {stack.relatedTools.map((tool) => (
                       <Link
                         key={tool.href}
                         href={tool.href}
-                        className="brand2-focus group flex items-center justify-between gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm text-foreground/75 hover:border-foreground/20 hover:text-foreground transition-colors"
+                        className="brand2-focus group inline-flex items-center gap-2 rounded-lg border border-foreground/10 bg-background px-3 py-2 text-sm text-foreground/75 hover:border-foreground/20 hover:text-foreground transition-colors"
                       >
                         <span>{tool.name}</span>
                         <ArrowRight className="h-3.5 w-3.5 text-foreground/40 brand2-arrow-nudge" aria-hidden="true" />
