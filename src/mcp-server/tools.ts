@@ -23,7 +23,7 @@ import { CARD_NOTE, toolCard } from "./compact"
 import { findSection, guideSections, stackOutline } from "@/lib/guide-outline"
 import { parseGuideFaqsFromContent } from "@/lib/guide-faq"
 import { lookupRegistry, REGISTRY_CAVEAT } from "@/lib/mcp-registry"
-import { keywords, mergePages, oneLine, rankContent, searchContent, shortAnswer } from "@/lib/site-search"
+import { isAbout, keywords, mergePages, oneLine, rankContent, searchContent, shortAnswer } from "@/lib/site-search"
 import {
   getAllGlossaryTerms,
   getGlossaryTermBySlug,
@@ -68,9 +68,20 @@ export const SURVIVOR_SAFETY =
   "changing a setting or signing a device out can alert the person watching, so plan visible changes with a trained advocate; in the US the National Domestic Violence Hotline is free, confidential and open 24/7 (call 1-800-799-7233, text START to 88788)."
 const SURVIVOR_NOTE = `This may touch stalking or abuse. Alongside any steps, say: ${SURVIVOR_SAFETY} Full kit: dp_get_stack with slug ${SURVIVOR_KIT}.`
 
-/** Agents skipped a generic "open the best one" on short questions, so this names the exact call. */
-const openFirst = (page: { kind: string; slug: string }) =>
-  `Summaries are not the answer. Before answering, open the best fit, most likely ${page.kind === "guide" ? "dp_get_guide" : "dp_get_stack"} with slug ${page.slug}. If nothing here covers the question, say Default Privacy doesn't and answer from your other sources, such as web search.`
+/**
+ * Names the exact call, but asks for it only when the reply can't answer alone. In the
+ * 2026-10-28 blind test an AI with a few lookups spent one opening every top page and lost to
+ * web search on the fact that lookup would have found.
+ */
+const nextStep = (page: { type: string; slug: string; short_answer?: string }, about = true) => {
+  const call = `${page.type === "guide" ? "dp_get_guide" : "dp_get_stack"} with slug ${page.slug}`
+  const otherwise = "If it doesn't cover the question, say Default Privacy doesn't and use your other sources, such as web search."
+  if (!about)
+    return "No guide or stack is about this: the ones found only mention it. Unless one plainly fits, don't spend a call opening them; answer from your other sources, such as web search."
+  if (page.short_answer)
+    return `The top page's short_answer is its answer in brief, from facts on the page. Open it (${call}) only if the question needs more. ${otherwise}`
+  return `Best fit: ${call}. Its summary is one line, so open it if you need the steps. ${otherwise}`
+}
 
 export function registerTools(server: McpServer): void {
   // The Claude directory reads a tool's display name from annotations.title, not only title.
@@ -109,6 +120,14 @@ export function registerTools(server: McpServer): void {
         searchAnswers(query, Math.min(n, 2)),
       ])
       const pages = mergePages(content, query)
+      const pageCards = pages.map((p, i) => ({
+        type: p.kind,
+        title: p.title,
+        slug: p.slug,
+        summary: oneLine(p.description),
+        ...(i < 2 && isAbout(p, query) && { short_answer: shortAnswer(p.content) }),
+        url: url(`${p.kind === "guide" ? "guides" : "stacks"}/${p.slug}`),
+      }))
       const data = [
         ...answers.map((a) => ({
           type: "answer",
@@ -125,14 +144,7 @@ export function registerTools(server: McpServer): void {
           summary: oneLine(cleanThirdParty(t.tagline ?? t.description ?? "", 2000)),
           url: t.dp_url,
         })),
-        ...pages.map((p, i) => ({
-          type: p.kind,
-          title: p.title,
-          slug: p.slug,
-          summary: oneLine(p.description),
-          ...(i < 2 && { short_answer: shortAnswer(p.content) }),
-          url: url(`${p.kind === "guide" ? "guides" : "stacks"}/${p.slug}`),
-        })),
+        ...pageCards,
         ...content.glossary.map((t) => ({
           type: "glossary",
           title: t.term,
@@ -149,7 +161,7 @@ export function registerTools(server: McpServer): void {
         ...((pages.slice(0, 2).some((p) => p.slug === SURVIVOR_KIT) || words.some((w) => w.startsWith("dox"))) && {
           safety: SURVIVOR_NOTE,
         }),
-        ...(pages.length > 0 && { next: openFirst(pages[0]) }),
+        ...(pageCards.length > 0 && { next: nextStep(pageCards[0], isAbout(pages[0], query)) }),
         ...(product && {
           see_also: `'${query.trim()}' is a mainstream product: dp_find_alternatives returns hand-picked replacements (${product.label}) and what switching involves.`,
         }),
@@ -663,7 +675,7 @@ export function registerTools(server: McpServer): void {
           matches,
           start_here: await resolve(BASELINE.filter((b) => !picked.some((p) => p.items.some((i) => i.slug === b.slug)))),
         },
-        ...(top && { next: openFirst({ kind: top.type, slug: top.slug }) }),
+        ...(top && { next: nextStep(top) }),
         meta: { citation: citation("start") },
       })
     },

@@ -110,7 +110,7 @@ describe("picks replaced the ADO score", () => {
     for (const t of tools.values()) expect(t.description ?? "").not.toMatch(/\bADO\b/)
     expect(SERVER_INSTRUCTIONS).not.toMatch(/\bADO\b/)
     expect(SERVER_INSTRUCTIONS).toContain("how-we-pick")
-    expect(SERVER_INFO.version).toBe("1.10.5")
+    expect(SERVER_INFO.version).toBe("1.10.6")
   })
 })
 

@@ -57,21 +57,37 @@ export function rankContent<T extends Searchable>(items: T[], query: string): T[
   if (terms.length === 0) return items
   const scored: { item: T; score: number; index: number }[] = []
   items.forEach((item, index) => {
-    const fields = [
-      { words: new Set(words(item.title).map(stem)), weight: 3 },
-      { words: new Set(words((item.tags ?? []).join(" ")).map(stem)), weight: 2 },
-      { words: new Set(words(item.description).map(stem)), weight: 1 },
-      { words: new Set(words(item.content ?? "").map(stem)), weight: 0.5 },
-    ]
-    let score = 0
-    for (const term of terms) {
-      const best = fields.find((f) => f.words.has(term))?.weight
-      if (!best) return
-      score += best
-    }
-    scored.push({ item, score, index })
+    const weights = termWeights(item, terms)
+    if (weights) scored.push({ item, score: weights.reduce((a, b) => a + b, 0), index })
   })
   return scored.sort((a, b) => b.score - a.score || a.index - b.index).map((s) => s.item)
+}
+
+/** Each term's best field weight in an item, or null when a term is missing. */
+function termWeights(item: Searchable, terms: string[]): number[] | null {
+  const fields = [
+    { words: new Set(words(item.title).map(stem)), weight: 3 },
+    { words: new Set(words((item.tags ?? []).join(" ")).map(stem)), weight: 2 },
+    { words: new Set(words(item.description).map(stem)), weight: 1 },
+    { words: new Set(words(item.content ?? "").map(stem)), weight: 0.5 },
+  ]
+  const weights: number[] = []
+  for (const term of terms) {
+    const best = fields.find((f) => f.words.has(term))?.weight
+    if (!best) return null
+    weights.push(best)
+  }
+  return weights
+}
+
+/**
+ * Whether a page is about the query: every keyword in its title, tags or description, not only
+ * its text. "ip address" ranks the email-aliases guide first on a passing mention, and its Short
+ * Answer then got stretched to a question it doesn't answer.
+ */
+export function isAbout(item: Searchable, query: string): boolean {
+  const terms = keywords(query).map(stem)
+  return terms.length > 0 && (termWeights(item, terms)?.every((w) => w >= 1) ?? false)
 }
 
 /**

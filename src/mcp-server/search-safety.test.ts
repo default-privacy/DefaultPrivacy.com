@@ -32,9 +32,27 @@ describe("dp_search safety pointer", () => {
   })
 })
 
+// A budgeted AI that opened every top page lost to web search (2026-10-28), so opening is asked for only when needed.
 describe("dp_search next step", () => {
-  it("names the exact call for the top page", async () => {
-    expect((await search("doxxed")).next).toContain("dp_get_stack with slug osint-yourself-exposure-check")
+  it("names the exact call for the top page, optional when it has a short answer", async () => {
+    const next = (await search("doxxed")).next
+    expect(next).toContain("dp_get_stack with slug osint-yourself-exposure-check")
+    expect(next).toContain("only if the question needs more")
+  })
+
+  it("points at a page without a short answer as the best fit", async () => {
+    const r = await search("linux")
+    const top = r.data.find((d: { type: string }) => d.type === "guide" || d.type === "stack")
+    expect(top.short_answer).toBeUndefined()
+    expect(r.next).toContain(`Best fit: dp_get_guide with slug ${top.slug}`)
+  })
+
+  it("says so when pages only mention the words, and carries no short answer for them", async () => {
+    const r = await search("ip address")
+    const pages = r.data.filter((d: { type: string }) => d.type === "guide" || d.type === "stack")
+    expect(pages.length).toBeGreaterThan(0)
+    expect(pages.every((p: { short_answer?: string }) => p.short_answer === undefined)).toBe(true)
+    expect(r.next).toMatch(/^No guide or stack is about this/)
   })
 })
 

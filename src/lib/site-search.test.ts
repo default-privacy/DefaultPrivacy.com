@@ -3,7 +3,7 @@ import { join } from "node:path"
 import { describe, expect, it } from "vitest"
 import { getAllGuides } from "./guides"
 import { getAllStacks, getStackBySlug } from "./stacks"
-import { keywords, mergePages, oneLine, rankContent, searchContent, searchGlossary, shortAnswer } from "./site-search"
+import { isAbout, keywords, mergePages, oneLine, rankContent, searchContent, searchGlossary, shortAnswer } from "./site-search"
 
 const mdFiles = (dir: string) =>
   readdirSync(join(process.cwd(), "src/content", dir)).filter((f) => f.endsWith(".md"))
@@ -175,6 +175,25 @@ describe("mergePages", () => {
     const pages = mergePages(await searchContent("stalking", 3), "stalking")
     expect(pages[0]?.slug).toBe("stalking-abuse-survivor-safety-kit")
     expect(pages[0]?.kind).toBe("stack")
+  })
+})
+
+describe("isAbout", () => {
+  const page = { title: "Private DNS", description: "Stop your ISP seeing every site", tags: ["dns"], content: "a VPN also hides it" }
+  it("is true when every keyword is in the title, a tag or the description", () => {
+    expect(isAbout(page, "private dns")).toBe(true)
+    expect(isAbout(page, "isp")).toBe(true)
+  })
+  it("is false when a keyword is only in the text, or missing", () => {
+    expect(isAbout(page, "vpn")).toBe(false)
+    expect(isAbout(page, "dns vpn")).toBe(false)
+    expect(isAbout(page, "tor")).toBe(false)
+    expect(isAbout(page, "how")).toBe(false)
+  })
+  it("marks 'ip address' as a passing mention in the guide that ranks first", async () => {
+    const [top] = mergePages(await searchContent("ip address", 3), "ip address")
+    expect(top).toBeDefined()
+    expect(isAbout(top!, "ip address")).toBe(false)
   })
 })
 

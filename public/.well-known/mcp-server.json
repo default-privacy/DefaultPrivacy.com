@@ -1,7 +1,7 @@
 {
   "name": "default-privacy",
   "display_name": "Default Privacy MCP",
-  "version": "1.10.5",
+  "version": "1.10.6",
   "description": "MCP server for the Default Privacy hub — one search across privacy tools, guides, curated tool stacks and the glossary; how private an app or service is; replacements for mainstream apps with what switching involves; and free domain diagnostics (email security, WHOIS, breaches). Read-only; no auth.",
   "homepage": "https://defaultprivacy.com",
   "documentation_url": "https://defaultprivacy.com/ai",
