@@ -163,4 +163,14 @@ export const SITUATIONS: Situation[] = [
       { kind: "stack", slug: "delete-yourself-from-the-internet" },
     ],
   },
+  {
+    id: "start-over",
+    name: "I'm starting over somewhere new",
+    blurb: "A new address kept off people-search sites, set up in order.",
+    items: [
+      { kind: "stack", slug: "start-over-privately" },
+      { kind: "guide", slug: "get-a-mailing-address-that-isnt-your-home" },
+      { kind: "guide", slug: "move-without-landing-on-people-search-sites" },
+    ],
+  },
 ]
