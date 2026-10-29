@@ -4,9 +4,9 @@ slug: start-over-privately
 description: "A fresh start, set up in order: aliases and a second number first, then a mailing address that isn't your home, masked cards and a quiet move. It is not a new identity. Not legal advice."
 category: Threat-Model Stacks
 difficulty: intermediate
-timeToComplete: "One evening, then a few hours"
+timeToComplete: "One evening to start, the rest takes time"
 publishedAt: "2026-10-28"
-updatedAt: "2026-10-28"
+updatedAt: "2026-10-29"
 author: Default Privacy
 quickExit: true
 tags:
@@ -38,7 +38,7 @@ relatedTools:
 
 A fresh start is mostly about order. Set up the new contact details first, then a mailing address that isn't your home, then move without handing your new address to every mailer in the country. Clean up people-search sites last, once the new records exist, because the sites refill from them.
 
-You have to start somewhere. Step 1 takes one evening and needs no move. The rest can wait until you are ready.
+This is not an overnight job. Like anything worth doing, a fresh start takes time. You have to start somewhere, and Step 1 takes one evening with no move needed.
 
 ## The Short Answer
 
