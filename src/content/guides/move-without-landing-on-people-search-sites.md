@@ -1,12 +1,12 @@
 ---
 title: "How to Move Without Landing on People-Search Sites"
 slug: move-without-landing-on-people-search-sites
-description: "An ordered plan for a move: get a mail address that isn't your home before you go, skip the permanent USPS change of address, keep the new address off the records you can, and opt out of people-search sites last. Not legal advice."
+description: "An ordered plan for a move: set up an email alias and a second number, get a mail address that isn't your home before you go, skip the permanent USPS change of address, keep the new address off the records you can, and opt out of people-search sites last. Not legal advice."
 category: Privacy
 difficulty: intermediate
 timeToComplete: "2 hours, spread over the weeks before and after the move"
 publishedAt: "2026-10-21"
-updatedAt: "2026-10-28"
+updatedAt: "2026-10-29"
 author: Default Privacy
 tags:
   - moving privacy
@@ -36,7 +36,7 @@ relatedTools:
 
 **Last checked: October 2026** · Each claim links to the agency, law or vendor page it comes from. General information, not legal advice.
 
-Set up a mail address that isn't your home before you move, give that address to the people who send you mail, and skip the permanent USPS change of address. Then keep the new home address off utility, voter and property records where you lawfully can, and file people-search opt-outs after you arrive. Prevention comes first because cleanup never finishes: the sites refill from new records.
+Set up an email alias and a second number first, then a mail address that isn't your home before you move. Give that address to the people who send you mail, and skip the permanent USPS change of address. Then keep the new home address off utility, voter and property records where you lawfully can, and file people-search opt-outs after you arrive. Prevention comes first because cleanup never finishes: the sites refill from new records.
 
 No step makes you invisible. Each one below says what it does, where it stops and how to tell it's done.
 
@@ -62,7 +62,17 @@ So give your bank and federal agencies your real details. For landlords and lend
 
 ---
 
-## Step 1: Get a mail address before you move
+## Step 1: Set up an email alias and a second number first
+
+**What to do.** Before anything else, set up an [email alias](/guides/email-aliases-simplelogin-vs-addy) and a [second phone number](/guides/get-a-second-phone-number). The mailbox form in Step 2 asks for a phone number and an email address ([PS Form 1583](https://about.usps.com/forms/ps1583.pdf)), and so do utility sign-ups, store accounts, deliveries and apartment applications. Give the new ones wherever your real ones aren't required. Your name, email, phone and address together are what let a broker tie a new record to you.
+
+**The limit.** Your bank and federal agencies (see the legal section) need your real details. Check what your landlord requires. An alias protects you from the rest.
+
+**How you know it's done.** Your new sign-ups use the alias and the second number, and your real ones are kept for the few places that require them.
+
+---
+
+## Step 2: Get a mail address before you move
 
 **What to do.** Rent a mailbox that isn't your home, in any city, while you still live at your old address. Two kinds:
 
@@ -75,25 +85,15 @@ So give your bank and federal agencies your real details. For landlords and lend
 
 ---
 
-## Step 2: Skip the permanent USPS change of address
+## Step 3: Skip the permanent USPS change of address
 
-**What to do.** Give your new mail address to each sender yourself: bank, insurer, employer, tax and benefit offices, doctors, subscriptions. Do this instead of filing a permanent change of address with USPS. If you still need a safety net for the weeks while senders catch up, file a temporary one.
+**What to do.** Give your mail address yourself to the people and companies that mail you things: shops, subscriptions, doctors, friends. Give your bank, your employer and federal agencies your real home address. Do this instead of filing a permanent change of address with USPS. If you still need a safety net for the weeks while senders catch up, file a temporary one.
 
 **Why.** USPS describes NCOALink as a dataset of about 160 million permanent change-of-address records, built from names and addresses of people who filed with USPS, and says the data goes regularly to companies it has licensed ([USPS PostalPro](https://postalpro.usps.com/mailing-and-shipping-services/NCOALink)). Mailers use it to update their lists before mailing. A permanent filing adds your new address to that dataset. A temporary request still gives USPS your new address.
 
 **The limit.** USPS's technical guide for licensees says temporary requests are only in the 48-month product, the one sold to its Full Service Provider licensees, and that a match to one comes back with no new address ([NCOALink User Technical Reference Guide](https://postalpro.usps.com/mnt/glusterfs/2023-04/usertechinfo_v12.pdf)). So a temporary request can still tell some mailers that you moved, just not where. Treat it as the better option, not a guarantee. Temporary forwarding has a time limit, with a 15-day minimum. USPS's FAQ says up to 185 days, and a second request can extend it by up to 179 more, for 364 in total ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). Mail from businesses, banks and agencies that use ancillary endorsements (mailer instructions for undeliverable mail) may not be forwarded (USPS gives driver's licenses and bank statements as examples), so update those senders directly ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). Any change of address, temporary or permanent, also makes USPS mail a Move Validation Letter to the address you are leaving ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). If you are leaving someone who still lives or gets mail there, that letter can alert them, so plan it with an advocate before you file (see the [stalking and abuse survivor safety kit](/stacks/stalking-abuse-survivor-safety-kit)).
 
-**How you know it's done.** Your important senders show the new mail address in their own accounts, and no permanent change of address is on file.
-
----
-
-## Step 3: Use an email alias and a second number for everything else
-
-**What to do.** Use an [email alias](/guides/email-aliases-simplelogin-vs-addy) and a [second phone number](/guides/get-a-second-phone-number) for utility sign-ups, store accounts, deliveries and apartment applications that don't need your real ones. Your name, email, phone and address together are what let a broker tie a new record to you.
-
-**The limit.** Your bank and federal agencies (see the legal section) need your real details. Check what your landlord requires. An alias protects you from the rest.
-
-**How you know it's done.** Your new sign-ups use the alias and the second number, and your real ones are kept for the few places that require them.
+**How you know it's done.** The people and companies that mail you things show the new mail address, your bank and employer have your real home address, and no permanent change of address is on file.
 
 ---
 
@@ -137,7 +137,7 @@ If you now live in California, the state's Delete Request and Opt-out Platform (
 
 **The limit.** Records that come from government files stay public, and sites re-list you when new data arrives. Opt-outs are a recurring job.
 
-**How you know it's done.** A search for your name and new address shows nothing on the major sites, and you re-check monthly for the first few months.
+**How you know it's done.** A search for your name and new address shows nothing on the major sites, and you have a reminder to check again. Our [broker removal guide](/guides/remove-name-from-data-brokers) suggests every 90 days.
 
 ---
 
