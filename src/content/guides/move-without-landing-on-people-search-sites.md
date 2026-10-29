@@ -87,7 +87,7 @@ So give your bank and federal agencies your real details. For landlords and lend
 
 ## Step 3: Skip the permanent USPS change of address
 
-**What to do.** Give your mail address yourself to the people and companies that mail you things: shops, subscriptions, doctors, friends. Give your bank, your employer and federal agencies your real home address. Do this instead of filing a permanent change of address with USPS. If you still need a safety net for the weeks while senders catch up, file a temporary one and point it at the mailbox, not your new home. USPS says "You may file a COA request to a CMRA" (a commercial mail receiving agency, meaning a private mailbox) ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). That way the forwarding order lists the mailbox, not your new home.
+**What to do.** Give your mail address yourself to the people and companies that mail you things: shops, subscriptions, doctors, friends. Give your bank, your employer and federal agencies your real home address. Do this instead of filing a permanent change of address with USPS. If you still need a safety net for the weeks while senders catch up, file a temporary one and point it at the mailbox, not your new home. USPS says "You may file a COA request to a CMRA" (a commercial mail receiving agency, meaning a private mailbox) ([USPS FAQ](https://faq.usps.com/articles/Knowledge/Change-of-Address-The-Basics)). That way the forwarding order lists the mailbox, not your new home. If you are enrolling in a state Address Confidentiality Program, don't file one at all until you have asked the program (see Step 5).
 
 **Why.** USPS describes NCOALink as a dataset of about 160 million permanent change-of-address records, built from names and addresses of people who filed with USPS, and says the data goes regularly to companies it has licensed ([USPS PostalPro](https://postalpro.usps.com/mailing-and-shipping-services/NCOALink)). Mailers use it to update their lists before mailing. A permanent filing adds your new address to that dataset. A temporary request still gives USPS the address you point it at, which is why it should be the mailbox.
 
@@ -113,9 +113,11 @@ So give your bank and federal agencies your real details. For landlords and lend
 
 If you are at risk from stalking, domestic violence, harassment or rape, apply to your state's Address Confidentiality Program (ACP). The National Association of Secretaries of State says ACPs give participants a free, forwardable substitute address or a PO box to use instead of the real one, that in most states it can be used for driver's licenses, school enrollment, voter registration and other public records, and that applicants usually enroll through a counselor, often at a victim assistance center ([NASS, October 2022](https://www.nass.org/sites/default/files/reports/NASS-White-Paper-Voters-ACP-Programs-Oct22.pdf)).
 
+Ask your program before you file any USPS change of address, including a temporary one. Oregon's program tells participants "DO NOT submit a change of address or mail forwarding request with the United States Postal Service" and tells new enrollees to "Cancel any USPS mail forwarding service you have set up" ([Oregon DOJ ACP Participant Guide, updated 2024](https://www.doj.state.or.us/wp-content/uploads/2024/01/ACP-Participant-Guide.pdf)). Other programs may differ, so ask yours.
+
 **The limit.** Programs differ by state, and not every state has one. The lists we found disagree, so check your state's own program page. Some states make ACP voters register under their real address and flag the record confidential instead ([NASS](https://www.nass.org/sites/default/files/reports/NASS-White-Paper-Voters-ACP-Programs-Oct22.pdf)). An ACP doesn't stop a landlord, bank or utility from knowing where you live.
 
-**How you know it's done.** You have your ACP card and substitute address, or your voter record is marked confidential, and you've checked how the state's records show you.
+**How you know it's done.** You have your ACP card and substitute address, or your voter record is marked confidential, you've checked how the state's records show you, and you've asked your program before filing any USPS change of address.
 
 ---
 
