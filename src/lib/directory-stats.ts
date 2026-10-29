@@ -56,6 +56,7 @@ export const getPublicDirectoryStats = unstable_cache(
   ["public-directory-stats"],
   // The root layout reads this, and a page revalidates as often as the SHORTEST cache it
   // touches, so a short value here made every page regenerate every 10 minutes (ISR writes,
-  // CPU). The value is a rounded label ("870+"): daily is plenty.
-  { revalidate: 86400 },
+  // CPU). The value is a rounded label ("870+") that moves a few times a month, and daily
+  // still rebuilt every page each day, so it matches the reading pages' weekly 604800.
+  { revalidate: 604800 },
 )
