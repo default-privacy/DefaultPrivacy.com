@@ -82,7 +82,7 @@ Two routes, and you can use both:
 
 Treat a downloaded archive like a bank statement. It holds years of mail, including password-reset messages. Store it encrypted, and delete it when you no longer need it.
 
-Before you leave, look at what Google has filed you under. My Ad Center shows the ad topics and brands it uses, and Google says its ads draw on details like your age and gender "that you've provided in your Google Account or that Google has estimated about you" ([My Ad Center Help](https://support.google.com/My-Ad-Center-Help/answer/12155656)). Leaving Gmail stops new mail feeding it. Your other Google accounts and activity still can.
+Before you leave, look at what Google has filed you under. My Ad Center shows the ad topics and brands it uses, and Google says its ads draw on details like your age and gender "that you've provided in your Google Account or that Google has estimated about you" ([My Ad Center Help](https://support.google.com/My-Ad-Center-Help/answer/12155656)). Leaving Gmail doesn't clear it. Your Google Account and its saved activity keep it going until you change them.
 
 ---
 
