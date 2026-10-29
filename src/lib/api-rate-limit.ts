@@ -12,6 +12,8 @@
 
 import { headers } from "next/headers"
 
+import { userAgentBucket } from "@/mcp-server/request-counts"
+
 export type RateLimitTier = "free" | "developer" | "unlimited"
 
 type TierConfig = {
@@ -194,10 +196,14 @@ export function withRateLimit(
     const responseTimeMs = Date.now() - startTime
 
     // Count the request in the daily totals (fire and forget). No per-request row.
-    import("@/lib/api-analytics").then(({ updateDailyStats }) => {
-      const url = new URL(request.url)
-      updateDailyStats(options.resource ?? url.pathname, response.status, responseTimeMs)
-    })
+    // Self-declared bots are left out: liveness probes every few minutes would otherwise
+    // write on every visit and keep the database from ever idling.
+    if (userAgentBucket(request.headers.get("user-agent")) !== "bot-declared") {
+      import("@/lib/api-analytics").then(({ updateDailyStats }) => {
+        const url = new URL(request.url)
+        updateDailyStats(options.resource ?? url.pathname, response.status, responseTimeMs)
+      })
+    }
 
     // Clone response to add rate limit headers
     const newHeaders = new Headers(response.headers)

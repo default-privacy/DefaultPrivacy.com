@@ -26,10 +26,37 @@ describe("withMcpGate", () => {
     expect(called).toBe(false)
   })
 
-  it("passes small batches, junk bodies and GETs to the handler", async () => {
-    for (const req of [post(msgs(3)), post("not json"), new Request("https://example.test/api/mcp")]) {
+  it("passes small batches and GETs to the handler", async () => {
+    for (const req of [post(msgs(3)), new Request("https://example.test/api/mcp")]) {
       expect(await (await withMcpGate(ok)(req)).text()).toBe("handled")
     }
+  })
+
+  it("answers a body that isn't JSON with a parse error, without the handler", async () => {
+    for (const body of ["not json", ""]) {
+      let called = false
+      const res = await withMcpGate(async () => ((called = true), new Response("handled")))(
+        post(body, { "content-type": "application/json" }),
+      )
+      expect(res.status).toBe(400)
+      expect((await res.json()).error.code).toBe(-32700)
+      expect(called).toBe(false)
+    }
+  })
+
+  it("counts nothing for a self-declared bot's liveness probe, but still answers it", async () => {
+    const probe = "SentinelOracle/0.1 (+https://glimind.com/opt-out; liveness-only, never invokes tools)"
+    const init = { jsonrpc: "2.0", id: 1, method: "initialize", params: { clientInfo: { name: "probe" } } }
+    for (const body of [init, { jsonrpc: "2.0", id: 2, method: "tools/list" }, "not json"]) {
+      await withMcpGate(ok)(post(body, { "user-agent": probe }))
+    }
+    expect(counted).toEqual([])
+  })
+
+  it("still counts a self-declared bot's tool call", async () => {
+    const call = { jsonrpc: "2.0", id: 3, method: "tools/call", params: { name: "dp_search", arguments: { query: "vpn" } } }
+    await withMcpGate(ok)(post(call, { "user-agent": "SomeBot/1.0" }))
+    expect(counted).toEqual(expect.arrayContaining([["mcp_ua", "bot-declared"], ["mcp_sender", "call:bot-declared"]]))
   })
 
   it("counts method, app, protocol and Accept shape on a connect", async () => {

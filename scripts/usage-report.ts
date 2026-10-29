@@ -112,7 +112,8 @@ async function main() {
   }
   const senders = usage.topKeys.filter((k) => k.kind === "mcp_ua")
   if (senders.length > 0) {
-    console.log("  POSTs by kind of sender (bot-declared and script are not people's apps):")
+    console.log("  POSTs by kind of sender (bot-declared and script are not people's apps;")
+    console.log("  from 2026-10-29, bot-declared shows only tool calls: liveness probes are no longer counted):")
     for (const k of senders) console.log(`    ${k.key.padEnd(32)} ${String(k.total).padStart(6)}`)
   }
   const bySender = usage.topKeys.filter((k) => k.kind === "mcp_sender")
