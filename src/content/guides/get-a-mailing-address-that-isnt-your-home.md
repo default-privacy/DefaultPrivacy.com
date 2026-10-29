@@ -173,7 +173,7 @@ Form 1583 is the USPS form that lets a private or virtual mailbox accept mail fo
 
 ## The legal line
 
-Privacy aliases are fine: a mailbox address, an email alias, a second phone number. False names or false addresses on government, bank, lease or credit paperwork are not, and this guide doesn't help with them.
+Privacy aliases are fine: a mailbox address, an email alias, a second phone number. False names or false addresses on government, bank, lease or credit paperwork are not, and this guide doesn't help with them. Elsewhere, a name you go by is fine on a form that checks no ID, as long as nobody is misled to get something. California's Attorney General describes the common-law right as using "whatever name he or she chooses, as long as the purpose is not 'to defraud or intentionally confuse'" ([California AG Opinion 00-205](https://oag.ca.gov/system/files/opinions/pdfs/00-205.pdf)). Anything with an ID check or a credit pull gets your legal name.
 
 - Federal law makes it a crime to knowingly and willfully make a materially false statement in a matter within the jurisdiction of the federal executive, legislative or judicial branch ([18 U.S.C. 1001](https://www.law.cornell.edu/uscode/text/18/1001)).
 - US banks must get a residential or business street address from an individual before opening an account, with fallbacks for people who have no street address ([31 CFR 1020.220](https://www.law.cornell.edu/cfr/text/31/1020.220)).

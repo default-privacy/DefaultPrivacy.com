@@ -103,7 +103,7 @@ Making your own power drops the power bill. It doesn't drop the paperwork. Rules
 
 ## The legal line
 
-Privacy aliases for email, phone and cards are fine, and so is a mailbox for your mail. False names or false addresses on government, bank, lease or credit paperwork are not.
+Privacy aliases for email, phone and cards are fine, and so is a mailbox for your mail. False names or false addresses on government, bank, lease or credit paperwork are not. Elsewhere, a name you go by is fine on a form that checks no ID, as long as nobody is misled to get something. California's Attorney General describes the common-law right as using "whatever name he or she chooses, as long as the purpose is not 'to defraud or intentionally confuse'" ([California AG Opinion 00-205](https://oag.ca.gov/system/files/opinions/pdfs/00-205.pdf)). Anything with an ID check or a credit pull gets your legal name.
 
 - Federal law makes it a crime to knowingly and willfully make a materially false statement in a matter within the jurisdiction of the federal executive, legislative or judicial branch ([18 U.S.C. 1001](https://www.law.cornell.edu/uscode/text/18/1001)).
 - US banks must get a residential or business street address from an individual before opening an account ([31 CFR 1020.220](https://www.law.cornell.edu/cfr/text/31/1020.220)). If you have no street address, the rule allows "an Army Post Office (APO) or Fleet Post Office (FPO) box number, or the residential or business street address of next of kin or of another contact individual". It doesn't list a PO Box or a private mailbox.

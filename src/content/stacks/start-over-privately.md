@@ -66,7 +66,7 @@ What it does not do:
 
 ## The legal line
 
-Privacy aliases for email, phone numbers and payment cards are fine, and so is a mailbox address for your mail. False names or false addresses on government, bank, lease or credit paperwork are not. Some federal rules that apply:
+Privacy aliases for email, phone numbers and payment cards are fine, and so is a mailbox address for your mail. False names or false addresses on government, bank, lease or credit paperwork are not. Elsewhere, a name you go by is fine on a form that checks no ID, as long as nobody is misled to get something. California's Attorney General describes the common-law right as using "whatever name he or she chooses, as long as the purpose is not 'to defraud or intentionally confuse'" ([California AG Opinion 00-205](https://oag.ca.gov/system/files/opinions/pdfs/00-205.pdf)). Anything with an ID check or a credit pull gets your legal name. Some federal rules that apply:
 
 - The mail-agent form you sign for a mailbox says that anyone who gives false or misleading information on it may face criminal and civil penalties ([PS Form 1583](https://about.usps.com/forms/ps1583.pdf)).
 - Federal law makes it a crime to knowingly and willfully make a materially false statement in a matter within the jurisdiction of the federal executive, legislative or judicial branch ([18 U.S.C. 1001](https://www.law.cornell.edu/uscode/text/18/1001)).
