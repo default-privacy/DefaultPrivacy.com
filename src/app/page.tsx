@@ -14,8 +14,7 @@ import { getCanonicalSiteUrl, getOgImageUrl } from "@/lib/site-url"
 import { getPublicDirectoryStats } from "@/lib/directory-stats"
 import { getAllGuides } from "@/lib/guides"
 import { getAllStacks } from "@/lib/stacks"
-import { SERVER_INFO } from "@/mcp-server/server"
-import { AgentsSection } from "@/components/home/agents-section"
+import { HeroConnectPanel } from "@/components/home/agents-section"
 import { Suspense } from "react"
 
 // The homepage IS the directory (filters + pagination via searchParams)
@@ -72,7 +71,6 @@ export default async function Home({
     [directoryStats.toolsLabel, "tools"],
     [String(guides.length), "guides"],
     [String(stacks.length), "stacks"],
-    [SERVER_INFO.version, "MCP"],
   ] as const
 
   return (
@@ -90,7 +88,7 @@ export default async function Home({
           <div className="absolute left-1/2 top-[-16%] h-[min(52vw,380px)] w-[min(100vw,900px)] -translate-x-1/2 rounded-full bg-primary/14 opacity-60 blur-[120px]" />
         </div>
 
-        <div className="container relative py-14 md:py-[4.5rem]">
+        <div className="container relative grid gap-10 py-14 md:py-[4.5rem] xl:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] xl:items-center xl:gap-14">
           <div className="max-w-3xl">
             <h1 className="brand2-hero-animate text-balance text-4xl font-light leading-[1.06] tracking-cinematic text-foreground/90 md:text-[4.25rem]">
               No Freedom Without <span className="hero-shout">Privacy.</span>
@@ -104,7 +102,7 @@ export default async function Home({
 
             {/* The search is the primary action; the agent door sits beside it */}
             <div className="brand2-hero-animate-delay-2 mt-7 flex flex-wrap items-stretch gap-2.5">
-              <div className="min-w-0 flex-[1_1_22rem] max-w-xl">
+              <div className="min-w-0 flex-1 max-w-xl">
                 <Suspense>
                   <DirectoryToolSearch
                     size="prominent"
@@ -112,12 +110,6 @@ export default async function Home({
                   />
                 </Suspense>
               </div>
-              <Link
-                href="/ai"
-                className="brand2-focus inline-flex items-center rounded-lg border border-foreground/15 px-4 text-[15px] font-medium text-foreground/85 transition-colors hover:border-primary/50 hover:text-foreground"
-              >
-                For AI agents →
-              </Link>
             </div>
 
             <p className="brand2-hero-animate-delay-3 mt-5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[14px] text-foreground/60">
@@ -138,6 +130,7 @@ export default async function Home({
               <span className="border-l border-foreground/15 px-4">no paid placements</span>
             </p>
           </div>
+          <HeroConnectPanel />
         </div>
       </section>
 
@@ -145,7 +138,6 @@ export default async function Home({
           THE DIRECTORY — the homepage body
       ═══════════════════════════════════════════════════════════════════════ */}
       <main id="directory" className="container flex-1 scroll-mt-24 pb-16 pt-10">
-        <AgentsSection className="mb-12" />
         <DirectoryBrowser searchParams={params} basePath="/" showSearch={false} />
         <ConnectAiCard size="slim" className="mt-10" />
         <PartnerRevenueDisclosure className="mt-10" />
