@@ -69,6 +69,11 @@ export async function check(slug: string, url: string): Promise<Result> {
       if (res.status >= 300 && res.status < 400 && location) {
         const next = new URL(location, current)
         const nextDomain = registrableDomain(next.hostname)
+        // Google sends datacenter IPs to its captcha page, e.g. Blogger-hosted sites like gmer.net.
+        if (nextDomain === "google.com" && next.pathname.startsWith("/sorry/")) {
+          await res.body?.cancel()
+          return { slug, url, kind: "soft", problem: "Google captcha page", finalUrl: next.toString() }
+        }
         if (nextDomain !== startDomain && INTENDED_REDIRECTS[slug] !== nextDomain) {
           await res.body?.cancel()
           return { slug, url, kind: "hard", problem: `redirects to another domain (${next.hostname})`, finalUrl: next.toString() }
