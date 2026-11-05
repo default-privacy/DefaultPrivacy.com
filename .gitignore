@@ -30,6 +30,8 @@
 # Claude Code (local only — do not commit, same as .cursor/)
 .claude/
 CLAUDE.md
+# Written and re-added by `next dev` when it detects an AI agent
+AGENTS.md
 
 # misc
 .DS_Store
