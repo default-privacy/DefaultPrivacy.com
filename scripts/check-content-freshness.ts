@@ -79,6 +79,18 @@ lines.push(
     : `Copied ${tosdrCopied}, ${tosdrAge} days ago.`,
 )
 
+// The scanner's EasyPrivacy tracker rules are a weekly copy too (bun run sync:easyprivacy).
+const epCopied = (JSON.parse(readFileSync(join(import.meta.dir, "../src/data/easyprivacy-snapshot.json"), "utf8")) as { copied_on: string }).copied_on
+const epAge = Math.floor((now - Date.parse(`${epCopied}T00:00:00Z`)) / DAY_MS)
+lines.push(
+  "",
+  "## EasyPrivacy snapshot",
+  "",
+  epAge > TOSDR_MAX_AGE_DAYS
+    ? `Copied ${epCopied}, ${epAge} days ago: older than ${TOSDR_MAX_AGE_DAYS} days. Run \`bun run sync:easyprivacy\` and commit src/data/easyprivacy-snapshot.json.`
+    : `Copied ${epCopied}, ${epAge} days ago.`,
+)
+
 const report = `${lines.join("\n")}\n`
 
 console.log(report)

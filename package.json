@@ -26,10 +26,12 @@
     "dns:check": "bun scripts/check-dns.ts",
     "usage:report": "bun run scripts/usage-report.ts",
     "smoke:mcp:prod": "bun scripts/mcp-prod-smoke.mjs",
-    "sync:tosdr": "bun scripts/sync-tosdr.ts"
+    "sync:tosdr": "bun scripts/sync-tosdr.ts",
+    "sync:easyprivacy": "bun scripts/sync-easyprivacy.ts"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
+    "@ghostery/adblocker": "^2.20.3",
     "@modelcontextprotocol/sdk": "^1.32.1",
     "@neondatabase/serverless": "^1.0.2",
     "@radix-ui/react-accordion": "^1.2.12",

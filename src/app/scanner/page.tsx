@@ -169,6 +169,11 @@ export default function ScannerPage() {
           </div>
         </section>
 
+        <p className="mx-auto max-w-5xl px-6 pb-10 text-[11px] text-foreground/40">
+          Tracker rules: EasyPrivacy, by The EasyList authors (
+          <a href="https://easylist.to/" className="underline decoration-foreground/20 underline-offset-2 hover:text-foreground/60">easylist.to</a>
+          ). Our own list of named trackers sits on top of it.
+        </p>
       </main>
 
       <Footer />

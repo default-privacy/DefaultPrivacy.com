@@ -36,7 +36,7 @@ export type ThirdPartyRequest = {
   url: string
   domain: string
   type: string
-  purpose: "cdn" | "analytics" | "advertising" | "social" | "api" | "unknown"
+  purpose: "cdn" | "analytics" | "advertising" | "social" | "tracking" | "api" | "unknown"
   size: number
 }
 

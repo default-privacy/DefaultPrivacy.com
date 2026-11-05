@@ -52,12 +52,21 @@ function calculateTrackerScore(trackers: TrackerInfo[]): {
   const analyticTrackers = trackers.filter(t => t.category === "analytics")
   const adTrackers = trackers.filter(t => t.category === "advertising")
   const socialTrackers = trackers.filter(t => t.category === "social")
+  const listedTrackers = trackers.filter(t => t.category === "tracking")
 
   // Deduct for analytics (less severe)
   score -= analyticTrackers.length * 15
   if (analyticTrackers.length > 0) {
     recommendations.push(
       `Remove ${analyticTrackers.length} analytics tracker(s): ${analyticTrackers.map(t => t.name).join(", ")}`,
+    )
+  }
+
+  // Trackers known only from the EasyPrivacy list: scored like analytics
+  score -= listedTrackers.length * 15
+  if (listedTrackers.length > 0) {
+    recommendations.push(
+      `Remove ${listedTrackers.length} tracker(s) on the EasyPrivacy block list: ${listedTrackers.map(t => t.name).join(", ")}`,
     )
   }
 
@@ -193,10 +202,10 @@ function calculateThirdPartyScore(requests: ThirdPartyRequest[]): {
   const recommendations: string[] = []
 
   const cdnRequests = requests.filter(r => r.purpose === "cdn")
-  const analyticsRequests = requests.filter(r => r.purpose === "analytics")
+  const analyticsRequests = requests.filter(r => r.purpose === "analytics" || r.purpose === "tracking")
   const adRequests = requests.filter(r => r.purpose === "advertising")
   const otherRequests = requests.filter(
-    r => !["cdn", "analytics", "advertising"].includes(r.purpose),
+    r => !["cdn", "analytics", "tracking", "advertising"].includes(r.purpose),
   )
 
   // CDN requests are acceptable (up to a point)

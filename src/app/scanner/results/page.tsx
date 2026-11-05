@@ -41,6 +41,7 @@ const CATEGORY_TAG: Record<string, { label: string; cls: string }> = {
   advertising: { label: "ADVERTISING", cls: "bg-destructive/15 text-destructive" },
   social: { label: "SOCIAL", cls: "bg-foreground/10 text-foreground/60" },
   fingerprinting: { label: "FINGERPRINT", cls: "bg-technical/20 text-technical" },
+  tracking: { label: "TRACKER", cls: "bg-caution/15 text-caution" },
   unknown: { label: "OTHER", cls: "bg-foreground/10 text-foreground/50" },
 }
 

@@ -13,6 +13,7 @@ import { KNOWN_TRACKERS, SECURITY_HEADERS, FINGERPRINT_APIS } from "./trackers"
 import type { HeaderInfo, ScanResult, ThirdPartyRequest } from "./types"
 import type { TrackerCategory } from "./trackers"
 import { assertSafeScanTarget, isScanRequestAllowed } from "./ssrf-guard"
+import { matchesEasyPrivacy } from "./easyprivacy"
 
 /**
  * Extract domain from URL
@@ -53,7 +54,11 @@ function extractDomain(url: string): string {
 /**
  * Identify tracker category from URL/domain
  */
-function identifyTracker(url: string): { category: TrackerCategory; name: string } {
+function identifyTracker(
+  url: string,
+  pageUrl = "",
+  resourceType = "script",
+): { category: TrackerCategory; name: string } {
   const urlLower = url.toLowerCase()
 
   // Check known trackers
@@ -140,14 +145,23 @@ function identifyTracker(url: string): { category: TrackerCategory; name: string
     }
   }
 
+  // Not on the named lists: ask EasyPrivacy. A hit is a tracker a blocker would have stopped.
+  if (pageUrl && matchesEasyPrivacy(url, pageUrl, resourceType)) {
+    return { category: "tracking", name: extractDomain(url) }
+  }
+
   return { category: "unknown", name: "unknown" }
 }
 
 /**
  * Determine purpose of third-party request
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- domain reserved for future use
-export function determinePurpose(url: string, domain: string): ThirdPartyRequest["purpose"] {
+export function determinePurpose(
+  url: string,
+  domain: string,
+  pageUrl = "",
+  resourceType = "script",
+): ThirdPartyRequest["purpose"] {
   const urlLower = url.toLowerCase()
 
   // Known trackers first: many serve from hosts containing "cdn" or "cloudfront"
@@ -162,6 +176,10 @@ export function determinePurpose(url: string, domain: string): ThirdPartyRequest
 
   if (KNOWN_TRACKERS.social.some(t => urlLower.includes(t))) {
     return "social"
+  }
+
+  if (pageUrl && matchesEasyPrivacy(url, pageUrl, resourceType)) {
+    return "tracking"
   }
 
   const cdnPatterns = ["cdn", "cloudflare", "cloudfront", "fastly", "akamai", "jsdelivr", "unpkg", "cdnjs"]
@@ -324,8 +342,11 @@ export async function scanWebsite(url: string, browser: Browser): Promise<ScanRe
         requestMap.set(reqUrl, { size: 0, type: request.resourceType() })
 
         // Check for known trackers
-        const { category, name } = identifyTracker(reqUrl)
-        if (category !== "unknown") {
+        const { category, name } = identifyTracker(reqUrl, url, request.resourceType())
+        // EasyPrivacy hits count once per domain: logging beacons (Datadog, Sentry) fire
+        // repeatedly and would otherwise zero the tracker score on their own.
+        const seen = category === "tracking" && result.trackers.some(t => t.category === "tracking" && t.domain === reqDomain)
+        if (category !== "unknown" && !seen) {
           result.trackers.push({
             url: reqUrl,
             domain: reqDomain,
@@ -560,7 +581,7 @@ export async function scanWebsite(url: string, browser: Browser): Promise<ScanRe
         url: reqUrl,
         domain,
         type: data.type,
-        purpose: determinePurpose(reqUrl, domain),
+        purpose: determinePurpose(reqUrl, domain, url, data.type),
         size: data.size,
       })
     }

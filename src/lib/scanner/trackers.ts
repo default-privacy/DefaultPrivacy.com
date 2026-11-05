@@ -193,4 +193,5 @@ export const FINGERPRINT_APIS = [
   { name: "HardwareConcurrency", pattern: /navigator\.hardwareConcurrency/ },
 ] as const
 
-export type TrackerCategory = "analytics" | "advertising" | "social" | "fingerprinting" | "unknown"
+// "tracking": matched by the EasyPrivacy rules but not on the named lists above.
+export type TrackerCategory = "analytics" | "advertising" | "social" | "fingerprinting" | "tracking" | "unknown"
