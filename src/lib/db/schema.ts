@@ -4,6 +4,7 @@
  */
 
 import { relations } from "drizzle-orm"
+import type { KeystrokeLeak } from "@/lib/scanner/types"
 import {
   boolean,
   date,
@@ -266,6 +267,8 @@ export const publicScans = pgTable("public_scans", {
   headersFound: json("headers_found"),
   thirdPartyReqs: json("third_party_reqs"),
   fingerprintApis: json("fingerprint_apis"),
+  // Keystroke probe result; null on scans that predate it (see ScanResult.keystrokeLeaks)
+  keystrokeProbe: json("keystroke_probe").$type<{ leaks: KeystrokeLeak[]; inputs: number } | null>(),
 
   // Summary findings
   trackerNames: json("tracker_names").$type<string[]>().default([]),

@@ -231,6 +231,8 @@ export async function getCachedScan(domain: string): Promise<ScanResponse | null
     headers: (cached.headersFound ?? []) as ScanResult["headers"],
     thirdPartyRequests: (cached.thirdPartyReqs ?? []) as ScanResult["thirdPartyRequests"],
     fingerprintDetections: (cached.fingerprintApis ?? []) as ScanResult["fingerprintDetections"],
+    keystrokeLeaks: cached.keystrokeProbe?.leaks,
+    keystrokeInputs: cached.keystrokeProbe?.inputs,
     hasGoogleAnalytics: cached.hasGoogleAnalytics,
     hasFacebookPixel: cached.hasFacebookPixel,
     hasThirdPartyCookies: cached.hasThirdPartyCookies,
@@ -306,6 +308,9 @@ async function cacheScanResult({ domain, scanResult, score, scannedAt }: CachePa
       headersFound: scanResult.headers,
       thirdPartyReqs: scanResult.thirdPartyRequests,
       fingerprintApis: scanResult.fingerprintDetections,
+      keystrokeProbe: scanResult.keystrokeLeaks
+        ? { leaks: scanResult.keystrokeLeaks, inputs: scanResult.keystrokeInputs ?? 0 }
+        : null,
       trackerNames,
       trackerCount: scanResult.trackers.length,
       cookieCount: scanResult.cookies.length,

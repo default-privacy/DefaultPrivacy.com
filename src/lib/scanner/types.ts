@@ -40,6 +40,16 @@ export type ThirdPartyRequest = {
   size: number
 }
 
+// Text typed into the page reached this host before any submit. `viaUrl`: the marker sat
+// inside a web address in the body (the page's own search-as-you-type request, logged by a
+// session recorder) rather than as a field value.
+export type KeystrokeLeak = {
+  domain: string
+  url: string
+  form: "plaintext" | "base64" | "md5" | "sha256" | "sha512"
+  viaUrl: boolean
+}
+
 export type FingerprintDetection = {
   api: string
   detected: boolean
@@ -81,6 +91,10 @@ export type ScanResult = {
   headers: HeaderInfo[]
   thirdPartyRequests: ThirdPartyRequest[]
   fingerprintDetections: FingerprintDetection[]
+  // Keystroke probe. Undefined on scans that predate it; [] = typed, nothing left the page.
+  keystrokeLeaks?: KeystrokeLeak[]
+  // How many fields the probe typed into (0 = nothing to type into, so no claim either way).
+  keystrokeInputs?: number
 
   // Quick flags
   hasGoogleAnalytics: boolean

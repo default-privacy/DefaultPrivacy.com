@@ -14,6 +14,9 @@ import type { HeaderInfo, ScanResult, ThirdPartyRequest } from "./types"
 import type { TrackerCategory } from "./trackers"
 import { assertSafeScanTarget, isScanRequestAllowed } from "./ssrf-guard"
 import { matchesEasyPrivacy } from "./easyprivacy"
+import { createHash } from "node:crypto"
+import { gunzipSync } from "node:zlib"
+import type { KeystrokeLeak } from "./types"
 
 /**
  * Extract domain from URL
@@ -66,6 +69,12 @@ function identifyTracker(
   for (const tracker of KNOWN_TRACKERS.identity) {
     if (urlLower.includes(tracker)) {
       return { category: "identity", name: tracker }
+    }
+  }
+
+  for (const tracker of KNOWN_TRACKERS.recorder) {
+    if (urlLower.includes(tracker)) {
+      return { category: "recorder", name: tracker }
     }
   }
 
@@ -177,7 +186,7 @@ export function determinePurpose(
     return "identity"
   }
 
-  if (KNOWN_TRACKERS.analytics.some(t => urlLower.includes(t))) {
+  if (KNOWN_TRACKERS.analytics.some(t => urlLower.includes(t)) || KNOWN_TRACKERS.recorder.some(t => urlLower.includes(t))) {
     return "analytics"
   }
 
@@ -205,6 +214,94 @@ export function determinePurpose(
   }
 
   return "unknown"
+}
+
+// ── Keystroke probe ──────────────────────────────────────────────────────────────
+// Types a nonsense marker into the visible text fields, never presses Enter or clicks a
+// button, then looks for the marker (plain or hashed) in every POST body that left for
+// another site during the window. Same method The Markup's Blacklight has used publicly
+// since 2020. A hit is an observed act: your typing reached that company before submit.
+// The wait is long because recorders batch: FullStory shipped the marker ~13 s after typing.
+const KEYSTROKE_MARKER = "dpscanprobe7k2v"
+const MARKER_FORMS: [KeystrokeLeak["form"], string][] = [
+  ["plaintext", KEYSTROKE_MARKER],
+  ["base64", Buffer.from(KEYSTROKE_MARKER).toString("base64")],
+  ["md5", createHash("md5").update(KEYSTROKE_MARKER).digest("hex")],
+  ["sha256", createHash("sha256").update(KEYSTROKE_MARKER).digest("hex")],
+  ["sha512", createHash("sha512").update(KEYSTROKE_MARKER).digest("hex")],
+]
+const TYPABLE =
+  'input:not([type=hidden]):not([type=submit]):not([type=button]):not([type=checkbox]):not([type=radio]):not([type=file]):not([type=range]):not([type=color]), textarea'
+
+// Same site = same registrable domain, so app.example.com posting to api.example.com is
+// first party. Good enough here; a public-suffix list would be more machinery than this earns.
+function sameSite(a: string, b: string): boolean {
+  const tail = (h: string) => h.split(".").slice(-2).join(".")
+  return tail(a) === tail(b)
+}
+
+export function findMarker(body: string): KeystrokeLeak["form"] | null {
+  for (const [form, needle] of MARKER_FORMS) if (body.includes(needle)) return form
+  return null
+}
+
+function decodeBody(request: Request): string | null {
+  const buf = request.postDataBuffer()
+  if (!buf) return null
+  try {
+    return (buf[0] === 0x1f && buf[1] === 0x8b ? gunzipSync(buf) : buf).toString("utf8")
+  } catch {
+    return buf.toString("utf8")
+  }
+}
+
+export async function probeKeystrokes(
+  page: Page,
+  pageUrl: string,
+  settleMs = 15000,
+): Promise<{ leaks: KeystrokeLeak[]; inputs: number }> {
+  const pageHost = extractDomain(pageUrl)
+  const posts: { url: string; body: string }[] = []
+  const onRequest = (request: Request) => {
+    if (request.method() !== "POST") return
+    const host = extractDomain(request.url())
+    if (sameSite(host, pageHost)) return
+    const body = decodeBody(request)
+    if (body) posts.push({ url: request.url(), body })
+  }
+  page.on("request", onRequest)
+
+  let inputs = 0
+  try {
+    const fields = await page.locator(TYPABLE).all()
+    for (const field of fields.slice(0, 8)) {
+      try {
+        if (!(await field.isVisible()) || !(await field.isEditable())) continue
+        await field.click({ timeout: 1000 })
+        await page.keyboard.type(KEYSTROKE_MARKER, { delay: 15 })
+        await page.keyboard.press("Tab")
+        inputs++
+      } catch {
+        // Covered by an overlay, detached, or otherwise untypable: skip it
+      }
+    }
+    if (inputs > 0) await page.waitForTimeout(settleMs)
+  } finally {
+    page.off("request", onRequest)
+  }
+
+  const leaks: KeystrokeLeak[] = []
+  for (const p of posts) {
+    const form = findMarker(p.body)
+    if (!form) continue
+    const domain = extractDomain(p.url)
+    if (leaks.some(l => l.domain === domain)) continue
+    const viaUrl = form === "plaintext" && new RegExp(`https?:[^"'\\s]*${KEYSTROKE_MARKER}`).test(p.body)
+    // Origin + path only: the query string carries the recorder's session ids
+    const u = new URL(p.url)
+    leaks.push({ domain, url: u.origin + u.pathname, form, viaUrl })
+  }
+  return { leaks, inputs }
 }
 
 /**
@@ -556,6 +653,15 @@ export async function scanWebsite(url: string, browser: Browser): Promise<ScanRe
       )
     }
 
+    // Type into the page and see where it goes (see probeKeystrokes).
+    try {
+      const probe = await probeKeystrokes(page, url)
+      result.keystrokeLeaks = probe.leaks
+      result.keystrokeInputs = probe.inputs
+    } catch {
+      // A probe failure is "not tested", never "clean": leave both fields undefined
+    }
+
     // Get cookies
     const cookies = await context.cookies()
     for (const cookie of cookies) {
@@ -681,6 +787,7 @@ export async function scanWebsite(url: string, browser: Browser): Promise<ScanRe
       headers: result.headers,
       thirdPartyRequests: result.thirdPartyRequests,
       fingerprintDetections: result.fingerprintDetections,
+      keystrokeLeaks: result.keystrokeLeaks,
     })
 
     result.success = true

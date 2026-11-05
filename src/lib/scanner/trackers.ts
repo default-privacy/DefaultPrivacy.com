@@ -38,6 +38,30 @@ export const KNOWN_TRACKERS = {
     "tracking.leadlander.com",
     "snitcher.com",
   ],
+  // Session recorders: replay the visit (screen, mouse, keystrokes, network log) to a vendor.
+  recorder: [
+    "hotjar.com",
+    "static.hotjar.com",
+    "script.hotjar.com",
+    "fullstory.com",
+    "rs.fullstory.com",
+    "edge.fullstory.com",
+    "clarity.ms",
+    "c.clarity.ms", // Microsoft Clarity
+    "mouseflow.com",
+    "luckyorange.com",
+    "clicktale.net",
+    "inspectlet.com",
+    "logrocket.com",
+    "lr-ingest.com",
+    "lr-in.com",
+    "smartlook.com",
+    "getsmartlook.com",
+    "contentsquare.net",
+    "quantummetric.com",
+    "glassboxcdn.com",
+    "glassboxdigital.io",
+  ],
   analytics: [
     // Google Analytics / Tag Manager
     "google-analytics.com",
@@ -51,11 +75,6 @@ export const KNOWN_TRACKERS = {
     "analytics.js",
     "collect?v=", // GA beacon
     // Other analytics
-    "hotjar.com",
-    "static.hotjar.com",
-    "script.hotjar.com",
-    "fullstory.com",
-    "rs.fullstory.com",
     "mixpanel.com",
     "cdn.mxpnl.com",
     "api.mixpanel.com",
@@ -69,12 +88,8 @@ export const KNOWN_TRACKERS = {
     "heap.io",
     "heapanalytics.com",
     "cdn.heapanalytics.com",
-    "mouseflow.com",
     "crazyegg.com",
     "script.crazyegg.com",
-    "luckyorange.com",
-    "clicktale.net",
-    "inspectlet.com",
     "newrelic.com",
     "nr-data.net",
     "js-agent.newrelic.com",
@@ -92,8 +107,6 @@ export const KNOWN_TRACKERS = {
     "cdn.parsely.com",
     "optimizely.com",
     "cdn.optimizely.com",
-    "clarity.ms",
-    "c.clarity.ms", // Microsoft Clarity
     "bing.com/bat", // Bing UET
   ],
   advertising: [
@@ -226,5 +239,6 @@ export const FINGERPRINT_APIS = [
   { name: "HardwareConcurrency", pattern: /navigator\.hardwareConcurrency/ },
 ] as const
 
-// "identity": tries to name the visitor. "tracking": matched by the EasyPrivacy rules but not on the named lists above.
-export type TrackerCategory = "identity" | "analytics" | "advertising" | "social" | "fingerprinting" | "tracking" | "unknown"
+// "identity": tries to name the visitor. "recorder": session replay. "tracking": matched by
+// the EasyPrivacy rules but not on the named lists above.
+export type TrackerCategory = "identity" | "recorder" | "analytics" | "advertising" | "social" | "fingerprinting" | "tracking" | "unknown"

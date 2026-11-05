@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { buildVerdict } from "./verdict"
+import { calculateFullPrivacyScore } from "./scoring"
 import type { PrivacyGrade, PrivacyScoreInput, PrivacyScoreResult, ScanResult } from "./types"
 import type { TrackerCategory } from "./trackers"
 
@@ -147,5 +148,19 @@ describe("buildVerdict", () => {
     const result = makeResult({ cookies: times(11, i => cookie({}, i)), hasCSP: false })
     const v = buildVerdict({ result, score: score("F", 54, B({ cookieScore: 0, securityScore: 65 })) })
     expect(v.pre + v.emphasis + v.post).toBe(v.headline)
+  })
+})
+
+describe("keystroke leaks", () => {
+  it("lead the headline on a poor grade", () => {
+    const result = makeResult({
+      trackers: [tracker("recorder", 1)],
+      keystrokeLeaks: [{ domain: "recorder.example", url: "https://recorder.example/c", form: "plaintext" as const, viaUrl: true }],
+      keystrokeInputs: 1,
+    })
+    const score = calculateFullPrivacyScore(result)
+    expect(score.breakdown.trackerScore).toBe(100 - 15 - 30)
+    const v = buildVerdict({ result, score })
+    expect(v.headline).toBe("Text you typed reached 1 outside company before you pressed anything.")
   })
 })

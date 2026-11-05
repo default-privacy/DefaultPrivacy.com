@@ -38,6 +38,7 @@ const GRADE_TEXT: Record<PrivacyGrade, string> = {
 
 const CATEGORY_TAG: Record<string, { label: string; cls: string }> = {
   identity: { label: "NAMES YOU", cls: "bg-destructive/20 text-destructive" },
+  recorder: { label: "RECORDS YOU", cls: "bg-destructive/15 text-destructive" },
   analytics: { label: "ANALYTICS", cls: "bg-caution/15 text-caution" },
   advertising: { label: "ADVERTISING", cls: "bg-destructive/15 text-destructive" },
   social: { label: "SOCIAL", cls: "bg-foreground/10 text-foreground/60" },
@@ -74,6 +75,7 @@ async function ScanResults({ domain }: { domain: string }) {
   const pct = Math.max(0, Math.min(100, Math.round(score.overallScore)))
   const gradeInfo = getGradeMetadata(score.grade)
   const trackerCount = result.trackers.length
+  const leaks = result.keystrokeLeaks ?? []
   const verdict = buildVerdict({ result, score })
 
   // Verdict meta line — only surface the negatives that are actually true.
@@ -122,6 +124,9 @@ async function ScanResults({ domain }: { domain: string }) {
     { ok: !result.hasThirdPartyCookies, label: "No third-party cookies" },
     { ok: !result.hasFingerprinting, label: "No fingerprinting" },
     { ok: result.hasPrivacyPolicy, label: "Has privacy policy" },
+    ...(result.keystrokeLeaks && (result.keystrokeInputs ?? 0) > 0
+      ? [{ ok: leaks.length === 0, label: "Typed text stayed on the page" }]
+      : []),
   ]
 
   return (
@@ -241,11 +246,50 @@ async function ScanResults({ domain }: { domain: string }) {
                   )
                 })}
               </div>
+              {result.trackers.some(t => t.category === "recorder") && (
+                <p className="mt-3 text-[12.5px] leading-relaxed text-foreground/55">
+                  <span className="text-destructive">RECORDS YOU</span> marks a session recorder. It
+                  replays your visit to a vendor: the screen, every scroll and click, and often what
+                  you type and which web addresses the page fetched while you typed.
+                </p>
+              )}
               {result.trackers.some(t => t.category === "identity") && (
                 <p className="mt-3 text-[12.5px] leading-relaxed text-foreground/55">
                   <span className="text-destructive">NAMES YOU</span> marks a visitor identification
                   script. Its job is to work out who you are, or where you work, from a cookie or
                   a data-broker match, and hand that to the site without you typing anything.
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* keystroke probe */}
+          {leaks.length > 0 && (
+            <div className="rounded-xl border border-destructive/30 p-4 sm:p-5"
+              style={{ background: "linear-gradient(180deg, color-mix(in oklab, var(--destructive) 7%, transparent), transparent)" }}>
+              <div className="mb-3 text-[12px] tracking-[0.14em]">
+                <span className="text-destructive">[ TYPED TEXT LEFT THE PAGE ]</span>{" "}
+                <span className="text-foreground/35">{"// "}nothing was submitted</span>
+              </div>
+              <p className="text-[12.5px] leading-relaxed text-foreground/70">
+                We typed a nonsense word into {result.keystrokeInputs === 1 ? "a field" : `${result.keystrokeInputs} fields`} on
+                this page and never pressed Enter. Within seconds it had reached:
+              </p>
+              <ul className="mt-3 space-y-1.5">
+                {leaks.map(l => (
+                  <li key={l.domain} className="flex flex-wrap items-baseline gap-x-2 text-[12.5px]">
+                    <span className="font-mono text-foreground/90">{l.domain}</span>
+                    <span className="text-foreground/45">
+                      {l.form === "plaintext" ? "as plain text" : `as a ${l.form} hash`}
+                      {l.viaUrl && ", inside a web address the page requested as you typed"}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              {leaks.some(l => l.viaUrl) && (
+                <p className="mt-3 text-[12px] leading-relaxed text-foreground/50">
+                  The site's own search sends each keystroke in a web address, and the recorder logs
+                  every web address the page touches. Masking the box does not stop this.
                 </p>
               )}
             </div>

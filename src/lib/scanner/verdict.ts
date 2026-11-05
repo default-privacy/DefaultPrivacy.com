@@ -50,6 +50,11 @@ export function buildVerdict({ result, score }: { result: ScanResult; score: Pri
     return line("Mostly clean — ", `just ${trackerN} tracker${s(trackerN)}`, " loaded on this page.")
   }
 
+  // Typed text leaving the page beats every other story: it is an observed act, not a load.
+  const leakN = result.keystrokeLeaks?.length ?? 0
+  if (leakN > 0)
+    return line("Text you typed reached ", `${leakN} outside compan${leakN === 1 ? "y" : "ies"}`, " before you pressed anything.")
+
   // Layer 2 — a dimension may only be "the story" if it has a countable finding.
   const evidence: Record<string, boolean> = {
     cookie: cookieN > 0,

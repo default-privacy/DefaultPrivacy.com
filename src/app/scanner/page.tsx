@@ -152,7 +152,8 @@ export default function ScannerPage() {
                   </div>
                   <h3 className="text-[13px] font-medium text-foreground/90">We Scan</h3>
                   <p className="mt-1 text-[12px] text-foreground/50">
-                    Our scanner visits the site and analyzes all requests
+                    Our scanner loads the page, types a nonsense word into its
+                    fields without submitting, and watches every request
                   </p>
                 </div>
                 <div className="text-center">

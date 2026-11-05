@@ -10,6 +10,7 @@ import type {
   CookieInfo,
   FingerprintDetection,
   HeaderInfo,
+  KeystrokeLeak,
   PrivacyGrade,
   PrivacyScoreInput,
   PrivacyScoreResult,
@@ -42,14 +43,23 @@ const GRADE_THRESHOLDS = {
  * - -25 for each advertising tracker
  * - -10 for each social tracker
  */
-function calculateTrackerScore(trackers: TrackerInfo[]): {
+function calculateTrackerScore(trackers: TrackerInfo[], keystrokeLeaks: KeystrokeLeak[] = []): {
   score: number
   recommendations: string[]
 } {
   let score = 100
   const recommendations: string[] = []
 
+  // Typed text reached another company before submit: one flat penalty, however many hosts
+  if (keystrokeLeaks.length > 0) {
+    score -= 30
+    recommendations.push(
+      `Text typed into this page reached ${keystrokeLeaks.map(l => l.domain).join(", ")} before any submit`,
+    )
+  }
+
   const identityTrackers = trackers.filter(t => t.category === "identity")
+  const recorderTrackers = trackers.filter(t => t.category === "recorder")
   const analyticTrackers = trackers.filter(t => t.category === "analytics")
   const adTrackers = trackers.filter(t => t.category === "advertising")
   const socialTrackers = trackers.filter(t => t.category === "social")
@@ -61,6 +71,14 @@ function calculateTrackerScore(trackers: TrackerInfo[]): {
     score -= 10
     recommendations.push(
       `Remove ${identityTrackers.length} visitor identification script(s) that try to name individual visitors: ${identityTrackers.map(t => t.name).join(", ")}`,
+    )
+  }
+
+  // Session recorders: scored like analytics, named for what they do
+  score -= recorderTrackers.length * 15
+  if (recorderTrackers.length > 0) {
+    recommendations.push(
+      `Remove ${recorderTrackers.length} session recorder(s) that replay what visitors do: ${recorderTrackers.map(t => t.name).join(", ")}`,
     )
   }
 
@@ -326,8 +344,9 @@ export function calculatePrivacyScore(data: {
   headers: HeaderInfo[]
   thirdPartyRequests: ThirdPartyRequest[]
   fingerprintDetections: FingerprintDetection[]
+  keystrokeLeaks?: KeystrokeLeak[]
 }): PrivacyScoreInput {
-  const tracker = calculateTrackerScore(data.trackers)
+  const tracker = calculateTrackerScore(data.trackers, data.keystrokeLeaks)
   const cookie = calculateCookieScore(data.cookies)
   const security = calculateSecurityScore(data.headers)
   const thirdParty = calculateThirdPartyScore(data.thirdPartyRequests)
@@ -351,8 +370,9 @@ export function calculateFullPrivacyScore(data: {
   headers: HeaderInfo[]
   thirdPartyRequests: ThirdPartyRequest[]
   fingerprintDetections: FingerprintDetection[]
+  keystrokeLeaks?: KeystrokeLeak[]
 }): PrivacyScoreResult {
-  const tracker = calculateTrackerScore(data.trackers)
+  const tracker = calculateTrackerScore(data.trackers, data.keystrokeLeaks)
   const cookie = calculateCookieScore(data.cookies)
   const security = calculateSecurityScore(data.headers)
   const thirdParty = calculateThirdPartyScore(data.thirdPartyRequests)
