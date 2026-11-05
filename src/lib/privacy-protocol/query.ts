@@ -17,7 +17,7 @@ import {
   resolvePublicCategoryFilterIds,
   toolsDirectorySearchCondition,
 } from "@/lib/db/queries"
-import { getToolEvidence } from "@/lib/claims/evidence"
+import { EMPTY_EVIDENCE, getEvidenceForSlugs, getToolEvidence } from "@/lib/claims/evidence"
 import { picksRankSql } from "@/lib/picks-order"
 import { transformToPrivacyProtocol } from "./transform"
 import type { JurisdictionRisk, PrivacyProtocolTool } from "./types"
@@ -183,4 +183,21 @@ export async function getPublicToolPp(slug: string): Promise<PrivacyProtocolTool
 export async function getPublicToolPpWithEvidence(slug: string): Promise<PrivacyProtocolTool | null> {
   const [tool, evidence] = await Promise.all([getPublicToolPp(slug), getToolEvidence(slug)])
   return tool ? { ...tool, sources: evidence.sources, caveats: evidence.caveats } : null
+}
+
+/** Every tool getPublicToolPpWithEvidence can return, in three queries instead of three per tool. */
+export async function getAllPublicToolsPpWithEvidence(): Promise<PrivacyProtocolTool[]> {
+  if (!isDatabaseConfigured) return []
+  const publicToolIds = await getToolIdsInPublicCategories()
+  if (publicToolIds.length === 0) return []
+  const rows = await db
+    .select()
+    .from(tools)
+    .where(and(eq(tools.status, "Published"), inArray(tools.id, publicToolIds)))
+  const pps = await attachCategoriesAndTransform(rows)
+  const evidence = await getEvidenceForSlugs(pps.map((t) => t.slug))
+  return pps.map((t) => {
+    const { sources, caveats } = evidence.get(t.slug) ?? EMPTY_EVIDENCE
+    return { ...t, sources, caveats }
+  })
 }

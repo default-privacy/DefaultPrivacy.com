@@ -7,13 +7,16 @@
  *   /guides.md   /stacks.md   /glossary.md   /directory.md
  */
 
+import { unstable_cache } from "next/cache"
+
 import { env } from "@/lib/env"
 import { getAllGuides, getGuideBySlug } from "@/lib/guides"
 import { getAllGlossaryTerms, getGlossaryTermBySlug } from "@/lib/glossary"
 import { getAllStacks, getStackBySlug } from "@/lib/stacks"
 import { getPublishedToolIndex } from "@/lib/db/queries"
 import { isPick } from "@/lib/picks"
-import { getPublicToolPpWithEvidence } from "@/lib/privacy-protocol/query"
+import { getAllPublicToolsPpWithEvidence } from "@/lib/privacy-protocol/query"
+import type { PrivacyProtocolTool } from "@/lib/privacy-protocol/types"
 
 export const dynamic = "force-dynamic"
 
@@ -76,9 +79,7 @@ async function glossaryMd(slug: string): Promise<Response> {
   return markdown(`${head}\n\n---\n\n${t.content}`)
 }
 
-async function toolMd(slug: string): Promise<Response> {
-  const t = await getPublicToolPpWithEvidence(slug)
-  if (!t) return notFound()
+function toolMarkdown(t: PrivacyProtocolTool): string {
   const head = `# ${t.name}\n\n> ${t.tagline ?? ""}\n\n${meta([
     ["Website", t.website_url],
     ["Category", t.category],
@@ -108,7 +109,22 @@ async function toolMd(slug: string): Promise<Response> {
   ]
     .filter(Boolean)
     .join("\n\n")
-  return markdown(`${head}\n\n---\n\n${t.description ?? ""}\n\n${extra}\n\n_${t.citation}_`)
+  return `${head}\n\n---\n\n${t.description ?? ""}\n\n${extra}\n\n_${t.citation}_`
+}
+
+// Crawlers walk every tool page once, so a per-page cache never gets a second hit and each
+// page used to wake the database. One cached read renders them all (~0.6 MB, under the
+// data cache's 2 MB item limit), refreshed weekly like /directory/[slug].
+const getToolMirrors = unstable_cache(
+  async (): Promise<Record<string, string>> =>
+    Object.fromEntries((await getAllPublicToolsPpWithEvidence()).map((t) => [t.slug.toLowerCase(), toolMarkdown(t)])),
+  ["llm-mirror:tools"],
+  { revalidate: 604800 },
+)
+
+async function toolMd(slug: string): Promise<Response> {
+  const body = (await getToolMirrors())[slug.toLowerCase()]
+  return body ? markdown(body) : notFound()
 }
 
 async function guidesIndexMd(): Promise<Response> {
