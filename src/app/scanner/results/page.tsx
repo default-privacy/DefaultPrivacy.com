@@ -37,6 +37,7 @@ const GRADE_TEXT: Record<PrivacyGrade, string> = {
 }
 
 const CATEGORY_TAG: Record<string, { label: string; cls: string }> = {
+  identity: { label: "NAMES YOU", cls: "bg-destructive/20 text-destructive" },
   analytics: { label: "ANALYTICS", cls: "bg-caution/15 text-caution" },
   advertising: { label: "ADVERTISING", cls: "bg-destructive/15 text-destructive" },
   social: { label: "SOCIAL", cls: "bg-foreground/10 text-foreground/60" },
@@ -240,6 +241,13 @@ async function ScanResults({ domain }: { domain: string }) {
                   )
                 })}
               </div>
+              {result.trackers.some(t => t.category === "identity") && (
+                <p className="mt-3 text-[12.5px] leading-relaxed text-foreground/55">
+                  <span className="text-destructive">NAMES YOU</span> marks a visitor identification
+                  script. Its job is to work out who you are, or where you work, from a cookie or
+                  a data-broker match, and hand that to the site without you typing anything.
+                </p>
+              )}
             </div>
           )}
 

@@ -61,7 +61,14 @@ function identifyTracker(
 ): { category: TrackerCategory; name: string } {
   const urlLower = url.toLowerCase()
 
-  // Check known trackers
+  // Check known trackers, identity first: it is the most serious and some of its hosts
+  // would otherwise match a broader pattern below.
+  for (const tracker of KNOWN_TRACKERS.identity) {
+    if (urlLower.includes(tracker)) {
+      return { category: "identity", name: tracker }
+    }
+  }
+
   for (const tracker of KNOWN_TRACKERS.analytics) {
     if (urlLower.includes(tracker)) {
       return { category: "analytics", name: tracker }
@@ -166,6 +173,10 @@ export function determinePurpose(
 
   // Known trackers first: many serve from hosts containing "cdn" or "cloudfront"
   // (rlcdn.com, cdn.segment.com, RB2B on CloudFront) and would otherwise score as free CDN.
+  if (KNOWN_TRACKERS.identity.some(t => urlLower.includes(t))) {
+    return "identity"
+  }
+
   if (KNOWN_TRACKERS.analytics.some(t => urlLower.includes(t))) {
     return "analytics"
   }

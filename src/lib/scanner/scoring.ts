@@ -49,10 +49,20 @@ function calculateTrackerScore(trackers: TrackerInfo[]): {
   let score = 100
   const recommendations: string[] = []
 
+  const identityTrackers = trackers.filter(t => t.category === "identity")
   const analyticTrackers = trackers.filter(t => t.category === "analytics")
   const adTrackers = trackers.filter(t => t.category === "advertising")
   const socialTrackers = trackers.filter(t => t.category === "social")
   const listedTrackers = trackers.filter(t => t.category === "tracking")
+
+  // Visitor identification: the most severe, scored like advertising plus a flat penalty
+  score -= identityTrackers.length * 25
+  if (identityTrackers.length > 0) {
+    score -= 10
+    recommendations.push(
+      `Remove ${identityTrackers.length} visitor identification script(s) that try to name individual visitors: ${identityTrackers.map(t => t.name).join(", ")}`,
+    )
+  }
 
   // Deduct for analytics (less severe)
   score -= analyticTrackers.length * 15
@@ -203,9 +213,9 @@ function calculateThirdPartyScore(requests: ThirdPartyRequest[]): {
 
   const cdnRequests = requests.filter(r => r.purpose === "cdn")
   const analyticsRequests = requests.filter(r => r.purpose === "analytics" || r.purpose === "tracking")
-  const adRequests = requests.filter(r => r.purpose === "advertising")
+  const adRequests = requests.filter(r => r.purpose === "advertising" || r.purpose === "identity")
   const otherRequests = requests.filter(
-    r => !["cdn", "analytics", "tracking", "advertising"].includes(r.purpose),
+    r => !["cdn", "analytics", "tracking", "advertising", "identity"].includes(r.purpose),
   )
 
   // CDN requests are acceptable (up to a point)

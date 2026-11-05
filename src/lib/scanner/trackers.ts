@@ -4,6 +4,40 @@
  */
 
 export const KNOWN_TRACKERS = {
+  // Visitor identification: scripts whose job is to put a name, email or employer on an
+  // anonymous visitor. Hosts verified against vendor docs / EasyPrivacy / Tracker Radar, 2026-11-05.
+  identity: [
+    // Person-level (name + email + phone of the individual)
+    "ddwl4m2hdecbv.cloudfront.net", // RB2B loader
+    "app.retention.com", // Retention.com, same company as RB2B
+    "cdn.aggle.net/oir/", // Opensend pixel
+    "s.opensend.com",
+    "opensend.com/os.min.js",
+    "getwarmly.com", // Warmly
+    "vector.co/pixel.js", // Vector
+    // Company-level (which employer is looking)
+    "cdn.getkoala.com", // Koala
+    "api2.getkoala.com",
+    "6sc.co", // 6sense
+    "epsilon.6sense.com",
+    "company-target.com", // Demandbase
+    "tag.demandbase.com",
+    "zoominfo.com/pixel/", // ZoomInfo WebSight
+    "ws.zoominfo.com",
+    "lfeeder.com", // Leadfeeder / Dealfront
+    "lftracker.leadfeeder.com",
+    "albacross.com",
+    "leadforensics.com",
+    "trackedweb.net", // Lead Forensics
+    "tag.clearbitscripts.com", // Clearbit Reveal
+    "x.clearbitjs.com",
+    "reveal.clearbit.com",
+    "kickfire.com",
+    "happierleads.com",
+    "visitorqueue.com",
+    "tracking.leadlander.com",
+    "snitcher.com",
+  ],
   analytics: [
     // Google Analytics / Tag Manager
     "google-analytics.com",
@@ -123,7 +157,6 @@ export const KNOWN_TRACKERS = {
     "bids.contextweb.com",
     "spotxchange.com",
     "rlcdn.com", // Liveramp
-    "ddwl4m2hdecbv.cloudfront.net", // RB2B loader, names individual visitors (checked 2026-11-04)
     "demdex.net", // Adobe DMP
     "dpm.demdex.net",
     "omtrdc.net", // Adobe Target
@@ -193,5 +226,5 @@ export const FINGERPRINT_APIS = [
   { name: "HardwareConcurrency", pattern: /navigator\.hardwareConcurrency/ },
 ] as const
 
-// "tracking": matched by the EasyPrivacy rules but not on the named lists above.
-export type TrackerCategory = "analytics" | "advertising" | "social" | "fingerprinting" | "tracking" | "unknown"
+// "identity": tries to name the visitor. "tracking": matched by the EasyPrivacy rules but not on the named lists above.
+export type TrackerCategory = "identity" | "analytics" | "advertising" | "social" | "fingerprinting" | "tracking" | "unknown"

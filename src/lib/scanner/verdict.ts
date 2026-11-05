@@ -32,7 +32,7 @@ export function buildVerdict({ result, score }: { result: ScanResult; score: Pri
   const b = score.breakdown
 
   const trackerN = result.trackers.length
-  const adSocialN = result.trackers.filter(t => t.category === "advertising" || t.category === "social").length
+  const adSocialN = result.trackers.filter(t => t.category === "advertising" || t.category === "social" || t.category === "identity").length
   const thirdPartyN = result.thirdPartyRequests.length
   const cookieN = result.cookies.length
   const trkCookieN = result.cookies.filter(c => c.isTracking).length

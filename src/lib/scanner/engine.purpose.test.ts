@@ -8,7 +8,7 @@ import { determinePurpose } from "./engine"
  */
 describe("determinePurpose", () => {
   it("scores a known tracker on a CDN-looking host as a tracker", () => {
-    expect(determinePurpose("https://ddwl4m2hdecbv.cloudfront.net/b/KEY/KEY.js.gz", "")).toBe("advertising") // RB2B
+    expect(determinePurpose("https://ddwl4m2hdecbv.cloudfront.net/b/KEY/KEY.js.gz", "")).toBe("identity") // RB2B
     expect(determinePurpose("https://idsync.rlcdn.com/1000.gif", "")).toBe("advertising") // LiveRamp
     expect(determinePurpose("https://cdn.segment.com/analytics.js/v1/x/analytics.min.js", "")).toBe("analytics")
   })
@@ -30,5 +30,16 @@ describe("EasyPrivacy fallback", () => {
   it("passes a plain CDN and skips the list when no page url is given", () => {
     expect(determinePurpose("https://cdn.jsdelivr.net/npm/x@1/dist/x.min.js", "", page)).toBe("cdn")
     expect(determinePurpose("https://munchkin.marketo.net/munchkin.js", "")).toBe("unknown")
+  })
+})
+
+describe("visitor identification", () => {
+  it("names the de-anonymization vendors as identity, ahead of every other rule", () => {
+    expect(determinePurpose("https://cdn.aggle.net/oir/oir.min.js", "")).toBe("identity") // Opensend, "cdn" host
+    expect(determinePurpose("https://cdn.getkoala.com/v1/KEY/sdk.js", "")).toBe("identity") // Koala, "cdn" host
+    expect(determinePurpose("https://api2.getkoala.com/web/projects/KEY", "")).toBe("identity") // "api." host
+    expect(determinePurpose("https://j.6sc.co/6si.min.js", "")).toBe("identity")
+    expect(determinePurpose("https://tag.clearbitscripts.com/v1/pk_x/tags.js", "")).toBe("identity")
+    expect(determinePurpose("https://autocomplete.clearbit.com/v1/companies/suggest", "")).not.toBe("identity") // logo API
   })
 })
