@@ -147,28 +147,26 @@ function identifyTracker(url: string): { category: TrackerCategory; name: string
  * Determine purpose of third-party request
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- domain reserved for future use
-function determinePurpose(url: string, domain: string): ThirdPartyRequest["purpose"] {
+export function determinePurpose(url: string, domain: string): ThirdPartyRequest["purpose"] {
   const urlLower = url.toLowerCase()
 
-  // CDN patterns
-  const cdnPatterns = ["cdn", "cloudflare", "cloudfront", "fastly", "akamai", "jsdelivr", "unpkg", "cdnjs"]
-  if (cdnPatterns.some(p => urlLower.includes(p))) {
-    return "cdn"
-  }
-
-  // Analytics
+  // Known trackers first: many serve from hosts containing "cdn" or "cloudfront"
+  // (rlcdn.com, cdn.segment.com, RB2B on CloudFront) and would otherwise score as free CDN.
   if (KNOWN_TRACKERS.analytics.some(t => urlLower.includes(t))) {
     return "analytics"
   }
 
-  // Advertising
   if (KNOWN_TRACKERS.advertising.some(t => urlLower.includes(t))) {
     return "advertising"
   }
 
-  // Social
   if (KNOWN_TRACKERS.social.some(t => urlLower.includes(t))) {
     return "social"
+  }
+
+  const cdnPatterns = ["cdn", "cloudflare", "cloudfront", "fastly", "akamai", "jsdelivr", "unpkg", "cdnjs"]
+  if (cdnPatterns.some(p => urlLower.includes(p))) {
+    return "cdn"
   }
 
   // API patterns

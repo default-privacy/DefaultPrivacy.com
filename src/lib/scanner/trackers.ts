@@ -123,6 +123,7 @@ export const KNOWN_TRACKERS = {
     "bids.contextweb.com",
     "spotxchange.com",
     "rlcdn.com", // Liveramp
+    "ddwl4m2hdecbv.cloudfront.net", // RB2B loader, names individual visitors (checked 2026-11-04)
     "demdex.net", // Adobe DMP
     "dpm.demdex.net",
     "omtrdc.net", // Adobe Target
